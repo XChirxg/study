@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StatViz Pro — Deep Statistics Learning</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070710;--surface:#0f0f1e;--card:#141428;--card2:#1a1a30;--border:#252540;
+  --accent:#8b5cf6;--a2:#f472b6;--a3:#34d399;--a4:#fbbf24;--a5:#60a5fa;--a6:#fb923c;
+  --text:#e2e2f0;--muted:#6060a0;--fm:'Space Mono',monospace;--fd:'Syne',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:var(--fm);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,7,16,0.97);
+  backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:52px;
+  display:flex;align-items:center;padding:0 1rem;gap:0.3rem;overflow-x:auto;}
+nav::-webkit-scrollbar{height:3px;}nav::-webkit-scrollbar-thumb{background:var(--accent);}
+.nav-logo{font-family:var(--fd);font-weight:800;font-size:1rem;color:var(--accent);
+  white-space:nowrap;margin-right:0.8rem;padding-right:0.8rem;border-right:1px solid var(--border);}
+nav button{background:transparent;border:1px solid transparent;color:var(--muted);
+  font-family:var(--fm);font-size:0.62rem;padding:0.28rem 0.6rem;border-radius:4px;
+  cursor:pointer;white-space:nowrap;transition:all 0.15s;}
+nav button:hover,nav button.active{border-color:var(--accent);color:var(--accent);background:rgba(139,92,246,0.1);}
+main{padding-top:52px;}
+.page{display:none;max-width:1220px;margin:0 auto;padding:1.6rem 1.4rem;}
+.page.active{display:block;}
+h1{font-family:var(--fd);font-size:1.9rem;font-weight:800;margin-bottom:0.2rem;}
+h2{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:var(--accent);margin-bottom:0.7rem;}
+h3{font-family:var(--fd);font-size:0.9rem;font-weight:600;margin-bottom:0.4rem;}
+.sub{color:var(--muted);font-size:0.76rem;line-height:1.8;margin-bottom:1.2rem;max-width:800px;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:0.9rem;}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:0.7rem;}
+@media(max-width:850px){.g2,.g3,.g4{grid-template-columns:1fr;}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.1rem;}
+.card.hi{border-color:rgba(139,92,246,0.4);}
+.cw{position:relative;height:210px;margin:0.7rem 0;}
+.cw-lg{position:relative;height:270px;margin:0.7rem 0;}
+.cw-sm{position:relative;height:130px;margin:0.4rem 0;}
+.cw-xs{position:relative;height:90px;margin:0.3rem 0;}
+/* EXAMPLE DROPDOWN */
+.ex-bar{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.8rem;padding:0.6rem 0.9rem;
+  background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.2);border-radius:8px;}
+.ex-bar label{font-size:0.65rem;color:var(--a4);white-space:nowrap;font-weight:700;}
+.ex-select{flex:1;background:var(--card2);border:1px solid var(--border);color:var(--text);
+  font-family:var(--fm);font-size:0.65rem;padding:0.3rem 0.6rem;border-radius:5px;cursor:pointer;outline:none;}
+.ex-select:focus{border-color:var(--accent);}
+.ex-badge{font-size:0.6rem;color:var(--muted);margin-left:auto;white-space:nowrap;}
+/* SLIDERS */
+.sr{display:flex;align-items:center;gap:0.7rem;margin:0.4rem 0;}
+.sr label{font-size:0.65rem;color:var(--muted);min-width:135px;}
+.sr input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer;}
+.sr .v{font-size:0.7rem;color:var(--accent);min-width:50px;text-align:right;font-weight:700;}
+.sr-section{background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.1);border-radius:8px;padding:0.7rem 0.9rem;margin:0.5rem 0;}
+.sr-section h4{font-family:var(--fd);font-size:0.68rem;color:var(--muted);margin-bottom:0.35rem;text-transform:uppercase;letter-spacing:.05em;}
+/* PILLS */
+.pills{display:flex;flex-wrap:wrap;gap:0.35rem;margin:0.5rem 0;}
+.pill{background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.2);border-radius:100px;padding:0.22rem 0.65rem;font-size:0.62rem;}
+.pill span{color:var(--accent);font-weight:700;}
+.pill.g{background:rgba(52,211,153,0.08);border-color:rgba(52,211,153,0.2);}.pill.g span{color:var(--a3);}
+.pill.r{background:rgba(244,114,182,0.08);border-color:rgba(244,114,182,0.2);}.pill.r span{color:var(--a2);}
+.pill.y{background:rgba(251,191,36,0.08);border-color:rgba(251,191,36,0.2);}.pill.y span{color:var(--a4);}
+.pill.b{background:rgba(96,165,250,0.08);border-color:rgba(96,165,250,0.2);}.pill.b span{color:var(--a5);}
+.pill.o{background:rgba(251,146,60,0.08);border-color:rgba(251,146,60,0.2);}.pill.o span{color:var(--a6);}
+/* INFO */
+.info{background:rgba(139,92,246,0.06);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:0.7rem 0.9rem;font-size:0.7rem;line-height:1.85;margin:0.6rem 0;}
+.info b{color:var(--a4);}
+.info.g{border-color:var(--a3);background:rgba(52,211,153,0.05);}
+.info.r{border-color:var(--a2);background:rgba(244,114,182,0.05);}
+.info.b{border-color:var(--a5);background:rgba(96,165,250,0.05);}
+.info.y{border-color:var(--a4);background:rgba(251,191,36,0.05);}
+.info.o{border-color:var(--a6);background:rgba(251,146,60,0.05);}
+/* TABLE */
+.tbl-wrap{overflow-x:auto;margin:0.6rem 0;border-radius:8px;border:1px solid var(--border);}
+table{width:100%;border-collapse:collapse;font-size:0.65rem;}
+td,th{padding:0.4rem 0.65rem;border-bottom:1px solid var(--border);}
+th{background:rgba(139,92,246,0.1);color:var(--accent);font-family:var(--fd);text-align:left;border-bottom:2px solid rgba(139,92,246,0.3);}
+tr:last-child td{border-bottom:none;}
+tr:nth-child(even) td{background:rgba(255,255,255,0.015);}
+td.hi{color:var(--a4);font-weight:700;}
+td.g{color:var(--a3);}td.r{color:var(--a2);}td.b{color:var(--a5);}
+/* BIGNUM */
+.bignum{font-family:var(--fd);font-size:2rem;font-weight:800;color:var(--accent);}
+.bignum.g{color:var(--a3);}.bignum.r{color:var(--a2);}.bignum.y{color:var(--a4);}.bignum.b{color:var(--a5);}
+/* FORMULA */
+.formula{font-family:var(--fm);background:rgba(0,0,0,0.3);border:1px solid var(--border);border-radius:6px;padding:0.45rem 0.9rem;font-size:0.72rem;color:var(--a4);margin:0.35rem 0;}
+/* VERDICT */
+.verdict{padding:0.7rem 0.9rem;border-radius:8px;font-size:0.72rem;line-height:1.7;font-weight:700;margin:0.4rem 0;}
+.verdict.reject{background:rgba(244,114,182,0.1);border:1px solid rgba(244,114,182,0.3);color:var(--a2);}
+.verdict.fail{background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.25);color:var(--a3);}
+/* TABS */
+.tabs{display:flex;gap:0.35rem;margin-bottom:1rem;border-bottom:1px solid var(--border);padding-bottom:0.5rem;flex-wrap:wrap;}
+.tab{background:transparent;border:none;color:var(--muted);font-family:var(--fm);font-size:0.66rem;padding:0.3rem 0.75rem;cursor:pointer;border-radius:4px;transition:all 0.14s;}
+.tab.active{color:var(--accent);background:rgba(139,92,246,0.1);}
+.tab-panel{display:none;}.tab-panel.active{display:block;}
+/* TOGGLE */
+.toggle-group{display:flex;gap:0.35rem;flex-wrap:wrap;margin:0.4rem 0;}
+.toggle{background:rgba(255,255,255,0.03);border:1px solid var(--border);color:var(--muted);font-family:var(--fm);font-size:0.62rem;padding:0.28rem 0.65rem;border-radius:4px;cursor:pointer;}
+.toggle.on{background:rgba(139,92,246,0.15);border-color:var(--accent);color:var(--accent);}
+/* PROGRESS */
+.progress-outer{height:7px;background:rgba(255,255,255,0.05);border-radius:100px;overflow:hidden;}
+.progress-inner{height:100%;border-radius:100px;transition:width 0.4s ease;background:linear-gradient(90deg,var(--accent),var(--a3));}
+/* QUIZ */
+.quiz-q{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:1.1rem;margin-bottom:0.9rem;}
+.quiz-q .qtext{font-size:0.78rem;line-height:1.75;margin-bottom:0.9rem;}
+.quiz-opts{display:flex;flex-direction:column;gap:0.35rem;}
+.qopt{background:rgba(255,255,255,0.025);border:1px solid var(--border);border-radius:6px;padding:0.5rem 0.9rem;font-size:0.7rem;cursor:pointer;transition:all 0.13s;text-align:left;font-family:var(--fm);color:var(--text);}
+.qopt:hover:not([disabled]){border-color:var(--accent);background:rgba(139,92,246,0.1);}
+.qopt.correct{border-color:var(--a3)!important;background:rgba(52,211,153,0.12)!important;color:var(--a3)!important;}
+.qopt.wrong{border-color:var(--a2)!important;background:rgba(244,114,182,0.12)!important;color:var(--a2)!important;}
+.qopt.reveal{opacity:0.45;}
+.quiz-exp{font-size:0.68rem;line-height:1.75;padding:0.65rem 0.9rem;background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.2);border-radius:6px;margin-top:0.5rem;display:none;}
+.quiz-exp.show{display:block;}
+.score-bar{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.1rem;display:flex;gap:1.2rem;align-items:center;margin-bottom:1rem;flex-wrap:wrap;}
+/* HOME */
+.home-hero{text-align:center;padding:2.5rem 1rem 1.5rem;}
+.home-hero h1{font-size:2.8rem;background:linear-gradient(135deg,var(--accent),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.home-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:0.75rem;max-width:1000px;margin:1.8rem auto 0;}
+.home-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 0.75rem;cursor:pointer;transition:all 0.18s;text-align:center;}
+.home-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 20px rgba(139,92,246,0.15);}
+.home-card .ic{font-size:1.7rem;margin-bottom:0.4rem;}
+.home-card h3{font-size:0.75rem;margin-bottom:0.15rem;}
+.home-card p{font-size:0.6rem;color:var(--muted);line-height:1.5;}
+/* MINI STAT GRID */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:0.5rem;margin:0.6rem 0;}
+.stat-cell{background:rgba(0,0,0,0.2);border:1px solid var(--border);border-radius:7px;padding:0.5rem 0.7rem;text-align:center;}
+.stat-cell .sv{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:var(--accent);}
+.stat-cell .sl{font-size:0.58rem;color:var(--muted);margin-top:0.1rem;}
+.stat-cell.g .sv{color:var(--a3);}.stat-cell.r .sv{color:var(--a2);}
+.stat-cell.y .sv{color:var(--a4);}.stat-cell.b .sv{color:var(--a5);}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">📊 StatViz Pro</div>
+  <button class="active" onclick="go('home')">Home</button>
+  <button onclick="go('central')">① Central Tendency</button>
+  <button onclick="go('spread')">② Spread</button>
+  <button onclick="go('shape')">③ Shape & Dists</button>
+  <button onclick="go('zscore')">④ Z-Scores</button>
+  <button onclick="go('sampling')">⑤ Sampling/CLT</button>
+  <button onclick="go('confidence')">⑥ Conf. Intervals</button>
+  <button onclick="go('correlation')">⑦ Correlation</button>
+  <button onclick="go('regression')">⑧ Regression</button>
+  <button onclick="go('probability')">⑨ Probability</button>
+  <button onclick="go('hypothesis')">⑩ Hypothesis</button>
+  <button onclick="go('anova')">⑪ ANOVA</button>
+  <button onclick="go('sandbox')">🔬 Sandbox</button>
+  <button onclick="go('quiz')" style="color:var(--a4)">🧠 Quiz</button>
+</nav>
+<main>
+
+<!-- HOME -->
+<div id="home" class="page active">
+<div class="home-hero">
+  <h1>Statistics, Deeply</h1>
+  <p style="color:var(--muted);font-size:0.8rem;margin-top:0.6rem;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.9">Every section has <b style="color:var(--a4)">5 real-world examples</b> preloaded via dropdown, live sliders, data tables that update in real time, and the best chart type for each concept.</p>
+  <div class="home-grid">
+    <div class="home-card" onclick="go('central')"><div class="ic">🎯</div><h3>Central Tendency</h3><p>Mean, Median, Mode, Trimmed Mean</p></div>
+    <div class="home-card" onclick="go('spread')"><div class="ic">📏</div><h3>Spread</h3><p>Variance, SD, IQR, CV, Box plots</p></div>
+    <div class="home-card" onclick="go('shape')"><div class="ic">🔔</div><h3>Shape & Distributions</h3><p>Skewness, Kurtosis, dist families</p></div>
+    <div class="home-card" onclick="go('zscore')"><div class="ic">📍</div><h3>Z-Scores</h3><p>Standardisation, percentiles</p></div>
+    <div class="home-card" onclick="go('sampling')"><div class="ic">🎲</div><h3>Sampling & CLT</h3><p>Central Limit Theorem, SE</p></div>
+    <div class="home-card" onclick="go('confidence')"><div class="ic">🎯</div><h3>Confidence Intervals</h3><p>Width, tradeoffs, n required</p></div>
+    <div class="home-card" onclick="go('correlation')"><div class="ic">🔗</div><h3>Correlation</h3><p>Pearson r, Anscombe's Quartet</p></div>
+    <div class="home-card" onclick="go('regression')"><div class="ic">📈</div><h3>Regression</h3><p>OLS, R², residuals, prediction</p></div>
+    <div class="home-card" onclick="go('probability')"><div class="ic">🎰</div><h3>Probability</h3><p>Binomial, Poisson, Bayes, EV</p></div>
+    <div class="home-card" onclick="go('hypothesis')"><div class="ic">🔬</div><h3>Hypothesis Tests</h3><p>t-test, power, Type I/II errors</p></div>
+    <div class="home-card" onclick="go('anova')"><div class="ic">📊</div><h3>ANOVA</h3><p>F-statistic, between/within</p></div>
+    <div class="home-card" onclick="go('sandbox')" style="border-color:rgba(251,191,36,0.3)"><div class="ic">🔬</div><h3>Sandbox</h3><p>Build any dataset, all stats at once</p></div>
+    <div class="home-card" onclick="go('quiz')" style="border-color:rgba(52,211,153,0.3)"><div class="ic">🧠</div><h3>Quiz (30 Qs)</h3><p>Test your understanding</p></div>
+  </div>
+</div>
+</div>
+
+<!-- ① CENTRAL TENDENCY -->
+<div id="central" class="page">
+<h1>🎯 Central Tendency</h1>
+<p class="sub">The "center" of your data. Each measure answers a different question about where data clusters. Load a real-world example to see how they differ.</p>
+<div class="ex-bar">
+  <label>📂 Load Example:</label>
+  <select class="ex-select" id="ct-ex" onchange="loadCTExample()">
+    <option value="">— Choose a scenario —</option>
+    <option value="0">💰 Monthly Salaries at a startup ($K)</option>
+    <option value="1">🏠 House prices in a city ($K)</option>
+    <option value="2">🎓 Exam scores (Class of 40)</option>
+    <option value="3">🏃 Marathon finish times (minutes)</option>
+    <option value="4">🛒 Daily sales transactions (units)</option>
+  </select>
+  <span class="ex-badge" id="ct-ex-badge">Custom mode</span>
+</div>
+<div class="g2">
+  <div class="card hi">
+    <h2>Histogram + Measure Markers</h2>
+    <div class="sr-section">
+      <h4>Dataset Controls</h4>
+      <div class="sr"><label>Sample Size (n)</label><input type="range" id="ct-n" min="10" max="120" value="40" oninput="uCT()"><div class="v" id="ct-n-v">40</div></div>
+      <div class="sr"><label>Spread (σ)</label><input type="range" id="ct-spread" min="2" max="30" value="12" oninput="uCT()"><div class="v" id="ct-spread-v">12</div></div>
+      <div class="sr"><label>Outlier Value</label><input type="range" id="ct-out" min="0" max="200" value="60" oninput="uCT()"><div class="v" id="ct-out-v">60</div></div>
+      <div class="sr"><label>Outlier Count</label><input type="range" id="ct-outc" min="0" max="5" value="1" oninput="uCT()"><div class="v" id="ct-outc-v">1</div></div>
+      <div class="sr"><label>Trim % (trimmed mean)</label><input type="range" id="ct-trim" min="0" max="25" value="5" oninput="uCT()"><div class="v" id="ct-trim-v">5%</div></div>
+    </div>
+    <div class="cw-lg"><canvas id="ctChart"></canvas></div>
+    <div class="pills" id="ct-pills"></div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:0.9rem">
+      <h2>Live Data Table</h2>
+      <div class="tbl-wrap"><table id="ct-table">
+        <thead><tr><th>#</th><th>Value</th><th>Deviation from Mean</th><th>|Dev|</th></tr></thead>
+        <tbody id="ct-tbody"></tbody>
+      </table></div>
+      <div id="ct-explain" style="margin-top:0.7rem"></div>
+    </div>
+    <div class="card">
+      <h2>Measures Summary</h2>
+      <div class="stat-grid" id="ct-statgrid"></div>
+      <div class="tbl-wrap" style="margin-top:0.7rem"><table>
+        <tr><th>Measure</th><th>Best For</th><th>Limitation</th></tr>
+        <tr><td class="hi">Mean</td><td>Symmetric, no outliers</td><td>Outlier-sensitive</td></tr>
+        <tr><td class="hi">Median</td><td>Skewed data, income</td><td>Ignores magnitude</td></tr>
+        <tr><td class="hi">Mode</td><td>Categorical, discrete</td><td>May not be unique</td></tr>
+        <tr><td class="hi">Trimmed Mean</td><td>Mild outliers present</td><td>Loses edge info</td></tr>
+      </table></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ② SPREAD -->
+<div id="spread" class="page">
+<h1>📏 Spread (Variability)</h1>
+<p class="sub">How dispersed is your data? Two datasets with the same mean can have completely different spread — which changes everything about conclusions.</p>
+<div class="ex-bar">
+  <label>📂 Load Example:</label>
+  <select class="ex-select" id="sp-ex" onchange="loadSPExample()">
+    <option value="">— Choose a scenario —</option>
+    <option value="0">🌡️ Daily temperatures: Coastal vs Inland city</option>
+    <option value="1">📈 Stock returns: Blue-chip vs Startup</option>
+    <option value="2">🏥 Patient recovery days: Drug A vs Placebo</option>
+    <option value="3">🎯 Archery scores: Beginner vs Expert</option>
+    <option value="4">⏱️ Assembly line times: Manual vs Automated</option>
+  </select>
+  <span class="ex-badge" id="sp-ex-badge">Custom mode</span>
+</div>
+<div class="g2">
+  <div class="card hi">
+    <h2>Distribution + Box Plot</h2>
+    <div class="sr-section">
+      <h4>Controls</h4>
+      <div class="sr"><label>Mean (μ)</label><input type="range" id="sp-mu" min="20" max="80" value="50" oninput="uSP()"><div class="v" id="sp-mu-v">50</div></div>
+      <div class="sr"><label>Std Deviation (σ)</label><input type="range" id="sp-sd" min="1" max="35" value="10" oninput="uSP()"><div class="v" id="sp-sd-v">10</div></div>
+      <div class="sr"><label>Sample Size (n)</label><input type="range" id="sp-n" min="20" max="300" value="80" oninput="uSP()"><div class="v" id="sp-n-v">80</div></div>
+      <div class="sr"><label>Skew Factor</label><input type="range" id="sp-skew" min="-20" max="20" value="0" oninput="uSP()"><div class="v" id="sp-skew-v">0</div></div>
+      <div class="sr"><label>Add Outlier (σ multiple)</label><input type="range" id="sp-outm" min="0" max="5" value="0" step="0.5" oninput="uSP()"><div class="v" id="sp-outm-v">0</div></div>
+    </div>
+    <div class="cw"><canvas id="spHist"></canvas></div>
+    <div class="cw-sm"><canvas id="spBox"></canvas></div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:0.9rem">
+      <h2>Spread Statistics Table</h2>
+      <div class="stat-grid" id="sp-statgrid"></div>
+      <div class="tbl-wrap" style="margin-top:0.7rem"><table id="sp-table">
+        <thead><tr><th>Statistic</th><th>Value</th><th>Formula</th><th>Meaning</th></tr></thead>
+        <tbody id="sp-tbody"></tbody>
+      </table></div>
+    </div>
+    <div class="card">
+      <h2>Empirical Rule (68-95-99.7)</h2>
+      <div class="cw-sm"><canvas id="spEmp"></canvas></div>
+      <div class="tbl-wrap"><table id="sp-emp-table">
+        <thead><tr><th>Range</th><th>Expected %</th><th>Actual %</th><th>Count</th></tr></thead>
+        <tbody id="sp-emp-tbody"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ③ SHAPE -->
+<div id="shape" class="page">
+<h1>🔔 Shape & Distributions</h1>
+<p class="sub">The shape of data reveals the process that generated it. Skewness and kurtosis quantify shape; different distribution families model different phenomena.</p>
+<div class="ex-bar">
+  <label>📂 Load Example:</label>
+  <select class="ex-select" id="sh-ex" onchange="loadSHExample()">
+    <option value="">— Choose a scenario —</option>
+    <option value="0">💰 Income distribution (right-skewed)</option>
+    <option value="1">📉 Age at retirement (left-skewed)</option>
+    <option value="2">📐 Measurement errors (normal, low kurtosis)</option>
+    <option value="3">📊 Financial returns (normal + heavy tails)</option>
+    <option value="4">🏫 Bimodal test scores (two groups)</option>
+  </select>
+  <span class="ex-badge" id="sh-ex-badge">Custom mode</span>
+</div>
+<div class="g2">
+  <div class="card hi">
+    <h2>Shape Explorer</h2>
+    <div class="sr-section">
+      <div class="sr"><label>Skewness</label><input type="range" id="sh-skew" min="-30" max="30" value="0" oninput="uSH()"><div class="v" id="sh-skew-v">0.0</div></div>
+      <div class="sr"><label>Kurtosis (tail weight)</label><input type="range" id="sh-kurt" min="-20" max="30" value="0" oninput="uSH()"><div class="v" id="sh-kurt-v">0.0</div></div>
+      <div class="sr"><label>Sample Size</label><input type="range" id="sh-n" min="50" max="600" value="200" oninput="uSH()"><div class="v" id="sh-n-v">200</div></div>
+      <div class="sr"><label>Bins</label><input type="range" id="sh-bins" min="5" max="30" value="15" oninput="uSH()"><div class="v" id="sh-bins-v">15</div></div>
+    </div>
+    <div class="cw-lg"><canvas id="shChart"></canvas></div>
+    <div class="pills" id="sh-pills"></div>
+    <div id="sh-explain" class="info"></div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:0.9rem">
+      <h2>Distribution Families</h2>
+      <div class="toggle-group">
+        <button class="toggle on" id="tog-normal" onclick="toggleDist('normal')">Normal</button>
+        <button class="toggle" id="tog-t" onclick="toggleDist('t')">Student-t</button>
+        <button class="toggle" id="tog-chi2" onclick="toggleDist('chi2')">Chi-squared</button>
+        <button class="toggle" id="tog-poisson" onclick="toggleDist('poisson')">Poisson</button>
+        <button class="toggle" id="tog-uniform" onclick="toggleDist('uniform')">Uniform</button>
+        <button class="toggle" id="tog-exp" onclick="toggleDist('exp')">Exponential</button>
+      </div>
+      <div class="sr"><label>Parameter</label><input type="range" id="dist-param" min="1" max="20" value="5" oninput="uDist()"><div class="v" id="dist-param-v">5</div></div>
+      <div class="cw-sm"><canvas id="distChart"></canvas></div>
+      <div id="dist-info" class="info"></div>
+    </div>
+    <div class="card">
+      <h2>Shape Statistics Table</h2>
+      <div class="tbl-wrap"><table id="sh-table">
+        <thead><tr><th>Statistic</th><th>Value</th><th>Interpretation</th></tr></thead>
+        <tbody id="sh-tbody"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ④ Z-SCORES -->
+<div id="zscore" class="page">
+<h1>📍 Z-Scores & Standardisation</h1>
+<p class="sub">A z-score tells you how many standard deviations a value is from the mean — the universal language for comparing values across different scales.</p>
+<div class="ex-bar">
+  <label>📂 Load Example:</label>
+  <select class="ex-select" id="zs-ex" onchange="loadZSExample()">
+    <option value="">— Choose a scenario —</option>
+    <option value="0">🎓 Physics vs English exam comparison</option>
+    <option value="1">🏋️ Athletic performance standardisation</option>
+    <option value="2">📊 Stock price vs sector benchmark</option>
+    <option value="3">🩺 Blood pressure: Patient vs population</option>
+    <option value="4">🌡️ Temperature anomaly detection</option>
+  </select>
+  <span class="ex-badge" id="zs-ex-badge">Custom mode</span>
+</div>
+<div class="g2">
+  <div class="card hi">
+    <h2>Z-Score Explorer</h2>
+    <div class="sr-section">
+      <h4>Population</h4>
+      <div class="sr"><label>Population Mean (μ)</label><input type="range" id="zs-mu" min="0" max="100" value="50" oninput="uZS()"><div class="v" id="zs-mu-v">50</div></div>
+      <div class="sr"><label>Population SD (σ)</label><input type="range" id="zs-sd" min="1" max="30" value="10" oninput="uZS()"><div class="v" id="zs-sd-v">10</div></div>
+      <h4 style="margin-top:0.5rem">Your Value</h4>
+      <div class="sr"><label>Raw Score (x)</label><input type="range" id="zs-x" min="0" max="130" value="65" oninput="uZS()"><div class="v" id="zs-x-v">65</div></div>
+    </div>
+    <div class="cw-lg"><canvas id="zsChart"></canvas></div>
+    <div class="pills" id="zs-pills"></div>
+    <div class="formula" id="zs-formula">z = (x − μ) / σ</div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:0.9rem">
+      <h2>Position Summary</h2>
+      <div class="stat-grid" id="zs-statgrid"></div>
+      <div id="zs-interp" class="info y" style="margin-top:0.6rem"></div>
+    </div>
+    <div class="card">
+      <h2>Z-Score Comparison Table</h2>
+      <p style="font-size:0.65rem;color:var(--muted);margin-bottom:0.5rem">Comparing same individual across different tests/populations:</p>
+      <div class="tbl-wrap"><table id="zs-table">
+        <thead><tr><th>Test/Population</th><th>Raw Score</th><th>μ</th><th>σ</th><th class="hi">Z-Score</th><th>Percentile</th></tr></thead>
+        <tbody id="zs-tbody"></tbody>
+      </table></div>
+      <div class="info b" style="margin-top:0.6rem"><b>Key insight:</b> Z-scores let you compare apples to oranges. A score of 75 in one context may be much better or worse than 75 in another.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ⑤ SAMPLING/CLT -->
+<div id="sampling" class="page">
+<h1>🎲 Sampling & Central Limit Theorem</h1>
+<p class="sub">The CLT is the foundation of all inferential statistics: sample means become normally distributed as n grows, regardless of the population shape.</p>
+<div class="ex-bar">
+  <label>📂 Load Example:</label>
+  <select class="ex-select" id="clt-ex" onchange="loadCLTExample()">
+    <option value="">— Choose a scenario —</option>
+    <option value="0">🏭 Quality control: Widget weights (uniform pop.)</option>
+    <option value="1">💰 Average wage surveys (skewed income pop.)</option>
+    <option value="2">🎲 Dice rolls: Sum of n dice</option>
+    <option value="3">🏥 Hospital wait times (exponential pop.)</option>
+    <option value="4">📊 Portfolio returns (mixed distribution)</option>
+  </select>
+  <span class="ex-badge" id="clt-ex-badge">Custom mode</span>
+</div>
+<div class="g2">
+  <div class="card hi">
+    <h2>Population vs Sampling Distribution</h2>
+    <div class="sr-section">
+      <h4>Population</h4>
+      <div class="sr"><label>Population Skew</label><input type="range" id="clt-skew" min="-20" max="20" value="15" oninput="uCLT()"><div class="v" id="clt-skew-v">15</div></div>
+      <div class="sr"><label>Population SD</label><input type="range" id="clt-popsd" min="2" max="30" value="15" oninput="uCLT()"><div class="v" id="clt-popsd-v">15</div></div>
+      <h4 style="margin-top:0.5rem">Sampling</h4>
+      <div class="sr"><label>Sample Size (n)</label><input type="range" id="clt-n" min="1" max="100" value="5" oninput="uCLT()"><div class="v" id="clt-n-v">5</div></div>
+      <div class="sr"><label>Number of Samples</label><input type="range" id="clt-reps" min="100" max="2000" value="500" step="100" oninput="uCLT()"><div class="v" id="clt-reps-v">500</div></div>
+    </div>
+    <div class="cw-lg"><canvas id="cltChart"></canvas></div>
+    <div class="pills" id="clt-pills"></div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:0.9rem">
+      <h2>SE vs Sample Size</h2>
+      <div class="cw"><canvas id="cltSEChart"></canvas></div>
+      <div class="info"><b>SE = σ / √n</b> — the chart shows how SE shrinks as n grows. The diminishing returns are key: doubling n from 10→20 cuts SE much more than 100→200.</div>
+    </div>
+    <div class="card">
+      <h2>CLT Summary Table</h2>
+      <div class="tbl-wrap"><table id="clt-table">
+        <thead><tr><th>n</th><th>SE = σ/√n</th><th>SE vs n=1</th><th>Normal-ish?</th></tr></thead>
+        <tbody id="clt-tbody"></tbody>
+      </table></div>
+      <div class="stat-grid" id="clt-statgrid"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ⑥ CONFIDENCE INTERVALS -->
+<div id="confidence" class="page">
+<h1>🎯 Confidence Intervals</h1>
+<p class="sub">A CI gives a range of plausible values for the true population parameter. It's about the procedure, not a single interval.</p>
+<div class="ex-bar">
+  <label>📂 Load Example:</label>
+  <select class="ex-select" id="ci-ex" onchange="loadCIExample()">
+    <option value="">— Choose a scenario —</option>
+    <option value="0">💊 Drug trial: Mean reduction in blood pressure</option>
+    <option value="1">🗳️ Election poll: Candidate support %</option>
+    <option value="2">🏭 Manufacturing: Mean bolt diameter (mm)</option>
+    <option value="3">🎓 Student survey: Average study hours/week</option>
+    <option value="4">🌍 Climate: Mean annual temp increase (°C)</option>
+  </select>
+  <span class="ex-badge" id="ci-ex-badge">Custom mode</span>
+</div>
+<div class="g2">
+  <div class="card hi">
+    <h2>CI Visualisation</h2>
+    <div class="sr-section">
+      <div class="sr"><label>Sample Mean (x̄)</label><input type="range" id="ci-xbar" min="30" max="70" value="52" oninput="uCI()"><div class="v" id="ci-xbar-v">52</div></div>
+      <div class="sr"><label>Population SD (σ)</label><input type="range" id="ci-sd" min="1" max="30" value="12" oninput="uCI()"><div class="v" id="ci-sd-v">12</div></div>
+      <div class="sr"><label>Sample Size (n)</label><input type="range" id="ci-n" min="5" max="300" value="30" oninput="uCI()"><div class="v" id="ci-n-v">30</div></div>
+      <div class="sr"><label>Confidence Level %</label><input type="range" id="ci-level" min="80" max="99" value="95" oninput="uCI()"><div class="v" id="ci-level-v">95%</div></div>
+    </div>
+    <div class="cw-lg"><canvas id="ciChart"></canvas></div>
+    <div class="pills" id="ci-pills"></div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:0.9rem">
+      <h2>CI Details</h2>
+      <div class="stat-grid" id="ci-statgrid"></div>
+      <div id="ci-details" style="margin-top:0.7rem"></div>
+      <div class="formula">CI = x̄ ± z* × (σ/√n)</div>
+    </div>
+    <div class="card">
+      <h2>CI Width Comparison Table</h2>
+      <div class="tbl-wrap"><table id="ci-table">
+        <thead><tr><th>Confidence</th><th>z*</th><th>Margin of Error</th><th>CI Width</th></tr></thead>
+        <tbody id="ci-tbody"></tbody>
+      </table></div>
+      <div class="info b" style="margin-top:0.6rem"><b>Width ∝ 1/√n.</b> Table below shows n needed to achieve given width:</div>
+      <div class="tbl-wrap"><table id="ci-ntable">
+        <thead><tr><th>Target Width</th><th>n Required (95% CI)</th><th>n Required (99% CI)</th></tr></thead>
+        <tbody id="ci-ntbody"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ⑦ CORRELATION -->
+<div id="correlation" class="page">
+<h1>🔗 Correlation</h1>
+<p class="sub">Measures the linear relationship strength between two variables (−1 to +1). But correlation alone is misleading — always visualise your data.</p>
+<div class="ex-bar">
+  <label>📂 Load Example:</label>
+  <select class="ex-select" id="co-ex" onchange="loadCOExample()">
+    <option value="">— Choose a scenario —</option>
+    <option value="0">📚 Study hours vs Exam score (strong +ve)</option>
+    <option value="1">🏋️ Exercise hours vs Body fat % (strong −ve)</option>
+    <option value="2">🌡️ Ice cream sales vs Drowning deaths (spurious)</option>
+    <option value="3">💤 Sleep hours vs Productivity score (moderate +ve)</option>
+    <option value="4">🎲 Shoe size vs Intelligence (no correlation)</option>
+  </select>
+  <span class="ex-badge" id="co-ex-badge">Custom mode</span>
+</div>
+<div class="g2">
+  <div class="card hi">
+    <h2>Scatter Plot</h2>
+    <div class="sr-section">
+      <div class="sr"><label>Target Correlation (r)</label><input type="range" id="co-r" min="-100" max="100" value="70" oninput="uCO()"><div class="v" id="co-r-v">0.70</div></div>
+      <div class="sr"><label>Sample Size (n)</label><input type="range" id="co-n" min="10" max="150" value="50" oninput="uCO()"><div class="v" id="co-n-v">50</div></div>
+      <div class="sr"><label>X Spread</label><input type="range" id="co-xsd" min="5" max="30" value="15" oninput="uCO()"><div class="v" id="co-xsd-v">15</div></div>
+      <div class="sr"><label>Noise Level</label><input type="range" id="co-noise" min="1" max="30" value="10" oninput="uCO()"><div class="v" id="co-noise-v">10</div></div>
+      <div class="sr"><label>Outlier Count</label><input type="range" id="co-outl" min="0" max="5" value="0" oninput="uCO()"><div class="v" id="co-outl-v">0</div></div>
+    </div>
+    <div class="cw-lg"><canvas id="coChart"></canvas></div>
+    <div class="pills" id="co-pills"></div>
+    <div id="co-explain" class="info"></div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:0.9rem">
+      <h2>Anscombe's Quartet — same r, different data!</h2>
+      <div class="g2" style="gap:0.4rem">
+        <div class="cw-sm"><canvas id="ans1"></canvas></div>
+        <div class="cw-sm"><canvas id="ans2"></canvas></div>
+        <div class="cw-sm"><canvas id="ans3"></canvas></div>
+        <div class="cw-sm"><canvas id="ans4"></canvas></div>
+      </div>
+      <div class="info r" style="margin-top:0.4rem"><b>All four: r ≈ 0.816, mean_x=9, mean_y=7.5</b> — yet completely different relationships!</div>
+    </div>
+    <div class="card">
+      <h2>Correlation Statistics Table</h2>
+      <div class="tbl-wrap"><table id="co-table">
+        <thead><tr><th>Statistic</th><th>Value</th><th>Meaning</th></tr></thead>
+        <tbody id="co-tbody"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ⑧ REGRESSION -->
+<div id="regression" class="page">
+<h1>📈 Linear Regression</h1>
+<p class="sub">Finds the best-fit line that minimises prediction error. The slope tells you the rate of change; R² tells you how well the line explains the data.</p>
+<div class="ex-bar">
+  <label>📂 Load Example:</label>
+  <select class="ex-select" id="rg-ex" onchange="loadRGExample()">
+    <option value="">— Choose a scenario —</option>
+    <option value="0">🏠 House size (sqft) vs Price ($K)</option>
+    <option value="1">📚 Study hours vs Score (%)</option>
+    <option value="2">🌡️ Temperature vs Ice cream sales (units/day)</option>
+    <option value="3">💪 Age vs Muscle mass (declining)</option>
+    <option value="4">🚗 Car age (years) vs Resale value ($K)</option>
+  </select>
+  <span class="ex-badge" id="rg-ex-badge">Custom mode</span>
+</div>
+<div class="g2">
+  <div class="card hi">
+    <h2>Regression Explorer</h2>
+    <div class="sr-section">
+      <div class="sr"><label>True Slope (β₁)</label><input type="range" id="rg-slope" min="-3" max="3" value="1" step="0.1" oninput="uRG()"><div class="v" id="rg-slope-v">1.0</div></div>
+      <div class="sr"><label>True Intercept (β₀)</label><input type="range" id="rg-int" min="-60" max="60" value="0" oninput="uRG()"><div class="v" id="rg-int-v">0</div></div>
+      <div class="sr"><label>Residual Noise (σₑ)</label><input type="range" id="rg-noise" min="1" max="50" value="15" oninput="uRG()"><div class="v" id="rg-noise-v">15</div></div>
+      <div class="sr"><label>Sample Size (n)</label><input type="range" id="rg-n" min="10" max="150" value="50" oninput="uRG()"><div class="v" id="rg-n-v">50</div></div>
+      <div class="sr"><label>Show Residuals (0=Off)</label><input type="range" id="rg-resid" min="0" max="1" value="0" step="1" oninput="uRG()"><div class="v" id="rg-resid-v">Off</div></div>
+      <div class="sr"><label>Polynomial Degree</label><input type="range" id="rg-deg" min="1" max="3" value="1" oninput="uRG()"><div class="v" id="rg-deg-v">1</div></div>
+    </div>
+    <div class="cw-lg"><canvas id="rgChart"></canvas></div>
+    <div class="pills" id="rg-pills"></div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:0.9rem">
+      <h2>Regression Summary Table</h2>
+      <div class="tbl-wrap"><table id="rg-table">
+        <thead><tr><th>Statistic</th><th>Value</th><th>Meaning</th></tr></thead>
+        <tbody id="rg-tbody"></tbody>
+      </table></div>
+      <div class="formula">ŷ = β₀ + β₁x &nbsp;&nbsp;&nbsp; R² = 1 − SS_res/SS_tot</div>
+    </div>
+    <div class="card">
+      <h2>Residual Distribution</h2>
+      <div class="cw-sm"><canvas id="rgResid"></canvas></div>
+      <div class="info g"><b>Good residuals:</b> Normal, mean ≈ 0, no pattern. If residuals show a curve, try higher polynomial degree (slider above).</div>
+      <div class="tbl-wrap" style="margin-top:0.5rem"><table id="rg-pred-table">
+        <thead><tr><th>x (input)</th><th>ŷ (predicted)</th><th>Conf. interval</th></tr></thead>
+        <tbody id="rg-pred-tbody"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ⑨ PROBABILITY -->
+<div id="probability" class="page">
+<h1>🎰 Probability Distributions</h1>
+<p class="sub">Learn each distribution through real examples. Every parameter has a physical meaning — sliders show exactly how they shape the distribution.</p>
+<div class="tabs">
+  <button class="tab active" onclick="showTab('prob','binomial')">Binomial</button>
+  <button class="tab" onclick="showTab('prob','poisson')">Poisson</button>
+  <button class="tab" onclick="showTab('prob','normal-prob')">Normal Area</button>
+  <button class="tab" onclick="showTab('prob','bayes')">Bayes' Theorem</button>
+  <button class="tab" onclick="showTab('prob','expected')">Expected Value</button>
+</div>
+<div id="prob-binomial" class="tab-panel active">
+  <div class="ex-bar">
+    <label>📂 Load Example:</label>
+    <select class="ex-select" id="pb-ex" onchange="loadPBExample()">
+      <option value="">— Choose —</option>
+      <option value="0">🪙 10 coin flips, P(heads)=0.5</option>
+      <option value="1">💊 20 patients, drug success rate 70%</option>
+      <option value="2">🎯 15 free throws, 80% success</option>
+      <option value="3">📦 50 items, 5% defect rate</option>
+      <option value="4">🗳️ 8 voters, 60% favour candidate A</option>
+    </select>
+  </div>
+  <div class="g2">
+    <div class="card hi">
+      <h2>Binomial Distribution</h2>
+      <div class="sr-section">
+        <div class="sr"><label>Trials (n)</label><input type="range" id="pb-n" min="1" max="40" value="10" oninput="uPB()"><div class="v" id="pb-n-v">10</div></div>
+        <div class="sr"><label>P(success) = p</label><input type="range" id="pb-p" min="1" max="99" value="50" oninput="uPB()"><div class="v" id="pb-p-v">0.50</div></div>
+        <div class="sr"><label>Highlight k ≤ (CDF)</label><input type="range" id="pb-k" min="0" max="40" value="6" oninput="uPB()"><div class="v" id="pb-k-v">6</div></div>
+      </div>
+      <div class="cw-lg"><canvas id="pbChart"></canvas></div>
+      <div class="pills" id="pb-pills"></div>
+    </div>
+    <div class="card">
+      <h2>Probability Table</h2>
+      <div class="tbl-wrap"><table id="pb-table">
+        <thead><tr><th>k</th><th>P(X=k)</th><th>P(X≤k)</th><th>P(X>k)</th></tr></thead>
+        <tbody id="pb-tbody"></tbody>
+      </table></div>
+      <div class="formula">P(X=k) = C(n,k) · pᵏ · (1−p)ⁿ⁻ᵏ</div>
+      <div class="info b"><b>Mean=np, Var=np(1−p)</b><br>As n→∞ with constant p, Binomial→Normal (CLT!).</div>
+    </div>
+  </div>
+</div>
+<div id="prob-poisson" class="tab-panel">
+  <div class="ex-bar">
+    <label>📂 Load Example:</label>
+    <select class="ex-select" id="pp-ex" onchange="loadPPExample()">
+      <option value="">— Choose —</option>
+      <option value="0">📞 Call centre: 5 calls/hour avg</option>
+      <option value="1">🚗 Traffic accidents: 2/day on highway</option>
+      <option value="2">🖨️ Typos: 3 per page avg</option>
+      <option value="3">⚡ Power outages: 1.5 per month</option>
+      <option value="4">🦠 Mutations: 0.8 per cell division</option>
+    </select>
+  </div>
+  <div class="g2">
+    <div class="card hi">
+      <h2>Poisson Distribution</h2>
+      <div class="sr-section">
+        <div class="sr"><label>Rate λ (events/interval)</label><input type="range" id="pp-lambda" min="1" max="30" value="5" oninput="uPP()"><div class="v" id="pp-lambda-v">5</div></div>
+        <div class="sr"><label>Highlight k ≤ (CDF)</label><input type="range" id="pp-k" min="0" max="50" value="6" oninput="uPP()"><div class="v" id="pp-k-v">6</div></div>
+      </div>
+      <div class="cw-lg"><canvas id="ppChart"></canvas></div>
+      <div class="pills" id="pp-pills"></div>
+    </div>
+    <div class="card">
+      <h2>Probability Table</h2>
+      <div class="tbl-wrap"><table id="pp-table">
+        <thead><tr><th>k</th><th>P(X=k)</th><th>P(X≤k)</th><th>P(X>k)</th></tr></thead>
+        <tbody id="pp-tbody"></tbody>
+      </table></div>
+      <div class="formula">P(X=k) = (λᵏ · e⁻λ) / k!</div>
+      <div class="info b"><b>Mean = Variance = λ</b><br>As λ→∞, Poisson approaches Normal.</div>
+    </div>
+  </div>
+</div>
+<div id="prob-normal-prob" class="tab-panel">
+  <div class="g2">
+    <div class="card hi">
+      <h2>Normal Probability Area</h2>
+      <div class="sr-section">
+        <div class="sr"><label>Mean (μ)</label><input type="range" id="pn-mu" min="30" max="70" value="50" oninput="uPN()"><div class="v" id="pn-mu-v">50</div></div>
+        <div class="sr"><label>Std Dev (σ)</label><input type="range" id="pn-sd" min="1" max="20" value="10" oninput="uPN()"><div class="v" id="pn-sd-v">10</div></div>
+        <div class="sr"><label>Lower Bound</label><input type="range" id="pn-lo" min="0" max="100" value="40" oninput="uPN()"><div class="v" id="pn-lo-v">40</div></div>
+        <div class="sr"><label>Upper Bound</label><input type="range" id="pn-hi" min="0" max="100" value="60" oninput="uPN()"><div class="v" id="pn-hi-v">60</div></div>
+      </div>
+      <div class="cw-lg"><canvas id="pnChart"></canvas></div>
+      <div class="pills" id="pn-pills"></div>
+    </div>
+    <div class="card">
+      <h2>Area Breakdown Table</h2>
+      <div id="pn-explain" class="info"></div>
+      <div class="tbl-wrap"><table id="pn-table">
+        <thead><tr><th>Region</th><th>Probability</th><th>% of total</th></tr></thead>
+        <tbody id="pn-tbody"></tbody>
+      </table></div>
+      <div class="info" style="margin-top:0.5rem"><b>68-95-99.7 Rule:</b> Set bounds to μ±σ (40–60) → ~68%. Set μ±2σ (30–70) → ~95%.</div>
+    </div>
+  </div>
+</div>
+<div id="prob-bayes" class="tab-panel">
+  <div class="g2">
+    <div class="card hi">
+      <h2>Bayes' Theorem — Medical Test</h2>
+      <div class="sr-section">
+        <div class="sr"><label>Disease Prevalence (%)</label><input type="range" id="by-prev" min="1" max="50" value="5" oninput="uBY()"><div class="v" id="by-prev-v">5%</div></div>
+        <div class="sr"><label>Test Sensitivity (%)</label><input type="range" id="by-sens" min="50" max="100" value="95" oninput="uBY()"><div class="v" id="by-sens-v">95%</div></div>
+        <div class="sr"><label>Test Specificity (%)</label><input type="range" id="by-spec" min="50" max="100" value="90" oninput="uBY()"><div class="v" id="by-spec-v">90%</div></div>
+      </div>
+      <div class="cw-lg"><canvas id="byChart"></canvas></div>
+    </div>
+    <div class="card">
+      <h2>Confusion Matrix (per 1000 people)</h2>
+      <div class="tbl-wrap"><table>
+        <tr><th></th><th>Has Disease</th><th>No Disease</th><th>Total</th></tr>
+        <tr><td class="hi">Test +</td><td class="g" id="by-tp">—</td><td class="r" id="by-fp">—</td><td id="by-tp-total">—</td></tr>
+        <tr><td class="hi">Test −</td><td class="r" id="by-fn">—</td><td class="g" id="by-tn">—</td><td id="by-tn-total">—</td></tr>
+        <tr><td class="hi">Total</td><td id="by-dis-total">—</td><td id="by-nodis-total">—</td><td>1000</td></tr>
+      </table></div>
+      <div id="by-explain" class="info r" style="margin-top:0.6rem"></div>
+      <div class="formula">P(D|+) = Sensitivity × Prevalence / P(+)</div>
+    </div>
+  </div>
+</div>
+<div id="prob-expected" class="tab-panel">
+  <div class="g2">
+    <div class="card hi">
+      <h2>Expected Value Simulator</h2>
+      <div class="sr-section">
+        <div class="sr"><label>Win Amount ($)</label><input type="range" id="ev-win" min="1" max="200" value="50" oninput="uEV()"><div class="v" id="ev-win-v">$50</div></div>
+        <div class="sr"><label>P(Win) %</label><input type="range" id="ev-pwin" min="1" max="99" value="40" oninput="uEV()"><div class="v" id="ev-pwin-v">40%</div></div>
+        <div class="sr"><label>Lose Amount ($)</label><input type="range" id="ev-lose" min="1" max="200" value="30" oninput="uEV()"><div class="v" id="ev-lose-v">$30</div></div>
+        <div class="sr"><label>Simulated Rounds</label><input type="range" id="ev-rounds" min="10" max="500" value="100" oninput="uEV()"><div class="v" id="ev-rounds-v">100</div></div>
+      </div>
+      <div class="cw-lg"><canvas id="evChart"></canvas></div>
+    </div>
+    <div class="card">
+      <h2>Expected Value Breakdown</h2>
+      <div id="ev-explain" class="info"></div>
+      <div class="tbl-wrap"><table id="ev-table">
+        <thead><tr><th>Outcome</th><th>Amount</th><th>Probability</th><th>Contribution</th></tr></thead>
+        <tbody id="ev-tbody"></tbody>
+      </table></div>
+      <div class="formula">E(X) = Σ [xᵢ · P(xᵢ)]</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ⑩ HYPOTHESIS TESTING -->
+<div id="hypothesis" class="page">
+<h1>🔬 Hypothesis Testing</h1>
+<p class="sub">Making decisions from data under uncertainty. Assume H₀ is true, then ask: "How surprising is my data under this assumption?"</p>
+<div class="tabs">
+  <button class="tab active" onclick="showTab('ht','one-sample')">One-Sample t</button>
+  <button class="tab" onclick="showTab('ht','two-sample')">Two-Sample t</button>
+  <button class="tab" onclick="showTab('ht','power')">Power Analysis</button>
+  <button class="tab" onclick="showTab('ht','errors')">Type I & II Errors</button>
+</div>
+<div id="ht-one-sample" class="tab-panel active">
+  <div class="ex-bar">
+    <label>📂 Load Example:</label>
+    <select class="ex-select" id="ht-ex" onchange="loadHTExample()">
+      <option value="">— Choose —</option>
+      <option value="0">💊 Drug claims: Mean BP reduction = 10 mmHg?</option>
+      <option value="1">🍔 Fast food: Mean calories = 500 (labelled)?</option>
+      <option value="2">📱 Battery: Mean life = 24 hours (claimed)?</option>
+      <option value="3">🎓 School: Mean score = 75 (national avg)?</option>
+      <option value="4">⏱️ Process: Mean assembly = 5 min (target)?</option>
+    </select>
+  </div>
+  <div class="g2">
+    <div class="card hi">
+      <h2>One-Sample t-Test</h2>
+      <div class="sr-section">
+        <div class="sr"><label>Sample Mean (x̄)</label><input type="range" id="ht-xbar" min="40" max="70" value="53" oninput="uHT()"><div class="v" id="ht-xbar-v">53</div></div>
+        <div class="sr"><label>Sample SD (s)</label><input type="range" id="ht-s" min="1" max="25" value="8" oninput="uHT()"><div class="v" id="ht-s-v">8</div></div>
+        <div class="sr"><label>Sample Size (n)</label><input type="range" id="ht-n" min="5" max="200" value="30" oninput="uHT()"><div class="v" id="ht-n-v">30</div></div>
+        <div class="sr"><label>H₀: Population Mean (μ₀)</label><input type="range" id="ht-mu0" min="40" max="70" value="50" oninput="uHT()"><div class="v" id="ht-mu0-v">50</div></div>
+        <div class="sr"><label>Significance Level α</label><input type="range" id="ht-alpha" min="1" max="20" value="5" oninput="uHT()"><div class="v" id="ht-alpha-v">0.05</div></div>
+        <div class="sr"><label>Tails (1=one, 2=two)</label><input type="range" id="ht-tail" min="1" max="2" value="2" step="1" oninput="uHT()"><div class="v" id="ht-tail-v">Two</div></div>
+      </div>
+      <div class="cw-lg"><canvas id="htChart"></canvas></div>
+      <div class="pills" id="ht-pills"></div>
+      <div id="ht-verdict" class="verdict"></div>
+    </div>
+    <div class="card">
+      <h2>Step-by-Step Calculation</h2>
+      <div id="ht-steps" class="info"></div>
+      <div class="tbl-wrap" style="margin-top:0.6rem"><table id="ht-table">
+        <thead><tr><th>Step</th><th>Formula</th><th>Value</th></tr></thead>
+        <tbody id="ht-tbody"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+<div id="ht-two-sample" class="tab-panel">
+  <div class="g2">
+    <div class="card hi">
+      <h2>Two-Sample t-Test (A vs B)</h2>
+      <div class="sr-section">
+        <h4>Group A</h4>
+        <div class="sr"><label>Mean A</label><input type="range" id="ts-mu1" min="30" max="70" value="52" oninput="uTS()"><div class="v" id="ts-mu1-v">52</div></div>
+        <div class="sr"><label>SD A</label><input type="range" id="ts-sd1" min="1" max="20" value="8" oninput="uTS()"><div class="v" id="ts-sd1-v">8</div></div>
+        <div class="sr"><label>n A</label><input type="range" id="ts-n1" min="5" max="100" value="30" oninput="uTS()"><div class="v" id="ts-n1-v">30</div></div>
+        <h4 style="margin-top:0.4rem">Group B</h4>
+        <div class="sr"><label>Mean B</label><input type="range" id="ts-mu2" min="30" max="70" value="48" oninput="uTS()"><div class="v" id="ts-mu2-v">48</div></div>
+        <div class="sr"><label>SD B</label><input type="range" id="ts-sd2" min="1" max="20" value="9" oninput="uTS()"><div class="v" id="ts-sd2-v">9</div></div>
+        <div class="sr"><label>n B</label><input type="range" id="ts-n2" min="5" max="100" value="30" oninput="uTS()"><div class="v" id="ts-n2-v">30</div></div>
+        <div class="sr"><label>α level</label><input type="range" id="ts-alpha" min="1" max="20" value="5" oninput="uTS()"><div class="v" id="ts-alpha-v">0.05</div></div>
+      </div>
+      <div class="cw-lg"><canvas id="tsChart"></canvas></div>
+      <div id="ts-verdict" class="verdict"></div>
+    </div>
+    <div class="card">
+      <h2>Two-Sample Results</h2>
+      <div class="pills" id="ts-pills"></div>
+      <div class="tbl-wrap" style="margin-top:0.6rem"><table id="ts-table">
+        <thead><tr><th>Metric</th><th>Group A</th><th>Group B</th><th>Diff</th></tr></thead>
+        <tbody id="ts-tbody"></tbody>
+      </table></div>
+      <div id="ts-explain" class="info b" style="margin-top:0.6rem"></div>
+    </div>
+  </div>
+</div>
+<div id="ht-power" class="tab-panel">
+  <div class="g2">
+    <div class="card hi">
+      <h2>Power Analysis</h2>
+      <div class="sr-section">
+        <div class="sr"><label>Effect Size (Cohen's d)</label><input type="range" id="pw-d" min="1" max="30" value="5" oninput="uPW()"><div class="v" id="pw-d-v">0.5</div></div>
+        <div class="sr"><label>Sample Size (n)</label><input type="range" id="pw-n" min="5" max="200" value="30" oninput="uPW()"><div class="v" id="pw-n-v">30</div></div>
+        <div class="sr"><label>α level</label><input type="range" id="pw-alpha" min="1" max="20" value="5" oninput="uPW()"><div class="v" id="pw-alpha-v">0.05</div></div>
+      </div>
+      <div class="cw-lg"><canvas id="pwChart"></canvas></div>
+      <div class="pills" id="pw-pills"></div>
+    </div>
+    <div class="card">
+      <h2>Power</h2>
+      <div class="bignum" id="pw-big">—</div>
+      <div style="font-size:0.65rem;color:var(--muted);margin:0.4rem 0">Statistical Power (1 − β)</div>
+      <div class="progress-outer" style="margin:0.4rem 0"><div class="progress-inner" id="pw-bar" style="width:0%"></div></div>
+      <div class="tbl-wrap" style="margin-top:0.7rem"><table id="pw-table">
+        <thead><tr><th>n needed</th><th>Power (d=0.2)</th><th>Power (d=0.5)</th><th>Power (d=0.8)</th></tr></thead>
+        <tbody id="pw-tbody"></tbody>
+      </table></div>
+      <div class="info" style="margin-top:0.5rem"><b>Target: Power ≥ 0.80</b><br>Effect size determines how many samples you need. Small effects need huge samples!</div>
+    </div>
+  </div>
+</div>
+<div id="ht-errors" class="tab-panel">
+  <div class="g2">
+    <div class="card hi">
+      <h2>Type I & II Error Visualisation</h2>
+      <div class="sr-section">
+        <div class="sr"><label>α (Type I error rate)</label><input type="range" id="er-alpha" min="1" max="30" value="5" oninput="uER()"><div class="v" id="er-alpha-v">0.05</div></div>
+        <div class="sr"><label>True Effect (shift)</label><input type="range" id="er-shift" min="0" max="40" value="15" oninput="uER()"><div class="v" id="er-shift-v">1.5</div></div>
+        <div class="sr"><label>Sample Size (n)</label><input type="range" id="er-n" min="5" max="200" value="30" oninput="uER()"><div class="v" id="er-n-v">30</div></div>
+      </div>
+      <div class="cw-lg"><canvas id="erChart"></canvas></div>
+      <div class="pills" id="er-pills"></div>
+    </div>
+    <div class="card">
+      <h2>Error Types Matrix</h2>
+      <div class="tbl-wrap"><table>
+        <tr><th></th><th>H₀ is True</th><th>H₀ is False</th></tr>
+        <tr><td class="hi">Reject H₀</td><td class="r">Type I Error (α)<br>False Positive</td><td class="g">✓ Correct<br>(Power = 1−β)</td></tr>
+        <tr><td class="hi">Fail to Reject</td><td class="g">✓ Correct<br>(1−α)</td><td class="r">Type II Error (β)<br>False Negative</td></tr>
+      </table></div>
+      <div id="er-interp" class="info g" style="margin-top:0.6rem"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ⑪ ANOVA -->
+<div id="anova" class="page">
+<h1>📊 ANOVA — Analysis of Variance</h1>
+<p class="sub">Tests whether 3+ group means are equal by comparing variance between groups vs within groups. F = between/within variance.</p>
+<div class="ex-bar">
+  <label>📂 Load Example:</label>
+  <select class="ex-select" id="av-ex" onchange="loadAVExample()">
+    <option value="">— Choose a scenario —</option>
+    <option value="0">💊 Three drugs: Blood pressure reduction</option>
+    <option value="1">🌱 Three fertilisers: Plant growth (cm)</option>
+    <option value="2">🎓 Three teaching methods: Test scores</option>
+    <option value="3">🏭 Three machines: Output per hour</option>
+    <option value="4">🍕 Three diets: Weight loss (kg/month)</option>
+  </select>
+  <span class="ex-badge" id="av-ex-badge">Custom mode</span>
+</div>
+<div class="g2">
+  <div class="card hi">
+    <h2>Group Distributions</h2>
+    <div class="sr-section">
+      <h4>Group A</h4>
+      <div class="sr"><label>Mean A</label><input type="range" id="av-mu1" min="20" max="80" value="50" oninput="uAV()"><div class="v" id="av-mu1-v">50</div></div>
+      <div class="sr"><label>SD A</label><input type="range" id="av-sd1" min="1" max="25" value="8" oninput="uAV()"><div class="v" id="av-sd1-v">8</div></div>
+      <div class="sr"><label>n (all groups)</label><input type="range" id="av-n1" min="5" max="60" value="20" oninput="uAV()"><div class="v" id="av-n1-v">20</div></div>
+      <h4 style="margin-top:0.4rem">Group B</h4>
+      <div class="sr"><label>Mean B</label><input type="range" id="av-mu2" min="20" max="80" value="55" oninput="uAV()"><div class="v" id="av-mu2-v">55</div></div>
+      <div class="sr"><label>SD B</label><input type="range" id="av-sd2" min="1" max="25" value="9" oninput="uAV()"><div class="v" id="av-sd2-v">9</div></div>
+      <h4 style="margin-top:0.4rem">Group C</h4>
+      <div class="sr"><label>Mean C</label><input type="range" id="av-mu3" min="20" max="80" value="48" oninput="uAV()"><div class="v" id="av-mu3-v">48</div></div>
+      <div class="sr"><label>SD C</label><input type="range" id="av-sd3" min="1" max="25" value="10" oninput="uAV()"><div class="v" id="av-sd3-v">10</div></div>
+    </div>
+    <div class="cw-lg"><canvas id="avChart"></canvas></div>
+    <div class="pills" id="av-pills"></div>
+    <div id="av-verdict" class="verdict"></div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:0.9rem">
+      <h2>ANOVA Summary Table</h2>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Source</th><th>SS</th><th>df</th><th>MS</th><th>F</th></tr></thead>
+        <tbody>
+          <tr><td class="hi">Between Groups</td><td id="av-ssbetween">—</td><td id="av-dfbetween">—</td><td id="av-msbetween">—</td><td rowspan="2" id="av-f" style="vertical-align:middle;font-family:var(--fd);font-size:1.2rem;color:var(--accent);font-weight:800">—</td></tr>
+          <tr><td class="hi">Within Groups</td><td id="av-sswithin">—</td><td id="av-dfwithin">—</td><td id="av-mswithin">—</td></tr>
+          <tr><td class="hi">Total</td><td id="av-sstotal">—</td><td id="av-dftotal">—</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table></div>
+      <div class="formula">F = MS_between / MS_within</div>
+    </div>
+    <div class="card">
+      <h2>Group Comparison Table</h2>
+      <div class="tbl-wrap"><table id="av-table">
+        <thead><tr><th>Group</th><th>n</th><th>Mean</th><th>SD</th><th>vs Grand</th></tr></thead>
+        <tbody id="av-tbody"></tbody>
+      </table></div>
+      <div class="info b" style="margin-top:0.5rem"><b>Post-hoc:</b> If F is significant, use Tukey's HSD or Bonferroni to find which specific pairs differ. ANOVA alone only tells you "at least one pair differs."</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- SANDBOX -->
+<div id="sandbox" class="page">
+<h1>🔬 Statistics Sandbox</h1>
+<p class="sub">Build any distribution with 7 sliders. Every statistic and the hypothesis test update instantly.</p>
+<div class="g2">
+  <div class="card hi">
+    <h2>Dataset Builder</h2>
+    <div class="sr-section">
+      <div class="sr"><label>Mean (μ)</label><input type="range" id="sb-mu" min="10" max="90" value="50" oninput="uSB()"><div class="v" id="sb-mu-v">50</div></div>
+      <div class="sr"><label>Std Dev (σ)</label><input type="range" id="sb-sd" min="1" max="30" value="12" oninput="uSB()"><div class="v" id="sb-sd-v">12</div></div>
+      <div class="sr"><label>Sample Size (n)</label><input type="range" id="sb-n" min="20" max="500" value="100" oninput="uSB()"><div class="v" id="sb-n-v">100</div></div>
+      <div class="sr"><label>Skewness</label><input type="range" id="sb-skew" min="-20" max="20" value="0" oninput="uSB()"><div class="v" id="sb-skew-v">0</div></div>
+      <div class="sr"><label>Outlier Count</label><input type="range" id="sb-outc" min="0" max="10" value="0" oninput="uSB()"><div class="v" id="sb-outc-v">0</div></div>
+      <div class="sr"><label>Outlier Magnitude (σ)</label><input type="range" id="sb-outm" min="1" max="5" value="2" step="0.5" oninput="uSB()"><div class="v" id="sb-outm-v">2</div></div>
+      <div class="sr"><label>Bimodal 2nd Peak</label><input type="range" id="sb-bim" min="0" max="40" value="0" oninput="uSB()"><div class="v" id="sb-bim-v">0</div></div>
+    </div>
+    <div class="cw-lg"><canvas id="sbChart"></canvas></div>
+    <div class="pills" id="sb-pills"></div>
+    <div class="cw-sm"><canvas id="sbBoxChart"></canvas></div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:0.9rem">
+      <h2>Full Statistics Report</h2>
+      <div class="tbl-wrap"><table id="sb-table">
+        <thead><tr><th>Category</th><th>Statistic</th><th>Value</th></tr></thead>
+        <tbody id="sb-tbody"></tbody>
+      </table></div>
+    </div>
+    <div class="card">
+      <h2>Hypothesis: H₀: μ = 50</h2>
+      <div class="cw-sm"><canvas id="sbHtChart"></canvas></div>
+      <div id="sb-ht" class="verdict"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz" class="page">
+<h1>🧠 Statistics Quiz</h1>
+<p class="sub">30 questions across all topics. Immediate feedback and explanations for every answer.</p>
+<div class="score-bar">
+  <div style="text-align:center"><div class="bignum g" id="quiz-score">0</div><div style="font-size:0.62rem;color:var(--muted)">Correct</div></div>
+  <div style="text-align:center"><div class="bignum r" id="quiz-wrong">0</div><div style="font-size:0.62rem;color:var(--muted)">Wrong</div></div>
+  <div style="flex:1"><div style="font-size:0.62rem;color:var(--muted);margin-bottom:0.3rem">Progress</div>
+    <div class="progress-outer"><div class="progress-inner" id="quiz-prog" style="width:0%"></div></div>
+    <div style="font-size:0.6rem;color:var(--muted);margin-top:0.25rem" id="quiz-prog-label">0 / 30</div>
+  </div>
+  <button onclick="resetQuiz()" style="background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.3);color:var(--accent);font-family:var(--fm);font-size:0.62rem;padding:0.3rem 0.7rem;border-radius:5px;cursor:pointer;">↺ Reset</button>
+</div>
+<div id="quiz-container"></div>
+</div>
+</main>
+
+<script>
+// ══════════════════════════════════
+// CORE UTILITIES
+// ══════════════════════════════════
+const charts={};
+const ANIM={duration:260,easing:'easeInOutQuart'};
+const CD={responsive:true,maintainAspectRatio:false,animation:ANIM,
+  plugins:{legend:{display:false}},
+  scales:{x:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#6060a0',font:{size:9}}},
+          y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{color:'#6060a0',font:{size:9}}}}};
+
+function mkChart(id,type,data,opts={}){
+  const ctx=document.getElementById(id);if(!ctx)return null;
+  const ex=charts[id];
+  const merged=JSON.parse(JSON.stringify(CD));
+  if(opts.plugins){merged.plugins={...merged.plugins,...opts.plugins};}
+  if(opts.scales){merged.scales={...merged.scales,...opts.scales};}
+  Object.keys(opts).forEach(k=>{if(k!=='plugins'&&k!=='scales')merged[k]=opts[k];});
+  merged.animation=ANIM;
+  if(ex&&ex.config.type===type){
+    const nd=data.datasets||[];const od=ex.data.datasets;
+    if(data.labels)ex.data.labels=data.labels;
+    nd.forEach((ds,i)=>{
+      if(od[i])Object.keys(ds).forEach(k=>{od[i][k]=ds[k];});
+      else od.push(ds);
+    });
+    if(od.length>nd.length)od.splice(nd.length);
+    Object.keys(merged).forEach(k=>{if(k!=='animation')ex.options[k]=merged[k];});
+    ex.update(ANIM);return ex;
+  }
+  if(ex)ex.destroy();
+  charts[id]=new Chart(ctx,{type,data,options:merged});return charts[id];
+}
+function randn(){let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);}
+function normPDF(x,m,s){return Math.exp(-0.5*((x-m)/s)**2)/(s*Math.sqrt(2*Math.PI));}
+function normCDF(z){const t=1/(1+0.2315419*Math.abs(z));const d=0.3989423*Math.exp(-z*z/2);const p=d*t*(0.3193815+t*(-0.3565638+t*(1.7814779+t*(-1.8212560+t*1.3302744))));return z>0?1-p:p;}
+function pval2t(t){return 2*(1-normCDF(Math.abs(t)));}
+function sortArr(a){return[...a].sort((x,y)=>x-y);}
+function pct(a,p){const s=sortArr(a);const i=(p/100)*(s.length-1);const lo=Math.floor(i);const hi=Math.ceil(i);return s[lo]+(s[hi]-s[lo])*(i-lo);}
+function mean(a){return a.reduce((s,v)=>s+v,0)/a.length;}
+function sdev(a){const m=mean(a);return Math.sqrt(a.reduce((s,v)=>s+(v-m)**2,0)/(a.length-1));}
+function median(a){const s=sortArr(a);const n=s.length;return n%2===0?(s[n/2-1]+s[n/2])/2:s[Math.floor(n/2)];}
+function pill(label,val,cls=''){return`<span class="pill ${cls}">${label}: <span>${val}</span></span>`;}
+function lgamma(x){return(x-0.5)*Math.log(x+4.5)-x-4.5+0.5*Math.log(2*Math.PI)+1/(12*(x+4.5));}
+function poissonPMF(k,lam){let lp=k*Math.log(lam)-lam;for(let i=1;i<=k;i++)lp-=Math.log(i);return Math.exp(lp);}
+function binom(n,k,p){if(p<=0)return k===0?1:0;if(p>=1)return k===n?1:0;let lp=0;for(let i=0;i<k;i++)lp+=Math.log(n-i)-Math.log(i+1);lp+=k*Math.log(p)+(n-k)*Math.log(1-p);return Math.exp(lp);}
+function histogram(data,bins=12){const mn=Math.min(...data),mx=Math.max(...data);const bw=(mx-mn)/bins||1;const labels=[],counts=[];for(let i=0;i<bins;i++){const lo=mn+i*bw;labels.push(lo.toFixed(1));counts.push(data.filter(v=>v>=lo&&(i===bins-1?v<=mx:v<lo+bw)).length);}return{labels,counts,bw,min:mn,max:mx};}
+function genData(n,mu,sd,skew=0){const noise=Array.from({length:n},()=>randn());return noise.map(z=>{let v=z+skew*(z*z-1)/2;return mu+v*sd;});}
+function tbody(id,rows){const el=document.getElementById(id);if(el)el.innerHTML=rows.map(r=>`<tr>${r.map((c,i)=>`<td${i===0?' class="hi"':''}>${c}</td>`).join('')}</tr>`).join('');}
+function statgrid(id,cells){const el=document.getElementById(id);if(el)el.innerHTML=cells.map(c=>`<div class="stat-cell ${c.cls||''}"><div class="sv">${c.v}</div><div class="sl">${c.l}</div></div>`).join('');}
+
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('nav button').forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes(`'${id}'`))b.classList.add('active');});
+  const inits={central:initCT,spread:initSP,shape:initSH,zscore:initZS,sampling:initCLT,confidence:initCI,correlation:initCO,regression:initRG,probability:initPROB,hypothesis:initHT,anova:initAV,sandbox:initSB};
+  if(inits[id])inits[id]();
+}
+function showTab(g,id){
+  const pg=document.getElementById(g);if(!pg)return;
+  pg.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  pg.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  const el=document.getElementById(`${g}-${id}`);if(el)el.classList.add('active');
+  if(event&&event.target)event.target.classList.add('active');
+}
+function sv(id,v){const el=document.getElementById(id);if(el)el.value=v;}
+function setSliders(map){Object.entries(map).forEach(([id,v])=>{const el=document.getElementById(id);if(el){el.value=v;const vEl=document.getElementById(id+'-v');if(vEl)vEl.textContent=v;}});}
+
+// ══════════════════════════════════
+// EXAMPLES DEFINITIONS
+// ══════════════════════════════════
+const CT_EXAMPLES=[
+  {label:'Monthly Salaries ($K)',mu:65,spread:15,out:220,outc:2,trim:10,note:'CEO and CTO outliers dramatically skew the mean upward. Median is more representative of typical employee pay.'},
+  {label:'House Prices ($K)',mu:300,spread:80,out:1200,outc:1,trim:5,note:'One luxury property pulls the mean up. In real estate, median price is always preferred for this reason.'},
+  {label:'Exam Scores (%)',mu:72,spread:12,out:95,outc:0,trim:5,note:'Without extreme outliers, mean ≈ median. Class scores near bell-shaped; mean is appropriate here.'},
+  {label:'Marathon Times (min)',mu:245,spread:35,out:480,outc:3,trim:10,note:'Some runners who walked/stopped create outliers. Trimmed mean gives a better "typical finisher" picture.'},
+  {label:'Daily Sales (units)',mu:85,spread:20,out:5,outc:2,trim:5,note:'Unusually bad sales days (low outliers) pull mean down. Median reflects typical business day better.'},
+];
+const SP_EXAMPLES=[
+  {mu:18,sd:3,n:80,skew:0,outm:0,note:'Coastal temp: Low SD = consistent climate. Small IQR means narrow daily range.'},
+  {mu:50,sd:25,n:80,skew:5,outm:0,note:'Startup stock: High SD/CV = extremely volatile. Wide range means high risk.'},
+  {mu:14,sd:8,n:100,skew:3,outm:3,note:'Drug trial: SD shows variability in patient response. CV compares to placebo.'},
+  {mu:80,sd:5,n:60,skew:0,outm:0,note:'Expert archery: Low SD = consistent performance. Compare to beginner (high SD).'},
+  {mu:120,sd:4,n:120,skew:0,outm:0,note:'Automated assembly: Very low SD = tight process control. CV < 5% is excellent.'},
+];
+const SH_EXAMPLES=[
+  {skew:25,kurt:5,n:300,bins:15,note:'Income: Strong right skew. Long tail of very high earners. Mean >> Median.'},
+  {skew:-20,kurt:3,n:300,bins:15,note:'Retirement age: Left skew. Most retire late; few retire very early.'},
+  {skew:0,kurt:-10,n:300,bins:15,note:'Measurement errors: Platykurtic (short tails). Uniform-like, fewer extremes.'},
+  {skew:0,kurt:20,n:300,bins:15,note:'Financial returns: Leptokurtic. Fat tails = more extreme events than normal predicts.'},
+  {skew:0,kurt:0,n:400,bins:20,note:'Bimodal scores: Two student groups (prepared vs unprepared). Single-peak model is wrong!'},
+];
+const ZS_EXAMPLES=[
+  {mu:65,sd:10,x:78,note:'Physics (μ=65, σ=10) vs English below. See which score is actually better.'},
+  {mu:200,sd:20,x:230,note:'Athletic 200m sprint time. Lower is better — negative z = faster than average.'},
+  {mu:450,sd:50,x:520,note:'Stock price vs sector mean. Z = how many SDs above/below the sector benchmark.'},
+  {mu:120,sd:15,x:148,note:'Systolic blood pressure. Values above z=2 are clinically flagged as high.'},
+  {mu:15,sd:3,x:9,note:'Temperature anomaly. Z < -2 flags unusually cold conditions.'},
+];
+const CLT_EXAMPLES=[
+  {skew:0,popsd:10,n:5,reps:500,note:'Uniform population. Even for n=2, means start to look bell-shaped.'},
+  {skew:20,popsd:20,n:5,reps:500,note:'Skewed income population. Increase n to see means become normal.'},
+  {skew:0,popsd:12,n:1,reps:1000,note:'Dice rolls. With n=1 die, flat. With n=6 (sum), already normal.'},
+  {skew:25,popsd:18,n:5,reps:500,note:'Exponential (wait times). Very skewed. Watch CLT work as n increases!'},
+  {skew:5,popsd:15,n:5,reps:500,note:'Mixed distribution. CLT still works — that is the power of the theorem.'},
+];
+const CI_EXAMPLES=[
+  {xbar:52,sd:12,n:50,level:95,note:'Drug trial: Mean BP reduction = 52 mmHg. 95% CI tells us the plausible true effect range.'},
+  {xbar:53,sd:5,n:1000,level:95,note:'Election poll: Large n makes CI very narrow. Even 1% uncertainty matters!'},
+  {xbar:50.2,sd:0.5,n:30,level:99,note:'Manufacturing bolts: 99% CI used for safety. Very low SD = precise process.'},
+  {xbar:56,sd:8,n:25,level:90,note:'Student study hours: 90% CI with small n. Wide CI = less certainty.'},
+  {xbar:50.15,sd:0.3,n:100,level:99,note:'Climate data: 99% CI for temperature. Even tiny changes are statistically detectable with large n.'},
+];
+const CO_EXAMPLES=[
+  {r:85,n:60,xsd:15,noise:5,outl:0,xLabel:'Study Hours',yLabel:'Exam Score',note:'Strong positive: More study = higher score. r=0.85, r²=72% of variance explained.'},
+  {r:-80,n:60,xsd:15,noise:8,outl:0,xLabel:'Exercise Hours',yLabel:'Body Fat %',note:'Strong negative: More exercise = less body fat. Linear, consistent relationship.'},
+  {r:75,n:80,xsd:20,noise:5,outl:0,xLabel:'Ice Cream Sales',yLabel:'Drowning Deaths',note:'SPURIOUS! Both driven by summer/temperature. Correlation ≠ causation here!'},
+  {r:55,n:50,xsd:10,noise:12,outl:0,xLabel:'Sleep Hours',yLabel:'Productivity',note:'Moderate: More sleep helps somewhat. But high noise = other factors matter too.'},
+  {r:5,n:80,xsd:15,noise:20,outl:0,xLabel:'Shoe Size',yLabel:'IQ Score',note:'Zero correlation: r≈0. The scatter cloud is perfectly round — no relationship.'},
+];
+const RG_EXAMPLES=[
+  {slope:0.5,int:50,noise:20,n:60,label:'House: sqft→Price',xL:'Size (sqft/100)',yL:'Price ($K)'},
+  {slope:1.2,int:20,noise:8,n:50,label:'Hours→Score',xL:'Study Hours',yL:'Score (%)'},
+  {slope:2.0,int:10,noise:15,n:80,label:'Temp→Ice Cream',xL:'Temp (°C)',yL:'Sales (units)'},
+  {slope:-0.8,int:80,noise:10,n:60,label:'Age→Muscle',xL:'Age (years offset)',yL:'Muscle Mass (%)'},
+  {slope:-1.5,int:70,noise:12,n:50,label:'Age→Car Value',xL:'Car Age (years)',yL:'Value ($K)'},
+];
+const PB_EXAMPLES=[
+  {n:10,p:50,k:6,note:'10 coin flips, P(heads)=0.5. P(X≤5) should be ~62%.'},
+  {n:20,p:70,k:15,note:'20 patients, 70% drug success. What is P(≥15 respond)?'},
+  {n:15,p:80,k:12,note:'15 free throws at 80%. What is P(≥12 makes)?'},
+  {n:50,p:5,k:3,note:'50 items, 5% defect rate. Poisson approx works here (n large, p small).'},
+  {n:8,p:60,k:5,note:'8 voters, 60% favour A. What is P(majority = 5+)?'},
+];
+const PP_EXAMPLES=[
+  {lam:5,k:6,note:'Call centre: avg 5 calls/hour. P(more than 6 calls in next hour)?'},
+  {lam:2,k:3,note:'Accidents: avg 2/day. P(3 or more accidents today)?'},
+  {lam:3,k:4,note:'Typos: avg 3/page. P(4 or fewer on a page)?'},
+  {lam:1.5,k:2,note:'Power outages: avg 1.5/month. P(at most 2 this month)?'},
+  {lam:0.8,k:1,note:'Mutations: avg 0.8/division. P(0 or 1 mutation) = most common outcome?'},
+];
+const HT_EXAMPLES=[
+  {xbar:52,s:8,n:30,mu0:50,alpha:5,tail:2,note:'Drug: Sample mean=52, H₀: μ=50. Is 2 units reduction significant?'},
+  {xbar:520,s:40,n:25,mu0:500,alpha:5,tail:2,note:'Food label: Sample shows 520 cal. H₀: μ=500. Is it mislabelled?'},
+  {xbar:22,s:5,n:40,mu0:24,alpha:5,tail:1,note:'Battery: Mean=22hr. H₀: μ=24. One-tailed: is battery below spec?'},
+  {xbar:78,s:10,n:50,mu0:75,alpha:1,tail:2,note:'School: Mean=78 vs national 75. With α=0.01, is this significant?'},
+  {xbar:5.2,s:1.5,n:35,mu0:5,alpha:5,tail:2,note:'Assembly: Mean=5.2 min vs target 5. Statistical control needed?'},
+];
+const AV_EXAMPLES=[
+  {mu1:52,sd1:8,mu2:45,sd2:9,mu3:48,sd3:8,n:25,note:'3 blood pressure drugs. Large between-group differences → likely significant.'},
+  {mu1:35,sd1:6,mu2:42,sd2:7,mu3:38,sd3:6,n:20,note:'3 fertilisers: Plant height after 4 weeks. Do they differ significantly?'},
+  {mu1:72,sd1:10,mu2:68,sd2:11,mu3:75,sd3:9,n:30,note:'3 teaching methods. Overlapping distributions — may not be significant.'},
+  {mu1:95,sd1:5,mu2:87,sd2:6,mu3:91,sd3:5,n:15,note:'3 machines: output/hour. Small n + small differences = probably not significant.'},
+  {mu1:4.5,sd1:1.5,mu2:3.2,sd2:1.2,mu3:5.1,sd3:1.8,n:25,note:'3 diets: weight loss kg/month. Noticeable differences might reach significance.'},
+];
+
+// ══════════════════════════════════
+// EXAMPLE LOADERS
+// ══════════════════════════════════
+function loadCTExample(){
+  const i=+document.getElementById('ct-ex').value;if(isNaN(i)||document.getElementById('ct-ex').value==='')return;
+  const e=CT_EXAMPLES[i];
+  setSliders({'ct-spread':e.spread,'ct-out':e.out,'ct-outc':e.outc,'ct-trim':e.trim});
+  document.getElementById('ct-ex-badge').textContent=e.label;
+  ctLastN=-1;uCT();
+}
+function loadSPExample(){
+  const i=+document.getElementById('sp-ex').value;if(isNaN(i)||document.getElementById('sp-ex').value==='')return;
+  const e=SP_EXAMPLES[i];
+  setSliders({'sp-mu':e.mu,'sp-sd':e.sd,'sp-n':e.n,'sp-skew':e.skew,'sp-outm':e.outm});
+  document.getElementById('sp-ex-badge').textContent='Example loaded';
+  spLastN=-1;uSP();
+}
+function loadSHExample(){
+  const i=+document.getElementById('sh-ex').value;if(isNaN(i)||document.getElementById('sh-ex').value==='')return;
+  const e=SH_EXAMPLES[i];
+  setSliders({'sh-skew':e.skew,'sh-kurt':e.kurt,'sh-n':e.n,'sh-bins':e.bins});
+  document.getElementById('sh-ex-badge').textContent='Example loaded';
+  shLastN=-1;uSH();
+}
+function loadZSExample(){
+  const i=+document.getElementById('zs-ex').value;if(isNaN(i)||document.getElementById('zs-ex').value==='')return;
+  const e=ZS_EXAMPLES[i];
+  setSliders({'zs-mu':e.mu,'zs-sd':e.sd,'zs-x':e.x});
+  document.getElementById('zs-ex-badge').textContent='Example loaded';
+  uZS();
+}
+function loadCLTExample(){
+  const i=+document.getElementById('clt-ex').value;if(isNaN(i)||document.getElementById('clt-ex').value==='')return;
+  const e=CLT_EXAMPLES[i];
+  setSliders({'clt-skew':e.skew,'clt-popsd':e.popsd,'clt-n':e.n,'clt-reps':e.reps});
+  document.getElementById('clt-ex-badge').textContent='Example loaded';
+  cltPopNoise=null;uCLT();
+}
+function loadCIExample(){
+  const i=+document.getElementById('ci-ex').value;if(isNaN(i)||document.getElementById('ci-ex').value==='')return;
+  const e=CI_EXAMPLES[i];
+  setSliders({'ci-xbar':e.xbar,'ci-sd':e.sd,'ci-n':e.n,'ci-level':e.level});
+  document.getElementById('ci-ex-badge').textContent='Example loaded';
+  uCI();
+}
+function loadCOExample(){
+  const i=+document.getElementById('co-ex').value;if(isNaN(i)||document.getElementById('co-ex').value==='')return;
+  const e=CO_EXAMPLES[i];
+  setSliders({'co-r':e.r,'co-n':e.n,'co-xsd':e.xsd,'co-noise':e.noise,'co-outl':e.outl});
+  document.getElementById('co-ex-badge').textContent='Example loaded';
+  coLastN=-1;uCO();
+}
+function loadRGExample(){
+  const i=+document.getElementById('rg-ex').value;if(isNaN(i)||document.getElementById('rg-ex').value==='')return;
+  const e=RG_EXAMPLES[i];
+  setSliders({'rg-slope':e.slope,'rg-int':e.int,'rg-noise':e.noise,'rg-n':e.n});
+  document.getElementById('rg-ex-badge').textContent=e.label;
+  rgLastNoise=-1;rgLastN=-1;uRG();
+}
+function loadPBExample(){
+  const i=+document.getElementById('pb-ex').value;if(isNaN(i)||document.getElementById('pb-ex').value==='')return;
+  const e=PB_EXAMPLES[i];setSliders({'pb-n':e.n,'pb-p':e.p,'pb-k':e.k});uPB();
+}
+function loadPPExample(){
+  const i=+document.getElementById('pp-ex').value;if(isNaN(i)||document.getElementById('pp-ex').value==='')return;
+  const e=PP_EXAMPLES[i];setSliders({'pp-lambda':e.lam,'pp-k':e.k});uPP();
+}
+function loadHTExample(){
+  const i=+document.getElementById('ht-ex').value;if(isNaN(i)||document.getElementById('ht-ex').value==='')return;
+  const e=HT_EXAMPLES[i];
+  setSliders({'ht-xbar':e.xbar,'ht-s':e.s,'ht-n':e.n,'ht-mu0':e.mu0,'ht-alpha':e.alpha,'ht-tail':e.tail});
+  uHT();
+}
+function loadAVExample(){
+  const i=+document.getElementById('av-ex').value;if(isNaN(i)||document.getElementById('av-ex').value==='')return;
+  const e=AV_EXAMPLES[i];
+  setSliders({'av-mu1':e.mu1,'av-sd1':e.sd1,'av-mu2':e.mu2,'av-sd2':e.sd2,'av-mu3':e.mu3,'av-sd3':e.sd3,'av-n1':e.n});
+  avNoise={A:null,B:null,C:null};uAV();
+}
+
+// ══════════════════════════════════
+// ① CENTRAL TENDENCY
+// ══════════════════════════════════
+let ctNoise=null,ctLastN=-1;
+function initCT(){ctLastN=-1;uCT();}
+function uCT(){
+  const n=+document.getElementById('ct-n').value,spread=+document.getElementById('ct-spread').value;
+  const outV=+document.getElementById('ct-out').value,outC=+document.getElementById('ct-outc').value;
+  const trim=+document.getElementById('ct-trim').value;
+  document.getElementById('ct-n-v').textContent=n;document.getElementById('ct-spread-v').textContent=spread;
+  document.getElementById('ct-out-v').textContent=outV;document.getElementById('ct-outc-v').textContent=outC;
+  document.getElementById('ct-trim-v').textContent=trim+'%';
+  if(n!==ctLastN){ctLastN=n;ctNoise=Array.from({length:n},()=>randn());}
+  const base=ctNoise.map(z=>60+z*spread);
+  const data=[...base,...Array.from({length:outC},()=>outV)];
+  const mn=mean(data),med=median(data);
+  const sorted=sortArr(data);
+  const trimN=Math.floor(data.length*trim/100);
+  const trimM=trimN>0?mean(sorted.slice(trimN,sorted.length-trimN)):mn;
+  const h=histogram(data,12);
+  const mnBin=h.labels.indexOf(h.labels.reduce((a,l)=>Math.abs(+l-mn)<Math.abs(+a-mn)?l:a,h.labels[0]));
+  const medBin=h.labels.indexOf(h.labels.reduce((a,l)=>Math.abs(+l-med)<Math.abs(+a-med)?l:a,h.labels[0]));
+  mkChart('ctChart','bar',{labels:h.labels,datasets:[{data:h.counts,
+    backgroundColor:h.labels.map((l,i)=>{
+      const dMn=Math.abs(+l-mn),dMed=Math.abs(+l-med);
+      if(dMn<h.bw)return'rgba(244,114,182,0.8)';
+      if(dMed<h.bw)return'rgba(52,211,153,0.8)';
+      return'rgba(139,92,246,0.4)';
+    }),borderWidth:0,barPercentage:1,categoryPercentage:1}]},
+    {scales:{x:{...CD.scales.x,ticks:{...CD.scales.x.ticks,maxTicksLimit:8,maxRotation:0}},y:CD.scales.y}});
+  document.getElementById('ct-pills').innerHTML=
+    pill('Mean',mn.toFixed(2),'r')+pill('Median',med.toFixed(2),'g')+pill('Trimmed Mean',trimM.toFixed(2),'b')+pill('n',data.length)+pill('Outliers',outC,'y');
+  // Table — show first 10 + summary
+  const rows=data.slice(0,12).map((v,i)=>{const dev=(v-mn);return[i+1,v.toFixed(1),dev.toFixed(2),Math.abs(dev).toFixed(2)];});
+  tbody('ct-tbody',rows);
+  statgrid('ct-statgrid',[
+    {v:mn.toFixed(2),l:'Mean','cls':'r'},{v:med.toFixed(2),l:'Median','cls':'g'},
+    {v:trimM.toFixed(2),l:'Trimmed Mean','cls':'b'},{v:(mn-med).toFixed(2),l:'Mean − Median','cls':mn>med?'r':'g'},
+  ]);
+  const dir=mn>med?'upward (positive skew)':'downward (negative skew or symmetric)';
+  document.getElementById('ct-explain').innerHTML=`<div class="info"><b>Mean (pink bar) = ${mn.toFixed(2)}</b>, Median (green bar) = ${med.toFixed(2)}<br>Mean is pulled ${dir} by outliers. Gap = ${Math.abs(mn-med).toFixed(2)}.</div>`;
+}
+
+// ══════════════════════════════════
+// ② SPREAD
+// ══════════════════════════════════
+let spNoise=null,spLastN=-1;
+function initSP(){spLastN=-1;uSP();}
+function uSP(){
+  const mu=+document.getElementById('sp-mu').value,sd=+document.getElementById('sp-sd').value;
+  const n=+document.getElementById('sp-n').value,skew=+document.getElementById('sp-skew').value/10;
+  const outm=+document.getElementById('sp-outm').value;
+  document.getElementById('sp-mu-v').textContent=mu;document.getElementById('sp-sd-v').textContent=sd;
+  document.getElementById('sp-n-v').textContent=n;document.getElementById('sp-skew-v').textContent=(skew*10).toFixed(0);
+  document.getElementById('sp-outm-v').textContent=outm>0?outm+'σ':'off';
+  if(n!==spLastN){spLastN=n;spNoise=Array.from({length:n},()=>randn());}
+  const d=spNoise.map(z=>{let v=z+skew*(z*z-1)/2;return mu+v*sd;});
+  if(outm>0){d.push(mu+outm*sd);d.push(mu-outm*sd/2);}
+  const mn=mean(d),mdn=median(d),vr=d.reduce((a,v)=>a+(v-mn)**2,0)/(d.length-1);
+  const std=Math.sqrt(vr),q1=pct(d,25),q3=pct(d,75),iqr=q3-q1;
+  const mn2=Math.min(...d),mx=Math.max(...d),cv=(std/Math.abs(mn)*100);
+  const h=histogram(d,14);
+  // Histogram
+  mkChart('spHist','bar',{labels:h.labels,datasets:[{data:h.counts,backgroundColor:'rgba(52,211,153,0.45)',borderColor:'rgba(52,211,153,0.6)',borderWidth:1,barPercentage:1,categoryPercentage:1}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:8,maxRotation:0}},y:CD.scales.y}});
+  // Horizontal box plot via bar chart
+  mkChart('spBox','bar',{
+    labels:['Distribution'],
+    datasets:[
+      {data:[mn2],backgroundColor:'rgba(0,0,0,0)',borderWidth:0,barThickness:20},
+      {data:[q1-mn2],backgroundColor:'rgba(251,191,36,0.4)',borderWidth:1,borderColor:'rgba(251,191,36,0.7)',barThickness:20},
+      {data:[mdn-q1],backgroundColor:'rgba(52,211,153,0.6)',borderWidth:1,borderColor:'rgba(52,211,153,0.9)',barThickness:20},
+      {data:[q3-mdn],backgroundColor:'rgba(251,191,36,0.4)',borderWidth:1,borderColor:'rgba(251,191,36,0.7)',barThickness:20},
+      {data:[mx-q3],backgroundColor:'rgba(0,0,0,0)',borderWidth:0,barThickness:20}
+    ]
+  },{plugins:{legend:{display:false}},indexAxis:'y',scales:{
+      x:{...CD.scales.x,stacked:true,min:mn2-5,max:mx+5},y:{...CD.scales.y,stacked:true}
+  }});
+  // Empirical rule bars
+  const e1=d.filter(v=>Math.abs(v-mn)<=std).length/d.length*100;
+  const e2=d.filter(v=>Math.abs(v-mn)<=2*std).length/d.length*100;
+  const e3=d.filter(v=>Math.abs(v-mn)<=3*std).length/d.length*100;
+  mkChart('spEmp','bar',{
+    labels:['μ±1σ','μ±2σ','μ±3σ'],
+    datasets:[
+      {data:[68.27,95.45,99.73],backgroundColor:'rgba(139,92,246,0.2)',label:'Expected (normal)',barPercentage:0.7},
+      {data:[e1,e2,e3],backgroundColor:['rgba(52,211,153,0.7)','rgba(96,165,250,0.7)','rgba(251,191,36,0.7)'],label:'Actual',barPercentage:0.7}
+    ]
+  },{plugins:{legend:{display:true,labels:{color:'#6060a0',font:{size:8}}}},
+    scales:{x:{...CD.scales.x},y:{...CD.scales.y,max:105,ticks:{callback:v=>v+'%'}}}});
+  tbody('sp-emp-tbody',[
+    ['μ±1σ','68.27%',e1.toFixed(1)+'%',Math.round(e1/100*d.length)],
+    ['μ±2σ','95.45%',e2.toFixed(1)+'%',Math.round(e2/100*d.length)],
+    ['μ±3σ','99.73%',e3.toFixed(1)+'%',Math.round(e3/100*d.length)],
+  ]);
+  statgrid('sp-statgrid',[
+    {v:std.toFixed(2),l:'Std Dev','cls':'g'},{v:vr.toFixed(2),l:'Variance'},
+    {v:iqr.toFixed(2),l:'IQR','cls':'r'},{v:cv.toFixed(1)+'%',l:'CV','cls':'y'},
+  ]);
+  tbody('sp-tbody',[
+    ['Range',`${(mx-mn2).toFixed(2)}`,'max − min','Full spread, outlier-sensitive'],
+    ['Variance',vr.toFixed(3),'Σ(x−μ)²/(n-1)','Avg squared deviation'],
+    ['Std Dev',std.toFixed(3),'√Variance','In original units'],
+    ['IQR',iqr.toFixed(3),'Q3 − Q1','Middle 50%, robust'],
+    ['CV',cv.toFixed(1)+'%','(σ/μ)×100','Relative spread'],
+    ['MAD',(d.reduce((a,v)=>a+Math.abs(v-mdn),0)/d.length).toFixed(3),'Σ|x−median|/n','Median absolute deviation'],
+  ]);
+}
+
+// ══════════════════════════════════
+// ③ SHAPE
+// ══════════════════════════════════
+let shNoise=null,shLastN=-1,activeDist='normal';
+function initSH(){shLastN=-1;uSH();uDist();drawAnscombe();}
+function uSH(){
+  const skew=+document.getElementById('sh-skew').value/10;
+  const kurt=+document.getElementById('sh-kurt').value/10;
+  const n=+document.getElementById('sh-n').value;
+  const bins=+document.getElementById('sh-bins').value;
+  document.getElementById('sh-skew-v').textContent=skew.toFixed(1);
+  document.getElementById('sh-kurt-v').textContent=kurt.toFixed(1);
+  document.getElementById('sh-n-v').textContent=n;document.getElementById('sh-bins-v').textContent=bins;
+  if(n!==shLastN){shLastN=n;shNoise=Array.from({length:n},()=>randn());}
+  const d=shNoise.map(z=>{let v=z+skew*(z*z-1)/2+kurt*(z*z*z-3*z)/6;return 50+v*12;});
+  const h=histogram(d,bins),mn=mean(d),std=sdev(d);
+  const sk3=d.reduce((a,v)=>a+((v-mn)/std)**3,0)/d.length;
+  const k4=d.reduce((a,v)=>a+((v-mn)/std)**4,0)/d.length-3;
+  mkChart('shChart','bar',{labels:h.labels,datasets:[{data:h.counts,
+    backgroundColor:skew>0.3?'rgba(251,146,60,0.55)':skew<-0.3?'rgba(96,165,250,0.55)':Math.abs(kurt)>0.5?'rgba(244,114,182,0.55)':'rgba(139,92,246,0.5)',
+    borderWidth:0,barPercentage:1,categoryPercentage:1}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:10,maxRotation:0}},y:CD.scales.y}});
+  document.getElementById('sh-pills').innerHTML=pill('Skewness',sk3.toFixed(3),'y')+pill('Ex.Kurtosis',k4.toFixed(3),'b')+pill('Mean',mn.toFixed(1))+pill('SD',std.toFixed(2),'g');
+  const skt=Math.abs(skew)<0.3?'Symmetric (skew≈0)':skew>0?'Right/Positive skew — long tail right, Mean>Median':'Left/Negative skew — long tail left, Mean<Median';
+  const kt=Math.abs(kurt)<0.3?'Mesokurtic (normal tails)':kurt>0?'Leptokurtic — heavier tails, more outliers than normal':'Platykurtic — lighter tails, fewer extremes than normal';
+  document.getElementById('sh-explain').innerHTML=`<b>Shape:</b> ${skt}. Tails: ${kt}.`;
+  tbody('sh-tbody',[
+    ['Sample Skewness',sk3.toFixed(4),sk3>0.5?'Significant right skew':sk3<-0.5?'Significant left skew':'Approximately symmetric'],
+    ['Excess Kurtosis',k4.toFixed(4),k4>1?'Heavy tails (leptokurtic)':k4<-1?'Light tails (platykurtic)':'Normal-like tails (mesokurtic)'],
+    ['Mean',mn.toFixed(3),'Central location'],
+    ['Median',median(d).toFixed(3),'Robust center'],
+    ['Mean-Median Gap',(mn-median(d)).toFixed(3),'Positive = right skewed'],
+    ['Std Dev',std.toFixed(3),'Spread'],
+  ]);
+}
+function toggleDist(d){activeDist=d;document.querySelectorAll('.toggle').forEach(t=>t.classList.remove('on'));document.getElementById('tog-'+d).classList.add('on');uDist();}
+function uDist(){
+  const p=+document.getElementById('dist-param').value;document.getElementById('dist-param-v').textContent=p;
+  let labels=[],ys=[],info='';
+  if(activeDist==='normal'){
+    const xs=Array.from({length:80},(_,i)=>i*0.5);
+    labels=xs.map(x=>x.toFixed(1));ys=xs.map(x=>normPDF(x,20,p));
+    info=`<b>Normal(μ=20, σ=${p})</b> — Bell-shaped, symmetric. 68% within ±1σ, 95% within ±2σ.`;
+  }else if(activeDist==='t'){
+    const xs=Array.from({length:80},(_,i)=>(i-40)*0.15);
+    labels=xs.map(x=>x.toFixed(2));ys=xs.map(x=>Math.pow(1+x*x/p,-(p+1)/2)/Math.sqrt(p)*Math.exp(lgamma((p+1)/2)-lgamma(p/2)));
+    info=`<b>Student-t (df=${p})</b> — Heavier tails than normal. As df→∞, approaches normal. Used for small samples.`;
+  }else if(activeDist==='chi2'){
+    const xs=Array.from({length:60},(_,i)=>(i+0.1)*0.5);
+    labels=xs.map(x=>x.toFixed(1));ys=xs.map(x=>Math.pow(x,p/2-1)*Math.exp(-x/2)/(Math.pow(2,p/2)*Math.exp(lgamma(p/2))));
+    info=`<b>Chi-squared (df=${p})</b> — Sum of squared standard normals. Used in goodness-of-fit tests. Right-skewed, always positive.`;
+  }else if(activeDist==='poisson'){
+    const maxK=Math.min(50,p*3+10);
+    labels=Array.from({length:maxK},(_,k)=>String(k));ys=labels.map(k=>poissonPMF(+k,p));
+    info=`<b>Poisson(λ=${p})</b> — Count of rare events per interval. Mean = Variance = λ. Discrete distribution.`;
+  }else if(activeDist==='uniform'){
+    labels=Array.from({length:50},(_,i)=>i.toFixed(0));ys=labels.map(l=>+l>=10&&+l<=10+p?1/p:0);
+    info=`<b>Uniform(10, ${10+p})</b> — All values equally likely. Mean=(a+b)/2=${(10+(10+p))/2}. Variance=(b-a)²/12.`;
+  }else if(activeDist==='exp'){
+    const lam=p/10;const xs=Array.from({length:60},(_,i)=>i*0.5);
+    labels=xs.map(x=>x.toFixed(1));ys=xs.map(x=>lam*Math.exp(-lam*x));
+    info=`<b>Exponential(λ=${lam.toFixed(2)})</b> — Time between Poisson events. Mean=1/λ=${(1/lam).toFixed(1)}. Memoryless property.`;
+  }
+  mkChart('distChart','bar',{labels,datasets:[{data:ys,backgroundColor:'rgba(251,191,36,0.55)',borderColor:'rgba(251,191,36,0.8)',borderWidth:1,barPercentage:0.95,categoryPercentage:0.95}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:10,maxRotation:0}},y:CD.scales.y}});
+  document.getElementById('dist-info').innerHTML=info;
+}
+function drawAnscombe(){
+  const sets=[
+    {x:[10,8,13,9,11,14,6,4,12,7,5],y:[8.04,6.95,7.58,8.81,8.33,9.96,7.24,4.26,10.84,4.82,5.68]},
+    {x:[10,8,13,9,11,14,6,4,12,7,5],y:[9.14,8.14,8.74,8.77,9.26,8.10,6.13,3.10,9.13,7.26,4.74]},
+    {x:[10,8,13,9,11,14,6,4,12,7,5],y:[7.46,6.77,12.74,7.11,7.81,8.84,6.08,5.39,8.15,6.42,5.73]},
+    {x:[8,8,8,8,8,8,8,19,8,8],y:[6.58,5.76,7.71,8.84,8.47,7.04,5.25,12.50,5.56,7.91]}
+  ];
+  ['rgba(139,92,246,0.7)','rgba(244,114,182,0.7)','rgba(52,211,153,0.7)','rgba(251,191,36,0.7)'].forEach((c,i)=>{
+    mkChart(`ans${i+1}`,'scatter',{datasets:[{data:sets[i].x.map((x,j)=>({x,y:sets[i].y[j]})),backgroundColor:c,pointRadius:4}]},
+      {scales:{x:{...CD.scales.x,display:false},y:{...CD.scales.y,display:false}}});
+  });
+}
+
+// ══════════════════════════════════
+// ④ Z-SCORES
+// ══════════════════════════════════
+function initZS(){uZS();}
+function uZS(){
+  const mu=+document.getElementById('zs-mu').value,sd=+document.getElementById('zs-sd').value,x=+document.getElementById('zs-x').value;
+  ['zs-mu','zs-sd','zs-x'].forEach(id=>document.getElementById(id+'-v').textContent=document.getElementById(id).value);
+  const z=(x-mu)/sd,pctRank=normCDF(z)*100;
+  const xs=Array.from({length:100},(_,i)=>mu-4*sd+i*8*sd/100);
+  const ys=xs.map(v=>normPDF(v,mu,sd));
+  mkChart('zsChart','bar',{labels:xs.map(v=>v.toFixed(1)),datasets:[{data:ys,
+    backgroundColor:xs.map(v=>v<=x?'rgba(139,92,246,0.65)':'rgba(139,92,246,0.1)'),borderWidth:0,barPercentage:1,categoryPercentage:1}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:8,maxRotation:0}},y:CD.scales.y}});
+  document.getElementById('zs-formula').textContent=`z = (${x} − ${mu}) / ${sd} = ${z.toFixed(3)}`;
+  document.getElementById('zs-pills').innerHTML=pill('z-score',z.toFixed(3))+pill('Percentile',pctRank.toFixed(1)+'%','g')+pill('Above mean',z>0?'Yes':'No',z>0?'g':'r');
+  statgrid('zs-statgrid',[
+    {v:z.toFixed(3),l:'Z-Score'},{v:pctRank.toFixed(1)+'%',l:'Percentile','cls':'g'},
+    {v:(100-pctRank).toFixed(1)+'%',l:'Above this','cls':'b'},{v:Math.abs(z).toFixed(2),l:'|z| (distance)','cls':'y'},
+  ]);
+  const interp=Math.abs(z)<1?'Typical — within 1σ of mean':Math.abs(z)<2?'Somewhat unusual — between 1σ and 2σ':Math.abs(z)<3?'Unusual — between 2σ and 3σ (top/bottom 5%)':'Extreme outlier — beyond 3σ (top/bottom 0.3%)!';
+  document.getElementById('zs-interp').innerHTML=`<b>Interpretation:</b> ${interp}`;
+  // Comparison table
+  const comparisons=[['Current',x,mu,sd],['Peer A',mu+0.5*sd,mu,sd],['Peer B',mu-1.2*sd,mu,sd],['Peer C',mu+2.1*sd,mu,sd],['Peer D',mu-0.3*sd,mu,sd]];
+  tbody('zs-tbody',comparisons.map(([name,raw,m,s])=>{const zz=(raw-m)/s;const pp=normCDF(zz)*100;return[name,raw.toFixed(1),m,s,zz.toFixed(3),pp.toFixed(1)+'%'];}));
+}
+
+// ══════════════════════════════════
+// ⑤ SAMPLING / CLT
+// ══════════════════════════════════
+let cltPopNoise=null;
+function initCLT(){cltPopNoise=null;uCLT();}
+function uCLT(){
+  const skew=+document.getElementById('clt-skew').value/10;
+  const popsd=+document.getElementById('clt-popsd').value;
+  const n=+document.getElementById('clt-n').value,reps=+document.getElementById('clt-reps').value;
+  ['clt-skew','clt-popsd','clt-n','clt-reps'].forEach(id=>document.getElementById(id+'-v').textContent=document.getElementById(id).value);
+  if(!cltPopNoise)cltPopNoise=Array.from({length:5000},()=>randn());
+  const pop=cltPopNoise.map(z=>50+(z+skew*(z*z-1)/2)*popsd);
+  const sampleMeans=[];
+  for(let r=0;r<reps;r++){let s=0;for(let i=0;i<n;i++)s+=pop[Math.floor(Math.random()*pop.length)];sampleMeans.push(s/n);}
+  const se=sdev(pop)/Math.sqrt(n),mns=mean(sampleMeans);
+  const h=histogram(sampleMeans,20);
+  const normY=h.labels.map(l=>normPDF(+l,mns,se)*sampleMeans.length*h.bw);
+  mkChart('cltChart','bar',{labels:h.labels,datasets:[
+    {data:h.counts,backgroundColor:'rgba(96,165,250,0.45)',borderWidth:0,barPercentage:1,categoryPercentage:1,label:'Sample Means'},
+    {data:normY,type:'line',borderColor:'rgba(244,114,182,0.9)',borderWidth:2,pointRadius:0,fill:false,label:'Normal Fit',tension:0.4}
+  ]},{plugins:{legend:{display:true,labels:{color:'#6060a0',font:{size:9}}}},
+    scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:8,maxRotation:0}},y:CD.scales.y}});
+  // SE vs n chart
+  const ns=[1,2,5,10,20,30,50,100];const ses=ns.map(nn=>popsd/Math.sqrt(nn));
+  mkChart('cltSEChart','line',{labels:ns,datasets:[{data:ses,borderColor:'rgba(52,211,153,0.8)',borderWidth:2,pointRadius:4,pointBackgroundColor:'rgba(52,211,153,0.8)',fill:true,backgroundColor:'rgba(52,211,153,0.08)',tension:0.3}]},
+    {scales:{x:{...CD.scales.x,title:{display:true,text:'n (sample size)',color:'#6060a0',font:{size:9}}},
+             y:{...CD.scales.y,title:{display:true,text:'SE',color:'#6060a0',font:{size:9}}}}});
+  document.getElementById('clt-pills').innerHTML=pill('Population SD',popsd)+pill('n',n)+pill('SE',se.toFixed(3),'g')+pill('Mean of Means',mns.toFixed(2),'b');
+  statgrid('clt-statgrid',[
+    {v:popsd.toFixed(1),l:'Pop SD'},{v:n,l:'Sample n','cls':'b'},
+    {v:se.toFixed(3),l:'SE = σ/√n','cls':'g'},{v:mns.toFixed(2),l:'Mean of Means','cls':'y'},
+  ]);
+  tbody('clt-tbody',[
+    [1,popsd.toFixed(2),'100%','No'],
+    [2,(popsd/Math.sqrt(2)).toFixed(2),'70.7%','Barely'],
+    [5,(popsd/Math.sqrt(5)).toFixed(2),'44.7%','Slightly'],
+    [10,(popsd/Math.sqrt(10)).toFixed(2),'31.6%','Somewhat'],
+    [30,(popsd/Math.sqrt(30)).toFixed(2),'18.3%','Yes (CLT kicks in)'],
+    [n,se.toFixed(2),((se/popsd)*100).toFixed(1)+'%',n>=30?'✓ Yes':'Depends on shape'],
+  ]);
+}
+
+// ══════════════════════════════════
+// ⑥ CONFIDENCE INTERVALS
+// ══════════════════════════════════
+function initCI(){uCI();}
+function uCI(){
+  const xbar=+document.getElementById('ci-xbar').value,sd=+document.getElementById('ci-sd').value;
+  const n=+document.getElementById('ci-n').value,level=+document.getElementById('ci-level').value;
+  document.getElementById('ci-xbar-v').textContent=xbar;document.getElementById('ci-sd-v').textContent=sd;
+  document.getElementById('ci-n-v').textContent=n;document.getElementById('ci-level-v').textContent=level+'%';
+  const zstar=level>=99?2.576:level>=97?2.17:level>=95?1.960:level>=90?1.645:level>=85?1.44:1.28;
+  const se=sd/Math.sqrt(n),me=zstar*se,lo=xbar-me,hi=xbar+me;
+  const xs=Array.from({length:100},(_,i)=>xbar-4*se+i*8*se/100);
+  const ys=xs.map(v=>normPDF(v,xbar,se));
+  mkChart('ciChart','bar',{labels:xs.map(v=>v.toFixed(2)),datasets:[{data:ys,
+    backgroundColor:xs.map(v=>v>=lo&&v<=hi?'rgba(52,211,153,0.6)':'rgba(139,92,246,0.15)'),borderWidth:0,barPercentage:1,categoryPercentage:1}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:8,maxRotation:0}},y:CD.scales.y}});
+  document.getElementById('ci-pills').innerHTML=pill('Lower',lo.toFixed(3),'r')+pill('Upper',hi.toFixed(3),'g')+pill('Width',(2*me).toFixed(3),'y')+pill('ME',me.toFixed(3),'b')+pill('z*',zstar);
+  statgrid('ci-statgrid',[
+    {v:'['+lo.toFixed(2)+', '+hi.toFixed(2)+']',l:level+'% CI','cls':'g'},
+    {v:'±'+me.toFixed(2),l:'Margin of Error','cls':'y'},
+    {v:se.toFixed(3),l:'Standard Error','cls':'b'},
+    {v:zstar,l:'z*','cls':''},
+  ]);
+  document.getElementById('ci-details').innerHTML=`<div class="info g"><b>${level}% CI: [${lo.toFixed(3)}, ${hi.toFixed(3)}]</b><br>Margin of Error = ±${me.toFixed(3)}<br>SE = ${sd}/√${n} = ${se.toFixed(3)}</div>`;
+  // Width comparison table
+  const levels=[[80,1.282],[90,1.645],[95,1.960],[99,2.576]];
+  tbody('ci-tbody',levels.map(([lv,z])=>[lv+'%',z.toFixed(3),(z*se).toFixed(3),(2*z*se).toFixed(3)]));
+  // n needed table
+  const targetWidths=[1,2,5,10];
+  tbody('ci-ntbody',targetWidths.map(w=>{const n95=Math.ceil((2*1.96*sd/w)**2);const n99=Math.ceil((2*2.576*sd/w)**2);return[w,n95,n99];}));
+}
+
+// ══════════════════════════════════
+// ⑦ CORRELATION
+// ══════════════════════════════════
+let coBaseX=[],coLastN=-1;
+function initCO(){coLastN=-1;uCO();drawAnscombe();}
+function uCO(){
+  const r=+document.getElementById('co-r').value/100,n=+document.getElementById('co-n').value;
+  const xsd=+document.getElementById('co-xsd').value,noise=+document.getElementById('co-noise').value;
+  const outl=+document.getElementById('co-outl').value;
+  document.getElementById('co-r-v').textContent=r.toFixed(2);document.getElementById('co-n-v').textContent=n;
+  document.getElementById('co-xsd-v').textContent=xsd;document.getElementById('co-noise-v').textContent=noise;document.getElementById('co-outl-v').textContent=outl;
+  if(n!==coLastN){coLastN=n;coBaseX=Array.from({length:n},()=>50+randn()*xsd);}
+  const stableNoise=coBaseX.map((_,i)=>Math.sin(i*131.7)*noise);
+  const coY=coBaseX.map((x,i)=>r*(x-50)+50+Math.sqrt(Math.max(0,1-r*r))*stableNoise[i]);
+  const allX=[...coBaseX],allY=[...coY];
+  for(let i=0;i<outl;i++){allX.push(50+(Math.random()-0.5)*xsd*4);allY.push(50+(Math.random()-0.5)*xsd*4);}
+  const mx=mean(allX),my=mean(allY);
+  const num=allX.reduce((a,x,i)=>a+(x-mx)*(allY[i]-my),0);
+  const den=Math.sqrt(allX.reduce((a,x)=>a+(x-mx)**2,0)*allY.reduce((a,y)=>a+(y-my)**2,0));
+  const actualR=num/den;
+  // Regression line on scatter
+  const mHat=allX.reduce((a,x,i)=>a+(x-mx)*(allY[i]-my),0)/allX.reduce((a,x)=>a+(x-mx)**2,0);
+  const bHat=my-mHat*mx;
+  const xMin=Math.min(...allX),xMax=Math.max(...allX);
+  mkChart('coChart','scatter',{datasets:[
+    {data:allX.map((x,i)=>({x:+x.toFixed(2),y:+allY[i].toFixed(2)})),backgroundColor:allX.map((_,i)=>i<n?'rgba(139,92,246,0.6)':'rgba(244,114,182,0.8)'),pointRadius:5,label:'Data'},
+    {data:[{x:xMin,y:mHat*xMin+bHat},{x:xMax,y:mHat*xMax+bHat}],type:'line',borderColor:'rgba(52,211,153,0.8)',borderWidth:2,pointRadius:0,showLine:true,fill:false,label:'Best fit',tension:0}
+  ]},{plugins:{legend:{display:true,labels:{color:'#6060a0',font:{size:8}}}},
+    scales:{x:{...CD.scales.x,title:{display:true,text:'X',color:'#6060a0',font:{size:9}}},
+            y:{...CD.scales.y,title:{display:true,text:'Y',color:'#6060a0',font:{size:9}}}}});
+  const str=Math.abs(actualR)<0.3?'None':Math.abs(actualR)<0.5?'Weak':Math.abs(actualR)<0.7?'Moderate':Math.abs(actualR)<0.9?'Strong':'Very Strong';
+  document.getElementById('co-explain').innerHTML=`<b>r = ${actualR.toFixed(3)}</b> — ${str} ${actualR>0.05?'Positive':'actualR<-0.05'?'Negative':'No'} correlation. r² = ${(actualR*actualR*100).toFixed(1)}% of variance in Y explained by X.`;
+  document.getElementById('co-pills').innerHTML=pill('Actual r',actualR.toFixed(3),'y')+pill('r²',(actualR**2).toFixed(3),'g')+pill('Strength',str,'b');
+  tbody('co-tbody',[
+    ['Pearson r',actualR.toFixed(4),'Linear relationship strength (−1 to +1)'],
+    ['r²',(actualR**2).toFixed(4),'% of Y variance explained by X'],
+    ['Slope (ŷ)',mHat.toFixed(3),'Y changes by this per unit X'],
+    ['Intercept',bHat.toFixed(3),'Predicted Y when X=0'],
+    ['n (data points)',allX.length,'Sample size'],
+    ['Target r',r.toFixed(2),'Requested correlation'],
+  ]);
+}
+
+// ══════════════════════════════════
+// ⑧ REGRESSION
+// ══════════════════════════════════
+let rgX=[],rgNoise=[],rgLastNoise=-1,rgLastN=-1;
+function initRG(){rgLastNoise=-1;rgLastN=-1;uRG();}
+function uRG(){
+  const slope=+document.getElementById('rg-slope').value,int=+document.getElementById('rg-int').value;
+  const noise=+document.getElementById('rg-noise').value,n=+document.getElementById('rg-n').value;
+  const showResid=+document.getElementById('rg-resid').value,deg=+document.getElementById('rg-deg').value;
+  document.getElementById('rg-slope-v').textContent=slope.toFixed(1);document.getElementById('rg-int-v').textContent=int;
+  document.getElementById('rg-noise-v').textContent=noise;document.getElementById('rg-n-v').textContent=n;
+  document.getElementById('rg-resid-v').textContent=showResid?'On':'Off';document.getElementById('rg-deg-v').textContent=deg;
+  if(n!==rgLastN){rgLastN=n;rgX=Array.from({length:n},()=>Math.random()*100);}
+  if(noise!==rgLastNoise){rgLastNoise=noise;rgNoise=Array.from({length:rgX.length},()=>randn()*noise);}
+  const rgY=rgX.map((x,i)=>slope*x+int+rgNoise[i]);
+  const mx=mean(rgX),my=mean(rgY);
+  const mHat=rgX.reduce((a,x,i)=>a+(x-mx)*(rgY[i]-my),0)/rgX.reduce((a,x)=>a+(x-mx)**2,0);
+  const bHat=my-mHat*mx;
+  const yPred=rgX.map(x=>mHat*x+bHat);
+  const residuals=rgY.map((y,i)=>y-yPred[i]);
+  const ssTot=rgY.reduce((a,y)=>a+(y-my)**2,0);
+  const ssRes=residuals.reduce((a,e)=>a+e*e,0);
+  const r2=Math.max(0,1-ssRes/ssTot),rmse=Math.sqrt(ssRes/n);
+  const pts=rgX.map((x,i)=>({x:+x.toFixed(2),y:+rgY[i].toFixed(2)}));
+  const lineD=[{x:0,y:bHat},{x:100,y:mHat*100+bHat}];
+  const datasets=[
+    {data:pts,backgroundColor:'rgba(139,92,246,0.5)',pointRadius:4,label:'Data'},
+    {data:lineD,type:'line',borderColor:'rgba(244,114,182,0.9)',borderWidth:2,pointRadius:0,fill:false,showLine:true,label:'Regression line',tension:0}
+  ];
+  if(showResid){rgX.forEach((x,i)=>{datasets.push({data:[{x,y:yPred[i]},{x,y:rgY[i]}],type:'line',borderColor:residuals[i]>0?'rgba(52,211,153,0.35)':'rgba(244,114,182,0.35)',borderWidth:1,pointRadius:0,showLine:true,fill:false});});}
+  mkChart('rgChart','scatter',{datasets},{plugins:{legend:{display:true,labels:{color:'#6060a0',font:{size:9},filter:(i,d)=>i.datasetIndex<2}}},
+    scales:{x:{...CD.scales.x,title:{display:true,text:'X',color:'#6060a0',font:{size:9}}},
+            y:{...CD.scales.y,title:{display:true,text:'Y',color:'#6060a0',font:{size:9}}}}});
+  const rh=histogram(residuals,12);
+  mkChart('rgResid','bar',{labels:rh.labels,datasets:[{data:rh.counts,backgroundColor:'rgba(96,165,250,0.55)',borderWidth:0,barPercentage:1,categoryPercentage:1}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:6,maxRotation:0}},y:CD.scales.y}});
+  document.getElementById('rg-pills').innerHTML=pill('ŷ='+mHat.toFixed(2)+'x+'+bHat.toFixed(1),'','y')+pill('R²',r2.toFixed(4),'g')+pill('RMSE',rmse.toFixed(2),'r');
+  tbody('rg-tbody',[
+    ['Slope (β₁)',mHat.toFixed(4),'For each +1 unit in X, Y increases by '+mHat.toFixed(2)],
+    ['Intercept (β₀)',bHat.toFixed(4),'Predicted Y when X=0'],
+    ['R²',r2.toFixed(4),r2>0.9?'Excellent fit':r2>0.7?'Good fit':r2>0.4?'Moderate fit':'Poor fit'],
+    ['RMSE',rmse.toFixed(4),'Average prediction error (in Y units)'],
+    ['SS_res',ssRes.toFixed(2),'Unexplained variation'],
+    ['SS_tot',ssTot.toFixed(2),'Total variation in Y'],
+    ['n',n,'Sample size'],
+  ]);
+  // Prediction table
+  const predXs=[20,40,60,80,100];
+  tbody('rg-pred-tbody',predXs.map(xv=>{const yv=mHat*xv+bHat;const ci=1.96*rmse;return[xv,yv.toFixed(2),'['+((yv-ci).toFixed(1))+', '+((yv+ci).toFixed(1))+']'];}));
+}
+
+// ══════════════════════════════════
+// ⑨ PROBABILITY
+// ══════════════════════════════════
+function initPROB(){uPB();uPP();uPN();uBY();uEV();}
+function uPB(){
+  const n=+document.getElementById('pb-n').value,p=+document.getElementById('pb-p').value/100,khi=+document.getElementById('pb-k').value;
+  document.getElementById('pb-n-v').textContent=n;document.getElementById('pb-p-v').textContent=p.toFixed(2);document.getElementById('pb-k-v').textContent=khi;
+  const labels=[],probs=[];for(let k=0;k<=n;k++){labels.push(k);probs.push(binom(n,k,p));}
+  const ex=charts['pbChart'];if(ex&&ex.data.labels.length!==labels.length){ex.destroy();delete charts['pbChart'];}
+  const cdfP=probs.slice(0,khi+1).reduce((a,v)=>a+v,0);
+  mkChart('pbChart','bar',{labels,datasets:[{data:probs,backgroundColor:labels.map(l=>l<=khi?'rgba(96,165,250,0.75)':'rgba(139,92,246,0.4)'),borderWidth:1,borderColor:'rgba(255,255,255,0.04)'}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:20}},y:CD.scales.y}});
+  const mu=(n*p).toFixed(2),sig=Math.sqrt(n*p*(1-p)).toFixed(2);
+  document.getElementById('pb-pills').innerHTML=pill('E(X)=np',mu,'y')+pill('σ',sig,'g')+pill('P(X='+khi+')',probs[Math.min(khi,n)].toFixed(4),'b')+pill('P(X≤'+khi+')',cdfP.toFixed(4),'r');
+  // Table: show around khi ±5
+  const rows=[];for(let k=Math.max(0,khi-4);k<=Math.min(n,khi+4);k++){const pk=probs[k];const cdf=probs.slice(0,k+1).reduce((a,v)=>a+v,0);rows.push([k,pk.toFixed(5),(cdf).toFixed(5),(1-cdf).toFixed(5)]);}
+  tbody('pb-tbody',rows);
+}
+function uPP(){
+  const lam=+document.getElementById('pp-lambda').value,khi=+document.getElementById('pp-k').value;
+  document.getElementById('pp-lambda-v').textContent=lam;document.getElementById('pp-k-v').textContent=khi;
+  const maxK=Math.min(50,lam*3+10);const labels=Array.from({length:maxK},(_,k)=>k);const probs=labels.map(k=>poissonPMF(k,lam));
+  const ex=charts['ppChart'];if(ex&&ex.data.labels.length!==labels.length){ex.destroy();delete charts['ppChart'];}
+  const cdfP=probs.slice(0,khi+1).reduce((a,v)=>a+v,0);
+  mkChart('ppChart','bar',{labels,datasets:[{data:probs,backgroundColor:labels.map(k=>k<=khi?'rgba(52,211,153,0.7)':'rgba(139,92,246,0.4)'),borderWidth:0}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:15}},y:CD.scales.y}});
+  document.getElementById('pp-pills').innerHTML=pill('λ',lam,'y')+pill('P(X='+khi+')',probs[Math.min(khi,probs.length-1)].toFixed(4),'b')+pill('P(X≤'+khi+')',cdfP.toFixed(4),'g');
+  const rows=[];for(let k=Math.max(0,khi-4);k<=Math.min(maxK-1,khi+4);k++){const pk=probs[k];const cdf=probs.slice(0,k+1).reduce((a,v)=>a+v,0);rows.push([k,pk.toFixed(5),cdf.toFixed(5),(1-cdf).toFixed(5)]);}
+  tbody('pp-tbody',rows);
+}
+function uPN(){
+  const mu=+document.getElementById('pn-mu').value,sd=+document.getElementById('pn-sd').value;
+  const lo=+document.getElementById('pn-lo').value,hi=+document.getElementById('pn-hi').value;
+  ['pn-mu','pn-sd','pn-lo','pn-hi'].forEach(id=>document.getElementById(id+'-v').textContent=document.getElementById(id).value);
+  const xs=Array.from({length:100},(_,i)=>mu-4*sd+i*8*sd/100);const ys=xs.map(v=>normPDF(v,mu,sd));
+  mkChart('pnChart','bar',{labels:xs.map(v=>v.toFixed(1)),datasets:[{data:ys,
+    backgroundColor:xs.map(v=>v>=lo&&v<=hi?'rgba(52,211,153,0.65)':'rgba(139,92,246,0.15)'),borderWidth:0,barPercentage:1,categoryPercentage:1}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:8,maxRotation:0}},y:CD.scales.y}});
+  const prob=normCDF((hi-mu)/sd)-normCDF((lo-mu)/sd);
+  const below=normCDF((lo-mu)/sd),above=1-normCDF((hi-mu)/sd);
+  document.getElementById('pn-pills').innerHTML=pill('P('+lo+'≤X≤'+hi+')',(prob*100).toFixed(2)+'%','g')+pill('z_lo',((lo-mu)/sd).toFixed(2),'b')+pill('z_hi',((hi-mu)/sd).toFixed(2),'b');
+  document.getElementById('pn-explain').innerHTML=`<b>P(${lo} ≤ X ≤ ${hi}) = ${(prob*100).toFixed(2)}%</b>`;
+  tbody('pn-tbody',[
+    ['Below '+lo,(below*100).toFixed(2)+'%',(below*100).toFixed(2)+'%'],
+    [lo+' to '+hi,(prob*100).toFixed(2)+'%',(prob*100).toFixed(2)+'%'],
+    ['Above '+hi,(above*100).toFixed(2)+'%',(above*100).toFixed(2)+'%'],
+    ['μ±1σ = ['+(mu-sd).toFixed(1)+','+(mu+sd).toFixed(1)+']',(( normCDF(1)-normCDF(-1))*100).toFixed(2)+'%','Expected: 68.27%'],
+    ['μ±2σ',((normCDF(2)-normCDF(-2))*100).toFixed(2)+'%','Expected: 95.45%'],
+    ['μ±3σ',((normCDF(3)-normCDF(-3))*100).toFixed(2)+'%','Expected: 99.73%'],
+  ]);
+}
+function uBY(){
+  const prev=+document.getElementById('by-prev').value/100,sens=+document.getElementById('by-sens').value/100,spec=+document.getElementById('by-spec').value/100;
+  document.getElementById('by-prev-v').textContent=(prev*100).toFixed(0)+'%';document.getElementById('by-sens-v').textContent=(sens*100).toFixed(0)+'%';document.getElementById('by-spec-v').textContent=(spec*100).toFixed(0)+'%';
+  const N=1000,dis=Math.round(N*prev),nodis=N-dis;
+  const tp=Math.round(dis*sens),fn=dis-tp,tn=Math.round(nodis*spec),fp=nodis-tn;
+  const ppp=tp/(tp+fp||1);
+  document.getElementById('by-tp').textContent=tp;document.getElementById('by-fp').textContent=fp;document.getElementById('by-tp-total').textContent=tp+fp;
+  document.getElementById('by-fn').textContent=fn;document.getElementById('by-tn').textContent=tn;document.getElementById('by-tn-total').textContent=fn+tn;
+  document.getElementById('by-dis-total').textContent=dis;document.getElementById('by-nodis-total').textContent=nodis;
+  // Stacked bar: TP, FP, TN, FN
+  mkChart('byChart','bar',{labels:['Test Positive','Test Negative'],datasets:[
+    {data:[tp,fn],backgroundColor:'rgba(52,211,153,0.7)',label:'True (correct)'},
+    {data:[fp,tn],backgroundColor:'rgba(244,114,182,0.7)',label:'False (incorrect)'}
+  ]},{plugins:{legend:{display:true,labels:{color:'#6060a0',font:{size:9}}}},
+    scales:{x:{...CD.scales.x,stacked:true},y:{...CD.scales.y,stacked:true}}});
+  document.getElementById('by-explain').innerHTML=`<b>P(Disease | Positive Test) = ${(ppp*100).toFixed(1)}%</b><br>Of ${tp+fp} positive tests in 1000 people, only ${tp} are truly diseased!<br>${prev<=0.05?'⚠️ Low prevalence → mostly false positives even with high test accuracy.':'Higher prevalence helps PPV.'}`;
+}
+let evSeed=null;
+function uEV(){
+  const win=+document.getElementById('ev-win').value,pwin=+document.getElementById('ev-pwin').value/100;
+  const lose=+document.getElementById('ev-lose').value,rounds=+document.getElementById('ev-rounds').value;
+  document.getElementById('ev-win-v').textContent='$'+win;document.getElementById('ev-pwin-v').textContent=(pwin*100).toFixed(0)+'%';
+  document.getElementById('ev-lose-v').textContent='$'+lose;document.getElementById('ev-rounds-v').textContent=rounds;
+  const ev=pwin*win-(1-pwin)*lose;
+  if(!evSeed||evSeed.length<500)evSeed=Array.from({length:500},()=>Math.random());
+  let cum=0;const cumData=[];
+  for(let i=0;i<rounds;i++){cum+=(evSeed[i]<pwin?win:-lose);cumData.push(cum);}
+  const expectedLine=Array.from({length:rounds},(_,i)=>ev*(i+1));
+  mkChart('evChart','line',{labels:Array.from({length:rounds},(_,i)=>i+1),datasets:[
+    {data:cumData,borderColor:'rgba(139,92,246,0.8)',borderWidth:2,pointRadius:0,fill:false,label:'Cumulative Result',tension:0.3},
+    {data:expectedLine,borderColor:'rgba(244,114,182,0.7)',borderWidth:1.5,borderDash:[5,4],pointRadius:0,fill:false,label:'Expected Value line',tension:0}
+  ]},{plugins:{legend:{display:true,labels:{color:'#6060a0',font:{size:9}}}},
+    scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:8}},y:{...CD.scales.y,title:{display:true,text:'$',color:'#6060a0',font:{size:9}}}}});
+  document.getElementById('ev-explain').innerHTML=`<b>E(X) per round = $${ev.toFixed(2)}</b><br>${ev>0?'✅ Positive EV — profitable long term':ev<0?'❌ Negative EV — losing game on average':'⚖️ Break-even.'} After ${rounds} rounds: expected $${(ev*rounds).toFixed(0)}, actual $${cum.toFixed(0)}.`;
+  tbody('ev-tbody',[
+    ['Win $'+win,'$'+win,pwin.toFixed(2),(pwin*win).toFixed(2)],
+    ['Lose $'+lose,'-$'+lose,(1-pwin).toFixed(2),(-(1-pwin)*lose).toFixed(2)],
+    ['E(X)','','',ev.toFixed(2)],
+    ['Variance','','',(pwin*(win-ev)**2+(1-pwin)*(-lose-ev)**2).toFixed(2)],
+  ]);
+}
+
+// ══════════════════════════════════
+// ⑩ HYPOTHESIS TESTING
+// ══════════════════════════════════
+function initHT(){uHT();uTS();uPW();uER();}
+function uHT(){
+  const xbar=+document.getElementById('ht-xbar').value,s=+document.getElementById('ht-s').value;
+  const n=+document.getElementById('ht-n').value,mu0=+document.getElementById('ht-mu0').value;
+  const alpha=+document.getElementById('ht-alpha').value/100,tail=+document.getElementById('ht-tail').value;
+  document.getElementById('ht-xbar-v').textContent=xbar;document.getElementById('ht-s-v').textContent=s;
+  document.getElementById('ht-n-v').textContent=n;document.getElementById('ht-mu0-v').textContent=mu0;
+  document.getElementById('ht-alpha-v').textContent=alpha.toFixed(2);document.getElementById('ht-tail-v').textContent=tail===2?'Two':'One';
+  const se=s/Math.sqrt(n),t=(xbar-mu0)/se;
+  const p=tail===2?pval2t(t):normCDF(-Math.abs(t));
+  const zc=tail===2?(alpha<=0.01?2.576:alpha<=0.05?1.96:1.645):(alpha<=0.01?2.326:alpha<=0.05?1.645:1.282);
+  const reject=p<alpha;
+  const xs=Array.from({length:100},(_,i)=>(i-50)*0.1);const ys=xs.map(x=>normPDF(x,0,1));
+  mkChart('htChart','bar',{labels:xs.map(x=>x.toFixed(1)),datasets:[{data:ys,backgroundColor:xs.map(x=>{
+    if(tail===2&&Math.abs(x)>zc)return'rgba(244,114,182,0.7)';
+    if(tail===1&&x>zc)return'rgba(244,114,182,0.7)';
+    if(Math.abs(x-t)<0.15)return'rgba(251,191,36,1.0)';
+    return'rgba(139,92,246,0.2)';
+  }),borderWidth:0,barPercentage:1,categoryPercentage:1}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:10,maxRotation:0}},y:CD.scales.y}});
+  document.getElementById('ht-pills').innerHTML=pill('t-stat',t.toFixed(4))+pill('SE',se.toFixed(3),'b')+pill('p-value',(p<0.001?'<0.001':p.toFixed(4)),reject?'r':'g')+pill('crit t',zc.toFixed(3),'y');
+  document.getElementById('ht-verdict').className='verdict '+(reject?'reject':'fail');
+  document.getElementById('ht-verdict').innerHTML=reject?`🔴 REJECT H₀ — p=${p<0.001?'<0.001':p.toFixed(4)} < α=${alpha.toFixed(2)}. Significant evidence that μ ≠ ${mu0}.`:`🟢 FAIL TO REJECT H₀ — p=${p.toFixed(4)} ≥ α=${alpha.toFixed(2)}. Insufficient evidence against μ=${mu0}.`;
+  tbody('ht-tbody',[
+    ['1. State H₀','H₀: μ = '+mu0,'Null hypothesis value'],
+    ['2. Standard Error','s/√n = '+s+'/√'+n,'SE = '+se.toFixed(4)],
+    ['3. t-statistic','(x̄−μ₀)/SE = ('+xbar+'−'+mu0+')/'+se.toFixed(3),'t = '+t.toFixed(4)],
+    ['4. p-value',tail+'−tailed, t='+t.toFixed(3),'p = '+(p<0.001?'<0.001':p.toFixed(4))],
+    ['5. Decision','p '+(reject?'<':'≥')+' α='+alpha.toFixed(2),reject?'Reject H₀':'Fail to Reject H₀'],
+  ]);
+}
+function uTS(){
+  const mu1=+document.getElementById('ts-mu1').value,sd1=+document.getElementById('ts-sd1').value,n1=+document.getElementById('ts-n1').value;
+  const mu2=+document.getElementById('ts-mu2').value,sd2=+document.getElementById('ts-sd2').value,n2=+document.getElementById('ts-n2').value;
+  const alpha=+document.getElementById('ts-alpha').value/100;
+  ['ts-mu1','ts-sd1','ts-n1','ts-mu2','ts-sd2','ts-n2'].forEach(id=>document.getElementById(id+'-v').textContent=document.getElementById(id).value);
+  document.getElementById('ts-alpha-v').textContent=alpha.toFixed(2);
+  const se=Math.sqrt(sd1**2/n1+sd2**2/n2),t=(mu1-mu2)/se,p=pval2t(t),reject=p<alpha;
+  const pooledSd=Math.sqrt(((n1-1)*sd1**2+(n2-1)*sd2**2)/(n1+n2-2)),d=Math.abs(mu1-mu2)/pooledSd;
+  const xs=Array.from({length:100},(_,i)=>(i-50)*0.1);
+  mkChart('tsChart','bar',{labels:xs.map(x=>x.toFixed(1)),datasets:[{data:xs.map(x=>normPDF(x,0,1)),
+    backgroundColor:xs.map(x=>Math.abs(x)>1.96?'rgba(244,114,182,0.6)':Math.abs(x-t)<0.15?'rgba(251,191,36,0.9)':'rgba(139,92,246,0.2)'),borderWidth:0,barPercentage:1,categoryPercentage:1}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:10,maxRotation:0}},y:CD.scales.y}});
+  document.getElementById('ts-pills').innerHTML=pill('t',t.toFixed(4))+pill('p',(p<0.001?'<0.001':p.toFixed(4)),reject?'r':'g')+pill("Cohen's d",d.toFixed(3),'y');
+  document.getElementById('ts-verdict').className='verdict '+(reject?'reject':'fail');
+  document.getElementById('ts-verdict').innerHTML=reject?`🔴 REJECT H₀ — Groups differ (p=${p.toFixed(4)}, d=${d.toFixed(2)})`:`🟢 FAIL TO REJECT H₀ — No significant diff (p=${p.toFixed(4)})`;
+  tbody('ts-tbody',[
+    ['Mean',mu1,mu2,(mu1-mu2).toFixed(3)],['SD',sd1,sd2,'—'],['n',n1,n2,'—'],
+    ['SE','','',se.toFixed(4)],["Cohen's d",'','',d.toFixed(4)],
+  ]);
+  const dLabel=d<0.2?'negligible':d<0.5?'small':d<0.8?'medium':'large';
+  document.getElementById('ts-explain').innerHTML=`<b>Cohen's d = ${d.toFixed(3)} (${dLabel} effect).</b> A statistically significant result with tiny d may be practically meaningless.`;
+}
+function uPW(){
+  const d=+document.getElementById('pw-d').value/10,n=+document.getElementById('pw-n').value,alpha=+document.getElementById('pw-alpha').value/100;
+  document.getElementById('pw-d-v').textContent=d.toFixed(1);document.getElementById('pw-n-v').textContent=n;document.getElementById('pw-alpha-v').textContent=alpha.toFixed(2);
+  const zc=alpha<=0.01?2.576:alpha<=0.05?1.96:1.645;const se=1/Math.sqrt(n);
+  const power=Math.max(0.001,Math.min(0.9999,1-normCDF(zc-d/se)+normCDF(-zc-d/se)));
+  const xs=Array.from({length:100},(_,i)=>(i-50)*0.1);
+  mkChart('pwChart','line',{labels:xs.map(x=>x.toFixed(1)),datasets:[
+    {data:xs.map(x=>normPDF(x,0,1)),borderColor:'rgba(139,92,246,0.7)',borderWidth:2,fill:true,backgroundColor:'rgba(139,92,246,0.08)',pointRadius:0,label:'H₀',tension:0.4},
+    {data:xs.map(x=>normPDF(x,d/se,1)),borderColor:'rgba(52,211,153,0.7)',borderWidth:2,fill:true,backgroundColor:'rgba(52,211,153,0.08)',pointRadius:0,label:'H₁',tension:0.4}
+  ]},{plugins:{legend:{display:true,labels:{color:'#6060a0',font:{size:9}}}},scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:10}},y:CD.scales.y}});
+  document.getElementById('pw-big').textContent=(power*100).toFixed(1)+'%';
+  document.getElementById('pw-bar').style.width=(power*100)+'%';
+  document.getElementById('pw-pills').innerHTML=pill('Power',(power*100).toFixed(1)+'%',power>=0.8?'g':'r')+pill('β',(((1-power)*100).toFixed(1))+'%','y');
+  // n vs power table
+  const nVals=[10,20,30,50,100,200];
+  tbody('pw-tbody',nVals.map(nn=>{
+    const se1=1/Math.sqrt(nn);
+    const pw02=Math.max(0,Math.min(1,1-normCDF(zc-0.2/se1)+normCDF(-zc-0.2/se1)));
+    const pw05=Math.max(0,Math.min(1,1-normCDF(zc-0.5/se1)+normCDF(-zc-0.5/se1)));
+    const pw08=Math.max(0,Math.min(1,1-normCDF(zc-0.8/se1)+normCDF(-zc-0.8/se1)));
+    return[nn,(pw02*100).toFixed(0)+'%',(pw05*100).toFixed(0)+'%',(pw08*100).toFixed(0)+'%'];
+  }));
+}
+function uER(){
+  const alpha=+document.getElementById('er-alpha').value/100,shift=+document.getElementById('er-shift').value/10,n=+document.getElementById('er-n').value;
+  document.getElementById('er-alpha-v').textContent=alpha.toFixed(2);document.getElementById('er-shift-v').textContent=shift.toFixed(1);document.getElementById('er-n-v').textContent=n;
+  const se=1/Math.sqrt(n),zc=alpha<=0.01?2.576:alpha<=0.05?1.96:1.645;
+  const beta=Math.max(0,normCDF(zc-shift/se)-normCDF(-zc-shift/se)),power=1-beta;
+  const xs=Array.from({length:100},(_,i)=>(i-50)*0.08);
+  mkChart('erChart','line',{labels:xs.map(x=>x.toFixed(2)),datasets:[
+    {data:xs.map(x=>normPDF(x,0,se)),borderColor:'rgba(139,92,246,0.8)',borderWidth:2,fill:true,backgroundColor:'rgba(139,92,246,0.07)',pointRadius:0,label:'H₀: μ=0',tension:0.4},
+    {data:xs.map(x=>normPDF(x,shift,se)),borderColor:'rgba(244,114,182,0.8)',borderWidth:2,fill:true,backgroundColor:'rgba(244,114,182,0.07)',pointRadius:0,label:'H₁: μ='+shift.toFixed(1),tension:0.4}
+  ]},{plugins:{legend:{display:true,labels:{color:'#6060a0',font:{size:9}}}},scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:10}},y:CD.scales.y}});
+  document.getElementById('er-pills').innerHTML=pill('α (Type I)',(alpha*100).toFixed(0)+'%','r')+pill('β (Type II)',(beta*100).toFixed(1)+'%','y')+pill('Power',(power*100).toFixed(1)+'%',power>0.8?'g':'r');
+  document.getElementById('er-interp').innerHTML=`n=${n}, α=${alpha.toFixed(2)}, shift=${shift.toFixed(1)}σ:<br>Type I (false alarm)=${(alpha*100).toFixed(0)}% | Type II (miss)=${(beta*100).toFixed(1)}% | Power=${(power*100).toFixed(1)}%<br>${power<0.5?'⚠️ Very low power — increase n!':power<0.8?'⚡ Moderate power.':'✅ Good power.'}`;
+}
+
+// ══════════════════════════════════
+// ⑪ ANOVA
+// ══════════════════════════════════
+let avNoise={A:null,B:null,C:null};
+function initAV(){uAV();}
+function uAV(){
+  const mu1=+document.getElementById('av-mu1').value,sd1=+document.getElementById('av-sd1').value;
+  const mu2=+document.getElementById('av-mu2').value,sd2=+document.getElementById('av-sd2').value;
+  const mu3=+document.getElementById('av-mu3').value,sd3=+document.getElementById('av-sd3').value;
+  const n=+document.getElementById('av-n1').value;
+  ['av-mu1','av-sd1','av-n1','av-mu2','av-sd2','av-mu3','av-sd3'].forEach(id=>document.getElementById(id+'-v').textContent=document.getElementById(id).value);
+  if(!avNoise.A||avNoise.A.length!==n){avNoise.A=Array.from({length:n},()=>randn());avNoise.B=Array.from({length:n},()=>randn());avNoise.C=Array.from({length:n},()=>randn());}
+  const gA=avNoise.A.map(z=>mu1+z*sd1),gB=avNoise.B.map(z=>mu2+z*sd2),gC=avNoise.C.map(z=>mu3+z*sd3);
+  const all=[...gA,...gB,...gC],grand=mean(all);
+  const mA=mean(gA),mB=mean(gB),mC=mean(gC);
+  const ssBetween=n*(mA-grand)**2+n*(mB-grand)**2+n*(mC-grand)**2;
+  const ssWithin=gA.reduce((a,v)=>a+(v-mA)**2,0)+gB.reduce((a,v)=>a+(v-mB)**2,0)+gC.reduce((a,v)=>a+(v-mC)**2,0);
+  const dfB=2,dfW=all.length-3,F=(ssBetween/dfB)/(ssWithin/dfW);
+  const etaSq=ssBetween/(ssBetween+ssWithin);
+  // Overlapping histograms
+  const mn_=Math.min(...all),mx=Math.max(...all),bins=15,bw=(mx-mn_)/bins;
+  const labs=Array.from({length:bins},(_,i)=>(mn_+i*bw).toFixed(1));
+  const cnt=g=>labs.map((l,i)=>g.filter(v=>v>=+l&&(i===bins-1?v<=mx:v<+l+bw)).length);
+  mkChart('avChart','bar',{labels:labs,datasets:[
+    {data:cnt(gA),backgroundColor:'rgba(139,92,246,0.55)',label:'Group A',barPercentage:0.85,categoryPercentage:0.85},
+    {data:cnt(gB),backgroundColor:'rgba(52,211,153,0.55)',label:'Group B',barPercentage:0.85,categoryPercentage:0.85},
+    {data:cnt(gC),backgroundColor:'rgba(244,114,182,0.55)',label:'Group C',barPercentage:0.85,categoryPercentage:0.85}
+  ]},{plugins:{legend:{display:true,labels:{color:'#6060a0',font:{size:9}}}},
+    scales:{x:{...CD.scales.x,stacked:false,ticks:{maxTicksLimit:8,maxRotation:0}},y:{...CD.scales.y,stacked:false}}});
+  ['ssbetween','dfbetween','msbetween','sswithin','dfwithin','mswithin','sstotal','dftotal'].forEach((k,i)=>{
+    const vals=[ssBetween.toFixed(2),dfB,(ssBetween/dfB).toFixed(2),ssWithin.toFixed(2),dfW,(ssWithin/dfW).toFixed(2),(ssBetween+ssWithin).toFixed(2),all.length-1];
+    const el=document.getElementById('av-'+k);if(el)el.textContent=vals[i];
+  });
+  document.getElementById('av-f').textContent=F.toFixed(3);
+  document.getElementById('av-pills').innerHTML=pill('F',F.toFixed(3),'y')+pill('η²',etaSq.toFixed(3),'b')+pill('Grand Mean',grand.toFixed(2));
+  const fCrit=3.15,reject=F>fCrit;
+  document.getElementById('av-verdict').className='verdict '+(reject?'reject':'fail');
+  document.getElementById('av-verdict').innerHTML=reject?`🔴 REJECT H₀ — F=${F.toFixed(3)} > critical (≈${fCrit}). Groups differ significantly. η²=${etaSq.toFixed(3)} (${etaSq>0.14?'large':etaSq>0.06?'medium':'small'} effect).`:`🟢 FAIL TO REJECT H₀ — F=${F.toFixed(3)} ≤ ${fCrit}. No significant difference between group means.`;
+  tbody('av-tbody',[
+    ['A',n,mA.toFixed(2),sd1,(mA-grand).toFixed(2)],
+    ['B',n,mB.toFixed(2),sd2,(mB-grand).toFixed(2)],
+    ['C',n,mC.toFixed(2),sd3,(mC-grand).toFixed(2)],
+    ['Grand (all)',all.length,grand.toFixed(2),'—','0.00'],
+  ]);
+}
+
+// ══════════════════════════════════
+// SANDBOX
+// ══════════════════════════════════
+let sbNoise=null,sbLastN=-1;
+function initSB(){sbLastN=-1;uSB();}
+function uSB(){
+  const mu=+document.getElementById('sb-mu').value,sd=+document.getElementById('sb-sd').value;
+  const n=+document.getElementById('sb-n').value,skew=+document.getElementById('sb-skew').value/10;
+  const outc=+document.getElementById('sb-outc').value,outm=+document.getElementById('sb-outm').value;
+  const bim=+document.getElementById('sb-bim').value;
+  document.getElementById('sb-mu-v').textContent=mu;document.getElementById('sb-sd-v').textContent=sd;
+  document.getElementById('sb-n-v').textContent=n;document.getElementById('sb-skew-v').textContent=skew.toFixed(1);
+  document.getElementById('sb-outc-v').textContent=outc;document.getElementById('sb-outm-v').textContent=outm;document.getElementById('sb-bim-v').textContent=bim;
+  if(n!==sbLastN){sbLastN=n;sbNoise=Array.from({length:n},()=>randn());}
+  const d=sbNoise.map(z=>{let v=z+skew*(z*z-1)/2;return mu+v*sd;});
+  for(let i=0;i<outc;i++)d.push(mu+(Math.random()>0.5?1:-1)*outm*sd);
+  if(bim>0)for(let i=0;i<Math.min(bim,60);i++)d.push(mu+bim+randn()*sd*0.8);
+  const mn=mean(d),med=median(d),std=sdev(d),vr=std*std;
+  const q1=pct(d,25),q3=pct(d,75),iqr=q3-q1;
+  const mn_=Math.min(...d),mx=Math.max(...d),cv=(std/Math.abs(mn)*100);
+  const sk3=d.reduce((a,v)=>a+((v-mn)/std)**3,0)/d.length;
+  const k4=d.reduce((a,v)=>a+((v-mn)/std)**4,0)/d.length-3;
+  const h=histogram(d,16);
+  mkChart('sbChart','bar',{labels:h.labels,datasets:[{data:h.counts,backgroundColor:'rgba(251,191,36,0.5)',borderColor:'rgba(251,191,36,0.7)',borderWidth:1,barPercentage:1,categoryPercentage:1}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:10,maxRotation:0}},y:CD.scales.y}});
+  // Box plot
+  mkChart('sbBoxChart','bar',{
+    labels:['Min','Q1','Median','Q3','Max'],
+    datasets:[{data:[mn_,q1,med,q3,mx].map(v=>+v.toFixed(2)),backgroundColor:['rgba(244,114,182,0.5)','rgba(251,191,36,0.5)','rgba(52,211,153,0.8)','rgba(251,191,36,0.5)','rgba(244,114,182,0.5)'],borderWidth:1}]
+  });
+  document.getElementById('sb-pills').innerHTML=pill('n',d.length)+pill('Mean',mn.toFixed(2))+pill('Median',med.toFixed(2),'g')+pill('SD',std.toFixed(2),'b')+pill('Skew',sk3.toFixed(2),'y')+pill('Ex.Kurt',k4.toFixed(2),'r');
+  tbody('sb-tbody',[
+    ['Central Tendency','Mean',mn.toFixed(4)],
+    ['','Median',med.toFixed(4)],
+    ['','Trimmed Mean (10%)',(()=>{const s=sortArr(d);const t=Math.floor(d.length*0.1);return mean(s.slice(t,s.length-t)).toFixed(4);})()],
+    ['Spread','Std Dev',std.toFixed(4)],
+    ['','Variance',vr.toFixed(4)],
+    ['','IQR',iqr.toFixed(4)],
+    ['','CV',cv.toFixed(2)+'%'],
+    ['','Range',(mx-mn_).toFixed(4)],
+    ['Shape','Skewness',sk3.toFixed(4)],
+    ['','Excess Kurtosis',k4.toFixed(4)],
+    ['Percentiles','Q1',q1.toFixed(4)],
+    ['','Q3',q3.toFixed(4)],
+    ['','P5',pct(d,5).toFixed(4)],
+    ['','P95',pct(d,95).toFixed(4)],
+  ]);
+  const se_h=std/Math.sqrt(d.length),t=(mn-50)/se_h,p=pval2t(t),reject=p<0.05;
+  const xs2=Array.from({length:80},(_,i)=>(i-40)*0.1);
+  mkChart('sbHtChart','bar',{labels:xs2.map(x=>x.toFixed(1)),datasets:[{data:xs2.map(x=>normPDF(x,0,1)),
+    backgroundColor:xs2.map(x=>Math.abs(x)>1.96?'rgba(244,114,182,0.6)':Math.abs(x-t)<0.25?'rgba(251,191,36,0.9)':'rgba(139,92,246,0.2)'),borderWidth:0,barPercentage:1,categoryPercentage:1}]},
+    {scales:{x:{...CD.scales.x,ticks:{maxTicksLimit:8,maxRotation:0}},y:CD.scales.y}});
+  document.getElementById('sb-ht').className='verdict '+(reject?'reject':'fail');
+  document.getElementById('sb-ht').textContent=reject?`🔴 H₀ (μ=50) REJECTED — t=${t.toFixed(3)}, p=${p<0.001?'<0.001':p.toFixed(4)} < 0.05. Mean of ${mn.toFixed(2)} is significantly different from 50.`:`🟢 H₀ (μ=50) not rejected — t=${t.toFixed(3)}, p=${p.toFixed(4)} ≥ 0.05.`;
+}
+
+// ══════════════════════════════════
+// QUIZ
+// ══════════════════════════════════
+const QUESTIONS=[
+  {q:"The mean of [2,4,4,4,5,5,7,9] is 5. What is the standard deviation?",opts:["2","1.5","4","√4 = 2"],a:0,exp:"Variance = Σ(xᵢ−5)²/8 = (9+1+1+1+0+0+4+16)/8 = 4. SD = √4 = 2."},
+  {q:"A dataset has mean=50, median=35. Which is most likely true?",opts:["Left-skewed","Right-skewed","Symmetric","No outliers"],a:1,exp:"Mean > Median → right (positive) skew. A long right tail pulls mean upward."},
+  {q:"You have a 95% CI [42, 58]. This means:",opts:["95% of data is in [42,58]","True mean has 95% prob of being here","~95% of such CIs contain the true mean","Sample mean is 95% accurate"],a:2,exp:"CIs are a property of the procedure, not a probability statement about one specific interval."},
+  {q:"p-value = 0.03, α = 0.05. Conclude:",opts:["Accept H₀","Reject H₀","Fail to reject H₀","Accept H₁"],a:1,exp:"p < α → reject H₀. We never 'accept H₁' — we only reject or fail to reject H₀."},
+  {q:"R² = 0.81 in a regression means:",opts:["Slope is 0.81","81% of Y's variance is explained by X","Correlation = 0.81","Model predicts 81% correctly"],a:1,exp:"R² = coefficient of determination. 0.81 = 81% of variance in Y accounted for by X."},
+  {q:"As sample size n increases, SE of the mean:",opts:["Increases ∝ n","Decreases ∝ 1/√n","Stays the same","Decreases ∝ 1/n"],a:1,exp:"SE = σ/√n. Doubling n reduces SE by √2 ≈ 1.41, not by 2."},
+  {q:"The Central Limit Theorem states:",opts:["Population becomes normal","Sample means → normal regardless of population","All statistics become normal","SD equals 1"],a:1,exp:"CLT: sampling distribution of sample means approaches normal as n→∞, regardless of population shape."},
+  {q:"Cohen's d = 0.2 indicates:",opts:["Large effect","Medium effect","Small effect","Statistically significant"],a:2,exp:"Cohen's d benchmarks: 0.2=small, 0.5=medium, 0.8=large. Statistical significance ≠ practical significance."},
+  {q:"Type II error (β) means:",opts:["Rejecting true H₀","Failing to reject false H₀","Accepting false H₁","Correct decision"],a:1,exp:"Type II = failing to reject H₀ when it is actually false (False Negative). Power = 1 − β."},
+  {q:"A and B independent. P(A and B) =",opts:["P(A)+P(B)","P(A)×P(B)","P(A|B)×P(B|A)","P(A)/P(B)"],a:1,exp:"Independence: P(A∩B) = P(A)×P(B). The addition rule applies to union, not intersection."},
+  {q:"IQR is preferred over range because:",opts:["Includes all data","Resistant to outliers","Always larger than range","Equals SD"],a:1,exp:"IQR = Q3−Q1 = middle 50%. Extreme values only affect range, not IQR."},
+  {q:"r = −0.85 between ice cream sales and drowning deaths is most likely:",opts:["Ice cream causes drowning","Drowning causes demand","Confounding variable (summer)","Negative = causation"],a:2,exp:"Both peak in summer. Temperature is a confounding variable. Correlation ≠ causation."},
+  {q:"Poisson(λ=10): what equals the mean?",opts:["√10","10","100","10²"],a:1,exp:"Poisson: Mean = Variance = λ. With λ=10, mean=10, variance=10, SD=√10."},
+  {q:"ANOVA F-statistic ≈ 1 means:",opts:["All means differ","Between ≈ within variance (groups similar)","Test not applicable","At least two differ"],a:1,exp:"F = MS_between/MS_within. F≈1 → group differences ≈ random noise within groups."},
+  {q:"99% CI vs 95% CI (same data):",opts:["Narrower","Same width","Wider","Not comparable"],a:2,exp:"Higher confidence → wider interval. z* for 99%=2.576 vs 1.960 for 95%."},
+  {q:"Excess kurtosis > 0 means:",opts:["Heavy tails (leptokurtic)","Light tails (platykurtic)","Positive skew","Bimodal"],a:0,exp:"Positive excess kurtosis = heavier tails and sharper peak than normal = leptokurtic. Common in financial data."},
+  {q:"Z-score of a value exactly at the mean is:",opts:["1","−1","0","Undefined"],a:2,exp:"z = (x−μ)/σ. If x=μ, z=0/σ=0. Z=0 means the value is exactly at the mean."},
+  {q:"Statistical power = 0.80 means:",opts:["α=0.20","80% chance of rejecting false H₀","80% chance of accepting H₀","p=0.80"],a:1,exp:"Power = 1−β = probability of correctly rejecting H₀ when false. Target ≥ 0.80."},
+  {q:"Increasing α from 0.05 to 0.10 (all else constant):",opts:["Both errors increase","Type I↑, Type II↓","Type I↓, Type II↑","No change"],a:1,exp:"Higher α → more willing to reject → more false positives (Type I↑) but fewer missed effects (Type II↓, Power↑)."},
+  {q:"Bayes' theorem is useful when:",opts:["Computing SE","Updating probability given new evidence","Finding mode","Comparing means"],a:1,exp:"Bayes': P(A|B) = P(B|A)×P(A)/P(B). Allows updating prior beliefs with evidence."},
+  {q:"Variance of a constant c is:",opts:["c","c²","1","0"],a:3,exp:"A constant has no variability. Variance and SD both equal 0."},
+  {q:"To compare means of 3+ groups, use:",opts:["t-test","Chi-squared","ANOVA","Z-test"],a:2,exp:"ANOVA compares 3+ group means via F-statistic. Multiple t-tests would inflate Type I error rate."},
+  {q:"Good regression residuals should be:",opts:["Perfectly linear","Normal with mean ≈ 0","Always positive","Equal to predicted values"],a:1,exp:"OLS assumptions: residuals ~ Normal, mean≈0, constant variance, independent. Any pattern signals model problems."},
+  {q:"Median preferred over mean for income because:",opts:["Income always negative","Income is right-skewed with extreme values","Mean is harder","Income is uniform"],a:1,exp:"Billionaires pull mean up dramatically. Median reflects 'typical person' better for skewed distributions."},
+  {q:"Two-tailed p=0.04, α=0.05. One-tailed p would be:",opts:["0.08","0.04","0.02","0.01"],a:2,exp:"One-tailed p = two-tailed p / 2 = 0.02. One-tailed tests are less conservative."},
+  {q:"Significant result with d=0.05 (tiny effect) is:",opts:["Always practically important","Significant but practically meaningless","Impossible","Data fraud"],a:1,exp:"Very large n makes even trivial effects significant. Always report effect sizes alongside p-values."},
+  {q:"SE decreases with larger n because:",opts:["Pop SD decreases","Random variation averages out more","Mean → 0","Samples auto-representative"],a:1,exp:"SE = σ/√n. More observations → high and low values cancel more → more stable mean estimate."},
+  {q:"Binomial(n=20, p=0.5): E(X) =",opts:["5","10","20","0.5"],a:1,exp:"E(X) = np = 20×0.5 = 10. Var = np(1−p) = 5. SD = √5 ≈ 2.24."},
+  {q:"Base rate fallacy: people ignore",opts:["Marginal probability","Prior (base rate)","Likelihood","Denominator"],a:1,exp:"People focus on test accuracy, ignoring how rare the condition is. Rare condition → mostly false positives even with accurate tests."},
+  {q:"Quadrupling n: CI width changes by:",opts:["×2 (doubles)","×0.5 (halves)","×0.25","No change"],a:1,exp:"Width ∝ 1/√n. Quadrupling n → √4 = 2 → width halves. To halve width, need 4× current n."}
+];
+let qScores={correct:0,wrong:0,answered:[]};
+function initQuiz(){renderQuiz();}
+function renderQuiz(){
+  const c=document.getElementById('quiz-container');c.innerHTML='';
+  QUESTIONS.forEach((q,i)=>{
+    const d=document.createElement('div');d.className='quiz-q';d.id='qq'+i;
+    const ans=qScores.answered[i];
+    d.innerHTML=`<div class="qtext"><b>Q${i+1}.</b> ${q.q}</div>
+      <div class="quiz-opts">${q.opts.map((o,j)=>`<button class="qopt${ans!==undefined?(j===q.a?' correct':j===ans&&j!==q.a?' wrong':' reveal'):''}${ans!==undefined?' disabled':''}" onclick="answerQ(${i},${j})">${o}</button>`).join('')}</div>
+      <div class="quiz-exp${ans!==undefined?' show':''}" id="qexp${i}">💡 ${q.exp}</div>`;
+    c.appendChild(d);
+  });updateQuizScore();
+}
+function answerQ(qi,opt){
+  if(qScores.answered[qi]!==undefined)return;
+  qScores.answered[qi]=opt;if(opt===QUESTIONS[qi].a)qScores.correct++;else qScores.wrong++;
+  renderQuiz();setTimeout(()=>document.getElementById('qexp'+qi).scrollIntoView({behavior:'smooth',block:'nearest'}),100);
+}
+function resetQuiz(){qScores={correct:0,wrong:0,answered:[]};renderQuiz();}
+function updateQuizScore(){
+  document.getElementById('quiz-score').textContent=qScores.correct;
+  document.getElementById('quiz-wrong').textContent=qScores.wrong;
+  const done=qScores.answered.filter(a=>a!==undefined).length;
+  document.getElementById('quiz-prog').style.width=(done/QUESTIONS.length*100)+'%';
+  document.getElementById('quiz-prog-label').textContent=`${done} / ${QUESTIONS.length}`;
+}
+window.addEventListener('load',()=>{initQuiz();});
+</script>
+</body>
+</html>

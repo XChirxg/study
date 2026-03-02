@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Finance Lab — Interactive Learning</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@300;400;600&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0a0e1a;--bg2:#111827;--bg3:#1a2235;--card:#131c2e;--border:#1e2d45;--accent:#00d4ff;--accent2:#ff6b35;--accent3:#7c3aed;--accent4:#10b981;--accent5:#f59e0b;--text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;--red:#ef4444;--green:#10b981;--gold:#f59e0b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.03) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:0}
+header{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px;gap:1rem}
+.logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;background:linear-gradient(135deg,var(--accent),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;white-space:nowrap}
+.logo span{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:300;color:var(--text3);-webkit-text-fill-color:var(--text3);display:block;letter-spacing:3px;text-transform:uppercase}
+nav{display:flex;gap:.2rem;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button{padding:.35rem .85rem;background:transparent;border:1px solid transparent;color:var(--text2);font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border-radius:4px;white-space:nowrap;transition:all .2s}
+nav button.active,nav button:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,212,255,.05)}
+main{position:relative;z-index:1;max-width:1600px;margin:0 auto;padding:1.5rem}
+.section{display:none;animation:fadeIn .35s ease}
+.section.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.section-hero{margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
+.section-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:900;line-height:1.1;margin-bottom:.5rem}
+.section-hero h1 em{font-style:normal;color:var(--accent)}
+.section-hero p{color:var(--text2);font-size:.92rem;max-width:700px;line-height:1.7}
+.concept-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);color:#a78bfa;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;padding:.25rem .7rem;border-radius:100px;margin-bottom:.75rem}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem}
+.grid-12{display:grid;grid-template-columns:1fr 2fr;gap:1.25rem}
+.grid-21{display:grid;grid-template-columns:2fr 1fr;gap:1.25rem}
+.grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:.75rem}
+@media(max-width:1100px){.grid-2,.grid-3,.grid-4,.grid-12,.grid-21,.grid-5{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.5}
+.card.accent2::before{background:linear-gradient(90deg,transparent,var(--accent2),transparent)}
+.card.accent3::before{background:linear-gradient(90deg,transparent,var(--accent3),transparent)}
+.card.accent4::before{background:linear-gradient(90deg,transparent,var(--accent4),transparent)}
+.card.accent5::before{background:linear-gradient(90deg,transparent,var(--accent5),transparent)}
+.card-title{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:.85rem;display:flex;align-items:center;gap:.5rem}
+.card-title .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.card-title .dot.orange{background:var(--accent2)}
+.card-title .dot.purple{background:var(--accent3)}
+.card-title .dot.green{background:var(--accent4)}
+.card-title .dot.gold{background:var(--accent5)}
+.insight{background:rgba(0,212,255,.04);border:1px solid rgba(0,212,255,.15);border-radius:8px;padding:.85rem;margin-top:.85rem;font-size:.82rem;color:var(--text2);line-height:1.6}
+.insight strong{color:var(--accent)}
+.insight.warn{background:rgba(245,158,11,.05);border-color:rgba(245,158,11,.2)}
+.insight.warn strong{color:var(--gold)}
+.insight.danger{background:rgba(239,68,68,.05);border-color:rgba(239,68,68,.2)}
+.insight.danger strong{color:var(--red)}
+.insight.success{background:rgba(16,185,129,.05);border-color:rgba(16,185,129,.2)}
+.insight.success strong{color:var(--green)}
+
+/* ── SLIDER GROUP ── */
+.slider-group{margin-bottom:1rem}
+.slider-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.slider-label{font-size:.78rem;color:var(--text2);font-weight:500}
+/* Click-to-edit value display */
+.slider-val{font-family:'JetBrains Mono',monospace;font-size:.95rem;font-weight:600;color:var(--accent);cursor:pointer;border-bottom:1px dashed rgba(0,212,255,.3);transition:border-color .2s;padding:0 2px}
+.slider-val:hover{border-color:var(--accent)}
+.slider-val.orange{color:var(--accent2);border-bottom-color:rgba(255,107,53,.3)}
+.slider-val.orange:hover{border-color:var(--accent2)}
+.slider-val.green{color:var(--accent4);border-bottom-color:rgba(16,185,129,.3)}
+.slider-val.green:hover{border-color:var(--accent4)}
+.slider-val.gold{color:var(--gold);border-bottom-color:rgba(245,158,11,.3)}
+.slider-val.gold:hover{border-color:var(--gold)}
+/* Inline edit input that replaces the value display */
+.val-input{font-family:'JetBrains Mono',monospace;font-size:.95rem;font-weight:600;color:var(--accent);background:rgba(0,212,255,.08);border:1px solid var(--accent);border-radius:4px;padding:1px 6px;width:90px;outline:none}
+.val-input.orange{color:var(--accent2);background:rgba(255,107,53,.08);border-color:var(--accent2)}
+.val-input.green{color:var(--accent4);background:rgba(16,185,129,.08);border-color:var(--accent4)}
+.val-input.gold{color:var(--gold);background:rgba(245,158,11,.08);border-color:var(--gold)}
+input[type=range]{width:100%;height:4px;-webkit-appearance:none;background:var(--border);border-radius:100px;outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);box-shadow:0 0 8px rgba(0,212,255,.4);cursor:pointer;transition:transform .1s}
+input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2)}
+input[type=range].orange::-webkit-slider-thumb{background:var(--accent2);box-shadow:0 0 8px rgba(255,107,53,.4)}
+input[type=range].green::-webkit-slider-thumb{background:var(--accent4);box-shadow:0 0 8px rgba(16,185,129,.4)}
+input[type=range].gold::-webkit-slider-thumb{background:var(--gold);box-shadow:0 0 8px rgba(245,158,11,.4)}
+input[type=range].purple::-webkit-slider-thumb{background:var(--accent3);box-shadow:0 0 8px rgba(124,58,237,.4)}
+/* Toggle switch */
+.toggle-wrap{display:flex;align-items:center;gap:.6rem;margin:.5rem 0}
+.toggle{position:relative;width:36px;height:20px;cursor:pointer}
+.toggle input{opacity:0;width:0;height:0}
+.toggle-slider{position:absolute;inset:0;background:var(--border);border-radius:20px;transition:.3s}
+.toggle-slider::before{content:'';position:absolute;width:14px;height:14px;left:3px;bottom:3px;background:var(--text3);border-radius:50%;transition:.3s}
+.toggle input:checked+.toggle-slider{background:var(--accent)}
+.toggle input:checked+.toggle-slider::before{transform:translateX(16px);background:white}
+/* Number stepper */
+.stepper{display:flex;align-items:center;gap:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;width:fit-content}
+.stepper button{padding:.3rem .6rem;background:var(--bg3);border:none;color:var(--text2);cursor:pointer;font-size:1rem;transition:background .15s;line-height:1}
+.stepper button:hover{background:var(--border);color:var(--text)}
+.stepper-val{padding:.3rem .75rem;background:var(--bg);font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--text);min-width:60px;text-align:center;border-left:1px solid var(--border);border-right:1px solid var(--border)}
+/* KPI */
+.kpi{text-align:center;padding:.85rem;background:var(--bg3);border-radius:8px;border:1px solid var(--border)}
+.kpi-val{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;line-height:1;margin-bottom:.2rem}
+.kpi-label{font-size:.65rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;font-family:'JetBrains Mono',monospace}
+.kpi-sub{font-size:.68rem;color:var(--text3);margin-top:.2rem}
+/* Formula box */
+.formula{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:.6rem 1rem;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--accent);margin:.65rem 0;letter-spacing:.5px}
+/* Table */
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);padding:.65rem .85rem;text-align:left;border-bottom:1px solid var(--border)}
+td{padding:.65rem .85rem;border-bottom:1px solid rgba(30,45,69,.5);color:var(--text2)}
+tr:hover td{background:rgba(0,212,255,.02)}
+td.num{font-family:'JetBrains Mono',monospace;color:var(--text);font-size:.8rem}
+td.pos{color:var(--green);font-family:'JetBrains Mono',monospace}
+td.neg{color:var(--red);font-family:'JetBrains Mono',monospace}
+td.label{font-weight:600;color:var(--text)}
+td.company{font-weight:600;color:var(--accent)}
+/* Ratio cards */
+.ratio-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.1rem;transition:border-color .2s}
+.ratio-card:hover{border-color:rgba(0,212,255,.3)}
+.ratio-name{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:.4rem}
+.ratio-val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;margin-bottom:.2rem}
+.ratio-verdict{font-size:.68rem;padding:.15rem .5rem;border-radius:100px;display:inline-block;font-weight:500;letter-spacing:.5px}
+.verdict-good{background:rgba(16,185,129,.15);color:var(--green)}
+.verdict-warn{background:rgba(245,158,11,.15);color:var(--gold)}
+.verdict-bad{background:rgba(239,68,68,.15);color:var(--red)}
+canvas{max-width:100%}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+.mb-6{margin-bottom:1.25rem}
+.mt-6{margin-top:1.25rem}
+.divider{height:1px;background:var(--border);margin:1.25rem 0}
+/* DuPont flow */
+.dupont-flow{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;justify-content:center;padding:.85rem 0}
+.dupont-box{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:.65rem .85rem;text-align:center;min-width:100px}
+.dupont-box .val{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700}
+.dupont-box .lbl{font-family:'JetBrains Mono',monospace;font-size:.55rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3)}
+.dupont-op{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--text3);font-weight:300}
+/* Sector buttons */
+.sector-btns{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.85rem}
+.sector-btn{padding:.28rem .65rem;border:1px solid var(--border);background:transparent;color:var(--text2);font-size:.72rem;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif}
+.sector-btn.active,.sector-btn:hover{border-color:var(--accent2);color:var(--accent2);background:rgba(255,107,53,.05)}
+/* Example cards */
+.example-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;margin:.85rem 0}
+@media(max-width:900px){.example-cards{grid-template-columns:repeat(3,1fr)}}
+.ex-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:.7rem;cursor:pointer;transition:all .2s;text-align:center}
+.ex-card:hover,.ex-card.active{border-color:var(--accent);background:rgba(0,212,255,.05)}
+.ex-card .ex-name{font-size:.72rem;font-weight:600;color:var(--text);margin-bottom:.2rem}
+.ex-card .ex-tag{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--text3)}
+.ex-card .ex-logo{font-size:1.4rem;margin-bottom:.3rem}
+/* Progress bar */
+.prog-bar{height:8px;background:var(--border);border-radius:100px;overflow:hidden;margin:.3rem 0}
+.prog-fill{height:100%;border-radius:100px;transition:width .5s cubic-bezier(.4,0,.2,1)}
+/* Tag chips */
+.chip{display:inline-block;padding:.12rem .45rem;background:rgba(0,212,255,.1);border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--accent);margin:.08rem}
+.chip.orange{background:rgba(255,107,53,.1);color:var(--accent2)}
+.chip.green{background:rgba(16,185,129,.1);color:var(--green)}
+.chip.red{background:rgba(239,68,68,.1);color:var(--red)}
+.chip.gold{background:rgba(245,158,11,.1);color:var(--gold)}
+/* CCC timeline visual */
+.ccc-visual{position:relative;height:56px;margin:1rem 0;border-radius:8px;overflow:hidden;background:var(--bg3);border:1px solid var(--border)}
+.ccc-seg{position:absolute;top:8px;height:40px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.6rem;transition:all .5s}
+/* Editable cell */
+.editable-num{cursor:pointer;border-bottom:1px dashed var(--text3);transition:border-color .2s}
+.editable-num:hover{border-color:var(--accent);color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">FinanceLab<span>PhD Interactive Finance</span></div>
+  <nav id="mainNav">
+    <button class="active" data-sec="income">P&amp;L</button>
+    <button data-sec="balance">Balance Sheet</button>
+    <button data-sec="cashflow">Cash Flow</button>
+    <button data-sec="ratios">Ratios</button>
+    <button data-sec="dupont">DuPont</button>
+    <button data-sec="wacc">WACC &amp; DCF</button>
+    <button data-sec="working">Working Capital</button>
+    <button data-sec="breakeven">Break-Even</button>
+    <button data-sec="leverage">Leverage</button>
+  </nav>
+</header>
+<main>
+
+<!-- ═══════════════════ INCOME STATEMENT ═══════════════════ -->
+<section class="section active" id="income">
+<div class="section-hero">
+  <div class="concept-badge">📊 Module 01</div>
+  <h1>Profit &amp; Loss <em>Statement</em></h1>
+  <p>The income statement shows how revenue flows through expenses to reach the bottom line. Click any value to type it directly. Load a real company below to see how the world's best businesses are structured.</p>
+</div>
+
+<!-- Real-world examples -->
+<div class="card mb-6 accent3">
+  <div class="card-title"><span class="dot purple"></span>Load Real Company P&amp;L — FY2024 Data</div>
+  <div class="example-cards" id="pl-examples">
+    <div class="ex-card" onclick="loadPLExample('tcs')"><div class="ex-logo">💻</div><div class="ex-name">TCS</div><div class="ex-tag">IT Services</div></div>
+    <div class="ex-card" onclick="loadPLExample('reliance')"><div class="ex-logo">🛢️</div><div class="ex-name">Reliance</div><div class="ex-tag">Conglomerate</div></div>
+    <div class="ex-card" onclick="loadPLExample('zomato')"><div class="ex-logo">🍕</div><div class="ex-name">Zomato</div><div class="ex-tag">Foodtech</div></div>
+    <div class="ex-card" onclick="loadPLExample('hdfc')"><div class="ex-logo">🏦</div><div class="ex-name">HDFC Bank</div><div class="ex-tag">Banking</div></div>
+    <div class="ex-card" onclick="loadPLExample('apple')"><div class="ex-logo">🍎</div><div class="ex-name">Apple</div><div class="ex-tag">Tech (US)</div></div>
+  </div>
+</div>
+
+<div class="grid-12 mb-6">
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>Input Controls <span style="font-size:.6rem;color:var(--text3);margin-left:auto">Click value to edit</span></div>
+    <div class="slider-group">
+      <div class="slider-header"><span class="slider-label">Revenue (₹)</span><span class="slider-val" id="rev-v" data-slider="rev" data-min="0" data-max="200000000" data-step="100000">₹50L</span></div>
+      <input type="range" id="rev" min="0" max="200000000" step="100000" value="5000000">
+    </div>
+    <div class="slider-group">
+      <div class="slider-header"><span class="slider-label">COGS (% of Revenue)</span><span class="slider-val orange" id="cogs-v" data-slider="cogs" data-min="0" data-max="95" data-step="0.5">40%</span></div>
+      <input type="range" class="orange" id="cogs" min="0" max="95" step="0.5" value="40">
+    </div>
+    <div class="slider-group">
+      <div class="slider-header"><span class="slider-label">Operating Expenses (% of Rev)</span><span class="slider-val orange" id="opex-v" data-slider="opex" data-min="0" data-max="80" data-step="0.5">25%</span></div>
+      <input type="range" class="orange" id="opex" min="0" max="80" step="0.5" value="25">
+    </div>
+    <div class="slider-group">
+      <div class="slider-header"><span class="slider-label">D&amp;A (% of Revenue)</span><span class="slider-val gold" id="da-v" data-slider="da" data-min="0" data-max="25" data-step="0.25">5%</span></div>
+      <input type="range" class="gold" id="da" min="0" max="25" step="0.25" value="5">
+    </div>
+    <div class="slider-group">
+      <div class="slider-header"><span class="slider-label">Interest Expense (% of Rev)</span><span class="slider-val orange" id="interest-v" data-slider="interest" data-min="0" data-max="30" data-step="0.25">3%</span></div>
+      <input type="range" class="orange" id="interest" min="0" max="30" step="0.25" value="3">
+    </div>
+    <div class="slider-group">
+      <div class="slider-header"><span class="slider-label">Tax Rate</span><span class="slider-val" id="tax-v" data-slider="tax" data-min="0" data-max="50" data-step="1">25%</span></div>
+      <input type="range" id="tax" min="0" max="50" step="1" value="25">
+    </div>
+    <div class="insight" id="pl-insight"><strong>Gross Margin</strong> = (Rev − COGS) / Rev. Higher means more to cover fixed costs and earn profit.</div>
+  </div>
+  <div>
+    <div class="card mb-6"><div class="card-title"><span class="dot"></span>P&amp;L Waterfall</div><canvas id="waterfallChart" height="260"></canvas></div>
+    <div class="grid-4">
+      <div class="kpi"><div class="kpi-val" id="gm-kpi" style="color:var(--green)">—</div><div class="kpi-label">Gross Margin</div></div>
+      <div class="kpi"><div class="kpi-val" id="ebitda-kpi" style="color:var(--accent)">—</div><div class="kpi-label">EBITDA Margin</div></div>
+      <div class="kpi"><div class="kpi-val" id="ebit-kpi" style="color:var(--gold)">—</div><div class="kpi-label">EBIT Margin</div></div>
+      <div class="kpi"><div class="kpi-val" id="npm-kpi" style="color:var(--accent2)">—</div><div class="kpi-label">Net Margin</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-6">
+  <div class="card-title"><span class="dot green"></span>Detailed P&amp;L Statement</div>
+  <table><thead><tr><th>Line Item</th><th>Amount (₹)</th><th>% of Rev</th><th>What it means</th></tr></thead><tbody id="plBody"></tbody></table>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="dot gold"></span>Real-World P&amp;L Comparison — 5 Companies</div>
+  <table>
+    <thead><tr><th>Company</th><th>Revenue</th><th>Gross Margin</th><th>EBITDA Margin</th><th>Net Margin</th><th>Key Driver</th></tr></thead>
+    <tbody>
+      <tr><td class="company">TCS (FY24)</td><td class="num">₹2,40,893 Cr</td><td class="pos">24.7%</td><td class="pos">27.4%</td><td class="pos">19.4%</td><td>High-skill labour arbitrage, repeat contracts</td></tr>
+      <tr><td class="company">Reliance (FY24)</td><td class="num">₹9,07,264 Cr</td><td class="pos">18.2%</td><td class="pos">16.8%</td><td class="pos">7.4%</td><td>Vertically integrated; low margin, high volume</td></tr>
+      <tr><td class="company">Zomato (FY24)</td><td class="num">₹12,114 Cr</td><td class="pos">62.3%</td><td class="pos">8.1%</td><td class="pos">3.5%</td><td>Platform model; high gross, heavy mktg spend</td></tr>
+      <tr><td class="company">HDFC Bank (FY24)</td><td class="num">₹1,74,245 Cr</td><td class="pos">N/A</td><td class="pos">N/A</td><td class="pos">22.8%</td><td>Interest spread; different P&amp;L structure</td></tr>
+      <tr><td class="company">Apple (FY24)</td><td class="num">$385.6 Bn</td><td class="pos">46.2%</td><td class="pos">32.9%</td><td class="pos">26.4%</td><td>Premium pricing, services mix expansion</td></tr>
+    </tbody>
+  </table>
+  <div class="insight"><strong>Lesson:</strong> Gross margin reveals the business model. TCS (~25%) is labour-heavy. Zomato (~62%) is a marketplace. Apple (~46%) is a brand + ecosystem. Net margin is what owners keep — Apple's 26% is extraordinary at scale.</div>
+</div>
+</section>
+
+<!-- ═══════════════════ BALANCE SHEET ═══════════════════ -->
+<section class="section" id="balance">
+<div class="section-hero">
+  <div class="concept-badge">🏛️ Module 02</div>
+  <h1>Balance <em>Sheet</em></h1>
+  <p>A snapshot of what a company owns (assets), owes (liabilities), and what belongs to shareholders (equity). The golden rule: Assets = Liabilities + Equity. Always.</p>
+</div>
+
+<div class="card mb-6 accent3">
+  <div class="card-title"><span class="dot purple"></span>Load Real Company Balance Sheet</div>
+  <div class="example-cards">
+    <div class="ex-card" onclick="loadBSExample('tcs')"><div class="ex-logo">💻</div><div class="ex-name">TCS</div><div class="ex-tag">Asset-light</div></div>
+    <div class="ex-card" onclick="loadBSExample('reliance')"><div class="ex-logo">🛢️</div><div class="ex-name">Reliance</div><div class="ex-tag">Asset-heavy</div></div>
+    <div class="ex-card" onclick="loadBSExample('infosys')"><div class="ex-logo">🖥️</div><div class="ex-name">Infosys</div><div class="ex-tag">IT Services</div></div>
+    <div class="ex-card" onclick="loadBSExample('maruti')"><div class="ex-logo">🚗</div><div class="ex-name">Maruti</div><div class="ex-tag">Auto OEM</div></div>
+    <div class="ex-card" onclick="loadBSExample('amazon')"><div class="ex-logo">📦</div><div class="ex-name">Amazon</div><div class="ex-tag">Tech/Retail</div></div>
+  </div>
+</div>
+
+<div class="grid-2 mb-6">
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>Assets</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Cash &amp; Equivalents</span><span class="slider-val green" id="bs-cash-v" data-slider="bs-cash" data-min="0" data-max="20000000" data-step="100000">₹10L</span></div><input type="range" class="green" id="bs-cash" min="0" max="20000000" step="100000" value="1000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Accounts Receivable</span><span class="slider-val" id="bs-ar-v" data-slider="bs-ar" data-min="0" data-max="20000000" data-step="100000">₹8L</span></div><input type="range" id="bs-ar" min="0" max="20000000" step="100000" value="800000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Inventory</span><span class="slider-val" id="bs-inv-v" data-slider="bs-inv" data-min="0" data-max="20000000" data-step="100000">₹6L</span></div><input type="range" id="bs-inv" min="0" max="20000000" step="100000" value="600000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Fixed Assets (PP&amp;E)</span><span class="slider-val gold" id="bs-ppe-v" data-slider="bs-ppe" data-min="0" data-max="100000000" data-step="500000">₹30L</span></div><input type="range" class="gold" id="bs-ppe" min="0" max="100000000" step="500000" value="3000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Intangibles / Other</span><span class="slider-val gold" id="bs-other-v" data-slider="bs-other" data-min="0" data-max="20000000" data-step="100000">₹5L</span></div><input type="range" class="gold" id="bs-other" min="0" max="20000000" step="100000" value="500000"></div>
+  </div>
+  <div class="card accent2">
+    <div class="card-title"><span class="dot orange"></span>Liabilities &amp; Equity</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Accounts Payable</span><span class="slider-val orange" id="bs-ap-v" data-slider="bs-ap" data-min="0" data-max="15000000" data-step="100000">₹5L</span></div><input type="range" class="orange" id="bs-ap" min="0" max="15000000" step="100000" value="500000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Short-term Debt</span><span class="slider-val orange" id="bs-std-v" data-slider="bs-std" data-min="0" data-max="20000000" data-step="100000">₹4L</span></div><input type="range" class="orange" id="bs-std" min="0" max="20000000" step="100000" value="400000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Long-term Debt</span><span class="slider-val orange" id="bs-ltd-v" data-slider="bs-ltd" data-min="0" data-max="80000000" data-step="500000">₹15L</span></div><input type="range" class="orange" id="bs-ltd" min="0" max="80000000" step="500000" value="1500000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Retained Earnings</span><span class="slider-val green" id="bs-re-v" data-slider="bs-re" data-min="-10000000" data-max="100000000" data-step="500000">₹20L</span></div><input type="range" class="green" id="bs-re" min="-10000000" max="100000000" step="500000" value="2000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Share Capital</span><span class="slider-val green" id="bs-sc-v" data-slider="bs-sc" data-min="0" data-max="50000000" data-step="100000">₹10L</span></div><input type="range" class="green" id="bs-sc" min="0" max="50000000" step="100000" value="1000000"></div>
+  </div>
+</div>
+
+<div class="grid-3 mb-6">
+  <div class="kpi"><div class="kpi-val" id="bs-total-assets" style="color:var(--accent)">—</div><div class="kpi-label">Total Assets</div></div>
+  <div class="kpi"><div class="kpi-val" id="bs-total-liab" style="color:var(--accent2)">—</div><div class="kpi-label">Total Liabilities</div></div>
+  <div class="kpi"><div class="kpi-val" id="bs-equity" style="color:var(--green)">—</div><div class="kpi-label">Total Equity</div></div>
+</div>
+
+<div class="grid-2 mb-6">
+  <div class="card"><div class="card-title"><span class="dot"></span>Asset Composition</div><canvas id="assetChart" height="230"></canvas></div>
+  <div class="card accent2"><div class="card-title"><span class="dot orange"></span>Funding Structure</div><canvas id="fundingChart" height="230"></canvas><div class="insight warn" id="bs-insight">Loading...</div></div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="dot gold"></span>Real Balance Sheet Structures — What They Reveal</div>
+  <table>
+    <thead><tr><th>Company</th><th>Total Assets</th><th>Debt/Equity</th><th>Cash Ratio</th><th>Asset Type</th><th>Capital Strategy</th></tr></thead>
+    <tbody>
+      <tr><td class="company">TCS (FY24)</td><td class="num">₹1,10,260 Cr</td><td class="pos">0.0x</td><td class="num">High</td><td><span class="chip">Asset-light</span></td><td>Zero debt, massive cash reserves — pure profit machine</td></tr>
+      <tr><td class="company">Reliance (FY24)</td><td class="num">₹18,07,729 Cr</td><td class="num">0.44x</td><td class="num">Moderate</td><td><span class="chip gold">Asset-heavy</span></td><td>Huge capex in O2C, telecom, retail — debt-funded growth</td></tr>
+      <tr><td class="company">Infosys (FY24)</td><td class="num">₹96,420 Cr</td><td class="pos">0.0x</td><td class="num">High</td><td><span class="chip">Asset-light</span></td><td>Negative net debt; buybacks return cash to shareholders</td></tr>
+      <tr><td class="company">Maruti (FY24)</td><td class="num">₹64,550 Cr</td><td class="num">0.02x</td><td class="num">High</td><td><span class="chip gold">Mixed</span></td><td>Manufacturer with minimal debt; strong OEM balance sheet</td></tr>
+      <tr><td class="company">Amazon (FY24)</td><td class="num">$624 Bn</td><td class="num">0.37x</td><td class="num">High</td><td><span class="chip orange">Cloud+Retail</span></td><td>AWS generates cash; retail funded by vendor float</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<!-- ═══════════════════ CASH FLOW ═══════════════════ -->
+<section class="section" id="cashflow">
+<div class="section-hero">
+  <div class="concept-badge">💧 Module 03</div>
+  <h1>Cash Flow <em>Statement</em></h1>
+  <p>"Revenue is vanity, profit is sanity, cash is king." A company can be profitable yet cash-bankrupt. The 3-statement model only completes when you understand cash.</p>
+</div>
+
+<div class="card mb-6 accent3">
+  <div class="card-title"><span class="dot purple"></span>Load Real Company Cash Flow Pattern</div>
+  <div class="example-cards">
+    <div class="ex-card" onclick="loadCFExample('tcs')"><div class="ex-logo">💻</div><div class="ex-name">TCS</div><div class="ex-tag">+CFO, −CFI, −CFF</div></div>
+    <div class="ex-card" onclick="loadCFExample('reliance')"><div class="ex-logo">🛢️</div><div class="ex-name">Reliance</div><div class="ex-tag">+CFO, −CFI, +CFF</div></div>
+    <div class="ex-card" onclick="loadCFExample('startup')"><div class="ex-logo">🚀</div><div class="ex-name">Startup Stage</div><div class="ex-tag">−CFO, −CFI, +CFF</div></div>
+    <div class="ex-card" onclick="loadCFExample('declining')"><div class="ex-logo">📉</div><div class="ex-name">Mature/Declining</div><div class="ex-tag">+CFO, +CFI, −CFF</div></div>
+    <div class="ex-card" onclick="loadCFExample('amazon')"><div class="ex-logo">📦</div><div class="ex-name">Amazon</div><div class="ex-tag">+CFO, −CFI, +CFF</div></div>
+  </div>
+</div>
+
+<div class="grid-12 mb-6">
+  <div class="card">
+    <div class="card-title"><span class="dot green"></span>CFO — Operating Activities</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Net Income</span><span class="slider-val green" id="cf-ni-v" data-slider="cf-ni" data-min="-5000000" data-max="50000000" data-step="100000">₹25L</span></div><input type="range" class="green" id="cf-ni" min="-5000000" max="50000000" step="100000" value="2500000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Add: D&amp;A (non-cash)</span><span class="slider-val green" id="cf-da-v" data-slider="cf-da" data-min="0" data-max="10000000" data-step="100000">₹5L</span></div><input type="range" class="green" id="cf-da" min="0" max="10000000" step="100000" value="500000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Δ Receivables (−=increase)</span><span class="slider-val orange" id="cf-ar-v" data-slider="cf-ar" data-min="-5000000" data-max="5000000" data-step="100000">−₹2L</span></div><input type="range" class="orange" id="cf-ar" min="-5000000" max="5000000" step="100000" value="-200000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Δ Inventory (−=increase)</span><span class="slider-val orange" id="cf-inv-v" data-slider="cf-inv" data-min="-5000000" data-max="5000000" data-step="100000">−₹1L</span></div><input type="range" class="orange" id="cf-inv" min="-5000000" max="5000000" step="100000" value="-100000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Δ Payables (+= increase)</span><span class="slider-val green" id="cf-ap-v" data-slider="cf-ap" data-min="-3000000" data-max="3000000" data-step="100000">₹1L</span></div><input type="range" class="green" id="cf-ap" min="-3000000" max="3000000" step="100000" value="100000"></div>
+    <div class="divider"></div>
+    <div class="card-title"><span class="dot gold"></span>CFI — Investing</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">CapEx (capital expenditure)</span><span class="slider-val orange" id="cf-capex-v" data-slider="cf-capex" data-min="-50000000" data-max="0" data-step="100000">−₹10L</span></div><input type="range" class="orange" id="cf-capex" min="-50000000" max="0" step="100000" value="-1000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Asset Sales / Investments</span><span class="slider-val green" id="cf-inv2-v" data-slider="cf-inv2" data-min="-10000000" data-max="10000000" data-step="100000">₹2L</span></div><input type="range" class="green" id="cf-inv2" min="-10000000" max="10000000" step="100000" value="200000"></div>
+    <div class="divider"></div>
+    <div class="card-title"><span class="dot purple"></span>CFF — Financing</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Debt Raised / (Repaid)</span><span class="slider-val" id="cf-debt-v" data-slider="cf-debt" data-min="-20000000" data-max="20000000" data-step="100000">₹5L</span></div><input type="range" id="cf-debt" min="-20000000" max="20000000" step="100000" value="500000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Dividends Paid</span><span class="slider-val orange" id="cf-div-v" data-slider="cf-div" data-min="-10000000" data-max="0" data-step="100000">−₹3L</span></div><input type="range" class="orange" id="cf-div" min="-10000000" max="0" step="100000" value="-300000"></div>
+  </div>
+  <div>
+    <div class="card mb-6"><div class="card-title"><span class="dot"></span>Cash Flow Breakdown</div><canvas id="cfChart" height="280"></canvas></div>
+    <div class="grid-3">
+      <div class="kpi"><div class="kpi-val" id="cfo-kpi" style="color:var(--green)">—</div><div class="kpi-label">CFO</div><div class="kpi-sub">Operating</div></div>
+      <div class="kpi"><div class="kpi-val" id="cfi-kpi" style="color:var(--gold)">—</div><div class="kpi-label">CFI</div><div class="kpi-sub">Investing</div></div>
+      <div class="kpi"><div class="kpi-val" id="cff-kpi" style="color:var(--accent3)">—</div><div class="kpi-label">CFF</div><div class="kpi-sub">Financing</div></div>
+    </div>
+    <div class="insight mt-6" id="cf-insight">Loading...</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="dot gold"></span>Real Cash Flow Patterns — 5 Companies &amp; What They Signal</div>
+  <table>
+    <thead><tr><th>Company</th><th>CFO</th><th>CFI</th><th>CFF</th><th>Pattern</th><th>Business Stage</th></tr></thead>
+    <tbody>
+      <tr><td class="company">TCS FY24</td><td class="pos">+₹46,044 Cr</td><td class="neg">−₹7,214 Cr</td><td class="neg">−₹36,892 Cr</td><td><span class="chip green">Mature Cash Cow</span></td><td>Earns, invests modestly, returns all to shareholders</td></tr>
+      <tr><td class="company">Reliance FY24</td><td class="pos">+₹1,38,905 Cr</td><td class="neg">−₹1,45,233 Cr</td><td class="pos">+₹12,741 Cr</td><td><span class="chip gold">Aggressive Growth</span></td><td>CFI exceeds CFO — borrowing to invest in future assets</td></tr>
+      <tr><td class="company">Zomato FY24</td><td class="pos">+₹1,736 Cr</td><td class="neg">−₹3,824 Cr</td><td class="pos">+₹8,530 Cr</td><td><span class="chip orange">Startup Growth</span></td><td>Raised capital, investing heavily, early CFO positive</td></tr>
+      <tr><td class="company">Netflix FY23</td><td class="pos">+$7.3 Bn</td><td class="neg">−$0.6 Bn</td><td class="neg">−$6.9 Bn</td><td><span class="chip green">Mature Tech</span></td><td>Content streaming now cash-generative; repaying debt</td></tr>
+      <tr><td class="company">Amazon FY23</td><td class="pos">+$84.9 Bn</td><td class="neg">−$52.7 Bn</td><td class="neg">−$15.9 Bn</td><td><span class="chip green">Scaled Growth</span></td><td>AWS funds massive logistics capex; strong FCF discipline</td></tr>
+    </tbody>
+  </table>
+  <div class="insight"><strong>Pattern decoder:</strong> +CFO −CFI −CFF = mature cash cow (TCS, Apple). +CFO −CFI +CFF = growth phase (Reliance). −CFO −CFI +CFF = early startup burning cash. +CFO +CFI −CFF = restructuring/asset sales.</div>
+</div>
+</section>
+
+<!-- ═══════════════════ RATIOS ═══════════════════ -->
+<section class="section" id="ratios">
+<div class="section-hero">
+  <div class="concept-badge">📐 Module 04</div>
+  <h1>Financial <em>Ratios</em></h1>
+  <p>Ratios are the universal language of financial analysis. They normalize size differences so you can compare a ₹1,000 Cr company with a ₹10,000 Cr one. Adjust values and watch ratios move in real-time.</p>
+</div>
+
+<div class="card mb-6 accent3">
+  <div class="card-title"><span class="dot purple"></span>Load Real Company Ratios</div>
+  <div class="example-cards">
+    <div class="ex-card" onclick="loadRatioExample('tcs')"><div class="ex-logo">💻</div><div class="ex-name">TCS</div><div class="ex-tag">IT Leader</div></div>
+    <div class="ex-card" onclick="loadRatioExample('hdfc')"><div class="ex-logo">🏦</div><div class="ex-name">HDFC Bank</div><div class="ex-tag">Private Bank</div></div>
+    <div class="ex-card" onclick="loadRatioExample('asian')"><div class="ex-logo">🎨</div><div class="ex-name">Asian Paints</div><div class="ex-tag">FMCG</div></div>
+    <div class="ex-card" onclick="loadRatioExample('ongc')"><div class="ex-logo">⛽</div><div class="ex-name">ONGC</div><div class="ex-tag">Commodities</div></div>
+    <div class="ex-card" onclick="loadRatioExample('apple')"><div class="ex-logo">🍎</div><div class="ex-name">Apple</div><div class="ex-tag">Big Tech</div></div>
+  </div>
+</div>
+
+<div class="grid-3 mb-6">
+  <div class="card">
+    <div class="card-title"><span class="dot green"></span>Liquidity Inputs</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Current Assets</span><span class="slider-val green" id="r-ca-v" data-slider="r-ca" data-min="0" data-max="50000000" data-step="100000">₹25L</span></div><input type="range" class="green" id="r-ca" min="0" max="50000000" step="100000" value="2500000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Inventory (subset of CA)</span><span class="slider-val orange" id="r-inv-v" data-slider="r-inv" data-min="0" data-max="20000000" data-step="100000">₹5L</span></div><input type="range" class="orange" id="r-inv" min="0" max="20000000" step="100000" value="500000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Current Liabilities</span><span class="slider-val orange" id="r-cl-v" data-slider="r-cl" data-min="100000" data-max="40000000" data-step="100000">₹15L</span></div><input type="range" class="orange" id="r-cl" min="100000" max="40000000" step="100000" value="1500000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Cash</span><span class="slider-val green" id="r-cash-v" data-slider="r-cash" data-min="0" data-max="20000000" data-step="100000">₹8L</span></div><input type="range" class="green" id="r-cash" min="0" max="20000000" step="100000" value="800000"></div>
+  </div>
+  <div class="card accent2">
+    <div class="card-title"><span class="dot orange"></span>Profitability &amp; Return</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Net Income</span><span class="slider-val green" id="r-ni-v" data-slider="r-ni" data-min="-5000000" data-max="50000000" data-step="100000">₹20L</span></div><input type="range" class="green" id="r-ni" min="-5000000" max="50000000" step="100000" value="2000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Revenue</span><span class="slider-val" id="r-rev-v" data-slider="r-rev" data-min="0" data-max="200000000" data-step="1000000">₹100L</span></div><input type="range" id="r-rev" min="0" max="200000000" step="1000000" value="10000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">EBIT</span><span class="slider-val" id="r-ebit-v" data-slider="r-ebit" data-min="0" data-max="50000000" data-step="100000">₹30L</span></div><input type="range" id="r-ebit" min="0" max="50000000" step="100000" value="3000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Total Assets</span><span class="slider-val gold" id="r-ta-v" data-slider="r-ta" data-min="1000000" data-max="200000000" data-step="500000">₹80L</span></div><input type="range" class="gold" id="r-ta" min="1000000" max="200000000" step="500000" value="8000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Total Equity</span><span class="slider-val green" id="r-eq-v" data-slider="r-eq" data-min="500000" data-max="100000000" data-step="500000">₹40L</span></div><input type="range" class="green" id="r-eq" min="500000" max="100000000" step="500000" value="4000000"></div>
+  </div>
+  <div class="card accent5">
+    <div class="card-title"><span class="dot gold"></span>Efficiency &amp; Solvency</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">COGS</span><span class="slider-val orange" id="r-cogs-v" data-slider="r-cogs" data-min="0" data-max="150000000" data-step="500000">₹60L</span></div><input type="range" class="orange" id="r-cogs" min="0" max="150000000" step="500000" value="6000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Avg Inventory</span><span class="slider-val gold" id="r-ainv-v" data-slider="r-ainv" data-min="100000" data-max="30000000" data-step="100000">₹8L</span></div><input type="range" class="gold" id="r-ainv" min="100000" max="30000000" step="100000" value="800000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Avg Receivables</span><span class="slider-val" id="r-arec-v" data-slider="r-arec" data-min="100000" data-max="30000000" data-step="100000">₹10L</span></div><input type="range" id="r-arec" min="100000" max="30000000" step="100000" value="1000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Total Debt</span><span class="slider-val orange" id="r-debt-v" data-slider="r-debt" data-min="0" data-max="100000000" data-step="500000">₹30L</span></div><input type="range" class="orange" id="r-debt" min="0" max="100000000" step="500000" value="3000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Interest Expense</span><span class="slider-val orange" id="r-int-v" data-slider="r-int" data-min="0" data-max="10000000" data-step="50000">₹3L</span></div><input type="range" class="orange" id="r-int" min="0" max="10000000" step="50000" value="300000"></div>
+  </div>
+</div>
+
+<div class="grid-4 mb-6" id="ratioCards"></div>
+
+<div class="grid-2 mb-6">
+  <div class="card"><div class="card-title"><span class="dot"></span>Ratio Radar vs Sector</div><canvas id="radarChart" height="270"></canvas></div>
+  <div class="card accent4">
+    <div class="card-title"><span class="dot green"></span>Sector Benchmarks</div>
+    <div class="sector-btns" id="sectorBtns">
+      <button class="sector-btn active" data-sector="manufacturing">Manufacturing</button>
+      <button class="sector-btn" data-sector="retail">Retail</button>
+      <button class="sector-btn" data-sector="tech">Tech/SaaS</button>
+      <button class="sector-btn" data-sector="banking">Banking</button>
+      <button class="sector-btn" data-sector="pharma">Pharma</button>
+    </div>
+    <canvas id="benchmarkChart" height="190"></canvas>
+    <div class="insight success" id="sector-insight">Select a sector.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="dot gold"></span>Ratio Benchmarks — 5 Real Companies Compared</div>
+  <table>
+    <thead><tr><th>Company</th><th>Current Ratio</th><th>ROE</th><th>ROA</th><th>Net Margin</th><th>D/E</th><th>ICR</th></tr></thead>
+    <tbody>
+      <tr><td class="company">TCS (FY24)</td><td class="pos">2.9x</td><td class="pos">51.3%</td><td class="pos">27.1%</td><td class="pos">19.4%</td><td class="pos">0.0x</td><td class="pos">∞</td></tr>
+      <tr><td class="company">HDFC Bank (FY24)</td><td class="num">N/A</td><td class="pos">16.7%</td><td class="num">1.8%</td><td class="pos">22.8%</td><td class="neg">9.2x</td><td class="pos">4.2x</td></tr>
+      <tr><td class="company">Asian Paints (FY24)</td><td class="pos">1.8x</td><td class="pos">32.1%</td><td class="pos">22.4%</td><td class="pos">14.5%</td><td class="pos">0.05x</td><td class="pos">180x</td></tr>
+      <tr><td class="company">ONGC (FY24)</td><td class="num">1.1x</td><td class="num">12.3%</td><td class="num">7.8%</td><td class="num">9.2%</td><td class="num">0.28x</td><td class="pos">18x</td></tr>
+      <tr><td class="company">Apple (FY24)</td><td class="neg">0.87x</td><td class="pos">160%+</td><td class="pos">31.6%</td><td class="pos">26.4%</td><td class="neg">1.4x</td><td class="pos">29x</td></tr>
+    </tbody>
+  </table>
+  <div class="insight"><strong>Apple's ROE of 160%+</strong> looks alarming but is actually intentional — they have negative book equity from aggressive buybacks. High D/E in banks (9x+) is structural, not dangerous, as liabilities are customer deposits. Context always matters.</div>
+</div>
+</section>
+
+<!-- ═══════════════════ DUPONT ═══════════════════ -->
+<section class="section" id="dupont">
+<div class="section-hero">
+  <div class="concept-badge">🔍 Module 05</div>
+  <h1>DuPont <em>Analysis</em></h1>
+  <p>Decompose ROE into its DNA. Two companies with the same ROE can get there via completely different routes — one through margins, one through leverage. DuPont reveals which.</p>
+</div>
+
+<div class="card mb-6 accent3">
+  <div class="card-title"><span class="dot purple"></span>Load Real Company DuPont</div>
+  <div class="example-cards">
+    <div class="ex-card" onclick="loadDPExample('tcs')"><div class="ex-logo">💻</div><div class="ex-name">TCS</div><div class="ex-tag">Margin-driven</div></div>
+    <div class="ex-card" onclick="loadDPExample('walmart')"><div class="ex-logo">🛒</div><div class="ex-name">Walmart</div><div class="ex-tag">Turnover-driven</div></div>
+    <div class="ex-card" onclick="loadDPExample('apple')"><div class="ex-logo">🍎</div><div class="ex-name">Apple</div><div class="ex-tag">Leverage-driven</div></div>
+    <div class="ex-card" onclick="loadDPExample('reliance')"><div class="ex-logo">🛢️</div><div class="ex-name">Reliance</div><div class="ex-tag">Mixed</div></div>
+    <div class="ex-card" onclick="loadDPExample('maruti')"><div class="ex-logo">🚗</div><div class="ex-name">Maruti</div><div class="ex-tag">Efficiency</div></div>
+  </div>
+</div>
+
+<div class="grid-12 mb-6">
+  <div class="card accent3">
+    <div class="card-title"><span class="dot purple"></span>DuPont Drivers</div>
+    <div class="formula">ROE = Net Margin × Asset Turnover × Equity Multiplier</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Net Income</span><span class="slider-val green" id="dp-ni-v" data-slider="dp-ni" data-min="100000" data-max="50000000" data-step="100000">₹15L</span></div><input type="range" class="green" id="dp-ni" min="100000" max="50000000" step="100000" value="1500000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Revenue</span><span class="slider-val" id="dp-rev-v" data-slider="dp-rev" data-min="1000000" data-max="200000000" data-step="1000000">₹100L</span></div><input type="range" id="dp-rev" min="1000000" max="200000000" step="1000000" value="10000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Total Assets</span><span class="slider-val gold" id="dp-ta-v" data-slider="dp-ta" data-min="1000000" data-max="200000000" data-step="500000">₹80L</span></div><input type="range" class="gold" id="dp-ta" min="1000000" max="200000000" step="500000" value="8000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Total Equity</span><span class="slider-val green" id="dp-eq-v" data-slider="dp-eq" data-min="500000" data-max="100000000" data-step="500000">₹40L</span></div><input type="range" class="green" id="dp-eq" min="500000" max="100000000" step="500000" value="4000000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Tax Burden (NI/EBT)</span><span class="slider-val" id="dp-tb-v" data-slider="dp-tb" data-min="0.3" data-max="1.0" data-step="0.01">0.75</span></div><input type="range" id="dp-tb" min="0.3" max="1.0" step="0.01" value="0.75"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Interest Burden (EBT/EBIT)</span><span class="slider-val" id="dp-ib-v" data-slider="dp-ib" data-min="0.3" data-max="1.0" data-step="0.01">0.85</span></div><input type="range" id="dp-ib" min="0.3" max="1.0" step="0.01" value="0.85"></div>
+  </div>
+  <div>
+    <div class="dupont-flow" id="dupontFlow"></div>
+    <div class="card mb-6"><div class="card-title"><span class="dot purple"></span>5-Factor DuPont Decomposition</div><canvas id="dupontChart" height="200"></canvas></div>
+    <div class="insight">High ROE from <strong>leverage</strong> (equity multiplier) is riskier than from <strong>margins</strong> or <strong>efficiency</strong>. Warren Buffett looks for companies with high ROE and low debt.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="dot gold"></span>DuPont Decomposition — How 5 Companies Achieve Their ROE</div>
+  <table>
+    <thead><tr><th>Company</th><th>Net Margin</th><th>Asset Turnover</th><th>Equity Multiplier</th><th>ROE</th><th>Primary Driver</th></tr></thead>
+    <tbody>
+      <tr><td class="company">TCS (FY24)</td><td class="pos">19.4%</td><td class="num">1.40x</td><td class="num">1.88x</td><td class="pos">51.3%</td><td><span class="chip green">Margin + modest leverage</span></td></tr>
+      <tr><td class="company">Walmart (FY24)</td><td class="num">2.4%</td><td class="pos">2.4x</td><td class="num">4.7x</td><td class="pos">19.3%</td><td><span class="chip gold">Volume (Turnover) driven</span></td></tr>
+      <tr><td class="company">Apple (FY24)</td><td class="pos">26.4%</td><td class="num">1.05x</td><td class="neg">6.0x</td><td class="pos">160%+</td><td><span class="chip orange">Leverage (buybacks) driven</span></td></tr>
+      <tr><td class="company">Reliance (FY24)</td><td class="num">7.4%</td><td class="num">0.56x</td><td class="num">2.02x</td><td class="num">8.4%</td><td><span class="chip">Asset-heavy, building phase</span></td></tr>
+      <tr><td class="company">Maruti (FY24)</td><td class="num">7.5%</td><td class="pos">1.42x</td><td class="pos">1.25x</td><td class="pos">13.4%</td><td><span class="chip green">Efficiency + low leverage</span></td></tr>
+    </tbody>
+  </table>
+  <div class="insight"><strong>Walmart lesson:</strong> A 2.4% margin sounds terrible, but multiply by 2.4x turnover (sell assets 2.4 times/year) and 4.7x leverage = a healthy 19% ROE. Retail is a volume game, not a margin game.</div>
+</div>
+</section>
+
+<!-- ═══════════════════ WACC & DCF ═══════════════════ -->
+<section class="section" id="wacc">
+<div class="section-hero">
+  <div class="concept-badge">💰 Module 06</div>
+  <h1>WACC &amp; <em>DCF Valuation</em></h1>
+  <p>WACC is the minimum return required by all capital providers. DCF is how you value a business by discounting future cash flows. This is the backbone of every investment banking pitch book.</p>
+</div>
+
+<div class="card mb-6 accent3">
+  <div class="card-title"><span class="dot purple"></span>Load Real Company WACC &amp; Valuation</div>
+  <div class="example-cards">
+    <div class="ex-card" onclick="loadWACCExample('tcs')"><div class="ex-logo">💻</div><div class="ex-name">TCS</div><div class="ex-tag">WACC ~9%</div></div>
+    <div class="ex-card" onclick="loadWACCExample('reliance')"><div class="ex-logo">🛢️</div><div class="ex-name">Reliance</div><div class="ex-tag">WACC ~11%</div></div>
+    <div class="ex-card" onclick="loadWACCExample('startup')"><div class="ex-logo">🚀</div><div class="ex-name">High-Risk Startup</div><div class="ex-tag">WACC ~25%</div></div>
+    <div class="ex-card" onclick="loadWACCExample('tesla')"><div class="ex-logo">⚡</div><div class="ex-name">Tesla</div><div class="ex-tag">WACC ~13%</div></div>
+    <div class="ex-card" onclick="loadWACCExample('utility')"><div class="ex-logo">💡</div><div class="ex-name">Utility Co.</div><div class="ex-tag">WACC ~7%</div></div>
+  </div>
+</div>
+
+<div class="grid-2 mb-6">
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>WACC Inputs</div>
+    <div class="formula">WACC = (E/V)×Ke + (D/V)×Kd×(1−t) &nbsp;|&nbsp; Ke = Rf + β×ERP</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Equity (Market Cap ₹ Cr)</span><span class="slider-val green" id="w-e-v" data-slider="w-e" data-min="0" data-max="1000" data-step="5">₹100 Cr</span></div><input type="range" class="green" id="w-e" min="0" max="1000" step="5" value="100"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Debt (₹ Cr)</span><span class="slider-val orange" id="w-d-v" data-slider="w-d" data-min="0" data-max="500" data-step="5">₹50 Cr</span></div><input type="range" class="orange" id="w-d" min="0" max="500" step="5" value="50"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Risk-Free Rate (10Y G-Sec)</span><span class="slider-val" id="w-rf-v" data-slider="w-rf" data-min="2" data-max="15" data-step="0.1">7.0%</span></div><input type="range" id="w-rf" min="2" max="15" step="0.1" value="7.0"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Equity Risk Premium (ERP)</span><span class="slider-val" id="w-erp-v" data-slider="w-erp" data-min="2" data-max="12" data-step="0.1">5.5%</span></div><input type="range" id="w-erp" min="2" max="12" step="0.1" value="5.5"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Beta (β) — systematic risk</span><span class="slider-val gold" id="w-beta-v" data-slider="w-beta" data-min="0.2" data-max="3.0" data-step="0.05">1.20</span></div><input type="range" class="gold" id="w-beta" min="0.2" max="3.0" step="0.05" value="1.20"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Cost of Debt (pre-tax)</span><span class="slider-val orange" id="w-kd-v" data-slider="w-kd" data-min="0" data-max="25" data-step="0.25">9.0%</span></div><input type="range" class="orange" id="w-kd" min="0" max="25" step="0.25" value="9.0"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Corporate Tax Rate</span><span class="slider-val" id="w-tax-v" data-slider="w-tax" data-min="0" data-max="50" data-step="1">25%</span></div><input type="range" id="w-tax" min="0" max="50" step="1" value="25"></div>
+    <div class="grid-3 mt-6">
+      <div class="kpi"><div class="kpi-val" id="w-ke-kpi" style="color:var(--green)">—</div><div class="kpi-label">Cost of Equity Ke</div></div>
+      <div class="kpi"><div class="kpi-val" id="w-kd-kpi" style="color:var(--accent2)">—</div><div class="kpi-label">After-tax Kd</div></div>
+      <div class="kpi"><div class="kpi-val" id="w-wacc-kpi" style="color:var(--accent)">—</div><div class="kpi-label">WACC</div></div>
+    </div>
+  </div>
+  <div class="card accent3"><div class="card-title"><span class="dot purple"></span>Capital Structure &amp; Cost</div><canvas id="waccChart" height="220"></canvas><div class="insight" id="wacc-insight">Loading...</div></div>
+</div>
+
+<div class="card mb-6">
+  <div class="card-title"><span class="dot"></span>DCF Valuation Model — Gordon Growth + Staged FCF</div>
+  <div class="formula">EV = Σ FCFt/(1+WACC)^t + [FCF₅×(1+g)/(WACC−g)] / (1+WACC)^5</div>
+  <div class="grid-3 mb-6">
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Base Year FCF (₹ Cr)</span><span class="slider-val" id="dcf-fcf-v" data-slider="dcf-fcf" data-min="0" data-max="200" data-step="1">₹15 Cr</span></div><input type="range" id="dcf-fcf" min="0" max="200" step="1" value="15"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">FCF Growth Rate (yrs 1–5)</span><span class="slider-val green" id="dcf-g-v" data-slider="dcf-g" data-min="0" data-max="40" data-step="0.5">15%</span></div><input type="range" class="green" id="dcf-g" min="0" max="40" step="0.5" value="15"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Terminal Growth Rate</span><span class="slider-val gold" id="dcf-tg-v" data-slider="dcf-tg" data-min="0" data-max="8" data-step="0.1">3.5%</span></div><input type="range" class="gold" id="dcf-tg" min="0" max="8" step="0.1" value="3.5"></div>
+  </div>
+  <canvas id="dcfChart" height="210"></canvas>
+  <div class="grid-4 mt-6">
+    <div class="kpi"><div class="kpi-val" id="dcf-pv-kpi" style="color:var(--accent)">—</div><div class="kpi-label">PV of FCFs</div></div>
+    <div class="kpi"><div class="kpi-val" id="dcf-tv-kpi" style="color:var(--accent3)">—</div><div class="kpi-label">Terminal Value PV</div></div>
+    <div class="kpi"><div class="kpi-val" id="dcf-ev-kpi" style="color:var(--gold)">—</div><div class="kpi-label">Enterprise Value</div></div>
+    <div class="kpi"><div class="kpi-val" id="dcf-eq-kpi" style="color:var(--green)">—</div><div class="kpi-label">Equity Value</div></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="dot gold"></span>WACC in Practice — Real Company Estimates</div>
+  <table>
+    <thead><tr><th>Company / Type</th><th>Beta</th><th>Ke (est.)</th><th>Kd (post-tax)</th><th>D/V</th><th>Est. WACC</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td class="company">TCS</td><td class="num">0.65</td><td class="pos">10.6%</td><td class="num">—</td><td class="pos">~0%</td><td class="pos">~9.5%</td><td>Low beta; zero debt; pure equity funded</td></tr>
+      <tr><td class="company">Reliance Ind.</td><td class="num">0.85</td><td class="num">11.7%</td><td class="num">5.4%</td><td class="num">30%</td><td class="num">~10.8%</td><td>Moderate debt; large diversified conglomerate</td></tr>
+      <tr><td class="company">Tesla</td><td class="num">1.80</td><td class="num">17.9%</td><td class="num">3.8%</td><td class="num">15%</td><td class="num">~15.8%</td><td>High beta; growth premium; EV sector uncertainty</td></tr>
+      <tr><td class="company">Utility (NTPC)</td><td class="num">0.45</td><td class="pos">9.5%</td><td class="num">5.2%</td><td class="neg">60%</td><td class="pos">~6.9%</td><td>Regulated returns; high debt; stable cash flows</td></tr>
+      <tr><td class="company">Series A Startup</td><td class="neg">2.5+</td><td class="neg">21%+</td><td class="num">~10%</td><td class="num">10%</td><td class="neg">~20–30%</td><td>High risk = high required return; DCF sensitive</td></tr>
+    </tbody>
+  </table>
+  <div class="insight"><strong>Terminal value typically makes up 60–80% of a DCF's total value.</strong> That's why the terminal growth rate assumption is the most critical and most debated input in any valuation. A 1% change in terminal growth can swing value by 20–40%.</div>
+</div>
+</section>
+
+<!-- ═══════════════════ WORKING CAPITAL ═══════════════════ -->
+<section class="section" id="working">
+<div class="section-hero">
+  <div class="concept-badge">⚡ Module 07</div>
+  <h1>Working Capital <em>&amp; Cash Cycle</em></h1>
+  <p>Working capital is the fuel for daily operations. The Cash Conversion Cycle (CCC) measures how quickly a business turns its investments into cash. A negative CCC means the business is self-funding — the holy grail.</p>
+</div>
+
+<div class="card mb-6 accent3">
+  <div class="card-title"><span class="dot purple"></span>Load Real Company CCC</div>
+  <div class="example-cards">
+    <div class="ex-card" onclick="loadWCExample('amazon')"><div class="ex-logo">📦</div><div class="ex-name">Amazon</div><div class="ex-tag">CCC: −25 days</div></div>
+    <div class="ex-card" onclick="loadWCExample('zomato')"><div class="ex-logo">🍕</div><div class="ex-name">Zomato</div><div class="ex-tag">CCC: −12 days</div></div>
+    <div class="ex-card" onclick="loadWCExample('maruti')"><div class="ex-logo">🚗</div><div class="ex-name">Maruti</div><div class="ex-tag">CCC: 28 days</div></div>
+    <div class="ex-card" onclick="loadWCExample('tcs')"><div class="ex-logo">💻</div><div class="ex-name">TCS</div><div class="ex-tag">CCC: 55 days</div></div>
+    <div class="ex-card" onclick="loadWCExample('pharma')"><div class="ex-logo">💊</div><div class="ex-name">Pharma Co.</div><div class="ex-tag">CCC: 120 days</div></div>
+  </div>
+</div>
+
+<div class="grid-12 mb-6">
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>CCC Inputs</div>
+    <div class="formula">CCC = DIO + DSO − DPO</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Days Inventory Outstanding (DIO)</span><span class="slider-val gold" id="wc-dio-v" data-slider="wc-dio" data-min="0" data-max="180" data-step="1">45 days</span></div><input type="range" class="gold" id="wc-dio" min="0" max="180" step="1" value="45"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Days Sales Outstanding (DSO)</span><span class="slider-val" id="wc-dso-v" data-slider="wc-dso" data-min="0" data-max="180" data-step="1">30 days</span></div><input type="range" id="wc-dso" min="0" max="180" step="1" value="30"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Days Payable Outstanding (DPO)</span><span class="slider-val green" id="wc-dpo-v" data-slider="wc-dpo" data-min="0" data-max="180" data-step="1">40 days</span></div><input type="range" class="green" id="wc-dpo" min="0" max="180" step="1" value="40"></div>
+    <div class="divider"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Annual Revenue (₹ Cr)</span><span class="slider-val" id="wc-rev-v" data-slider="wc-rev" data-min="0" data-max="1000" data-step="10">₹100 Cr</span></div><input type="range" id="wc-rev" min="0" max="1000" step="10" value="100"></div>
+    <div class="insight" id="ccc-insight">Loading...</div>
+  </div>
+  <div>
+    <div class="card mb-6">
+      <div class="card-title"><span class="dot"></span>Cash Conversion Cycle — Visual Timeline</div>
+      <div id="ccc-visual-wrap"></div>
+      <canvas id="cccChart" height="180"></canvas>
+      <div class="kpi mt-6" style="text-align:center"><div class="kpi-val" id="ccc-kpi" style="font-size:3rem;color:var(--accent)">—</div><div class="kpi-label">Days — Cash Conversion Cycle</div></div>
+    </div>
+    <div class="card"><div class="card-title"><span class="dot gold"></span>Working Capital Locked</div><table><thead><tr><th>Metric</th><th>Days</th><th>₹ Value</th><th>Impact</th></tr></thead><tbody id="wc-table"></tbody></table></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="dot gold"></span>Real-World CCC — How the Best Businesses Manage Cash</div>
+  <table>
+    <thead><tr><th>Company</th><th>DIO</th><th>DSO</th><th>DPO</th><th>CCC</th><th>Strategy</th></tr></thead>
+    <tbody>
+      <tr><td class="company">Amazon (FY23)</td><td class="num">38d</td><td class="num">22d</td><td class="pos">85d</td><td class="pos">−25d</td><td>Customers pay instantly; Amazon pays suppliers in 85 days = free float</td></tr>
+      <tr><td class="company">Zomato (FY24)</td><td class="num">0d</td><td class="num">12d</td><td class="pos">24d</td><td class="pos">−12d</td><td>No physical inventory; platform model = near-zero CCC</td></tr>
+      <tr><td class="company">Maruti (FY24)</td><td class="gold num">18d</td><td class="num">10d</td><td class="num">0d</td><td class="num">28d</td><td>Dealers pay cash; Maruti pays suppliers promptly; efficient but positive</td></tr>
+      <tr><td class="company">TCS (FY24)</td><td class="num">0d</td><td class="neg">55d</td><td class="num">0d</td><td class="neg">55d</td><td>B2B contracts; long invoice-to-payment cycles in IT outsourcing</td></tr>
+      <tr><td class="company">Pharma (generic)</td><td class="neg">90d</td><td class="neg">60d</td><td class="num">30d</td><td class="neg">120d</td><td>High inventory (stability testing); long hospital payment cycles</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<!-- ═══════════════════ BREAK-EVEN ═══════════════════ -->
+<section class="section" id="breakeven">
+<div class="section-hero">
+  <div class="concept-badge">⚖️ Module 08</div>
+  <h1>Break-Even <em>Analysis</em></h1>
+  <p>Break-even is where total revenue equals total costs. It's a survival metric — know this before you launch, price, or scale. The margin of safety shows how far you can fall before losses begin.</p>
+</div>
+
+<div class="card mb-6 accent3">
+  <div class="card-title"><span class="dot purple"></span>Real-World Break-Even Scenarios</div>
+  <div class="example-cards">
+    <div class="ex-card" onclick="loadBEExample('cafe')"><div class="ex-logo">☕</div><div class="ex-name">Café</div><div class="ex-tag">F&amp;B Outlet</div></div>
+    <div class="ex-card" onclick="loadBEExample('saas')"><div class="ex-logo">💾</div><div class="ex-name">SaaS Product</div><div class="ex-tag">Tech Startup</div></div>
+    <div class="ex-card" onclick="loadBEExample('airline')"><div class="ex-logo">✈️</div><div class="ex-name">Airline Route</div><div class="ex-tag">High Fixed Cost</div></div>
+    <div class="ex-card" onclick="loadBEExample('pharma')"><div class="ex-logo">💊</div><div class="ex-name">Pharma Drug</div><div class="ex-tag">R&amp;D Intensive</div></div>
+    <div class="ex-card" onclick="loadBEExample('ecom')"><div class="ex-logo">🛒</div><div class="ex-name">E-Commerce SKU</div><div class="ex-tag">Thin Margin</div></div>
+  </div>
+</div>
+
+<div class="grid-12 mb-6">
+  <div class="card">
+    <div class="card-title"><span class="dot"></span>Cost Structure</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Selling Price / Unit (₹)</span><span class="slider-val green" id="be-p-v" data-slider="be-p" data-min="1" data-max="10000" data-step="1">₹500</span></div><input type="range" class="green" id="be-p" min="1" max="10000" step="1" value="500"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Variable Cost / Unit (₹)</span><span class="slider-val orange" id="be-vc-v" data-slider="be-vc" data-min="0" data-max="9999" data-step="1">₹300</span></div><input type="range" class="orange" id="be-vc" min="0" max="9999" step="1" value="300"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Fixed Costs / Period (₹)</span><span class="slider-val gold" id="be-fc-v" data-slider="be-fc" data-min="0" data-max="10000000" data-step="10000">₹5L</span></div><input type="range" class="gold" id="be-fc" min="0" max="10000000" step="10000" value="500000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Expected Sales Volume</span><span class="slider-val" id="be-vol-v" data-slider="be-vol" data-min="0" data-max="20000" data-step="100">4,000</span></div><input type="range" id="be-vol" min="0" max="20000" step="100" value="4000"></div>
+    <div class="divider"></div>
+    <div class="grid-2">
+      <div class="kpi"><div class="kpi-val" id="be-units-kpi" style="color:var(--accent)">—</div><div class="kpi-label">BE Units</div></div>
+      <div class="kpi"><div class="kpi-val" id="be-rev-kpi" style="color:var(--accent2)">—</div><div class="kpi-label">BE Revenue</div></div>
+      <div class="kpi"><div class="kpi-val" id="be-cm-kpi" style="color:var(--green)">—</div><div class="kpi-label">CM Ratio</div></div>
+      <div class="kpi"><div class="kpi-val" id="be-mos-kpi" style="color:var(--gold)">—</div><div class="kpi-label">Margin of Safety</div></div>
+    </div>
+    <div class="insight" id="be-insight">Loading...</div>
+  </div>
+  <div class="card"><div class="card-title"><span class="dot"></span>Break-Even Chart</div><canvas id="beChart" height="370"></canvas></div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="dot gold"></span>Break-Even in Practice — 5 Real Scenarios</div>
+  <table>
+    <thead><tr><th>Business</th><th>Avg Price</th><th>Variable Cost</th><th>Fixed Cost/Mo</th><th>Break-Even</th><th>Key Insight</th></tr></thead>
+    <tbody>
+      <tr><td class="company">Starbucks (India)</td><td class="num">₹350/cup</td><td class="num">₹85</td><td class="num">₹8L/outlet</td><td class="num">~3,000 cups/mo</td><td>High margins; fixed costs are rent + baristas</td></tr>
+      <tr><td class="company">SaaS Startup</td><td class="num">₹2,000/user/mo</td><td class="num">₹150</td><td class="num">₹30L/mo</td><td class="num">~163 users</td><td>Extremely high contribution margin (92%); unit economics are beautiful once at scale</td></tr>
+      <tr><td class="company">IndiGo (per route)</td><td class="num">₹4,500/seat</td><td class="num">₹2,800</td><td class="num">₹80L/flight</td><td class="num">~47% load factor</td><td>Airlines need ~75–80% load factor to be profitable; fixed costs dominate</td></tr>
+      <tr><td class="company">Generic Pharma Drug</td><td class="num">₹12/tablet</td><td class="num">₹3</td><td class="num">₹50 Cr (R&amp;D+mfg)</td><td class="num">~55 Cr tablets</td><td>Massive fixed cost recovery phase; profitable only at huge volumes</td></tr>
+      <tr><td class="company">E-commerce (electronics)</td><td class="num">₹5,000/unit</td><td class="num">₹4,600</td><td class="num">₹5L/mo</td><td class="num">1,250 units/mo</td><td>Very thin margin (8%); needs high volume; vulnerable to price wars</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<!-- ═══════════════════ LEVERAGE ═══════════════════ -->
+<section class="section" id="leverage">
+<div class="section-hero">
+  <div class="concept-badge">🏋️ Module 09</div>
+  <h1>Leverage &amp; <em>Capital Structure</em></h1>
+  <p>Leverage amplifies both returns and risk. Operating leverage is about fixed cost structure. Financial leverage is about debt. Combined, they determine the total amplification of a sales change all the way to shareholder earnings.</p>
+</div>
+
+<div class="card mb-6 accent3">
+  <div class="card-title"><span class="dot purple"></span>Load Real Leverage Profile</div>
+  <div class="example-cards">
+    <div class="ex-card" onclick="loadLEVExample('airline')"><div class="ex-logo">✈️</div><div class="ex-name">Airline</div><div class="ex-tag">High DOL+DFL</div></div>
+    <div class="ex-card" onclick="loadLEVExample('tcs')"><div class="ex-logo">💻</div><div class="ex-name">TCS</div><div class="ex-tag">Low DOL, No DFL</div></div>
+    <div class="ex-card" onclick="loadLEVExample('steel')"><div class="ex-logo">⚙️</div><div class="ex-name">Steel Plant</div><div class="ex-tag">Very High DOL</div></div>
+    <div class="ex-card" onclick="loadLEVExample('fmcg')"><div class="ex-logo">🧴</div><div class="ex-name">FMCG Brand</div><div class="ex-tag">Moderate Leverage</div></div>
+    <div class="ex-card" onclick="loadLEVExample('fintech')"><div class="ex-logo">📱</div><div class="ex-name">Fintech</div><div class="ex-tag">High DFL</div></div>
+  </div>
+</div>
+
+<div class="grid-2 mb-6">
+  <div class="card">
+    <div class="card-title"><span class="dot orange"></span>Operating Leverage (DOL)</div>
+    <div class="formula">DOL = Contribution Margin / EBIT = Q(P−V) / [Q(P−V)−F]</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Sales Volume (units)</span><span class="slider-val" id="lev-q-v" data-slider="lev-q" data-min="0" data-max="50000" data-step="500">10,000</span></div><input type="range" id="lev-q" min="0" max="50000" step="500" value="10000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Selling Price / Unit (₹)</span><span class="slider-val green" id="lev-p-v" data-slider="lev-p" data-min="1" data-max="2000" data-step="10">₹200</span></div><input type="range" class="green" id="lev-p" min="1" max="2000" step="10" value="200"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Variable Cost / Unit (₹)</span><span class="slider-val orange" id="lev-vc-v" data-slider="lev-vc" data-min="0" data-max="1999" data-step="10">₹120</span></div><input type="range" class="orange" id="lev-vc" min="0" max="1999" step="10" value="120"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Fixed Operating Costs (₹)</span><span class="slider-val gold" id="lev-fc-v" data-slider="lev-fc" data-min="0" data-max="5000000" data-step="50000">₹3L</span></div><input type="range" class="gold" id="lev-fc" min="0" max="5000000" step="50000" value="300000"></div>
+    <div class="divider"></div>
+    <div class="card-title"><span class="dot purple"></span>Financial Leverage (DFL)</div>
+    <div class="formula">DFL = EBIT / (EBIT − Interest − Pref÷(1−t))</div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Interest Expense (₹)</span><span class="slider-val orange" id="lev-int-v" data-slider="lev-int" data-min="0" data-max="2000000" data-step="10000">₹1L</span></div><input type="range" class="orange" id="lev-int" min="0" max="2000000" step="10000" value="100000"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Preference Dividend (₹)</span><span class="slider-val gold" id="lev-pref-v" data-slider="lev-pref" data-min="0" data-max="500000" data-step="10000">₹0</span></div><input type="range" class="gold" id="lev-pref" min="0" max="500000" step="10000" value="0"></div>
+    <div class="slider-group"><div class="slider-header"><span class="slider-label">Tax Rate</span><span class="slider-val" id="lev-tax-v" data-slider="lev-tax" data-min="0" data-max="50" data-step="1">25%</span></div><input type="range" id="lev-tax" min="0" max="50" step="1" value="25"></div>
+  </div>
+  <div>
+    <div class="grid-3 mb-6">
+      <div class="kpi"><div class="kpi-val" id="dol-kpi" style="color:var(--accent2)">—</div><div class="kpi-label">DOL</div><div class="kpi-sub">Operating Leverage</div></div>
+      <div class="kpi"><div class="kpi-val" id="dfl-kpi" style="color:var(--accent3)">—</div><div class="kpi-label">DFL</div><div class="kpi-sub">Financial Leverage</div></div>
+      <div class="kpi"><div class="kpi-val" id="dcl-kpi" style="color:var(--accent)">—</div><div class="kpi-label">DCL</div><div class="kpi-sub">Combined Leverage</div></div>
+    </div>
+    <div class="card mb-6"><div class="card-title"><span class="dot orange"></span>Leverage Sensitivity — % Sales Change → % EBIT &amp; EPS Change</div><canvas id="dolChart" height="230"></canvas></div>
+    <div class="insight" id="lev-insight">Loading...</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="dot gold"></span>Leverage in Real Industries — Why It Matters</div>
+  <table>
+    <thead><tr><th>Industry / Company</th><th>Fixed Cost %</th><th>Est. DOL</th><th>Est. DFL</th><th>DCL</th><th>Real Risk</th></tr></thead>
+    <tbody>
+      <tr><td class="company">Airlines (IndiGo)</td><td class="neg">75%</td><td class="neg">4–6x</td><td class="num">1.5x</td><td class="neg">6–9x</td><td>10% traffic drop → 50–60% EBIT drop. COVID nearly wiped out airlines globally</td></tr>
+      <tr><td class="company">TCS / IT Services</td><td class="pos">35%</td><td class="pos">1.5–2x</td><td class="pos">1.0x</td><td class="pos">1.5–2x</td><td>Variable-heavy (people); low DOL makes IT resilient in downturns</td></tr>
+      <tr><td class="company">Steel (JSPL/Tata Steel)</td><td class="neg">70%</td><td class="neg">5–8x</td><td class="neg">2–3x</td><td class="neg">10–24x</td><td>Price cyclicality + fixed costs = extreme earnings volatility; debt amplifies it</td></tr>
+      <tr><td class="company">FMCG (HUL/ITC)</td><td class="num">45%</td><td class="num">2–3x</td><td class="pos">1.0–1.1x</td><td class="num">2–3x</td><td>Stable, predictable margins — low leverage helps weather recessions</td></tr>
+      <tr><td class="company">Fintech (Paytm/NBFC)</td><td class="num">55%</td><td class="num">3x</td><td class="neg">3–5x</td><td class="neg">9–15x</td><td>High DFL from borrowed capital; interest rate spikes can destroy profitability</td></tr>
+    </tbody>
+  </table>
+  <div class="insight"><strong>The real danger zone:</strong> High DOL + High DFL = massive DCL. Steel companies can see 10–24x amplification — a 10% revenue drop turns into a 100%+ EBIT destruction. This is why cyclical industries with high debt are the most dangerous during downturns.</div>
+</div>
+</section>
+
+</main>
+<script>
+// ═══════════════════════════════════════════════════════════
+// UTILITIES
+// ═══════════════════════════════════════════════════════════
+const fmtINR=(n)=>{if(Math.abs(n)>=10000000)return`₹${(n/10000000).toFixed(1)}Cr`;if(Math.abs(n)>=100000)return`₹${(n/100000).toFixed(1)}L`;if(Math.abs(n)>=1000)return`₹${(n/1000).toFixed(0)}K`;return`₹${n.toFixed(0)}`};
+const fmtPct=(n)=>`${n.toFixed(1)}%`;
+const fmtX=(n)=>`${n.toFixed(2)}x`;
+const pct=(a,b)=>(b!==0?a/b*100:0);
+const CD={responsive:true,animation:{duration:380,easing:'easeInOutQuart'},plugins:{legend:{labels:{color:'#94a3b8',font:{family:'JetBrains Mono',size:10}}},tooltip:{backgroundColor:'#131c2e',borderColor:'#1e2d45',borderWidth:1,titleColor:'#e2e8f0',bodyColor:'#94a3b8',titleFont:{family:'JetBrains Mono'},bodyFont:{family:'JetBrains Mono'}}},scales:{x:{ticks:{color:'#64748b',font:{family:'JetBrains Mono',size:9}},grid:{color:'rgba(30,45,69,.5)'}},y:{ticks:{color:'#64748b',font:{family:'JetBrains Mono',size:9}},grid:{color:'rgba(30,45,69,.5)'}}}};
+
+// ═══════════════════════════════════════════════════════════
+// CHART REGISTRY — smooth update
+// ═══════════════════════════════════════════════════════════
+const charts={};
+function mkChart(id,config){
+  const canvas=document.getElementById(id);if(!canvas)return null;
+  const ex=charts[id];
+  if(!ex){config.options=config.options||{};config.options.animation={duration:380,easing:'easeInOutQuart'};config.options.transitions={active:{animation:{duration:280}}};charts[id]=new Chart(canvas,config);return charts[id];}
+  const chart=ex,nd=config.data;
+  if(nd.labels)chart.data.labels=nd.labels;
+  nd.datasets.forEach((ds,i)=>{if(!chart.data.datasets[i])chart.data.datasets[i]=ds;else{chart.data.datasets[i].data=ds.data;if(ds.backgroundColor!==undefined)chart.data.datasets[i].backgroundColor=ds.backgroundColor;if(ds.borderColor!==undefined)chart.data.datasets[i].borderColor=ds.borderColor;if(ds.borderDash!==undefined)chart.data.datasets[i].borderDash=ds.borderDash;if(ds.fill!==undefined)chart.data.datasets[i].fill=ds.fill;if(ds.label!==undefined)chart.data.datasets[i].label=ds.label;}});
+  chart.data.datasets.splice(nd.datasets.length);
+  if(config.options?.scales&&chart.options.scales){const ns=config.options.scales,os=chart.options.scales;Object.keys(ns).forEach(ax=>{if(!os[ax])os[ax]={};if(ns[ax].ticks)os[ax].ticks={...os[ax].ticks,...ns[ax].ticks};});}
+  chart.update('active');return chart;
+}
+
+// ═══════════════════════════════════════════════════════════
+// CLICK-TO-EDIT VALUE SYSTEM
+// ═══════════════════════════════════════════════════════════
+function setupEditableValue(spanEl){
+  spanEl.addEventListener('click',function(){
+    const sliderId=this.dataset.slider;
+    const slider=document.getElementById(sliderId);
+    if(!slider)return;
+    const colorClass=this.classList.contains('orange')?'orange':this.classList.contains('green')?'green':this.classList.contains('gold')?'gold':'';
+    const currentVal=parseFloat(slider.value);
+    const inp=document.createElement('input');
+    inp.type='number';
+    inp.className='val-input'+(colorClass?' '+colorClass:'');
+    inp.value=currentVal;
+    inp.min=this.dataset.min||slider.min;
+    inp.max=this.dataset.max||slider.max;
+    inp.step=this.dataset.step||slider.step;
+    const span=this;
+    span.replaceWith(inp);
+    inp.focus();inp.select();
+    function commit(){
+      let val=parseFloat(inp.value);
+      const mn=parseFloat(inp.min),mx=parseFloat(inp.max);
+      if(isNaN(val))val=currentVal;
+      val=Math.min(Math.max(val,mn),mx);
+      slider.value=val;
+      slider.dispatchEvent(new Event('input'));
+      // restore span
+      const newSpan=document.createElement('span');
+      newSpan.className=span.className;
+      newSpan.dataset.slider=span.dataset.slider;
+      newSpan.dataset.min=span.dataset.min;
+      newSpan.dataset.max=span.dataset.max;
+      newSpan.dataset.step=span.dataset.step;
+      newSpan.textContent=span.textContent; // will be updated by slider listener
+      setupEditableValue(newSpan);
+      inp.replaceWith(newSpan);
+      slider.dispatchEvent(new Event('input')); // trigger display update
+    }
+    inp.addEventListener('blur',commit);
+    inp.addEventListener('keydown',e=>{if(e.key==='Enter')commit();if(e.key==='Escape'){inp.value=currentVal;commit();}});
+  });
+}
+function initEditableValues(){document.querySelectorAll('.slider-val[data-slider]').forEach(setupEditableValue);}
+
+// ═══════════════════════════════════════════════════════════
+// SLIDER BINDING HELPER (returns getter fn)
+// ═══════════════════════════════════════════════════════════
+function bindSlider(sliderId,displayId,formatter){
+  const el=document.getElementById(sliderId);
+  const dEl=document.getElementById(displayId);
+  if(!el||!dEl)return()=>parseFloat(el?el.value:0);
+  const upd=()=>{
+    dEl.textContent=formatter(parseFloat(el.value));
+    // re-attach editability if span (not an input currently)
+    if(dEl.tagName==='SPAN')setupEditableValue(dEl);
+  };
+  el.addEventListener('input',upd);upd();
+  return()=>parseFloat(el.value);
+}
+
+// ═══════════════════════════════════════════════════════════
+// NAV
+// ═══════════════════════════════════════════════════════════
+const initialised=new Set();
+const moduleFns={income:initIncome,balance:initBalance,cashflow:initCashFlow,ratios:initRatios,dupont:initDupont,wacc:initWACC,working:initWorking,breakeven:initBreakeven,leverage:initLeverage};
+function initCharts(sec){if(moduleFns[sec]&&!initialised.has(sec)){moduleFns[sec]();initialised.add(sec);}setTimeout(()=>Object.values(charts).forEach(c=>{try{c.resize();}catch(e){}}),60);}
+document.querySelectorAll('#mainNav button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('#mainNav button').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.sec).classList.add('active');
+    initCharts(btn.dataset.sec);
+  });
+});
+
+// ═══════════════════════════════════════════════════════════
+// MODULE 1: INCOME STATEMENT
+// ═══════════════════════════════════════════════════════════
+function initIncome(){
+  const g={
+    rev:bindSlider('rev','rev-v',fmtINR),
+    cogs:bindSlider('cogs','cogs-v',v=>fmtPct(v)),
+    opex:bindSlider('opex','opex-v',v=>fmtPct(v)),
+    da:bindSlider('da','da-v',v=>fmtPct(v)),
+    interest:bindSlider('interest','interest-v',v=>fmtPct(v)),
+    tax:bindSlider('tax','tax-v',v=>fmtPct(v)),
+  };
+  function compute(){
+    const rev=g.rev(),cogs=rev*g.cogs()/100,gp=rev-cogs,opex=rev*g.opex()/100,ebitda=gp-opex,da=rev*g.da()/100,ebit=ebitda-da,interest=rev*g.interest()/100,ebt=ebit-interest,taxA=Math.max(0,ebt*g.tax()/100),ni=ebt-taxA;
+    document.getElementById('gm-kpi').textContent=fmtPct(pct(gp,rev));
+    document.getElementById('ebitda-kpi').textContent=fmtPct(pct(ebitda,rev));
+    document.getElementById('ebit-kpi').textContent=fmtPct(pct(ebit,rev));
+    document.getElementById('npm-kpi').textContent=fmtPct(pct(ni,rev));
+    mkChart('waterfallChart',{type:'bar',data:{labels:['Revenue','Gross Profit','EBITDA','EBIT','EBT','Net Income'],datasets:[{data:[rev,gp,ebitda,ebit,ebt,ni],backgroundColor:['#00d4ff','#10b981','#7c3aed','#f59e0b','#ff6b35',ni>=0?'#10b981':'#ef4444'],borderRadius:5,borderSkipped:false}]},options:{...CD,plugins:{...CD.plugins,legend:{display:false}},scales:{x:CD.scales.x,y:{...CD.scales.y,ticks:{...CD.scales.y.ticks,callback:v=>fmtINR(v)}}}}});
+    const ins=document.getElementById('pl-insight');
+    const gm=pct(gp,rev),nm=pct(ni,rev);
+    ins.className=nm>10?'insight success':nm>0?'insight warn':'insight danger';
+    ins.innerHTML=`<strong>Gross Margin ${fmtPct(gm)}</strong> → EBITDA ${fmtPct(pct(ebitda,rev))} → Net Margin <strong>${fmtPct(nm)}</strong>. ${nm<0?'⚠ Loss-making — reduce costs or raise prices.':nm<5?'Thin margins — vulnerable to cost shocks.':'Healthy profitability.'}`;
+    const rows=[['Revenue',rev,100,'Total sales before any deductions'],['− COGS',-cogs,-pct(cogs,rev),'Direct production costs'],['= Gross Profit',gp,pct(gp,rev),'Revenue retained after production costs'],['− Operating Expenses',-opex,-pct(opex,rev),'SG&A, R&D, marketing overheads'],['= EBITDA',ebitda,pct(ebitda,rev),'Operational cash proxy — widely used for valuation'],['− Depreciation & Amortisation',-da,-pct(da,rev),'Non-cash; spreads capex cost over asset life'],['= EBIT',ebit,pct(ebit,rev),'Operating profit — performance before financing'],['− Interest Expense',-interest,-pct(interest,rev),'Cost of debt financing'],['= EBT (Pre-tax)',ebt,pct(ebt,rev),'Profit Before Tax'],['− Income Tax',-taxA,-pct(taxA,rev),'Corporate tax at current rate'],['= Net Income (PAT)',ni,pct(ni,rev),'Bottom line — belongs to shareholders']];
+    document.getElementById('plBody').innerHTML=rows.map(([l,a,p,e])=>`<tr><td class="label">${l}</td><td class="${a>=0?'pos':'neg'}">${fmtINR(a)}</td><td class="${p>=0?'pos':'neg'}">${p.toFixed(1)}%</td><td style="font-size:.73rem;color:var(--text3)">${e}</td></tr>`).join('');
+  }
+  ['rev','cogs','opex','da','interest','tax'].forEach(id=>document.getElementById(id)?.addEventListener('input',compute));
+  compute();
+}
+const plExamples={tcs:{rev:240893e5,cogs:22,opex:29,da:2.2,interest:0.1,tax:26},reliance:{rev:907264e5,cogs:78,opex:7,da:3.5,interest:1.9,tax:25},zomato:{rev:121140e4,cogs:38,opex:32,da:5.5,interest:1.2,tax:22},hdfc:{rev:174245e5,cogs:45,opex:20,da:1.5,interest:2.3,tax:26},apple:{rev:3856e10,cogs:54,opex:11,da:2.5,interest:0.7,tax:14}};
+function loadPLExample(k){
+  const d=plExamples[k];if(!d)return;
+  const setVal=(id,v)=>{const el=document.getElementById(id);if(el){el.value=v;el.dispatchEvent(new Event('input'));}};
+  setVal('rev',Math.min(d.rev,200000000));setVal('cogs',d.cogs);setVal('opex',d.opex);setVal('da',d.da);setVal('interest',d.interest);setVal('tax',d.tax);
+  document.querySelectorAll('#pl-examples .ex-card').forEach(c=>c.classList.remove('active'));
+  document.querySelector(`#pl-examples .ex-card[onclick="loadPLExample('${k}')"]`)?.classList.add('active');
+}
+
+// ═══════════════════════════════════════════════════════════
+// MODULE 2: BALANCE SHEET
+// ═══════════════════════════════════════════════════════════
+function initBalance(){
+  const ids=['bs-cash','bs-ar','bs-inv','bs-ppe','bs-other','bs-ap','bs-std','bs-ltd','bs-re','bs-sc'];
+  const dm={'bs-cash':'bs-cash-v','bs-ar':'bs-ar-v','bs-inv':'bs-inv-v','bs-ppe':'bs-ppe-v','bs-other':'bs-other-v','bs-ap':'bs-ap-v','bs-std':'bs-std-v','bs-ltd':'bs-ltd-v','bs-re':'bs-re-v','bs-sc':'bs-sc-v'};
+  ids.forEach(id=>{const el=document.getElementById(id),dEl=document.getElementById(dm[id]);if(el&&dEl){const u=()=>{dEl.textContent=fmtINR(parseFloat(el.value));if(dEl.tagName==='SPAN')setupEditableValue(dEl);};el.addEventListener('input',u);u();}});
+  function compute(){
+    const v=id=>parseFloat(document.getElementById(id)?.value||0);
+    const cash=v('bs-cash'),ar=v('bs-ar'),inv=v('bs-inv'),ppe=v('bs-ppe'),other=v('bs-other');
+    const ap=v('bs-ap'),std=v('bs-std'),ltd=v('bs-ltd'),re=v('bs-re'),sc=v('bs-sc');
+    const ta=cash+ar+inv+ppe+other,tl=ap+std+ltd,eq=sc+re,tf=tl+eq;
+    document.getElementById('bs-total-assets').textContent=fmtINR(ta);
+    document.getElementById('bs-total-liab').textContent=fmtINR(tl);
+    document.getElementById('bs-equity').textContent=fmtINR(eq);
+    const diff=Math.abs(ta-tf);
+    const ins=document.getElementById('bs-insight');
+    if(diff<ta*.02){ins.className='insight success';ins.innerHTML=`<strong>✓ Balanced!</strong> Assets (${fmtINR(ta)}) = Liabilities + Equity (${fmtINR(tf)})`;}
+    else{ins.className='insight warn';ins.innerHTML=`<strong>Gap: ${fmtINR(diff)}</strong> — Assets (${fmtINR(ta)}) ≠ L+E (${fmtINR(tf)}). Adjust retained earnings to balance.`;}
+    mkChart('assetChart',{type:'doughnut',data:{labels:['Cash','Receivables','Inventory','PP&E','Intangibles'],datasets:[{data:[cash,ar,inv,ppe,other],backgroundColor:['#00d4ff','#7c3aed','#f59e0b','#ff6b35','#10b981'],borderWidth:0,hoverOffset:6}]},options:{responsive:true,animation:{duration:380},plugins:{...CD.plugins,legend:{labels:{color:'#94a3b8',font:{family:'JetBrains Mono',size:9}}}}}});
+    mkChart('fundingChart',{type:'doughnut',data:{labels:['Payables','Short Debt','Long Debt','Share Capital','Retained Earnings'],datasets:[{data:[ap,std,ltd,sc,re].map(x=>Math.max(x,0)),backgroundColor:['#ef4444','#f87171','#ff6b35','#10b981','#34d399'],borderWidth:0,hoverOffset:6}]},options:{responsive:true,animation:{duration:380},plugins:{...CD.plugins,legend:{labels:{color:'#94a3b8',font:{family:'JetBrains Mono',size:9}}}}}});
+  }
+  ids.forEach(id=>document.getElementById(id)?.addEventListener('input',compute));compute();
+}
+const bsExamples={tcs:{cash:8e10,ar:2e10,inv:0,ppe:1.5e10,other:0.5e10,ap:1e10,std:0,ltd:0,re:7.5e10,sc:2e9},reliance:{cash:5e11,ar:2e11,inv:2e11,ppe:10e11,other:1e11,ap:2e11,std:1e11,ltd:5e11,re:8e11,sc:5e10},infosys:{cash:7e10,ar:1.5e10,inv:0,ppe:1e10,other:0.5e10,ap:0.8e10,std:0,ltd:0,re:7e10,sc:2e9},maruti:{cash:3e10,ar:0.5e10,inv:1e10,ppe:2e10,other:0.5e10,ap:1.5e10,std:0.2e10,ltd:0.2e10,re:4e10,sc:1e9},amazon:{cash:100e10,ar:50e10,inv:80e10,ppe:200e10,other:100e10,ap:180e10,std:30e10,ltd:150e10,re:150e10,sc:20e10}};
+function loadBSExample(k){const d=bsExamples[k];if(!d)return;const setVal=(id,v)=>{const el=document.getElementById(id);if(el){el.value=Math.min(v,parseFloat(el.max));el.dispatchEvent(new Event('input'));}};Object.entries(d).forEach(([k2,v])=>setVal('bs-'+k2,v));}
+
+// ═══════════════════════════════════════════════════════════
+// MODULE 3: CASH FLOW
+// ═══════════════════════════════════════════════════════════
+function initCashFlow(){
+  const sliders=[['cf-ni','cf-ni-v',fmtINR],['cf-da','cf-da-v',fmtINR],['cf-ar','cf-ar-v',v=>(v>=0?'':'-')+fmtINR(Math.abs(v))],['cf-inv','cf-inv-v',v=>(v>=0?'':'-')+fmtINR(Math.abs(v))],['cf-ap','cf-ap-v',fmtINR],['cf-capex','cf-capex-v',v=>'-'+fmtINR(Math.abs(v))],['cf-inv2','cf-inv2-v',fmtINR],['cf-debt','cf-debt-v',fmtINR],['cf-div','cf-div-v',v=>'-'+fmtINR(Math.abs(v))]];
+  sliders.forEach(([id,dId,fmt])=>{const el=document.getElementById(id),dEl=document.getElementById(dId);if(el&&dEl){const u=()=>{dEl.textContent=fmt(parseFloat(el.value));if(dEl.tagName==='SPAN')setupEditableValue(dEl);};el.addEventListener('input',u);u();}});
+  function compute(){
+    const v=id=>parseFloat(document.getElementById(id)?.value||0);
+    const cfo=v('cf-ni')+v('cf-da')+v('cf-ar')+v('cf-inv')+v('cf-ap');
+    const cfi=v('cf-capex')+v('cf-inv2');
+    const cff=v('cf-debt')+v('cf-div');
+    const net=cfo+cfi+cff;
+    document.getElementById('cfo-kpi').textContent=fmtINR(cfo);document.getElementById('cfo-kpi').style.color=cfo>=0?'var(--green)':'var(--red)';
+    document.getElementById('cfi-kpi').textContent=fmtINR(cfi);document.getElementById('cfi-kpi').style.color=cfi>=0?'var(--gold)':'var(--gold)';
+    document.getElementById('cff-kpi').textContent=fmtINR(cff);
+    mkChart('cfChart',{type:'bar',data:{labels:['CFO\n(Operating)','CFI\n(Investing)','CFF\n(Financing)','Net Change'],datasets:[{data:[cfo,cfi,cff,net],backgroundColor:[cfo>=0?'rgba(16,185,129,.8)':'rgba(239,68,68,.8)','rgba(245,158,11,.6)','rgba(124,58,237,.7)',net>=0?'rgba(0,212,255,.8)':'rgba(239,68,68,.8)'],borderRadius:6}]},options:{...CD,plugins:{...CD.plugins,legend:{display:false}},scales:{x:CD.scales.x,y:{...CD.scales.y,ticks:{...CD.scales.y.ticks,callback:v=>fmtINR(v)}}}}});
+    const i=document.getElementById('cf-insight');
+    if(cfo>0&&cfi<0&&cff<0){i.className='insight success';i.innerHTML='<strong>🟢 Classic Cash Cow pattern</strong> (+CFO −CFI −CFF): Operations fund investment AND return cash to shareholders. This is TCS, Apple, mature businesses.';}
+    else if(cfo>0&&cfi<0&&cff>0){i.className='insight warn';i.innerHTML='<strong>🟡 Growth Phase</strong> (+CFO −CFI +CFF): Earning cash but borrowing/raising capital to invest even more aggressively. Typical of Reliance, Amazon expansion phases.';}
+    else if(cfo<0){i.className='insight danger';i.innerHTML='<strong>🔴 Cash Burn</strong> (−CFO): Core operations are consuming cash. Must fund from investment/financing. Unsustainable long-term without a path to positive CFO.';}
+    else{i.className='insight';i.innerHTML=`<strong>CFO: ${fmtINR(cfo)} | CFI: ${fmtINR(cfi)} | CFF: ${fmtINR(cff)}</strong> — Net change: ${fmtINR(net)}`;}
+  }
+  sliders.forEach(([id])=>document.getElementById(id)?.addEventListener('input',compute));compute();
+}
+const cfExamples={tcs:{ni:4.6e9,da:0.7e9,ar:-0.3e9,inv:0,ap:0.2e9,capex:-0.7e9,inv2:0,debt:0,div:-3.7e9},reliance:{ni:7e9,da:3e9,ar:-0.5e9,inv:-0.5e9,ap:1e9,capex:-14.5e9,inv2:0,debt:1.3e9,div:-0},startup:{ni:-1e6,da:0.1e6,ar:-0.2e6,inv:-0.3e6,ap:0.1e6,capex:-1e6,inv2:0,debt:3e6,div:0},declining:{ni:2e6,da:0.5e6,ar:0.5e6,inv:0.8e6,ap:-0.3e6,capex:-0.2e6,inv2:1e6,debt:-1.5e6,div:-0.5e6},amazon:{ni:3e10,da:5e10,ar:-2e9,inv:-1e9,ap:3e9,capex:-5.3e10,inv2:0,debt:0,div:0}};
+function loadCFExample(k){const d=cfExamples[k];if(!d)return;const sv=(id,v)=>{const el=document.getElementById(id);if(el){el.value=Math.min(Math.max(v,parseFloat(el.min)),parseFloat(el.max));el.dispatchEvent(new Event('input'));}};sv('cf-ni',d.ni);sv('cf-da',d.da);sv('cf-ar',d.ar);sv('cf-inv',d.inv);sv('cf-ap',d.ap);sv('cf-capex',d.capex);sv('cf-inv2',d.inv2);sv('cf-debt',d.debt);sv('cf-div',d.div);}
+
+// ═══════════════════════════════════════════════════════════
+// MODULE 4: RATIOS
+// ═══════════════════════════════════════════════════════════
+const sectorBench={manufacturing:{cr:1.5,qr:1.0,roe:15,roa:8,nm:8,at:1.2,de:0.6,icr:5},retail:{cr:1.2,qr:0.5,roe:20,roa:10,nm:4,at:2.5,de:0.4,icr:8},tech:{cr:2.5,qr:2.3,roe:25,roa:15,nm:20,at:0.8,de:0.2,icr:20},banking:{cr:1.1,qr:1.0,roe:12,roa:1.2,nm:18,at:0.06,de:8.0,icr:2},pharma:{cr:2.0,qr:1.5,roe:18,roa:10,nm:16,at:0.7,de:0.3,icr:12}};
+let activeSector='manufacturing';
+function initRatios(){
+  const sliders=[['r-ca','r-ca-v',fmtINR],['r-inv','r-inv-v',fmtINR],['r-cl','r-cl-v',fmtINR],['r-cash','r-cash-v',fmtINR],['r-ni','r-ni-v',fmtINR],['r-rev','r-rev-v',fmtINR],['r-ebit','r-ebit-v',fmtINR],['r-ta','r-ta-v',fmtINR],['r-eq','r-eq-v',fmtINR],['r-cogs','r-cogs-v',fmtINR],['r-ainv','r-ainv-v',fmtINR],['r-arec','r-arec-v',fmtINR],['r-debt','r-debt-v',fmtINR],['r-int','r-int-v',fmtINR]];
+  sliders.forEach(([id,dId,fmt])=>{const el=document.getElementById(id),dEl=document.getElementById(dId);if(el&&dEl){const u=()=>{dEl.textContent=fmt(parseFloat(el.value));if(dEl.tagName==='SPAN')setupEditableValue(dEl);};el.addEventListener('input',u);u();}});
+  document.querySelectorAll('#sectorBtns .sector-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('#sectorBtns .sector-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeSector=btn.dataset.sector;compute();});});
+  function compute(){
+    const v=id=>parseFloat(document.getElementById(id)?.value||1);
+    const ca=v('r-ca'),inv=v('r-inv'),cl=Math.max(v('r-cl'),1),cash=v('r-cash'),ni=v('r-ni'),rev=Math.max(v('r-rev'),1),ebit=v('r-ebit'),ta=Math.max(v('r-ta'),1),eq=Math.max(v('r-eq'),1),cogs=Math.max(v('r-cogs'),1),ainv=Math.max(v('r-ainv'),1),arec=Math.max(v('r-arec'),1),debt=v('r-debt'),intE=Math.max(v('r-int'),1);
+    const R={cr:ca/cl,qr:(ca-inv)/cl,cashr:cash/cl,roe:ni/eq*100,roa:ni/ta*100,npm:ni/rev*100,em:ebit/rev*100,at:rev/ta,it:cogs/ainv,rt:rev/arec,de:debt/eq,da:debt/ta,icr:ebit/intE,dio:ainv/cogs*365,dso:arec/rev*365};
+    const cards=[{key:'cr',label:'Current Ratio',val:R.cr,fmt:fmtX,goodMin:1.5,goodMax:3,hb:true,color:'#00d4ff',desc:'CA/CL. Ability to pay short-term debts. >1.5 healthy'},  {key:'qr',label:'Quick Ratio',val:R.qr,fmt:fmtX,goodMin:1,goodMax:2,hb:true,color:'#7c3aed',desc:'(CA−Inventory)/CL. Excludes illiquid inventory'},{key:'roe',label:'ROE',val:R.roe,fmt:fmtPct,goodMin:12,goodMax:999,hb:true,color:'#10b981',desc:'Net Income/Equity. Return earned for shareholders'},{key:'roa',label:'ROA',val:R.roa,fmt:fmtPct,goodMin:5,goodMax:999,hb:true,color:'#f59e0b',desc:'Net Income/Assets. Asset efficiency at generating profit'},{key:'npm',label:'Net Margin',val:R.npm,fmt:fmtPct,goodMin:8,goodMax:999,hb:true,color:'#00d4ff',desc:'NI/Revenue. Profit retained per ₹ of revenue'},{key:'at',label:'Asset Turnover',val:R.at,fmt:fmtX,goodMin:0.8,goodMax:999,hb:true,color:'#ff6b35',desc:'Revenue/Assets. Revenue per ₹ of assets'},{key:'icr',label:'Interest Cover',val:R.icr,fmt:fmtX,goodMin:3,goodMax:999,hb:true,color:'#10b981',desc:'EBIT/Interest. Times interest is covered by operating profit'},{key:'de',label:'Debt/Equity',val:R.de,fmt:fmtX,goodMin:0,goodMax:1.0,hb:false,color:'#ef4444',desc:'Total Debt/Equity. Financial leverage. Higher = more risk'}];
+    const container=document.getElementById('ratioCards');
+    if(container)container.innerHTML=cards.map(c=>{const verd=c.hb?(c.val>=c.goodMin?'verdict-good':c.val>=c.goodMin*.6?'verdict-warn':'verdict-bad'):(c.val<=c.goodMax?'verdict-good':c.val<=c.goodMax*1.5?'verdict-warn':'verdict-bad');const vl=verd==='verdict-good'?'✓ Healthy':verd==='verdict-warn'?'⚡ Watch':'✕ Concern';return`<div class="ratio-card"><div class="ratio-name">${c.label}</div><div class="ratio-val" style="color:${c.color}">${c.fmt(c.val)}</div><span class="ratio-verdict ${verd}">${vl}</span><p style="font-size:.7rem;color:var(--text3);margin-top:.4rem;line-height:1.5">${c.desc}</p></div>`;}).join('');
+    const bench=sectorBench[activeSector];
+    const rLabels=['Liquidity','Quick Ratio','ROE','Net Margin','Asset TO','Int. Cover'];
+    const rVals=[Math.min(R.cr/3*100,100),Math.min(R.qr/2*100,100),Math.min(R.roe/30*100,100),Math.min(R.npm/25*100,100),Math.min(R.at/2*100,100),Math.min(R.icr/15*100,100)];
+    const bVals=[Math.min(bench.cr/3*100,100),Math.min(bench.qr/2*100,100),Math.min(bench.roe/30*100,100),Math.min(bench.nm/25*100,100),Math.min(bench.at/2*100,100),Math.min(bench.icr/15*100,100)];
+    mkChart('radarChart',{type:'radar',data:{labels:rLabels,datasets:[{label:'Your Company',data:rVals,backgroundColor:'rgba(0,212,255,.15)',borderColor:'#00d4ff',pointBackgroundColor:'#00d4ff',borderWidth:2},{label:activeSector+' Benchmark',data:bVals,backgroundColor:'rgba(255,107,53,.1)',borderColor:'#ff6b35',pointBackgroundColor:'#ff6b35',borderWidth:2,borderDash:[5,5]}]},options:{responsive:true,animation:{duration:380},scales:{r:{min:0,max:100,ticks:{color:'#64748b',font:{family:'JetBrains Mono',size:7},backdropColor:'transparent'},grid:{color:'rgba(30,45,69,.5)'},pointLabels:{color:'#94a3b8',font:{family:'JetBrains Mono',size:9}}}},plugins:{...CD.plugins}}});
+    mkChart('benchmarkChart',{type:'bar',data:{labels:['Current Ratio','ROE','Net Margin','ICR'],datasets:[{label:'Your Company',data:[R.cr,R.roe,R.npm,R.icr],backgroundColor:'rgba(0,212,255,.7)',borderRadius:4},{label:activeSector+' Avg',data:[bench.cr,bench.roe,bench.nm,bench.icr],backgroundColor:'rgba(255,107,53,.5)',borderRadius:4}]},options:{...CD}});
+    const si=document.getElementById('sector-insight');if(si)si.innerHTML=`<strong>${activeSector.charAt(0).toUpperCase()+activeSector.slice(1)} benchmarks:</strong> ROE target >${bench.roe}% (yours: ${R.roe.toFixed(1)}%), ICR >${bench.icr}x (yours: ${R.icr.toFixed(1)}x), Net Margin >${bench.nm}% (yours: ${R.npm.toFixed(1)}%)`;
+  }
+  sliders.forEach(([id])=>document.getElementById(id)?.addEventListener('input',compute));compute();
+}
+const ratioExamples={tcs:{ca:4e10,inv:0,cl:1.4e10,cash:2.5e10,ni:4.6e10*0.194,rev:2.41e12,ebit:2.41e12*0.23,ta:1.1e11,eq:5.85e10,cogs:2.41e12*0.25,ainv:1e8,arec:2.41e12/6.6,debt:0,int:1e6},hdfc:{ca:2e11,inv:0,cl:1.8e11,cash:8e10,ni:6e10*0.228,rev:1.74e12,ebit:1.74e12*0.28,ta:3.3e13,eq:3.6e11,cogs:1.74e12*0.55,ainv:1e8,arec:1.74e12/4,debt:3e12,int:1.74e12*0.35},asian:{ca:5e9,inv:1.5e9,cl:2.8e9,cash:1.5e9,ni:3.8e9,rev:3.5e10,ebit:3.5e10*0.185,ta:1.7e10,eq:1.4e10,cogs:3.5e10*0.5,ainv:1.5e9,arec:3.5e10/12,debt:6e8,int:6e8*0.08},ongc:{ca:5e11,inv:1e11,cl:4.5e11,cash:1.5e11,ni:5e11*0.092,rev:6e12,ebit:6e12*0.14,ta:6.5e12,eq:4e12,cogs:6e12*0.7,ainv:1e11,arec:6e12/25,debt:1.1e12,int:1e11},apple:{ca:1.4e13,inv:7e11,cl:1.6e13,cash:2.9e12,ni:1e13*0.264,rev:3.86e13,ebit:3.86e13*0.31,ta:3.5e13,eq:7.4e12,cogs:3.86e13*0.54,ainv:7e11,arec:3.86e13/20,debt:1.04e13,int:3.9e11}};
+function loadRatioExample(k){const d=ratioExamples[k];if(!d)return;const sv=(id,v)=>{const el=document.getElementById(id);if(el){el.value=Math.min(Math.max(v,parseFloat(el.min)),parseFloat(el.max));el.dispatchEvent(new Event('input'));}};Object.entries(d).forEach(([k2,v])=>sv('r-'+k2.replace(/_/g,'-'),v));}
+
+// ═══════════════════════════════════════════════════════════
+// MODULE 5: DUPONT
+// ═══════════════════════════════════════════════════════════
+function initDupont(){
+  const sliders=[['dp-ni','dp-ni-v',fmtINR],['dp-rev','dp-rev-v',fmtINR],['dp-ta','dp-ta-v',fmtINR],['dp-eq','dp-eq-v',fmtINR],['dp-tb','dp-tb-v',v=>v.toFixed(2)],['dp-ib','dp-ib-v',v=>v.toFixed(2)]];
+  sliders.forEach(([id,dId,fmt])=>{const el=document.getElementById(id),dEl=document.getElementById(dId);if(el&&dEl){const u=()=>{dEl.textContent=fmt(parseFloat(el.value));if(dEl.tagName==='SPAN')setupEditableValue(dEl);};el.addEventListener('input',u);u();}});
+  function compute(){
+    const ni=parseFloat(document.getElementById('dp-ni')?.value||1),rev=Math.max(parseFloat(document.getElementById('dp-rev')?.value||1),1),ta=Math.max(parseFloat(document.getElementById('dp-ta')?.value||1),1),eq=Math.max(parseFloat(document.getElementById('dp-eq')?.value||1),1),tb=parseFloat(document.getElementById('dp-tb')?.value||.75),ib=parseFloat(document.getElementById('dp-ib')?.value||.85);
+    const nm=ni/rev,at=rev/ta,em=ta/eq,roe=nm*at*em,ebit=ni/(tb*ib),em5=ebit/rev;
+    const flow=document.getElementById('dupontFlow');
+    if(flow)flow.innerHTML=`<div class="dupont-box"><div class="val" style="color:var(--green)">${fmtPct(nm*100)}</div><div class="lbl">Net Margin</div></div><div class="dupont-op">×</div><div class="dupont-box"><div class="val" style="color:var(--accent)">${at.toFixed(2)}x</div><div class="lbl">Asset Turnover</div></div><div class="dupont-op">×</div><div class="dupont-box"><div class="val" style="color:var(--accent2)">${em.toFixed(2)}x</div><div class="lbl">Equity Multiplier</div></div><div class="dupont-op">=</div><div class="dupont-box" style="border-color:var(--accent3)"><div class="val" style="color:var(--accent3)">${fmtPct(roe*100)}</div><div class="lbl">ROE</div></div>`;
+    mkChart('dupontChart',{type:'bar',data:{labels:['Tax Burden','Interest Burden','EBIT Margin','Asset Turnover','Equity Multiplier'],datasets:[{label:'5-Factor Components',data:[tb,ib,em5,at,em],backgroundColor:['#00d4ff','#7c3aed','#10b981','#f59e0b','#ff6b35'],borderRadius:6}]},options:{...CD,plugins:{...CD.plugins,legend:{display:false}}}});
+  }
+  sliders.forEach(([id])=>document.getElementById(id)?.addEventListener('input',compute));compute();
+}
+const dpExamples={tcs:{ni:4.7e10,rev:2.41e11,ta:1.1e11,eq:5.85e10,tb:.74,ib:.99},walmart:{ni:1.64e10,rev:6.48e11,ta:2.53e11,eq:8.34e10,tb:.75,ib:.93},apple:{ni:1e11,rev:3.86e11,ta:3.5e11,eq:7.4e10,tb:.86,ib:.97},reliance:{ni:6.7e10,rev:9.07e11,ta:1.8e12,eq:8.9e11,tb:.75,ib:.81},maruti:{ni:1.3e10,rev:1.41e11,ta:8.5e10,eq:6.5e10,tb:.74,ib:.99}};
+function loadDPExample(k){const d=dpExamples[k];if(!d)return;const sv=(id,v)=>{const el=document.getElementById(id);if(el){el.value=Math.min(Math.max(v,parseFloat(el.min)),parseFloat(el.max));el.dispatchEvent(new Event('input'));}};Object.entries(d).forEach(([k2,v])=>sv('dp-'+k2,v));}
+
+// ═══════════════════════════════════════════════════════════
+// MODULE 6: WACC + DCF
+// ═══════════════════════════════════════════════════════════
+function initWACC(){
+  const sliders=[['w-e','w-e-v',v=>`₹${v} Cr`],['w-d','w-d-v',v=>`₹${v} Cr`],['w-rf','w-rf-v',fmtPct],['w-erp','w-erp-v',fmtPct],['w-beta','w-beta-v',v=>v.toFixed(2)],['w-kd','w-kd-v',fmtPct],['w-tax','w-tax-v',fmtPct],['dcf-fcf','dcf-fcf-v',v=>`₹${v} Cr`],['dcf-g','dcf-g-v',fmtPct],['dcf-tg','dcf-tg-v',fmtPct]];
+  sliders.forEach(([id,dId,fmt])=>{const el=document.getElementById(id),dEl=document.getElementById(dId);if(el&&dEl){const u=()=>{dEl.textContent=fmt(parseFloat(el.value));if(dEl.tagName==='SPAN')setupEditableValue(dEl);};el.addEventListener('input',u);u();}});
+  function compute(){
+    const E=parseFloat(document.getElementById('w-e')?.value||100),D=parseFloat(document.getElementById('w-d')?.value||50),rf=parseFloat(document.getElementById('w-rf')?.value||7)/100,erp=parseFloat(document.getElementById('w-erp')?.value||5.5)/100,beta=parseFloat(document.getElementById('w-beta')?.value||1.2),kd=parseFloat(document.getElementById('w-kd')?.value||9)/100,tax=parseFloat(document.getElementById('w-tax')?.value||25)/100;
+    const V=Math.max(E+D,1),ke=rf+beta*erp,kdAt=kd*(1-tax),wacc=(E/V)*ke+(D/V)*kdAt;
+    document.getElementById('w-ke-kpi').textContent=fmtPct(ke*100);document.getElementById('w-kd-kpi').textContent=fmtPct(kdAt*100);document.getElementById('w-wacc-kpi').textContent=fmtPct(wacc*100);
+    mkChart('waccChart',{type:'doughnut',data:{labels:['Equity','Debt'],datasets:[{data:[E,D],backgroundColor:['#10b981','#ff6b35'],borderWidth:0}]},options:{responsive:true,animation:{duration:380},plugins:{...CD.plugins,legend:{labels:{color:'#94a3b8',font:{family:'JetBrains Mono',size:10}}}}}});
+    document.getElementById('wacc-insight').innerHTML=`Ke = ${(rf*100).toFixed(1)}% + ${beta.toFixed(2)}×${(erp*100).toFixed(1)}% = <strong>${fmtPct(ke*100)}</strong><br>Kd (post-tax) = <strong>${fmtPct(kdAt*100)}</strong><br>WACC = <strong style="color:var(--accent)">${fmtPct(wacc*100)}</strong><br><span style="font-size:.72rem;color:var(--text3)">Any project returning >${fmtPct(wacc*100)} creates value.</span>`;
+    const baseFCF=parseFloat(document.getElementById('dcf-fcf')?.value||15),gRate=parseFloat(document.getElementById('dcf-g')?.value||15)/100,tgRate=parseFloat(document.getElementById('dcf-tg')?.value||3.5)/100;
+    const yrs=[1,2,3,4,5],fcfs=yrs.map(y=>baseFCF*Math.pow(1+gRate,y)),pvFcfs=fcfs.map((f,i)=>f/Math.pow(1+wacc,i+1)),pvSum=pvFcfs.reduce((a,b)=>a+b,0);
+    const tvRaw=wacc>tgRate?fcfs[4]*(1+tgRate)/(wacc-tgRate):fcfs[4]*20;
+    const pvTV=tvRaw/Math.pow(1+wacc,5),ev=pvSum+pvTV,eqVal=ev-D;
+    document.getElementById('dcf-pv-kpi').textContent=`₹${pvSum.toFixed(0)} Cr`;document.getElementById('dcf-tv-kpi').textContent=`₹${pvTV.toFixed(0)} Cr`;document.getElementById('dcf-ev-kpi').textContent=`₹${ev.toFixed(0)} Cr`;document.getElementById('dcf-eq-kpi').textContent=`₹${Math.max(eqVal,0).toFixed(0)} Cr`;
+    mkChart('dcfChart',{type:'bar',data:{labels:[...yrs.map(y=>`Yr ${y}`),'Terminal Value'],datasets:[{label:'FCF',data:[...fcfs,0],backgroundColor:'rgba(0,212,255,.5)',borderRadius:4},{label:'PV of FCF',data:[...pvFcfs,pvTV],backgroundColor:'rgba(124,58,237,.7)',borderRadius:4}]},options:{...CD,scales:{x:CD.scales.x,y:{...CD.scales.y,ticks:{...CD.scales.y.ticks,callback:v=>`₹${v}Cr`}}}}});
+  }
+  sliders.forEach(([id])=>document.getElementById(id)?.addEventListener('input',compute));compute();
+}
+const waccExamples={tcs:{e:1600000,d:0,rf:7,erp:5.5,beta:0.65,kd:8,tax:26,fcf:200,g:12,tg:5},reliance:{e:2000000,d:300000,rf:7,erp:5.5,beta:0.85,kd:8.5,tax:25,fcf:500,g:10,tg:4},startup:{e:100,d:10,rf:7,erp:5.5,beta:2.5,kd:14,tax:0,fcf:2,g:40,tg:3},tesla:{e:800000,d:80000,rf:4.5,erp:6,beta:1.8,kd:6,tax:21,fcf:30,g:20,tg:3},utility:{e:50000,d:120000,rf:7,erp:5.5,beta:0.45,kd:8,tax:25,fcf:40,g:4,tg:2.5}};
+function loadWACCExample(k){const d=waccExamples[k];if(!d)return;const sv=(id,v)=>{const el=document.getElementById(id);if(el){el.value=Math.min(Math.max(v,parseFloat(el.min)),parseFloat(el.max));el.dispatchEvent(new Event('input'));}};Object.entries(d).forEach(([k2,v])=>sv('w-'+k2.replace(/_/g,'-'),v)||sv('dcf-'+k2.replace(/_/g,'-'),v));}
+
+// ═══════════════════════════════════════════════════════════
+// MODULE 7: WORKING CAPITAL
+// ═══════════════════════════════════════════════════════════
+function initWorking(){
+  const sliders=[['wc-dio','wc-dio-v',v=>`${v} days`],['wc-dso','wc-dso-v',v=>`${v} days`],['wc-dpo','wc-dpo-v',v=>`${v} days`],['wc-rev','wc-rev-v',v=>`₹${v} Cr`]];
+  sliders.forEach(([id,dId,fmt])=>{const el=document.getElementById(id),dEl=document.getElementById(dId);if(el&&dEl){const u=()=>{dEl.textContent=fmt(parseFloat(el.value));if(dEl.tagName==='SPAN')setupEditableValue(dEl);};el.addEventListener('input',u);u();}});
+  function compute(){
+    const dio=parseFloat(document.getElementById('wc-dio')?.value||45),dso=parseFloat(document.getElementById('wc-dso')?.value||30),dpo=parseFloat(document.getElementById('wc-dpo')?.value||40),rev=parseFloat(document.getElementById('wc-rev')?.value||100);
+    const ccc=dio+dso-dpo;
+    document.getElementById('ccc-kpi').textContent=`${ccc} days`;
+    document.getElementById('ccc-kpi').style.color=ccc<0?'var(--green)':ccc<30?'var(--gold)':'var(--red)';
+    const daily=rev*1e7/365,invL=dio*daily,arL=dso*daily,apF=dpo*daily,wcL=invL+arL-apF;
+    const ins=document.getElementById('ccc-insight');
+    ins.className=ccc<0?'insight success':ccc<30?'insight warn':'insight';
+    ins.innerHTML=ccc<0?`<strong>🚀 Negative CCC = ${ccc} days!</strong> You collect before you pay. This is the Amazon/Zomato model — the business self-funds operations and effectively gets free working capital from suppliers.`:`<strong>CCC = ${ccc} days.</strong> ₹${(Math.abs(wcL)/1e7).toFixed(1)} Cr tied up in operations. Every day you reduce CCC saves ₹${(rev*1e7/365/1e5).toFixed(1)}L in locked capital.`;
+    // CCC horizontal visual
+    const wrap=document.getElementById('ccc-visual-wrap');
+    if(wrap){const total=Math.max(dio+dso,dpo,1)*1.2;const dioW=dio/total*100,dsoW=dso/total*100,dpoW=dpo/total*100;wrap.innerHTML=`<div class="ccc-visual"><div class="ccc-seg" style="left:0%;width:${dioW}%;background:rgba(245,158,11,.6);font-weight:600">DIO ${dio}d</div><div class="ccc-seg" style="left:${dioW}%;width:${dsoW}%;background:rgba(0,212,255,.5)">DSO ${dso}d</div><div class="ccc-seg" style="left:0%;width:${dpoW}%;background:rgba(16,185,129,.5);top:36px">DPO ${dpo}d</div></div><div style="font-size:.68rem;color:var(--text3);margin-top:.4rem">Top bar = DIO+DSO (cash cycle). Bottom bar = DPO (supplier credit). CCC = gap between them = <strong style="color:${ccc<0?'var(--green)':'var(--accent2)'}">${ccc} days</strong></div>`;}
+    mkChart('cccChart',{type:'bar',data:{labels:['DIO (Inventory)','DSO (Receivables)','DPO (Payables, reduces CCC)'],datasets:[{data:[dio,dso,-dpo],backgroundColor:['rgba(245,158,11,.8)','rgba(0,212,255,.8)','rgba(16,185,129,.8)'],borderRadius:6}]},options:{indexAxis:'y',...CD,plugins:{...CD.plugins,legend:{display:false}},scales:{x:{...CD.scales.x,ticks:{...CD.scales.x.ticks,callback:v=>`${v}d`}},y:CD.scales.y}}});
+    document.getElementById('wc-table').innerHTML=`<tr><td class="label">Inventory Locked (DIO)</td><td class="num">${dio}d</td><td class="neg">−₹${(invL/1e7).toFixed(1)} Cr</td><td style="font-size:.72rem;color:var(--text3)">Cash tied in unsold goods</td></tr><tr><td class="label">Receivables (DSO)</td><td class="num">${dso}d</td><td class="neg">−₹${(arL/1e7).toFixed(1)} Cr</td><td style="font-size:.72rem;color:var(--text3)">Money owed by customers</td></tr><tr><td class="label">Payables credit (DPO)</td><td class="num">${dpo}d</td><td class="pos">+₹${(apF/1e7).toFixed(1)} Cr</td><td style="font-size:.72rem;color:var(--text3)">Supplier free credit</td></tr><tr><td class="label"><strong>Net Working Capital</strong></td><td class="num">${ccc}d</td><td class="${wcL>=0?'neg':'pos'}"><strong>${wcL>=0?'−':'+'}₹${(Math.abs(wcL)/1e7).toFixed(1)} Cr</strong></td><td style="font-size:.72rem;color:var(--text3)">${wcL>=0?'Funding needed':'Operating surplus!'}</td></tr>`;
+  }
+  sliders.forEach(([id])=>document.getElementById(id)?.addEventListener('input',compute));compute();
+}
+const wcExamples={amazon:{dio:38,dso:22,dpo:85,rev:700},zomato:{dio:0,dso:12,dpo:24,rev:200},maruti:{dio:18,dso:10,dpo:0,rev:1400},tcs:{dio:0,dso:55,dpo:0,rev:2400},pharma:{dio:90,dso:60,dpo:30,rev:300}};
+function loadWCExample(k){const d=wcExamples[k];if(!d)return;const sv=(id,v)=>{const el=document.getElementById(id);if(el){el.value=Math.min(Math.max(v,parseFloat(el.min)),parseFloat(el.max));el.dispatchEvent(new Event('input'));}};Object.entries(d).forEach(([k2,v])=>sv('wc-'+k2,v));}
+
+// ═══════════════════════════════════════════════════════════
+// MODULE 8: BREAK-EVEN
+// ═══════════════════════════════════════════════════════════
+function initBreakeven(){
+  const sliders=[['be-p','be-p-v',v=>`₹${parseInt(v).toLocaleString()}`],['be-vc','be-vc-v',v=>`₹${parseInt(v).toLocaleString()}`],['be-fc','be-fc-v',fmtINR],['be-vol','be-vol-v',v=>parseInt(v).toLocaleString()]];
+  sliders.forEach(([id,dId,fmt])=>{const el=document.getElementById(id),dEl=document.getElementById(dId);if(el&&dEl){const u=()=>{dEl.textContent=fmt(parseFloat(el.value));if(dEl.tagName==='SPAN')setupEditableValue(dEl);};el.addEventListener('input',u);u();}});
+  function compute(){
+    const p=parseFloat(document.getElementById('be-p')?.value||500),vc=parseFloat(document.getElementById('be-vc')?.value||300),fc=parseFloat(document.getElementById('be-fc')?.value||500000),vol=parseFloat(document.getElementById('be-vol')?.value||4000);
+    if(p<=vc){document.getElementById('be-insight').className='insight danger';document.getElementById('be-insight').innerHTML='<strong>⚠ Invalid:</strong> Selling price must exceed variable cost to have a positive contribution margin.';return;}
+    const cm=p-vc,cmR=cm/p,beU=Math.ceil(fc/cm),beRev=beU*p,actRev=vol*p,mos=actRev>0?(actRev-beRev)/actRev*100:0,profit=(vol-beU)*cm;
+    document.getElementById('be-units-kpi').textContent=beU.toLocaleString();document.getElementById('be-rev-kpi').textContent=fmtINR(beRev);document.getElementById('be-cm-kpi').textContent=fmtPct(cmR*100);document.getElementById('be-mos-kpi').textContent=mos>0?fmtPct(mos):'Loss zone';
+    const maxV=Math.max(vol*1.4,beU*1.6,100);const pts=Array.from({length:25},(_,i)=>Math.round(maxV/24*i));
+    mkChart('beChart',{type:'line',data:{labels:pts,datasets:[{label:'Total Revenue',data:pts.map(q=>p*q),borderColor:'#00d4ff',backgroundColor:'rgba(0,212,255,.05)',borderWidth:2.5,pointRadius:0,fill:false},{label:'Total Cost',data:pts.map(q=>fc+vc*q),borderColor:'#ff6b35',backgroundColor:'rgba(255,107,53,.05)',borderWidth:2.5,pointRadius:0,fill:false},{label:'Fixed Costs',data:pts.map(()=>fc),borderColor:'#64748b',borderWidth:1.5,pointRadius:0,borderDash:[5,5],fill:false},{label:'Current Volume',data:pts.map(q=>q===pts.reduce((a,b)=>Math.abs(b-vol)<Math.abs(a-vol)?b:a)?p*vol:null),borderColor:'#10b981',backgroundColor:'#10b981',pointRadius:pts.map(q=>Math.abs(q-vol)<maxV/24*0.6?6:0),showLine:false}]},options:{...CD,scales:{x:{...CD.scales.x,ticks:{...CD.scales.x.ticks,callback:v=>pts[v]?.toLocaleString()||''}},y:{...CD.scales.y,ticks:{...CD.scales.y.ticks,callback:v=>fmtINR(v)}}}}});
+    const ins=document.getElementById('be-insight');if(vol>beU){ins.className='insight success';ins.innerHTML=`<strong>✓ Profitable!</strong> At ${vol.toLocaleString()} units → <strong>${fmtINR(profit)}</strong> profit. Margin of Safety: ${mos.toFixed(1)}% — can absorb that much demand drop before loss.`;}else{ins.className='insight danger';ins.innerHTML=`<strong>Loss Zone:</strong> Need ${(beU-vol).toLocaleString()} more units to break even. Current shortfall: ${fmtINR(Math.abs(profit))}.`;}
+  }
+  sliders.forEach(([id])=>document.getElementById(id)?.addEventListener('input',compute));compute();
+}
+const beExamples={cafe:{p:350,vc:85,fc:800000,vol:3200},saas:{p:2000,vc:150,fc:3000000,vol:500},airline:{p:4500,vc:2800,fc:8000000,vol:2000},pharma:{p:12,vc:3,fc:50000000,vol:8000000},ecom:{p:5000,vc:4600,fc:500000,vol:1500}};
+function loadBEExample(k){const d=beExamples[k];if(!d)return;const sv=(id,v)=>{const el=document.getElementById(id);if(el){el.value=Math.min(Math.max(v,parseFloat(el.min)),parseFloat(el.max));el.dispatchEvent(new Event('input'));}};Object.entries(d).forEach(([k2,v])=>sv('be-'+k2,v));}
+
+// ═══════════════════════════════════════════════════════════
+// MODULE 9: LEVERAGE
+// ═══════════════════════════════════════════════════════════
+function initLeverage(){
+  const sliders=[['lev-q','lev-q-v',v=>parseInt(v).toLocaleString()],['lev-p','lev-p-v',v=>`₹${v}`],['lev-vc','lev-vc-v',v=>`₹${v}`],['lev-fc','lev-fc-v',fmtINR],['lev-int','lev-int-v',fmtINR],['lev-pref','lev-pref-v',fmtINR],['lev-tax','lev-tax-v',fmtPct]];
+  sliders.forEach(([id,dId,fmt])=>{const el=document.getElementById(id),dEl=document.getElementById(dId);if(el&&dEl){const u=()=>{dEl.textContent=fmt(parseFloat(el.value));if(dEl.tagName==='SPAN')setupEditableValue(dEl);};el.addEventListener('input',u);u();}});
+  function compute(){
+    const q=parseFloat(document.getElementById('lev-q')?.value||10000),p=parseFloat(document.getElementById('lev-p')?.value||200),vc=parseFloat(document.getElementById('lev-vc')?.value||120),fc=parseFloat(document.getElementById('lev-fc')?.value||300000),intE=parseFloat(document.getElementById('lev-int')?.value||100000),pref=parseFloat(document.getElementById('lev-pref')?.value||0),tax=parseFloat(document.getElementById('lev-tax')?.value||25)/100;
+    const cm=(p-vc)*q,ebit=cm-fc;
+    if(ebit<=0){document.getElementById('dol-kpi').textContent='∞';document.getElementById('dfl-kpi').textContent='—';document.getElementById('dcl-kpi').textContent='—';return;}
+    const dol=cm/ebit,prefAdj=pref/(1-tax),dfl=ebit/Math.max(ebit-intE-prefAdj,.001),dcl=dol*dfl;
+    document.getElementById('dol-kpi').textContent=fmtX(dol);document.getElementById('dfl-kpi').textContent=fmtX(Math.max(dfl,0));document.getElementById('dcl-kpi').textContent=fmtX(Math.max(dcl,0));
+    const sr=[-40,-30,-20,-10,0,10,20,30,40];
+    mkChart('dolChart',{type:'line',data:{labels:sr.map(s=>`${s>0?'+':''}${s}%`),datasets:[{label:`EBIT Change (DOL=${dol.toFixed(2)}x)`,data:sr.map(s=>s*dol),borderColor:'#ff6b35',backgroundColor:'rgba(255,107,53,.1)',borderWidth:2.5,pointRadius:3,fill:true},{label:`EPS Change (DCL=${dcl.toFixed(2)}x)`,data:sr.map(s=>s*dcl),borderColor:'#7c3aed',backgroundColor:'rgba(124,58,237,.1)',borderWidth:2.5,pointRadius:3,fill:true}]},options:{...CD,scales:{x:CD.scales.x,y:{...CD.scales.y,ticks:{...CD.scales.y.ticks,callback:v=>`${v}%`}}}}});
+    const ins=document.getElementById('lev-insight');const rl=dcl<2?'🟢 Low risk':dcl<4?'🟡 Moderate risk':'🔴 High risk';ins.className=dcl<2?'insight success':dcl<4?'insight warn':'insight danger';ins.innerHTML=`<strong>${rl} — DCL ${dcl.toFixed(2)}x</strong><br>A 10% rise in sales → EBIT +${(dol*10).toFixed(0)}% → EPS +${(dcl*10).toFixed(0)}%.<br>A 10% <em>fall</em> in sales → EBIT ${(dol*10).toFixed(0)}% hit → EPS ${(dcl*10).toFixed(0)}% destroyed.${dcl>4?' Extremely dangerous in a demand downturn.':''}`;
+  }
+  sliders.forEach(([id])=>document.getElementById(id)?.addEventListener('input',compute));compute();
+}
+const levExamples={airline:{q:3000000,p:4500,vc:2800,fc:80000000,int:50000000,pref:0,tax:25},tcs:{q:500000,p:15000,vc:9000,fc:20000000,int:0,pref:0,tax:26},steel:{q:200000,p:60000,vc:38000,fc:300000000,int:200000000,pref:0,tax:25},fmcg:{q:1000000,p:500,vc:250,fc:100000000,int:5000000,pref:0,tax:25},fintech:{q:50000,p:10000,vc:2000,fc:50000000,int:100000000,pref:0,tax:25}};
+function loadLEVExample(k){const d=levExamples[k];if(!d)return;const sv=(id,v)=>{const el=document.getElementById(id);if(el){el.value=Math.min(Math.max(v,parseFloat(el.min)),parseFloat(el.max));el.dispatchEvent(new Event('input'));}};sv('lev-q',d.q);sv('lev-p',d.p);sv('lev-vc',d.vc);sv('lev-fc',d.fc);sv('lev-int',d.int);sv('lev-pref',d.pref);sv('lev-tax',d.tax);}
+
+// ═══════════════════════════════════════════════════════════
+// BOOT
+// ═══════════════════════════════════════════════════════════
+window.addEventListener('load',()=>{
+  initCharts('income');
+  setTimeout(()=>['balance','cashflow','ratios','dupont','wacc','working','breakeven','leverage'].forEach(s=>initCharts(s)),450);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,2073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EconLab — Interactive Economics</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0a0e1a; --surface:#111827; --surface2:#1a2236; --border:#2a3a55;
+  --accent:#00d4aa; --accent2:#ff6b35; --accent3:#7c3aed;
+  --text:#e2e8f0; --muted:#8899aa;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'JetBrains Mono',monospace;overflow-x:hidden}
+header{padding:1.2rem 2rem;border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:1.5rem}
+header h1{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:900;color:var(--accent);letter-spacing:-1px}
+header p{color:var(--muted);font-size:0.72rem}
+.tag{background:var(--accent3);color:#fff;padding:2px 8px;border-radius:3px;font-size:0.6rem;margin-left:0.5rem}
+.layout{display:flex;min-height:calc(100vh - 60px)}
+nav{width:250px;min-width:250px;background:var(--surface);border-right:1px solid var(--border);padding:1.2rem 0;position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto}
+.nav-sec{padding:0.4rem 1rem;margin-top:0.7rem}
+.nav-sec-title{font-size:0.58rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:0.4rem}
+.nav-item{display:block;padding:0.45rem 0.8rem;border-radius:5px;color:var(--muted);font-size:0.7rem;cursor:pointer;transition:all 0.2s;border:none;background:none;width:100%;text-align:left;font-family:'JetBrains Mono',monospace}
+.nav-item:hover,.nav-item.active{background:var(--surface2);color:var(--accent)}
+main{flex:1;padding:2rem;overflow-x:hidden}
+.section{display:none;animation:fadeIn 0.25s ease}
+.section.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.sec-head{margin-bottom:1.5rem}
+.sec-head h2{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--text)}
+.sec-head p{color:var(--muted);font-size:0.75rem;line-height:1.7;max-width:700px;margin-top:0.3rem}
+.badge{display:inline-block;padding:2px 7px;border-radius:3px;font-size:0.6rem;margin-left:6px;vertical-align:middle}
+.bm{background:rgba(0,212,170,.2);color:var(--accent)}
+.bp{background:rgba(124,58,237,.2);color:#a78bfa}
+.graph-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:2rem}
+.graph-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--accent);margin-bottom:0.25rem}
+.ctag{font-size:0.62rem;color:#a78bfa;background:rgba(124,58,237,.15);padding:2px 8px;border-radius:3px;display:inline-block;margin-bottom:1rem}
+.glayout{display:grid;grid-template-columns:1fr 300px;gap:1.5rem;align-items:start}
+canvas{background:#0d1420;border-radius:8px;border:1px solid var(--border);display:block;width:100% !important}
+.controls{background:var(--surface2);border-radius:8px;padding:1.2rem;border:1px solid var(--border)}
+.controls h4{font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:1rem}
+.sg{margin-bottom:1rem}
+.sl{display:flex;justify-content:space-between;font-size:0.7rem;color:var(--text);margin-bottom:0.3rem}
+.sl span{color:var(--accent2);font-weight:600}
+input[type=range]{width:100%;-webkit-appearance:none;height:4px;border-radius:2px;background:var(--border);outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:var(--accent);cursor:pointer;box-shadow:0 0 8px rgba(0,212,170,.5)}
+.expl{margin-top:1rem;padding:1rem;background:rgba(0,212,170,.04);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;font-size:0.72rem;line-height:1.8;color:var(--text)}
+.expl strong{color:var(--accent)}
+.formula{background:var(--surface2);padding:0.35rem 0.8rem;border-radius:4px;font-family:'JetBrains Mono';font-size:0.7rem;color:var(--accent2);margin:0.4rem 0;display:inline-block}
+.ibox{margin-top:0.8rem;padding:0.8rem;background:rgba(255,107,53,.07);border:1px solid rgba(255,107,53,.3);border-radius:6px;font-size:0.7rem;color:var(--text);line-height:1.6}
+.ibox .lbl{color:var(--accent2);font-size:0.6rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.3rem}
+.legend{display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.7rem}
+.li{display:flex;align-items:center;gap:0.4rem;font-size:0.65rem;color:var(--muted)}
+.ld{width:14px;height:3px;border-radius:2px}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+@media(max-width:900px){.glayout{grid-template-columns:1fr}.nav-item{font-size:0.65rem}}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>EconLab <span class="tag">INTERACTIVE</span></h1>
+    <p>Business Economics · M.Com · UGC NET · MA Eco · PhD</p>
+  </div>
+</header>
+<div class="layout">
+<nav>
+  <div class="nav-sec">
+    <div class="nav-sec-title">Market Theory</div>
+    <button class="nav-item active" onclick="show('ds')">📈 Demand & Supply</button>
+    <button class="nav-item" onclick="show('elas')">🔁 Elasticity</button>
+    <button class="nav-item" onclick="show('ic')">🛒 Indifference Curve</button>
+  </div>
+  <div class="nav-sec">
+    <div class="nav-sec-title">Production & Cost</div>
+    <button class="nav-item" onclick="show('prod')">🏭 Production Function</button>
+    <button class="nav-item" onclick="show('cost')">💰 Cost Curves</button>
+    <button class="nav-item" onclick="show('rts')">📊 Returns to Scale</button>
+  </div>
+  <div class="nav-sec">
+    <div class="nav-sec-title">Market Structures</div>
+    <button class="nav-item" onclick="show('pc')">⚖️ Perfect Competition</button>
+    <button class="nav-item" onclick="show('mono')">👑 Monopoly</button>
+    <button class="nav-item" onclick="show('mono-disc')">✂️ Price Discrimination</button>
+  </div>
+  <div class="nav-sec">
+    <div class="nav-sec-title">Macroeconomics</div>
+    <button class="nav-item" onclick="show('islm')">📉 IS-LM Model</button>
+    <button class="nav-item" onclick="show('adas')">🌐 AD-AS Model</button>
+    <button class="nav-item" onclick="show('phillips')">🔄 Phillips Curve</button>
+    <button class="nav-item" onclick="show('mult')">✖️ Fiscal Multiplier</button>
+  </div>
+  <div class="nav-sec">
+    <div class="nav-sec-title">Advanced / PhD</div>
+    <button class="nav-item" onclick="show('solow')">🚀 Solow Growth</button>
+    <button class="nav-item" onclick="show('laffer')">📐 Laffer Curve</button>
+    <button class="nav-item" onclick="show('lm-ext')">🧠 Mundell-Fleming</button>
+  </div>
+</nav>
+<main>
+
+<!-- ========== DEMAND & SUPPLY ========== -->
+<div id="sec-ds" class="section active">
+  <div class="sec-head">
+    <h2>Demand & Supply <span class="badge bm">M.Com</span></h2>
+    <p>The core model of price determination. Equilibrium is where Qd = Qs. Shift the demand or supply curves and watch the new equilibrium update instantly.</p>
+  </div>
+  <div class="graph-card">
+    <h3>Market Equilibrium</h3>
+    <span class="ctag">Law of Demand · Law of Supply · Shifts · Surplus & Shortage</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-ds" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>Demand</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>Supply</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>Equilibrium</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Demand Intercept (a) <span id="v-ds-a">200</span></div><input type="range" id="ds-a" min="80" max="320" value="200"></div>
+          <div class="sg"><div class="sl">Demand Slope (b) <span id="v-ds-b">1.5</span></div><input type="range" id="ds-b" min="5" max="40" value="15"></div>
+          <div class="sg"><div class="sl">Supply Intercept (c) <span id="v-ds-c">20</span></div><input type="range" id="ds-c" min="0" max="120" value="20"></div>
+          <div class="sg"><div class="sl">Supply Slope (d) <span id="v-ds-d">1.2</span></div><input type="range" id="ds-d" min="3" max="35" value="12"></div>
+          <div class="ibox"><div class="lbl">📍 Equilibrium</div><div id="ds-eq">—</div></div>
+        </div>
+        <div class="expl">
+          <strong>Demand:</strong> P = a − b·Q &nbsp;|&nbsp; <strong>Supply:</strong> P = c + d·Q<br>
+          <div class="formula">Q* = (a−c)/(b+d) &nbsp;&nbsp; P* = c + d·Q*</div>
+          <strong>Right-shift Demand</strong> (↑a): income↑, tastes, substitutes price↑, future expectations<br><br>
+          <strong>Right-shift Supply</strong> (↓c): input cost↓, technology improvement, subsidy<br><br>
+          <strong>Surplus</strong>: at P above P*, Qs > Qd — price falls back.<br>
+          <strong>Shortage</strong>: at P below P*, Qd > Qs — price rises.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== ELASTICITY ========== -->
+<div id="sec-elas" class="section">
+  <div class="sec-head">
+    <h2>Price Elasticity of Demand <span class="badge bm">M.Com</span></h2>
+    <p>How sensitive is quantity demanded to price? A crucial tool for revenue decisions, tax incidence, and pricing strategy.</p>
+  </div>
+  <div class="graph-card">
+    <h3>Demand Curve & Total Revenue</h3>
+    <span class="ctag">PED · Total Revenue Test · Arc Elasticity</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-elas" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>Demand</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>Total Revenue</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>Current Point</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Price Level (P) <span id="v-elas-p">60</span></div><input type="range" id="elas-p" min="5" max="95" value="60"></div>
+          <div class="ibox"><div class="lbl">📊 At this price</div><div id="elas-res">—</div></div>
+        </div>
+        <div class="expl">
+          <div class="formula">PED = (ΔQ/Q) ÷ (ΔP/P)</div>
+          <strong>|PED| > 1</strong> → Elastic: P↑ → TR↓ (luxury, many substitutes)<br>
+          <strong>|PED| = 1</strong> → Unitary: TR is maximized (MR = 0)<br>
+          <strong>|PED| &lt; 1</strong> → Inelastic: P↑ → TR↑ (necessities, addictive goods)<br><br>
+          <strong>Yellow curve</strong> = Total Revenue (P×Q). Notice TR rises then falls — peak is at unitary elasticity (midpoint of linear demand).<br><br>
+          <strong>Tax incidence:</strong> More inelastic side bears more of the tax burden.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== INDIFFERENCE CURVE ========== -->
+<div id="sec-ic" class="section">
+  <div class="sec-head">
+    <h2>Indifference Curves <span class="badge bm">M.Com</span> <span class="badge bp">PhD</span></h2>
+    <p>Consumer optimum is tangency of indifference curve and budget line (MRS = Px/Py). Income and price changes shift the budget line, changing the optimal bundle.</p>
+  </div>
+  <div class="graph-card">
+    <h3>IC–Budget Line Analysis</h3>
+    <span class="ctag">IC · Budget Constraint · Optimum · Income Effect · Substitution Effect</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-ic" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>IC (tangent)</div>
+          <div class="li"><div class="ld" style="background:#a78bfa"></div>IC (lower)</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>Budget Line</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>Optimum Point</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Income (M) <span id="v-ic-m">100</span></div><input type="range" id="ic-m" min="40" max="220" value="100"></div>
+          <div class="sg"><div class="sl">Price X (Px) <span id="v-ic-px">2.0</span></div><input type="range" id="ic-px" min="5" max="80" value="20"></div>
+          <div class="sg"><div class="sl">Price Y (Py) <span id="v-ic-py">2.0</span></div><input type="range" id="ic-py" min="5" max="80" value="20"></div>
+          <div class="sg"><div class="sl">Pref for X (α) <span id="v-ic-alpha">0.50</span></div><input type="range" id="ic-alpha" min="10" max="90" value="50"></div>
+          <div class="ibox"><div class="lbl">📍 Optimal Bundle</div><div id="ic-res">—</div></div>
+        </div>
+        <div class="expl">
+          Utility: <div class="formula">U = X^α · Y^(1−α) &nbsp; (Cobb-Douglas)</div>
+          Optimum: <div class="formula">X* = αM/Px &nbsp; Y* = (1−α)M/Py</div>
+          <strong>Income↑</strong>: Budget line shifts right — both X* and Y* increase (normal goods).<br><br>
+          <strong>Px↑</strong>: Budget line rotates inward on X-axis — X* falls (substitution + income effects).<br><br>
+          <strong>α</strong>: Share of income spent on X. Higher α → consumer prefers X.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== PRODUCTION ========== -->
+<div id="sec-prod" class="section">
+  <div class="sec-head">
+    <h2>Production Function <span class="badge bm">M.Com</span></h2>
+    <p>Relates inputs (Labour, Capital) to output. The short run has a fixed factor; in the long run all factors vary. Shows Total, Average, and Marginal products.</p>
+  </div>
+  <div class="graph-card">
+    <h3>TP, AP, and MP Curves</h3>
+    <span class="ctag">Total Product · Average Product · Marginal Product · Law of Diminishing Returns</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-prod" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>Total Product</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>Average Product</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>Marginal Product</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Capital (K, fixed) <span id="v-prod-k">10</span></div><input type="range" id="prod-k" min="2" max="30" value="10"></div>
+          <div class="sg"><div class="sl">Labour elasticity (α) <span id="v-prod-a">0.60</span></div><input type="range" id="prod-a" min="20" max="80" value="60"></div>
+          <div class="sg"><div class="sl">Technology (A) <span id="v-prod-A">5</span></div><input type="range" id="prod-A" min="1" max="15" value="5"></div>
+          <div class="ibox"><div class="lbl">Stage of Production</div><div id="prod-stage">—</div></div>
+        </div>
+        <div class="expl">
+          <div class="formula">Q = A · K^(1−α) · L^α</div>
+          <strong>Stage I:</strong> AP rising — inefficient, under-utilised labour<br>
+          <strong>Stage II:</strong> AP falling but MP > 0 — rational production zone<br>
+          <strong>Stage III:</strong> MP < 0 — too many workers, output falls<br><br>
+          <strong>Key:</strong> MP intersects AP at AP's maximum.<br>
+          Raising K shifts the entire TP curve <em>upward</em>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== COST CURVES ========== -->
+<div id="sec-cost" class="section">
+  <div class="sec-head">
+    <h2>Cost Curves <span class="badge bm">M.Com</span></h2>
+    <p>In the short run, fixed costs don't change with output. TC = TFC + TVC. The U-shape of AC arises from first falling then rising MC.</p>
+  </div>
+  <div class="graph-card">
+    <h3>Short-Run Cost Curves</h3>
+    <span class="ctag">TC · TVC · TFC · AC · AVC · MC</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-cost" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>AC</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>AVC</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>MC</div>
+          <div class="li"><div class="ld" style="background:#a78bfa"></div>AFC</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Fixed Cost (FC) <span id="v-cost-fc">200</span></div><input type="range" id="cost-fc" min="50" max="500" value="200"></div>
+          <div class="sg"><div class="sl">Variable Cost factor (v) <span id="v-cost-v">2.0</span></div><input type="range" id="cost-v" min="5" max="40" value="20"></div>
+          <div class="sg"><div class="sl">Curvature (c) <span id="v-cost-c">0.05</span></div><input type="range" id="cost-c" min="1" max="20" value="5"></div>
+          <div class="ibox"><div class="lbl">📍 Min. AC at</div><div id="cost-minac">—</div></div>
+        </div>
+        <div class="expl">
+          <div class="formula">TC = FC + v·Q + c·Q²</div>
+          <div class="formula">MC = v + 2c·Q &nbsp; AC = TC/Q</div>
+          <strong>MC cuts AC at AC's minimum</strong> (always — a mathematical property).<br><br>
+          <strong>AFC</strong> = FC/Q → continuously falls, hyperbolic shape.<br>
+          <strong>AVC</strong> = TVC/Q → U-shaped; MC cuts it at its minimum.<br><br>
+          <strong>Long run:</strong> All costs are variable; LAC is the "envelope" of SAC curves.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== RETURNS TO SCALE ========== -->
+<div id="sec-rts" class="section">
+  <div class="sec-head">
+    <h2>Returns to Scale <span class="badge bm">M.Com</span></h2>
+    <p>What happens to output when ALL inputs are scaled by λ? IRS, CRS, DRS determine firm size and industry structure.</p>
+  </div>
+  <div class="graph-card">
+    <h3>Isoquant Map & Returns to Scale</h3>
+    <span class="ctag">IRS · CRS · DRS · Isoquants · MRTS</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-rts" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>Q=100</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>Q=200</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>Q=300</div>
+          <div class="li"><div class="ld" style="background:#a78bfa"></div>Scale Ray</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Capital Share (β) <span id="v-rts-b">0.50</span></div><input type="range" id="rts-b" min="10" max="90" value="50"></div>
+          <div class="sg"><div class="sl">Scale param (α+β) <span id="v-rts-s">1.00</span></div><input type="range" id="rts-s" min="60" max="140" value="100"></div>
+          <div class="ibox"><div class="lbl">Returns to Scale</div><div id="rts-type">—</div></div>
+        </div>
+        <div class="expl">
+          <div class="formula">Q = K^β · L^(1−β) scaled by s</div>
+          <strong>α+β > 1</strong>: Increasing Returns (IRS) — isoquants get closer together along ray (economies of scale)<br>
+          <strong>α+β = 1</strong>: Constant Returns (CRS) — equidistant isoquants<br>
+          <strong>α+β &lt; 1</strong>: Decreasing Returns (DRS) — isoquants spread out<br><br>
+          <strong>MRTS</strong> = slope of isoquant = MPL/MPK (diminishes as we move right along isoquant).
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== PERFECT COMPETITION ========== -->
+<div id="sec-pc" class="section">
+  <div class="sec-head">
+    <h2>Perfect Competition <span class="badge bm">M.Com</span></h2>
+    <p>Firms are price takers. P = MR = AR. Profit-maximizing output where MC = MR. Long-run equilibrium: P = MC = min AC (zero economic profit).</p>
+  </div>
+  <div class="graph-card">
+    <h3>Firm Equilibrium under Perfect Competition</h3>
+    <span class="ctag">P=MR=AR · MC=MR · Economic Profit · Shutdown</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-pc" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>MC</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>AC</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>AVC</div>
+          <div class="li"><div class="ld" style="background:#a78bfa"></div>P=MR=AR</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Market Price (P) <span id="v-pc-p">50</span></div><input type="range" id="pc-p" min="10" max="100" value="50"></div>
+          <div class="sg"><div class="sl">Fixed Cost <span id="v-pc-fc">150</span></div><input type="range" id="pc-fc" min="50" max="400" value="150"></div>
+          <div class="ibox"><div class="lbl">Profit / Loss Status</div><div id="pc-status">—</div></div>
+        </div>
+        <div class="expl">
+          <strong>Profit max:</strong> Produce where MC = P<br>
+          <strong>Supernormal profit:</strong> P > AC → shaded green area<br>
+          <strong>Normal profit:</strong> P = AC (long-run)<br>
+          <strong>Loss:</strong> P < AC but P > AVC → continue in short run<br>
+          <strong>Shutdown point:</strong> P < min AVC → produce 0<br><br>
+          Long-run: entry eliminates profit; exit eliminates losses → P = min AC.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== MONOPOLY ========== -->
+<div id="sec-mono" class="section">
+  <div class="sec-head">
+    <h2>Monopoly <span class="badge bm">M.Com</span></h2>
+    <p>A single seller faces the entire market demand. MR < P (downward sloping demand). Profit max: MC = MR, then read price off the demand curve. Deadweight loss arises.</p>
+  </div>
+  <div class="graph-card">
+    <h3>Monopoly Equilibrium & Deadweight Loss</h3>
+    <span class="ctag">MR · MC · Monopoly Price · DWL · Consumer Surplus</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-mono" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>Demand (AR)</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>MR</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>MC=AC</div>
+          <div class="li"><div class="ld" style="background:rgba(124,58,237,.5)"></div>DWL</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Demand Intercept (a) <span id="v-mono-a">200</span></div><input type="range" id="mono-a" min="100" max="350" value="200"></div>
+          <div class="sg"><div class="sl">Demand Slope (b) <span id="v-mono-b">2.0</span></div><input type="range" id="mono-b" min="5" max="40" value="20"></div>
+          <div class="sg"><div class="sl">MC (constant) <span id="v-mono-mc">40</span></div><input type="range" id="mono-mc" min="5" max="120" value="40"></div>
+          <div class="ibox"><div class="lbl">📊 Monopoly Outcomes</div><div id="mono-res">—</div></div>
+        </div>
+        <div class="expl">
+          <div class="formula">MR = a − 2b·Q &nbsp; (MR has same intercept, twice slope)</div>
+          <strong>Qm:</strong> where MC = MR → Qm = (a − MC)/(2b)<br>
+          <strong>Pm:</strong> Demand at Qm → Pm = a − b·Qm<br>
+          <strong>DWL:</strong> Triangle between competitive Q and monopoly Q (purple shading).<br><br>
+          <strong>Lerner Index</strong> = (P−MC)/P = −1/PED → measures market power.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== PRICE DISCRIMINATION ========== -->
+<div id="sec-mono-disc" class="section">
+  <div class="sec-head">
+    <h2>Price Discrimination <span class="badge bm">M.Com</span></h2>
+    <p>Monopolist charges different prices to different consumers/groups. Three degrees: 1st (perfect), 2nd (block pricing), 3rd (market segmentation).</p>
+  </div>
+  <div class="graph-card">
+    <h3>3rd Degree Price Discrimination</h3>
+    <span class="ctag">Market Segmentation · Elasticity Pricing Rule · Surplus Transfer</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-disc" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>Market A (inelastic)</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>Market B (elastic)</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>MC</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Market A intercept <span id="v-disc-a">180</span></div><input type="range" id="disc-a" min="100" max="280" value="180"></div>
+          <div class="sg"><div class="sl">Market B intercept <span id="v-disc-b">120</span></div><input type="range" id="disc-b" min="60" max="200" value="120"></div>
+          <div class="sg"><div class="sl">MC (constant) <span id="v-disc-mc">30</span></div><input type="range" id="disc-mc" min="5" max="80" value="30"></div>
+          <div class="ibox"><div class="lbl">📊 Prices & Profits</div><div id="disc-res">—</div></div>
+        </div>
+        <div class="expl">
+          <div class="formula">P*(1 − 1/|e|) = MC &nbsp; (Elasticity Pricing Rule)</div>
+          Charge <strong>higher price</strong> in the market with <em>lower elasticity</em> (more inelastic demand).<br><br>
+          <strong>3rd degree PD requires:</strong> separate markets, no resale, different elasticities.<br><br>
+          Compared to single price: total output same or larger, profit higher, some DWL reduction.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== IS-LM ========== -->
+<div id="sec-islm" class="section">
+  <div class="sec-head">
+    <h2>IS-LM Model <span class="badge bm">M.Com</span> <span class="badge bp">PhD</span></h2>
+    <p>Simultaneously determines output (Y) and interest rate (r). IS curve: goods market equilibrium. LM curve: money market equilibrium. Fiscal/monetary policy shift the curves.</p>
+  </div>
+  <div class="graph-card">
+    <h3>IS-LM Equilibrium</h3>
+    <span class="ctag">IS Curve · LM Curve · Fiscal Policy · Monetary Policy · Crowding Out</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-islm" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>IS Curve</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>LM Curve</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>Equilibrium (Y*,r*)</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Fiscal Stimulus (G) <span id="v-islm-g">0</span></div><input type="range" id="islm-g" min="-50" max="80" value="0"></div>
+          <div class="sg"><div class="sl">Money Supply (Ms) <span id="v-islm-ms">0</span></div><input type="range" id="islm-ms" min="-50" max="80" value="0"></div>
+          <div class="sg"><div class="sl">Investment sensitivity (b) <span id="v-islm-b">30</span></div><input type="range" id="islm-b" min="5" max="80" value="30"></div>
+          <div class="ibox"><div class="lbl">📍 Equilibrium</div><div id="islm-res">—</div></div>
+        </div>
+        <div class="expl">
+          <strong>IS:</strong> r = (A − Y/m)/b &nbsp;&nbsp; (A = autonomous spending)<br>
+          <strong>LM:</strong> r = (kY − M/P)/h<br><br>
+          <strong>Fiscal policy (G↑)</strong>: IS shifts right → Y↑, r↑ (crowding out)<br>
+          <strong>Monetary policy (Ms↑)</strong>: LM shifts right → Y↑, r↓<br><br>
+          <strong>Liquidity Trap:</strong> LM horizontal — monetary policy ineffective.<br>
+          <strong>Classical case:</strong> LM vertical — fiscal policy fully crowded out.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== AD-AS ========== -->
+<div id="sec-adas" class="section">
+  <div class="sec-head">
+    <h2>AD-AS Model <span class="badge bm">M.Com</span></h2>
+    <p>Aggregate Demand and Aggregate Supply determine the price level and real output. Distinguishes short-run (SRAS) from long-run (LRAS = vertical at potential output).</p>
+  </div>
+  <div class="graph-card">
+    <h3>AD–SRAS–LRAS Equilibrium</h3>
+    <span class="ctag">AD · SRAS · LRAS · Demand-pull Inflation · Cost-push · Output Gap</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-adas" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>AD</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>SRAS</div>
+          <div class="li"><div class="ld" style="background:#a78bfa"></div>LRAS</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">AD Shift <span id="v-adas-ad">0</span></div><input type="range" id="adas-ad" min="-60" max="80" value="0"></div>
+          <div class="sg"><div class="sl">Supply Shock (SRAS) <span id="v-adas-as">0</span></div><input type="range" id="adas-as" min="-60" max="60" value="0"></div>
+          <div class="sg"><div class="sl">Potential Output (Yp) <span id="v-adas-yp">250</span></div><input type="range" id="adas-yp" min="150" max="380" value="250"></div>
+          <div class="ibox"><div class="lbl">📍 Output Gap</div><div id="adas-res">—</div></div>
+        </div>
+        <div class="expl">
+          <strong>AD↑</strong> (fiscal/monetary expansion): Y↑, P↑ → short-run growth; long-run only inflation.<br><br>
+          <strong>Negative supply shock</strong> (SRAS↑ cost): P↑, Y↓ → stagflation.<br><br>
+          <strong>LRAS:</strong> Vertical at Yp (potential). In long run, wages adjust → economy returns to Yp.<br><br>
+          <strong>Inflationary gap:</strong> Y > Yp → wages rise → SRAS shifts left until Y = Yp.<br>
+          <strong>Recessionary gap:</strong> Y &lt; Yp → wages fall → SRAS shifts right.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== PHILLIPS CURVE ========== -->
+<div id="sec-phillips" class="section">
+  <div class="sec-head">
+    <h2>Phillips Curve <span class="badge bm">M.Com</span> <span class="badge bp">PhD</span></h2>
+    <p>Short-run trade-off between inflation and unemployment. Long-run Phillips curve is vertical at NAIRU (Natural Rate). Expectations shift the short-run curve.</p>
+  </div>
+  <div class="graph-card">
+    <h3>Short-Run & Long-Run Phillips Curve</h3>
+    <span class="ctag">SRPC · LRPC · NAIRU · Adaptive Expectations · Stagflation</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-phil" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>SRPC (current)</div>
+          <div class="li"><div class="ld" style="background:#a78bfa"></div>SRPC (shifted)</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>LRPC (NAIRU)</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">NAIRU (%) <span id="v-phil-n">5</span></div><input type="range" id="phil-n" min="2" max="12" value="5"></div>
+          <div class="sg"><div class="sl">Inflation expectations (π^e) <span id="v-phil-e">2</span></div><input type="range" id="phil-e" min="0" max="15" value="2"></div>
+          <div class="sg"><div class="sl">Sacrifice ratio (a) <span id="v-phil-a">0.5</span></div><input type="range" id="phil-a" min="2" max="15" value="5"></div>
+          <div class="ibox"><div class="lbl">Curve position</div><div id="phil-res">—</div></div>
+        </div>
+        <div class="expl">
+          <div class="formula">π = π^e − a(u − u*)</div>
+          <strong>u*</strong> = NAIRU (Natural rate; LRPC is vertical here)<br>
+          <strong>π^e↑</strong>: SRPC shifts UP — same unemployment, higher inflation.<br><br>
+          <strong>Friedman-Phelps:</strong> No long-run trade-off. Attempts to keep u below u* accelerate inflation.<br><br>
+          <strong>Stagflation (1970s):</strong> Supply shocks moved curve outward — both high u and high π simultaneously.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== MULTIPLIER ========== -->
+<div id="sec-mult" class="section">
+  <div class="sec-head">
+    <h2>Fiscal Multiplier <span class="badge bm">M.Com</span></h2>
+    <p>Government spending has a multiplied effect on GDP. The size depends on the Marginal Propensity to Consume. Taxes have a smaller (tax) multiplier.</p>
+  </div>
+  <div class="graph-card">
+    <h3>Keynesian Cross & Multiplier</h3>
+    <span class="ctag">45° Line · AE · Multiplier · MPC · Balanced Budget</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-mult" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>AE (after G↑)</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>AE (original)</div>
+          <div class="li"><div class="ld" style="background:#a78bfa"></div>45° line</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">MPC <span id="v-mult-mpc">0.75</span></div><input type="range" id="mult-mpc" min="10" max="95" value="75"></div>
+          <div class="sg"><div class="sl">Government Spending ΔG <span id="v-mult-g">50</span></div><input type="range" id="mult-g" min="0" max="200" value="50"></div>
+          <div class="sg"><div class="sl">Tax Change ΔT <span id="v-mult-t">0</span></div><input type="range" id="mult-t" min="0" max="150" value="0"></div>
+          <div class="ibox"><div class="lbl">Multiplier Effects</div><div id="mult-res">—</div></div>
+        </div>
+        <div class="expl">
+          <div class="formula">Spending Multiplier = 1/(1−MPC)</div>
+          <div class="formula">Tax Multiplier = −MPC/(1−MPC)</div>
+          <strong>ΔY = k × ΔG</strong>: Each ₹1 of G creates multiple rounds of spending.<br><br>
+          <strong>Balanced Budget Multiplier = 1</strong> always (when ΔG = ΔT).<br><br>
+          MPC = 0.75 → k = 4 → ΔG of ₹50 → ΔY = ₹200.<br>
+          Higher MPC = larger multiplier = steeper AE line.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== SOLOW ========== -->
+<div id="sec-solow" class="section">
+  <div class="sec-head">
+    <h2>Solow Growth Model <span class="badge bp">PhD</span></h2>
+    <p>Long-run growth driven by capital accumulation, labour growth, and technology. The model predicts convergence to a steady-state capital stock where investment = depreciation.</p>
+  </div>
+  <div class="graph-card">
+    <h3>Solow Steady State</h3>
+    <span class="ctag">Capital per Worker · Steady State · Golden Rule · Convergence</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-solow" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>f(k) output per worker</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>s·f(k) investment</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>(δ+n)k break-even</div>
+          <div class="li"><div class="ld" style="background:#a78bfa"></div>Steady state k*</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Savings rate (s) <span id="v-solow-s">0.30</span></div><input type="range" id="solow-s" min="5" max="70" value="30"></div>
+          <div class="sg"><div class="sl">Depreciation (δ) <span id="v-solow-d">0.08</span></div><input type="range" id="solow-d" min="2" max="20" value="8"></div>
+          <div class="sg"><div class="sl">Pop. growth (n) <span id="v-solow-n">0.02</span></div><input type="range" id="solow-n" min="0" max="10" value="2"></div>
+          <div class="ibox"><div class="lbl">Steady State k*</div><div id="solow-res">—</div></div>
+        </div>
+        <div class="expl">
+          <div class="formula">Δk = s·f(k) − (δ+n)·k</div>
+          Steady state: <div class="formula">s·f(k*) = (δ+n)·k*</div>
+          <strong>s↑</strong>: Investment curve shifts up → higher k* and y*. But no long-run growth rate change.<br><br>
+          <strong>Golden Rule:</strong> s that maximises consumption per worker c* = f(k*)−(δ+n)k*.<br><br>
+          <strong>Long-run growth</strong> requires technology (TFP) growth — the "residual" in growth accounting.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== LAFFER ========== -->
+<div id="sec-laffer" class="section">
+  <div class="sec-head">
+    <h2>Laffer Curve <span class="badge bm">M.Com</span></h2>
+    <p>Tax revenue first rises then falls as the tax rate increases. Beyond the revenue-maximising rate, higher taxes reduce incentives and shrink the tax base.</p>
+  </div>
+  <div class="graph-card">
+    <h3>Tax Revenue vs Tax Rate</h3>
+    <span class="ctag">Revenue Maximisation · Supply-side · Deadweight Loss · Tax Base</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-laffer" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>Tax Revenue</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>Current Rate</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>Max Revenue Point</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Tax Rate (t%) <span id="v-laffer-t">40</span></div><input type="range" id="laffer-t" min="1" max="99" value="40"></div>
+          <div class="sg"><div class="sl">Revenue-max rate (t*%) <span id="v-laffer-ts">50</span></div><input type="range" id="laffer-ts" min="20" max="80" value="50"></div>
+          <div class="ibox"><div class="lbl">Revenue & Position</div><div id="laffer-res">—</div></div>
+        </div>
+        <div class="expl">
+          At t=0%: revenue = 0. At t=100%: revenue = 0 (no one works).<br>
+          Peak at <strong>t*</strong> (revenue-maximising rate).<br><br>
+          <strong>Left of t*:</strong> Supply-siders argue: cut taxes → revenue rises (incentive effect dominates).<br>
+          <strong>Right of t*:</strong> Higher rate still raises revenue but approaches Laffer peak.<br><br>
+          Empirical t* debated: often estimated 60-70% for top income taxes. Used to justify Reagan-era cuts.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== MUNDELL-FLEMING ========== -->
+<div id="sec-lm-ext" class="section">
+  <div class="sec-head">
+    <h2>Mundell-Fleming Model <span class="badge bp">PhD</span></h2>
+    <p>IS-LM extended to open economy. BP curve represents Balance of Payments equilibrium. Exchange rate regime changes policy effectiveness dramatically.</p>
+  </div>
+  <div class="graph-card">
+    <h3>IS-LM-BP (Open Economy)</h3>
+    <span class="ctag">IS · LM · BP Curve · Capital Mobility · Exchange Rate Policy</span>
+    <div class="glayout">
+      <div>
+        <canvas id="c-mf" height="400"></canvas>
+        <div class="legend">
+          <div class="li"><div class="ld" style="background:#00d4aa"></div>IS</div>
+          <div class="li"><div class="ld" style="background:#ff6b35"></div>LM</div>
+          <div class="li"><div class="ld" style="background:#fbbf24"></div>BP</div>
+        </div>
+      </div>
+      <div>
+        <div class="controls">
+          <h4>⚙ Variables</h4>
+          <div class="sg"><div class="sl">Fiscal Policy (IS shift) <span id="v-mf-is">0</span></div><input type="range" id="mf-is" min="-60" max="80" value="0"></div>
+          <div class="sg"><div class="sl">Monetary Policy (LM shift) <span id="v-mf-lm">0</span></div><input type="range" id="mf-lm" min="-60" max="80" value="0"></div>
+          <div class="sg"><div class="sl">Capital Mobility <span id="v-mf-cap">Medium</span></div><input type="range" id="mf-cap" min="0" max="2" step="1" value="1"></div>
+          <div class="ibox"><div class="lbl">Policy Effectiveness</div><div id="mf-res">—</div></div>
+        </div>
+        <div class="expl">
+          <strong>Fixed ER + High capital mobility:</strong> Fiscal policy effective; Monetary policy ineffective.<br>
+          <strong>Floating ER + High capital mobility:</strong> Monetary policy effective; Fiscal policy ineffective (exchange rate offsets).<br><br>
+          <strong>BP steep (low mobility):</strong> Capital doesn't flow freely; trade balance dominates.<br>
+          <strong>BP flat (high mobility):</strong> r fixed by world rate; any deviation triggers capital flows.<br><br>
+          <strong>Trilemma:</strong> Can't simultaneously have fixed ER + free capital + independent monetary policy.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+</div>
+
+<script>
+// ============================================================
+// SMOOTH ANIMATION ENGINE
+// All graphs use interpolation — target values animate toward
+// ============================================================
+const state = {};
+const targets = {};
+const animFrames = {};
+
+function lerp(a,b,t){ return a + (b-a)*t; }
+function lerpState(id){
+  if(!state[id]||!targets[id]) return false;
+  let moving = false;
+  const S = state[id], T = targets[id];
+  Object.keys(T).forEach(k=>{
+    if(S[k]===undefined) return;
+    let diff = Math.abs(S[k]-T[k]);
+    if(diff > 0.0005){
+      S[k] = lerp(S[k], T[k], 0.16);
+      moving = true;
+    } else {
+      S[k] = T[k];
+    }
+  });
+  return moving;
+}
+
+function startLoop(id, keys, drawFn){
+  function loop(){
+    let moving = lerpState(id);
+    drawFn();
+    if(moving) animFrames[id] = requestAnimationFrame(loop);
+    else animFrames[id] = null;
+  }
+  if(animFrames[id]) cancelAnimationFrame(animFrames[id]);
+  animFrames[id] = requestAnimationFrame(loop);
+}
+
+// ============================================================
+// CANVAS HELPERS
+// ============================================================
+function setupCanvas(id){
+  const c = document.getElementById(id);
+  if(!c) return null;
+  const W = c.parentElement.clientWidth || 500;
+  c.width = W; c.height = 400;
+  return {c, ctx: c.getContext('2d'), W, H:400};
+}
+
+function drawGrid(ctx, W, H, pad){
+  ctx.strokeStyle='rgba(42,58,85,0.5)'; ctx.lineWidth=1;
+  for(let x=pad; x<=W-pad; x+=(W-2*pad)/8){
+    ctx.beginPath(); ctx.moveTo(x,pad); ctx.lineTo(x,H-pad); ctx.stroke();
+  }
+  for(let y=pad; y<=H-pad; y+=(H-2*pad)/6){
+    ctx.beginPath(); ctx.moveTo(pad,y); ctx.lineTo(W-pad,y); ctx.stroke();
+  }
+}
+
+function drawAxes(ctx, W, H, pad, xlabel, ylabel){
+  ctx.strokeStyle='rgba(136,153,170,0.6)'; ctx.lineWidth=1.5;
+  ctx.beginPath(); ctx.moveTo(pad,pad); ctx.lineTo(pad,H-pad); ctx.lineTo(W-pad,H-pad); ctx.stroke();
+  ctx.fillStyle='#8899aa'; ctx.font='11px JetBrains Mono';
+  ctx.fillText(xlabel, W-pad-20, H-pad+18);
+  ctx.save(); ctx.translate(pad-20, H/2); ctx.rotate(-Math.PI/2);
+  ctx.fillText(ylabel,0,0); ctx.restore();
+}
+
+function dot(ctx, x, y, r, color){
+  ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2);
+  ctx.fillStyle=color; ctx.fill();
+}
+
+function vline(ctx, x, y1, y2, color, dash){
+  ctx.save(); ctx.strokeStyle=color; ctx.lineWidth=1.5;
+  if(dash) ctx.setLineDash([4,4]);
+  ctx.beginPath(); ctx.moveTo(x,y1); ctx.lineTo(x,y2); ctx.stroke();
+  ctx.setLineDash([]); ctx.restore();
+}
+function hline(ctx, x1, x2, y, color, dash){
+  ctx.save(); ctx.strokeStyle=color; ctx.lineWidth=1.5;
+  if(dash) ctx.setLineDash([4,4]);
+  ctx.beginPath(); ctx.moveTo(x1,y); ctx.lineTo(x2,y); ctx.stroke();
+  ctx.setLineDash([]); ctx.restore();
+}
+
+// ============================================================
+// NAV
+// ============================================================
+function show(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  event.target.classList.add('active');
+  setTimeout(()=>{ window['init_'+id] && window['init_'+id](); }, 50);
+}
+
+// ============================================================
+// 1. DEMAND & SUPPLY
+// ============================================================
+(function(){
+  const S = {a:200,b:1.5,c:20,d:1.2};
+  const T = {...S};
+  state['ds']=S; targets['ds']=T;
+
+  function bind(id, tKey, scale, dispId, dispScale){
+    document.getElementById(id).addEventListener('input', function(){
+      T[tKey] = +this.value * scale;
+      document.getElementById(dispId).textContent = (+this.value*dispScale).toFixed(1);
+      startLoop('ds', null, draw);
+    });
+  }
+  bind('ds-a','a',1,'v-ds-a',1);
+  bind('ds-b','b',0.1,'v-ds-b',0.1);
+  bind('ds-c','c',1,'v-ds-c',1);
+  bind('ds-d','d',0.1,'v-ds-d',0.1);
+
+  function draw(){
+    const r = setupCanvas('c-ds'); if(!r) return;
+    const {ctx,W,H} = r; const pad=50;
+    ctx.clearRect(0,0,W,H);
+    drawGrid(ctx,W,H,pad);
+    drawAxes(ctx,W,H,pad,'Q','P');
+
+    const {a,b,c,d} = S;
+    const maxQ = (W-2*pad);
+    const scale = (W-2*pad)/120;
+    const Pscale = (H-2*pad)/250;
+
+    function qToX(q){ return pad + q*scale; }
+    function pToY(p){ return H-pad - p*Pscale; }
+
+    // Demand: P = a - b*Q
+    ctx.beginPath(); ctx.strokeStyle='#00d4aa'; ctx.lineWidth=2.5;
+    for(let q=0;q<=120;q+=1){
+      let p = a - b*q;
+      if(p<0) break;
+      let x=qToX(q), y=pToY(p);
+      q===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+
+    // Supply: P = c + d*Q
+    ctx.beginPath(); ctx.strokeStyle='#ff6b35'; ctx.lineWidth=2.5;
+    for(let q=0;q<=120;q+=1){
+      let p = c + d*q;
+      if(p>250) break;
+      let x=qToX(q), y=pToY(p);
+      q===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+
+    // Equilibrium
+    const Qstar = (a-c)/(b+d);
+    const Pstar = c + d*Qstar;
+    if(Qstar>0 && Pstar>0 && Pstar<250){
+      const ex=qToX(Qstar), ey=pToY(Pstar);
+      vline(ctx,ex,ey,H-pad,'rgba(251,191,36,0.4)',true);
+      hline(ctx,pad,ex,ey,'rgba(251,191,36,0.4)',true);
+      dot(ctx,ex,ey,7,'#fbbf24');
+      ctx.fillStyle='#fbbf24'; ctx.font='bold 12px JetBrains Mono';
+      ctx.fillText('E',ex+8,ey-8);
+      document.getElementById('ds-eq').innerHTML =
+        `Q* = <b>${Qstar.toFixed(1)}</b> &nbsp; P* = <b>${Pstar.toFixed(1)}</b>`;
+    }
+
+    // Labels
+    ctx.fillStyle='#00d4aa'; ctx.font='bold 11px JetBrains Mono';
+    ctx.fillText('D',qToX(Math.min(a/b-1,119))-18, pToY(b)>pad ? pToY(b) : pad+12);
+    ctx.fillStyle='#ff6b35';
+    ctx.fillText('S',qToX(110), pToY(c+d*110)<(H-pad) ? pToY(c+d*110)-8 : H-pad-10);
+  }
+
+  window.init_ds = draw;
+  draw();
+})();
+
+// ============================================================
+// 2. ELASTICITY
+// ============================================================
+(function(){
+  const S = {p:60};
+  const T = {p:60};
+  state['elas']=S; targets['elas']=T;
+
+  document.getElementById('elas-p').addEventListener('input', function(){
+    T.p = +this.value;
+    document.getElementById('v-elas-p').textContent = T.p;
+    startLoop('elas', null, draw);
+  });
+
+  function draw(){
+    const r = setupCanvas('c-elas'); if(!r) return;
+    const {ctx,W,H} = r; const pad=50;
+    ctx.clearRect(0,0,W,H);
+    drawGrid(ctx,W,H,pad);
+    drawAxes(ctx,W,H,pad,'Q','P');
+
+    // Demand: P = 100 - Q (so Q = 100-P, max P=100, max Q=100)
+    const a=100;
+    const sc = (W-2*pad)/100;
+    const psc = (H-2*pad)/100;
+    function qToX(q){ return pad+q*sc; }
+    function pToY(p){ return H-pad-p*psc; }
+
+    // Draw demand
+    ctx.beginPath(); ctx.strokeStyle='#00d4aa'; ctx.lineWidth=2.5;
+    ctx.moveTo(qToX(0), pToY(100));
+    ctx.lineTo(qToX(100), pToY(0));
+    ctx.stroke();
+
+    // Draw TR curve (scale: TR max = 2500 at P=50 Q=50)
+    ctx.beginPath(); ctx.strokeStyle='#fbbf24'; ctx.lineWidth=2;
+    for(let q=0;q<=100;q++){
+      let p2=100-q, tr=p2*q;
+      let x=qToX(q), y=H-pad - (tr/2500)*(H-2*pad);
+      q===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+
+    // Current point
+    const {p} = S;
+    const q = 100-p;
+    const tr = p*q;
+    // PED at midpoint: on linear D, PED = -P/(a-P) = -P/Q
+    const ped = -(p/Math.max(q,0.01));
+
+    const ex=qToX(q), ey=pToY(p);
+    vline(ctx,ex,ey,H-pad,'rgba(255,107,53,0.4)',true);
+    hline(ctx,pad,ex,ey,'rgba(255,107,53,0.4)',true);
+    dot(ctx,ex,ey,7,'#ff6b35');
+
+    // TR dot on TR curve
+    const try_ = H-pad-(tr/2500)*(H-2*pad);
+    dot(ctx,ex,try_,5,'#fbbf24');
+
+    const elastLabel = Math.abs(ped)>1.05 ? '🔴 Elastic' : Math.abs(ped)<0.95 ? '🟢 Inelastic' : '🟡 Unitary';
+    const rev = tr>0 ? `TR = ${tr.toFixed(0)}` : '';
+    document.getElementById('elas-res').innerHTML =
+      `P=${p}, Q=${q.toFixed(0)}<br>PED = ${ped.toFixed(2)}<br>${elastLabel}<br>${rev}`;
+
+    ctx.fillStyle='#8899aa'; ctx.font='10px JetBrains Mono';
+    ctx.fillText('↑TR curve (scaled)',pad+4,pad+16);
+  }
+  window.init_elas=draw; draw();
+})();
+
+// ============================================================
+// 3. INDIFFERENCE CURVE
+// ============================================================
+(function(){
+  const S={m:100,px:2,py:2,alpha:0.5};
+  const T={...S};
+  state['ic']=S; targets['ic']=T;
+
+  function b(id,tk,sc,di,ds){
+    document.getElementById(id).addEventListener('input',function(){
+      T[tk]=+this.value*sc;
+      document.getElementById(di).textContent=(+this.value*ds).toFixed(2);
+      startLoop('ic', null, draw);
+    });
+  }
+  b('ic-m','m',1,'v-ic-m',1);
+  b('ic-px','px',0.1,'v-ic-px',0.1);
+  b('ic-py','py',0.1,'v-ic-py',0.1);
+  b('ic-alpha','alpha',0.01,'v-ic-alpha',0.01);
+
+  function icY(x, U, alpha){ return Math.pow(U/Math.pow(Math.max(x,0.01),alpha), 1/(1-alpha)); }
+
+  function draw(){
+    const r=setupCanvas('c-ic'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H);
+    drawGrid(ctx,W,H,pad);
+    drawAxes(ctx,W,H,pad,'Good X','Good Y');
+
+    const {m,px,py,alpha}=S;
+    const maxX = m/px*1.5, maxY = m/py*1.5;
+    const sc = (W-2*pad)/maxX;
+    const psc = (H-2*pad)/maxY;
+    function xToC(x){ return pad+x*sc; }
+    function yToC(y){ return H-pad-y*psc; }
+
+    // Optimal bundle (Cobb-Douglas)
+    const xStar = alpha*m/px;
+    const yStar = (1-alpha)*m/py;
+    const Ustar = Math.pow(xStar,alpha)*Math.pow(yStar,1-alpha);
+    const Ulower = Ustar*0.6;
+
+    // Draw ICs
+    [[Ustar,'#00d4aa',2.5],[Ulower,'#a78bfa',1.5]].forEach(([U,col,lw])=>{
+      ctx.beginPath(); ctx.strokeStyle=col; ctx.lineWidth=lw;
+      let started=false;
+      for(let x=0.5; x<=maxX; x+=maxX/200){
+        const y=icY(x,U,alpha);
+        if(y<0||y>maxY*1.1||isNaN(y)) continue;
+        const cx=xToC(x), cy=yToC(y);
+        if(!started){ ctx.moveTo(cx,cy); started=true; } else ctx.lineTo(cx,cy);
+      }
+      ctx.stroke();
+    });
+
+    // Budget line: Px*x + Py*y = m → y = (m-Px*x)/Py
+    ctx.beginPath(); ctx.strokeStyle='#ff6b35'; ctx.lineWidth=2.5;
+    ctx.moveTo(xToC(0), yToC(m/py));
+    ctx.lineTo(xToC(m/px), yToC(0));
+    ctx.stroke();
+
+    // Optimum
+    const ex=xToC(xStar), ey=yToC(yStar);
+    vline(ctx,ex,ey,H-pad,'rgba(251,191,36,0.4)',true);
+    hline(ctx,pad,ex,ey,'rgba(251,191,36,0.4)',true);
+    dot(ctx,ex,ey,7,'#fbbf24');
+
+    document.getElementById('ic-res').innerHTML =
+      `X* = ${xStar.toFixed(2)}<br>Y* = ${yStar.toFixed(2)}<br>U* = ${Ustar.toFixed(2)}<br>MRS = Px/Py = ${(px/py).toFixed(2)}`;
+  }
+  window.init_ic=draw; draw();
+})();
+
+// ============================================================
+// 4. PRODUCTION
+// ============================================================
+(function(){
+  const S={k:10,alpha:0.6,A:5};
+  const T={...S};
+  state['prod']=S; targets['prod']=T;
+
+  function b(id,tk,sc,di,ds){
+    document.getElementById(id).addEventListener('input',function(){
+      T[tk]=+this.value*sc;
+      document.getElementById(di).textContent=(+this.value*ds).toFixed(2);
+      startLoop('prod', null, draw);
+    });
+  }
+  b('prod-k','k',1,'v-prod-k',1);
+  b('prod-a','alpha',0.01,'v-prod-a',0.01);
+  b('prod-A','A',1,'v-prod-A',1);
+
+  function draw(){
+    const r=setupCanvas('c-prod'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H);
+    drawGrid(ctx,W,H,pad);
+    drawAxes(ctx,W,H,pad,'Labour (L)','Output / MP / AP');
+
+    const {k,alpha,A}=S;
+    const maxL=30;
+    const tps=[], aps=[], mps=[];
+    for(let L=0.1;L<=maxL;L+=0.1){
+      tps.push(A*Math.pow(k,1-alpha)*Math.pow(L,alpha));
+    }
+    // TP max
+    const maxTP = Math.max(...tps);
+    const scL=(W-2*pad)/maxL;
+    const scP=(H-2*pad)/Math.max(maxTP,1);
+
+    function lToX(l){ return pad+l*scL; }
+    function vToY(v){ return H-pad-v*scP; }
+
+    // TP
+    ctx.beginPath(); ctx.strokeStyle='#00d4aa'; ctx.lineWidth=2.5;
+    for(let i=0;i<tps.length;i++){
+      let l=0.1+(i*0.1), x=lToX(l), y=vToY(tps[i]);
+      i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+
+    // AP & MP scaled
+    const apScale = maxTP/maxL;
+    for(let L=0.5;L<=maxL;L+=0.1){
+      const tp=A*Math.pow(k,1-alpha)*Math.pow(L,alpha);
+      aps.push({l:L, v:tp/L});
+    }
+    for(let L=0.1;L<=maxL;L+=0.1){
+      const tp=A*Math.pow(k,1-alpha)*Math.pow(L,alpha);
+      const dtp=A*Math.pow(k,1-alpha)*alpha*Math.pow(L,alpha-1);
+      mps.push({l:L,v:dtp});
+    }
+    const maxAPMP = Math.max(...aps.map(a=>a.v), ...mps.map(m=>m.v));
+    const scAPMP = (H-2*pad)/(maxAPMP*1.1);
+
+    // AP
+    ctx.beginPath(); ctx.strokeStyle='#ff6b35'; ctx.lineWidth=2;
+    aps.forEach((pt,i)=>{
+      const x=lToX(pt.l), y=H-pad-pt.v*scAPMP;
+      i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    });
+    ctx.stroke();
+
+    // MP
+    ctx.beginPath(); ctx.strokeStyle='#fbbf24'; ctx.lineWidth=2;
+    mps.forEach((pt,i)=>{
+      const x=lToX(pt.l), y=H-pad-pt.v*scAPMP;
+      i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    });
+    ctx.stroke();
+
+    // Find stage boundaries: stage II starts at AP max (where MP=AP), stage III where MP=0 (never for Cobb-Douglas)
+    let apMaxL=0, apMaxV=0;
+    aps.forEach(pt=>{ if(pt.v>apMaxV){apMaxV=pt.v;apMaxL=pt.l;} });
+    vline(ctx,lToX(apMaxL),pad,H-pad,'rgba(136,153,170,0.3)',true);
+    ctx.fillStyle='#8899aa'; ctx.font='10px JetBrains Mono';
+    ctx.fillText('Stage I',pad+4,pad+20);
+    ctx.fillText('Stage II',lToX(apMaxL)+4,pad+20);
+    document.getElementById('prod-stage').innerHTML =
+      `AP max at L = ${apMaxL.toFixed(1)}<br>Stage II: rational zone`;
+  }
+  window.init_prod=draw; draw();
+})();
+
+// ============================================================
+// 5. COST CURVES
+// ============================================================
+(function(){
+  const S={fc:200,v:2,c:0.05};
+  const T={...S};
+  state['cost']=S; targets['cost']=T;
+
+  function b(id,tk,sc,di,ds){
+    document.getElementById(id).addEventListener('input',function(){
+      T[tk]=+this.value*sc;
+      document.getElementById(di).textContent=(+this.value*ds).toFixed(2);
+      startLoop('cost', null, draw);
+    });
+  }
+  b('cost-fc','fc',1,'v-cost-fc',1);
+  b('cost-v','v',0.1,'v-cost-v',0.1);
+  b('cost-c','c',0.01,'v-cost-c',0.01);
+
+  function draw(){
+    const r=setupCanvas('c-cost'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H);
+    drawGrid(ctx,W,H,pad);
+    drawAxes(ctx,W,H,pad,'Output (Q)','Cost (₹)');
+
+    const {fc,v,c}=S;
+    const maxQ=100;
+    // Find min AC for scaling
+    // MC = v + 2c*Q, AC = fc/Q + v + c*Q; min AC where MC=AC → fc/Q² = c*Q... Q_minAC = (fc/c)^0.5
+    const qMinAC = Math.sqrt(fc/(Math.max(c,0.001)));
+    const maxCost = (fc/Math.min(qMinAC,maxQ) + v + c*Math.min(qMinAC,maxQ))*2.5;
+    const scQ=(W-2*pad)/maxQ;
+    const scC=(H-2*pad)/Math.max(maxCost,10);
+    function qToX(q){ return pad+q*scQ; }
+    function cToY(cc){ return H-pad-cc*scC; }
+
+    // AFC
+    ctx.beginPath(); ctx.strokeStyle='#a78bfa'; ctx.lineWidth=1.5;
+    for(let q=1;q<=maxQ;q++){
+      let afc=fc/q;
+      if(afc>maxCost) continue;
+      let x=qToX(q),y=cToY(afc);
+      q===1 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+
+    // AVC
+    ctx.beginPath(); ctx.strokeStyle='#fbbf24'; ctx.lineWidth=2;
+    for(let q=1;q<=maxQ;q++){
+      let avc=v+c*q;
+      if(avc>maxCost) break;
+      let x=qToX(q),y=cToY(avc);
+      q===1 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+
+    // AC
+    ctx.beginPath(); ctx.strokeStyle='#00d4aa'; ctx.lineWidth=2.5;
+    for(let q=1;q<=maxQ;q++){
+      let ac=fc/q+v+c*q;
+      if(ac>maxCost) continue;
+      let x=qToX(q),y=cToY(ac);
+      q===1 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+
+    // MC
+    ctx.beginPath(); ctx.strokeStyle='#ff6b35'; ctx.lineWidth=2;
+    for(let q=0;q<=maxQ;q++){
+      let mc=v+2*c*q;
+      if(mc>maxCost) break;
+      let x=qToX(q),y=cToY(mc);
+      q===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+
+    // Min AC point
+    const qm = Math.min(qMinAC, maxQ);
+    const acMin = fc/qm+v+c*qm;
+    if(acMin < maxCost){
+      dot(ctx,qToX(qm),cToY(acMin),6,'#fbbf24');
+      vline(ctx,qToX(qm),cToY(acMin),H-pad,'rgba(251,191,36,0.3)',true);
+    }
+    document.getElementById('cost-minac').innerHTML =
+      `Q = ${qm.toFixed(1)}, AC = ${acMin.toFixed(2)}`;
+
+    ctx.fillStyle='#8899aa'; ctx.font='10px JetBrains Mono';
+    ['AC','AVC','MC','AFC'].forEach((lbl,i)=>{
+      ctx.fillStyle=['#00d4aa','#fbbf24','#ff6b35','#a78bfa'][i];
+      ctx.fillText(lbl, W-pad-45+i*0,pad+16+i*14);
+    });
+  }
+  window.init_cost=draw; draw();
+})();
+
+// ============================================================
+// 6. RETURNS TO SCALE
+// ============================================================
+(function(){
+  const S={beta:0.5,scale:1.0};
+  const T={...S};
+  state['rts']=S; targets['rts']=T;
+
+  function b(id,tk,sc,di,ds){
+    document.getElementById(id).addEventListener('input',function(){
+      T[tk]=+this.value*sc;
+      document.getElementById(di).textContent=(+this.value*ds).toFixed(2);
+      startLoop('rts', null, draw);
+    });
+  }
+  b('rts-b','beta',0.01,'v-rts-b',0.01);
+  b('rts-s','scale',0.01,'v-rts-s',0.01);
+
+  function draw(){
+    const r=setupCanvas('c-rts'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H);
+    drawGrid(ctx,W,H,pad);
+    drawAxes(ctx,W,H,pad,'Labour','Capital');
+
+    const {beta,scale}=S;
+    const alpha2=1-beta;
+    const maxL=20, maxK=20;
+    const scL=(W-2*pad)/maxL, scK=(H-2*pad)/maxK;
+    function lToX(l){ return pad+l*scL; }
+    function kToY(k){ return H-pad-k*scK; }
+
+    // Isoquants for Q = 100, 200, 300
+    // Q = K^beta * L^(1-beta) * scale_factor
+    // For given Q and L: K = (Q / L^(1-beta))^(1/beta)
+    const Qs=[100,200,300];
+    const colors=['#00d4aa','#ff6b35','#fbbf24'];
+    // normalize: let A = 1, base Q such that at K=L=10, Q=A*10^(beta)*10^(alpha2)=10
+    // actually let's pick Q levels in natural units of the function
+    const kref=10,lref=10;
+    const Qbase = Math.pow(kref,beta)*Math.pow(lref,alpha2);
+
+    Qs.forEach((Qpct,qi)=>{
+      const Qtarget = Qbase*(Qpct/100)*scale;
+      ctx.beginPath(); ctx.strokeStyle=colors[qi]; ctx.lineWidth=2;
+      let started=false;
+      for(let L=0.5;L<=maxL;L+=0.05){
+        if(beta<0.01) break;
+        const K = Math.pow(Qtarget/Math.pow(L,alpha2), 1/beta);
+        if(isNaN(K)||K<0||K>maxK) continue;
+        const x=lToX(L), y=kToY(K);
+        if(!started){ctx.moveTo(x,y);started=true;}else ctx.lineTo(x,y);
+      }
+      ctx.stroke();
+
+      // Label
+      if(started){
+        ctx.fillStyle=colors[qi]; ctx.font='10px JetBrains Mono';
+        ctx.fillText(`Q=${Qpct}`,W-pad-60, kToY(Math.pow(Qtarget/Math.pow(maxL-1,alpha2),1/beta))+4);
+      }
+    });
+
+    // Scale ray (K=L line)
+    ctx.beginPath(); ctx.strokeStyle='rgba(167,139,250,0.5)'; ctx.lineWidth=1.5; ctx.setLineDash([5,5]);
+    ctx.moveTo(lToX(0),kToY(0)); ctx.lineTo(lToX(Math.min(maxL,maxK)),kToY(Math.min(maxL,maxK)));
+    ctx.stroke(); ctx.setLineDash([]);
+
+    const rtype = scale>1.02?'Increasing Returns to Scale 📈':scale<0.98?'Decreasing Returns to Scale 📉':'Constant Returns to Scale ➡️';
+    document.getElementById('rts-type').textContent = rtype;
+    document.getElementById('v-rts-s').textContent = scale.toFixed(2);
+  }
+  window.init_rts=draw; draw();
+})();
+
+// ============================================================
+// 7. PERFECT COMPETITION
+// ============================================================
+(function(){
+  const S={p:50,fc:150};
+  const T={...S};
+  state['pc']=S; targets['pc']=T;
+
+  function b(id,tk,sc,di,ds){
+    document.getElementById(id).addEventListener('input',function(){
+      T[tk]=+this.value*sc;
+      document.getElementById(di).textContent=(+this.value*ds).toFixed(0);
+      startLoop('pc', null, draw);
+    });
+  }
+  b('pc-p','p',1,'v-pc-p',1);
+  b('pc-fc','fc',1,'v-pc-fc',1);
+
+  function draw(){
+    const r=setupCanvas('c-pc'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H);
+    drawGrid(ctx,W,H,pad);
+    drawAxes(ctx,W,H,pad,'Output Q','Price/Cost');
+
+    const {p,fc}=S;
+    const v=1, c_=0.05; // TVC = v*Q + c_*Q^2
+    const maxQ=100, maxC=120;
+    const scQ=(W-2*pad)/maxQ, scC=(H-2*pad)/maxC;
+    function qToX(q){ return pad+q*scQ; }
+    function cToY(cv){ return Math.max(pad, H-pad-cv*scC); }
+
+    // MC = v + 2c_*Q
+    ctx.beginPath(); ctx.strokeStyle='#00d4aa'; ctx.lineWidth=2.5;
+    for(let q=0;q<=maxQ;q++){
+      let mc=v+2*c_*q; if(mc>maxC) break;
+      let x=qToX(q),y=cToY(mc);
+      q===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+
+    // AC
+    ctx.beginPath(); ctx.strokeStyle='#ff6b35'; ctx.lineWidth=2;
+    for(let q=1;q<=maxQ;q++){
+      let ac=fc/q+v+c_*q; if(ac>maxC) continue;
+      let x=qToX(q),y=cToY(ac);
+      q===1?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+
+    // AVC
+    ctx.beginPath(); ctx.strokeStyle='#fbbf24'; ctx.lineWidth=1.5;
+    for(let q=1;q<=maxQ;q++){
+      let avc=v+c_*q; if(avc>maxC) break;
+      let x=qToX(q),y=cToY(avc);
+      q===1?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+
+    // P = MR = AR line
+    if(p<=maxC){
+      ctx.beginPath(); ctx.strokeStyle='#a78bfa'; ctx.lineWidth=2.5;
+      ctx.moveTo(qToX(0),cToY(p)); ctx.lineTo(qToX(maxQ),cToY(p));
+      ctx.stroke();
+    }
+
+    // Profit-max: MC = P → v + 2c_*Q = p → Q* = (p-v)/(2c_)
+    const qStar = (p-v)/(2*c_);
+    const acStar = fc/Math.max(qStar,0.01)+v+c_*qStar;
+    const profit = (p - acStar)*qStar;
+
+    if(qStar>0 && qStar<=maxQ && p<=maxC){
+      vline(ctx,qToX(qStar),cToY(Math.max(p,acStar)),H-pad,'rgba(255,255,255,0.2)',true);
+      
+      // Profit/loss shading
+      const x0=qToX(0), x1=qToX(qStar), y_p=cToY(p), y_ac=cToY(acStar);
+      if(Math.abs(p-acStar)>1 && acStar<maxC){
+        ctx.fillStyle = p>acStar ? 'rgba(0,212,170,0.15)' : 'rgba(255,107,53,0.15)';
+        ctx.fillRect(x0, Math.min(y_p,y_ac), x1-x0, Math.abs(y_p-y_ac));
+      }
+      dot(ctx,qToX(qStar),cToY(p),6,'#fbbf24');
+    }
+
+    const status = profit>5 ? `🟢 Supernormal Profit = ${profit.toFixed(0)}` :
+                   profit<-5 ? `🔴 Loss = ${Math.abs(profit).toFixed(0)} (but P${p<v+c_*qStar?'<AVC: SHUTDOWN':'≥AVC: continue'})` :
+                   `🟡 Normal Profit (≈ P = AC)`;
+    document.getElementById('pc-status').innerHTML = status;
+  }
+  window.init_pc=draw; draw();
+})();
+
+// ============================================================
+// 8. MONOPOLY
+// ============================================================
+(function(){
+  const S={a:200,b:2,mc:40};
+  const T={...S};
+  state['mono']=S; targets['mono']=T;
+
+  function b(id,tk,sc,di,ds){
+    document.getElementById(id).addEventListener('input',function(){
+      T[tk]=+this.value*sc;
+      document.getElementById(di).textContent=(+this.value*ds).toFixed(1);
+      startLoop('mono', null, draw);
+    });
+  }
+  b('mono-a','a',1,'v-mono-a',1);
+  b('mono-b','b',0.1,'v-mono-b',0.1);
+  b('mono-mc','mc',1,'v-mono-mc',1);
+
+  function draw(){
+    const r=setupCanvas('c-mono'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H);
+    drawGrid(ctx,W,H,pad);
+    drawAxes(ctx,W,H,pad,'Quantity Q','Price / Cost');
+
+    const {a,b,mc}=S;
+    const maxQ = a/b;
+    const scQ=(W-2*pad)/maxQ, scP=(H-2*pad)/a;
+    function qToX(q){ return pad+q*scQ; }
+    function pToY(p){ return H-pad-p*scP; }
+
+    // Demand: P = a - b*Q
+    ctx.beginPath(); ctx.strokeStyle='#00d4aa'; ctx.lineWidth=2.5;
+    ctx.moveTo(qToX(0),pToY(a)); ctx.lineTo(qToX(maxQ),pToY(0)); ctx.stroke();
+
+    // MR: P = a - 2b*Q
+    ctx.beginPath(); ctx.strokeStyle='#ff6b35'; ctx.lineWidth=2.5;
+    ctx.moveTo(qToX(0),pToY(a)); ctx.lineTo(qToX(maxQ/2),pToY(0)); ctx.stroke();
+
+    // MC = mc (horizontal)
+    if(mc<a){
+      ctx.beginPath(); ctx.strokeStyle='#fbbf24'; ctx.lineWidth=2;
+      ctx.moveTo(qToX(0),pToY(mc)); ctx.lineTo(qToX(maxQ),pToY(mc)); ctx.stroke();
+    }
+
+    // Monopoly Q: MC = MR → mc = a - 2b*Qm → Qm = (a-mc)/(2b)
+    const Qm=(a-mc)/(2*b);
+    const Pm=a-b*Qm;
+    // Competitive Q: P=MC → a-b*Qc=mc → Qc=(a-mc)/b
+    const Qc=(a-mc)/b;
+    const profit=(Pm-mc)*Qm;
+
+    if(Qm>0 && Pm>0){
+      // DWL triangle
+      ctx.fillStyle='rgba(124,58,237,0.25)';
+      ctx.beginPath();
+      ctx.moveTo(qToX(Qm),pToY(Pm));
+      ctx.lineTo(qToX(Qm),pToY(mc));
+      ctx.lineTo(qToX(Qc),pToY(mc));
+      ctx.closePath(); ctx.fill();
+
+      // Profit box
+      ctx.fillStyle='rgba(0,212,170,0.12)';
+      ctx.fillRect(qToX(0),pToY(Pm),qToX(Qm)-qToX(0),pToY(mc)-pToY(Pm));
+
+      vline(ctx,qToX(Qm),pToY(Pm),H-pad,'rgba(255,255,255,0.2)',true);
+      hline(ctx,pad,qToX(Qm),pToY(Pm),'rgba(255,255,255,0.2)',true);
+      dot(ctx,qToX(Qm),pToY(Pm),7,'#a78bfa');
+      vline(ctx,qToX(Qc),pToY(mc),H-pad,'rgba(251,191,36,0.3)',true);
+    }
+
+    ctx.fillStyle='#a78bfa'; ctx.font='11px JetBrains Mono';
+    ctx.fillText('DWL',qToX(Qm)+(qToX(Qc)-qToX(Qm))/3,pToY(mc/2+Pm/4));
+
+    document.getElementById('mono-res').innerHTML =
+      `Qm = ${Qm.toFixed(1)} | Pm = ${Pm.toFixed(1)}<br>MC = ${mc} | Profit = ${profit.toFixed(0)}<br>Lerner = ${((Pm-mc)/Pm).toFixed(2)}<br>Qc = ${Qc.toFixed(1)} (competitive)`;
+  }
+  window.init_mono=draw; draw();
+})();
+
+// ============================================================
+// 9. PRICE DISCRIMINATION
+// ============================================================
+(function(){
+  const S={a1:180,a2:120,mc:30};
+  const T={...S};
+  state['disc']=S; targets['disc']=T;
+  function b(id,tk,sc,di){
+    document.getElementById(id).addEventListener('input',function(){
+      T[tk]=+this.value; document.getElementById(di).textContent=T[tk];
+      startLoop('disc', null, draw);
+    });
+  }
+  b('disc-a','a1',1,'v-disc-a');
+  b('disc-b','a2',1,'v-disc-b');
+  b('disc-mc','mc',1,'v-disc-mc');
+
+  function draw(){
+    const r=setupCanvas('c-disc'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H); drawGrid(ctx,W,H,pad); drawAxes(ctx,W,H,pad,'Q','P');
+
+    const {a1,a2,mc}=S;
+    const b1=2, b2=1; // slopes: market A steeper (inelastic), B flatter
+    const maxQ=Math.max(a1/b1,a2/b2)*1.1;
+    const scQ=(W-2*pad)/maxQ, scP=(H-2*pad)/Math.max(a1,a2)*1.1;
+    function qToX(q){return pad+q*scQ;} function pToY(p){return H-pad-p*scP;}
+
+    [[a1,b1,'#00d4aa','A(inelastic)'],[a2,b2,'#ff6b35','B(elastic)']].forEach(([a,b,col,lbl])=>{
+      ctx.beginPath(); ctx.strokeStyle=col; ctx.lineWidth=2.5;
+      ctx.moveTo(qToX(0),pToY(a)); ctx.lineTo(qToX(a/b),pToY(0)); ctx.stroke();
+      // MR
+      ctx.beginPath(); ctx.strokeStyle=col; ctx.lineWidth=1.5; ctx.setLineDash([4,4]);
+      ctx.moveTo(qToX(0),pToY(a)); ctx.lineTo(qToX(a/(2*b)),pToY(0)); ctx.stroke();
+      ctx.setLineDash([]);
+    });
+
+    // MC line
+    ctx.beginPath(); ctx.strokeStyle='#fbbf24'; ctx.lineWidth=2;
+    ctx.moveTo(qToX(0),pToY(mc)); ctx.lineTo(qToX(maxQ),pToY(mc)); ctx.stroke();
+
+    // Optimal prices: MR=MC → a-2b*Q=mc → Q=(a-mc)/(2b), P=a-b*Q
+    [[a1,b1,'#00d4aa'],[a2,b2,'#ff6b35']].forEach(([a,b,col])=>{
+      if(mc>=a) return;
+      const Q=(a-mc)/(2*b), P=a-b*Q;
+      dot(ctx,qToX(Q),pToY(P),6,col);
+      vline(ctx,qToX(Q),pToY(P),H-pad,col+'88',true);
+      hline(ctx,pad,qToX(Q),pToY(P),col+'88',true);
+    });
+
+    const Q1=(a1-mc)/(2*b1), P1=a1-b1*Q1;
+    const Q2=(a2-mc)/(2*b2), P2=a2-b2*Q2;
+    const pr1=(P1-mc)*Q1, pr2=(P2-mc)*Q2;
+    document.getElementById('disc-res').innerHTML =
+      `Market A: P=${P1.toFixed(0)}, Q=${Q1.toFixed(0)}, π=${pr1.toFixed(0)}<br>
+       Market B: P=${P2.toFixed(0)}, Q=${Q2.toFixed(0)}, π=${pr2.toFixed(0)}<br>
+       Total Profit = ${(pr1+pr2).toFixed(0)}`;
+  }
+  window.init_mono_disc = draw;
+  // also alias
+  window['init_mono-disc'] = draw;
+  draw();
+})();
+
+// ============================================================
+// 10. IS-LM
+// ============================================================
+(function(){
+  const S={g:0,ms:0,b:30};
+  const T={...S};
+  state['islm']=S; targets['islm']=T;
+  function b(id,tk,sc,di){
+    document.getElementById(id).addEventListener('input',function(){
+      T[tk]=+this.value*sc;
+      document.getElementById(di).textContent=(+this.value*sc).toFixed(0);
+      startLoop('islm', null, draw);
+    });
+  }
+  b('islm-g','g',1,'v-islm-g');
+  b('islm-ms','ms',1,'v-islm-ms');
+  b('islm-b','b',1,'v-islm-b');
+
+  function draw(){
+    const r=setupCanvas('c-islm'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H); drawGrid(ctx,W,H,pad); drawAxes(ctx,W,H,pad,'Output Y','Interest r (%)');
+
+    const {g,ms,b}=S;
+    // IS: r = (A0+g - Y/m) / b_   A0=300, m=2 (multiplier), b_=b (investment sensitivity)
+    // LM: r = (kY - M0-ms) / h   k=0.5, M0=100, h=30
+    const A0=300, m_=2, k=0.5, M0=100, h=30;
+    const maxY=600, maxR=20;
+    const scY=(W-2*pad)/maxY, scR=(H-2*pad)/maxR;
+    function yToX(y){return pad+y*scY;} function rToY(r_){return H-pad-r_*scR;}
+
+    // IS curve: r = (A0+g)/b - Y/(m_*b)
+    ctx.beginPath(); ctx.strokeStyle='#00d4aa'; ctx.lineWidth=2.5;
+    let isStart=true;
+    for(let y=0;y<=maxY;y+=2){
+      const r_=(A0+g)/b - y/(m_*b);
+      if(r_<0||r_>maxR) continue;
+      isStart ? (ctx.moveTo(yToX(y),rToY(r_)),isStart=false) : ctx.lineTo(yToX(y),rToY(r_));
+    }
+    ctx.stroke();
+
+    // LM curve: r = (kY - M0 - ms) / h
+    ctx.beginPath(); ctx.strokeStyle='#ff6b35'; ctx.lineWidth=2.5;
+    let lmStart=true;
+    for(let y=0;y<=maxY;y+=2){
+      const r_=(k*y - M0 - ms)/h;
+      if(r_<0||r_>maxR) continue;
+      lmStart ? (ctx.moveTo(yToX(y),rToY(r_)),lmStart=false) : ctx.lineTo(yToX(y),rToY(r_));
+    }
+    ctx.stroke();
+
+    // Equilibrium: set IS=LM
+    // (A0+g)/b - Y/(m_*b) = (kY - M0 - ms)/h
+    // h*(A0+g)/b - hY/(m_*b) = kY - M0 - ms
+    // h*(A0+g)/b + M0 + ms = kY + hY/(m_*b) = Y*(k + h/(m_*b))
+    const Ystar = (h*(A0+g)/b + M0 + ms) / (k + h/(m_*b));
+    const rstar = (k*Ystar - M0 - ms)/h;
+
+    if(Ystar>0&&Ystar<=maxY&&rstar>=0&&rstar<=maxR){
+      vline(ctx,yToX(Ystar),rToY(rstar),H-pad,'rgba(251,191,36,0.4)',true);
+      hline(ctx,pad,yToX(Ystar),rToY(rstar),'rgba(251,191,36,0.4)',true);
+      dot(ctx,yToX(Ystar),rToY(rstar),7,'#fbbf24');
+    }
+
+    ctx.fillStyle='#00d4aa'; ctx.font='11px JetBrains Mono'; ctx.fillText('IS',yToX(20),rToY((A0+g)/b-20/(m_*b))-8);
+    ctx.fillStyle='#ff6b35'; ctx.fillText('LM',yToX(maxY-40),rToY((k*(maxY-40)-M0-ms)/h)-8);
+
+    document.getElementById('islm-res').innerHTML =
+      `Y* = ${Ystar.toFixed(0)}<br>r* = ${rstar.toFixed(2)}%<br>${g>0?'📈 Fiscal expansion: Y↑ r↑ (crowding out)':ms>0?'💵 Monetary: Y↑ r↓':'Baseline IS-LM'}`;
+  }
+  window.init_islm=draw; draw();
+})();
+
+// ============================================================
+// 11. AD-AS
+// ============================================================
+(function(){
+  const S={ad:0,as:0,yp:250};
+  const T={...S};
+  state['adas']=S; targets['adas']=T;
+  function b(id,tk,sc,di){
+    document.getElementById(id).addEventListener('input',function(){
+      T[tk]=+this.value*sc;
+      document.getElementById(di).textContent=(+this.value*sc).toFixed(0);
+      startLoop('adas', null, draw);
+    });
+  }
+  b('adas-ad','ad',1,'v-adas-ad');
+  b('adas-as','as',1,'v-adas-as');
+  b('adas-yp','yp',1,'v-adas-yp');
+
+  function draw(){
+    const r=setupCanvas('c-adas'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H); drawGrid(ctx,W,H,pad); drawAxes(ctx,W,H,pad,'Output Y','Price Level P');
+
+    const {ad,as_,yp}=Object.assign({},{...S,as_:S.as});
+    const maxY=450, maxP=200;
+    const scY=(W-2*pad)/maxY, scP=(H-2*pad)/maxP;
+    function yToX(y){return pad+y*scY;} function pToY(p){return H-pad-p*scP;}
+
+    // AD: P = 200 + ad - 0.6*Y (downward sloping)
+    const adInt = 180+ad;
+    ctx.beginPath(); ctx.strokeStyle='#00d4aa'; ctx.lineWidth=2.5;
+    ctx.moveTo(yToX(0),pToY(adInt));
+    ctx.lineTo(yToX(adInt/0.6),pToY(0)); ctx.stroke();
+
+    // SRAS: P = 60 + as_ + 0.4*Y (upward sloping)
+    const srasInt = 60+S.as;
+    ctx.beginPath(); ctx.strokeStyle='#ff6b35'; ctx.lineWidth=2.5;
+    let sStart=true;
+    for(let y=0;y<=maxY;y+=2){
+      const p=srasInt+0.4*y;
+      if(p>maxP) break;
+      sStart?(ctx.moveTo(yToX(y),pToY(p)),sStart=false):ctx.lineTo(yToX(y),pToY(p));
+    }
+    ctx.stroke();
+
+    // LRAS: vertical at Yp
+    ctx.beginPath(); ctx.strokeStyle='#a78bfa'; ctx.lineWidth=2.5;
+    ctx.moveTo(yToX(yp),pToY(0)); ctx.lineTo(yToX(yp),pToY(maxP)); ctx.stroke();
+
+    // SR equilibrium: AD=SRAS
+    // adInt - 0.6*Y = srasInt + 0.4*Y → Y = (adInt-srasInt)/1.0
+    const Yeq=(adInt-srasInt);
+    const Peq=srasInt+0.4*Yeq;
+    if(Yeq>0&&Yeq<=maxY&&Peq>0&&Peq<=maxP){
+      vline(ctx,yToX(Yeq),pToY(Peq),H-pad,'rgba(255,255,255,0.2)',true);
+      hline(ctx,pad,yToX(Yeq),pToY(Peq),'rgba(255,255,255,0.2)',true);
+      dot(ctx,yToX(Yeq),pToY(Peq),7,'#fbbf24');
+    }
+
+    ctx.fillStyle='#00d4aa'; ctx.font='11px JetBrains Mono'; ctx.fillText('AD',yToX(10),pToY(adInt-6));
+    ctx.fillStyle='#ff6b35'; ctx.fillText('SRAS',yToX(10),pToY(srasInt+8));
+    ctx.fillStyle='#a78bfa'; ctx.fillText('LRAS',yToX(yp)+4,pToY(maxP-10));
+
+    const gap = Yeq - yp;
+    const gapLabel = Math.abs(gap)<5?'At Potential Output ✅': gap>0?`Inflationary Gap: +${gap.toFixed(0)} 🔴`:`Recessionary Gap: ${gap.toFixed(0)} 🔵`;
+    document.getElementById('adas-res').innerHTML = `Y = ${Yeq.toFixed(0)}, P = ${Peq.toFixed(1)}<br>${gapLabel}`;
+  }
+  window.init_adas=draw; draw();
+})();
+
+// ============================================================
+// 12. PHILLIPS CURVE
+// ============================================================
+(function(){
+  const S={nairu:5,pie:2,a:0.5};
+  const T={...S};
+  state['phil']=S; targets['phil']=T;
+  function b(id,tk,sc,di){
+    document.getElementById(id).addEventListener('input',function(){
+      T[tk]=+this.value*sc;
+      document.getElementById(di).textContent=(+this.value*ds).toFixed(1);
+      startLoop('phil', null, draw);
+    });
+  }
+  // manual bindings
+  document.getElementById('phil-n').addEventListener('input',function(){
+    T.nairu=+this.value; document.getElementById('v-phil-n').textContent=T.nairu;
+    startLoop('phil', null, draw);
+  });
+  document.getElementById('phil-e').addEventListener('input',function(){
+    T.pie=+this.value; document.getElementById('v-phil-e').textContent=T.pie;
+    startLoop('phil', null, draw);
+  });
+  document.getElementById('phil-a').addEventListener('input',function(){
+    T.a=+this.value*0.1; document.getElementById('v-phil-a').textContent=T.a.toFixed(1);
+    startLoop('phil', null, draw);
+  });
+
+  function draw(){
+    const r=setupCanvas('c-phil'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H); drawGrid(ctx,W,H,pad); drawAxes(ctx,W,H,pad,'Unemployment (%)','Inflation (%)');
+
+    const {nairu,pie,a}=S;
+    const maxU=20, maxP=20;
+    const scU=(W-2*pad)/maxU, scP=(H-2*pad)/maxP;
+    function uToX(u){return pad+u*scU;} function pToY(p){return H-pad-p*scP;}
+
+    // SRPC (baseline, pie=0): π = -a*(u-nairu) shifted by pie
+    // SRPC current: π = pie - a*(u-nairu)
+    [[0,'#a78bfa',1],[pie,'#00d4aa',2.5]].forEach(([pe,col,lw])=>{
+      ctx.beginPath(); ctx.strokeStyle=col; ctx.lineWidth=lw;
+      let start=true;
+      for(let u=0;u<=maxU;u+=0.1){
+        const pi_=pe-a*(u-nairu);
+        if(pi_<0||pi_>maxP) {if(!start) break; continue;}
+        start?(ctx.moveTo(uToX(u),pToY(pi_)),start=false):ctx.lineTo(uToX(u),pToY(pi_));
+      }
+      ctx.stroke();
+    });
+
+    // LRPC: vertical at nairu
+    ctx.beginPath(); ctx.strokeStyle='#ff6b35'; ctx.lineWidth=2.5;
+    ctx.moveTo(uToX(nairu),pToY(0)); ctx.lineTo(uToX(nairu),pToY(maxP)); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle='#00d4aa'; ctx.font='11px JetBrains Mono'; ctx.fillText('SRPC (π^e='+pie.toFixed(0)+'%)',uToX(1),pToY(pie+a*(nairu-1))-8);
+    ctx.fillStyle='#ff6b35'; ctx.fillText('LRPC',uToX(nairu)+4,pToY(18));
+    ctx.fillStyle='#a78bfa'; ctx.fillText('baseline(π^e=0)',uToX(1),pToY(a*(nairu-1))-8);
+
+    document.getElementById('phil-res').innerHTML =
+      `NAIRU = ${S.nairu.toFixed(1)}%<br>Expected π = ${S.pie.toFixed(1)}%<br>Slope a = ${S.a.toFixed(1)}<br>SRPC shifted ${pie>0?'UP ↑ by '+pie.toFixed(0)+'pp':'at baseline'}`;
+  }
+  window.init_phillips=draw; draw();
+})();
+
+// ============================================================
+// 13. MULTIPLIER
+// ============================================================
+(function(){
+  const S={mpc:0.75,g:50,t:0};
+  const T={...S};
+  state['mult']=S; targets['mult']=T;
+  document.getElementById('mult-mpc').addEventListener('input',function(){
+    T.mpc=+this.value/100; document.getElementById('v-mult-mpc').textContent=T.mpc.toFixed(2);
+    startLoop('mult', null, draw);
+  });
+  document.getElementById('mult-g').addEventListener('input',function(){
+    T.g=+this.value; document.getElementById('v-mult-g').textContent=T.g;
+    startLoop('mult', null, draw);
+  });
+  document.getElementById('mult-t').addEventListener('input',function(){
+    T.t=+this.value; document.getElementById('v-mult-t').textContent=T.t;
+    startLoop('mult', null, draw);
+  });
+
+  function draw(){
+    const r=setupCanvas('c-mult'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H); drawGrid(ctx,W,H,pad); drawAxes(ctx,W,H,pad,'Output Y','Aggregate Expenditure');
+
+    const {mpc,g,t}=S;
+    const C0=80, I=100, G0=100;
+    // AE = C0 + mpc*(Y-t) + I + G0 = (C0-mpc*t+I+G0) + mpc*Y
+    const AE0_base = C0+I+G0;
+    const AE0_after = C0-mpc*t+I+G0+g;
+    const maxY=800;
+    const scY=(W-2*pad)/maxY;
+
+    function yToX(y){return pad+y*scY;}
+    function aeToY(ae){return H-pad-ae*scY;} // same scale for 45° line
+
+    // 45° line
+    ctx.beginPath(); ctx.strokeStyle='#a78bfa'; ctx.lineWidth=1.5; ctx.setLineDash([6,4]);
+    ctx.moveTo(yToX(0),aeToY(0)); ctx.lineTo(yToX(maxY),aeToY(maxY)); ctx.stroke(); ctx.setLineDash([]);
+
+    // Original AE
+    ctx.beginPath(); ctx.strokeStyle='#ff6b35'; ctx.lineWidth=2;
+    ctx.moveTo(yToX(0),aeToY(AE0_base));
+    ctx.lineTo(yToX(maxY),aeToY(AE0_base+mpc*maxY)); ctx.stroke();
+
+    // New AE
+    ctx.beginPath(); ctx.strokeStyle='#00d4aa'; ctx.lineWidth=2.5;
+    ctx.moveTo(yToX(0),aeToY(AE0_after));
+    ctx.lineTo(yToX(maxY),aeToY(AE0_after+mpc*maxY)); ctx.stroke();
+
+    // Equilibria: Y=AE → Y = A/(1-mpc)
+    const Y0=AE0_base/(1-mpc), Y1=AE0_after/(1-mpc);
+    [[Y0,'#ff6b35'],[Y1,'#00d4aa']].forEach(([Y,col])=>{
+      if(Y>0&&Y<=maxY){
+        vline(ctx,yToX(Y),aeToY(Y),H-pad,col+'66',true);
+        dot(ctx,yToX(Y),aeToY(Y),6,col);
+      }
+    });
+
+    const km=1/(1-mpc), kt=-mpc/(1-mpc);
+    const deltaY=(g*km - t*Math.abs(kt));
+    document.getElementById('mult-res').innerHTML =
+      `Spending Multiplier k = ${km.toFixed(2)}<br>Tax Multiplier = ${kt.toFixed(2)}<br>ΔY from G = ${(g*km).toFixed(0)}<br>ΔY from T = ${(-t*Math.abs(kt)).toFixed(0)}<br>Net ΔY ≈ ${deltaY.toFixed(0)}`;
+  }
+  window.init_mult=draw; draw();
+})();
+
+// ============================================================
+// 14. SOLOW
+// ============================================================
+(function(){
+  const S={s:0.3,delta:0.08,n:0.02};
+  const T={...S};
+  state['solow']=S; targets['solow']=T;
+  document.getElementById('solow-s').addEventListener('input',function(){
+    T.s=+this.value/100; document.getElementById('v-solow-s').textContent=T.s.toFixed(2);
+    startLoop('solow', null, draw);
+  });
+  document.getElementById('solow-d').addEventListener('input',function(){
+    T.delta=+this.value/100; document.getElementById('v-solow-d').textContent=T.delta.toFixed(2);
+    startLoop('solow', null, draw);
+  });
+  document.getElementById('solow-n').addEventListener('input',function(){
+    T.n=+this.value/100; document.getElementById('v-solow-n').textContent=T.n.toFixed(2);
+    startLoop('solow', null, draw);
+  });
+
+  function draw(){
+    const r=setupCanvas('c-solow'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H); drawGrid(ctx,W,H,pad); drawAxes(ctx,W,H,pad,'Capital per worker k','Output/Investment');
+
+    const {s,delta,n}=S;
+    const maxK=60;
+    const scK=(W-2*pad)/maxK;
+    function kToX(k){return pad+k*scK;}
+    // f(k) = k^0.5 (Cobb-Douglas per-worker with alpha=0.5)
+    function fk(k){return Math.sqrt(k);}
+    const maxV=fk(maxK)*1.1;
+    const scV=(H-2*pad)/maxV;
+    function vToY(v){return H-pad-v*scV;}
+
+    // f(k)
+    ctx.beginPath(); ctx.strokeStyle='#00d4aa'; ctx.lineWidth=2.5;
+    for(let k=0;k<=maxK;k+=0.5){
+      const y=fk(k); const x=kToX(k), yy=vToY(y);
+      k===0?ctx.moveTo(x,yy):ctx.lineTo(x,yy);
+    }
+    ctx.stroke();
+
+    // s*f(k)
+    ctx.beginPath(); ctx.strokeStyle='#ff6b35'; ctx.lineWidth=2.5;
+    for(let k=0;k<=maxK;k+=0.5){
+      const y=s*fk(k); const x=kToX(k), yy=vToY(y);
+      k===0?ctx.moveTo(x,yy):ctx.lineTo(x,yy);
+    }
+    ctx.stroke();
+
+    // (delta+n)*k
+    ctx.beginPath(); ctx.strokeStyle='#fbbf24'; ctx.lineWidth=2;
+    ctx.moveTo(kToX(0),vToY(0));
+    ctx.lineTo(kToX(maxK),vToY((delta+n)*maxK));
+    ctx.stroke();
+
+    // Steady state: s*k^0.5 = (delta+n)*k → s/(delta+n) = k^0.5 → k* = (s/(delta+n))^2
+    const kstar = Math.pow(s/(delta+n),2);
+    const ystar = fk(kstar);
+    const cstar = (1-s)*ystar;
+
+    if(kstar<=maxK && kstar>0){
+      vline(ctx,kToX(kstar),vToY(s*ystar),H-pad,'#a78bfa',true);
+      dot(ctx,kToX(kstar),vToY(s*ystar),7,'#a78bfa');
+      ctx.fillStyle='#a78bfa'; ctx.font='11px JetBrains Mono';
+      ctx.fillText(`k*=${kstar.toFixed(1)}`,kToX(kstar)+4,H-pad-8);
+    }
+
+    ctx.fillStyle='#00d4aa'; ctx.font='11px JetBrains Mono'; ctx.fillText('f(k)',kToX(maxK-5),vToY(fk(maxK-5))-8);
+    ctx.fillStyle='#ff6b35'; ctx.fillText('s·f(k)',kToX(maxK-8),vToY(s*fk(maxK-8))+16);
+    ctx.fillStyle='#fbbf24'; ctx.fillText('(δ+n)k',kToX(maxK-8),vToY((delta+n)*(maxK-8))-8);
+
+    document.getElementById('solow-res').innerHTML =
+      `k* = ${kstar.toFixed(2)}<br>y* = ${ystar.toFixed(2)}<br>c* = ${cstar.toFixed(2)}<br>i* = s·y* = ${(s*ystar).toFixed(2)}`;
+  }
+  window.init_solow=draw; draw();
+})();
+
+// ============================================================
+// 15. LAFFER
+// ============================================================
+(function(){
+  const S={t:40,tstar:50};
+  const T={...S};
+  state['laffer']=S; targets['laffer']=T;
+  document.getElementById('laffer-t').addEventListener('input',function(){
+    T.t=+this.value; document.getElementById('v-laffer-t').textContent=T.t;
+    startLoop('laffer', null, draw);
+  });
+  document.getElementById('laffer-ts').addEventListener('input',function(){
+    T.tstar=+this.value; document.getElementById('v-laffer-ts').textContent=T.tstar;
+    startLoop('laffer', null, draw);
+  });
+
+  function draw(){
+    const r=setupCanvas('c-laffer'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H); drawGrid(ctx,W,H,pad); drawAxes(ctx,W,H,pad,'Tax Rate t (%)','Tax Revenue');
+
+    const {t,tstar}=S;
+    const scT=(W-2*pad)/100;
+    function tToX(t_){return pad+t_*scT;}
+    // Revenue = t*(1-((t-tstar)/tstar)^2) style: peak at tstar
+    // R(t) = A * t*(100-t) / (100*tstar/50... let's use parabola centered at tstar
+    // R = B * -(t - tstar)^2 + Rmax; at t=0 and t=100, R=0
+    // Use: R = t*(100-t) * scale * f(tstar)
+    // Simpler: Laffer shape via beta distribution shape:
+    // R = C * t^alpha * (100-t)^beta; peak at alpha/(alpha+beta)*100 = tstar
+    const alpha = tstar; const beta = 100-tstar;
+    const maxR = Math.pow(alpha,alpha/100)*Math.pow(beta,beta/100); // normalisation
+    function R(t_){ return Math.pow(t_/100,alpha/100)*Math.pow((100-t_)/100,beta/100); }
+    const Rmax=R(tstar);
+    const scR=(H-2*pad)/Rmax;
+    function rToY(rv){return H-pad-rv*scR;}
+
+    // Fill curve
+    ctx.beginPath(); ctx.strokeStyle='#00d4aa'; ctx.lineWidth=2.5;
+    for(let t_=0;t_<=100;t_+=0.5){
+      const rv=R(t_); const x=tToX(t_), y=rToY(rv);
+      t_===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    }
+    ctx.stroke();
+
+    // Fill under curve
+    ctx.beginPath();
+    ctx.moveTo(tToX(0),rToY(0));
+    for(let t_=0;t_<=100;t_+=0.5){ ctx.lineTo(tToX(t_),rToY(R(t_))); }
+    ctx.lineTo(tToX(100),rToY(0)); ctx.closePath();
+    ctx.fillStyle='rgba(0,212,170,0.06)'; ctx.fill();
+
+    // Peak
+    vline(ctx,tToX(tstar),rToY(Rmax),H-pad,'rgba(251,191,36,0.4)',true);
+    dot(ctx,tToX(tstar),rToY(Rmax),7,'#fbbf24');
+
+    // Current rate
+    const Rt=R(t);
+    vline(ctx,tToX(t),rToY(Rt),H-pad,'rgba(255,107,53,0.5)',true);
+    dot(ctx,tToX(t),rToY(Rt),7,'#ff6b35');
+
+    ctx.fillStyle='#fbbf24'; ctx.font='11px JetBrains Mono';
+    ctx.fillText(`t*=${tstar}%`,tToX(tstar)+4,rToY(Rmax)-8);
+
+    const pos = t<tstar?'Left of peak (raise t → more revenue)':t>tstar?'Right of peak (cut t → more revenue)':'At revenue maximum!';
+    document.getElementById('laffer-res').innerHTML =
+      `Current t = ${t}%<br>Revenue = ${(Rt*100).toFixed(1)} units<br>${pos}`;
+  }
+  window.init_laffer=draw; draw();
+})();
+
+// ============================================================
+// 16. MUNDELL-FLEMING
+// ============================================================
+(function(){
+  const S={isShift:0,lmShift:0,cap:1}; // cap: 0=low, 1=med, 2=high
+  const T={...S};
+  state['mf']=S; targets['mf']=T;
+  document.getElementById('mf-is').addEventListener('input',function(){
+    T.isShift=+this.value; document.getElementById('v-mf-is').textContent=T.isShift;
+    startLoop('mf', null, draw);
+  });
+  document.getElementById('mf-lm').addEventListener('input',function(){
+    T.lmShift=+this.value; document.getElementById('v-mf-lm').textContent=T.lmShift;
+    startLoop('mf', null, draw);
+  });
+  document.getElementById('mf-cap').addEventListener('input',function(){
+    S.cap=+this.value; T.cap=+this.value;
+    const labels=['Low','Medium','High'];
+    document.getElementById('v-mf-cap').textContent=labels[+this.value];
+    draw();
+  });
+
+  function draw(){
+    const r=setupCanvas('c-mf'); if(!r) return;
+    const {ctx,W,H}=r; const pad=50;
+    ctx.clearRect(0,0,W,H); drawGrid(ctx,W,H,pad); drawAxes(ctx,W,H,pad,'Output Y','Interest r');
+
+    const {isShift,lmShift,cap}=S;
+    const maxY=500, maxR=20;
+    const scY=(W-2*pad)/maxY, scR=(H-2*pad)/maxR;
+    function yToX(y){return pad+y*scY;} function rToY(r_){return H-pad-r_*scR;}
+
+    // IS: r = 12 + isShift/20 - Y/50
+    const isInt = 12 + isShift*0.15;
+    ctx.beginPath(); ctx.strokeStyle='#00d4aa'; ctx.lineWidth=2.5;
+    let s1=true;
+    for(let y=0;y<=maxY;y+=2){
+      const r_=isInt-y/50; if(r_<0||r_>maxR) continue;
+      s1?(ctx.moveTo(yToX(y),rToY(r_)),s1=false):ctx.lineTo(yToX(y),rToY(r_));
+    }
+    ctx.stroke();
+
+    // LM: r = -4 + lmShift/20 + Y/60
+    const lmInt = -4 - lmShift*0.15;
+    ctx.beginPath(); ctx.strokeStyle='#ff6b35'; ctx.lineWidth=2.5;
+    let s2=true;
+    for(let y=0;y<=maxY;y+=2){
+      const r_=lmInt+y/60; if(r_<0||r_>maxR) continue;
+      s2?(ctx.moveTo(yToX(y),rToY(r_)),s2=false):ctx.lineTo(yToX(y),rToY(r_));
+    }
+    ctx.stroke();
+
+    // BP slope: low cap = steep, high cap = flat
+    const bpSlopes=[0.08, 0.03, 0]; // 0 = perfectly flat (perfect capital mobility)
+    const bpSlope = bpSlopes[cap];
+    const worldR = 5;
+    ctx.beginPath(); ctx.strokeStyle='#fbbf24'; ctx.lineWidth=2;
+    if(cap===2){
+      // Horizontal
+      ctx.moveTo(yToX(0),rToY(worldR)); ctx.lineTo(yToX(maxY),rToY(worldR));
+    } else {
+      let s3=true;
+      for(let y=0;y<=maxY;y+=2){
+        const r_=worldR+bpSlope*y; if(r_<0||r_>maxR) break;
+        s3?(ctx.moveTo(yToX(y),rToY(r_)),s3=false):ctx.lineTo(yToX(y),rToY(r_));
+      }
+    }
+    ctx.stroke();
+    ctx.fillStyle='#fbbf24'; ctx.font='11px JetBrains Mono'; ctx.fillText('BP',yToX(maxY-50),rToY(worldR+bpSlope*(maxY-50))-8);
+    ctx.fillStyle='#00d4aa'; ctx.fillText('IS',yToX(20),rToY(isInt-20/50)-8);
+    ctx.fillStyle='#ff6b35'; ctx.fillText('LM',yToX(maxY-40),rToY(lmInt+(maxY-40)/60)+14);
+
+    // IS-LM equilibrium
+    // isInt - Y/50 = lmInt + Y/60 → (isInt-lmInt) = Y*(1/50+1/60) = Y*11/300
+    const denom=(1/50+1/60);
+    const Yeq=(isInt-lmInt)/denom, req=isInt-Yeq/50;
+    if(Yeq>0&&Yeq<=maxY&&req>=0&&req<=maxR){
+      dot(ctx,yToX(Yeq),rToY(req),7,'#fbbf24');
+    }
+
+    const capLabels=['Low mobility (BP steep)','Medium mobility','Perfect mobility (BP flat)'];
+    const effMap=[
+      'Fiscal:moderate, Monetary:moderate',
+      'Fiscal:mixed, Monetary:mixed',
+      'Fixed ER: Fiscal effective\nFloat ER: Monetary effective'
+    ];
+    document.getElementById('mf-res').innerHTML =
+      `${capLabels[cap]}<br>${effMap[cap]}<br>IS shift: ${isShift>0?'expansion':isShift<0?'contraction':'none'} | LM: ${lmShift>0?'expansion':lmShift<0?'contraction':'none'}`;
+  }
+  window['init_lm-ext']=draw; draw();
+})();
+
+// ============================================================
+// INIT DEFAULT
+// ============================================================
+window.addEventListener('resize', ()=>{
+  const active = document.querySelector('.section.active');
+  if(active){
+    const id = active.id.replace('sec-','');
+    const fn = window['init_'+id];
+    if(fn) fn();
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Economics – UGC NET Commerce | Interactive Graphs</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #0f1117;
+    --card: #1a1d2e;
+    --card2: #232640;
+    --accent: #6c63ff;
+    --accent2: #ff6584;
+    --accent3: #43e97b;
+    --accent4: #f7971e;
+    --text: #e8eaf6;
+    --sub: #9095b8;
+    --border: #2e3155;
+    --red: #ff5252;
+    --green: #43e97b;
+    --blue: #4fc3f7;
+    --yellow: #ffd740;
+    --orange: #ff9800;
+    --purple: #ce93d8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; min-height: 100vh; }
+
+  header {
+    background: linear-gradient(135deg, #1a1d2e 0%, #232640 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 32px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  header .logo { font-size: 1.7rem; font-weight: 800; background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  header .sub { color: var(--sub); font-size: 0.9rem; }
+
+  .nav {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    padding: 14px 32px;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .nav-btn {
+    padding: 7px 16px; border-radius: 20px; border: 1px solid var(--border);
+    background: transparent; color: var(--sub); cursor: pointer;
+    font-size: 0.82rem; transition: all 0.2s;
+  }
+  .nav-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .nav-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  .content { padding: 28px 32px; max-width: 1400px; margin: 0 auto; }
+
+  .graph-section { display: none; }
+  .graph-section.active { display: block; }
+
+  .section-title {
+    font-size: 1.5rem; font-weight: 700; margin-bottom: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--blue));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .section-desc { color: var(--sub); font-size: 0.92rem; margin-bottom: 22px; line-height: 1.6; }
+
+  .main-grid { display: grid; grid-template-columns: 1fr 380px; gap: 24px; }
+  @media(max-width:1000px){ .main-grid { grid-template-columns: 1fr; } }
+
+  .chart-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 22px;
+  }
+  .chart-title { font-size: 1rem; font-weight: 600; margin-bottom: 16px; color: var(--text); }
+  .chart-wrap { position: relative; height: 340px; }
+
+  .controls-panel {
+    background: var(--card2); border: 1px solid var(--border);
+    border-radius: 16px; padding: 20px;
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .ctrl-label { font-size: 0.78rem; color: var(--sub); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+  .ctrl-val { font-size: 1.1rem; font-weight: 700; color: var(--accent); }
+  input[type=range] {
+    width: 100%; -webkit-appearance: none; appearance: none;
+    height: 5px; border-radius: 4px; background: var(--border); outline: none;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 18px; height: 18px;
+    background: var(--accent); border-radius: 50%; cursor: pointer;
+    box-shadow: 0 0 6px rgba(108,99,255,0.5);
+  }
+  .legend { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+  .legend-item { display: flex; align-items: center; gap: 10px; font-size: 0.83rem; }
+  .legend-dot { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+  .toggle-btn {
+    background: transparent; border: 1px solid var(--border);
+    color: var(--sub); padding: 5px 12px; border-radius: 8px;
+    font-size: 0.8rem; cursor: pointer; transition: all 0.2s;
+  }
+  .toggle-btn.on { border-color: var(--accent); color: var(--accent); background: rgba(108,99,255,0.1); }
+
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 24px; }
+  @media(max-width:800px){ .info-grid { grid-template-columns: 1fr; } }
+  .info-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px;
+  }
+  .info-card h4 { font-size: 0.88rem; color: var(--accent); margin-bottom: 10px; font-weight: 700; letter-spacing: 0.04em; }
+  .info-card ul { list-style: none; }
+  .info-card ul li { font-size: 0.82rem; color: var(--sub); padding: 4px 0; border-bottom: 1px solid var(--border); line-height: 1.5; }
+  .info-card ul li:last-child { border: none; }
+  .info-card ul li::before { content: '→ '; color: var(--accent); }
+
+  .select-ctrl {
+    background: var(--card); border: 1px solid var(--border);
+    color: var(--text); padding: 8px 12px; border-radius: 8px;
+    font-size: 0.85rem; width: 100%; cursor: pointer;
+  }
+  .badge {
+    display: inline-block; padding: 2px 10px; border-radius: 12px;
+    font-size: 0.72rem; font-weight: 700; margin-left: 8px;
+  }
+  .badge-eq { background: rgba(67,233,123,0.15); color: var(--green); }
+  .badge-shift { background: rgba(255,101,132,0.15); color: var(--accent2); }
+
+  .formula-box {
+    background: rgba(108,99,255,0.08); border: 1px solid rgba(108,99,255,0.25);
+    border-radius: 10px; padding: 12px 16px; font-size: 0.83rem; color: var(--sub);
+    font-family: monospace; margin-top: 6px;
+  }
+  .highlight { color: var(--accent); font-weight: 600; }
+
+  .annotation {
+    background: rgba(255,215,64,0.07); border: 1px solid rgba(255,215,64,0.2);
+    border-radius: 8px; padding: 10px 14px; font-size: 0.82rem; color: var(--yellow);
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo">📊 EcoGraph Pro</div>
+    <div class="sub">Business Economics – UGC NET Commerce | Interactive Visual Learning</div>
+  </div>
+</header>
+
+<nav class="nav">
+  <button class="nav-btn active" onclick="showSection('sd')">Supply & Demand</button>
+  <button class="nav-btn" onclick="showSection('elasticity')">Elasticity</button>
+  <button class="nav-btn" onclick="showSection('production')">Production Curves</button>
+  <button class="nav-btn" onclick="showSection('cost')">Cost Curves</button>
+  <button class="nav-btn" onclick="showSection('market')">Market Structures</button>
+  <button class="nav-btn" onclick="showSection('indiff')">Indifference Curves</button>
+  <button class="nav-btn" onclick="showSection('is_lm')">IS-LM Model</button>
+  <button class="nav-btn" onclick="showSection('lorenz')">Lorenz Curve</button>
+</nav>
+
+<div class="content">
+
+<!-- ==================== SUPPLY & DEMAND ==================== -->
+<div id="sd" class="graph-section active">
+  <div class="section-title">Supply & Demand Analysis</div>
+  <div class="section-desc">The foundation of market economics. Demand slopes downward (inverse price–quantity), Supply slopes upward. Equilibrium is where they intersect. Use sliders to shift curves and observe price/quantity effects.</div>
+  <div class="main-grid">
+    <div class="chart-card">
+      <div class="chart-title">Supply & Demand Diagram <span class="badge badge-eq" id="sd-eq-badge">Equilibrium Stable</span></div>
+      <div class="chart-wrap"><canvas id="sdChart"></canvas></div>
+      <div class="formula-box">
+        Demand: <span class="highlight">Qd = a − b·P</span> &nbsp;|&nbsp;
+        Supply: <span class="highlight">Qs = c + d·P</span> &nbsp;|&nbsp;
+        Equilibrium: <span class="highlight" id="sd-eq-text">P* = 50, Q* = 50</span>
+      </div>
+    </div>
+    <div class="controls-panel">
+      <div>
+        <div class="ctrl-label">Demand Shift <span id="d-shift-val" class="ctrl-val">0</span></div>
+        <input type="range" id="d-shift" min="-40" max="40" value="0" oninput="updateSD()">
+      </div>
+      <div>
+        <div class="ctrl-label">Supply Shift <span id="s-shift-val" class="ctrl-val">0</span></div>
+        <input type="range" id="s-shift" min="-40" max="40" value="0" oninput="updateSD()">
+      </div>
+      <div>
+        <div class="ctrl-label">Demand Slope (steepness) <span id="d-slope-val" class="ctrl-val">1.0</span></div>
+        <input type="range" id="d-slope" min="5" max="30" value="10" step="1" oninput="updateSD()">
+      </div>
+      <div>
+        <div class="ctrl-label">Supply Slope (steepness) <span id="s-slope-val" class="ctrl-val">1.0</span></div>
+        <input type="range" id="s-slope" min="5" max="30" value="10" step="1" oninput="updateSD()">
+      </div>
+      <div>
+        <div class="ctrl-label">Show Price Floor/Ceiling</div>
+        <select class="select-ctrl" id="sd-policy" onchange="updateSD()">
+          <option value="none">None</option>
+          <option value="floor">Price Floor (min wage)</option>
+          <option value="ceiling">Price Ceiling (rent control)</option>
+        </select>
+      </div>
+      <div>
+        <div class="ctrl-label">Floor/Ceiling Level <span id="pc-val" class="ctrl-val">50</span></div>
+        <input type="range" id="price-control" min="20" max="80" value="50" oninput="updateSD()">
+      </div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#4fc3f7"></div>Demand Curve (Original)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4fc3f780;border:2px dashed #4fc3f7"></div>Demand Shifted</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#43e97b"></div>Supply Curve (Original)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#43e97b80;border:2px dashed #43e97b"></div>Supply Shifted</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ffd740"></div>Equilibrium Point</div>
+      </div>
+    </div>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <h4>📌 Key Concepts</h4>
+      <ul>
+        <li>Law of Demand – inverse P-Q relationship</li>
+        <li>Law of Supply – direct P-Q relationship</li>
+        <li>Equilibrium – Qd = Qs, no excess</li>
+        <li>Demand shift factors: Income, tastes, prices of related goods</li>
+        <li>Supply shift factors: Input costs, technology, taxes</li>
+        <li>Consumer surplus = area above P*, below D</li>
+        <li>Producer surplus = area below P*, above S</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>⚠️ Limitations</h4>
+      <ul>
+        <li>Assumes ceteris paribus (all else equal)</li>
+        <li>Doesn't account for externalities</li>
+        <li>Static model – no time dimension</li>
+        <li>Assumes rational consumers</li>
+        <li>Ignores information asymmetry</li>
+        <li>Linear representation oversimplifies</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>🌍 Real World Examples</h4>
+      <ul>
+        <li>COVID → ↑ Demand for masks → price rose</li>
+        <li>OPEC cuts oil supply → petrol prices up</li>
+        <li>Onion shortage in India → price spike 2023</li>
+        <li>Digital music → ↓ demand for CDs</li>
+        <li>Minimum wage = price floor in labour market</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== ELASTICITY ==================== -->
+<div id="elasticity" class="graph-section">
+  <div class="section-title">Price Elasticity of Demand (PED)</div>
+  <div class="section-desc">Measures how much Qd responds to a price change. |PED| > 1 = Elastic; |PED| < 1 = Inelastic; |PED| = 1 = Unit elastic. Slider changes price and shows revenue effect.</div>
+  <div class="main-grid">
+    <div class="chart-card">
+      <div class="chart-title">PED – Demand Curves Comparison</div>
+      <div class="chart-wrap"><canvas id="pedChart"></canvas></div>
+      <div class="formula-box">
+        PED = <span class="highlight">%ΔQd / %ΔP</span> &nbsp;|&nbsp;
+        TR = P × Q &nbsp;|&nbsp;
+        Current TR: <span class="highlight" id="ped-tr">₹2500</span>
+      </div>
+      <div class="annotation" id="ped-note">Adjust price to see elasticity effect on revenue</div>
+    </div>
+    <div class="controls-panel">
+      <div>
+        <div class="ctrl-label">Price Level <span id="ped-price-val" class="ctrl-val">50</span></div>
+        <input type="range" id="ped-price" min="10" max="90" value="50" oninput="updatePED()">
+      </div>
+      <div>
+        <div class="ctrl-label">Elasticity Type</div>
+        <select class="select-ctrl" id="ped-type" onchange="updatePED()">
+          <option value="elastic">Elastic (luxury goods)</option>
+          <option value="inelastic">Inelastic (necessities)</option>
+          <option value="unit">Unit Elastic</option>
+          <option value="perfectly_inelastic">Perfectly Inelastic</option>
+          <option value="perfectly_elastic">Perfectly Elastic</option>
+        </select>
+      </div>
+      <div>
+        <div class="ctrl-label">Show Revenue Rectangle</div>
+        <button class="toggle-btn on" id="rev-toggle" onclick="toggleRevenue()">✓ Revenue Box ON</button>
+      </div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#ff6584"></div>Elastic Demand (slope = 0.5)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4fc3f7"></div>Inelastic Demand (slope = 2)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#43e97b"></div>Unit Elastic</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ffd740"></div>Current Price Line</div>
+        <div class="legend-item"><div class="legend-dot" style="background:rgba(108,99,255,0.3)"></div>Revenue Rectangle</div>
+      </div>
+    </div>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <h4>📌 PED Determinants</h4>
+      <ul>
+        <li>Availability of substitutes (more subs = elastic)</li>
+        <li>Necessity vs luxury</li>
+        <li>Proportion of income spent</li>
+        <li>Time horizon (long run = more elastic)</li>
+        <li>Habit formation (addictive = inelastic)</li>
+        <li>Breadth of market definition</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>⚠️ Limitations</h4>
+      <ul>
+        <li>Assumes linear demand (rarely true)</li>
+        <li>Changes along the curve</li>
+        <li>Ignores cross-price & income effects</li>
+        <li>Hard to measure accurately</li>
+        <li>Consumer behaviour is not always rational</li>
+        <li>Dynamic markets change elasticity over time</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>🌍 Real World Examples</h4>
+      <ul>
+        <li>Petrol – inelastic (no close substitute)</li>
+        <li>Air travel – elastic (can use train/bus)</li>
+        <li>Insulin – perfectly inelastic</li>
+        <li>Designer handbags – elastic</li>
+        <li>Salt – inelastic (cheap, necessary)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PRODUCTION ==================== -->
+<div id="production" class="graph-section">
+  <div class="section-title">Production Curves – Law of Variable Proportions</div>
+  <div class="section-desc">Shows TP (Total Product), AP (Average Product), and MP (Marginal Product) as labour input increases with fixed capital. Three stages: increasing, diminishing, negative returns.</div>
+  <div class="main-grid">
+    <div class="chart-card">
+      <div class="chart-title">TP / AP / MP Curves</div>
+      <div class="chart-wrap"><canvas id="prodChart"></canvas></div>
+      <div class="formula-box">
+        MP = <span class="highlight">ΔTP/ΔL</span> &nbsp;|&nbsp;
+        AP = <span class="highlight">TP/L</span> &nbsp;|&nbsp;
+        Stage: <span class="highlight" id="prod-stage">Stage II – Diminishing Returns</span>
+      </div>
+    </div>
+    <div class="controls-panel">
+      <div>
+        <div class="ctrl-label">Labour Units <span id="prod-L-val" class="ctrl-val">5</span></div>
+        <input type="range" id="prod-L" min="1" max="10" value="5" step="1" oninput="updateProd()">
+      </div>
+      <div>
+        <div class="ctrl-label">Technology Multiplier <span id="prod-tech-val" class="ctrl-val">1.0×</span></div>
+        <input type="range" id="prod-tech" min="5" max="20" value="10" step="1" oninput="updateProd()">
+      </div>
+      <div>
+        <div class="ctrl-label">Show Stage Boundaries</div>
+        <button class="toggle-btn on" id="stage-toggle" onclick="toggleStages()">✓ Stages ON</button>
+      </div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#43e97b"></div>Total Product (TP)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4fc3f7"></div>Average Product (AP)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ff6584"></div>Marginal Product (MP)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ffd740"></div>Current Labour Point</div>
+        <div class="legend-item"><div class="legend-dot" style="background:rgba(255,152,0,0.15)"></div>Stage I (Increasing)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:rgba(108,99,255,0.1)"></div>Stage II (Diminishing)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:rgba(255,82,82,0.1)"></div>Stage III (Negative)</div>
+      </div>
+    </div>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <h4>📌 Key Relationships</h4>
+      <ul>
+        <li>MP > AP → AP is rising</li>
+        <li>MP = AP → AP is at maximum</li>
+        <li>MP < AP → AP is falling</li>
+        <li>TP max when MP = 0</li>
+        <li>TP falls when MP < 0</li>
+        <li>Stage II is rational production zone</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>⚠️ Limitations</h4>
+      <ul>
+        <li>Short-run only (one factor fixed)</li>
+        <li>Assumes homogeneous labour units</li>
+        <li>Technology assumed constant</li>
+        <li>Ignores quality of inputs</li>
+        <li>Smooth curves don't exist in reality</li>
+        <li>Doesn't cover multi-output scenarios</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>🌍 Real World Examples</h4>
+      <ul>
+        <li>Farms – more workers initially boost crops</li>
+        <li>Factories – too many workers on one machine</li>
+        <li>Software teams – Brooks' Law (more devs ≠ faster)</li>
+        <li>Restaurant kitchen with fixed stoves</li>
+        <li>Call centre with fixed phone lines</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== COST CURVES ==================== -->
+<div id="cost" class="graph-section">
+  <div class="section-title">Cost Curves – Short Run & Long Run</div>
+  <div class="section-desc">Shows TC, FC, VC, MC, AC, AFC, AVC. The U-shaped AC and MC curves are fundamental to pricing and production decisions. MC intersects AC at AC minimum.</div>
+  <div class="main-grid">
+    <div class="chart-card">
+      <div class="chart-title">Short Run Cost Curves</div>
+      <div class="chart-wrap"><canvas id="costChart"></canvas></div>
+      <div class="formula-box">
+        TC = <span class="highlight">FC + VC</span> &nbsp;|&nbsp;
+        MC = <span class="highlight">ΔTC/ΔQ</span> &nbsp;|&nbsp;
+        AC min at Q: <span class="highlight" id="cost-q">5</span>
+      </div>
+    </div>
+    <div class="controls-panel">
+      <div>
+        <div class="ctrl-label">Fixed Cost <span id="fc-val" class="ctrl-val">₹100</span></div>
+        <input type="range" id="fc-slider" min="20" max="300" value="100" step="10" oninput="updateCost()">
+      </div>
+      <div>
+        <div class="ctrl-label">Variable Cost Factor <span id="vc-val" class="ctrl-val">1.0×</span></div>
+        <input type="range" id="vc-slider" min="3" max="20" value="10" step="1" oninput="updateCost()">
+      </div>
+      <div>
+        <div class="ctrl-label">Output Level <span id="cost-q-val" class="ctrl-val">Q=5</span></div>
+        <input type="range" id="cost-q-slider" min="1" max="10" value="5" step="1" oninput="updateCost()">
+      </div>
+      <div>
+        <div class="ctrl-label">View Mode</div>
+        <select class="select-ctrl" id="cost-mode" onchange="updateCost()">
+          <option value="per_unit">Per Unit (AC, MC, AVC, AFC)</option>
+          <option value="total">Total (TC, FC, VC)</option>
+        </select>
+      </div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#ff6584"></div>MC – Marginal Cost</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4fc3f7"></div>AC – Average Total Cost</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ffd740"></div>AVC – Average Variable Cost</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ce93d8"></div>AFC – Average Fixed Cost</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#43e97b"></div>TC (total mode)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ff9800"></div>FC (total mode)</div>
+      </div>
+    </div>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <h4>📌 Key Rules</h4>
+      <ul>
+        <li>MC cuts AC & AVC at their minimum points</li>
+        <li>AFC is always downward sloping (hyperbola)</li>
+        <li>AC = AVC + AFC at every output</li>
+        <li>Short-run: FC doesn't change with Q</li>
+        <li>Long-run: All costs are variable</li>
+        <li>Shutdown: P < AVC in short run</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>⚠️ Limitations</h4>
+      <ul>
+        <li>U-shape assumes specific production tech</li>
+        <li>Static – doesn't reflect learning by doing</li>
+        <li>Ignores sunk costs in decision-making</li>
+        <li>Economies of scale not shown in SR</li>
+        <li>Doesn't account for joint production</li>
+        <li>Opportunity costs often excluded</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>🌍 Real World Examples</h4>
+      <ul>
+        <li>Airlines: high FC (aircraft), variable fuel costs</li>
+        <li>Pharma: high R&D (FC), low marginal pill cost</li>
+        <li>Software: near-zero MC per additional user</li>
+        <li>Textile mills: scale economies reduce AC</li>
+        <li>Hospitals: FC heavy – high breakeven output</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== MARKET STRUCTURES ==================== -->
+<div id="market" class="graph-section">
+  <div class="section-title">Market Structures – Profit Maximisation</div>
+  <div class="section-desc">MR = MC is the profit-maximising rule for all market structures. In perfect competition, P = MC. In monopoly, P > MC creating deadweight loss. Slide the output to find the optimal point.</div>
+  <div class="main-grid">
+    <div class="chart-card">
+      <div class="chart-title">Revenue & Cost: Profit Maximisation</div>
+      <div class="chart-wrap"><canvas id="marketChart"></canvas></div>
+      <div class="formula-box">
+        Profit π = <span class="highlight">TR – TC</span> &nbsp;|&nbsp;
+        Optimal rule: <span class="highlight">MR = MC</span> &nbsp;|&nbsp;
+        Current Profit: <span class="highlight" id="mkt-profit">₹0</span>
+      </div>
+      <div class="annotation" id="mkt-note">Move the output slider to find where MR = MC</div>
+    </div>
+    <div class="controls-panel">
+      <div>
+        <div class="ctrl-label">Market Type</div>
+        <select class="select-ctrl" id="mkt-type" onchange="updateMarket()">
+          <option value="perfect">Perfect Competition</option>
+          <option value="monopoly">Monopoly</option>
+          <option value="oligopoly">Oligopoly / Price Leadership</option>
+        </select>
+      </div>
+      <div>
+        <div class="ctrl-label">Output Level <span id="mkt-q-val" class="ctrl-val">Q=5</span></div>
+        <input type="range" id="mkt-q" min="1" max="10" value="5" step="1" oninput="updateMarket()">
+      </div>
+      <div>
+        <div class="ctrl-label">Market Price (for PC) <span id="mkt-p-val" class="ctrl-val">₹50</span></div>
+        <input type="range" id="mkt-p" min="20" max="100" value="50" step="5" oninput="updateMarket()">
+      </div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#4fc3f7"></div>AR / Demand (D)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ff6584"></div>MR (Marginal Revenue)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#43e97b"></div>MC (Marginal Cost)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ffd740"></div>AC (Average Cost)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:rgba(108,99,255,0.25)"></div>Profit Area</div>
+        <div class="legend-item"><div class="legend-dot" style="background:rgba(255,82,82,0.2)"></div>Deadweight Loss (Monopoly)</div>
+      </div>
+    </div>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <h4>📌 Market Comparison</h4>
+      <ul>
+        <li>PC: P=MR=MC, zero LR profit, price taker</li>
+        <li>Monopoly: P > MR = MC, barriers to entry</li>
+        <li>Oligopoly: few sellers, interdependence</li>
+        <li>Monopolistic: product differentiation</li>
+        <li>All: MR=MC maximises profit</li>
+        <li>Monopsony: buyer market power</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>⚠️ Limitations</h4>
+      <ul>
+        <li>Perfect competition rarely exists</li>
+        <li>Ignores game theory in oligopoly</li>
+        <li>Static model – no innovation incentive</li>
+        <li>MC pricing may not cover FC</li>
+        <li>Doesn't capture non-price competition</li>
+        <li>Behavioural economics challenges rationality</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>🌍 Real World Examples</h4>
+      <ul>
+        <li>PC: Agricultural produce (wheat, paddy)</li>
+        <li>Monopoly: Indian Railways (pre-reform)</li>
+        <li>Oligopoly: Telecom (Jio, Airtel, Vi)</li>
+        <li>Monopolistic: FMCG, shampoo brands</li>
+        <li>Natural monopoly: Power distribution utilities</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== INDIFFERENCE CURVES ==================== -->
+<div id="indiff" class="graph-section">
+  <div class="section-title">Indifference Curves & Budget Line</div>
+  <div class="section-desc">IC shows combinations of two goods giving same utility. Budget line shows affordable combinations. Consumer equilibrium where IC is tangent to budget line (MRS = Price Ratio).</div>
+  <div class="main-grid">
+    <div class="chart-card">
+      <div class="chart-title">Indifference Map & Budget Constraint</div>
+      <div class="chart-wrap"><canvas id="indiffChart"></canvas></div>
+      <div class="formula-box">
+        MRS = <span class="highlight">–ΔY/ΔX = Px/Py</span> &nbsp;|&nbsp;
+        Budget: <span class="highlight" id="budget-eq">Px·X + Py·Y = M</span>
+      </div>
+    </div>
+    <div class="controls-panel">
+      <div>
+        <div class="ctrl-label">Income (M) <span id="inc-val" class="ctrl-val">₹100</span></div>
+        <input type="range" id="inc-slider" min="40" max="160" value="100" step="10" oninput="updateIndiff()">
+      </div>
+      <div>
+        <div class="ctrl-label">Price of X (Px) <span id="px-val" class="ctrl-val">₹10</span></div>
+        <input type="range" id="px-slider" min="5" max="20" value="10" step="1" oninput="updateIndiff()">
+      </div>
+      <div>
+        <div class="ctrl-label">Price of Y (Py) <span id="py-val" class="ctrl-val">₹10</span></div>
+        <input type="range" id="py-slider" min="5" max="20" value="10" step="1" oninput="updateIndiff()">
+      </div>
+      <div>
+        <div class="ctrl-label">Utility Preference (α for X) <span id="alpha-val" class="ctrl-val">0.5</span></div>
+        <input type="range" id="alpha-slider" min="2" max="8" value="5" step="1" oninput="updateIndiff()">
+      </div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#ff6584"></div>IC₁ (lower utility)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ffd740"></div>IC₂ (medium utility)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#43e97b"></div>IC₃ (higher utility)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4fc3f7"></div>Budget Line</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ce93d8"></div>Equilibrium Point (E)</div>
+      </div>
+    </div>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <h4>📌 Properties of IC</h4>
+      <ul>
+        <li>Downward sloping (negative MRS)</li>
+        <li>Convex to origin (diminishing MRS)</li>
+        <li>Cannot intersect (transitivity)</li>
+        <li>Higher IC = higher utility</li>
+        <li>Parallel budget lines = income change</li>
+        <li>Rotating budget line = price change</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>⚠️ Limitations</h4>
+      <ul>
+        <li>Assumes only 2 goods (restrictive)</li>
+        <li>Cardinal measurement of utility impossible</li>
+        <li>Assumes consistent preferences</li>
+        <li>Ignores complementary/substitute goods</li>
+        <li>Doesn't handle corner solutions well</li>
+        <li>Behavioural biases not captured</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>🌍 Real World Examples</h4>
+      <ul>
+        <li>Food vs clothing choice under budget</li>
+        <li>Work-leisure tradeoff (labour economics)</li>
+        <li>Investment: risk vs return portfolio</li>
+        <li>Two brands of cereals – same utility</li>
+        <li>Present vs future consumption (savings)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== IS-LM ==================== -->
+<div id="is_lm" class="graph-section">
+  <div class="section-title">IS-LM Model (Hicks-Hansen)</div>
+  <div class="section-desc">IS curve: goods market equilibrium (Investment = Savings). LM curve: money market equilibrium (Liquidity = Money supply). Intersection gives simultaneous equilibrium in both markets.</div>
+  <div class="main-grid">
+    <div class="chart-card">
+      <div class="chart-title">IS-LM Framework</div>
+      <div class="chart-wrap"><canvas id="islmChart"></canvas></div>
+      <div class="formula-box">
+        IS: <span class="highlight">Y = C + I(r) + G</span> &nbsp;|&nbsp;
+        LM: <span class="highlight">M/P = L(Y, r)</span> &nbsp;|&nbsp;
+        Eq: <span class="highlight" id="islm-eq">Y*=50, r*=5%</span>
+      </div>
+    </div>
+    <div class="controls-panel">
+      <div>
+        <div class="ctrl-label">Fiscal Policy (G shift) <span id="g-val" class="ctrl-val">0</span></div>
+        <input type="range" id="g-slider" min="-30" max="30" value="0" oninput="updateISLM()">
+      </div>
+      <div>
+        <div class="ctrl-label">Monetary Policy (M shift) <span id="m-val" class="ctrl-val">0</span></div>
+        <input type="range" id="m-slider" min="-30" max="30" value="0" oninput="updateISLM()">
+      </div>
+      <div>
+        <div class="ctrl-label">IS Slope (investment sensitivity)</div>
+        <select class="select-ctrl" id="is-slope" onchange="updateISLM()">
+          <option value="normal">Normal</option>
+          <option value="steep">Steep (classical)</option>
+          <option value="flat">Flat (Keynesian)</option>
+        </select>
+      </div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#4fc3f7"></div>IS Curve (original)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4fc3f780"></div>IS Shifted (fiscal policy)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#43e97b"></div>LM Curve (original)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#43e97b80"></div>LM Shifted (monetary policy)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ffd740"></div>Equilibrium Point</div>
+      </div>
+    </div>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <h4>📌 Policy Effects</h4>
+      <ul>
+        <li>↑G → IS shifts right → ↑Y, ↑r (crowding out)</li>
+        <li>↑M → LM shifts right → ↑Y, ↓r</li>
+        <li>Liquidity trap: LM flat, monetary policy useless</li>
+        <li>Classical range: LM vertical</li>
+        <li>Crowding out: fiscal expansion raises r, reduces I</li>
+        <li>Multiplier effect seen in IS shift</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>⚠️ Limitations</h4>
+      <ul>
+        <li>Assumes closed economy (no trade)</li>
+        <li>Static model – no price level changes</li>
+        <li>Doesn't include supply side</li>
+        <li>Extended by Mundell-Fleming for open economy</li>
+        <li>Not applicable at zero lower bound well</li>
+        <li>Ignores expectations (rational or adaptive)</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>🌍 Real World Examples</h4>
+      <ul>
+        <li>2008 crisis: fiscal stimulus → IS right shift</li>
+        <li>COVID RBI rate cuts → LM right shift</li>
+        <li>US QE 2010-2014: massive LM expansion</li>
+        <li>Japan liquidity trap (1990s)</li>
+        <li>India FRBM Act limits G shift (IS)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== LORENZ ==================== -->
+<div id="lorenz" class="graph-section">
+  <div class="section-title">Lorenz Curve & Gini Coefficient</div>
+  <div class="section-desc">Lorenz curve shows cumulative income distribution. The farther it bows from the 45° line of perfect equality, the higher the Gini coefficient and income inequality.</div>
+  <div class="main-grid">
+    <div class="chart-card">
+      <div class="chart-title">Lorenz Curve – Income Distribution</div>
+      <div class="chart-wrap"><canvas id="lorenzChart"></canvas></div>
+      <div class="formula-box">
+        Gini = <span class="highlight">A / (A + B)</span> &nbsp;|&nbsp;
+        Current Gini: <span class="highlight" id="gini-val">0.40</span> &nbsp;|&nbsp;
+        <span id="gini-class">Moderate Inequality</span>
+      </div>
+    </div>
+    <div class="controls-panel">
+      <div>
+        <div class="ctrl-label">Inequality Level <span id="ineq-val" class="ctrl-val">Medium</span></div>
+        <input type="range" id="ineq-slider" min="1" max="10" value="5" step="1" oninput="updateLorenz()">
+      </div>
+      <div>
+        <div class="ctrl-label">Country Preset</div>
+        <select class="select-ctrl" id="lorenz-country" onchange="setLorenzCountry()">
+          <option value="custom">Custom</option>
+          <option value="nordic">Nordic Countries (~0.27)</option>
+          <option value="india">India (~0.35)</option>
+          <option value="usa">USA (~0.41)</option>
+          <option value="brazil">Brazil (~0.53)</option>
+          <option value="safrica">South Africa (~0.63)</option>
+        </select>
+      </div>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#4fc3f7"></div>Line of Perfect Equality (45°)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#ff6584"></div>Lorenz Curve (actual)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:rgba(108,99,255,0.25)"></div>Area A (inequality gap)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:rgba(67,233,123,0.1)"></div>Area B (under Lorenz)</div>
+      </div>
+    </div>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <h4>📌 Gini Interpretation</h4>
+      <ul>
+        <li>Gini = 0: Perfect equality (all earn same)</li>
+        <li>Gini = 1: Perfect inequality (one person all)</li>
+        <li>0–0.29: Low inequality</li>
+        <li>0.30–0.39: Moderate inequality</li>
+        <li>0.40+: High inequality</li>
+        <li>Used in HDI and poverty analysis</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>⚠️ Limitations</h4>
+      <ul>
+        <li>Same Gini can have different Lorenz curves</li>
+        <li>Doesn't show absolute income levels</li>
+        <li>Ignores non-monetary welfare</li>
+        <li>Doesn't capture inter-generational mobility</li>
+        <li>Data collection issues in developing nations</li>
+        <li>Not sensitive to top 1% concentration</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h4>🌍 Real World Examples</h4>
+      <ul>
+        <li>India Gini ~0.35 (2023 estimates)</li>
+        <li>Scandinavian countries ~0.27 (most equal)</li>
+        <li>South Africa ~0.63 (most unequal)</li>
+        <li>Brazil improved from 0.59 to 0.53 (Bolsa)</li>
+        <li>China Gini rose from 0.30→0.47 with growth</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div><!-- end content -->
+
+<script>
+// ============================================================
+// UTILITIES
+// ============================================================
+const COLORS = {
+  blue: '#4fc3f7', green: '#43e97b', red: '#ff6584',
+  yellow: '#ffd740', purple: '#ce93d8', orange: '#ff9800',
+  accent: '#6c63ff', white: 'rgba(232,234,246,0.9)',
+  blueA: 'rgba(79,195,247,0.15)', greenA: 'rgba(67,233,123,0.15)',
+  redA: 'rgba(255,101,132,0.15)', purpleA: 'rgba(108,99,255,0.15)',
+};
+const chartDefaults = {
+  animation: { duration: 300, easing: 'easeInOutQuad' },
+  responsive: true, maintainAspectRatio: false,
+  plugins: { legend: { display: false }, tooltip: { backgroundColor: '#1a1d2e', borderColor: '#2e3155', borderWidth: 1 }},
+  scales: {
+    x: { grid: { color: 'rgba(255,255,255,0.06)' }, ticks: { color: '#9095b8' }, title: { color: '#9095b8', display: true }},
+    y: { grid: { color: 'rgba(255,255,255,0.06)' }, ticks: { color: '#9095b8' }, title: { color: '#9095b8', display: true }},
+  }
+};
+function mkCfg(xLabel, yLabel) {
+  const c = JSON.parse(JSON.stringify(chartDefaults));
+  c.scales.x.title.text = xLabel;
+  c.scales.y.title.text = yLabel;
+  return c;
+}
+
+// ============================================================
+// NAV
+// ============================================================
+function showSection(id) {
+  document.querySelectorAll('.graph-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// ============================================================
+// 1. SUPPLY & DEMAND
+// ============================================================
+let sdChart;
+function initSD() {
+  const ctx = document.getElementById('sdChart').getContext('2d');
+  const prices = Array.from({length:11},(_,i)=>i*10);
+  sdChart = new Chart(ctx, {
+    type:'scatter',
+    data:{ datasets:[] },
+    options:{ ...mkCfg('Quantity','Price (₹)'), animation:{duration:250} }
+  });
+  updateSD();
+}
+
+function updateSD() {
+  const dShift = +document.getElementById('d-shift').value;
+  const sShift = +document.getElementById('s-shift').value;
+  const dSlope = +document.getElementById('d-slope').value / 10;
+  const sSlope = +document.getElementById('s-slope').value / 10;
+  const policy = document.getElementById('sd-policy').value;
+  const pc = +document.getElementById('price-control').value;
+
+  document.getElementById('d-shift-val').textContent = dShift > 0 ? '+'+dShift : dShift;
+  document.getElementById('s-shift-val').textContent = sShift > 0 ? '+'+sShift : sShift;
+  document.getElementById('d-slope-val').textContent = dSlope.toFixed(1)+'×';
+  document.getElementById('s-slope-val').textContent = sSlope.toFixed(1)+'×';
+  document.getElementById('pc-val').textContent = pc;
+
+  // Qd = 100 - slope*P + shift, Qs = slope*P + shift
+  const prices = Array.from({length:101},(_,i)=>i);
+  const demandOrig = prices.map(p => ({x: Math.max(0, 100 - dSlope*p), y: p}));
+  const supplyOrig = prices.map(p => ({x: Math.max(0, sSlope*p), y: p}));
+  const demandShift = prices.map(p => ({x: Math.max(0, 100 - dSlope*p + dShift), y: p}));
+  const supplyShift = prices.map(p => ({x: Math.max(0, sSlope*p + sShift), y: p}));
+
+  // Equilibrium of shifted curves
+  // 100 - dSlope*P + dShift = sSlope*P + sShift => P = (100+dShift-sShift)/(dSlope+sSlope)
+  const Peq = (100 + dShift - sShift) / (dSlope + sSlope);
+  const Qeq = Math.max(0, sSlope * Peq + sShift);
+  document.getElementById('sd-eq-text').textContent = `P* = ${Peq.toFixed(1)}, Q* = ${Qeq.toFixed(1)}`;
+
+  const datasets = [
+    { label:'Demand', data: demandOrig, borderColor: COLORS.blue, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2.5 },
+    { label:'Demand Shifted', data: demandShift, borderColor: COLORS.blue, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2, borderDash:[6,4] },
+    { label:'Supply', data: supplyOrig, borderColor: COLORS.green, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2.5 },
+    { label:'Supply Shifted', data: supplyShift, borderColor: COLORS.green, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2, borderDash:[6,4] },
+    { label:'Equilibrium', data:[{x:Qeq,y:Peq}], borderColor:COLORS.yellow, backgroundColor:COLORS.yellow, pointRadius:10, pointStyle:'star', showLine:false },
+  ];
+
+  if (policy !== 'none') {
+    const lineColor = policy === 'floor' ? COLORS.orange : COLORS.purple;
+    datasets.push({
+      label: policy==='floor'?'Price Floor':'Price Ceiling',
+      data: [{x:0,y:pc},{x:100,y:pc}],
+      borderColor: lineColor, backgroundColor:'transparent',
+      showLine:true, pointRadius:0, borderWidth:2, borderDash:[10,5]
+    });
+  }
+
+  sdChart.data.datasets = datasets;
+  sdChart.update();
+}
+
+// ============================================================
+// 2. PED
+// ============================================================
+let pedChart, showRevenue = true;
+function initPED() {
+  const ctx = document.getElementById('pedChart').getContext('2d');
+  pedChart = new Chart(ctx, {
+    type:'scatter',
+    data:{datasets:[]},
+    options:{...mkCfg('Quantity','Price (₹)'), animation:{duration:250}}
+  });
+  updatePED();
+}
+function toggleRevenue() {
+  showRevenue = !showRevenue;
+  const btn = document.getElementById('rev-toggle');
+  btn.className = showRevenue ? 'toggle-btn on' : 'toggle-btn';
+  btn.textContent = showRevenue ? '✓ Revenue Box ON' : '✗ Revenue Box OFF';
+  updatePED();
+}
+function updatePED() {
+  const P = +document.getElementById('ped-price').value;
+  const type = document.getElementById('ped-type').value;
+
+  let slopes = {elastic:0.5, inelastic:2, unit:1, perfectly_inelastic:999, perfectly_elastic:0.01};
+  let slope = slopes[type];
+
+  const prices = Array.from({length:91},(_,i)=>i+5);
+
+  // D = 100 - slope*P
+  const elasticD = prices.map(p => ({x:Math.max(0,100-0.5*p), y:p}));
+  const inelasticD = prices.map(p => ({x:Math.max(0,100-2*p), y:p}));
+  const unitD = prices.map(p => ({x:Math.max(0,100-p), y:p}));
+
+  const Q = Math.max(0, 100 - slope*P);
+  const TR = (P*Q).toFixed(0);
+  document.getElementById('ped-tr').textContent = '₹'+TR;
+  document.getElementById('ped-price').value = P;
+
+  let pedNote = '';
+  if (type==='elastic') pedNote = `Elastic: ↑Price → ↓TR. TR = ₹${TR}`;
+  else if (type==='inelastic') pedNote = `Inelastic: ↑Price → ↑TR. TR = ₹${TR}`;
+  else if (type==='unit') pedNote = `Unit Elastic: ↑Price → TR unchanged (~₹${TR})`;
+  else if (type==='perfectly_inelastic') pedNote = `Perfectly Inelastic: Q fixed regardless of Price`;
+  else pedNote = `Perfectly Elastic: Tiny price change → infinite Q change`;
+  document.getElementById('ped-note').textContent = pedNote;
+
+  const datasets = [
+    {label:'Elastic', data:elasticD, borderColor:COLORS.red, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2.5},
+    {label:'Inelastic', data:inelasticD, borderColor:COLORS.blue, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2.5},
+    {label:'Unit', data:unitD, borderColor:COLORS.green, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2},
+    {label:'PriceLine', data:[{x:0,y:P},{x:100,y:P}], borderColor:COLORS.yellow, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:1.5, borderDash:[5,3]},
+  ];
+
+  if (showRevenue && type !== 'perfectly_elastic') {
+    datasets.push({
+      label:'Revenue',
+      data:[{x:0,y:P},{x:Q,y:P},{x:Q,y:0},{x:0,y:0},{x:0,y:P}],
+      borderColor:'rgba(108,99,255,0.5)', backgroundColor:'rgba(108,99,255,0.1)',
+      showLine:true, pointRadius:0, fill:true, borderWidth:1
+    });
+    datasets.push({label:'Qty Point', data:[{x:Q,y:P}], borderColor:COLORS.yellow, backgroundColor:COLORS.yellow, pointRadius:8, showLine:false});
+  }
+
+  pedChart.data.datasets = datasets;
+  pedChart.update();
+}
+
+// ============================================================
+// 3. PRODUCTION
+// ============================================================
+let prodChart, showStages = true;
+function initProd() {
+  const ctx = document.getElementById('prodChart').getContext('2d');
+  prodChart = new Chart(ctx, {
+    type:'line',
+    data:{labels:[], datasets:[]},
+    options:{...mkCfg('Labour (L)','Output'), animation:{duration:250}}
+  });
+  updateProd();
+}
+function toggleStages() {
+  showStages = !showStages;
+  const btn = document.getElementById('stage-toggle');
+  btn.className = showStages ? 'toggle-btn on' : 'toggle-btn';
+  btn.textContent = showStages ? '✓ Stages ON' : '✗ Stages OFF';
+  updateProd();
+}
+function updateProd() {
+  const L = +document.getElementById('prod-L').value;
+  const tech = +document.getElementById('prod-tech').value / 10;
+  document.getElementById('prod-L-val').textContent = L;
+  document.getElementById('prod-tech-val').textContent = tech.toFixed(1)+'×';
+
+  const ls = [0,1,2,3,4,5,6,7,8,9,10];
+  // TP: increases then decreases
+  const tpRaw = [0,10,22,36,48,55,58,55,46,30,8];
+  const tp = tpRaw.map(v => +(v*tech).toFixed(1));
+  const ap = ls.map(l => l===0 ? 0 : +(tp[l]/l).toFixed(1));
+  const mp = ls.map((l,i) => i===0 ? tp[0] : +(tp[i]-tp[i-1]).toFixed(1));
+
+  // Stage
+  let stage = '';
+  if (L <= 3) stage = 'Stage I – Increasing Returns (MP > AP)';
+  else if (L <= 7) stage = 'Stage II – Diminishing Returns (MP falling, positive)';
+  else stage = 'Stage III – Negative Returns (MP < 0)';
+  document.getElementById('prod-stage').textContent = stage;
+
+  const datasets = [
+    {label:'TP', data: tp, borderColor: COLORS.green, backgroundColor:'transparent', tension:0.4, borderWidth:2.5, pointRadius:3, pointBackgroundColor:COLORS.green},
+    {label:'AP', data: ap, borderColor: COLORS.blue, backgroundColor:'transparent', tension:0.4, borderWidth:2.5, pointRadius:3, pointBackgroundColor:COLORS.blue},
+    {label:'MP', data: mp, borderColor: COLORS.red, backgroundColor:'transparent', tension:0.4, borderWidth:2.5, pointRadius:3, pointBackgroundColor:COLORS.red},
+  ];
+
+  // Current labour point
+  datasets.push({label:'L Point TP', data: ls.map(l => l===L ? tp[L] : null), borderColor:COLORS.yellow, backgroundColor:COLORS.yellow, pointRadius:ls.map(l=>l===L?10:0), showLine:false});
+
+  if (showStages) {
+    // Vertical annotation lines at L=3 and L=7
+    datasets.push({label:'S1 end', data: ls.map(l => l===3 ? Math.max(...tp) : null), borderColor:'rgba(255,152,0,0.5)', pointRadius:ls.map(l=>l===3?5:0), showLine:false});
+    datasets.push({label:'S2 end', data: ls.map(l => l===7 ? Math.max(...tp) : null), borderColor:'rgba(255,82,82,0.5)', pointRadius:ls.map(l=>l===7?5:0), showLine:false});
+  }
+
+  prodChart.data.labels = ls;
+  prodChart.data.datasets = datasets;
+  prodChart.update();
+}
+
+// ============================================================
+// 4. COST CURVES
+// ============================================================
+let costChart;
+function initCost() {
+  const ctx = document.getElementById('costChart').getContext('2d');
+  costChart = new Chart(ctx, {
+    type:'line', data:{labels:[], datasets:[]},
+    options:{...mkCfg('Output (Q)','Cost (₹)'), animation:{duration:250}}
+  });
+  updateCost();
+}
+function updateCost() {
+  const FC = +document.getElementById('fc-slider').value;
+  const vcF = +document.getElementById('vc-slider').value / 10;
+  const Q = +document.getElementById('cost-q-slider').value;
+  const mode = document.getElementById('cost-mode').value;
+  document.getElementById('fc-val').textContent = '₹'+FC;
+  document.getElementById('vc-val').textContent = vcF.toFixed(1)+'×';
+  document.getElementById('cost-q-val').textContent = 'Q='+Q;
+
+  const qs = [1,2,3,4,5,6,7,8,9,10];
+  // VC has U-shape via cubic-ish: vc = vcF*(q^2 - 8q + 20)*q
+  const vcArr = qs.map(q => +(vcF*(q*q - 8*q + 22)*q).toFixed(1));
+  const tcArr = vcArr.map(v => +(v + FC).toFixed(1));
+  const acArr = qs.map((q,i) => +(tcArr[i]/q).toFixed(1));
+  const avcArr = qs.map((q,i) => +(vcArr[i]/q).toFixed(1));
+  const afcArr = qs.map(q => +(FC/q).toFixed(1));
+  const mcArr = qs.map((q,i) => i===0 ? vcArr[0] : +(vcArr[i]-vcArr[i-1]).toFixed(1));
+
+  // Min AC
+  const minAC = Math.min(...acArr);
+  const minQ = qs[acArr.indexOf(minAC)];
+  document.getElementById('cost-q').textContent = minQ;
+
+  let datasets;
+  if (mode==='per_unit') {
+    datasets = [
+      {label:'MC', data:mcArr, borderColor:COLORS.red, backgroundColor:'transparent', tension:0.4, borderWidth:2.5},
+      {label:'AC', data:acArr, borderColor:COLORS.blue, backgroundColor:'transparent', tension:0.4, borderWidth:2.5},
+      {label:'AVC', data:avcArr, borderColor:COLORS.yellow, backgroundColor:'transparent', tension:0.4, borderWidth:2.5},
+      {label:'AFC', data:afcArr, borderColor:COLORS.purple, backgroundColor:'transparent', tension:0.4, borderWidth:2},
+      {label:'Q point', data:qs.map((q,i)=>q===Q?acArr[i]:null), borderColor:COLORS.accent, backgroundColor:COLORS.accent, pointRadius:qs.map(q=>q===Q?10:0), showLine:false},
+    ];
+  } else {
+    datasets = [
+      {label:'TC', data:tcArr, borderColor:COLORS.green, backgroundColor:COLORS.greenA, tension:0.4, fill:true, borderWidth:2.5},
+      {label:'VC', data:vcArr, borderColor:COLORS.yellow, backgroundColor:'transparent', tension:0.4, borderWidth:2.5},
+      {label:'FC', data:qs.map(()=>FC), borderColor:COLORS.orange, backgroundColor:'transparent', borderWidth:2, borderDash:[6,4]},
+    ];
+  }
+
+  costChart.data.labels = qs;
+  costChart.data.datasets = datasets;
+  costChart.update();
+}
+
+// ============================================================
+// 5. MARKET STRUCTURES
+// ============================================================
+let marketChart;
+function initMarket() {
+  const ctx = document.getElementById('marketChart').getContext('2d');
+  marketChart = new Chart(ctx, {
+    type:'line', data:{labels:[], datasets:[]},
+    options:{...mkCfg('Output (Q)','Price / Cost (₹)'), animation:{duration:250}}
+  });
+  updateMarket();
+}
+function updateMarket() {
+  const type = document.getElementById('mkt-type').value;
+  const Q = +document.getElementById('mkt-q').value;
+  const P0 = +document.getElementById('mkt-p').value;
+  document.getElementById('mkt-q-val').textContent = 'Q='+Q;
+  document.getElementById('mkt-p-val').textContent = '₹'+P0;
+
+  const qs = [1,2,3,4,5,6,7,8,9,10];
+  const mcArr = qs.map(q => 10 + 5*q);
+  const acArr = qs.map(q => +(100/q + 10 + 2.5*q).toFixed(1));
+
+  let arArr, mrArr;
+  if (type==='perfect') {
+    arArr = qs.map(() => P0);
+    mrArr = qs.map(() => P0);
+  } else if (type==='monopoly') {
+    arArr = qs.map(q => Math.max(0, 110 - 8*q));
+    mrArr = qs.map(q => Math.max(0, 110 - 16*q));
+  } else {
+    arArr = qs.map(q => Math.max(0, 100 - 5*q));
+    mrArr = qs.map(q => Math.max(0, 100 - 10*q));
+  }
+
+  const revenue = arArr[Q-1]*Q;
+  const cost = acArr[Q-1]*Q;
+  const profit = (revenue - cost).toFixed(0);
+  document.getElementById('mkt-profit').textContent = (profit>0?'₹'+profit:'₹'+profit);
+  
+  const profitSign = profit > 0 ? '✓ Profit' : profit < 0 ? '✗ Loss' : '= Break Even';
+  const mc = mcArr[Q-1]; const mr = mrArr[Q-1];
+  document.getElementById('mkt-note').textContent = `At Q=${Q}: MR=₹${mr}, MC=₹${mc}. ${mr>mc?'MR>MC: Increase output':mr<mc?'MC>MR: Reduce output':'MR≈MC: Near optimal!'} | ${profitSign}: ₹${profit}`;
+
+  const datasets = [
+    {label:'AR/Demand', data:arArr, borderColor:COLORS.blue, backgroundColor:'transparent', tension:0.4, borderWidth:2.5},
+    {label:'MR', data:mrArr, borderColor:COLORS.red, backgroundColor:'transparent', tension:0.4, borderWidth:2.5},
+    {label:'MC', data:mcArr, borderColor:COLORS.green, backgroundColor:'transparent', tension:0.4, borderWidth:2.5},
+    {label:'AC', data:acArr, borderColor:COLORS.yellow, backgroundColor:'transparent', tension:0.4, borderWidth:2, borderDash:[5,3]},
+    {label:'Q Point MR', data:qs.map((q,i)=>q===Q?mrArr[i]:null), borderColor:COLORS.accent, backgroundColor:COLORS.accent, pointRadius:qs.map(q=>q===Q?10:0), showLine:false},
+    {label:'Q Point MC', data:qs.map((q,i)=>q===Q?mcArr[i]:null), borderColor:COLORS.accent, backgroundColor:COLORS.accent, pointRadius:qs.map(q=>q===Q?10:0), showLine:false},
+  ];
+
+  marketChart.data.labels = qs;
+  marketChart.data.datasets = datasets;
+  marketChart.update();
+}
+
+// ============================================================
+// 6. INDIFFERENCE CURVES
+// ============================================================
+let indiffChart;
+function initIndiff() {
+  const ctx = document.getElementById('indiffChart').getContext('2d');
+  indiffChart = new Chart(ctx, {
+    type:'scatter', data:{datasets:[]},
+    options:{...mkCfg('Good X','Good Y'), animation:{duration:250}}
+  });
+  updateIndiff();
+}
+function updateIndiff() {
+  const M = +document.getElementById('inc-slider').value;
+  const Px = +document.getElementById('px-slider').value;
+  const Py = +document.getElementById('py-slider').value;
+  const alpha = +document.getElementById('alpha-slider').value / 10;
+  document.getElementById('inc-val').textContent = '₹'+M;
+  document.getElementById('px-val').textContent = '₹'+Px;
+  document.getElementById('py-val').textContent = '₹'+Py;
+  document.getElementById('alpha-val').textContent = alpha.toFixed(1);
+  document.getElementById('budget-eq').textContent = `${Px}X + ${Py}Y = ${M}`;
+
+  // U = X^alpha * Y^(1-alpha) - Cobb Douglas utility
+  const beta = 1 - alpha;
+  
+  // Generate IC: U = constant → Y = (U/X^alpha)^(1/beta)
+  const xs = Array.from({length:90},(_,i)=>(i+1)*0.15);
+  
+  const makeIC = (U) => xs.map(x => {
+    const y = Math.pow(U / Math.pow(x, alpha), 1/beta);
+    return (y>0 && y<30 && x<30) ? {x, y} : null;
+  }).filter(Boolean);
+
+  // Budget line: X from 0 to M/Px
+  const maxX = M/Px;
+  const budgetLine = [{x:0,y:M/Py},{x:maxX,y:0}];
+  
+  // Consumer equilibrium: X* = alpha*M/Px, Y* = beta*M/Py
+  const Xeq = alpha*M/Px;
+  const Yeq = beta*M/Py;
+  const Ueq = Math.pow(Xeq, alpha) * Math.pow(Yeq, beta);
+
+  const datasets = [
+    {label:'IC1', data:makeIC(Ueq*0.45), borderColor:COLORS.red, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2, tension:0.4},
+    {label:'IC2', data:makeIC(Ueq*0.72), borderColor:COLORS.yellow, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2, tension:0.4},
+    {label:'IC3 (optimal)', data:makeIC(Ueq), borderColor:COLORS.green, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2.5, tension:0.4},
+    {label:'IC4', data:makeIC(Ueq*1.3), borderColor:'rgba(206,147,216,0.5)', backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:1.5, borderDash:[4,3], tension:0.4},
+    {label:'Budget', data:budgetLine, borderColor:COLORS.blue, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2.5},
+    {label:'Equilibrium', data:[{x:Xeq,y:Yeq}], borderColor:COLORS.purple, backgroundColor:COLORS.purple, pointRadius:10, showLine:false},
+  ];
+
+  indiffChart.data.datasets = datasets;
+  indiffChart.update();
+}
+
+// ============================================================
+// 7. IS-LM
+// ============================================================
+let islmChart;
+function initISLM() {
+  const ctx = document.getElementById('islmChart').getContext('2d');
+  islmChart = new Chart(ctx, {
+    type:'scatter', data:{datasets:[]},
+    options:{...mkCfg('Output / Income (Y)','Interest Rate (r%)'), animation:{duration:250}}
+  });
+  updateISLM();
+}
+function updateISLM() {
+  const G = +document.getElementById('g-slider').value;
+  const Mshift = +document.getElementById('m-slider').value;
+  const isSlope = document.getElementById('is-slope').value;
+  document.getElementById('g-val').textContent = G>0?'+'+G:G;
+  document.getElementById('m-val').textContent = Mshift>0?'+'+Mshift:Mshift;
+
+  let isSlopeVal = isSlope==='steep' ? 0.15 : isSlope==='flat' ? 0.03 : 0.08;
+
+  // IS: r = 10 - isSlopeVal*Y  => Y = (10-r)/isSlopeVal
+  // LM: r = -5 + 0.12*Y => Y = (r+5)/0.12
+  const ys = Array.from({length:91},(_,i)=>i+10);
+  const isOrig = ys.map(y => ({x:y, y:Math.max(0, 10 - isSlopeVal*y)}));
+  const isShift = ys.map(y => ({x:y, y:Math.max(0, 10 - isSlopeVal*(y-G*1.5))}));
+  const lmOrig = ys.map(y => ({x:y, y:Math.max(0, -5 + 0.12*y)}));
+  const lmShift = ys.map(y => ({x:y, y:Math.max(0, -5 + 0.12*y - Mshift*0.08)}));
+
+  // Equilibrium of shifted curves: 10-isSlopeVal*(Y-G*1.5) = -5+0.12*Y - Mshift*0.08
+  // 15 + isSlopeVal*G*1.5 + Mshift*0.08 = (isSlopeVal+0.12)*Y
+  const Yeq = (15 + isSlopeVal*G*1.5 + Mshift*0.08) / (isSlopeVal + 0.12);
+  const req = Math.max(0, -5 + 0.12*Yeq - Mshift*0.08);
+  document.getElementById('islm-eq').textContent = `Y*=${Yeq.toFixed(1)}, r*=${req.toFixed(1)}%`;
+
+  const datasets = [
+    {label:'IS', data:isOrig, borderColor:COLORS.blue, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2.5},
+    {label:'IS Shifted', data:isShift, borderColor:COLORS.blue, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2, borderDash:[6,4]},
+    {label:'LM', data:lmOrig, borderColor:COLORS.green, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2.5},
+    {label:'LM Shifted', data:lmShift, borderColor:COLORS.green, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2, borderDash:[6,4]},
+    {label:'Eq', data:[{x:Yeq,y:req}], borderColor:COLORS.yellow, backgroundColor:COLORS.yellow, pointRadius:10, pointStyle:'star', showLine:false},
+  ];
+
+  islmChart.data.datasets = datasets;
+  islmChart.update();
+}
+
+// ============================================================
+// 8. LORENZ
+// ============================================================
+let lorenzChart;
+function initLorenz() {
+  const ctx = document.getElementById('lorenzChart').getContext('2d');
+  lorenzChart = new Chart(ctx, {
+    type:'scatter', data:{datasets:[]},
+    options:{...mkCfg('Cumulative Population %','Cumulative Income %'), animation:{duration:300},
+      scales:{
+        x:{...mkCfg().scales.x, min:0, max:100, title:{display:true, text:'Cumulative Population %', color:'#9095b8'}},
+        y:{...mkCfg().scales.y, min:0, max:100, title:{display:true, text:'Cumulative Income %', color:'#9095b8'}}
+      }
+    }
+  });
+  updateLorenz();
+}
+
+function getLorenzPoints(gini) {
+  // Approximate Lorenz curve with exponential
+  const pts = [];
+  for(let i=0;i<=100;i+=2) {
+    const pop = i/100;
+    const income = Math.pow(pop, 1 + gini*3) * 100;
+    pts.push({x:i, y:+income.toFixed(2)});
+  }
+  return pts;
+}
+
+function calcGini(ineq) {
+  return Math.min(0.08 + ineq*0.065, 0.72);
+}
+
+function setLorenzCountry() {
+  const presets = {
+    nordic: 0.27, india: 0.35, usa: 0.41, brazil: 0.53, safrica: 0.63, custom: null
+  };
+  const country = document.getElementById('lorenz-country').value;
+  if (country === 'custom') { updateLorenz(); return; }
+  const gini = presets[country];
+  // reverse-calc ineq slider
+  const ineq = Math.round((gini - 0.08) / 0.065);
+  document.getElementById('ineq-slider').value = Math.max(1,Math.min(10,ineq));
+  updateLorenz();
+}
+
+function updateLorenz() {
+  const ineq = +document.getElementById('ineq-slider').value;
+  const levels = ['','Very Low','Low','Below Avg','Moderate','Moderate','Above Avg','High','High','Very High','Extreme'];
+  document.getElementById('ineq-val').textContent = levels[ineq] || ineq;
+
+  const gini = calcGini(ineq);
+  document.getElementById('gini-val').textContent = gini.toFixed(2);
+  const cls = gini < 0.3 ? 'Low Inequality 🟢' : gini < 0.4 ? 'Moderate Inequality 🟡' : gini < 0.5 ? 'High Inequality 🟠' : 'Very High Inequality 🔴';
+  document.getElementById('gini-class').textContent = cls;
+
+  const equality = Array.from({length:51},(_,i)=>({x:i*2,y:i*2}));
+  const lorenz = getLorenzPoints(gini);
+
+  // Fill area between equality and lorenz
+  const fillArea = lorenz.map(p => ({x:p.x, y:p.x})).concat([...lorenz].reverse());
+
+  const datasets = [
+    {label:'Perfect Equality', data:equality, borderColor:COLORS.blue, backgroundColor:'transparent', showLine:true, pointRadius:0, borderWidth:2, borderDash:[6,3]},
+    {label:'Lorenz', data:lorenz, borderColor:COLORS.red, backgroundColor:'rgba(255,101,132,0.1)', showLine:true, pointRadius:0, borderWidth:2.5, fill:'+1'},
+    {label:'FillRef', data:equality, borderColor:'transparent', backgroundColor:'rgba(108,99,255,0.12)', showLine:true, pointRadius:0, fill:false},
+  ];
+
+  lorenzChart.data.datasets = datasets;
+  lorenzChart.update();
+}
+
+// ============================================================
+// INIT ALL CHARTS
+// ============================================================
+window.addEventListener('load', () => {
+  initSD();
+  initPED();
+  initProd();
+  initCost();
+  initMarket();
+  initIndiff();
+  initISLM();
+  initLorenz();
+});
+</script>
+</body>
+</html>
