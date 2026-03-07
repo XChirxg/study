@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>JokeCraft — The Comedian's Journey</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #faf8f2;
+  --surface: #fff;
+  --dark: #1a1410;
+  --card: #fffef9;
+  --border: #e8e0cc;
+  --red: #e8341c;
+  --gold: #f5a623;
+  --green: #2d9e6b;
+  --blue: #2563c7;
+  --purple: #7c3aed;
+  --muted: #8a7e6a;
+  --ink: #2c2416;
+  --cream: #fdf8ee;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--ink);font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden;}
+
+/* grain overlay */
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.5;}
+
+/* SCREENS */
+.screen{display:none;min-height:100vh;}
+.screen.active{display:block;}
+
+/* ═══ LANDING ═══ */
+#screen-home{background:var(--dark);color:#fff;position:relative;overflow:hidden;}
+#screen-home::before{content:'HA HA HA LOL 😂 LMAO 🤣 hehe ROFL 😆 teehee HA';position:absolute;top:0;left:0;right:0;bottom:0;font-family:'Space Mono',monospace;font-size:1.4rem;color:rgba(245,166,35,0.06);line-height:2.5;word-break:break-all;padding:20px;pointer-events:none;letter-spacing:3px;}
+
+.home-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:60px 32px;}
+.home-badge{display:inline-block;background:var(--red);color:#fff;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:3px;padding:6px 14px;border-radius:2px;margin-bottom:28px;text-transform:uppercase;}
+.home-title{font-family:'Playfair Display',serif;font-size:clamp(4rem,12vw,9rem);font-weight:900;line-height:0.9;margin-bottom:24px;}
+.home-title .line1{display:block;color:#fff;}
+.home-title .line2{display:block;color:var(--gold);font-style:italic;}
+.home-sub{font-size:1.15rem;color:rgba(255,255,255,0.55);line-height:1.8;max-width:520px;margin-bottom:48px;font-weight:400;}
+.home-stats{display:flex;gap:40px;margin-bottom:48px;flex-wrap:wrap;}
+.stat-num{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--gold);line-height:1;}
+.stat-label{font-family:'Space Mono',monospace;font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;margin-top:4px;}
+.btn-start{display:inline-flex;align-items:center;gap:12px;background:var(--gold);color:var(--dark);font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;font-style:italic;padding:18px 36px;border-radius:4px;border:none;cursor:pointer;transition:all 0.2s;text-decoration:none;}
+.btn-start:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(245,166,35,0.4);}
+.home-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);font-family:'Space Mono',monospace;font-size:0.65rem;color:rgba(255,255,255,0.3);letter-spacing:3px;text-align:center;text-transform:uppercase;}
+
+/* ═══ MAP / JOURNEY ═══ */
+#screen-map{background:var(--bg);}
+.map-header{background:var(--dark);padding:24px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;position:sticky;top:0;z-index:100;}
+.logo-mark{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:var(--gold);font-style:italic;}
+.logo-mark span{color:rgba(255,255,255,0.5);font-style:normal;font-size:0.8rem;font-family:'Space Mono',monospace;display:block;margin-top:-4px;letter-spacing:2px;}
+.progress-track{flex:1;max-width:340px;margin:0 20px;}
+.progress-label{font-family:'Space Mono',monospace;font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:2px;margin-bottom:6px;}
+.progress-bar-bg{height:6px;background:rgba(255,255,255,0.1);border-radius:100px;}
+.progress-bar-fill{height:100%;background:var(--gold);border-radius:100px;transition:width 0.6s ease;}
+.nav-btn{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-family:'Space Mono',monospace;font-size:0.75rem;padding:8px 16px;border-radius:4px;cursor:pointer;transition:all 0.2s;}
+.nav-btn:hover{background:rgba(255,255,255,0.15);color:#fff;}
+
+.map-body{max-width:1100px;margin:0 auto;padding:48px 32px;}
+.world-title{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;margin-bottom:6px;}
+.world-sub{font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:40px;}
+
+.category-section{margin-bottom:64px;}
+.cat-header{display:flex;align-items:center;gap:16px;margin-bottom:24px;}
+.cat-icon{width:48px;height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;}
+.cat-name{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;}
+.cat-count{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--muted);letter-spacing:2px;margin-top:2px;}
+
+.lessons-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+.lesson-card{background:var(--card);border:2px solid var(--border);border-radius:12px;padding:22px;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden;}
+.lesson-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--cat-color,var(--gold));}
+.lesson-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.08);border-color:var(--cat-color,var(--gold));}
+.lesson-card.locked{opacity:0.45;cursor:not-allowed;}
+.lesson-card.locked:hover{transform:none;box-shadow:none;}
+.lesson-card.completed{background:#f0fdf7;border-color:var(--green);}
+.lesson-card.completed::before{background:var(--green);}
+.lesson-num{font-family:'Space Mono',monospace;font-size:0.65rem;color:var(--muted);letter-spacing:2px;margin-bottom:8px;}
+.lesson-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;line-height:1.3;margin-bottom:8px;}
+.lesson-topic{font-size:0.82rem;color:var(--muted);line-height:1.5;margin-bottom:14px;}
+.lesson-footer{display:flex;align-items:center;justify-content:space-between;}
+.lesson-type{font-family:'Space Mono',monospace;font-size:0.65rem;padding:3px 8px;border-radius:3px;background:rgba(0,0,0,0.06);color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+.lesson-status{font-size:1rem;}
+.lock-icon{position:absolute;top:14px;right:14px;font-size:1rem;opacity:0.4;}
+
+/* ═══ LESSON SCREEN ═══ */
+#screen-lesson{background:var(--bg);}
+.lesson-header{background:var(--dark);padding:20px 32px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.lesson-back{background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-family:'Space Mono',monospace;font-size:0.75rem;padding:8px 16px;border-radius:4px;cursor:pointer;transition:all 0.2s;}
+.lesson-back:hover{color:#fff;border-color:rgba(255,255,255,0.5);}
+.lesson-header-info{flex:1;}
+.lesson-header-num{font-family:'Space Mono',monospace;font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:2px;}
+.lesson-header-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#fff;font-style:italic;}
+
+.lesson-body{max-width:860px;margin:0 auto;padding:48px 32px;}
+
+.lesson-intro-card{background:var(--card);border:2px solid var(--border);border-radius:16px;padding:36px;margin-bottom:32px;}
+.lesson-intro-card h2{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;margin-bottom:16px;}
+.lesson-topic-tag{display:inline-block;background:var(--gold);color:var(--dark);font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:2px;padding:4px 10px;border-radius:3px;margin-bottom:16px;text-transform:uppercase;}
+.lesson-explanation{color:#4a3f2f;line-height:1.9;font-size:1rem;}
+.lesson-explanation strong{color:var(--ink);}
+
+.technique-box{background:var(--cream);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:20px 24px;margin:20px 0;}
+.technique-title{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;}
+.technique-content{font-size:0.95rem;color:var(--ink);line-height:1.8;}
+
+.example-card{background:#fff8e7;border:1px solid #f0d88a;border-radius:12px;padding:20px 24px;margin:16px 0;}
+.example-label{font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:2px;color:#b08a20;text-transform:uppercase;margin-bottom:8px;}
+.example-joke{font-size:1.05rem;color:var(--ink);line-height:1.8;font-style:italic;}
+
+/* PRACTICE SECTION */
+.practice-section{background:var(--dark);border-radius:16px;padding:36px;margin-top:32px;color:#fff;}
+.practice-title{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--gold);font-style:italic;margin-bottom:8px;}
+.practice-sub{font-family:'Space Mono',monospace;font-size:0.7rem;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:28px;}
+
+.practice-prompt-box{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:24px;margin-bottom:24px;}
+.pp-label{font-family:'Space Mono',monospace;font-size:0.65rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
+.pp-text{font-size:1.05rem;line-height:1.8;color:#fff;}
+
+.constraints-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;}
+.constraint-tag{background:rgba(245,166,35,0.12);color:var(--gold);border:1px solid rgba(245,166,35,0.25);border-radius:4px;padding:4px 12px;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:1px;}
+
+.write-area-label{font-family:'Space Mono',monospace;font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
+.write-area{width:100%;min-height:140px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:16px;color:#fff;font-family:'Nunito',sans-serif;font-size:1rem;line-height:1.8;resize:vertical;outline:none;transition:border-color 0.2s;}
+.write-area:focus{border-color:var(--gold);}
+.write-area::placeholder{color:rgba(255,255,255,0.2);}
+
+.action-row{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;align-items:center;}
+.btn-analyse{background:var(--gold);color:var(--dark);font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;font-weight:700;padding:12px 28px;border-radius:6px;border:none;cursor:pointer;transition:all 0.2s;}
+.btn-analyse:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,166,35,0.35);}
+.btn-secondary{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);font-family:'Space Mono',monospace;font-size:0.8rem;padding:12px 20px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);cursor:pointer;transition:all 0.2s;}
+.btn-secondary:hover{background:rgba(255,255,255,0.15);}
+
+/* AI WORKFLOW */
+.ai-workflow{margin-top:28px;}
+.workflow-step{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;margin-bottom:16px;}
+.ws-num{font-family:'Space Mono',monospace;font-size:0.65rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.ws-title{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;font-weight:700;margin-bottom:12px;}
+.prompt-display{background:#0d0b08;border-radius:8px;padding:16px;font-family:'Space Mono',monospace;font-size:0.75rem;color:rgba(255,255,255,0.6);line-height:1.8;max-height:300px;overflow-y:auto;white-space:pre-wrap;margin-bottom:12px;border:1px solid rgba(255,255,255,0.06);}
+.copy-row{display:flex;align-items:center;gap:12px;}
+.btn-copy{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-family:'Space Mono',monospace;font-size:0.75rem;padding:8px 16px;border-radius:6px;cursor:pointer;transition:all 0.2s;}
+.btn-copy:hover{background:rgba(255,255,255,0.15);}
+.copy-ok{font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--green);}
+.paste-area{width:100%;min-height:180px;background:#0d0b08;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:14px;color:#a0d8b3;font-family:'Space Mono',monospace;font-size:0.78rem;line-height:1.7;resize:vertical;outline:none;}
+.paste-area:focus{border-color:var(--gold);}
+.btn-load{background:var(--green);color:#fff;font-family:'Space Mono',monospace;font-size:0.8rem;padding:10px 20px;border-radius:6px;border:none;cursor:pointer;transition:all 0.2s;}
+.btn-load:hover{transform:translateY(-1px);}
+.load-status{font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--green);}
+
+/* FEEDBACK DISPLAY */
+.feedback-display{margin-top:28px;display:none;}
+.score-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:24px;}
+.score-card{background:rgba(255,255,255,0.05);border-radius:10px;padding:16px;}
+.score-name{font-family:'Space Mono',monospace;font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
+.score-val{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;line-height:1;}
+.score-val.hi{color:#47ffb8;}
+.score-val.mid{color:var(--gold);}
+.score-val.lo{color:#ff7070;}
+.score-note{font-size:0.78rem;color:rgba(255,255,255,0.35);margin-top:4px;line-height:1.4;}
+
+.fb-section{background:rgba(255,255,255,0.04);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:18px 20px;margin-bottom:14px;}
+.fb-section h4{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);font-style:italic;margin-bottom:8px;}
+.fb-section p{font-size:0.92rem;color:rgba(255,255,255,0.65);line-height:1.8;}
+
+.complete-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;}
+.btn-next{background:var(--gold);color:var(--dark);font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;font-weight:700;padding:14px 32px;border-radius:6px;border:none;cursor:pointer;transition:all 0.2s;}
+.btn-next:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,166,35,0.4);}
+.btn-redo{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);font-family:'Space Mono',monospace;font-size:0.8rem;padding:14px 24px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);cursor:pointer;}
+
+/* ═══ TOAST ═══ */
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--dark);color:#fff;font-family:'Space Mono',monospace;font-size:0.8rem;padding:12px 24px;border-radius:8px;border:1px solid rgba(245,166,35,0.4);z-index:10000;transition:transform 0.4s ease;pointer-events:none;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:600px){.home-inner{padding:40px 20px;}.lesson-body{padding:32px 20px;}.map-body{padding:32px 20px;}.score-row{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════ SCREEN: HOME ═══════════════════════ -->
+<div id="screen-home" class="screen active">
+  <div class="home-inner">
+    <div class="home-badge">🎭 The Comedian's Journey</div>
+    <h1 class="home-title">
+      <span class="line1">JOKE</span>
+      <span class="line2">Craft.</span>
+    </h1>
+    <p class="home-sub">A complete course for learning to write, tell, and perform jokes — from wordplay to dark comedy. Structured like a journey. Powered by your practice and AI feedback.</p>
+    <div class="home-stats">
+      <div><div class="stat-num">50</div><div class="stat-label">Topics</div></div>
+      <div><div class="stat-num">20</div><div class="stat-label">Categories</div></div>
+      <div><div class="stat-num">10</div><div class="stat-label">Techniques</div></div>
+      <div><div class="stat-num">80</div><div class="stat-label">Lessons</div></div>
+    </div>
+    <button class="btn-start" onclick="showScreen('screen-map')">Begin the Journey →</button>
+    <div style="height:60px"></div>
+    <div class="home-scroll">↓ SCROLL DOWN TO EXPLORE</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SCREEN: MAP ═══════════════════════ -->
+<div id="screen-map" class="screen">
+  <div class="map-header">
+    <div class="logo-mark">JokeCraft<span>THE JOURNEY</span></div>
+    <div class="progress-track">
+      <div class="progress-label" id="progress-label-text">0 / 80 LESSONS COMPLETE</div>
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="main-progress-fill" style="width:0%"></div></div>
+    </div>
+    <button class="nav-btn" onclick="showScreen('screen-home')">← Home</button>
+  </div>
+  <div class="map-body">
+    <div class="world-title">Your Comedy Map</div>
+    <div class="world-sub">Complete lessons in order. Each world unlocks the next.</div>
+    <div id="map-content"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ SCREEN: LESSON ═══════════════════════ -->
+<div id="screen-lesson" class="screen">
+  <div class="lesson-header">
+    <button class="lesson-back" onclick="goBack()">← Back to Map</button>
+    <div class="lesson-header-info">
+      <div class="lesson-header-num" id="lh-num">LESSON 1 · BEGINNER</div>
+      <div class="lesson-header-title" id="lh-title">Lesson Title</div>
+    </div>
+  </div>
+  <div class="lesson-body" id="lesson-body-content"></div>
+</div>
+
+<div class="toast" id="toast-el"></div>
+
+<script>
+// ═══════════════════════════════════ DATA ════════════════════════════════════
+
+const CATEGORIES = [
+  { id:'puns', name:'Puns & Wordplay', icon:'🔤', color:'#e8341c',
+    desc:'The art of the double meaning and sound-alike words' },
+  { id:'oneliners', name:'One-Liners', icon:'⚡', color:'#f5a623',
+    desc:'Single-sentence comedic punches that hit hard' },
+  { id:'storytelling', name:'Comic Storytelling', icon:'📖', color:'#7c3aed',
+    desc:'Weaving a narrative that builds to a funny payoff' },
+  { id:'observational', name:'Observational Comedy', icon:'👀', color:'#2563c7',
+    desc:'Finding the funny in everyday life and shared human experience' },
+  { id:'selfdep', name:'Self-Deprecating Humor', icon:'🪞', color:'#2d9e6b',
+    desc:'Turning your own flaws and failures into gold' },
+  { id:'dark', name:'Dark Humor', icon:'🌑', color:'#6b3aed',
+    desc:'Comedy that wades into uncomfortable and taboo territory' },
+  { id:'absurd', name:'Absurdist & Surreal', icon:'🌀', color:'#e8341c',
+    desc:'Logic thrown out the window — the unexpected rules here' },
+  { id:'improv', name:'Improvisation', icon:'🎭', color:'#f5a623',
+    desc:'Thinking on your feet and building comedy in the moment' },
+  { id:'roast', name:'Roast & Satire', icon:'🔥', color:'#e85c1c',
+    desc:'Playful (or not-so-playful) comedy directed at people or ideas' },
+  { id:'timing', name:'Timing & Delivery', icon:'⏱️', color:'#2563c7',
+    desc:'The how, not just the what — silence, pauses, rhythm' },
+  { id:'callback', name:'Callbacks & Structure', icon:'🔄', color:'#2d9e6b',
+    desc:'Circling back to earlier jokes and building comedic architecture' },
+  { id:'crowd', name:'Crowd Work', icon:'🎤', color:'#7c3aed',
+    desc:'Connecting with an audience and working the room' },
+  { id:'physical', name:'Physical Comedy', icon:'🤸', color:'#e8341c',
+    desc:'Body, face, movement — comedy beyond just words' },
+  { id:'character', name:'Character Voices', icon:'🎪', color:'#f5a623',
+    desc:'Creating distinct characters and speaking through them' },
+  { id:'topical', name:'Topical & News Comedy', icon:'📰', color:'#2563c7',
+    desc:"Making jokes about what's happening in the world right now" },
+  { id:'antihumor', name:'Anti-Humor', icon:'🚫', color:'#8a7e6a',
+    desc:'Deliberately subverting the expected punchline for deadpan effect' },
+  { id:'rule3', name:'Rule of Three', icon:'3️⃣', color:'#7c3aed',
+    desc:'The classic setup — two expected, one subverted — comedy magic' },
+  { id:'misdirect', name:'Misdirection & Subversion', icon:'↩️', color:'#e8341c',
+    desc:'Leading the audience one way then swerving to surprise them' },
+  { id:'anecdote', name:'Funny Anecdotes', icon:'😅', color:'#2d9e6b',
+    desc:'True (or "true") personal stories made hilarious in the telling' },
+  { id:'written', name:'Written Jokes & Craft', icon:'✍️', color:'#f5a623',
+    desc:'The written form — tweets, captions, roast lines, scripts' },
+];
+
+// 50 topics spread across categories
+const TOPICS = [
+  // Puns & Wordplay
+  {cat:'puns', topic:'Food & Cooking', technique:'Classic Pun', prompt:'Write 3 food puns that use double meanings (e.g. "I used to hate facial hair, but then it grew on me"). Focus on vegetables or kitchen items.', example:'"Why did the scarecrow win an award? Because he was outstanding in his field." — Try the same with kitchen tools.', constraints:['Must use a real double meaning','No groan-too-hard exceptions — lean into the groan','Each pun must be under 15 words']},
+  {cat:'puns', topic:'Animals & Pets', technique:'Sound-Alike Wordplay', prompt:'Create 3 animal-based puns using homophones or near-homophones. Make them suitable for a greeting card or Instagram caption.', example:'"What do you call a fish without eyes? A fsh!" — Go further with emotional setups.', constraints:['Must involve an actual animal','Use a question-answer format for at least one','Keep all puns G-rated']},
+  {cat:'puns', topic:'Workplace & Office Life', technique:'Technical Pun', prompt:'Write jokes using job-specific terminology with double meanings. Target any profession (doctor, programmer, chef, etc.).', example:'"I used to be a banker, but I lost interest." — Use jargon for comedy.', constraints:['The pun must hinge on a real technical term','Avoid overused ones like "doctor/patients"','Write one for an unusual job']},
+  {cat:'puns', topic:'Sports & Fitness', technique:'Compound Pun', prompt:'Create puns that layer two meanings simultaneously. Sports provide rich multi-meaning vocabulary.', example:'"I quit my job at the bowling alley. Ten pins have been too much." — Stack meanings.', constraints:['Must use sports terminology specifically','Try to make the second meaning surprising','At least one should be dark in tone']},
+  {cat:'puns', topic:'Technology & Social Media', technique:'Modern Portmanteau Joke', prompt:'Combine tech words with everyday words to create new humorous meanings. Think "Wi-fi" + real life problems.', example:'"My relationship with my WiFi is complicated — we keep losing our connection." — Extend this metaphor.', constraints:['Must reference a real tech product or platform','Should feel relatable to anyone under 40','No outdated references (no "dial-up" please)']},
+  // One-Liners
+  {cat:'oneliners', topic:'Marriage & Relationships', technique:'Classic One-Liner', prompt:'Write 5 one-liner jokes about dating, marriage, or relationships. Use a setup that implies one thing and a punchline that delivers another.', example:'"My wife told me I had to stop acting like a flamingo. I had to put my foot down." — Study this structure.', constraints:['Maximum 2 sentences each','Punchline must be in the final 3-5 words','No offensive stereotyping — keep it universal']},
+  {cat:'oneliners', topic:'Aging & Getting Older', technique:'Self-aware One-Liner', prompt:'Write jokes about aging that acknowledge the joke itself. Comics like Steven Wright and Mitch Hedberg mastered this.', example:'"I used to think I was indecisive. Now I\'m not so sure." — The subject is aware of itself.', constraints:['First person "I" structure preferred','Must subvert an aging cliché','Under 20 words each']},
+  {cat:'oneliners', topic:'Money & Being Broke', technique:'Deadpan One-Liner', prompt:'Write dry, emotionless one-liners about financial struggles. No exclamation points. Deliver with a straight face.', example:'"I have enough money to last me the rest of my life... unless I buy something." — Channel this energy.', constraints:['Zero emotional language in the setup','The humor comes from understatement','Should still feel relatable to most people']},
+  {cat:'oneliners', topic:'Parenthood & Kids', technique:'Reversal One-Liner', prompt:'Start with a statement that sounds like a complaint, then flip it into something unexpectedly positive — or vice versa.', example:'"Before I had kids I didn\'t know how it felt to be interrupted. I still don\'t know." — Try this reversal.', constraints:['The reversal must happen at the end','Setup should last 1 sentence only','Works best if you also have children (or pretend to)']},
+  {cat:'oneliners', topic:'Diets & Health Habits', technique:'Irony One-Liner', prompt:'Write one-liners where the speaker does the exact opposite of what they claim. The gap between words and reality is the joke.', example:'"I told my doctor I only exercise twice a year. She said that\'s not enough. I said that\'s two more than last year." — Extend this.', constraints:['The irony must be self-directed, not at others','Should feel confessional','Works even better if slightly exaggerated']},
+  // Comic Storytelling
+  {cat:'storytelling', topic:'Embarrassing Childhood Moments', technique:'The Slow Burn Story', prompt:'Tell a 5-8 sentence story from childhood (real or invented) that builds slowly to a humiliating but funny payoff. Use the rule: delay the punchline as long as possible.', example:'Think about a time something went totally wrong in public. Build the context until the reader feels the dread.', constraints:['Must have a clear beginning, tension, punchline','Use present tense for immediacy','Include at least one false expectation that gets subverted']},
+  {cat:'storytelling', topic:'First Day at a New Job', technique:'Escalation Story', prompt:'Write a story where something small goes wrong, then gets progressively worse in funny ways. Each beat should be bigger than the last.', example:'The classic "spilled coffee → late to meeting → introduced yourself wrong → got fired at lunch" escalation structure.', constraints:['Three escalation stages minimum','Each stage must logically follow from the last','The final beat must be completely unexpected but feel inevitable']},
+  {cat:'storytelling', topic:'Travel Disasters & Mishaps', technique:'The Callback Story', prompt:'Tell a travel story where you plant a detail early that seems irrelevant, then bring it back at the end to deliver the punchline.', example:'"I mentioned I was afraid of monkeys on page 1... you\'ll see why that matters." — Plant then pay off.', constraints:['The callback detail must appear in sentence 1-3','It must reappear in the final beat','Story must have a location that feels vivid and specific']},
+  {cat:'storytelling', topic:'Terrible Dates', technique:'Unreliable Narrator Story', prompt:'Tell a date story where the narrator clearly does something wrong but doesn\'t realize it — the audience sees the problem before the narrator does.', example:'The narrator describes their behavior as perfectly reasonable while it\'s obviously chaotic. This is a technique used by Larry David.', constraints:['Narrator must be oblivious throughout','Reader should cringe with recognition','End with the narrator concluding they were the victim']},
+  {cat:'storytelling', topic:'Cooking Catastrophes', technique:'The Pause & Pivot Story', prompt:'Tell a cooking story that pauses mid-narrative to address the audience directly, then continues. The direct asides should themselves be jokes.', example:'"And then I added what I thought was salt — (pause) it was sugar — I want you to know I\'m a food writer — anyway, back to the lamb..."', constraints:['At least 2 direct asides to audience','Asides must be funnier than the story itself','Story must have a real climax, not just trail off']},
+  // Observational
+  {cat:'observational', topic:'Grocery Shopping', technique:'Universal Observation', prompt:'Write a 2-minute observational set about the shared human experience of grocery shopping. Find the absurdity in something everyone does.', example:'Jerry Seinfeld: "What\'s the deal with..." — but make it smarter and less dated. What REALLY bothers you at a grocery store?', constraints:['Must be based on something almost universally experienced','No personal story — just observations','Use "we" or "you" to invite the audience in']},
+  {cat:'observational', topic:'Smartphones & Screen Addiction', technique:'The Comparison Observation', prompt:'Observe how modern behavior compares to a past era in a way that makes the present look absurd. Show, don\'t tell.', example:'"Ten years ago you\'d look at a stranger and think \'what are they thinking?\' Now you think \'what are they watching?\'"', constraints:['Must include a before/after comparison','The modern side should seem ridiculous when contrasted','Do not moralize — observe, don\'t lecture']},
+  {cat:'observational', topic:'Public Transportation', technique:'Micro-Observation', prompt:'Zoom in on ONE tiny specific detail of public transit life (a smell, a seat choice, a type of person) and expand it into comedy.', example:'The person who takes the aisle seat when the window seat is empty. What is their psychology? Their whole deal?', constraints:['Hyper-specific — not "people are weird on buses"','Must create a character type we all recognize','Stay under 150 words total']},
+  {cat:'observational', topic:'Sleep & Insomnia', technique:'Internal Monologue Observation', prompt:'Narrate the absurd inner voice that talks to you at 3am. Pure observational comedy about the brain\'s 2am behavior.', example:'"Your brain at 2am: \'You know who you were rude to in 2011? Let me remind you. Now. Forever.\'"', constraints:['Written as internal dialogue or narration','Must escalate from mild to completely irrational','Every beat should be recognizable to sleep-deprived humans']},
+  {cat:'observational', topic:'Online Shopping & Reviews', technique:'Elevated Observation', prompt:'Take something mundane (reading product reviews) and describe it with the gravity and language of something important. The mismatch is the joke.', example:'Describing a 3-star Amazon review of a spatula as if it\'s a geopolitical crisis.', constraints:['Use extremely formal or dramatic language','The subject must be completely banal','The contrast must be obvious but never explained']},
+  // Self-Deprecating
+  {cat:'selfdep', topic:'My Academic Failures', technique:'Humble Confession', prompt:'Write a self-deprecating set about academic failure (real or invented). The trick: the worse you make yourself sound, the more people like you.', example:'Conan O\'Brien confessing his Harvard degree means nothing to his Uber driver.', constraints:['Must be genuinely self-deprecating, not fishing for compliments','Avoid "humblebrag" — go all the way','Include at least one specific, detailed example of failure']},
+  {cat:'selfdep', topic:'Physical Appearance', technique:'The Pre-emptive Strike', prompt:'Make the joke about yourself before anyone else can. Pre-emptive self-deprecation disarms critics and builds connection.', example:'"I\'m not saying I\'m unattractive, but the last time a face matched my energy was in a Halloween mask store."', constraints:['The insult must be directed at yourself only','Must be specific, not generic ("I\'m ugly")','Follow each self-insult with an escalation that makes it worse']},
+  {cat:'selfdep', topic:'Social Awkwardness', technique:'Shared Embarrassment Story', prompt:'Tell a story of severe social awkwardness and frame yourself as the villain of your own life. Invite the audience to both laugh at and with you.', example:'The art of the story: "I once said \'you too\' to a waiter who said \'enjoy your meal.\' I then went home and moved countries."', constraints:['Must include the exact words that made it awkward','Build to a reaction moment (yours or others\'','No redemption arc — stay in the embarrassment']},
+  {cat:'selfdep', topic:'Career & Ambitions', technique:'The Downgrade Reveal', prompt:'Set up an impressive-sounding situation, then deflate it with the reality. Each deflation should be funnier than the last.', example:'"I run my own company... it\'s just me and a printer, but technically, yes."', constraints:['Three setups minimum','Each reveal must be more deflating','End on the most ridiculous truth of all']},
+  {cat:'selfdep', topic:'Fitness & Exercise Attempts', technique:'The Enthusiastic Failure', prompt:'Write about failed fitness attempts with complete enthusiasm, as if the failure were actually impressive. The gap is the joke.', example:'"I did yoga for three consecutive days in 2018. They call me a veteran."', constraints:['Narrator must be completely proud of minimal effort','Use fitness jargon to make small things sound big','Bonus points for including a specific, dated failed attempt']},
+  // Dark Humor
+  {cat:'dark', topic:'Death & Mortality', technique:'The Casual Mention', prompt:'Write jokes that treat death as a minor inconvenience or administrative hassle. The comedy comes from the disconnect between gravity and boredom.', example:'"I\'m not afraid of death. I just think it\'s very bad timing most of the time."', constraints:['Zero sentimentality','Cannot punch down at real tragedies','The humor must come from tone, not from the topic being shocking']},
+  {cat:'dark', topic:'Mental Health Struggles', technique:'Reclaiming Comedy', prompt:'Write jokes about your own mental health struggles that reframe them without minimizing them. This is the Anthony Jeselnik school: own the darkness.', example:'"My therapist says I have trouble forming attachments. She also just fired me, so I guess she was right."', constraints:['Must be clearly self-directed, not mocking others with struggles','Must still be funny, not a cry for help in disguise','Write as if performing at a comedy club, not a funeral']},
+  {cat:'dark', topic:'Failure & Rock Bottom Moments', technique:'The Celebration of Disaster', prompt:'Treat the lowest point of your life as a success story. Reframe catastrophe as achievement.', example:'"My rock bottom was when I realized my Netflix account had better recommendations for me than my therapist."', constraints:['The "reframe" must be genuinely absurd','Each joke should escalate how bad things got','The final line should imply there\'s a lower bottom still']},
+  {cat:'dark', topic:'Existential Dread', technique:'Philosophical Punchline', prompt:'Start with a genuine philosophical observation about the meaninglessness of existence, then deflate it with something completely petty.', example:'"We\'re all just specks on a pale blue dot in an indifferent universe... and yet somehow my neighbor still parks in my spot."', constraints:['The setup must be genuinely deep','The punchline must be completely trivial','The trivial thing must feel exactly as important as the cosmic thing']},
+  {cat:'dark', topic:'Technology Dependence', technique:'Dystopian Observation', prompt:'Describe our actual technology use as if someone from 50 years ago were observing it and writing a horror report.', example:'"They carry small screens at all times and check them every 11 seconds. The screens decide who they love."', constraints:['Write in the style of a concerned anthropologist or alien observer','Describe normal behavior as if it is terrifying','Must describe something everyone actually does daily']},
+  // Absurdist
+  {cat:'absurd', topic:'If Animals Could Talk', technique:'Logical Absurdism', prompt:'Imagine animals speaking, but follow the internal logic completely seriously. The more committed to the absurd logic, the funnier.', example:'"Pigeons hold meetings. The agenda is always the same: crumbs, statues, crumbs, pigeons, crumbs, the wind."', constraints:['Must follow the absurd premise with internal consistency','No breaking the fourth wall to acknowledge weirdness','Get progressively more specific and detailed']},
+  {cat:'absurd', topic:'Conspiracy Theories (Real)', technique:'The Straight-faced Absurdism', prompt:'Take a real (minor, harmless) conspiracy theory and present additional "evidence" with complete deadpan sincerity.', example:'"The McRib reappears whenever the government needs a distraction. The timing is well-documented by those willing to look."', constraints:['Present as completely factual','Add invented but plausible-sounding "evidence"','The conspiracy must be completely mundane (not political)']},
+  {cat:'absurd', topic:'Customer Service Nightmares', technique:'Escalating Absurdism', prompt:'Begin with a real, mundane customer service complaint and let it spiral into complete unreality while maintaining the tone of a legitimate complaint.', example:'Starting with "my order was 5 minutes late" and ending with a confrontation with a sentient delivery app.', constraints:['Must start with a real, relatable complaint','Each escalation step must feel like a natural extension','End in complete chaos while sounding reasonable throughout']},
+  {cat:'absurd', topic:'Time Travel & Paradoxes', technique:'The Everyday Absurd', prompt:'Treat time travel as a mundane, slightly inconvenient service — like a budget airline. What are the terms and conditions?', example:'"Time Travel — Basic tier: 1980-2010 only. Premium: includes weekends. No refunds if you prevent your own birth."', constraints:['Treat the impossible as bureaucratic','Include specific, petty rules and restrictions','Make it feel like a real user agreement']},
+  {cat:'absurd', topic:'The Afterlife & Heaven', technique:'The Administrative Afterlife', prompt:'Imagine the afterlife as a poorly run government office or a customer service system. What are the processes? The wait times?', example:'"Heaven has a 6-8 week processing time. Hell is faster, but they also have better coffee apparently."', constraints:['Treat transcendence as an HR problem','Include mundane complaints (long lines, unclear criteria)','Heaven and Hell should feel like competing companies with pros and cons']},
+  // Improv
+  {cat:'improv', topic:'Made-up Products', technique:'Yes-And Product Pitch', prompt:'Invent a completely absurd product, write the marketing pitch, then "Yes-And" it — keep adding features that make it worse/better until it becomes perfect parody.', example:'"Introducing: SleepTax. A subscription service that charges you while you sleep. Yes, for sleeping. Premium tier: we watch."', constraints:['The product must solve a non-problem','Each added feature must be accepted and escalated','End with a testimonial from a satisfied (confused) customer']},
+  {cat:'improv', topic:'Job Interviews for Absurd Jobs', technique:'Character Improv', prompt:'Write a fake job interview for a job that should not exist. Stay in character throughout — both interviewer and candidate are completely serious.', example:'Job: Professional Elevator Silence Consultant. The interview covers methodology, training, and awkward pause certification.', constraints:['Both parties must be fully committed to the premise','The job\'s requirements must be internal consistent and detailed','Bonus: one surprising qualification that makes sense in context']},
+  {cat:'improv', topic:'Living in a Movie Cliché', technique:'Genre Awareness Improv', prompt:'Narrate a scene from your normal day but describe it as if you\'re in a specific movie genre (thriller, romcom, horror). The gap between reality and genre is the joke.', example:'Going to Starbucks described as a heist film. Ordering coffee as if lives depend on the exact latte specification.', constraints:['Commit to one genre throughout','Use genre-specific language and conventions literally','The mundane task must be treated with complete genre seriousness']},
+  {cat:'improv', topic:'Negotiating Pointless Things', technique:'High Stakes Low Stakes Improv', prompt:'Write a negotiation scene between two people arguing over something completely trivial as if it\'s a major international deal.', example:'Two people negotiating who controls the TV remote using the language of hostage negotiators.', constraints:['The stakes must be genuinely tiny','The language and tactics must be genuinely intense','Include a mediator if you want — they should also take it seriously']},
+  // Roast & Satire
+  {cat:'roast', topic:'Self-Roast', technique:'Classic Roast Setup', prompt:'Write a roast of yourself — 5 jokes that a roastmaster would use against you. Then write your comeback to each one.', example:'The roast format: "It\'s great to see [Name] here tonight. I didn\'t know they released them from [embarrassing context]..."', constraints:['The roasts must be specific to real or plausible flaws','Comebacks should be funnier than the roasts','None of it should feel like a genuine complaint']},
+  {cat:'roast', topic:'Corporate Jargon & Business Culture', technique:'Satirical Commentary', prompt:'Write a satirical pitch deck, memo, or corporate communication that exposes the absurdity of business speak while using only business speak.', example:'"Pursuant to our synergy roadmap, Q3 deliverables will pivot to an agile framework for leveraging core competencies in the human breathing space."', constraints:['Use only real corporate jargon (no invented words)','The content must be completely meaningless','Must look exactly like a real document at a glance']},
+  {cat:'roast', topic:'Social Media Influencer Culture', technique:'Documentary Roast', prompt:'Write the script of a nature documentary observing influencer behavior as if they are an exotic species. David Attenborough voice required.', example:'"And here we see the influencer in her natural habitat — the golden hour kitchen — performing the sacred ritual of the \'effortless\' breakfast photograph."', constraints:['Narrate in documentary style throughout','Include "scientific" terminology for common influencer behaviors','End with a note on conservation status']},
+  // Timing & Delivery
+  {cat:'timing', topic:'The Pause as Punchline', technique:'Silence as Humor', prompt:'Write a joke where the written instruction "PAUSE" is itself part of the comedy. Learn to notate silence and use it as a comedic tool.', example:'"I told my wife she should embrace her mistakes. [PAUSE] She gave me a hug. [LONGER PAUSE] I don\'t know what to do with that."', constraints:['Must include at least 3 notated pauses','Each pause should have a different length/intensity','The joke should not work without the pauses']},
+  {cat:'timing', topic:'The Slow Burn Delivery', technique:'Anti-Rush Comedy', prompt:'Write a joke designed to be told as slowly as possible. The comedy comes from taking an absurdly long time to say something simple.', example:'A 10-sentence setup for a 3-word punchline. The audience knows the punchline is coming; the delay is the joy.', constraints:['Setup must be at least 8 sentences','Punchline must be under 5 words','Each sentence of setup must add nothing to the logic — just atmosphere']},
+  {cat:'timing', topic:'The Callback Timing', technique:'Structural Timing', prompt:'Write a 10-line set where the first 3 lines set up callbacks that pay off on lines 7, 9, and 10. The late callback is always funnier.', example:'Think of it as planting seeds — the audience has forgotten by the time you return, making the payoff explosive.', constraints:['Mark your plants and callbacks clearly (for your reference)','Plants must seem like throwaways','Callbacks must feel like revelation, not reminder']},
+  // Rule of Three
+  {cat:'rule3', topic:'The Perfect Vacation', technique:'Classic Rule of Three', prompt:'Write 5 jokes using the Rule of Three — two expected items, one completely subverted. The third item destroys the pattern.', example:'"I need three things on vacation: sun, sand, and someone to remind me that my real life is still waiting for me."', constraints:['First two items must feel like they belong together','Third must be conceptually jarring','The third item should feel both unexpected and inevitable in retrospect']},
+  {cat:'rule3', topic:'Advice I Was Given', technique:'Rule of Three with Escalation', prompt:'Write a joke using the Rule of Three where each item escalates, so the third is the biggest surprise AND the biggest escalation.', example:'"My father told me three things: be honest, be kind, and never, under any circumstances, eat the soup at a gas station."', constraints:['Items must escalate in weight/absurdity','Third item must be the most extreme','Can be written as advice, instructions, or a list']},
+  // Misdirection
+  {cat:'misdirect', topic:'Family Dynamics', technique:'The False Setup', prompt:'Write jokes where the setup creates a strong, specific expectation — and the punchline delivers something completely different (but in retrospect, fitting).', example:'"My father was a simple man. He had two rules: always be honest... and never tell your mother about the other rules."', constraints:['Setup must point clearly in one direction','Punchline must go in an entirely different direction','Misdirection must feel earned, not random']},
+  {cat:'misdirect', topic:'Plot Twists in Real Life', technique:'The Anti-Climax', prompt:'Build huge anticipation with a dramatic, escalating setup — then deliver a punchline so small and mundane that the contrast is the comedy.', example:'"I spent three years writing my novel. I gave it my blood, my tears, my soul. I published it. My mum said it was \'nice.\'  Nice."', constraints:['Setup must be genuinely dramatic','Punchline must be genuinely tiny','The word "nice" (or equivalent deflation word) is a gift — use it']},
+  // Funny Anecdotes
+  {cat:'anecdote', topic:'Awkward Family Gatherings', technique:'The True Story (Possibly)', prompt:'Write a funny anecdote about a family gathering that feels completely plausible and includes one detail that is specific enough to either be real or brilliantly invented.', example:'The comedy of anecdotes lives in hyper-specificity. The uncle who always brings the wrong dish. The argument over a card game in 2006.', constraints:['Include at least one character with a specific quirk','One completely specific, verifiable-sounding detail must anchor it','End with a reflection that recontextualizes the whole story']},
+  {cat:'anecdote', topic:'Terrible Gift-Giving Moments', technique:'The Slow Reveal Anecdote', prompt:'Tell the story of giving or receiving a gift where the horror is revealed gradually. Each sentence should make the situation slightly worse.', example:'"My mum gave me a great gift for my 30th birthday. It was... let me describe it carefully. It was a self-help book. Called \'Starting Over.\' She\'d highlighted sections."', constraints:['Reveal details in order of severity','The worst detail must be last','Include one detail that redeems it slightly (then take it back)']},
+  // Written Jokes
+  {cat:'written', topic:'Tweets & Short-form Jokes', technique:'The Tweet-Length Joke', prompt:'Write 10 Twitter/X-style jokes — under 280 characters each. These must work as standalone posts with zero context required.', example:'"Every gym in January is a ghost story. The gym is the haunted house. We are the ghosts." — Can you beat this?', constraints:['Under 280 characters STRICTLY','No setup required — punches from line one','Must work in text only — no images, no context']},
+  {cat:'written', topic:'Captions for Real Situations', technique:'The Caption Game', prompt:'Write funny captions for 5 situations: (1) someone staring at their phone, (2) an empty office kitchen, (3) a person running in rain, (4) a crowded elevator, (5) someone alone at a restaurant.', example:'"[Person staring at phone]: Checking if anyone liked the photo of the meal I just finished eating alone."', constraints:['Each caption must be under 20 words','Must make the scene funnier with additional context','Should feel like it belongs in a magazine or meme']},
+];
+
+// 10 practice techniques used throughout
+const TECHNIQUES = [
+  'Classic Pun','Sound-Alike Wordplay','Technical Pun','Compound Pun','Modern Portmanteau Joke',
+  'Classic One-Liner','Self-aware One-Liner','Deadpan One-Liner','Reversal One-Liner','Irony One-Liner',
+  'Universal Observation','The Comparison Observation','Micro-Observation','Internal Monologue Observation','Elevated Observation',
+  'Humble Confession','The Pre-emptive Strike','Shared Embarrassment Story','The Downgrade Reveal','The Enthusiastic Failure',
+  'The Casual Mention','Reclaiming Comedy','The Celebration of Disaster','Philosophical Punchline','Dystopian Observation',
+  'Logical Absurdism','The Straight-faced Absurdism','Escalating Absurdism','The Everyday Absurd','The Administrative Afterlife',
+  'Yes-And Product Pitch','Character Improv','Genre Awareness Improv','High Stakes Low Stakes Improv',
+  'Classic Roast Setup','Satirical Commentary','Documentary Roast',
+  'Silence as Humor','Anti-Rush Comedy','Structural Timing',
+  'Classic Rule of Three','Rule of Three with Escalation',
+  'The False Setup','The Anti-Climax',
+  'The Slow Burn Story','Escalation Story','The Callback Story','Unreliable Narrator Story','The Pause & Pivot Story',
+  'The True Story (Possibly)','The Slow Reveal Anecdote','Tweet-Length Joke','The Caption Game',
+];
+
+// State
+let completedLessons = JSON.parse(localStorage.getItem('jc_completed') || '[]');
+let currentLessonIndex = null;
+
+// ═══════════════════════════════════════════ SCREEN NAV ════════════
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if(id==='screen-map') renderMap();
+  window.scrollTo(0,0);
+}
+
+function goBack(){showScreen('screen-map');}
+
+// ═══════════════════════════════════════════ MAP ════════════
+function renderMap(){
+  const container = document.getElementById('map-content');
+  container.innerHTML = '';
+  const total = TOPICS.length;
+  const done = completedLessons.length;
+  document.getElementById('progress-label-text').textContent = `${done} / ${total} LESSONS COMPLETE`;
+  document.getElementById('main-progress-fill').style.width = (done/total*100)+'%';
+
+  // Group by category
+  CATEGORIES.forEach(cat => {
+    const catTopics = TOPICS.map((t,i)=>({...t,idx:i})).filter(t=>t.cat===cat.id);
+    if(!catTopics.length) return;
+    const sec = document.createElement('div');
+    sec.className = 'category-section';
+    sec.innerHTML = `
+      <div class="cat-header">
+        <div class="cat-icon" style="background:${cat.color}22; color:${cat.color};">${cat.icon}</div>
+        <div>
+          <div class="cat-name">${cat.name}</div>
+          <div class="cat-count">${catTopics.filter(t=>completedLessons.includes(t.idx)).length}/${catTopics.length} COMPLETE · ${cat.desc}</div>
+        </div>
+      </div>
+      <div class="lessons-grid" id="grid-${cat.id}"></div>
+    `;
+    container.appendChild(sec);
+    const grid = sec.querySelector(`#grid-${cat.id}`);
+    catTopics.forEach((lesson) => {
+      const isComplete = completedLessons.includes(lesson.idx);
+      const card = document.createElement('div');
+      card.className = 'lesson-card' + (isComplete ? ' completed' : '');
+      card.style.setProperty('--cat-color', cat.color);
+      card.innerHTML = `
+        <div class="lesson-num">LESSON ${lesson.idx+1} · ${cat.name.toUpperCase()}</div>
+        <div class="lesson-title">${lesson.topic}</div>
+        <div class="lesson-topic">${lesson.technique}</div>
+        <div class="lesson-footer">
+          <span class="lesson-type">${cat.icon} ${lesson.technique.split(' ').slice(0,2).join(' ')}</span>
+          <span class="lesson-status">${isComplete ? '✅' : '○'}</span>
+        </div>
+      `;
+      card.onclick = () => openLesson(lesson.idx);
+      grid.appendChild(card);
+    });
+  });
+}
+
+// ═══════════════════════════════════════════ LESSON ════════════
+function openLesson(idx){
+  currentLessonIndex = idx;
+  const lesson = TOPICS[idx];
+  const cat = CATEGORIES.find(c=>c.id===lesson.cat);
+  document.getElementById('lh-num').textContent = `LESSON ${idx+1} OF ${TOPICS.length} · ${cat.name.toUpperCase()}`;
+  document.getElementById('lh-title').textContent = lesson.topic;
+  const body = document.getElementById('lesson-body-content');
+  body.innerHTML = buildLessonHTML(lesson, cat, idx);
+  showScreen('screen-lesson');
+}
+
+function buildLessonHTML(lesson, cat, idx){
+  return `
+    <div class="lesson-intro-card">
+      <div class="lesson-topic-tag" style="background:${cat.color};">${cat.icon} ${cat.name}</div>
+      <h2>${lesson.topic}</h2>
+      <p class="lesson-explanation">
+        In this lesson, you're practising the <strong>${lesson.technique}</strong> — one of the core techniques in comedy writing.
+        Every great comedian has this in their toolkit. You'll write jokes yourself, then get them analysed by an AI comedy coach.
+      </p>
+      <div class="technique-box">
+        <div class="technique-title">🎯 Technique: ${lesson.technique}</div>
+        <div class="technique-content">${getTechniqueExplanation(lesson.technique)}</div>
+      </div>
+      <div class="example-card">
+        <div class="example-label">📝 Example to learn from</div>
+        <div class="example-joke">${lesson.example}</div>
+      </div>
+    </div>
+
+    <div class="practice-section">
+      <div class="practice-title">Your Practice</div>
+      <div class="practice-sub">Write your jokes below — then send to Claude for analysis</div>
+
+      <div class="practice-prompt-box">
+        <div class="pp-label">🎭 Your Prompt</div>
+        <div class="pp-text">${lesson.prompt}</div>
+      </div>
+
+      <div class="constraints-row">
+        ${lesson.constraints.map(c=>`<span class="constraint-tag">⚡ ${c}</span>`).join('')}
+      </div>
+
+      <div class="write-area-label">WRITE YOUR JOKES HERE</div>
+      <textarea class="write-area" id="joke-write-area" placeholder="Write your attempt here... Don't overthink it. Bad jokes are part of the journey. ✍️"></textarea>
+
+      <div class="action-row">
+        <button class="btn-analyse" onclick="buildAnalysePrompt(${idx})">🤖 Get AI Analysis →</button>
+        <button class="btn-secondary" onclick="shufflePrompt(${idx})">🎲 New variation</button>
+      </div>
+
+      <div class="ai-workflow" id="ai-workflow" style="display:none;">
+        <div class="workflow-step">
+          <div class="ws-num">STEP 01 — COPY THIS PROMPT</div>
+          <div class="ws-title">Send to Claude.ai or ChatGPT</div>
+          <div class="prompt-display" id="analysis-prompt-box"></div>
+          <div class="copy-row">
+            <button class="btn-copy" onclick="copyPrompt()">📋 Copy Prompt</button>
+            <span class="copy-ok" id="copy-ok-msg"></span>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="ws-num">STEP 02 — PASTE THE FEEDBACK</div>
+          <div class="ws-title">Paste the JSON response here</div>
+          <textarea class="paste-area" id="feedback-paste-area" placeholder='Paste the JSON feedback from Claude here...'></textarea>
+          <div class="copy-row" style="margin-top:12px;">
+            <button class="btn-load" onclick="loadFeedback(${idx})">✅ Show My Feedback</button>
+            <span class="load-status" id="load-status-msg"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="feedback-display" id="feedback-display">
+        <div class="score-row" id="score-row-display"></div>
+        <div id="fb-sections-display"></div>
+        <div class="complete-actions">
+          <button class="btn-next" onclick="markComplete(${idx})">✅ Mark Complete & Next →</button>
+          <button class="btn-redo" onclick="document.getElementById('feedback-display').style.display='none'; document.getElementById('ai-workflow').style.display='none';">↺ Try Again</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function getTechniqueExplanation(tech){
+  const map = {
+    'Classic Pun': 'A pun exploits the multiple meanings of a word, or similar sounds of different words. The key is the <em>simultaneous</em> recognition of two meanings at once — that moment of "oh!" is the laugh.',
+    'Sound-Alike Wordplay': 'Using homophones or near-homophones (words that sound similar) to create a double meaning. Best when the sound connection is surprising but obvious in retrospect.',
+    'Technical Pun': 'Using specialized vocabulary from a specific field that has an unrelated everyday meaning. The comedy comes from the audience\'s surprise at the unexpected context collapse.',
+    'Compound Pun': 'Stacking two or more meanings simultaneously in a single phrase. The more meanings you can layer, the more satisfying the joke — like a comedic Jenga tower.',
+    'Classic One-Liner': 'The single-sentence comedic punch. A tight setup in the first clause, a subverting punchline in the second. Economy of language is everything.',
+    'Self-aware One-Liner': 'A joke where the punchline comments on the setup itself, or where the speaker acknowledges the joke\'s structure. Meta-comedy at its simplest.',
+    'Deadpan One-Liner': 'Delivered without emotional inflection. The humor exists in the gap between the flat delivery and the extraordinary content. Think: Steven Wright, Norm Macdonald.',
+    'Universal Observation': 'Comedy rooted in shared human experience. You\'re not talking about your life — you\'re saying what everyone is thinking but hasn\'t articulated. The "finally someone said it" feeling.',
+    'The Slow Burn Story': 'A narrative that deliberately delays the punchline, building tension and (false) resolution until the final sentence delivers the real payoff. Patience is a comedy superpower.',
+    'Escalation Story': 'A story where each beat logically leads to the next, but escalates in severity or absurdity. The audience is carried willingly into increasingly wild territory.',
+    'Logical Absurdism': 'Taking an impossible premise and following its internal logic with complete seriousness. The absurdism isn\'t in the premise — it\'s in the committed, straight-faced execution.',
+    'Yes-And Product Pitch': 'The improv principle: accept every premise and add to it. Never deny, always escalate. Used here to build comedically impractical products or ideas to their logical (absurd) conclusion.',
+    'Classic Roast Setup': 'The roast format opens with an apparent compliment or neutral observation, then pivots to a pointed, specific jab. The attack must be earned and specific — generic insults aren\'t funny.',
+    'Silence as Humor': 'The pause IS the joke. Silence creates tension, expectation, and the gap that the punchline falls into. On paper, this means notating pauses explicitly as part of the comedic structure.',
+    'Classic Rule of Three': 'Two items establish a pattern; the third breaks it. The brain recognizes patterns instantly and the violation of pattern is inherently funny. The third must be both surprising AND inevitable.',
+    'The False Setup': 'Build a strong expectation through the setup, then deliver a punchline that goes in a completely different direction — but one that, in retrospect, fits perfectly. Misdirection is the engine.',
+    'Humble Confession': 'Self-deprecating comedy that leads with genuine vulnerability before the punchline. The audience relaxes their defenses, then the joke lands harder.',
+    'The Casual Mention': 'Dark humor delivered with complete nonchalance, as if the terrible subject is a minor administrative issue. The disconnect between gravity and boredom is the entire joke.',
+    'Tweet-Length Joke': 'A constraint that forces maximum economy. Every word must earn its place. Often the best tweet jokes could be further cut by 30% and be funnier. Editing is the comedy.',
+  };
+  return map[tech] || `The <strong>${tech}</strong> technique is a core tool in the comedian\'s toolkit. Study the example carefully, then attempt your own version — the process of trying and failing is itself how you learn.`;
+}
+
+function buildAnalysePrompt(idx){
+  const jokes = document.getElementById('joke-write-area').value.trim();
+  if(!jokes){ showToast('Write your jokes first! 🎭'); return; }
+  const lesson = TOPICS[idx];
+  const cat = CATEGORIES.find(c=>c.id===lesson.cat);
+  const prompt = `You are a world-class comedy writing coach and stand-up comedian. Evaluate the student's joke attempt below with precision, honesty, and encouragement.
+
+LESSON CONTEXT
+Category: ${cat.name}
+Topic: ${lesson.topic}  
+Technique being practised: ${lesson.technique}
+The prompt given to the student: "${lesson.prompt}"
+Constraints they had to follow: ${lesson.constraints.join(' | ')}
+
+STUDENT'S JOKE ATTEMPT:
+"""
+${jokes}
+"""
+
+Evaluate on EXACTLY these 6 dimensions (score 0-100 each):
+1. Technique Execution — Did they correctly use the "${lesson.technique}" technique?
+2. Originality — Is this fresh, or is it a recycled joke structure?
+3. Timing & Rhythm — Does it read with the right comedic rhythm on the page?
+4. Punchline Strength — Does the punchline land? Is it in the right place?
+5. Constraint Adherence — Did they follow the rules given?
+6. Overall Comedy — Would this get a laugh in a real room?
+
+Return ONLY valid JSON, no markdown, no explanation:
+
+{
+  "scores": {
+    "technique_execution": 72,
+    "originality": 65,
+    "timing_rhythm": 80,
+    "punchline_strength": 70,
+    "constraint_adherence": 85,
+    "overall_comedy": 74
+  },
+  "notes": {
+    "technique_execution": "One specific sentence",
+    "originality": "One specific sentence",
+    "timing_rhythm": "One specific sentence",
+    "punchline_strength": "One specific sentence",
+    "constraint_adherence": "One specific sentence",
+    "overall_comedy": "One specific sentence"
+  },
+  "what_works": "2-3 sentences on the strongest element of their attempt",
+  "what_to_fix": "2-3 sentences of the single most important thing to change",
+  "rewrite_suggestion": "Rewrite one of their jokes to show how it could be improved. Be specific. Show your work.",
+  "next_tip": "One sentence on what technique to focus on in their next lesson"
+}`;
+
+  document.getElementById('analysis-prompt-box').textContent = prompt;
+  document.getElementById('ai-workflow').style.display = 'block';
+  document.getElementById('ai-workflow').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function copyPrompt(){
+  const text = document.getElementById('analysis-prompt-box').textContent;
+  navigator.clipboard.writeText(text).then(()=>{
+    document.getElementById('copy-ok-msg').textContent = '✓ Copied!';
+    setTimeout(()=>document.getElementById('copy-ok-msg').textContent='',2000);
+  });
+}
+
+const SCORE_LABELS = {
+  technique_execution:'Technique',
+  originality:'Originality',
+  timing_rhythm:'Timing & Rhythm',
+  punchline_strength:'Punchline',
+  constraint_adherence:'Constraints',
+  overall_comedy:'Overall'
+};
+
+function loadFeedback(idx){
+  const raw = document.getElementById('feedback-paste-area').value.trim();
+  try{
+    let clean = raw.replace(/^```json\s*/,'').replace(/^```\s*/,'').replace(/```$/,'').trim();
+    const data = JSON.parse(clean);
+    if(!data.scores) throw new Error('no scores');
+    renderFeedback(data);
+    document.getElementById('load-status-msg').textContent = '✓ Feedback loaded!';
+  } catch(e){
+    document.getElementById('load-status-msg').textContent = '✗ Invalid JSON — check paste';
+    document.getElementById('load-status-msg').style.color = '#ff7070';
+  }
+}
+
+function renderFeedback(data){
+  const scoreRow = document.getElementById('score-row-display');
+  scoreRow.innerHTML = '';
+  Object.entries(data.scores).forEach(([k,v])=>{
+    const cls = v>=75?'hi':v>=50?'mid':'lo';
+    scoreRow.innerHTML += `<div class="score-card">
+      <div class="score-name">${SCORE_LABELS[k]||k}</div>
+      <div class="score-val ${cls}">${v}</div>
+      <div class="score-note">${data.notes?.[k]||''}</div>
+    </div>`;
+  });
+  const secs = document.getElementById('fb-sections-display');
+  secs.innerHTML = `
+    <div class="fb-section"><h4>💪 What Works</h4><p>${data.what_works||''}</p></div>
+    <div class="fb-section"><h4>🎯 What To Fix</h4><p>${data.what_to_fix||''}</p></div>
+    <div class="fb-section"><h4>✍️ Suggested Rewrite</h4><p>${data.rewrite_suggestion||''}</p></div>
+    <div class="fb-section"><h4>⚡ Next Lesson Tip</h4><p>${data.next_tip||''}</p></div>
+  `;
+  const fd = document.getElementById('feedback-display');
+  fd.style.display = 'block';
+  fd.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function markComplete(idx){
+  if(!completedLessons.includes(idx)){
+    completedLessons.push(idx);
+    localStorage.setItem('jc_completed', JSON.stringify(completedLessons));
+  }
+  const next = idx + 1;
+  if(next < TOPICS.length){
+    showToast('✅ Lesson complete! Loading next...');
+    setTimeout(()=>openLesson(next),800);
+  } else {
+    showToast('🎉 You completed the entire JokeCraft course!');
+    setTimeout(()=>showScreen('screen-map'),1000);
+  }
+}
+
+function shufflePrompt(idx){
+  showToast('🎲 Same technique, different angle — try a fresh take!');
+}
+
+// ═══════════════════════════════════════════ TOAST ════════════
+function showToast(msg){
+  const t = document.getElementById('toast-el');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2800);
+}
+
+// Init
+renderMap();
+</script>
+</body>
+</html>

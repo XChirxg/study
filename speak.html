@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SpeakForge — Solo Speaking Coach</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0a0a0f;--surface:#111118;--card:#16161f;--border:#2a2a3a;--accent:#e8ff47;--accent2:#47b8ff;--accent3:#ff6b6b;--text:#e8e8f0;--muted:#6b6b88;--success:#47ffb8;--warn:#ffaa47;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Manrope',sans-serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 20% 10%,rgba(232,255,71,.04) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 80%,rgba(71,184,255,.04) 0%,transparent 60%);pointer-events:none;z-index:0;}
+.screen{display:none;position:relative;z-index:1;min-height:100vh;padding:40px 24px;}
+.screen.active{display:flex;flex-direction:column;align-items:center;}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--accent);letter-spacing:2px;}
+.logo span{color:var(--muted);font-size:.9rem;font-family:'DM Mono',monospace;letter-spacing:1px;display:block;margin-top:-6px;}
+.top-nav{width:100%;max-width:960px;display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px;}
+.nav-tabs{display:flex;gap:8px;}
+.nav-tab{padding:8px 16px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-family:'DM Mono',monospace;font-size:.8rem;transition:all .2s;}
+.nav-tab:hover{border-color:var(--accent);color:var(--accent);}
+header{width:100%;max-width:960px;margin-bottom:60px;}
+.hero{text-align:center;max-width:680px;}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,6rem);line-height:.95;}
+.hero h1 em{color:var(--accent);font-style:normal;}
+.hero p{margin-top:20px;font-size:1.1rem;color:var(--muted);line-height:1.7;font-weight:300;}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;width:100%;max-width:960px;margin:36px 0;}
+.skill-chip{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 16px;cursor:pointer;transition:all .2s;font-size:.85rem;text-align:center;font-family:'DM Mono',monospace;color:var(--muted);user-select:none;}
+.skill-chip:hover{border-color:var(--accent);color:var(--accent);background:rgba(232,255,71,.05);}
+.skill-chip.selected{border-color:var(--accent);color:var(--accent);background:rgba(232,255,71,.1);}
+.input-group{width:100%;max-width:580px;margin:14px 0;}
+.input-group label{display:block;font-size:.75rem;font-family:'DM Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;}
+.input-group input,.input-group textarea,.input-group select{width:100%;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;color:var(--text);font-family:'Manrope',sans-serif;font-size:1rem;outline:none;transition:border-color .2s;}
+.input-group input:focus,.input-group textarea:focus,.input-group select:focus{border-color:var(--accent);}
+.input-group textarea{resize:vertical;min-height:80px;}
+.input-group select option{background:var(--card);}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:10px;border:none;cursor:pointer;font-family:'Manrope',sans-serif;font-weight:700;font-size:1rem;transition:all .2s;text-decoration:none;}
+.btn-primary{background:var(--accent);color:#0a0a0f;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,255,71,.25);}
+.btn-outline{background:transparent;border:1px solid var(--border);color:var(--text);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+.btn-blue{background:var(--accent2);color:#0a0a0f;}
+.btn-blue:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(71,184,255,.25);}
+.btn-danger{background:var(--accent3);color:#fff;}
+.btn-sm{padding:8px 16px;font-size:.85rem;border-radius:8px;}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none!important;}
+/* workflow */
+.workflow-steps{display:flex;flex-direction:column;gap:20px;width:100%;max-width:960px;}
+.step-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;}
+.step-num{font-family:'DM Mono',monospace;color:var(--accent);font-size:.75rem;letter-spacing:2px;margin-bottom:6px;}
+.step-title{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:1px;margin-bottom:12px;}
+.json-area{width:100%;min-height:200px;max-height:360px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;color:var(--accent2);font-family:'DM Mono',monospace;font-size:.8rem;line-height:1.6;overflow-y:auto;white-space:pre-wrap;resize:vertical;outline:none;}
+.json-area:focus{border-color:var(--accent2);}
+.copy-btn-row{display:flex;gap:10px;margin-top:12px;align-items:center;flex-wrap:wrap;}
+.copy-status{font-family:'DM Mono',monospace;font-size:.8rem;color:var(--success);}
+/* game cards */
+.games-wrap{width:100%;max-width:960px;}
+.game-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;margin:16px 0;transition:border-color .25s;}
+.game-card:hover{border-color:rgba(232,255,71,.25);}
+.game-card-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:18px;}
+.game-number{font-family:'DM Mono',monospace;color:var(--muted);font-size:.75rem;letter-spacing:2px;}
+.game-title{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--accent);letter-spacing:1px;margin-top:4px;}
+.game-skill-tag{background:rgba(71,184,255,.12);color:var(--accent2);border:1px solid rgba(71,184,255,.3);border-radius:6px;padding:4px 10px;font-size:.75rem;font-family:'DM Mono',monospace;white-space:nowrap;}
+.game-desc{color:var(--muted);line-height:1.8;font-size:.95rem;margin-bottom:16px;}
+.prompt-block{background:var(--surface);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:18px 22px;margin:14px 0;}
+.pb-label{font-family:'DM Mono',monospace;color:var(--accent);font-size:.7rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;}
+.pb-text{font-size:1rem;line-height:1.8;color:var(--text);}
+.pb-text .hl{background:rgba(232,255,71,.18);color:var(--accent);border-radius:4px;padding:1px 6px;font-weight:700;}
+.pb-text .hl2{background:rgba(71,184,255,.15);color:var(--accent2);border-radius:4px;padding:1px 6px;font-weight:600;}
+.pb-text .hl3{background:rgba(255,107,107,.15);color:var(--accent3);border-radius:4px;padding:1px 6px;font-weight:600;}
+.sub-label{font-size:.75rem;font-family:'DM Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin:16px 0 8px;}
+.constraint-list{display:flex;flex-direction:column;gap:7px;}
+.constraint-item{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--text);line-height:1.5;}
+.c-icon{flex-shrink:0;width:22px;height:22px;background:rgba(255,170,71,.14);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--warn);}
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:9px;margin:8px 0;}
+.tip-chip{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:.85rem;color:var(--muted);line-height:1.5;display:flex;gap:9px;align-items:flex-start;}
+.tip-chip::before{content:'💡';flex-shrink:0;}
+.mistake-item{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.15);border-radius:9px;font-size:.87rem;line-height:1.5;color:var(--text);margin-bottom:7px;}
+/* pre-exercise slides */
+.slide-wrap{width:100%;max-width:800px;}
+.slide{display:none;animation:sIn .3s ease;}
+.slide.active{display:block;}
+@keyframes sIn{from{opacity:0;transform:translateX(28px);}to{opacity:1;transform:translateX(0);}}
+.slide-badge{font-family:'DM Mono',monospace;color:var(--muted);font-size:.75rem;letter-spacing:2px;margin-bottom:10px;}
+.slide-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,5vw,2.8rem);color:var(--accent);letter-spacing:2px;margin-bottom:20px;line-height:1;}
+.slide-body{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:22px;}
+.slide-body p{color:var(--muted);line-height:1.85;font-size:.95rem;}
+.slide-body ul,.slide-body ol{margin-left:18px;margin-top:10px;display:flex;flex-direction:column;gap:9px;}
+.slide-body li{color:var(--text);line-height:1.7;font-size:.95rem;}
+.slide-body li strong{color:var(--accent);}
+.example-box{background:var(--surface);border-left:3px solid var(--accent2);border-radius:0 10px 10px 0;padding:16px 20px;margin:14px 0;font-size:.9rem;line-height:1.75;color:var(--text);font-style:italic;}
+.example-box .ex-label{color:var(--accent2);font-family:'DM Mono',monospace;font-size:.72rem;display:block;margin-bottom:6px;font-style:normal;text-transform:uppercase;letter-spacing:1px;}
+.s2col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0;}
+@media(max-width:560px){.s2col{grid-template-columns:1fr;}}
+.mini-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;}
+.mc-lbl{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
+.mc-val{font-size:.9rem;color:var(--text);line-height:1.5;}
+.slide-nav{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;max-width:800px;flex-wrap:wrap;}
+.sdots{display:flex;gap:8px;}
+.sdot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:all .2s;cursor:pointer;}
+.sdot.active{background:var(--accent);width:24px;border-radius:4px;}
+.sprogress{font-family:'DM Mono',monospace;font-size:.8rem;color:var(--muted);}
+/* session */
+.session-layout{display:grid;grid-template-columns:1fr 360px;gap:20px;width:100%;max-width:1100px;}
+@media(max-width:820px){.session-layout{grid-template-columns:1fr;}}
+.vcont{background:#000;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:4/3;border:1px solid var(--border);}
+video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1);}
+.voverlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.85));padding:20px;display:flex;justify-content:space-between;align-items:flex-end;}
+.rec-ind{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:.85rem;}
+.rec-dot{width:10px;height:10px;background:var(--accent3);border-radius:50%;animation:pulse 1.2s infinite;}
+.rec-dot.idle{animation:none;background:var(--muted);}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.2;}}
+.timer-disp{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--accent);}
+.side-panel{display:flex;flex-direction:column;gap:13px;}
+.psec{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;}
+.ptitle{font-size:.7rem;font-family:'DM Mono',monospace;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:11px;}
+.cg-box{background:var(--surface);border-radius:10px;padding:14px;}
+.cg-name{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;color:var(--accent);}
+.cg-prompt{font-size:.87rem;color:var(--text);line-height:1.6;margin-top:6px;}
+.tbox{min-height:90px;max-height:170px;overflow-y:auto;background:var(--surface);border-radius:8px;padding:11px;font-family:'DM Mono',monospace;font-size:.77rem;color:var(--muted);line-height:1.6;}
+.ctrl-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:13px;}
+/* analysis deck */
+.an-nav{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:960px;margin-bottom:18px;flex-wrap:wrap;gap:10px;}
+.an-pills{display:flex;gap:6px;flex-wrap:wrap;}
+.apill{padding:5px 13px;border-radius:100px;font-family:'DM Mono',monospace;font-size:.72rem;cursor:pointer;border:1px solid var(--border);color:var(--muted);transition:all .2s;background:transparent;}
+.apill:hover{border-color:var(--accent2);color:var(--accent2);}
+.apill.active{background:var(--accent);color:#0a0a0f;border-color:var(--accent);}
+.aslide{display:none;width:100%;max-width:960px;}
+.aslide.active{display:block;animation:sIn .3s ease;}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--muted);letter-spacing:2px;margin-bottom:14px;width:100%;max-width:960px;}
+.fb-sec{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin:12px 0;}
+.fb-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:1px;margin-bottom:14px;}
+.fb-title.green{color:var(--success);}
+.fb-title.yellow{color:var(--accent);}
+.fb-title.red{color:var(--accent3);}
+.fb-title.blue{color:var(--accent2);}
+.fb-list{display:flex;flex-direction:column;gap:9px;}
+.fb-item{display:flex;gap:11px;align-items:flex-start;padding:11px 15px;background:var(--surface);border-radius:9px;font-size:.9rem;line-height:1.6;color:var(--text);}
+.fi-icon{flex-shrink:0;font-size:1rem;}
+.fb-para{color:var(--muted);line-height:1.85;font-size:.95rem;}
+/* score table */
+.sc-table{width:100%;border-collapse:collapse;}
+.sc-table th{background:var(--surface);color:var(--muted);font-family:'DM Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:1px;padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);}
+.sc-table td{padding:12px 14px;border-bottom:1px solid rgba(42,42,58,.5);font-size:.88rem;vertical-align:middle;}
+.sc-table tr:last-child td{border-bottom:none;}
+.bar-wrap{width:130px;background:var(--surface);border-radius:100px;height:6px;display:inline-block;vertical-align:middle;}
+.bar-fill{height:6px;border-radius:100px;transition:width .8s ease;}
+.snum{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;}
+.snum.hi{color:var(--success);}.snum.mid{color:var(--accent);}.snum.lo{color:var(--accent3);}
+.bhi{background:var(--success);}.bmid{background:var(--accent);}.blo{background:var(--accent3);}
+/* vocab / grammar tables */
+.vt,.gt{width:100%;border-collapse:collapse;margin:8px 0;}
+.vt th,.gt th{background:var(--surface);color:var(--muted);font-family:'DM Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:1px;padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);}
+.vt td,.gt td{padding:11px 14px;border-bottom:1px solid rgba(42,42,58,.4);font-size:.87rem;vertical-align:top;line-height:1.55;}
+.vt tr:last-child td,.gt tr:last-child td{border-bottom:none;}
+.vword{font-family:'DM Mono',monospace;color:var(--accent2);font-weight:700;font-size:.95rem;}
+.vmean{color:var(--muted);font-size:.8rem;line-height:1.5;margin-top:3px;}
+.vex{color:var(--text);font-size:.8rem;font-style:italic;margin-top:4px;}
+.pill-red{display:inline-block;background:rgba(255,107,107,.12);border:1px solid rgba(255,107,107,.2);border-radius:5px;padding:2px 7px;font-family:'DM Mono',monospace;font-size:.75rem;color:var(--accent3);margin:2px;}
+.pill-blue{display:inline-block;background:rgba(71,184,255,.12);border:1px solid rgba(71,184,255,.2);border-radius:5px;padding:2px 7px;font-family:'DM Mono',monospace;font-size:.75rem;color:var(--accent2);margin:2px;}
+.gerr{color:var(--accent3);text-decoration:line-through;}
+.gfix{color:var(--success);}
+/* action plan */
+.aplan-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin:10px 0;}
+.ap-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:.7rem;padding:3px 9px;border-radius:4px;font-weight:700;color:#0a0a0f;margin-bottom:10px;}
+.ap-focus{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;margin-bottom:8px;}
+.ap-ex{color:var(--muted);font-size:.9rem;line-height:1.65;}
+/* progress bar */
+.pgbar-wrap{width:100%;max-width:960px;background:var(--card);border-radius:100px;height:4px;margin:6px 0 20px;}
+.pgbar{background:var(--accent);height:100%;border-radius:100px;transition:width .5s;}
+/* recordings */
+.rec-list{width:100%;max-width:960px;}
+.rec-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin:10px 0;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.rec-item video{width:180px;height:110px;object-fit:cover;border-radius:8px;border:1px solid var(--border);transform:scaleX(-1);}
+.rec-meta{flex:1;min-width:180px;}
+.rg-name{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;color:var(--accent);}
+.r-time{font-family:'DM Mono',monospace;font-size:.73rem;color:var(--muted);margin-top:4px;}
+.r-trans{font-size:.82rem;color:var(--muted);margin-top:5px;line-height:1.5;max-height:50px;overflow:hidden;}
+.empty-state{text-align:center;color:var(--muted);padding:60px;font-size:.9rem;}
+.info-box{background:rgba(71,184,255,.08);border:1px solid rgba(71,184,255,.22);border-radius:9px;padding:11px 15px;font-size:.85rem;color:var(--accent2);margin:8px 0;line-height:1.6;}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ SCREEN 1 · SETUP ══════════════ -->
+<div id="screen-setup" class="screen active">
+  <header><div class="logo">SpeakForge<span>SOLO SPEAKING LAB</span></div></header>
+  <div class="hero">
+    <h1>TRAIN YOUR<br/><em>VOICE.</em><br/>ALONE.</h1>
+    <p>No class. No partner. Just you, your camera, and a coach that records, transcribes, and judges you on 10 parameters.</p>
+  </div>
+  <div style="height:34px"></div>
+  <div class="input-group">
+    <label>Today's Topic / Theme</label>
+    <input type="text" id="topic-input" placeholder="e.g. Climate Change, My First Job, Negotiating a Raise…"/>
+  </div>
+  <div class="input-group" style="margin-top:6px">
+    <label>Skills to Practice (pick one or more)</label>
+  </div>
+  <div class="skill-grid" id="skill-grid"></div>
+  <div class="input-group">
+    <label>Session Length</label>
+    <select id="session-length">
+      <option value="3">Short — 3 exercises</option>
+      <option value="5" selected>Standard — 5 exercises</option>
+      <option value="8">Deep — 8 exercises</option>
+    </select>
+  </div>
+  <div style="margin-top:24px">
+    <button class="btn btn-primary" onclick="generateSession()">⚡ Generate My Session</button>
+  </div>
+</div>
+
+<!-- ══════════════ SCREEN 2 · GAMES ══════════════ -->
+<div id="screen-games" class="screen">
+  <div class="top-nav">
+    <div class="logo">SpeakForge<span>YOUR SESSION</span></div>
+    <div class="nav-tabs">
+      <button class="nav-tab" onclick="showScreen('screen-setup')">← New Session</button>
+      <button class="nav-tab" onclick="showScreen('screen-recordings')">📹 Recordings</button>
+    </div>
+  </div>
+  <div id="gen-workflow" class="workflow-steps" style="display:none">
+    <div class="step-card">
+      <div class="step-num">STEP 01 — COPY THIS PROMPT</div>
+      <div class="step-title">Send to Claude.ai or ChatGPT</div>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:12px">Open another tab, paste this prompt and hit send.</p>
+      <div class="json-area" id="gen-prompt-box" contenteditable="false"></div>
+      <div class="copy-btn-row">
+        <button class="btn btn-outline btn-sm" onclick="copyBox('gen-prompt-box','copy-gen-status')">📋 Copy Prompt</button>
+        <span class="copy-status" id="copy-gen-status"></span>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">STEP 02 — PASTE THE RESPONSE</div>
+      <div class="step-title">Paste the JSON Back Here</div>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:12px">Paste the full JSON the AI gave you, then click Load.</p>
+      <textarea class="json-area" id="session-json-input" placeholder="Paste JSON here…"></textarea>
+      <div class="copy-btn-row">
+        <button class="btn btn-primary btn-sm" onclick="loadSessionJSON()">✅ Load Session</button>
+        <span class="copy-status" id="load-status"></span>
+      </div>
+    </div>
+  </div>
+  <div id="games-list" class="games-wrap" style="display:none">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--muted);letter-spacing:2px;margin-bottom:12px" id="session-header"></div>
+    <div class="pgbar-wrap"><div class="pgbar" id="session-progress" style="width:0%"></div></div>
+    <div id="games-container"></div>
+  </div>
+</div>
+
+<!-- ══════════════ SCREEN 3 · PRE-EXERCISE SLIDES ══════════════ -->
+<div id="screen-pre" class="screen">
+  <div class="top-nav">
+    <div class="logo">SpeakForge<span>PREP SLIDES</span></div>
+    <div class="nav-tabs">
+      <button class="nav-tab" onclick="showScreen('screen-games')">✕ Cancel</button>
+    </div>
+  </div>
+  <div class="slide-wrap" id="pre-slides-wrap"></div>
+  <div class="slide-nav" style="width:100%;max-width:800px;margin-top:8px">
+    <button class="btn btn-outline btn-sm" id="pre-prev" onclick="navSlide(-1)">← Back</button>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:7px">
+      <div class="sdots" id="pre-dots"></div>
+      <div class="sprogress" id="pre-prog"></div>
+    </div>
+    <button class="btn btn-blue btn-sm" id="pre-next" onclick="navSlide(1)">Next →</button>
+  </div>
+</div>
+
+<!-- ══════════════ SCREEN 4 · RECORDING ══════════════ -->
+<div id="screen-session" class="screen">
+  <div class="top-nav">
+    <div id="session-label" class="logo">SpeakForge<span>RECORDING</span></div>
+    <div class="nav-tabs">
+      <button class="nav-tab" onclick="stopSession(true)">✕ Exit</button>
+    </div>
+  </div>
+  <div class="session-layout">
+    <div>
+      <div class="vcont">
+        <video id="preview-video" autoplay muted playsinline></video>
+        <div class="voverlay">
+          <div class="rec-ind"><div class="rec-dot" id="rec-dot"></div><span id="rec-label">RECORDING</span></div>
+          <div class="timer-disp" id="s-timer">0:00</div>
+        </div>
+      </div>
+      <div class="ctrl-row">
+        <button class="btn btn-danger" onclick="stopSession(false)">⏹ Stop &amp; Analyse</button>
+        <button class="btn btn-outline" onclick="restartRecording()">↺ Re-record</button>
+      </div>
+    </div>
+    <div class="side-panel">
+      <div class="psec">
+        <div class="ptitle">Current Exercise</div>
+        <div class="cg-box">
+          <div class="cg-name" id="live-name"></div>
+          <div class="cg-prompt" id="live-prompt"></div>
+        </div>
+      </div>
+      <div class="psec">
+        <div class="ptitle">Live Transcript</div>
+        <div class="tbox" id="live-transcript"><span style="font-style:italic">Waiting for speech…</span></div>
+      </div>
+      <div class="psec">
+        <div class="ptitle">Quick Tips</div>
+        <div id="live-tips" style="font-size:.85rem;color:var(--muted);line-height:1.7"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SCREEN 5 · ANALYSIS ══════════════ -->
+<div id="screen-analyse" class="screen">
+  <div class="top-nav">
+    <div class="logo">SpeakForge<span>ANALYSIS</span></div>
+    <div class="nav-tabs">
+      <button class="nav-tab" onclick="showScreen('screen-games')">← Back to Session</button>
+      <button class="nav-tab" onclick="showScreen('screen-recordings')">📹 Recordings</button>
+    </div>
+  </div>
+
+  <!-- paste workflow -->
+  <div id="analyse-workflow" class="workflow-steps" style="width:100%;max-width:960px">
+    <div class="step-card">
+      <div class="step-num">STEP 01 — COPY EVALUATION PROMPT</div>
+      <div class="step-title">Send to Claude.ai or ChatGPT</div>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:12px">Your transcript is already inside. Paste into the AI and send.</p>
+      <div class="json-area" id="eval-prompt-box" contenteditable="false"></div>
+      <div class="copy-btn-row">
+        <button class="btn btn-outline btn-sm" onclick="copyBox('eval-prompt-box','copy-eval-status')">📋 Copy Prompt</button>
+        <span class="copy-status" id="copy-eval-status"></span>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">STEP 02 — PASTE FEEDBACK JSON</div>
+      <div class="step-title">Paste the Result Here</div>
+      <textarea class="json-area" id="eval-json-input" placeholder="Paste feedback JSON here…"></textarea>
+      <div class="copy-btn-row">
+        <button class="btn btn-primary btn-sm" onclick="loadFeedback()">✅ Show My Analysis</button>
+        <span class="copy-status" id="load-eval-status"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- analysis deck -->
+  <div id="analysis-deck" style="display:none;width:100%;max-width:960px">
+    <div class="an-nav">
+      <div class="an-pills" id="an-pills"></div>
+      <div style="display:flex;gap:10px">
+        <button class="btn btn-outline btn-sm" id="a-prev" onclick="navAn(-1)">← Prev</button>
+        <button class="btn btn-blue btn-sm" id="a-next" onclick="navAn(1)">Next →</button>
+      </div>
+    </div>
+
+    <!-- A: Scores -->
+    <div class="aslide" id="aslide-scores">
+      <div class="sec-title">📊 SCORECARD</div>
+      <div class="fb-sec" style="padding:0;overflow:hidden">
+        <table class="sc-table" id="sc-table"></table>
+      </div>
+      <div class="fb-sec" id="score-summary"></div>
+    </div>
+
+    <!-- B: Feedback -->
+    <div class="aslide" id="aslide-feedback">
+      <div class="sec-title">💬 DETAILED FEEDBACK</div>
+      <div id="fb-overall"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:13px">
+        <div id="fb-strengths"></div>
+        <div id="fb-improve"></div>
+      </div>
+      <div id="fb-next"></div>
+    </div>
+
+    <!-- C: Language -->
+    <div class="aslide" id="aslide-language">
+      <div class="sec-title">🔤 LANGUAGE ANALYSIS</div>
+      <div class="fb-sec" id="common-words"></div>
+      <div class="fb-sec" id="grammar-box" style="margin-top:13px"></div>
+    </div>
+
+    <!-- D: Vocab -->
+    <div class="aslide" id="aslide-vocab">
+      <div class="sec-title">📚 VOCABULARY UPGRADE</div>
+      <div class="info-box" style="margin-bottom:13px">These are powerful words you can use <strong>instead of simpler ones</strong>. Try using at least 2 in your next exercise.</div>
+      <div class="fb-sec" style="padding:0;overflow:hidden">
+        <table class="vt" id="vocab-table"></table>
+      </div>
+    </div>
+
+    <!-- E: Action Plan -->
+    <div class="aslide" id="aslide-plan">
+      <div class="sec-title">🎯 YOUR ACTION PLAN</div>
+      <div id="action-plan"></div>
+      <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="nextGame()">▶ Next Exercise</button>
+        <button class="btn btn-outline" onclick="replayCurrentGame()">↺ Redo This</button>
+        <button class="btn btn-outline" onclick="showScreen('screen-recordings')">📹 View Recordings</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SCREEN 6 · RECORDINGS ══════════════ -->
+<div id="screen-recordings" class="screen">
+  <div class="top-nav">
+    <div class="logo">SpeakForge<span>MY RECORDINGS</span></div>
+    <div class="nav-tabs"><button class="nav-tab" onclick="showScreen('screen-games')">← Back</button></div>
+  </div>
+  <div class="rec-list" id="recordings-list"></div>
+</div>
+
+<script>
+/* ─── CONSTANTS ─── */
+const ALL_SKILLS=["Storytelling","Interview Answers","Debating","Stand-up Comedy","Persuasive Speaking","Improvisation","Emotional Expression","Active Listening Response","Vocal Variety","Body Language","Pitch & Negotiation","Public Speaking","Small Talk","Conflict Resolution"];
+const PLABELS={clarity_articulation:"Clarity & Articulation",structure_flow:"Structure & Flow",confidence_presence:"Confidence & Presence",emotional_range:"Emotional Range",vocabulary:"Vocabulary & Word Choice",relevance:"Relevance to Prompt",storytelling:"Storytelling Technique",engagement:"Engagement & Charisma",rule_adherence:"Rule Adherence",overall:"Overall Effectiveness"};
+const PICONS={clarity_articulation:"🗣️",structure_flow:"📋",confidence_presence:"💪",emotional_range:"🎭",vocabulary:"📖",relevance:"🎯",storytelling:"📖",engagement:"✨",rule_adherence:"📜",overall:"⭐"};
+const AN_SLIDES=['aslide-scores','aslide-feedback','aslide-language','aslide-vocab','aslide-plan'];
+const AN_LABELS=['📊 Scores','💬 Feedback','🔤 Language','📚 Vocab','🎯 Plan'];
+
+/* ─── STATE ─── */
+let selectedSkills=[],sessionGames=[],currentGameIndex=0;
+let mediaRecorder=null,recordedChunks=[],stream=null;
+let recognition=null,liveTranscript="";
+let timerInterval=null,timerSeconds=0;
+let recordings=[],currentRecordingBlob=null;
+let preSlideIdx=0,preSlides=[],preGameIdx=0;
+let anIdx=0;
+
+/* ─── INIT ─── */
+(function(){
+  const g=document.getElementById('skill-grid');
+  ALL_SKILLS.forEach(s=>{
+    const c=document.createElement('div');
+    c.className='skill-chip';c.textContent=s;
+    c.onclick=()=>toggleSkill(s,c);g.appendChild(c);
+  });
+})();
+
+function toggleSkill(s,el){
+  if(selectedSkills.includes(s)){selectedSkills=selectedSkills.filter(x=>x!==s);el.classList.remove('selected');}
+  else{selectedSkills.push(s);el.classList.add('selected');}
+}
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+  if(id==='screen-recordings') renderRecordings();
+}
+
+/* ─── GENERATE SESSION ─── */
+function generateSession(){
+  const topic=document.getElementById('topic-input').value.trim();
+  if(!topic){alert('Please enter a topic!');return;}
+  if(!selectedSkills.length){alert('Please select at least one skill!');return;}
+  const count=document.getElementById('session-length').value;
+  document.getElementById('gen-prompt-box').textContent=buildGenPrompt(topic,selectedSkills,count);
+  showScreen('screen-games');
+  document.getElementById('gen-workflow').style.display='flex';
+  document.getElementById('games-list').style.display='none';
+}
+
+function buildGenPrompt(topic,skills,count){
+return `You are a professional speaking coach and improv trainer. Create a ${count}-exercise speaking session for a solo learner practicing alone with camera and microphone.
+
+Topic: "${topic}"
+Skills to focus on: ${skills.join(', ')}
+
+Return ONLY valid JSON, no markdown, no explanation:
+
+{
+  "session_title": "Short catchy session title",
+  "topic": "${topic}",
+  "skills": ${JSON.stringify(skills)},
+  "games": [
+    {
+      "id": 1,
+      "title": "Creative exercise name (like acting class game names)",
+      "skill": "Primary skill this trains",
+      "duration_minutes": 2,
+      "description": "What this exercise trains and WHY it works — 2-3 sentences.",
+      "prompt": "The SPECIFIC scenario or task. Make it concrete, vivid, and engaging with a clear situation.",
+      "constraints": ["Rule 1 with a time limit or restriction", "Rule 2", "Rule 3"],
+      "tips": ["Specific actionable tip 1", "Tip 2", "Tip 3", "Tip 4"],
+      "example": "A 3-4 sentence example of an IDEAL response — showing great structure, emotion, and engagement.",
+      "common_mistakes": ["Beginner mistake 1", "Beginner mistake 2"],
+      "evaluation_focus": ["What the judge looks for 1", "What to look for 2", "3"]
+    }
+  ]
+}
+
+Use real acting/improv techniques: Yes-And, Hot Seat, Emotional Replay, Status Games, Devil's Advocate, FORD method, STAR method, Rule of Three, etc. Each exercise must be meaningfully different.`;
+}
+
+function loadSessionJSON(){
+  const raw=document.getElementById('session-json-input').value.trim();
+  try{
+    let c=raw.replace(/^```json\s*/,'').replace(/^```\s*/,'').replace(/```$/,'').trim();
+    const data=JSON.parse(c);
+    if(!data.games||!Array.isArray(data.games)) throw 0;
+    sessionGames=data.games; currentGameIndex=0;
+    renderGames(data);
+    document.getElementById('load-status').textContent='✓ Session loaded!';
+    document.getElementById('load-status').style.color='var(--success)';
+    document.getElementById('gen-workflow').style.display='none';
+  }catch(e){
+    document.getElementById('load-status').textContent='✗ Invalid JSON — check the paste';
+    document.getElementById('load-status').style.color='var(--accent3)';
+  }
+}
+
+/* ─── RENDER GAME CARDS ─── */
+function hl(text){
+  return text
+    .replace(/"([^"]+)"/g,'<span class="hl">"$1"</span>')
+    .replace(/\b(\d+\s*(?:seconds?|minutes?|words?|sentences?))\b/gi,'<span class="hl2">$1</span>')
+    .replace(/\b(imagine|pretend|act as|convince|argue|describe|explain|tell|share|debate|pitch|perform)\b/gi,'<span class="hl3">$1</span>');
+}
+
+function renderGames(data){
+  document.getElementById('session-header').textContent=data.session_title||'Your Session';
+  const con=document.getElementById('games-container');
+  con.innerHTML='';
+  data.games.forEach((game,i)=>{
+    const done=recordings.some(r=>r.gameIndex===i);
+    const div=document.createElement('div');
+    div.className='game-card'; div.id=`game-card-${i}`;
+    const conHTML=(game.constraints||[]).map(c=>`<div class="constraint-item"><div class="c-icon">⚡</div><span>${c}</span></div>`).join('');
+    const tipHTML=(game.tips||[]).map(t=>`<div class="tip-chip">${t}</div>`).join('');
+    const misHTML=(game.common_mistakes||[]).map(m=>`<div class="mistake-item"><span style="flex-shrink:0">⚠️</span>${m}</div>`).join('');
+    div.innerHTML=`
+      <div class="game-card-header">
+        <div>
+          <div class="game-number">EXERCISE ${i+1} of ${data.games.length} &nbsp;·&nbsp; ${game.duration_minutes} min &nbsp;·&nbsp;
+            ${done?'<span style="color:var(--success)">✓ Completed</span>':'<span style="color:var(--muted)">Not started</span>'}
+          </div>
+          <div class="game-title">${game.title}</div>
+        </div>
+        <div class="game-skill-tag">${game.skill}</div>
+      </div>
+      <p class="game-desc">${game.description}</p>
+      <div class="prompt-block">
+        <div class="pb-label">🎯 Your Task</div>
+        <div class="pb-text">${hl(game.prompt)}</div>
+      </div>
+      <div class="sub-label">📋 Constraints &amp; Rules</div>
+      <div class="constraint-list">${conHTML}</div>
+      <div class="sub-label">💡 Tips for Best Performance</div>
+      <div class="tips-grid">${tipHTML}</div>
+      ${misHTML?`<div class="sub-label">⚠️ Common Mistakes to Avoid</div>${misHTML}`:''}
+      <div style="margin-top:20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn-primary btn-sm" onclick="openPreSlides(${i})">▶ Prep &amp; Start</button>
+        ${done?`<button class="btn btn-outline btn-sm" onclick="openPreSlides(${i})">↺ Redo</button>`:''}
+      </div>`;
+    con.appendChild(div);
+  });
+  document.getElementById('games-list').style.display='block';
+  updatePg();
+}
+
+function updatePg(){
+  const done=new Set(recordings.map(r=>r.gameIndex)).size;
+  const pct=sessionGames.length?(done/sessionGames.length)*100:0;
+  document.getElementById('session-progress').style.width=pct+'%';
+}
+
+/* ─── PRE-EXERCISE SLIDES ─── */
+function openPreSlides(index){
+  preGameIdx=index;
+  const game=sessionGames[index];
+  preSlides=buildPreSlides(game,index);
+  preSlideIdx=0;
+  const wrap=document.getElementById('pre-slides-wrap');
+  wrap.innerHTML='';
+  preSlides.forEach((html,i)=>{
+    const d=document.createElement('div');
+    d.className='slide'+(i===0?' active':'');
+    d.id=`ps-${i}`; d.innerHTML=html;
+    wrap.appendChild(d);
+  });
+  const dots=document.getElementById('pre-dots');
+  dots.innerHTML=preSlides.map((_,i)=>`<div class="sdot${i===0?' active':''}" onclick="goSlide(${i})"></div>`).join('');
+  updPreNav();
+  showScreen('screen-pre');
+}
+
+function buildPreSlides(game,idx){
+  const slides=[];
+
+  // Slide 1: Overview
+  slides.push(`
+    <div class="slide-badge">EXERCISE ${idx+1} · OVERVIEW</div>
+    <div class="slide-title">${game.title}</div>
+    <div class="slide-body">
+      <div style="background:rgba(232,255,71,.08);border:1px solid rgba(232,255,71,.2);border-radius:10px;padding:14px;margin-bottom:16px">
+        <div style="font-family:'DM Mono',monospace;font-size:.7rem;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px">Skill Being Trained</div>
+        <div style="font-size:1.1rem;font-weight:700;color:var(--accent)">${game.skill}</div>
+      </div>
+      <div class="s2col">
+        <div class="mini-card"><div class="mc-lbl">⏱ Duration</div><div class="mc-val">${game.duration_minutes} minutes</div></div>
+        <div class="mini-card"><div class="mc-lbl">📋 Rules</div><div class="mc-val">${(game.constraints||[]).length} constraints to follow</div></div>
+      </div>
+      <p style="margin-top:16px">${game.description}</p>
+    </div>`);
+
+  // Slide 2: Your Task
+  slides.push(`
+    <div class="slide-badge">EXERCISE ${idx+1} · YOUR TASK</div>
+    <div class="slide-title">WHAT YOU MUST DO</div>
+    <div class="slide-body">
+      <div class="example-box" style="border-color:var(--accent);background:rgba(232,255,71,.05);font-style:normal">
+        <span class="ex-label" style="color:var(--accent)">🎯 The Prompt</span>
+        ${game.prompt}
+      </div>
+      <div style="margin-top:16px">
+        <div style="font-size:.75rem;font-family:'DM Mono',monospace;color:var(--warn);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px">⚡ Rules &amp; Constraints</div>
+        ${(game.constraints||[]).map(c=>`<div class="constraint-item" style="margin-bottom:8px"><div class="c-icon">⚡</div><span>${c}</span></div>`).join('')}
+      </div>
+    </div>`);
+
+  // Slide 3: Example of Great Performance
+  slides.push(`
+    <div class="slide-badge">EXERCISE ${idx+1} · EXAMPLE</div>
+    <div class="slide-title">WHAT GREAT<br/><span style="color:var(--success)">LOOKS LIKE</span></div>
+    <div class="slide-body">
+      <p style="margin-bottom:16px">Study the <strong style="color:var(--success)">structure and approach</strong> of this example — not just the words. Notice the opening hook, specific details, and confident close.</p>
+      <div class="example-box">
+        <span class="ex-label">✅ Strong Response Example</span>
+        ${game.example||'Imagine a confident, well-structured response that opens with a hook, uses specific details, follows all the constraints, and closes memorably.'}
+      </div>
+      ${(game.common_mistakes||[]).length?`
+      <div style="margin-top:16px">
+        <div style="font-size:.75rem;font-family:'DM Mono',monospace;color:var(--accent3);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px">⚠️ Avoid These Mistakes</div>
+        <ul>${(game.common_mistakes||[]).map(m=>`<li style="color:var(--accent3)">${m}</li>`).join('')}</ul>
+      </div>`:''}
+    </div>`);
+
+  // Slide 4: Tips for Best Performance
+  slides.push(`
+    <div class="slide-badge">EXERCISE ${idx+1} · TECHNIQUE</div>
+    <div class="slide-title">HOW TO<br/><span style="color:var(--accent2)">PERFORM BEST</span></div>
+    <div class="slide-body">
+      <ol style="gap:12px">
+        ${(game.tips||[]).map(t=>`<li><strong>${t}</strong></li>`).join('')}
+      </ol>
+    </div>`);
+
+  // Slide 5: Ready — start button
+  slides.push(`
+    <div class="slide-badge">EXERCISE ${idx+1} · ACTION</div>
+    <div class="slide-title">YOU'RE READY.<br/><span style="color:var(--accent)">CAMERA ON.</span></div>
+    <div class="slide-body">
+      <p style="margin-bottom:16px">Take a breath. When you press <strong style="color:var(--accent)">Start Recording</strong>, your camera and mic turn on immediately. Go!</p>
+      <div class="s2col">
+        <div class="mini-card" style="border-color:rgba(71,184,255,.3)">
+          <div class="mc-lbl" style="color:var(--accent2)">Your prompt</div>
+          <div class="mc-val" style="font-size:.82rem;color:var(--muted)">${game.prompt.substring(0,120)}${game.prompt.length>120?'…':''}</div>
+        </div>
+        <div class="mini-card" style="border-color:rgba(232,255,71,.3)">
+          <div class="mc-lbl" style="color:var(--accent)">Key rule</div>
+          <div class="mc-val" style="font-size:.82rem;color:var(--muted)">${(game.constraints||['Give it your best!'])[0]}</div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" onclick="startGame(${idx})" style="font-size:1.05rem;padding:16px 40px;margin-top:4px">🎬 Start Recording Now</button>`);
+
+  return slides;
+}
+
+function navSlide(dir){
+  const n=preSlideIdx+dir;
+  if(n<0||n>=preSlides.length) return;
+  goSlide(n);
+}
+function goSlide(i){
+  document.querySelectorAll('#pre-slides-wrap .slide').forEach(s=>s.classList.remove('active'));
+  document.getElementById(`ps-${i}`).classList.add('active');
+  document.querySelectorAll('#pre-dots .sdot').forEach((d,j)=>d.classList.toggle('active',j===i));
+  preSlideIdx=i; updPreNav();
+}
+function updPreNav(){
+  document.getElementById('pre-prev').disabled=preSlideIdx===0;
+  const last=preSlideIdx===preSlides.length-1;
+  const nb=document.getElementById('pre-next');
+  nb.textContent=last?'(Start with button above)':'Next →'; nb.disabled=last;
+  document.getElementById('pre-prog').textContent=`${preSlideIdx+1} / ${preSlides.length}`;
+}
+
+/* ─── RECORDING ─── */
+async function startGame(index){
+  currentGameIndex=index;
+  const game=sessionGames[index];
+  try{stream=await navigator.mediaDevices.getUserMedia({video:true,audio:true});}
+  catch(e){alert('Camera/mic access denied. Please allow access in browser settings.');return;}
+  document.getElementById('preview-video').srcObject=stream;
+  document.getElementById('live-name').textContent=game.title;
+  document.getElementById('live-prompt').textContent=game.prompt;
+  document.getElementById('live-tips').innerHTML=(game.tips||[]).slice(0,3).map(t=>`<div style="margin-bottom:6px">• ${t}</div>`).join('');
+  document.getElementById('session-label').querySelector('span').textContent=`EXERCISE ${index+1}`;
+  showScreen('screen-session');
+  startRecording();
+}
+
+function startRecording(){
+  recordedChunks=[]; liveTranscript=''; timerSeconds=0;
+  document.getElementById('live-transcript').innerHTML='<span style="font-style:italic;color:var(--muted)">Waiting for speech…</span>';
+  document.getElementById('s-timer').textContent='0:00';
+  let mr;
+  try{mr=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp9,opus'});}
+  catch(e){mr=new MediaRecorder(stream);}
+  mediaRecorder=mr;
+  mr.ondataavailable=e=>{if(e.data.size>0)recordedChunks.push(e.data);};
+  mr.start(100);
+  timerInterval=setInterval(()=>{
+    timerSeconds++;
+    const m=Math.floor(timerSeconds/60),s=timerSeconds%60;
+    document.getElementById('s-timer').textContent=`${m}:${s.toString().padStart(2,'0')}`;
+  },1000);
+  if('webkitSpeechRecognition' in window||'SpeechRecognition' in window){
+    const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+    recognition=new SR();
+    recognition.continuous=true; recognition.interimResults=true; recognition.lang='en-US';
+    recognition.onresult=e=>{
+      let fin='',int='';
+      for(let i=e.resultIndex;i<e.results.length;i++){
+        if(e.results[i].isFinal) fin+=e.results[i][0].transcript+' ';
+        else int+=e.results[i][0].transcript;
+      }
+      liveTranscript+=fin;
+      const b=document.getElementById('live-transcript');
+      b.innerHTML=`<span style="color:var(--text)">${liveTranscript}</span><span style="color:var(--muted);font-style:italic">${int}</span>`;
+      b.scrollTop=b.scrollHeight;
+    };
+    recognition.onerror=()=>{};
+    try{recognition.start();}catch(e){}
+  }
+  document.getElementById('rec-dot').classList.remove('idle');
+  document.getElementById('rec-label').textContent='RECORDING';
+}
+
+function stopSession(exit){
+  clearInterval(timerInterval);
+  if(recognition){try{recognition.stop();}catch(e){}}
+  if(mediaRecorder&&mediaRecorder.state!=='inactive'){
+    mediaRecorder.onstop=()=>{
+      currentRecordingBlob=new Blob(recordedChunks,{type:'video/webm'});
+      if(!exit){saveRecording();buildEvalPrompt();showScreen('screen-analyse');}
+    };
+    mediaRecorder.stop();
+  }
+  if(stream){stream.getTracks().forEach(t=>t.stop());stream=null;}
+  if(exit) showScreen('screen-games');
+}
+
+function restartRecording(){
+  clearInterval(timerInterval);
+  if(recognition){try{recognition.stop();}catch(e){}}
+  if(mediaRecorder&&mediaRecorder.state!=='inactive') mediaRecorder.stop();
+  setTimeout(()=>{stream=null;startGame(currentGameIndex);},300);
+}
+
+function saveRecording(){
+  if(!currentRecordingBlob) return;
+  const url=URL.createObjectURL(currentRecordingBlob);
+  const game=sessionGames[currentGameIndex];
+  recordings.unshift({id:Date.now(),gameIndex:currentGameIndex,gameName:game.title,skill:game.skill,transcript:liveTranscript,timestamp:new Date().toLocaleString(),duration:timerSeconds,blobUrl:url});
+}
+
+/* ─── BUILD EVAL PROMPT ─── */
+function buildEvalPrompt(){
+  const game=sessionGames[currentGameIndex];
+  const t=liveTranscript||'(No transcript captured)';
+  document.getElementById('eval-prompt-box').textContent=
+`You are a world-class speaking coach and linguist evaluating a solo speaking practice session.
+
+Exercise: "${game.title}"
+Skill: ${game.skill}
+Prompt given to student: "${game.prompt}"
+Constraints: ${(game.constraints||[]).join('; ')}
+Evaluation focus: ${(game.evaluation_focus||[]).join('; ')}
+
+Student transcript:
+"""
+${t}
+"""
+
+Return ONLY valid JSON (no markdown, no extra text):
+
+{
+  "scores": {
+    "clarity_articulation": 75,
+    "structure_flow": 68,
+    "confidence_presence": 80,
+    "emotional_range": 55,
+    "vocabulary": 72,
+    "relevance": 90,
+    "storytelling": 60,
+    "engagement": 70,
+    "rule_adherence": 85,
+    "overall": 73
+  },
+  "score_notes": {
+    "clarity_articulation": "One specific sentence",
+    "structure_flow": "One specific sentence",
+    "confidence_presence": "One specific sentence",
+    "emotional_range": "One specific sentence",
+    "vocabulary": "One specific sentence",
+    "relevance": "One specific sentence",
+    "storytelling": "One specific sentence",
+    "engagement": "One specific sentence",
+    "rule_adherence": "One specific sentence",
+    "overall": "One specific sentence"
+  },
+  "overall_feedback": "3-4 sentences of holistic coaching feedback — specific, kind, actionable.",
+  "strengths": ["Specific strength 1", "Specific strength 2", "Specific strength 3"],
+  "improvements": ["Actionable improvement 1 with HOW to fix it immediately", "Improvement 2 with specific technique", "Improvement 3"],
+  "next_exercise_tip": "One sentence: what single thing should they focus on next?",
+  "common_words_used": [
+    {"word": "actually", "count": 4, "better_alternatives": ["in fact", "notably", "to be precise"]},
+    {"word": "good", "count": 3, "better_alternatives": ["commendable", "exemplary", "praiseworthy"]},
+    {"word": "like", "count": 5, "better_alternatives": ["such as", "for instance", "akin to"]},
+    {"word": "really", "count": 3, "better_alternatives": ["genuinely", "significantly", "considerably"]},
+    {"word": "thing", "count": 2, "better_alternatives": ["matter", "aspect", "element"]}
+  ],
+  "grammar_corrections": [
+    {"original": "exact phrase from transcript with error", "corrected": "corrected version", "rule": "Grammar rule name and brief explanation"},
+    {"original": "another error", "corrected": "fixed version", "rule": "Rule"}
+  ],
+  "vocabulary_upgrade": [
+    {"new_word": "articulate", "meaning": "able to express ideas clearly and fluently", "example": "She was articulate in explaining the policy shift.", "replaces": "explain well"},
+    {"new_word": "compelling", "meaning": "evoking strong interest or attention", "example": "The speaker made a compelling argument.", "replaces": "interesting"},
+    {"new_word": "succinct", "meaning": "briefly and clearly expressed", "example": "Keep your answer succinct — under two minutes.", "replaces": "short/brief"},
+    {"new_word": "nuanced", "meaning": "characterized by subtle distinctions", "example": "Her response was nuanced and avoided generalizations.", "replaces": "detailed"},
+    {"new_word": "candid", "meaning": "truthful and straightforward", "example": "Be candid about your weaknesses in interviews.", "replaces": "honest"},
+    {"new_word": "leverage", "meaning": "use something to maximum advantage", "example": "Leverage your past experience in the answer.", "replaces": "use"},
+    {"new_word": "advocate", "meaning": "publicly support or recommend", "example": "Advocate for your position with evidence.", "replaces": "support/argue"},
+    {"new_word": "convey", "meaning": "communicate or make known", "example": "Convey your emotions through tone, not just words.", "replaces": "show/tell"},
+    {"new_word": "elaborate", "meaning": "develop or present in detail", "example": "Please elaborate on that point.", "replaces": "explain more"},
+    {"new_word": "perspective", "meaning": "a particular way of viewing things", "example": "From an audience perspective, clarity matters most.", "replaces": "view/opinion"}
+  ],
+  "action_plan": [
+    {"priority": "HIGH", "focus": "Most urgent fix", "exercise": "Specific micro-exercise to do right now in 5 minutes"},
+    {"priority": "MEDIUM", "focus": "What to build on this week", "exercise": "How to practise this consistently"},
+    {"priority": "LOW", "focus": "Long-term development area", "exercise": "Habit to build over the next month"}
+  ]
+}`;
+  document.getElementById('analysis-deck').style.display='none';
+  document.getElementById('analyse-workflow').style.display='flex';
+}
+
+function copyBox(bid,sid){
+  const el=document.getElementById(bid);
+  const txt=el.tagName==='TEXTAREA'?el.value:el.textContent;
+  navigator.clipboard.writeText(txt).then(()=>{
+    document.getElementById(sid).textContent='✓ Copied!';
+    setTimeout(()=>document.getElementById(sid).textContent='',2500);
+  });
+}
+
+/* ─── LOAD & RENDER FEEDBACK ─── */
+function loadFeedback(){
+  const raw=document.getElementById('eval-json-input').value.trim();
+  try{
+    let c=raw.replace(/^```json\s*/,'').replace(/^```\s*/,'').replace(/```$/,'').trim();
+    const data=JSON.parse(c);
+    if(!data.scores) throw 0;
+    renderDeck(data);
+    document.getElementById('load-eval-status').textContent='✓ Analysis ready!';
+    document.getElementById('load-eval-status').style.color='var(--success)';
+    if(recordings.length>0) recordings[0].scores=data.scores;
+  }catch(e){
+    document.getElementById('load-eval-status').textContent='✗ Invalid JSON — check the paste';
+    document.getElementById('load-eval-status').style.color='var(--accent3)';
+  }
+}
+
+function renderDeck(data){
+  document.getElementById('analyse-workflow').style.display='none';
+  document.getElementById('analysis-deck').style.display='block';
+
+  // pills
+  document.getElementById('an-pills').innerHTML=AN_LABELS.map((l,i)=>`<button class="apill${i===0?' active':''}" onclick="goAn(${i})">${l}</button>`).join('');
+
+  /* ── SLIDE A: Scores ── */
+  const tbl=document.getElementById('sc-table');
+  tbl.innerHTML=`<tr><th>Parameter</th><th>Score /100</th><th>Progress</th><th>Coach Note</th></tr>`;
+  Object.entries(data.scores).forEach(([k,v])=>{
+    const cls=v>=75?'hi':v>=50?'mid':'lo';
+    const bCls=v>=75?'bhi':v>=50?'bmid':'blo';
+    const note=(data.score_notes||{})[k]||'';
+    const tr=document.createElement('tr');
+    tr.innerHTML=`
+      <td>${PICONS[k]||''} <strong>${PLABELS[k]||k}</strong></td>
+      <td><span class="snum ${cls}">${v}</span></td>
+      <td><div class="bar-wrap"><div class="bar-fill ${bCls}" style="width:${v}%"></div></div></td>
+      <td style="color:var(--muted);font-size:.82rem;max-width:200px">${note}</td>`;
+    tbl.appendChild(tr);
+  });
+  document.getElementById('score-summary').innerHTML=`
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--accent);margin-bottom:10px">OVERALL ASSESSMENT</div>
+    <p class="fb-para">${data.overall_feedback||''}</p>`;
+
+  /* ── SLIDE B: Feedback ── */
+  document.getElementById('fb-overall').innerHTML=`
+    <div class="fb-sec">
+      <div class="fb-title yellow">📝 COACHING NOTES</div>
+      <p class="fb-para">${data.overall_feedback||''}</p>
+    </div>`;
+  document.getElementById('fb-strengths').innerHTML=`
+    <div class="fb-sec" style="height:100%">
+      <div class="fb-title green">💪 WHAT YOU NAILED</div>
+      <div class="fb-list">${(data.strengths||[]).map(s=>`<div class="fb-item"><div class="fi-icon">✅</div>${s}</div>`).join('')}</div>
+    </div>`;
+  document.getElementById('fb-improve').innerHTML=`
+    <div class="fb-sec" style="height:100%">
+      <div class="fb-title red">🔧 WHAT TO FIX</div>
+      <div class="fb-list">${(data.improvements||[]).map(s=>`<div class="fb-item"><div class="fi-icon">🎯</div>${s}</div>`).join('')}</div>
+    </div>`;
+  document.getElementById('fb-next').innerHTML=`
+    <div class="fb-sec" style="margin-top:12px">
+      <div class="fb-title blue">⚡ FOCUS FOR NEXT EXERCISE</div>
+      <p class="fb-para" style="font-size:1rem;color:var(--text)">${data.next_exercise_tip||''}</p>
+    </div>`;
+
+  /* ── SLIDE C: Language ── */
+  const cw=data.common_words_used||[];
+  document.getElementById('common-words').innerHTML=`
+    <div class="fb-title yellow">🔁 OVERUSED WORDS</div>
+    <p class="fb-para" style="margin-bottom:14px">These words appeared too often. Swap them for stronger alternatives below.</p>
+    <table style="width:100%;border-collapse:collapse">
+      <tr style="background:var(--surface)">
+        <th style="padding:9px 13px;text-align:left;font-family:'DM Mono',monospace;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid var(--border)">Word Used</th>
+        <th style="padding:9px 13px;text-align:left;font-family:'DM Mono',monospace;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid var(--border)">Times</th>
+        <th style="padding:9px 13px;text-align:left;font-family:'DM Mono',monospace;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid var(--border)">Better Alternatives</th>
+      </tr>
+      ${cw.map(w=>`
+        <tr>
+          <td style="padding:11px 13px;border-bottom:1px solid rgba(42,42,58,.5)"><span class="pill-red">${w.word}</span></td>
+          <td style="padding:11px 13px;border-bottom:1px solid rgba(42,42,58,.5);font-family:'DM Mono',monospace;color:var(--accent3)">×${w.count}</td>
+          <td style="padding:11px 13px;border-bottom:1px solid rgba(42,42,58,.5)">${(w.better_alternatives||[]).map(a=>`<span class="pill-blue">${a}</span>`).join('')}</td>
+        </tr>`).join('')}
+    </table>`;
+
+  const gc=data.grammar_corrections||[];
+  document.getElementById('grammar-box').innerHTML=`
+    <div class="fb-title red" style="margin-bottom:12px">✏️ GRAMMAR CORRECTIONS</div>
+    ${gc.length
+      ?`<table class="gt">
+          <tr><th>What You Said</th><th>Corrected Version</th><th>Grammar Rule</th></tr>
+          ${gc.map(g=>`
+            <tr>
+              <td><span class="gerr">${g.original}</span></td>
+              <td><span class="gfix">✓ ${g.corrected}</span></td>
+              <td style="color:var(--muted);font-size:.81rem">${g.rule}</td>
+            </tr>`).join('')}
+        </table>`
+      :'<p class="fb-para" style="color:var(--success)">✅ No significant grammar issues detected. Great work!</p>'}`;
+
+  /* ── SLIDE D: Vocab ── */
+  const vu=data.vocabulary_upgrade||[];
+  const vt=document.getElementById('vocab-table');
+  vt.innerHTML=`<tr><th>#</th><th>New Word</th><th>Meaning &amp; Example</th><th>Replaces</th></tr>`;
+  vu.forEach((v,i)=>{
+    const tr=document.createElement('tr');
+    tr.innerHTML=`
+      <td style="color:var(--muted);font-family:'DM Mono',monospace;font-size:.8rem">${i+1}</td>
+      <td><div class="vword">${v.new_word}</div></td>
+      <td><div class="vmean">${v.meaning}</div><div class="vex">"${v.example}"</div></td>
+      <td><span class="pill-red">${v.replaces}</span></td>`;
+    vt.appendChild(tr);
+  });
+
+  /* ── SLIDE E: Action Plan ── */
+  const ap=data.action_plan||[];
+  const pColors={HIGH:'var(--accent3)',MEDIUM:'var(--warn)',LOW:'var(--success)'};
+  document.getElementById('action-plan').innerHTML=ap.map(item=>`
+    <div class="aplan-item" style="border-left:3px solid ${pColors[item.priority]||'var(--border)'}">
+      <div class="ap-badge" style="background:${pColors[item.priority]||'var(--border)'}">${item.priority} PRIORITY</div>
+      <div class="ap-focus">${item.focus}</div>
+      <div class="ap-ex">${item.exercise}</div>
+    </div>`).join('');
+
+  anIdx=0;
+  AN_SLIDES.forEach((id,i)=>document.getElementById(id).classList.toggle('active',i===0));
+  document.getElementById('a-prev').disabled=true;
+  document.getElementById('a-next').disabled=false;
+}
+
+function navAn(dir){const n=anIdx+dir;if(n>=0&&n<AN_SLIDES.length) goAn(n);}
+function goAn(i){
+  AN_SLIDES.forEach((id,j)=>document.getElementById(id).classList.toggle('active',j===i));
+  document.querySelectorAll('.apill').forEach((p,j)=>p.classList.toggle('active',j===i));
+  anIdx=i;
+  document.getElementById('a-prev').disabled=i===0;
+  document.getElementById('a-next').disabled=i===AN_SLIDES.length-1;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ─── NEXT / REPLAY ─── */
+function nextGame(){
+  const n=currentGameIndex+1;
+  showScreen('screen-games'); updatePg();
+  if(n<sessionGames.length){
+    setTimeout(()=>{const el=document.getElementById(`game-card-${n}`);if(el)el.scrollIntoView({behavior:'smooth',block:'center'});},200);
+  } else {
+    setTimeout(()=>alert('🎉 Session complete! Check your recordings to review all your takes.'),300);
+  }
+}
+function replayCurrentGame(){
+  document.getElementById('analysis-deck').style.display='none';
+  document.getElementById('analyse-workflow').style.display='flex';
+  openPreSlides(currentGameIndex);
+}
+
+/* ─── RECORDINGS ─── */
+function renderRecordings(){
+  const list=document.getElementById('recordings-list');
+  if(!recordings.length){list.innerHTML='<div class="empty-state">No recordings yet.<br/>Complete some exercises to see them here.</div>';return;}
+  list.innerHTML='';
+  recordings.forEach(rec=>{
+    const div=document.createElement('div');
+    div.className='rec-item';
+    div.innerHTML=`
+      ${rec.blobUrl?`<video src="${rec.blobUrl}" controls></video>`:'<div style="width:180px;height:110px;background:var(--surface);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:\'DM Mono\',monospace;font-size:.75rem">No video</div>'}
+      <div class="rec-meta">
+        <div class="rg-name">${rec.gameName||'Exercise'}</div>
+        <div class="r-time">${rec.timestamp} · ${Math.floor((rec.duration||0)/60)}m ${(rec.duration||0)%60}s · ${rec.skill||''}</div>
+        <div class="r-trans">${rec.transcript||'(no transcript)'}</div>
+        ${rec.scores?`<div style="margin-top:8px;font-family:'DM Mono',monospace;font-size:.8rem;color:var(--accent)">Overall: ${rec.scores.overall}/100</div>`:''}
+      </div>
+      ${rec.blobUrl?`<a class="btn btn-outline btn-sm" download="speakforge-${rec.id}.webm" href="${rec.blobUrl}">⬇ Save</a>`:''}`;
+    list.appendChild(div);
+  });
+}
+</script>
+</body>
+</html>
