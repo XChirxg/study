@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The World of Academic Research — A Human Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --bg2: #13161d;
+    --bg3: #1a1e28;
+    --bg4: #222736;
+    --border: #2a2f3f;
+    --border2: #353b52;
+    --text: #e8eaf0;
+    --text2: #9ba3b8;
+    --text3: #6b748a;
+    --accent: #7c6af7;
+    --accent2: #5e4fd4;
+    --gold: #f0a832;
+    --gold2: #c47f1a;
+    --teal: #2dd4bf;
+    --coral: #f87171;
+    --green: #4ade80;
+    --pink: #f472b6;
+    --blue: #60a5fa;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  /* ===== NAVIGATION ===== */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13, 15, 20, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 2rem;
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  nav a {
+    color: var(--text2);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+
+  nav a:hover { color: var(--text); background: var(--bg3); }
+
+  nav .logo {
+    color: var(--gold);
+    font-family: 'DM Serif Display', serif;
+    font-size: 1rem;
+    margin-right: 1.5rem;
+    letter-spacing: 0;
+    text-transform: none;
+    background: none;
+  }
+
+  nav .logo:hover { background: none; color: var(--gold); }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124, 106, 247, 0.06) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .hero-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(124,106,247,0.3);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+  }
+
+  h1.hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.1;
+    max-width: 900px;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+
+  h1.hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--text2);
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-scroll {
+    font-size: 0.78rem;
+    color: var(--text3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    animation: bounce 2s infinite;
+  }
+
+  .hero-scroll::after {
+    content: '↓';
+    font-size: 1.2rem;
+    color: var(--accent);
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* ===== SECTION LAYOUT ===== */
+  section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  .chapter-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .chapter-tag::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background: var(--gold2);
+  }
+
+  h2.section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+
+  .story-text {
+    color: var(--text2);
+    font-size: 1.05rem;
+    max-width: 720px;
+    margin-bottom: 1.5rem;
+  }
+
+  .story-text strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline {
+    position: relative;
+    padding-left: 2.5rem;
+    margin: 3rem 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--accent), var(--teal), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 0.35rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+
+  .timeline-year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+
+  .timeline-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.9rem;
+    color: var(--text2);
+  }
+
+  /* ===== PAPER CARD ===== */
+  .paper-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .paper-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+  }
+
+  .paper-card:hover { border-color: var(--border2); }
+
+  .paper-card.gold::before { background: var(--gold); }
+  .paper-card.teal::before { background: var(--teal); }
+  .paper-card.coral::before { background: var(--coral); }
+  .paper-card.green::before { background: var(--green); }
+  .paper-card.pink::before { background: var(--pink); }
+  .paper-card.blue::before { background: var(--blue); }
+
+  .paper-journal {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text3);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .paper-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+  }
+
+  .paper-authors {
+    font-size: 0.85rem;
+    color: var(--text2);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+  }
+
+  .paper-desc {
+    font-size: 0.88rem;
+    color: var(--text2);
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .paper-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid rgba(124,106,247,0.3);
+    padding: 0.3rem 0.9rem;
+    border-radius: 20px;
+    transition: all 0.2s;
+  }
+
+  .paper-link:hover { background: rgba(124,106,247,0.1); }
+  .paper-link.gold-link { color: var(--gold); border-color: rgba(240,168,50,0.3); }
+  .paper-link.gold-link:hover { background: rgba(240,168,50,0.1); }
+  .paper-link.teal-link { color: var(--teal); border-color: rgba(45,212,191,0.3); }
+  .paper-link.teal-link:hover { background: rgba(45,212,191,0.1); }
+
+  /* ===== TABLE ===== */
+  .tbl-wrap {
+    overflow-x: auto;
+    margin: 2rem 0;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  thead { background: var(--bg3); }
+
+  th {
+    padding: 0.85rem 1.1rem;
+    text-align: left;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text3);
+    font-weight: 500;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 0.85rem 1.1rem;
+    color: var(--text2);
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  tbody tr { transition: background 0.15s; }
+  tbody tr:hover { background: var(--bg3); }
+
+  td strong { color: var(--text); font-weight: 500; }
+
+  td a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.82rem;
+  }
+
+  td a:hover { text-decoration: underline; }
+
+  .badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.55rem;
+    border-radius: 4px;
+  }
+
+  .badge-purple { background: rgba(124,106,247,0.15); color: var(--accent); }
+  .badge-gold { background: rgba(240,168,50,0.15); color: var(--gold); }
+  .badge-teal { background: rgba(45,212,191,0.15); color: var(--teal); }
+  .badge-coral { background: rgba(248,113,113,0.15); color: var(--coral); }
+  .badge-green { background: rgba(74,222,128,0.15); color: var(--green); }
+  .badge-blue { background: rgba(96,165,250,0.15); color: var(--blue); }
+  .badge-pink { background: rgba(244,114,182,0.15); color: var(--pink); }
+
+  /* ===== GRID ===== */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 2rem 0; }
+
+  @media (max-width: 768px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    nav { padding: 0.5rem 1rem; }
+    section { padding: 3rem 1.25rem; }
+  }
+
+  /* ===== INFO BOX ===== */
+  .callout {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    padding: 1.2rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 0.92rem;
+    color: var(--text2);
+  }
+
+  .callout.gold { border-left-color: var(--gold); }
+  .callout.teal { border-left-color: var(--teal); }
+  .callout.coral { border-left-color: var(--coral); }
+
+  .callout-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+  }
+
+  .callout.gold .callout-label { color: var(--gold); }
+  .callout.teal .callout-label { color: var(--teal); }
+  .callout.coral .callout-label { color: var(--coral); }
+
+  /* ===== DIVIDER ===== */
+  .section-divider {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ===== RESEARCH TYPE CARD ===== */
+  .type-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.2rem 1.3rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .type-card:hover { border-color: var(--border2); transform: translateY(-2px); }
+
+  .type-card-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .type-card-name {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+
+  .type-card-desc {
+    font-size: 0.82rem;
+    color: var(--text2);
+    line-height: 1.55;
+  }
+
+  /* ===== QUOTE ===== */
+  blockquote {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--text2);
+    border-left: 3px solid var(--gold);
+    padding: 1rem 1.5rem;
+    margin: 2.5rem 0;
+    line-height: 1.6;
+  }
+
+  blockquote cite {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 0.82rem;
+    color: var(--text3);
+    margin-top: 0.8rem;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--text3);
+    font-size: 0.82rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ===== CODE ===== */
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    background: var(--bg3);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    color: var(--teal);
+  }
+
+  /* ===== KEYWORD TAGS ===== */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .tag {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  /* ===== BIG NUMBER ===== */
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+
+  .stat-box {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    min-width: 160px;
+    flex: 1;
+  }
+
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--text2);
+  }
+
+  /* === BACK TO TOP === */
+  .back-top {
+    display: inline-block;
+    margin: 2rem auto;
+    font-size: 0.8rem;
+    color: var(--text3);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .back-top:hover { color: var(--text); }
+
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#hero" class="logo">∑ Research</a>
+  <a href="#origins">Origins</a>
+  <a href="#evolution">Evolution</a>
+  <a href="#landmark">Landmark Papers</a>
+  <a href="#domains">Domains</a>
+  <a href="#methodology">Methodology</a>
+  <a href="#data-types">Data Types</a>
+  <a href="#tech-ai">Tech & AI</a>
+  <a href="#tests">Statistical Tests</a>
+  <a href="#journals">Top Journals</a>
+  <a href="#universities">Universities</a>
+</nav>
+
+<!-- HERO -->
+<div id="hero" class="hero">
+  <div class="hero-tag">A Complete Guide</div>
+  <h1 class="hero-title">The World of Academic Research<br><em>told as a human story</em></h1>
+  <p class="hero-sub">From ancient cave paintings to arXiv preprints — how humanity learned to learn, and how it documents what it knows.</p>
+  <div class="hero-scroll">Begin the story</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 1: ORIGINS -->
+<!-- ============================================================ -->
+<div class="section-divider"></div>
+<section id="origins">
+  <div class="chapter-tag">Chapter I</div>
+  <h2 class="section-title">Before There Were Papers,<br>There Were Problems</h2>
+
+  <p class="story-text">Imagine you are a farmer in ancient Mesopotamia, 3000 BCE. Your crops keep failing in the western field. You notice the soil is different there — darker, wetter. You try something: you dig channels to drain the water. You observe. You record your marks in clay. <strong>This is research.</strong> You didn't call it that, but you followed every principle that modern researchers follow: ask a question, try something, observe the result, tell others.</p>
+
+  <p class="story-text">For thousands of years, this knowledge lived in heads, in oral traditions, in apprenticeships. The great library of Alexandria tried to centralize it. Islamic scholars in the 9th–12th centuries catalogued it. European monks copied it. But there was no system. When a scholar in Baghdad discovered something new, a scholar in Rome might reach the same conclusion 40 years later — and neither would ever know.</p>
+
+  <blockquote>
+    "If I have seen further, it is by standing on the shoulders of Giants."
+    <cite>— Isaac Newton, in a letter to Robert Hooke, 1676</cite>
+  </blockquote>
+
+  <p class="story-text">The invention of the printing press in 1450 changed everything. Ideas could be copied exactly, sent far, read by many. But <strong>the real revolution came in 1665</strong>, when two journals appeared almost simultaneously, creating the first formal system for sharing research with the world.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-year">1323</div>
+      <div class="timeline-title">The First Learned Society</div>
+      <div class="timeline-desc">Compagnie du Gai Sçavoir founded in Toulouse, France — the oldest recorded institution for organized scholarly exchange.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">1450</div>
+      <div class="timeline-title">Gutenberg's Press</div>
+      <div class="timeline-desc">Movable type printing makes reproducible knowledge possible for the first time. Ideas can travel across continents in weeks instead of decades.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">1660</div>
+      <div class="timeline-title">Royal Society Founded</div>
+      <div class="timeline-desc">The world's first chartered national scientific academy in continuous existence. Newton, Hooke, Wren — all members. A club of curious minds who decided to take notes.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">1665</div>
+      <div class="timeline-title">The First Research Journals Born</div>
+      <div class="timeline-desc"><em>Journal des Sçavans</em> (France) and <em>Philosophical Transactions of the Royal Society</em> (England) both publish their first issues. Research papers — as a concept — are born.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">1880s</div>
+      <div class="timeline-title">The IMRaD Format Emerges</div>
+      <div class="timeline-desc">Introduction, Methods, Results, and Discussion — the structure that almost every scientific paper still uses today — begins to crystallize in the late 19th century and is standardized in 1972.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">1991</div>
+      <div class="timeline-title">arXiv Launches</div>
+      <div class="timeline-desc">Paul Ginsparg creates a free preprint server at Los Alamos. Physics papers can now be shared with the world instantly — before peer review, free to read. The open-science revolution begins.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2023–now</div>
+      <div class="timeline-title">AI Enters Research</div>
+      <div class="timeline-desc">Large language models begin assisting — and sometimes fabricating — research. arXiv bans AI-generated position papers. A new crisis and transformation unfolds simultaneously.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 2: PAPER EVOLUTION -->
+<!-- ============================================================ -->
+<div class="section-divider"></div>
+<section id="evolution">
+  <div class="chapter-tag">Chapter II</div>
+  <h2 class="section-title">How a Research Paper<br>Changed Its Shape</h2>
+
+  <p class="story-text">The earliest "papers" in Philosophical Transactions were just <strong>letters</strong>. Verbose, personal, conversational — written in the first person, with long asides about weather and travel. A scientist might describe an experiment in 5,000 words the way you'd describe your vacation. There was no abstract, no citations list, no methods section.</p>
+
+  <p class="story-text">Over three centuries, under pressure from editors, peer reviewers, word limits, and the sheer volume of papers being published, the research paper compressed and formalized into something nearly universal. Here's how it evolved:</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Era</th>
+          <th>Format</th>
+          <th>Style</th>
+          <th>Peer Review?</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1665–1750</strong></td>
+          <td>Letters & narrative essays</td>
+          <td>First person, chatty, extremely detailed</td>
+          <td>No — editor curated</td>
+          <td>Leeuwenhoek's letters on microbes</td>
+        </tr>
+        <tr>
+          <td><strong>1750–1850</strong></td>
+          <td>Experimental reports</td>
+          <td>More formal; third person begins; figures introduced</td>
+          <td>Informal — society consensus</td>
+          <td>Faraday's electromagnetic rotation papers</td>
+        </tr>
+        <tr>
+          <td><strong>1850–1950</strong></td>
+          <td>Structured article</td>
+          <td>Sections appear: Introduction, Experiment, Conclusions</td>
+          <td>Emerging — formal referees by 1890s</td>
+          <td>Watson & Crick's 900-word DNA paper, 1953</td>
+        </tr>
+        <tr>
+          <td><strong>1950–2000</strong></td>
+          <td>IMRaD becomes standard</td>
+          <td>Abstract + Introduction + Methods + Results + Discussion</td>
+          <td>Yes — double-blind in most journals</td>
+          <td>Most journals standardize by 1972</td>
+        </tr>
+        <tr>
+          <td><strong>2000–2015</strong></td>
+          <td>Digital + open access</td>
+          <td>Supplementary data, hyperlinks, interactive figures</td>
+          <td>Yes + open peer review experiments</td>
+          <td>PLOS ONE launches (2006), PeerJ (2012)</td>
+        </tr>
+        <tr>
+          <td><strong>2015–now</strong></td>
+          <td>Preprint + GitHub + data</td>
+          <td>Paper + code + datasets + video abstract</td>
+          <td>Optional — preprints bypass it</td>
+          <td>AI papers on arXiv (sometimes never peer reviewed)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout gold">
+    <div class="callout-label">The Early Paper Problem</div>
+    Early Philosophical Transactions papers were published with <strong>zero peer review</strong>. Watson and Crick's DNA paper — perhaps the most important biology paper of the 20th century — was accepted by Nature's editor through a gentlemen's club connection. The formal anonymous peer review system only became standard in the 20th century.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 3: LANDMARK PAPERS -->
+<!-- ============================================================ -->
+<div class="section-divider"></div>
+<section id="landmark">
+  <div class="chapter-tag">Chapter III</div>
+  <h2 class="section-title">Papers That Changed Everything</h2>
+
+  <p class="story-text">Some research papers don't just add to knowledge — they <strong>reorganize what humans think they know</strong>. These are the papers that redirected entire fields, won Nobel Prizes, triggered revolutions. Here are the most important ones you can actually read, linked to free access:</p>
+
+  <div class="paper-card gold">
+    <div class="paper-journal">Nature · April 25, 1953 · Biology</div>
+    <div class="paper-title">Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid</div>
+    <div class="paper-authors">J.D. Watson & F.H.C. Crick</div>
+    <div class="paper-desc">Just 900 words. One page. It described the double helix structure of DNA — the molecule of life — and casually mentioned at the end that this structure "immediately suggests a possible copying mechanism for the genetic material." That understatement launched modern biotechnology, gene editing, CRISPR, and personalized medicine. The paper had no experiments — it was pure deduction from X-ray data provided (controversially, without consent) by Rosalind Franklin.</div>
+    <a href="https://www.nature.com/articles/171737a0" class="paper-link gold-link" target="_blank">Read the original paper ↗</a>
+  </div>
+
+  <div class="paper-card">
+    <div class="paper-journal">Annalen der Physik · 1905 · Physics</div>
+    <div class="paper-title">On the Electrodynamics of Moving Bodies (Special Relativity)</div>
+    <div class="paper-authors">Albert Einstein</div>
+    <div class="paper-desc">Einstein was a 26-year-old patent clerk when he submitted four papers in 1905 — any one of which would have made a career. This one proposed that the speed of light is constant for all observers and that time and space are relative. He had no references, no citations, no laboratory. Pure thought. It demolished Newtonian physics that had stood for 200 years.</div>
+    <a href="https://www.fourmilab.ch/etexts/einstein/specrel/" class="paper-link" target="_blank">Read the English translation ↗</a>
+  </div>
+
+  <div class="paper-card teal">
+    <div class="paper-journal">Nature · 1859 · Biology / Earth Sciences</div>
+    <div class="paper-title">On the Origin of Species (Abstract/Summary in Linnean Society)</div>
+    <div class="paper-authors">Charles Darwin</div>
+    <div class="paper-desc">Darwin spent 20 years refining his theory before publishing. When Alfred Russel Wallace independently arrived at the same conclusion in 1858, Darwin rushed. The Linnean Society paper was a joint presentation — Darwin's priority established. His book that followed is the most consequential scientific work in history. It unified all biology under one mechanism: natural selection.</div>
+    <a href="https://darwin-online.org.uk/EditorialIntroductions/Freeman_OntheOriginofSpecies.html" class="paper-link teal-link" target="_blank">Darwin Online archive ↗</a>
+  </div>
+
+  <div class="paper-card coral">
+    <div class="paper-journal">Attention is All You Need · NeurIPS 2017 · AI</div>
+    <div class="paper-title">Attention Is All You Need</div>
+    <div class="paper-authors">Vaswani et al. (Google Brain)</div>
+    <div class="paper-desc">The paper that invented the Transformer architecture — the foundation of every large language model today, including the one generating this page. Before Transformers, AI used recurrent networks that processed language sequentially. Transformers replaced this with "attention mechanisms" that process everything in parallel. GPT, BERT, Claude, and every modern AI descend from this 2017 paper.</div>
+    <a href="https://arxiv.org/abs/1706.03762" class="paper-link" target="_blank">Read on arXiv ↗</a>
+  </div>
+
+  <div class="paper-card pink">
+    <div class="paper-journal">Playing Atari with Deep Reinforcement Learning · arXiv 2013 · AI</div>
+    <div class="paper-title">Playing Atari with Deep Reinforcement Learning</div>
+    <div class="paper-authors">Mnih et al. (DeepMind)</div>
+    <div class="paper-desc">An AI taught itself to play Atari video games at superhuman level using only pixels and a reward signal. No human-programmed rules. This was the "moment" that showed the world that deep learning could master complex tasks that previously required human intuition. It triggered massive investment in AI research globally.</div>
+    <a href="https://arxiv.org/abs/1312.5602" class="paper-link" target="_blank">Read on arXiv ↗</a>
+  </div>
+
+  <div class="paper-card green">
+    <div class="paper-journal">Philosophical Transactions · 1687 · Physics</div>
+    <div class="paper-title">Principia Mathematica (Mathematical Principles of Natural Philosophy)</div>
+    <div class="paper-authors">Isaac Newton</div>
+    <div class="paper-desc">Newton's book/paper that gave us the laws of motion and gravity. He invented calculus to write it. For 200 years, this was the most complete description of how the physical universe operates. It enabled everything from bridge-building to space travel. Newton reportedly said he got the idea from watching an apple fall — a story he may have made up for dinner parties.</div>
+    <a href="https://royalsociety.org/collections/principia-mathematica/" class="paper-link" target="_blank">Royal Society archive ↗</a>
+  </div>
+
+  <div class="paper-card blue">
+    <div class="paper-journal">arXiv · 2020 · AI / Protein Science</div>
+    <div class="paper-title">Highly Accurate Protein Structure Prediction with AlphaFold</div>
+    <div class="paper-authors">Jumper et al. (DeepMind)</div>
+    <div class="paper-desc">Protein folding — predicting the 3D shape a protein takes from its amino acid sequence — was a 50-year unsolved problem in biology. AlphaFold solved it. The AI predicted protein structures with accuracy matching expensive laboratory experiments. It unlocked drug discovery, disease research, and enzymology at a pace previously unimaginable. Published first as a preprint, later in Nature.</div>
+    <a href="https://www.nature.com/articles/s41586-021-03819-2" class="paper-link" target="_blank">Read in Nature ↗</a>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 4: DOMAINS OF RESEARCH -->
+<!-- ============================================================ -->
+<div class="section-divider"></div>
+<section id="domains">
+  <div class="chapter-tag">Chapter IV</div>
+  <h2 class="section-title">The Map of Human Curiosity:<br>Research Domains</h2>
+
+  <p class="story-text">Humans carved up their curiosity into disciplines — not because nature is divided that way, but because no one mind can hold it all. Here is how the map is organized, with the biggest journals and example papers in each territory:</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Domain Family</th>
+          <th>Sub-Fields</th>
+          <th>Why It Exists (as a story)</th>
+          <th>Top Journals</th>
+          <th>Example Landmark Paper</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Natural Sciences</strong><br><span class="badge badge-teal">STEM</span></td>
+          <td>Physics, Chemistry, Biology, Earth Science, Astronomy</td>
+          <td>Humans wanted to understand nature so they could predict floods, make medicines, explain eclipses, stop dying of disease</td>
+          <td><a href="https://www.nature.com" target="_blank">Nature</a>, <a href="https://science.org" target="_blank">Science</a>, <a href="https://prl.aps.org" target="_blank">Physical Review Letters</a></td>
+          <td><a href="https://www.nature.com/articles/171737a0" target="_blank">Watson & Crick, DNA (1953)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Medical & Health Sciences</strong><br><span class="badge badge-coral">Clinical</span></td>
+          <td>Medicine, Pharmacology, Public Health, Neuroscience, Epidemiology</td>
+          <td>People kept dying and wanted to know why. From "bad air causes disease" to germ theory — medical research is fueled by suffering and the desire to end it</td>
+          <td><a href="https://www.nejm.org" target="_blank">NEJM</a>, <a href="https://www.thelancet.com" target="_blank">The Lancet</a>, <a href="https://jamanetwork.com/journals/jama" target="_blank">JAMA</a></td>
+          <td><a href="https://www.bmj.com/content/2/4386/649" target="_blank">Fleming, Penicillin (1929)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Engineering & Technology</strong><br><span class="badge badge-blue">Applied</span></td>
+          <td>Electrical Engineering, Computer Science, Materials Science, Civil, Chemical</td>
+          <td>Once science found a principle, engineers asked: how do we use this? Shannon's information theory → the internet. Transistor physics → the iPhone</td>
+          <td><a href="https://ieeexplore.ieee.org" target="_blank">IEEE Transactions</a>, <a href="https://dl.acm.org/journals/jacm" target="_blank">JACM</a>, <a href="https://www.nature.com/natelectron/" target="_blank">Nature Electronics</a></td>
+          <td><a href="https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf" target="_blank">Shannon, Information Theory (1948)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Social Sciences</strong><br><span class="badge badge-purple">Human behavior</span></td>
+          <td>Psychology, Sociology, Economics, Political Science, Anthropology</td>
+          <td>Humans studying humans. Why do societies organize this way? Why do people make irrational decisions? Why do wars happen? These questions had no tools until the 19th century introduced statistics and surveys</td>
+          <td><a href="https://www.aeaweb.org/journals/aer" target="_blank">AER (Economics)</a>, <a href="https://journals.sagepub.com/home/psp" target="_blank">JPSP (Psychology)</a>, <a href="https://www.annualreviews.org/journal/soc" target="_blank">Annual Review of Sociology</a></td>
+          <td><a href="https://www.aeaweb.org/articles?id=10.1257/aer.20161492" target="_blank">Kahneman & Tversky, Prospect Theory</a></td>
+        </tr>
+        <tr>
+          <td><strong>Humanities</strong><br><span class="badge badge-gold">Interpretation</span></td>
+          <td>History, Literature, Philosophy, Linguistics, Cultural Studies, Archaeology</td>
+          <td>What does it mean to be human? What stories have we told? What ideas have we built? Humanities researchers study the products of human minds — texts, art, institutions, languages</td>
+          <td><a href="https://www.journals.uchicago.edu/toc/ah/current" target="_blank">American Historical Review</a>, <a href="https://www.cambridge.org/core/journals/pmla" target="_blank">PMLA (Literature)</a>, <a href="https://www.pdcnet.org/pdc/bbl.nsf/purchase?openform&fp=jphil" target="_blank">Journal of Philosophy</a></td>
+          <td>Foucault's <em>Discipline and Punish</em> (1975)</td>
+        </tr>
+        <tr>
+          <td><strong>Business & Commerce</strong><br><span class="badge badge-green">Applied Social</span></td>
+          <td>Management, Marketing, Finance, Accounting, Entrepreneurship, Operations</td>
+          <td>The industrial revolution created massive organizations. How do you manage 10,000 people? How do markets really behave? Business schools (Harvard 1908, Wharton 1881) needed research to justify their existence</td>
+          <td><a href="https://www.hbs.edu/faculty/Pages/publications.aspx" target="_blank">HBR</a>, <a href="https://onlinelibrary.wiley.com/journal/15405885" target="_blank">Journal of Marketing</a>, <a href="https://www.journals.uchicago.edu/toc/jb/current" target="_blank">Journal of Business</a></td>
+          <td><a href="https://www.thejournal.ms/article/15" target="_blank">Porter's Competitive Forces (1979)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Arts & Design Research</strong><br><span class="badge badge-pink">Creative</span></td>
+          <td>Visual Art, Music Theory, Architecture, Design, Film Studies, Aesthetics</td>
+          <td>Even art needed to be studied systematically. Why does a minor key feel sad? How do buildings affect human wellbeing? What makes a film emotionally effective? Practice-based research emerged in the late 20th century</td>
+          <td><a href="https://www.cambridge.org/core/journals/organised-sound" target="_blank">Organised Sound</a>, <a href="https://www.designresearchsociety.org/cpages/publications" target="_blank">Design Studies</a>, <a href="https://muse.jhu.edu/journal/249" target="_blank">Journal of Aesthetics</a></td>
+          <td>Arnheim's <em>Art and Visual Perception</em> (1954)</td>
+        </tr>
+        <tr>
+          <td><strong>Education Research</strong><br><span class="badge badge-teal">Pedagogical</span></td>
+          <td>Learning Sciences, Curriculum, Educational Technology, Special Education</td>
+          <td>Once mass schooling began in the 19th century, the question arose: does any of this actually work? Piaget, Vygotsky, Bloom's Taxonomy — education research asked how humans learn and how to teach them better</td>
+          <td><a href="https://www.aera.net/Publications/Journals" target="_blank">AERJ</a>, <a href="https://www.cambridge.org/core/journals/review-of-educational-research" target="_blank">Review of Educational Research</a></td>
+          <td>Bloom's Taxonomy (1956)</td>
+        </tr>
+        <tr>
+          <td><strong>Environmental Sciences</strong><br><span class="badge badge-green">Planetary</span></td>
+          <td>Ecology, Climate Science, Conservation, Oceanography, Environmental Health</td>
+          <td>Humans started noticing in the 1960s that they were breaking the planet. Rachel Carson's <em>Silent Spring</em> (1962) triggered an entire research field. Climate science exploded in the 1990s</td>
+          <td><a href="https://www.nature.com/nclimate/" target="_blank">Nature Climate Change</a>, <a href="https://agupubs.onlinelibrary.wiley.com/journal/19422466" target="_blank">Global Change Biology</a>, <a href="https://iopscience.iop.org/journal/1748-9326" target="_blank">Environmental Research Letters</a></td>
+          <td><a href="https://www.ipcc.ch/report/ar6/wg1/" target="_blank">IPCC Sixth Assessment Report (2021)</a></td>
+        </tr>
+        <tr>
+          <td><strong>Mathematics</strong><br><span class="badge badge-blue">Formal</span></td>
+          <td>Pure Math, Applied Math, Statistics, Logic, Computational Mathematics</td>
+          <td>The oldest intellectual discipline. Mathematics research looks completely different — there are no experiments, only proofs. A math paper can have zero authors who ever ran an experiment. Fermat's Last Theorem was conjectured in 1637 and proved in 1995</td>
+          <td><a href="https://www.annalsofmath.org" target="_blank">Annals of Mathematics</a>, <a href="https://www.springer.com/journal/222" target="_blank">Inventiones Mathematicae</a>, <a href="https://www.ams.org/journals/jams/jams.html" target="_blank">JAMS</a></td>
+          <td><a href="https://annals.math.princeton.edu/1995/141-3/p01" target="_blank">Wiles, Fermat's Last Theorem (1995)</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 5: METHODOLOGY — THE BIG SPLIT -->
+<!-- ============================================================ -->
+<div class="section-divider"></div>
+<section id="methodology">
+  <div class="chapter-tag">Chapter V</div>
+  <h2 class="section-title">The Great Methodological Split:<br>Quantitative vs Qualitative</h2>
+
+  <p class="story-text">In the 19th century, a philosophical war broke out in academia. One side said: only what you can measure is real knowledge. The other said: you cannot measure human experience with a ruler. This argument produced the two dominant families of research methodology that still define how almost every study is designed today.</p>
+
+  <div class="grid-2">
+    <div class="paper-card">
+      <div class="paper-journal" style="color: var(--blue)">Quantitative</div>
+      <div class="paper-title">Numbers, Measurement & Statistics</div>
+      <div class="paper-desc">You formulate a hypothesis. You collect numerical data (surveys, sensors, experiments, records). You run statistical tests. You either confirm or reject the hypothesis. The answer is objective. The same study done by anyone should produce the same result. Best for: What? How many? How much? How often? Is there a relationship?</div>
+      <div class="tags">
+        <span class="tag badge-blue">Experiments</span>
+        <span class="tag badge-blue">Surveys</span>
+        <span class="tag badge-blue">Regression</span>
+        <span class="tag badge-blue">RCTs</span>
+        <span class="tag badge-blue">Cohort studies</span>
+      </div>
+    </div>
+    <div class="paper-card">
+      <div class="paper-journal" style="color: var(--coral)">Qualitative</div>
+      <div class="paper-title">Meaning, Experience & Interpretation</div>
+      <div class="paper-desc">You dive into a phenomenon without a fixed hypothesis. You interview, observe, analyze language. You look for themes, patterns, meanings. The researcher is part of the process — subjectivity is acknowledged. Best for: Why? How does it feel? What does it mean? How do people make sense of X?</div>
+      <div class="tags">
+        <span class="tag badge-coral">Interviews</span>
+        <span class="tag badge-coral">Ethnography</span>
+        <span class="tag badge-coral">Focus groups</span>
+        <span class="tag badge-coral">Case studies</span>
+        <span class="tag badge-coral">Thematic analysis</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Quantitative</th>
+          <th>Qualitative</th>
+          <th>Mixed Methods</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Question type</strong></td>
+          <td>"How many?" / "Is there a correlation?"</td>
+          <td>"Why?" / "How do people experience X?"</td>
+          <td>Both — complex phenomena with multiple dimensions</td>
+        </tr>
+        <tr>
+          <td><strong>Data</strong></td>
+          <td>Numbers, statistics, measurements</td>
+          <td>Words, images, observations, text</td>
+          <td>Both types collected and integrated</td>
+        </tr>
+        <tr>
+          <td><strong>Sample size</strong></td>
+          <td>Large (hundreds to millions)</td>
+          <td>Small (5–50, purposive)</td>
+          <td>Medium — both components justified separately</td>
+        </tr>
+        <tr>
+          <td><strong>Analysis</strong></td>
+          <td>Statistics (regression, ANOVA, t-tests)</td>
+          <td>Coding, thematic analysis, grounded theory</td>
+          <td>Triangulation — comparing both sets of findings</td>
+        </tr>
+        <tr>
+          <td><strong>Researcher role</strong></td>
+          <td>Outside observer — objective</td>
+          <td>Inside participant — acknowledged bias</td>
+          <td>Both stances at different stages</td>
+        </tr>
+        <tr>
+          <td><strong>Philosophy</strong></td>
+          <td>Positivism (objective reality exists)</td>
+          <td>Interpretivism (reality is socially constructed)</td>
+          <td>Pragmatism (use what works)</td>
+        </tr>
+        <tr>
+          <td><strong>Output</strong></td>
+          <td>Generalizable facts, statistical significance</td>
+          <td>Thick description, new theory, insight</td>
+          <td>Complete picture — breadth + depth</td>
+        </tr>
+        <tr>
+          <td><strong>Classic tool</strong></td>
+          <td>Randomized Controlled Trial (RCT)</td>
+          <td>In-depth interview</td>
+          <td>Sequential or concurrent design</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="font-size: 1.2rem; font-weight: 500; margin: 2.5rem 0 1rem; color: var(--text)">The Qualitative Design Toolkit</h3>
+  <p class="story-text">Within qualitative research, there are several distinct approaches, each suited to different questions:</p>
+
+  <div class="grid-3">
+    <div class="type-card">
+      <div class="type-card-icon">👤</div>
+      <div class="type-card-name">Phenomenology</div>
+      <div class="type-card-desc">What is the lived experience of X? Deep interviews to understand consciousness and experience (e.g., "What is it like to be a refugee?")</div>
+    </div>
+    <div class="type-card">
+      <div class="type-card-icon">🌍</div>
+      <div class="type-card-name">Ethnography</div>
+      <div class="type-card-desc">Researcher immerses in a community or culture for months or years, observing and participating. Classic: Malinowski in Trobriand Islands</div>
+    </div>
+    <div class="type-card">
+      <div class="type-card-icon">📋</div>
+      <div class="type-card-name">Case Study</div>
+      <div class="type-card-desc">Deep dive into one specific instance — a company, school, patient, event. Yin (1984) systematized this approach</div>
+    </div>
+    <div class="type-card">
+      <div class="type-card-icon">⚡</div>
+      <div class="type-card-name">Grounded Theory</div>
+      <div class="type-card-desc">Start collecting data with no hypothesis. Let theory emerge from the data itself. Glaser & Strauss (1967) invented this</div>
+    </div>
+    <div class="type-card">
+      <div class="type-card-icon">🗣️</div>
+      <div class="type-card-name">Discourse Analysis</div>
+      <div class="type-card-desc">Study how language constructs reality. How does the way we talk about "immigration" shape policy and attitudes?</div>
+    </div>
+    <div class="type-card">
+      <div class="type-card-icon">📚</div>
+      <div class="type-card-name">Narrative Research</div>
+      <div class="type-card-desc">Human lives understood as stories. Collect personal narratives, analyze how people construct and tell their life experience</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 6: DATA TYPES & COLLECTION METHODS -->
+<!-- ============================================================ -->
+<div class="section-divider"></div>
+<section id="data-types">
+  <div class="chapter-tag">Chapter VI</div>
+  <h2 class="section-title">Where Does Research Data Come From?</h2>
+
+  <p class="story-text">Every research paper needs data — but <strong>where that data comes from</strong> is as important as what you do with it. Data collection methods are often the most expensive, ethically fraught, and creative part of research. Here's the complete landscape:</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Method</th>
+          <th>What it is</th>
+          <th>Typical Use</th>
+          <th>Strength</th>
+          <th>Weakness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="badge badge-purple">Primary — Asking</span></td>
+          <td><strong>Surveys / Questionnaires</strong></td>
+          <td>Structured questions sent to participants (online, paper, phone)</td>
+          <td>Social sciences, market research, public health</td>
+          <td>Scale — can reach thousands cheaply</td>
+          <td>Self-reporting bias; people lie or misremember</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-purple">Primary — Asking</span></td>
+          <td><strong>Interviews</strong></td>
+          <td>1-on-1 conversations, structured or semi-structured or open</td>
+          <td>Psychology, sociology, anthropology</td>
+          <td>Deep insight; follow unexpected threads</td>
+          <td>Small samples; interviewer influence</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-purple">Primary — Asking</span></td>
+          <td><strong>Focus Groups</strong></td>
+          <td>6–12 people discussing a topic together, moderated</td>
+          <td>Marketing, policy, product development</td>
+          <td>Group dynamics reveal social consensus/conflict</td>
+          <td>Dominant voices suppress minority views</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-teal">Primary — Observing</span></td>
+          <td><strong>Observation</strong></td>
+          <td>Researcher watches behavior in natural or controlled settings</td>
+          <td>Anthropology, education, animal behavior</td>
+          <td>No self-report bias; sees actual behavior</td>
+          <td>Observer effect; time-intensive</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-teal">Primary — Observing</span></td>
+          <td><strong>Randomized Controlled Trial (RCT)</strong></td>
+          <td>Random assignment to control/treatment groups; gold standard</td>
+          <td>Medicine, psychology, economics</td>
+          <td>Can establish causation, not just correlation</td>
+          <td>Expensive; ethical limits; artificial conditions</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-teal">Primary — Observing</span></td>
+          <td><strong>Biometric / Sensor Data</strong></td>
+          <td>fMRI brain scans, heart rate, EEG, GPS, wearables</td>
+          <td>Neuroscience, health, sports science</td>
+          <td>Objective; captures what participants can't report</td>
+          <td>Expensive equipment; invasive; context limits</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-gold">Primary — Testing</span></td>
+          <td><strong>Laboratory Experiments</strong></td>
+          <td>Controlled settings where variables are manipulated</td>
+          <td>Chemistry, psychology, biology</td>
+          <td>High internal validity; replicable</td>
+          <td>Artificial; may not generalize to real world</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-gold">Primary — Testing</span></td>
+          <td><strong>Field Experiments</strong></td>
+          <td>Experiments conducted in natural, real-world settings</td>
+          <td>Economics, ecology, education policy</td>
+          <td>Real-world validity; more generalizable</td>
+          <td>Less control; expensive; ethical complexity</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-coral">Secondary — Existing Data</span></td>
+          <td><strong>Document Analysis</strong></td>
+          <td>Analyzing existing texts: newspapers, letters, policies, laws</td>
+          <td>History, political science, literature</td>
+          <td>Access to past; no ethical approvals needed</td>
+          <td>Data not collected for your purpose; incomplete</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-coral">Secondary — Existing Data</span></td>
+          <td><strong>Administrative / Government Data</strong></td>
+          <td>Census, hospital records, tax records, crime statistics</td>
+          <td>Epidemiology, economics, sociology</td>
+          <td>Huge scale; longitudinal; nationally representative</td>
+          <td>Access restrictions; not designed for research</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-coral">Secondary — Existing Data</span></td>
+          <td><strong>Big Data / Digital Traces</strong></td>
+          <td>Social media posts, web searches, purchase records, app usage</td>
+          <td>Computational social science, AI, marketing</td>
+          <td>Massive scale; real behavior not reported</td>
+          <td>Privacy concerns; platform bias; non-representative</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-green">Synthesis</span></td>
+          <td><strong>Systematic Review</strong></td>
+          <td>Comprehensive review of all existing studies on a topic using strict protocols</td>
+          <td>Medicine, education, psychology</td>
+          <td>Aggregates evidence; reduces single-study bias</td>
+          <td>Publication bias; laborious; slow</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-green">Synthesis</span></td>
+          <td><strong>Meta-Analysis</strong></td>
+          <td>Statistical combination of results from multiple studies</td>
+          <td>Medicine, psychology, economics</td>
+          <td>Increased statistical power; overall effect size</td>
+          <td>Garbage-in garbage-out; heterogeneity problems</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-blue">Nature</span></td>
+          <td><strong>Field Sampling</strong></td>
+          <td>Collecting specimens, soil, water, air samples from nature</td>
+          <td>Ecology, geology, environmental science</td>
+          <td>Direct measurement of the real world</td>
+          <td>Accessibility; seasonal limits; disturbance</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 7: TECH & AI RESEARCH -->
+<!-- ============================================================ -->
+<div class="section-divider"></div>
+<section id="tech-ai">
+  <div class="chapter-tag">Chapter VII</div>
+  <h2 class="section-title">The Tech & AI Research World:<br>A Different Beast Entirely</h2>
+
+  <p class="story-text">When you browse research papers from Google Brain, OpenAI, or DeepMind, something feels different. The format is different. The speed is different. The publication culture is different. This is because tech/AI research evolved largely <strong>outside academia</strong>, with different incentives, different peer review, and different timelines.</p>
+
+  <div class="callout teal">
+    <div class="callout-label">The Key Difference</div>
+    In traditional science, you do the work → submit to a journal → wait 6–18 months for peer review → publish. In AI research, you post to arXiv on Monday → the world reads it Tuesday → people are building on it by Friday. A peer-reviewed journal version might come 6 months later — or never.
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Traditional Academic Research</th>
+          <th>Tech / AI Research</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Publication venue</strong></td>
+          <td>Peer-reviewed journals (months–years)</td>
+          <td>arXiv preprints + top conferences (NeurIPS, ICML, ICLR, CVPR)</td>
+        </tr>
+        <tr>
+          <td><strong>Timeline</strong></td>
+          <td>2–5 years from idea to publication</td>
+          <td>Weeks to months — fields move so fast, slower doesn't work</td>
+        </tr>
+        <tr>
+          <td><strong>Peer review</strong></td>
+          <td>Double-blind, mandatory, extensive</td>
+          <td>Conference peer review (3–6 reviewers, 3 months); arXiv has none</td>
+        </tr>
+        <tr>
+          <td><strong>Who funds it</strong></td>
+          <td>Governments (NSF, NIH), universities, charities</td>
+          <td>Google, Meta, Microsoft, OpenAI, government + venture capital</td>
+        </tr>
+        <tr>
+          <td><strong>Reproducibility</strong></td>
+          <td>Methods section; data availability varies</td>
+          <td>Code on GitHub expected; model weights sometimes released</td>
+        </tr>
+        <tr>
+          <td><strong>Impact measurement</strong></td>
+          <td>Journal Impact Factor, citations over years</td>
+          <td>GitHub stars, Twitter threads, downstream papers citing it in weeks</td>
+        </tr>
+        <tr>
+          <td><strong>Format</strong></td>
+          <td>IMRaD (5,000–10,000 words)</td>
+          <td>8-page conference paper + supplementary + code + model card</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="font-size: 1.2rem; font-weight: 500; margin: 2.5rem 0 1rem; color: var(--text)">Top AI/Tech Research Venues</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Venue</th>
+          <th>Type</th>
+          <th>Focus</th>
+          <th>Acceptance Rate</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>NeurIPS</strong></td>
+          <td><span class="badge badge-purple">Conference</span></td>
+          <td>Machine learning, neural networks, AI theory</td>
+          <td>~25%</td>
+          <td><a href="https://papers.nips.cc" target="_blank">papers.nips.cc</a></td>
+        </tr>
+        <tr>
+          <td><strong>ICML</strong></td>
+          <td><span class="badge badge-purple">Conference</span></td>
+          <td>Machine learning, optimization, theory</td>
+          <td>~27%</td>
+          <td><a href="https://icml.cc" target="_blank">icml.cc</a></td>
+        </tr>
+        <tr>
+          <td><strong>ICLR</strong></td>
+          <td><span class="badge badge-purple">Conference</span></td>
+          <td>Deep learning, representation learning</td>
+          <td>~32%</td>
+          <td><a href="https://iclr.cc" target="_blank">iclr.cc</a></td>
+        </tr>
+        <tr>
+          <td><strong>CVPR</strong></td>
+          <td><span class="badge badge-blue">Conference</span></td>
+          <td>Computer vision, image recognition</td>
+          <td>~25%</td>
+          <td><a href="https://openaccess.thecvf.com" target="_blank">thecvf.com</a></td>
+        </tr>
+        <tr>
+          <td><strong>ACL / EMNLP</strong></td>
+          <td><span class="badge badge-teal">Conference</span></td>
+          <td>Natural language processing, linguistics</td>
+          <td>~23%</td>
+          <td><a href="https://aclanthology.org" target="_blank">aclanthology.org</a></td>
+        </tr>
+        <tr>
+          <td><strong>arXiv cs.AI / cs.LG</strong></td>
+          <td><span class="badge badge-gold">Preprint Server</span></td>
+          <td>All of AI/ML — posted before review</td>
+          <td>No rejection (moderated)</td>
+          <td><a href="https://arxiv.org/list/cs.AI/recent" target="_blank">arxiv.org</a></td>
+        </tr>
+        <tr>
+          <td><strong>Nature Machine Intelligence</strong></td>
+          <td><span class="badge badge-coral">Journal</span></td>
+          <td>High-impact AI research, broader implications</td>
+          <td>&lt;10%</td>
+          <td><a href="https://www.nature.com/natmachintell/" target="_blank">nature.com/natmachintell</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">The Types of AI Research Papers</div>
+    <strong>Architecture papers</strong> introduce new model designs (Transformers, ResNets). <strong>Empirical papers</strong> test how well models perform on benchmarks. <strong>Theoretical papers</strong> prove properties mathematically. <strong>Dataset papers</strong> create and release new training data. <strong>Application papers</strong> use AI for specific real-world problems. <strong>Position/opinion papers</strong> argue for a direction — these are what arXiv is now banning if AI-generated.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 8: STATISTICAL TESTS -->
+<!-- ============================================================ -->
+<div class="section-divider"></div>
+<section id="tests">
+  <div class="chapter-tag">Chapter VIII</div>
+  <h2 class="section-title">The Statistical Toolkit:<br>Tests Every Researcher Runs</h2>
+
+  <p class="story-text">Statistical tests are the <strong>evidence machines</strong> of quantitative research. They take your data and answer the question: is what I see a real pattern, or could it have happened by chance? The concept of the p-value (probability of seeing your result if the null hypothesis were true) was invented by Ronald Fisher in 1925 and has governed science ever since — controversially so.</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Test</th>
+          <th>When to Use</th>
+          <th>What it Does</th>
+          <th>Data Type</th>
+          <th>Example Question</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>t-test</strong></td>
+          <td>Comparing 2 group means</td>
+          <td>Is the mean of Group A significantly different from Group B?</td>
+          <td>Continuous (interval/ratio)</td>
+          <td>Do students who get tutoring score higher than those who don't?</td>
+        </tr>
+        <tr>
+          <td><strong>ANOVA</strong></td>
+          <td>Comparing 3+ group means</td>
+          <td>Are any of these groups significantly different from each other?</td>
+          <td>Continuous</td>
+          <td>Does drug A, B, or C produce the best outcomes? Or none?</td>
+        </tr>
+        <tr>
+          <td><strong>Chi-squared (χ²)</strong></td>
+          <td>Categorical data relationships</td>
+          <td>Are two categorical variables associated?</td>
+          <td>Categorical (nominal)</td>
+          <td>Is there a relationship between gender and voting preference?</td>
+        </tr>
+        <tr>
+          <td><strong>Pearson Correlation</strong></td>
+          <td>Linear relationship between 2 variables</td>
+          <td>How strongly are X and Y related? (r from -1 to +1)</td>
+          <td>Continuous</td>
+          <td>Does income correlate with life satisfaction?</td>
+        </tr>
+        <tr>
+          <td><strong>Linear Regression</strong></td>
+          <td>Predicting one variable from others</td>
+          <td>How much does Y change per unit change in X?</td>
+          <td>Continuous</td>
+          <td>What factors predict a student's final grade?</td>
+        </tr>
+        <tr>
+          <td><strong>Logistic Regression</strong></td>
+          <td>Predicting a binary outcome</td>
+          <td>What is the probability of event Y given X?</td>
+          <td>Binary outcome + any predictors</td>
+          <td>What factors predict whether a patient gets diabetes?</td>
+        </tr>
+        <tr>
+          <td><strong>Mann-Whitney U</strong></td>
+          <td>Non-parametric alternative to t-test</td>
+          <td>Compares medians when data isn't normally distributed</td>
+          <td>Ordinal or non-normal continuous</td>
+          <td>Do two groups differ in pain score ratings (1–10)?</td>
+        </tr>
+        <tr>
+          <td><strong>Kruskal-Wallis</strong></td>
+          <td>Non-parametric ANOVA</td>
+          <td>Comparing 3+ groups when normality can't be assumed</td>
+          <td>Ordinal or non-normal</td>
+          <td>Do three schools differ in student satisfaction (survey scale)?</td>
+        </tr>
+        <tr>
+          <td><strong>Factorial ANOVA</strong></td>
+          <td>Multiple independent variables</td>
+          <td>Tests main effects and interactions between variables</td>
+          <td>Continuous outcome</td>
+          <td>Do treatment AND gender both affect recovery? Do they interact?</td>
+        </tr>
+        <tr>
+          <td><strong>Structural Equation Modeling (SEM)</strong></td>
+          <td>Complex causal pathways</td>
+          <td>Tests entire theoretical models with multiple variables</td>
+          <td>Continuous, latent variables</td>
+          <td>Does stress → sleep → performance? Test the whole model</td>
+        </tr>
+        <tr>
+          <td><strong>Survival Analysis (Cox)</strong></td>
+          <td>Time-to-event data</td>
+          <td>How long until an event occurs? What affects that time?</td>
+          <td>Time + censored data</td>
+          <td>How long do patients survive after treatment A vs B?</td>
+        </tr>
+        <tr>
+          <td><strong>Factor Analysis</strong></td>
+          <td>Finding latent dimensions</td>
+          <td>Which survey items cluster together? What underlying factor explains them?</td>
+          <td>Continuous, many variables</td>
+          <td>Do these 30 personality questions measure 5 underlying traits?</td>
+        </tr>
+        <tr>
+          <td><strong>Bayesian Inference</strong></td>
+          <td>Updating beliefs with evidence</td>
+          <td>What is the probability of hypothesis H given data D? Updates prior beliefs</td>
+          <td>Any</td>
+          <td>Growing use in medicine, psychology, AI benchmarking</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-box">
+      <div class="stat-num">p&lt;0.05</div>
+      <div class="stat-label">Standard threshold for "statistically significant" in most fields</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">1925</div>
+      <div class="stat-label">Year Ronald Fisher introduced the p-value in "Statistical Methods for Research Workers"</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">50M+</div>
+      <div class="stat-label">Peer-reviewed papers published since 1665 (estimated by 2009)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">3M+</div>
+      <div class="stat-label">New peer-reviewed articles published annually across 46,000+ active journals</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 9: TOP JOURNALS -->
+<!-- ============================================================ -->
+<div class="section-divider"></div>
+<section id="journals">
+  <div class="chapter-tag">Chapter IX</div>
+  <h2 class="section-title">What Makes a Journal "Top"?<br>And Which Are the Best?</h2>
+
+  <p class="story-text">A journal's prestige comes from its <strong>Impact Factor (IF)</strong> — the average number of times a paper from that journal gets cited in the following two years. A journal with IF 64 means each paper gets cited 64 times on average within two years. This number, flawed as it is, determines career trajectories, promotions, and funding. Publishing in Nature or Science can make a career. Being rejected by them can break one.</p>
+
+  <div class="callout gold">
+    <div class="callout-label">Why Impact Factor Is Controversial</div>
+    A single highly-cited paper in a small journal can inflate IF for everyone else published there. Review articles get cited more than primary research but are counted the same. Fields with slower citation cultures (math, humanities) will always have lower IFs than fast-moving ones (medicine, AI). Yet universities still use it to evaluate faculty.
+  </div>
+
+  <h3 style="font-size: 1.1rem; font-weight: 500; margin: 2rem 0 1rem; color: var(--text)">Multidisciplinary Science Journals</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Journal</th>
+          <th>Founded</th>
+          <th>Impact Factor</th>
+          <th>What It Publishes</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Nature</strong></td>
+          <td>1869</td>
+          <td><span class="badge badge-gold">64.8</span></td>
+          <td>Highest-impact science across all disciplines; news, letters, reviews</td>
+          <td><a href="https://www.nature.com" target="_blank">nature.com</a></td>
+        </tr>
+        <tr>
+          <td><strong>Science</strong></td>
+          <td>1880</td>
+          <td><span class="badge badge-gold">56.9</span></td>
+          <td>AAAS flagship; broad science + policy + opinion; Einstein, Hubble published here</td>
+          <td><a href="https://www.science.org" target="_blank">science.org</a></td>
+        </tr>
+        <tr>
+          <td><strong>Cell</strong></td>
+          <td>1974</td>
+          <td><span class="badge badge-gold">64.5</span></td>
+          <td>Life sciences; molecular biology, genetics, cell biology</td>
+          <td><a href="https://www.cell.com" target="_blank">cell.com</a></td>
+        </tr>
+        <tr>
+          <td><strong>PNAS</strong></td>
+          <td>1915</td>
+          <td><span class="badge badge-teal">11.1</span></td>
+          <td>US National Academy of Sciences; broad science; member-sponsored papers</td>
+          <td><a href="https://www.pnas.org" target="_blank">pnas.org</a></td>
+        </tr>
+        <tr>
+          <td><strong>Philosophical Transactions (Royal Society)</strong></td>
+          <td>1665</td>
+          <td><span class="badge badge-teal">Varies by series</span></td>
+          <td>The oldest journal; themed issues; Newton and Darwin published here</td>
+          <td><a href="https://royalsocietypublishing.org/journal/rstb" target="_blank">royalsociety.org</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="font-size: 1.1rem; font-weight: 500; margin: 2rem 0 1rem; color: var(--text)">Field-Specific Top Journals</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Journal</th>
+          <th>IF</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Medicine</strong></td>
+          <td>New England Journal of Medicine (NEJM)</td>
+          <td><span class="badge badge-gold">158.5</span></td>
+          <td><a href="https://www.nejm.org" target="_blank">nejm.org</a></td>
+        </tr>
+        <tr>
+          <td><strong>Medicine</strong></td>
+          <td>The Lancet</td>
+          <td><span class="badge badge-gold">98.4</span></td>
+          <td><a href="https://www.thelancet.com" target="_blank">thelancet.com</a></td>
+        </tr>
+        <tr>
+          <td><strong>Medicine</strong></td>
+          <td>JAMA (Journal of the American Medical Association)</td>
+          <td><span class="badge badge-gold">63.1</span></td>
+          <td><a href="https://jamanetwork.com/journals/jama" target="_blank">jamanetwork.com</a></td>
+        </tr>
+        <tr>
+          <td><strong>AI / Computer Science</strong></td>
+          <td>Nature Machine Intelligence</td>
+          <td><span class="badge badge-purple">25.9</span></td>
+          <td><a href="https://www.nature.com/natmachintell/" target="_blank">nature.com/natmachintell</a></td>
+        </tr>
+        <tr>
+          <td><strong>Economics</strong></td>
+          <td>American Economic Review (AER)</td>
+          <td><span class="badge badge-teal">11.0</span></td>
+          <td><a href="https://www.aeaweb.org/journals/aer" target="_blank">aeaweb.org</a></td>
+        </tr>
+        <tr>
+          <td><strong>Psychology</strong></td>
+          <td>Psychological Review</td>
+          <td><span class="badge badge-teal">7.9</span></td>
+          <td><a href="https://www.apa.org/pubs/journals/rev/" target="_blank">apa.org</a></td>
+        </tr>
+        <tr>
+          <td><strong>Mathematics</strong></td>
+          <td>Annals of Mathematics</td>
+          <td><span class="badge badge-teal">5.0</span></td>
+          <td><a href="https://annals.math.princeton.edu" target="_blank">annals.math.princeton.edu</a></td>
+        </tr>
+        <tr>
+          <td><strong>Climate Science</strong></td>
+          <td>Nature Climate Change</td>
+          <td><span class="badge badge-gold">29.6</span></td>
+          <td><a href="https://www.nature.com/nclimate/" target="_blank">nature.com/nclimate</a></td>
+        </tr>
+        <tr>
+          <td><strong>Open Access / All Fields</strong></td>
+          <td>PLOS ONE</td>
+          <td><span class="badge badge-green">2.9</span></td>
+          <td><a href="https://journals.plos.org/plosone/" target="_blank">plos.org</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="font-size: 1.1rem; font-weight: 500; margin: 2rem 0 1rem; color: var(--text)">Where to Find Papers for Free</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Platform</th>
+          <th>What it has</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Google Scholar</strong></td>
+          <td>Searches all academic literature; links to free versions when available</td>
+          <td><a href="https://scholar.google.com" target="_blank">scholar.google.com</a></td>
+        </tr>
+        <tr>
+          <td><strong>arXiv</strong></td>
+          <td>Physics, math, CS, AI preprints — all free, immediately</td>
+          <td><a href="https://arxiv.org" target="_blank">arxiv.org</a></td>
+        </tr>
+        <tr>
+          <td><strong>PubMed Central</strong></td>
+          <td>Free full-text biomedical literature — 8M+ articles</td>
+          <td><a href="https://pmc.ncbi.nlm.nih.gov" target="_blank">pmc.ncbi.nlm.nih.gov</a></td>
+        </tr>
+        <tr>
+          <td><strong>Semantic Scholar</strong></td>
+          <td>AI-powered academic search; free PDFs where licensed</td>
+          <td><a href="https://www.semanticscholar.org" target="_blank">semanticscholar.org</a></td>
+        </tr>
+        <tr>
+          <td><strong>SSRN</strong></td>
+          <td>Social sciences, economics, law preprints</td>
+          <td><a href="https://ssrn.com" target="_blank">ssrn.com</a></td>
+        </tr>
+        <tr>
+          <td><strong>Unpaywall</strong></td>
+          <td>Browser extension — finds free legal versions of any paper</td>
+          <td><a href="https://unpaywall.org" target="_blank">unpaywall.org</a></td>
+        </tr>
+        <tr>
+          <td><strong>Royal Society archive (pre-1950)</strong></td>
+          <td>All papers 1665–1950 free to access — read Newton and Darwin's original papers</td>
+          <td><a href="https://royalsocietypublishing.org" target="_blank">royalsocietypublishing.org</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CHAPTER 10: UNIVERSITIES -->
+<!-- ============================================================ -->
+<div class="section-divider"></div>
+<section id="universities">
+  <div class="chapter-tag">Chapter X</div>
+  <h2 class="section-title">Where Research Lives:<br>Top Research Universities</h2>
+
+  <p class="story-text">Universities are ranked for research by publications, citations, Nobel laureates, industry partnerships, and research funding. The <strong>QS World Rankings, Times Higher Education (THE), and Shanghai Rankings (ARWU)</strong> are the three main systems — each with different methodologies and slightly different results. No single ranking is definitive.</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>University</th>
+          <th>Country</th>
+          <th>Known For</th>
+          <th>Research Output</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Massachusetts Institute of Technology (MIT)</strong></td>
+          <td>USA</td>
+          <td>Engineering, CS, AI, Physics, Economics</td>
+          <td>~20,000 papers/year</td>
+          <td><a href="https://libraries.mit.edu/research/" target="_blank">mit.edu</a></td>
+        </tr>
+        <tr>
+          <td><strong>Harvard University</strong></td>
+          <td>USA</td>
+          <td>Medicine, Law, Economics, Public Health, Natural Sciences</td>
+          <td>~25,000 papers/year</td>
+          <td><a href="https://scholar.harvard.edu" target="_blank">harvard.edu</a></td>
+        </tr>
+        <tr>
+          <td><strong>University of Oxford</strong></td>
+          <td>UK</td>
+          <td>Humanities, Medicine, Law, Physics, AI ethics</td>
+          <td>~20,000 papers/year</td>
+          <td><a href="https://www.ox.ac.uk/research" target="_blank">ox.ac.uk</a></td>
+        </tr>
+        <tr>
+          <td><strong>Stanford University</strong></td>
+          <td>USA</td>
+          <td>AI, Computer Science, Business, Medicine, Law</td>
+          <td>~18,000 papers/year</td>
+          <td><a href="https://library.stanford.edu/research" target="_blank">stanford.edu</a></td>
+        </tr>
+        <tr>
+          <td><strong>University of Cambridge</strong></td>
+          <td>UK</td>
+          <td>Mathematics, Physics, Natural Sciences, Humanities (Newton's home)</td>
+          <td>~18,000 papers/year</td>
+          <td><a href="https://www.cam.ac.uk/research" target="_blank">cam.ac.uk</a></td>
+        </tr>
+        <tr>
+          <td><strong>ETH Zurich</strong></td>
+          <td>Switzerland</td>
+          <td>Engineering, Physics, Computer Science, Environmental Sciences</td>
+          <td>~12,000 papers/year</td>
+          <td><a href="https://ethz.ch/en/research.html" target="_blank">ethz.ch</a></td>
+        </tr>
+        <tr>
+          <td><strong>Tsinghua University</strong></td>
+          <td>China</td>
+          <td>Engineering, CS, AI — China's top producer of AI research</td>
+          <td>~40,000 papers/year</td>
+          <td><a href="https://www.tsinghua.edu.cn/en/" target="_blank">tsinghua.edu.cn</a></td>
+        </tr>
+        <tr>
+          <td><strong>Indian Institute of Science (IISc)</strong></td>
+          <td>India</td>
+          <td>Science & Engineering; highest research citation rate in India</td>
+          <td>~8,000 papers/year</td>
+          <td><a href="https://www.iisc.ac.in/research/" target="_blank">iisc.ac.in</a></td>
+        </tr>
+        <tr>
+          <td><strong>IIT Bombay / Delhi / Madras</strong></td>
+          <td>India</td>
+          <td>Engineering, Technology, AI/ML — rising fast in global rankings</td>
+          <td>Growing rapidly</td>
+          <td><a href="https://www.iitb.ac.in/en/research" target="_blank">iitb.ac.in</a></td>
+        </tr>
+        <tr>
+          <td><strong>University of Toronto</strong></td>
+          <td>Canada</td>
+          <td>AI (birthplace of deep learning — Hinton), Medicine, Social Sciences</td>
+          <td>~15,000 papers/year</td>
+          <td><a href="https://research.utoronto.ca" target="_blank">utoronto.ca</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">How to Rank Research Universities</div>
+    The three main global systems: <strong>QS World Rankings</strong> (weights employer reputation and faculty/student ratio heavily), <strong>Times Higher Education</strong> (weights citations and industry income), and <strong>Shanghai ARWU</strong> (weights Nobel laureates and highly-cited researchers). Each produces a different top-10. Most experts say using all three together gives a more honest picture than any single list.
+  </div>
+
+  <h3 style="font-size: 1.1rem; font-weight: 500; margin: 2rem 0 1rem; color: var(--text)">The Study Design Hierarchy (How Trustworthy Is Evidence?)</h3>
+  <p class="story-text" style="margin-bottom: 1.5rem;">Not all research is equally reliable. Medicine developed a formal hierarchy of evidence — from weakest to strongest:</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Study Type</th>
+          <th>Why This Tier</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="badge badge-gold">Highest</span></td>
+          <td><strong>Systematic Review + Meta-Analysis</strong></td>
+          <td>Combines all available RCTs; reduces random error; considers all evidence</td>
+          <td>Cochrane reviews on vaccine efficacy</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-teal">Very High</span></td>
+          <td><strong>Randomized Controlled Trial (RCT)</strong></td>
+          <td>Random assignment removes selection bias; can establish causation</td>
+          <td>Clinical drug trials; COVID vaccine trials</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-blue">High</span></td>
+          <td><strong>Cohort Study</strong></td>
+          <td>Follows groups over time; good for rare exposures; no manipulation</td>
+          <td>Framingham Heart Study (70 years of follow-up)</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-blue">Moderate-High</span></td>
+          <td><strong>Case-Control Study</strong></td>
+          <td>Compares cases with controls retrospectively; good for rare diseases</td>
+          <td>Linking smoking to lung cancer (Doll & Hill, 1950)</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-purple">Moderate</span></td>
+          <td><strong>Cross-sectional Survey</strong></td>
+          <td>One moment in time; shows associations but not causation</td>
+          <td>National health surveys; opinion polls</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-coral">Lower</span></td>
+          <td><strong>Case Report / Case Series</strong></td>
+          <td>Describes individual cases; useful for rare events, generates hypotheses</td>
+          <td>Early AIDS case reports in MMWR (1981)</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-coral">Lowest (formal)</span></td>
+          <td><strong>Expert Opinion / Editorial</strong></td>
+          <td>No primary data; based on experience and reasoning</td>
+          <td>Clinical guidelines before evidence accumulates</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-green">Outside hierarchy</span></td>
+          <td><strong>Qualitative Research</strong></td>
+          <td>Answers different questions — not "better" or "worse," just incomparable</td>
+          <td>Why do patients refuse chemotherapy? (interviews)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- EPILOGUE -->
+<!-- ============================================================ -->
+<div class="section-divider"></div>
+<section>
+  <div class="chapter-tag">Epilogue</div>
+  <h2 class="section-title">The Story Continues</h2>
+
+  <p class="story-text">You started reading this as someone who wanted to understand what academic research is. The honest answer is: it is the <strong>organized, systematic, documented process by which humans try not to fool themselves</strong> about the way the world works.</p>
+
+  <p class="story-text">It began with clay tablets recording flood levels. It passed through letters to the Royal Society about microscopes and gravity. It survived world wars and funding crises and replication crises. It spawned entire universes of sub-disciplines, each with its own language, its own journals, its own conferences, its own tribal knowledge about what counts as good work.</p>
+
+  <p class="story-text">And now it faces its next great test: artificial intelligence that can produce the surface of research without the substance of discovery. The question for the next chapter of this story is whether humanity can keep the rigor alive as the speed increases beyond what individual humans can track.</p>
+
+  <blockquote>
+    "Science is a way of thinking much more than it is a body of knowledge."
+    <cite>— Carl Sagan</cite>
+  </blockquote>
+
+  <p class="story-text">The best way to understand this world is to enter it. Pick a paper that interests you from this guide. Read it. Notice what you don't understand. Follow one citation. Then another. You will find yourself, within a few steps, at the edge of what humanity knows — standing at the frontier, looking into the dark.</p>
+
+  <p class="story-text">That's where research lives.</p>
+</section>
+
+<footer>
+  <p>Built as an educational guide to academic research. All paper links point to free, legal sources.</p>
+  <p style="margin-top: 0.5rem;">Royal Society (1665) · arXiv (1991) · The search for knowledge, always.</p>
+  <a href="#hero" class="back-top">↑ Back to the beginning</a>
+</footer>
+
+</body>
+</html>

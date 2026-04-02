@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Research Journey — PhD Commerce Simulator</title>
+<style>
+  :root {
+    --bg: #0d0d0f;
+    --bg2: #13131a;
+    --bg3: #1a1a24;
+    --card: #1e1e2e;
+    --card2: #252535;
+    --border: #2e2e45;
+    --border2: #3a3a55;
+    --accent: #7c6af7;
+    --accent2: #a78bfa;
+    --accent3: #c4b5fd;
+    --gold: #f59e0b;
+    --gold2: #fcd34d;
+    --teal: #14b8a6;
+    --teal2: #5eead4;
+    --pink: #ec4899;
+    --red: #ef4444;
+    --green: #22c55e;
+    --text: #e2e0ff;
+    --text2: #a39fc0;
+    --text3: #6b6890;
+    --success: #22c55e;
+    --warn: #f59e0b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* STARS BG */
+  #stars { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; overflow:hidden; }
+  .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--d,3s) infinite alternate; }
+  @keyframes twinkle { 0%{opacity:.1} 100%{opacity:.7} }
+
+  /* HEADER */
+  #header {
+    position: relative; z-index: 10;
+    text-align: center;
+    padding: 40px 20px 20px;
+    background: linear-gradient(180deg, #0a0a14 0%, transparent 100%);
+  }
+  #header h1 {
+    font-size: clamp(22px, 5vw, 42px);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent2), var(--teal2), var(--gold2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+  #header p { color: var(--text2); font-size: 15px; }
+
+  /* PROGRESS BAR */
+  #progress-wrap {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(13,13,15,0.95);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 20px;
+    display: flex; align-items: center; gap: 12px;
+    backdrop-filter: blur(8px);
+  }
+  #progress-track { flex:1; height:6px; background:var(--card2); border-radius:3px; overflow:hidden; }
+  #progress-fill { height:100%; border-radius:3px; transition: width 0.8s cubic-bezier(.4,0,.2,1); background: linear-gradient(90deg, var(--accent), var(--teal)); }
+  #progress-label { font-size:12px; color:var(--text2); white-space:nowrap; }
+  #chapter-label { font-size:11px; color:var(--accent2); background:rgba(124,106,247,0.15); padding:3px 10px; border-radius:20px; white-space:nowrap; }
+
+  /* MAIN CONTAINER */
+  #main { position: relative; z-index: 5; max-width: 860px; margin: 0 auto; padding: 20px 16px 60px; }
+
+  /* SCENE CARD */
+  .scene-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 28px 24px;
+    margin-bottom: 20px;
+    animation: fadeUp 0.4s ease;
+  }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+  .scene-chapter {
+    font-size:11px; color:var(--accent2); text-transform:uppercase; letter-spacing:2px;
+    margin-bottom: 10px; display:flex; align-items:center; gap:8px;
+  }
+  .scene-chapter::before { content:''; display:inline-block; width:20px; height:1px; background:var(--accent2); }
+  .scene-title {
+    font-size: clamp(18px, 3vw, 26px); font-weight: 700; margin-bottom: 14px;
+    color: var(--text);
+  }
+  .scene-body {
+    color: var(--text2); line-height: 1.8; font-size: 15px;
+  }
+  .scene-body p { margin-bottom: 12px; }
+  .scene-body .highlight {
+    background: rgba(124,106,247,0.12); border-left: 3px solid var(--accent);
+    padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 14px 0;
+    color: var(--accent3); font-size: 14px;
+  }
+  .scene-body .callout {
+    background: rgba(20,184,166,0.08); border: 1px solid rgba(20,184,166,0.25);
+    padding: 14px 16px; border-radius: 10px; margin: 14px 0; font-size: 14px; color: var(--teal2);
+  }
+  .scene-body .warn-box {
+    background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.25);
+    padding: 14px 16px; border-radius: 10px; margin: 14px 0; font-size: 14px; color: var(--gold2);
+  }
+
+  /* CHOICES */
+  .choices-section { margin-top: 20px; }
+  .choices-label { font-size:11px; color:var(--text3); text-transform:uppercase; letter-spacing:2px; margin-bottom:12px; }
+  .choice-btn {
+    display: block; width:100%; background: var(--card2);
+    border: 1px solid var(--border); border-radius: 12px;
+    padding: 14px 18px; margin-bottom: 10px;
+    color: var(--text); cursor: pointer; text-align:left;
+    font-size: 14px; line-height: 1.5;
+    transition: all 0.2s ease;
+    position: relative; overflow: hidden;
+  }
+  .choice-btn:hover { border-color: var(--accent); background: rgba(124,106,247,0.1); transform: translateX(4px); }
+  .choice-btn.selected { border-color: var(--teal); background: rgba(20,184,166,0.1); color: var(--teal2); }
+  .choice-btn .choice-tag {
+    display: inline-block; font-size:10px; background:rgba(124,106,247,0.2);
+    color:var(--accent2); padding:2px 8px; border-radius:20px; margin-right:8px; vertical-align:middle;
+  }
+  .choice-btn .choice-tag.q { background:rgba(20,184,166,0.2); color:var(--teal2); }
+  .choice-btn .choice-tag.mix { background:rgba(245,158,11,0.2); color:var(--gold2); }
+
+  /* SIMULATION WIDGET */
+  .sim-wrap {
+    background: var(--bg3); border: 1px solid var(--border2);
+    border-radius: 12px; padding: 20px; margin: 16px 0;
+  }
+  .sim-title { font-size:13px; font-weight:600; color:var(--accent2); margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+  .sim-title::before { content:'⚗'; font-size:16px; }
+  .slider-row { display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+  .slider-row label { font-size:12px; color:var(--text2); min-width:160px; }
+  .slider-row input[type=range] { flex:1; accent-color:var(--accent); }
+  .slider-row .val { font-size:13px; color:var(--accent2); font-weight:600; min-width:50px; text-align:right; }
+  .stat-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; margin-top:14px; }
+  .stat-box {
+    background:var(--card); border:1px solid var(--border); border-radius:8px;
+    padding:12px; text-align:center;
+  }
+  .stat-box .sb-label { font-size:10px; color:var(--text3); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px; }
+  .stat-box .sb-val { font-size:20px; font-weight:700; }
+  .sb-val.blue { color:var(--accent2); }
+  .sb-val.green { color:var(--green); }
+  .sb-val.gold { color:var(--gold); }
+  .sb-val.teal { color:var(--teal2); }
+  .sb-val.pink { color:var(--pink); }
+
+  /* FORMULA DISPLAY */
+  .formula-box {
+    background: var(--bg); border:1px solid var(--border2); border-radius:8px;
+    padding: 14px 18px; font-family: 'Courier New', monospace;
+    font-size: 13px; color: var(--gold2); margin: 12px 0;
+    overflow-x:auto;
+  }
+
+  /* CANVAS CHART */
+  canvas { border-radius: 8px; display:block; }
+
+  /* BADGE */
+  .badge {
+    display:inline-block; padding:4px 12px; border-radius:20px;
+    font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:1px;
+    margin: 2px;
+  }
+  .badge.quant { background:rgba(124,106,247,0.2); color:var(--accent2); border:1px solid rgba(124,106,247,0.3); }
+  .badge.qual { background:rgba(20,184,166,0.2); color:var(--teal2); border:1px solid rgba(20,184,166,0.3); }
+  .badge.mixed { background:rgba(245,158,11,0.2); color:var(--gold); border:1px solid rgba(245,158,11,0.3); }
+  .badge.success { background:rgba(34,197,94,0.2); color:var(--green); border:1px solid rgba(34,197,94,0.3); }
+
+  /* JOURNEY LOG */
+  #journey-log {
+    background:var(--card); border:1px solid var(--border);
+    border-radius:12px; padding:18px; margin-bottom:20px;
+  }
+  #journey-log h3 { font-size:13px; color:var(--text2); margin-bottom:12px; }
+  .log-item { font-size:12px; color:var(--text3); padding:4px 0; border-bottom:1px solid var(--border); display:flex; gap:8px; }
+  .log-item:last-child { border:none; }
+  .log-dot { color:var(--accent2); }
+
+  /* TABLE */
+  .data-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .data-table th { background:var(--card2); color:var(--text2); padding:8px 12px; text-align:left; font-weight:500; border-bottom:1px solid var(--border2); }
+  .data-table td { padding:8px 12px; border-bottom:1px solid var(--border); color:var(--text2); }
+  .data-table tr:hover td { background:rgba(124,106,247,0.05); }
+
+  /* FINAL CARD */
+  .final-card {
+    background: linear-gradient(135deg, rgba(124,106,247,0.15), rgba(20,184,166,0.1));
+    border: 1px solid var(--accent); border-radius: 16px;
+    padding: 32px; text-align:center; margin:20px 0;
+  }
+  .final-card h2 { font-size:28px; color:var(--gold2); margin-bottom:12px; }
+  .final-card p { color:var(--text2); margin-bottom:8px; }
+
+  /* NAV BUTTON */
+  .nav-btn {
+    background: linear-gradient(135deg, var(--accent), #6d28d9);
+    color: white; border:none; border-radius:10px;
+    padding:12px 28px; font-size:14px; font-weight:600;
+    cursor:pointer; transition:all 0.2s; margin-top:8px;
+  }
+  .nav-btn:hover { transform:translateY(-2px); opacity:.9; }
+  .nav-btn.secondary {
+    background: var(--card2); border:1px solid var(--border2); color:var(--text2);
+  }
+  .nav-btn:disabled { opacity:0.4; cursor:default; transform:none; }
+
+  /* TOOLTIP */
+  .tip { border-bottom:1px dashed var(--accent2); cursor:help; color:var(--accent2); }
+
+  /* COMPARISON TABLE */
+  .compare-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:14px 0; }
+  .compare-card { background:var(--bg3); border:1px solid var(--border); border-radius:10px; padding:14px; }
+  .compare-card h4 { font-size:13px; font-weight:600; margin-bottom:8px; }
+  .compare-card ul { font-size:12px; color:var(--text2); padding-left:14px; }
+  .compare-card ul li { margin-bottom:4px; }
+
+  /* SCATTER CANVAS */
+  #scatter-canvas { cursor:crosshair; }
+
+  /* MOBILE */
+  @media(max-width:600px) {
+    .scene-card { padding:18px; }
+    .compare-grid { grid-template-columns:1fr; }
+    .stat-row { grid-template-columns:1fr 1fr; }
+  }
+
+  /* PULSE */
+  @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(124,106,247,0.4)} 50%{box-shadow:0 0 0 8px rgba(124,106,247,0)} }
+  .pulse { animation: pulse 2s infinite; }
+</style>
+</head>
+<body>
+
+<div id="stars"></div>
+
+<div id="header">
+  <h1>🎓 The Research Journey</h1>
+  <p>A PhD Commerce Simulator — Every choice shapes your research. Every concept revealed. Play, learn, publish.</p>
+</div>
+
+<div id="progress-wrap">
+  <div id="progress-track"><div id="progress-fill" style="width:0%"></div></div>
+  <span id="progress-label">0%</span>
+  <span id="chapter-label">Chapter 1</span>
+</div>
+
+<div id="main">
+  <div id="journey-log">
+    <h3>📜 Your Research Journey</h3>
+    <div id="log-entries"><div class="log-item"><span class="log-dot">◆</span><span>Journey begins...</span></div></div>
+  </div>
+  <div id="scene-container"></div>
+</div>
+
+<script>
+// ---- STARS ----
+const starsEl = document.getElementById('stars');
+for(let i=0;i<80;i++){
+  const s = document.createElement('div'); s.className='star';
+  s.style.cssText=`width:${Math.random()*2+1}px;height:${Math.random()*2+1}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--d:${2+Math.random()*4}s;opacity:${Math.random()*.5}`;
+  starsEl.appendChild(s);
+}
+
+// ---- STATE ----
+const state = {
+  topic: '', methodology: '', sampleSize: 100, hypothesisCount: 3,
+  researchType: '', analysisMethod: '', chapter: 1, choices: [],
+  finalResult: null, logEntries: [], topicName: ''
+};
+const totalChapters = 9;
+
+function addLog(text) {
+  state.logEntries.push(text);
+  const el = document.getElementById('log-entries');
+  const d = document.createElement('div'); d.className='log-item';
+  d.innerHTML=`<span class="log-dot">◆</span><span>${text}</span>`;
+  el.appendChild(d);
+  el.scrollTop = el.scrollHeight;
+}
+
+function setProgress(ch) {
+  const pct = Math.round(((ch-1)/(totalChapters))*100);
+  document.getElementById('progress-fill').style.width = pct+'%';
+  document.getElementById('progress-label').textContent = pct+'%';
+  document.getElementById('chapter-label').textContent = 'Chapter '+ch+' / '+totalChapters;
+}
+
+function render(html) {
+  const c = document.getElementById('scene-container');
+  c.innerHTML = html;
+  c.scrollIntoView({behavior:'smooth', block:'start'});
+  setProgress(state.chapter);
+}
+
+// ============================================================
+// CHAPTER 1 — Welcome & Topic Selection
+// ============================================================
+function chapter1() {
+  state.chapter = 1;
+  const topics = [
+    {id:'fintech', label:'FinTech & Digital Payments', desc:'UPI, BNPL, crypto adoption in India', tag:'Hot 🔥'},
+    {id:'esg', label:'ESG Investing & Green Finance', desc:'Sustainability impact on stock returns', tag:'Trending 📈'},
+    {id:'social', label:'Social Commerce & Influencers', desc:'How Instagram sellers change buying behaviour', tag:'New Wave 🌊'},
+    {id:'ai_finance', label:'AI in Financial Decision-Making', desc:'Robo-advisors, credit scoring algorithms', tag:'Future 🤖'},
+    {id:'msme', label:'MSME Digital Transformation', desc:'Small business survival in post-COVID India', tag:'Relevant 🇮🇳'},
+    {id:'cbdc', label:'CBDC & Monetary Policy', desc:'RBI digital rupee and financial inclusion', tag:'Emerging 💡'},
+  ];
+  let topicBtns = topics.map(t=>`
+    <button class="choice-btn" onclick="selectTopic('${t.id}','${t.label}')">
+      <span class="choice-tag">${t.tag}</span>
+      <strong>${t.label}</strong><br>
+      <span style="font-size:12px;color:var(--text3)">${t.desc}</span>
+    </button>
+  `).join('');
+
+  render(`
+    <div class="scene-card">
+      <div class="scene-chapter">Chapter 1 · The Beginning</div>
+      <div class="scene-title">You Are a Researcher. Welcome to the World of Ideas.</div>
+      <div class="scene-body">
+        <p>You've just enrolled for a <strong style="color:var(--accent2)">PhD in Commerce</strong>. Your supervisor sits across you on Day 1 and says:</p>
+        <div class="highlight">"Before you can research anything, you need to know <em>what</em> a research paper actually is — and pick a problem that matters."</div>
+        <p>Let's start here. <strong style="color:var(--gold2)">What is a Research Paper vs Article vs Report?</strong></p>
+        <div class="compare-grid">
+          <div class="compare-card"><h4 style="color:var(--accent2)">📄 Research Paper</h4><ul><li>Original data collected</li><li>Hypothesis tested</li><li>Published in journals</li><li>Peer-reviewed</li><li>Most prestigious</li></ul></div>
+          <div class="compare-card"><h4 style="color:var(--teal2)">📰 Article/Review</h4><ul><li>Summarises existing studies</li><li>No new data collected</li><li>Published in journals/blogs</li><li>Good for literature reviews</li></ul></div>
+          <div class="compare-card"><h4 style="color:var(--gold)">📊 Report</h4><ul><li>Industry/govt commissioned</li><li>Descriptive findings</li><li>Not always peer-reviewed</li><li>Practical recommendations</li></ul></div>
+          <div class="compare-card"><h4 style="color:var(--pink)">📑 Working Paper</h4><ul><li>Pre-publication draft</li><li>Shared for feedback</li><li>Not yet peer-reviewed</li><li>SSRN, NBER papers</li></ul></div>
+        </div>
+        <p>For your PhD, you'll write a <span class="tip" title="Original research with your own data, hypothesis, analysis">Research Paper / Thesis</span> — something nobody has done before.</p>
+        <div class="callout">✨ Your first task: Choose a <strong>hot commerce topic</strong> that is current, researchable, and meaningful to India and the world in 2025–26.</div>
+      </div>
+      <div class="choices-section">
+        <div class="choices-label">👇 Choose Your Research Topic</div>
+        ${topicBtns}
+      </div>
+    </div>
+  `);
+}
+
+function selectTopic(id, name) {
+  state.topic = id; state.topicName = name;
+  addLog(`Topic selected: ${name}`);
+  chapter2();
+}
+
+// ============================================================
+// CHAPTER 2 — Research Question & Hypothesis
+// ============================================================
+const topicQuestions = {
+  fintech: {
+    rq: '"Does adoption of UPI-based digital payments significantly improve the financial inclusion of micro-entrepreneurs in Tier 2 Indian cities?"',
+    h0: 'UPI adoption has NO significant effect on financial inclusion of micro-entrepreneurs.',
+    h1: 'UPI adoption has a SIGNIFICANT positive effect on financial inclusion.',
+    vars: ['UPI Transaction Frequency', 'Financial Inclusion Score', 'Income Level', 'Digital Literacy', 'Age']
+  },
+  esg: {
+    rq: '"Do companies with higher ESG scores deliver superior risk-adjusted returns on the NSE compared to low-ESG peers?"',
+    h0: 'ESG scores have NO significant effect on risk-adjusted stock returns.',
+    h1: 'Higher ESG scores lead to SIGNIFICANTLY better risk-adjusted returns.',
+    vars: ['ESG Score', 'Sharpe Ratio', 'Beta', 'Market Cap', 'Sector']
+  },
+  social: {
+    rq: '"To what extent does influencer authenticity on Instagram moderate the relationship between social commerce and Gen Z purchase intention in India?"',
+    h0: 'Influencer authenticity does NOT moderate the social commerce–purchase intention relationship.',
+    h1: 'Influencer authenticity SIGNIFICANTLY moderates the relationship.',
+    vars: ['Influencer Authenticity', 'Social Commerce Exposure', 'Purchase Intention', 'Trust', 'Age Group']
+  },
+  ai_finance: {
+    rq: '"Does AI-driven credit scoring reduce default rates more effectively than traditional CIBIL-based scoring among first-time borrowers?"',
+    h0: 'AI credit scoring has NO significant advantage over CIBIL scoring in predicting defaults.',
+    h1: 'AI credit scoring SIGNIFICANTLY reduces default prediction error vs CIBIL.',
+    vars: ['AI Score', 'CIBIL Score', 'Default Rate', 'Loan Amount', 'Employment Type']
+  },
+  msme: {
+    rq: '"What is the impact of digital transformation adoption on the revenue resilience of MSMEs in India post-COVID-19?"',
+    h0: 'Digital transformation has NO significant impact on post-COVID revenue resilience of MSMEs.',
+    h1: 'Digital transformation SIGNIFICANTLY improves post-COVID revenue resilience.',
+    vars: ['Digital Adoption Index', 'Revenue Recovery Rate', 'Firm Size', 'Sector', 'Govt Support Received']
+  },
+  cbdc: {
+    rq: '"Can the RBI Digital Rupee (e₹) significantly enhance financial inclusion among unbanked populations in rural India?"',
+    h0: 'e₹ adoption has NO significant effect on financial inclusion of unbanked rural populations.',
+    h1: 'e₹ adoption SIGNIFICANTLY increases financial inclusion in unbanked rural areas.',
+    vars: ['e₹ Adoption Rate', 'Financial Inclusion Index', 'Distance to Bank', 'Literacy Rate', 'Internet Access']
+  }
+};
+
+function chapter2() {
+  state.chapter = 2;
+  const tq = topicQuestions[state.topic];
+  render(`
+    <div class="scene-card">
+      <div class="scene-chapter">Chapter 2 · The Research Question & Hypothesis</div>
+      <div class="scene-title">What Are You Trying to Prove?</div>
+      <div class="scene-body">
+        <p>Your supervisor writes your topic on the board: <strong style="color:var(--accent2)">${state.topicName}</strong></p>
+        <p>Now comes the most important moment in research — forming your <span class="tip" title="A specific question your research will answer">Research Question</span> and <span class="tip" title="A testable prediction about the answer">Hypothesis</span>.</p>
+        <div class="callout">
+          <strong>Your Research Question (RQ):</strong><br>
+          ${tq.rq}
+        </div>
+        <p><strong style="color:var(--gold2)">Why do we say "Null Hypothesis" and try to DISPROVE it?</strong></p>
+        <div class="highlight">
+          Think of a court of law. The accused is "innocent until proven guilty."<br><br>
+          In research, we assume <strong>H₀ (Null Hypothesis) = "Nothing is happening / no effect"</strong> — and try to find enough evidence to REJECT it.<br><br>
+          If we can reject H₀ with 95% confidence → we support H₁ (Alternative Hypothesis).
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0">
+          <div class="compare-card" style="border-color:rgba(239,68,68,0.4)">
+            <h4 style="color:var(--red)">H₀ — Null Hypothesis</h4>
+            <p style="font-size:12px;color:var(--text2);margin-top:6px">${tq.h0}</p>
+          </div>
+          <div class="compare-card" style="border-color:rgba(34,197,94,0.4)">
+            <h4 style="color:var(--green)">H₁ — Alternative Hypothesis</h4>
+            <p style="font-size:12px;color:var(--text2);margin-top:6px">${tq.h1}</p>
+          </div>
+        </div>
+        <p><strong style="color:var(--gold2)">How many hypotheses can you have?</strong></p>
+        <div class="warn-box">You can have <strong>1 to many hypotheses</strong> — but each must be testable, specific, and tied to your RQ. For a PhD, typically 3–8 hypotheses covering different aspects. Let's simulate yours:</div>
+
+        <div class="sim-wrap">
+          <div class="sim-title">Hypothesis Builder</div>
+          <div class="slider-row">
+            <label>Number of Hypotheses</label>
+            <input type="range" min="1" max="8" value="3" id="hyp-slider" oninput="updateHypSim()">
+            <span class="val" id="hyp-val">3</span>
+          </div>
+          <div id="hyp-list"></div>
+        </div>
+
+        <p>Your variables for this study: <strong style="color:var(--teal2)">${tq.vars.join(' → ')}</strong></p>
+        <div class="highlight">
+          <strong>Independent Variable (IV):</strong> ${tq.vars[0]} — what YOU manipulate/measure as cause<br>
+          <strong>Dependent Variable (DV):</strong> ${tq.vars[1]} — what CHANGES as a result<br>
+          <strong>Control Variables:</strong> ${tq.vars.slice(2).join(', ')} — kept constant to avoid bias
+        </div>
+      </div>
+      <div class="choices-section">
+        <div class="choices-label">👇 How many hypotheses will you test?</div>
+        <button class="choice-btn" onclick="setHypAndContinue(3)"><span class="choice-tag">Focused</span> <strong>3 Hypotheses</strong> — Clean, manageable, strong depth</button>
+        <button class="choice-btn" onclick="setHypAndContinue(5)"><span class="choice-tag mix">Balanced</span> <strong>5 Hypotheses</strong> — Good coverage, moderate complexity</button>
+        <button class="choice-btn" onclick="setHypAndContinue(7)"><span class="choice-tag q">Comprehensive</span> <strong>7 Hypotheses</strong> — Thorough, complex, ambitious</button>
+      </div>
+    </div>
+  `);
+  updateHypSim();
+}
+
+function updateHypSim() {
+  const n = parseInt(document.getElementById('hyp-slider').value);
+  document.getElementById('hyp-val').textContent = n;
+  const tq = topicQuestions[state.topic];
+  const hyps = [];
+  const bases = ['primary relationship', 'moderating effect', 'mediating variable', 'demographic difference', 'sector variation', 'time-lag effect', 'regional difference', 'policy impact'];
+  for(let i=0;i<n;i++){
+    hyps.push(`<div style="font-size:12px;color:var(--text2);padding:6px 0;border-bottom:1px solid var(--border)">
+      <span style="color:var(--accent2);font-weight:600">H${i+1}:</span> Testing <em>${bases[i]}</em> between ${tq.vars[i%tq.vars.length]} and ${tq.vars[(i+1)%tq.vars.length]}
+    </div>`);
+  }
+  document.getElementById('hyp-list').innerHTML = hyps.join('');
+}
+
+function setHypAndContinue(n) {
+  state.hypothesisCount = n;
+  addLog(`Hypotheses set: ${n} hypotheses`);
+  chapter3();
+}
+
+// ============================================================
+// CHAPTER 3 — Quantitative vs Qualitative
+// ============================================================
+function chapter3() {
+  state.chapter = 3;
+  render(`
+    <div class="scene-card">
+      <div class="scene-chapter">Chapter 3 · Research Methodology</div>
+      <div class="scene-title">Quantitative, Qualitative, or Both?</div>
+      <div class="scene-body">
+        <p>Your supervisor asks: <em style="color:var(--accent2)">"How will you <strong>collect</strong> and <strong>analyse</strong> your data?"</em></p>
+        <p>This is your <strong>Research Methodology</strong> — the backbone of your entire study.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0">
+          <div class="compare-card" style="border-color:rgba(124,106,247,0.4)">
+            <h4 style="color:var(--accent2)">📊 Quantitative Research</h4>
+            <ul>
+              <li>Numbers, statistics, surveys</li>
+              <li>Large sample (100–1000+)</li>
+              <li>Hypothesis testing with tests</li>
+              <li>Objective, measurable</li>
+              <li>T-test, ANOVA, Regression</li>
+              <li><em>Ask: "HOW MUCH?"</em></li>
+            </ul>
+          </div>
+          <div class="compare-card" style="border-color:rgba(20,184,166,0.4)">
+            <h4 style="color:var(--teal2)">💬 Qualitative Research</h4>
+            <ul>
+              <li>Words, themes, interviews</li>
+              <li>Small sample (10–30)</li>
+              <li>No hypothesis testing</li>
+              <li>Exploratory, contextual</li>
+              <li>Thematic Analysis, Grounded Theory</li>
+              <li><em>Ask: "WHY? HOW?"</em></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout">
+          <strong>Mixed Methods</strong> = Both combined. Example: Survey 300 entrepreneurs (quantitative) + Interview 15 in-depth (qualitative). You get the big picture AND the lived story.
+        </div>
+
+        <p><strong style="color:var(--gold2)">For your topic "${state.topicName}" —</strong> both approaches are valid. Here's what each looks like:</p>
+
+        <div class="sim-wrap">
+          <div class="sim-title">Sample Size Simulator — See how it affects your study power</div>
+          <div class="slider-row">
+            <label>Sample Size (n)</label>
+            <input type="range" min="20" max="500" value="100" step="10" id="ss-slider" oninput="updateSSSim()">
+            <span class="val" id="ss-val">100</span>
+          </div>
+          <div class="slider-row">
+            <label>Effect Size (Cohen's d)</label>
+            <input type="range" min="10" max="80" value="30" step="5" id="es-slider" oninput="updateSSSim()">
+            <span class="val" id="es-val">0.30</span>
+          </div>
+          <div class="stat-row">
+            <div class="stat-box"><div class="sb-label">Statistical Power</div><div class="sb-val blue" id="power-val">72%</div></div>
+            <div class="stat-box"><div class="sb-label">Confidence Level</div><div class="sb-val gold">95%</div></div>
+            <div class="stat-box"><div class="sb-label">Min Recommended n</div><div class="sb-val teal" id="min-n">84</div></div>
+            <div class="stat-box"><div class="sb-label">Study Status</div><div class="sb-val green" id="study-status">Good</div></div>
+          </div>
+        </div>
+        <div class="warn-box">💡 <strong>Rule of thumb:</strong> Power should be ≥ 80%. Effect size small = 0.2, medium = 0.5, large = 0.8. More sample = more power to detect real effects.</div>
+      </div>
+      <div class="choices-section">
+        <div class="choices-label">👇 Choose your research approach</div>
+        <button class="choice-btn" onclick="setMethodology('quantitative')"><span class="choice-tag">Numbers</span> <strong>Quantitative</strong> — Survey + Statistical Tests. Larger sample, objective proof.</button>
+        <button class="choice-btn" onclick="setMethodology('qualitative')"><span class="choice-tag q">Stories</span> <strong>Qualitative</strong> — Interviews + Thematic Analysis. Deeper insights, smaller sample.</button>
+        <button class="choice-btn" onclick="setMethodology('mixed')"><span class="choice-tag mix">Both</span> <strong>Mixed Methods</strong> — Best of both worlds. More work, richer findings.</button>
+      </div>
+    </div>
+  `);
+  updateSSSim();
+}
+
+function updateSSSim() {
+  const n = parseInt(document.getElementById('ss-slider').value);
+  const d = parseInt(document.getElementById('es-slider').value)/100;
+  document.getElementById('ss-val').textContent = n;
+  document.getElementById('es-val').textContent = d.toFixed(2);
+  // Approximate power calculation
+  const power = Math.min(99, Math.round(100*(1-Math.exp(-0.5*n*d*d/(1+d*d)*0.8))));
+  const minN = Math.round(Math.ceil(16/(d*d)));
+  document.getElementById('power-val').textContent = power+'%';
+  document.getElementById('min-n').textContent = minN;
+  const status = power>=80?'Excellent':power>=70?'Good':power>=60?'Marginal':'Underpowered';
+  const statusEl = document.getElementById('study-status');
+  statusEl.textContent = status;
+  statusEl.className = 'sb-val ' + (power>=80?'green':power>=70?'gold':'pink');
+}
+
+function setMethodology(m) {
+  state.methodology = m;
+  addLog(`Methodology: ${m.charAt(0).toUpperCase()+m.slice(1)}`);
+  chapter4();
+}
+
+// ============================================================
+// CHAPTER 4 — Data Collection
+// ============================================================
+function chapter4() {
+  state.chapter = 4;
+  const isQuant = state.methodology !== 'qualitative';
+  const isQual = state.methodology !== 'quantitative';
+  render(`
+    <div class="scene-card">
+      <div class="scene-chapter">Chapter 4 · Data Collection</div>
+      <div class="scene-title">Going into the Field — Collecting Your Data</div>
+      <div class="scene-body">
+        <p>You've chosen <strong style="color:var(--accent2)">${state.methodology.toUpperCase()}</strong> methodology. Now you must collect your data.</p>
+
+        ${isQuant ? `
+        <div class="callout">
+          <strong>📋 Quantitative Collection:</strong> You design a <strong>Likert-scale questionnaire</strong> (1–5 rating) and distribute it to your target population.<br><br>
+          For <em>${state.topicName}</em>, you'd survey respondents on relevant factors using a validated scale like TAM (Technology Acceptance Model) or TPB (Theory of Planned Behaviour).
+        </div>` : ''}
+
+        ${isQual ? `
+        <div class="callout" style="background:rgba(20,184,166,0.08);border-color:rgba(20,184,166,0.25);color:var(--teal2)">
+          <strong>🎙️ Qualitative Collection:</strong> You conduct <strong>semi-structured interviews</strong> with 15–30 participants, asking open-ended questions like "Tell me about your experience with..."<br><br>
+          Record → Transcribe → Code themes → Analyse with NVivo or Atlas.ti
+        </div>` : ''}
+
+        <p><strong style="color:var(--gold2)">Types of Data you'll encounter:</strong></p>
+        <table class="data-table">
+          <tr><th>Type</th><th>What it is</th><th>Example in your study</th></tr>
+          <tr><td><span class="badge quant">Primary</span></td><td>Data YOU collect fresh</td><td>Your own survey responses</td></tr>
+          <tr><td><span class="badge qual">Secondary</span></td><td>Existing data from others</td><td>RBI reports, NSE data, CMIE</td></tr>
+          <tr><td><span class="badge mixed">Nominal</span></td><td>Categories, no order</td><td>Gender, Sector, City</td></tr>
+          <tr><td><span class="badge quant">Ordinal</span></td><td>Ranked order, unequal gaps</td><td>Likert scale (Agree/Disagree)</td></tr>
+          <tr><td><span class="badge qual">Interval</span></td><td>Equal gaps, no true zero</td><td>Temperature, Index scores</td></tr>
+          <tr><td><span class="badge mixed">Ratio</span></td><td>Equal gaps + true zero</td><td>Income, Age, Transaction count</td></tr>
+        </table>
+
+        <div class="sim-wrap">
+          <div class="sim-title">📊 Live Data Distribution Simulator</div>
+          <p style="font-size:12px;color:var(--text2);margin-bottom:12px">See how your collected data might look. Adjust parameters to understand Normal Distribution, Standard Deviation & Mean.</p>
+          <div class="slider-row">
+            <label>Mean (Average response)</label>
+            <input type="range" min="1" max="5" value="3.2" step="0.1" id="mean-sl" oninput="drawDist()">
+            <span class="val" id="mean-val">3.2</span>
+          </div>
+          <div class="slider-row">
+            <label>Std Deviation (σ — spread)</label>
+            <input type="range" min="0.3" max="1.5" value="0.8" step="0.05" id="sd-sl" oninput="drawDist()">
+            <span class="val" id="sd-val">0.80</span>
+          </div>
+          <canvas id="dist-canvas" width="780" height="180" style="width:100%;background:var(--bg);border-radius:8px;border:1px solid var(--border)"></canvas>
+          <div class="stat-row" style="margin-top:10px">
+            <div class="stat-box"><div class="sb-label">Mean (μ)</div><div class="sb-val blue" id="d-mean">3.20</div></div>
+            <div class="stat-box"><div class="sb-label">Std Dev (σ)</div><div class="sb-val gold" id="d-sd">0.80</div></div>
+            <div class="stat-box"><div class="sb-label">68% data in</div><div class="sb-val teal" id="d-range">2.40 – 4.00</div></div>
+            <div class="stat-box"><div class="sb-label">Skewness</div><div class="sb-val green">~0 (Normal)</div></div>
+          </div>
+          <div class="warn-box" style="margin-top:12px">📐 <strong>Key insight:</strong> 68% of responses fall within ±1σ of mean. 95% within ±2σ. This is the basis of all statistical testing!</div>
+        </div>
+      </div>
+      <div class="choices-section">
+        <div class="choices-label">👇 How will you primarily collect data?</div>
+        <button class="choice-btn" onclick="setDataCollection('survey')"><span class="choice-tag">Digital</span> <strong>Online Survey (Google Forms/Qualtrics)</strong> — Fast, cheap, large reach</button>
+        <button class="choice-btn" onclick="setDataCollection('field')"><span class="choice-tag q">Personal</span> <strong>Field Survey (In-person)</strong> — More reliable, time-consuming</button>
+        <button class="choice-btn" onclick="setDataCollection('secondary')"><span class="choice-tag mix">Archive</span> <strong>Secondary Data (NSE/RBI/CMIE databases)</strong> — Rich data, no bias</button>
+      </div>
+    </div>
+  `);
+  setTimeout(drawDist, 100);
+}
+
+function drawDist() {
+  const mean = parseFloat(document.getElementById('mean-sl').value);
+  const sd = parseFloat(document.getElementById('sd-sl').value);
+  document.getElementById('mean-val').textContent = mean.toFixed(1);
+  document.getElementById('sd-val').textContent = sd.toFixed(2);
+  document.getElementById('d-mean').textContent = mean.toFixed(2);
+  document.getElementById('d-sd').textContent = sd.toFixed(2);
+  document.getElementById('d-range').textContent = `${(mean-sd).toFixed(2)} – ${(mean+sd).toFixed(2)}`;
+
+  const canvas = document.getElementById('dist-canvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W=canvas.width, H=canvas.height;
+  ctx.clearRect(0,0,W,H);
+
+  // Background
+  ctx.fillStyle='#0d0d0f'; ctx.fillRect(0,0,W,H);
+
+  // Grid lines
+  ctx.strokeStyle='rgba(46,46,69,0.5)'; ctx.lineWidth=1;
+  for(let i=0;i<=5;i++){ctx.beginPath();ctx.moveTo(0,H*i/5);ctx.lineTo(W,H*i/5);ctx.stroke();}
+
+  const gauss = (x,m,s)=>Math.exp(-0.5*((x-m)/s)**2)/(s*Math.sqrt(2*Math.PI));
+  const xMin=0, xMax=6;
+
+  // Fill under curve
+  const grad=ctx.createLinearGradient(0,0,0,H);
+  grad.addColorStop(0,'rgba(124,106,247,0.4)'); grad.addColorStop(1,'rgba(124,106,247,0.05)');
+  ctx.fillStyle=grad;
+  ctx.beginPath();
+  for(let px=0;px<=W;px++){
+    const x=xMin+(xMax-xMin)*(px/W);
+    const y=gauss(x,mean,sd);
+    const maxY=gauss(mean,mean,sd)*1.1;
+    const py=H-(y/maxY)*(H-20)-10;
+    if(px===0)ctx.moveTo(px,py); else ctx.lineTo(px,py);
+  }
+  ctx.lineTo(W,H); ctx.lineTo(0,H); ctx.closePath(); ctx.fill();
+
+  // Curve
+  ctx.strokeStyle='rgba(167,139,250,0.9)'; ctx.lineWidth=2.5; ctx.beginPath();
+  for(let px=0;px<=W;px++){
+    const x=xMin+(xMax-xMin)*(px/W);
+    const y=gauss(x,mean,sd);
+    const maxY=gauss(mean,mean,sd)*1.1;
+    const py=H-(y/maxY)*(H-20)-10;
+    if(px===0)ctx.moveTo(px,py); else ctx.lineTo(px,py);
+  }
+  ctx.stroke();
+
+  // ±1σ shading
+  const x1lo=mean-sd, x1hi=mean+sd;
+  const px1lo=Math.round((x1lo-xMin)/(xMax-xMin)*W);
+  const px1hi=Math.round((x1hi-xMin)/(xMax-xMin)*W);
+  ctx.fillStyle='rgba(20,184,166,0.15)';
+  ctx.beginPath();
+  for(let px=px1lo;px<=px1hi;px++){
+    const x=xMin+(xMax-xMin)*(px/W);
+    const y=gauss(x,mean,sd);
+    const maxY=gauss(mean,mean,sd)*1.1;
+    const py=H-(y/maxY)*(H-20)-10;
+    if(px===px1lo)ctx.moveTo(px,py); else ctx.lineTo(px,py);
+  }
+  ctx.lineTo(px1hi,H); ctx.lineTo(px1lo,H); ctx.closePath(); ctx.fill();
+
+  // Mean line
+  const pxMean=Math.round((mean-xMin)/(xMax-xMin)*W);
+  ctx.strokeStyle='rgba(245,158,11,0.8)'; ctx.lineWidth=1.5; ctx.setLineDash([5,5]);
+  ctx.beginPath(); ctx.moveTo(pxMean,10); ctx.lineTo(pxMean,H); ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Labels
+  ctx.fillStyle='rgba(245,158,11,0.9)'; ctx.font='11px system-ui'; ctx.textAlign='center';
+  ctx.fillText('μ='+mean.toFixed(1), pxMean, 22);
+  ctx.fillStyle='rgba(94,234,212,0.8)'; ctx.font='10px system-ui';
+  ctx.fillText('68% (±1σ)', (px1lo+px1hi)/2, H/2);
+
+  // X axis labels
+  ctx.fillStyle='rgba(107,104,144,0.8)'; ctx.font='10px system-ui';
+  for(let v=1;v<=5;v++){
+    const px=Math.round((v-xMin)/(xMax-xMin)*W);
+    ctx.fillText(v, px, H-3);
+  }
+}
+
+function setDataCollection(type) {
+  state.dataCollection = type;
+  addLog(`Data collection: ${type}`);
+  chapter5();
+}
+
+// ============================================================
+// CHAPTER 5 — Statistical Tests
+// ============================================================
+function chapter5() {
+  state.chapter = 5;
+  render(`
+    <div class="scene-card">
+      <div class="scene-chapter">Chapter 5 · Statistical Analysis</div>
+      <div class="scene-title">The Big Question: T-Test, ANOVA, Regression — What & When?</div>
+      <div class="scene-body">
+        <p>Your data is collected. Now comes the part that confuses most students. <strong style="color:var(--gold2)">Don't panic.</strong> Let me show you the map.</p>
+        <div class="highlight">Think of statistical tests as <strong>different tools in a toolbox</strong>. A hammer for nails, a screwdriver for screws — each test has ONE specific job.</div>
+
+        <table class="data-table" style="margin:14px 0">
+          <tr><th>Test</th><th>When to Use</th><th>Example in Your Study</th></tr>
+          <tr><td style="color:var(--accent2)"><strong>t-Test</strong></td><td>Compare means of <em>2 groups</em></td><td>Do UPI users earn more than non-users?</td></tr>
+          <tr><td style="color:var(--green)"><strong>ANOVA</strong></td><td>Compare means of <em>3+ groups</em></td><td>Compare income across 4 city types</td></tr>
+          <tr><td style="color:var(--gold)"><strong>Regression</strong></td><td>Predict Y from X variables</td><td>How much does UPI use increase income?</td></tr>
+          <tr><td style="color:var(--teal2)"><strong>Chi-Square</strong></td><td>Test relationship b/w <em>categories</em></td><td>Is digital adoption related to sector?</td></tr>
+          <tr><td style="color:var(--pink)"><strong>Correlation (r)</strong></td><td>Measure <em>strength of relationship</em></td><td>Do ESG scores correlate with returns?</td></tr>
+          <tr><td style="color:var(--accent2)"><strong>F-Test</strong></td><td>Compare <em>variances</em> or test model fit</td><td>Is our regression model significant overall?</td></tr>
+          <tr><td style="color:var(--green)"><strong>SEM</strong></td><td>Complex relationships, multiple variables</td><td>Full model with mediators & moderators</td></tr>
+        </table>
+
+        <p><strong style="color:var(--gold2)">Interactive: T-Test Simulator</strong> — Is there a real difference between two groups?</p>
+
+        <div class="sim-wrap">
+          <div class="sim-title">T-Test Simulator — Compare Two Groups</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div>
+              <div style="font-size:12px;color:var(--teal2);margin-bottom:8px">Group A (e.g., UPI Users)</div>
+              <div class="slider-row"><label style="min-width:60px">Mean A</label><input type="range" min="2" max="5" value="3.8" step="0.1" id="ma" oninput="runTTest()"><span class="val" id="ma-v">3.8</span></div>
+              <div class="slider-row"><label style="min-width:60px">SD A</label><input type="range" min="0.2" max="1.5" value="0.7" step="0.05" id="sa" oninput="runTTest()"><span class="val" id="sa-v">0.70</span></div>
+              <div class="slider-row"><label style="min-width:60px">n A</label><input type="range" min="15" max="200" value="80" step="5" id="na" oninput="runTTest()"><span class="val" id="na-v">80</span></div>
+            </div>
+            <div>
+              <div style="font-size:12px;color:var(--pink);margin-bottom:8px">Group B (Non-UPI Users)</div>
+              <div class="slider-row"><label style="min-width:60px">Mean B</label><input type="range" min="2" max="5" value="3.1" step="0.1" id="mb" oninput="runTTest()"><span class="val" id="mb-v">3.1</span></div>
+              <div class="slider-row"><label style="min-width:60px">SD B</label><input type="range" min="0.2" max="1.5" value="0.9" step="0.05" id="sb" oninput="runTTest()"><span class="val" id="sb-v">0.90</span></div>
+              <div class="slider-row"><label style="min-width:60px">n B</label><input type="range" min="15" max="200" value="70" step="5" id="nb" oninput="runTTest()"><span class="val" id="nb-v">70</span></div>
+            </div>
+          </div>
+          <canvas id="ttest-canvas" width="780" height="140" style="width:100%;margin-top:12px;background:var(--bg);border-radius:8px;border:1px solid var(--border)"></canvas>
+          <div class="stat-row" style="margin-top:10px">
+            <div class="stat-box"><div class="sb-label">t-statistic</div><div class="sb-val blue" id="t-stat">—</div></div>
+            <div class="stat-box"><div class="sb-label">p-value</div><div class="sb-val gold" id="p-val">—</div></div>
+            <div class="stat-box"><div class="sb-label">Degrees of Freedom</div><div class="sb-val teal" id="df-val">—</div></div>
+            <div class="stat-box"><div class="sb-label">Verdict</div><div class="sb-val" id="ttest-verdict">—</div></div>
+          </div>
+          <div class="formula-box">t = (M₁ − M₂) / √(s₁²/n₁ + s₂²/n₂)   |   p &lt; 0.05 → Reject H₀</div>
+        </div>
+
+        <p><strong style="color:var(--gold2)">Correlation — How closely do two variables move together?</strong></p>
+        <div class="sim-wrap">
+          <div class="sim-title">Live Correlation Scatter Plot — Click to add data points!</div>
+          <div class="slider-row">
+            <label>Correlation strength (r)</label>
+            <input type="range" min="-100" max="100" value="65" id="corr-sl" oninput="drawCorr()">
+            <span class="val" id="corr-val">r = 0.65</span>
+          </div>
+          <canvas id="scatter-canvas" width="780" height="200" style="width:100%;background:var(--bg);border-radius:8px;border:1px solid var(--border);cursor:crosshair" onclick="addPoint(event)"></canvas>
+          <div style="font-size:11px;color:var(--text3);margin-top:6px">Interpretation: r=0 no relation, r=±0.3 weak, r=±0.6 moderate, r=±0.9 strong</div>
+        </div>
+
+      </div>
+      <div class="choices-section">
+        <div class="choices-label">👇 Choose your primary analysis method</div>
+        <button class="choice-btn" onclick="setAnalysis('regression')"><span class="choice-tag">Predictive</span> <strong>Multiple Regression</strong> — Predict impact, find coefficients, R²</button>
+        <button class="choice-btn" onclick="setAnalysis('sem')"><span class="choice-tag mix">Advanced</span> <strong>SEM (Structural Equation Modelling)</strong> — Full model with mediators. AMOS/SmartPLS</button>
+        <button class="choice-btn" onclick="setAnalysis('anova')"><span class="choice-tag q">Comparative</span> <strong>ANOVA + t-Test</strong> — Compare groups, test mean differences</button>
+      </div>
+    </div>
+  `);
+  setTimeout(()=>{runTTest();drawCorr();},100);
+}
+
+let scatterPoints = [];
+function addPoint(e) {
+  const canvas = document.getElementById('scatter-canvas');
+  if(!canvas) return;
+  const rect = canvas.getBoundingClientRect();
+  const x = (e.clientX - rect.left) / rect.width;
+  const y = (e.clientY - rect.top) / rect.height;
+  scatterPoints.push({x,y});
+  drawCorr();
+}
+
+function drawCorr() {
+  const r = parseInt(document.getElementById('corr-sl').value)/100;
+  document.getElementById('corr-val').textContent = `r = ${r.toFixed(2)}`;
+  const canvas = document.getElementById('scatter-canvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W=canvas.width, H=canvas.height;
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle='#0d0d0f'; ctx.fillRect(0,0,W,H);
+
+  // Grid
+  ctx.strokeStyle='rgba(46,46,69,0.4)'; ctx.lineWidth=0.5;
+  for(let i=0;i<=4;i++){
+    ctx.beginPath();ctx.moveTo(0,H*i/4);ctx.lineTo(W,H*i/4);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(W*i/4,0);ctx.lineTo(W*i/4,H);ctx.stroke();
+  }
+
+  // Axis labels
+  ctx.fillStyle='rgba(107,104,144,0.7)'; ctx.font='10px system-ui'; ctx.textAlign='center';
+  ctx.fillText('UPI Adoption →', W/2, H-4);
+  ctx.save(); ctx.translate(12, H/2); ctx.rotate(-Math.PI/2);
+  ctx.fillText('Financial Inclusion ↑', 0, 0); ctx.restore();
+
+  // Generate points based on r
+  const seed = Math.round(r*100);
+  const pts = [];
+  const rng=(s)=>{ let x=Math.sin(s)*10000;return x-Math.floor(x);};
+  for(let i=0;i<60;i++){
+    const xv=rng(i*7+seed*3+1);
+    const noise=rng(i*13+seed*5+2)*2-1;
+    const yv=r*xv+(1-Math.abs(r))*noise*0.5+0.5*(1-Math.abs(r));
+    pts.push({x:xv, y:Math.max(0,Math.min(1,yv))});
+  }
+
+  // Regression line
+  const allPts=[...pts,...scatterPoints];
+  if(allPts.length>1){
+    const mx=allPts.reduce((a,p)=>a+p.x,0)/allPts.length;
+    const my=allPts.reduce((a,p)=>a+p.y,0)/allPts.length;
+    const slope=allPts.reduce((a,p)=>a+(p.x-mx)*(p.y-my),0)/allPts.reduce((a,p)=>a+(p.x-mx)**2,0);
+    const intercept=my-slope*mx;
+    const lineColor=r>=0?'rgba(20,184,166,0.7)':'rgba(239,68,68,0.7)';
+    ctx.strokeStyle=lineColor; ctx.lineWidth=2; ctx.beginPath();
+    ctx.moveTo(20,(intercept+slope*20/W)*H);
+    ctx.lineTo(W-20,(intercept+slope*(W-20)/W)*H);
+    ctx.stroke();
+  }
+
+  // Draw points
+  pts.forEach((p,i)=>{
+    ctx.fillStyle='rgba(167,139,250,0.7)';
+    ctx.beginPath(); ctx.arc(p.x*W, p.y*H, 3, 0, Math.PI*2); ctx.fill();
+  });
+  scatterPoints.forEach(p=>{
+    ctx.fillStyle='rgba(245,158,11,0.9)';
+    ctx.beginPath(); ctx.arc(p.x*W, p.y*H, 5, 0, Math.PI*2); ctx.fill();
+  });
+}
+
+function runTTest() {
+  const ma=parseFloat(document.getElementById('ma').value);
+  const sa=parseFloat(document.getElementById('sa').value);
+  const na=parseInt(document.getElementById('na').value);
+  const mb=parseFloat(document.getElementById('mb').value);
+  const sb=parseFloat(document.getElementById('sb').value);
+  const nb=parseInt(document.getElementById('nb').value);
+  document.getElementById('ma-v').textContent=ma.toFixed(1);
+  document.getElementById('sa-v').textContent=sa.toFixed(2);
+  document.getElementById('na-v').textContent=na;
+  document.getElementById('mb-v').textContent=mb.toFixed(1);
+  document.getElementById('sb-v').textContent=sb.toFixed(2);
+  document.getElementById('nb-v').textContent=nb;
+
+  const pooledSE=Math.sqrt(sa*sa/na+sb*sb/nb);
+  const t=(ma-mb)/pooledSE;
+  const df=Math.round(((sa*sa/na+sb*sb/nb)**2)/((sa*sa/na)**2/(na-1)+(sb*sb/nb)**2/(nb-1)));
+  // Approximate p-value
+  const absT=Math.abs(t);
+  const p=absT>4?0.0001:absT>3?0.003:absT>2.5?0.013:absT>2?0.046:absT>1.5?0.135:0.25;
+
+  document.getElementById('t-stat').textContent=t.toFixed(3);
+  document.getElementById('p-val').textContent=p<0.0001?'<0.0001':p.toFixed(4);
+  document.getElementById('df-val').textContent=df;
+  const verdictEl=document.getElementById('ttest-verdict');
+  if(p<0.05){verdictEl.textContent='Reject H₀ ✓';verdictEl.className='sb-val green';}
+  else{verdictEl.textContent='Fail to Reject H₀';verdictEl.className='sb-val pink';}
+
+  // Draw chart
+  const canvas=document.getElementById('ttest-canvas');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+  const W=canvas.width,H=canvas.height;
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle='#0d0d0f';ctx.fillRect(0,0,W,H);
+  const gauss=(x,m,s)=>Math.exp(-0.5*((x-m)/s)**2);
+  const xMin=1,xMax=6,maxY=1.1;
+  const toX=x=>(x-xMin)/(xMax-xMin)*W;
+  const toY=y=>H-(y/maxY)*(H-20)-10;
+  [[ma,sa,'rgba(20,184,166,0.3)','rgba(94,234,212,0.9)'],[mb,sb,'rgba(236,72,153,0.3)','rgba(236,72,153,0.9)']].forEach(([m,s,fill,stroke])=>{
+    const gA=ctx.createLinearGradient(0,0,0,H); gA.addColorStop(0,fill);gA.addColorStop(1,'transparent');
+    ctx.fillStyle=gA; ctx.beginPath();
+    for(let px=0;px<=W;px++){const x=xMin+(xMax-xMin)*(px/W);const y=gauss(x,m,s);if(px===0)ctx.moveTo(px,toY(y));else ctx.lineTo(px,toY(y));}
+    ctx.lineTo(W,H);ctx.lineTo(0,H);ctx.closePath();ctx.fill();
+    ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.beginPath();
+    for(let px=0;px<=W;px++){const x=xMin+(xMax-xMin)*(px/W);const y=gauss(x,m,s);if(px===0)ctx.moveTo(px,toY(y));else ctx.lineTo(px,toY(y));}
+    ctx.stroke();
+    // Mean label
+    ctx.fillStyle=stroke;ctx.font='11px system-ui';ctx.textAlign='center';
+    ctx.fillText('M='+m.toFixed(1),toX(m),20);
+  });
+}
+
+function setAnalysis(m) {
+  state.analysisMethod = m;
+  addLog(`Analysis method: ${m}`);
+  chapter6();
+}
+
+// ============================================================
+// CHAPTER 6 — Running the Analysis
+// ============================================================
+function chapter6() {
+  state.chapter = 6;
+  const isReg = state.analysisMethod === 'regression';
+  const isSEM = state.analysisMethod === 'sem';
+
+  render(`
+    <div class="scene-card">
+      <div class="scene-chapter">Chapter 6 · Results — Running the Analysis</div>
+      <div class="scene-title">The Numbers Speak. What Do They Say?</div>
+      <div class="scene-body">
+        <p>You've run your analysis using <strong style="color:var(--accent2)">SPSS / SmartPLS / R</strong>. Your results are in. Let's interpret them.</p>
+
+        <div class="sim-wrap">
+          <div class="sim-title">🔢 Regression Analysis Simulator — ${state.topicName}</div>
+          <p style="font-size:12px;color:var(--text2);margin-bottom:12px">Adjust predictor strength to see how R², Beta, and significance change live.</p>
+          <div class="slider-row">
+            <label>Predictor 1 strength (β₁)</label>
+            <input type="range" min="5" max="70" value="42" id="b1" oninput="runReg()">
+            <span class="val" id="b1v">0.42</span>
+          </div>
+          <div class="slider-row">
+            <label>Predictor 2 strength (β₂)</label>
+            <input type="range" min="5" max="60" value="28" id="b2" oninput="runReg()">
+            <span class="val" id="b2v">0.28</span>
+          </div>
+          <div class="slider-row">
+            <label>Predictor 3 strength (β₃)</label>
+            <input type="range" min="0" max="40" value="15" id="b3" oninput="runReg()">
+            <span class="val" id="b3v">0.15</span>
+          </div>
+          <div class="slider-row">
+            <label>Sample Size (n)</label>
+            <input type="range" min="50" max="400" value="200" step="10" id="reg-n" oninput="runReg()">
+            <span class="val" id="reg-nv">200</span>
+          </div>
+          <canvas id="reg-canvas" width="780" height="160" style="width:100%;background:var(--bg);border-radius:8px;border:1px solid var(--border);margin-top:10px"></canvas>
+          <div class="stat-row">
+            <div class="stat-box"><div class="sb-label">R² (Model Fit)</div><div class="sb-val blue" id="r2v">—</div></div>
+            <div class="stat-box"><div class="sb-label">Adj. R²</div><div class="sb-val gold" id="ar2v">—</div></div>
+            <div class="stat-box"><div class="sb-label">F-statistic</div><div class="sb-val teal" id="fv">—</div></div>
+            <div class="stat-box"><div class="sb-label">Model p-value</div><div class="sb-val" id="mpv">—</div></div>
+          </div>
+          <div class="formula-box">Y = α + β₁X₁ + β₂X₂ + β₃X₃ + ε     |     R² = SS_reg / SS_total</div>
+        </div>
+
+        <p><strong style="color:var(--gold2)">What does R² mean?</strong></p>
+        <div class="highlight">
+          R² = <em>Variance explained</em>. If R² = 0.52, your predictors explain <strong>52% of the variation</strong> in your outcome variable. The other 48% is from factors not in your model.<br><br>
+          <strong>Rule of thumb:</strong> R² > 0.25 = decent, > 0.50 = good, > 0.70 = excellent for social science research.
+        </div>
+
+        <p><strong style="color:var(--gold2)">What does p-value actually mean?</strong></p>
+        <div class="callout">
+          p-value is the <em>probability of getting your results by pure chance</em>, assuming H₀ is true.<br><br>
+          • p = 0.03 → Only 3% chance this result is random. <strong style="color:var(--green)">Statistically significant!</strong><br>
+          • p = 0.23 → 23% chance of random result. <strong style="color:var(--pink)">NOT significant.</strong><br>
+          • Threshold: p &lt; 0.05 (95% confidence), p &lt; 0.01 (99%), p &lt; 0.001 (99.9%)
+        </div>
+
+        <div id="reg-table" style="margin-top:14px"></div>
+      </div>
+      <div class="choices-section">
+        <div class="choices-label">👇 Your results — how do they look?</div>
+        <button class="choice-btn" onclick="setResults('strong')"><span class="choice-tag">Significant</span> <strong>Strong results</strong> — Most hypotheses supported, p &lt; 0.05</button>
+        <button class="choice-btn" onclick="setResults('mixed')"><span class="choice-tag mix">Mixed</span> <strong>Mixed results</strong> — Some hypotheses supported, some not</button>
+        <button class="choice-btn" onclick="setResults('weak')"><span class="choice-tag q">Surprising</span> <strong>Null result</strong> — H₀ not rejected. Still publishable! Why?</button>
+      </div>
+    </div>
+  `);
+  setTimeout(runReg, 100);
+}
+
+function runReg() {
+  const b1=parseInt(document.getElementById('b1').value)/100;
+  const b2=parseInt(document.getElementById('b2').value)/100;
+  const b3=parseInt(document.getElementById('b3').value)/100;
+  const n=parseInt(document.getElementById('reg-n').value);
+  document.getElementById('b1v').textContent=b1.toFixed(2);
+  document.getElementById('b2v').textContent=b2.toFixed(2);
+  document.getElementById('b3v').textContent=b3.toFixed(2);
+  document.getElementById('reg-nv').textContent=n;
+
+  const r2=Math.min(0.97, b1*b1+b2*b2+b3*b3 + 0.03);
+  const ar2=Math.max(0, r2 - 3*(1-r2)/(n-4));
+  const k=3;
+  const Fstat=(r2/k)/((1-r2)/(n-k-1));
+  const pModel=Fstat>20?0.001:Fstat>10?0.005:Fstat>5?0.02:0.1;
+
+  document.getElementById('r2v').textContent=(r2*100).toFixed(1)+'%';
+  document.getElementById('ar2v').textContent=(ar2*100).toFixed(1)+'%';
+  document.getElementById('fv').textContent=Fstat.toFixed(2);
+  const mpEl=document.getElementById('mpv');
+  mpEl.textContent=pModel<0.001?'<0.001':pModel.toFixed(3);
+  mpEl.className='sb-val '+(pModel<0.05?'green':'pink');
+
+  // Table
+  const tq=topicQuestions[state.topic];
+  const vars=tq.vars.slice(0,3);
+  const betas=[b1,b2,b3];
+  const tStats=betas.map(b=>Math.abs(b)/0.05);
+  const pVals=tStats.map(t=>t>3.5?0.001:t>2.5?0.01:t>2?0.05:0.2);
+  document.getElementById('reg-table').innerHTML=`
+    <table class="data-table">
+      <tr><th>Predictor</th><th>β (Beta)</th><th>Std Error</th><th>t-stat</th><th>p-value</th><th>Significant?</th></tr>
+      ${vars.map((v,i)=>`<tr>
+        <td>${v}</td>
+        <td>${betas[i].toFixed(3)}</td>
+        <td>${(0.05+Math.random()*0.03).toFixed(3)}</td>
+        <td>${tStats[i].toFixed(2)}</td>
+        <td style="color:${pVals[i]<0.05?'var(--green)':'var(--pink)'}">${pVals[i]<0.001?'&lt;0.001':pVals[i].toFixed(3)}</td>
+        <td><span class="badge ${pVals[i]<0.05?'success':'quant'}">${pVals[i]<0.05?'Yes ✓':'No ✗'}</span></td>
+      </tr>`).join('')}
+      <tr style="background:rgba(124,106,247,0.05)"><td colspan="5"><strong>Model Overall</strong></td><td><span class="badge ${pModel<0.05?'success':'quant'}">${pModel<0.05?'Significant':'Not sig.'}</span></td></tr>
+    </table>`;
+
+  // Bar chart
+  const canvas=document.getElementById('reg-canvas');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+  const W=canvas.width,H=canvas.height;
+  ctx.clearRect(0,0,W,H);ctx.fillStyle='#0d0d0f';ctx.fillRect(0,0,W,H);
+  const barW=80, gap=40, startX=80;
+  const colors=['rgba(167,139,250,0.8)','rgba(20,184,166,0.8)','rgba(245,158,11,0.8)'];
+  betas.forEach((b,i)=>{
+    const bH=(b/0.8)*(H-60);
+    const x=startX+i*(barW+gap);
+    const grad=ctx.createLinearGradient(0,H-bH-20,0,H-20);
+    grad.addColorStop(0,colors[i]);grad.addColorStop(1,colors[i].replace('0.8','0.2'));
+    ctx.fillStyle=grad;
+    ctx.beginPath();ctx.roundRect(x,H-bH-20,barW,bH,4);ctx.fill();
+    ctx.fillStyle=colors[i];ctx.font='bold 13px system-ui';ctx.textAlign='center';
+    ctx.fillText('β='+b.toFixed(2),x+barW/2,H-bH-28);
+    ctx.fillStyle='rgba(163,159,192,0.8)';ctx.font='11px system-ui';
+    ctx.fillText(vars[i].split(' ')[0],x+barW/2,H-6);
+  });
+  // R² label
+  ctx.fillStyle='rgba(124,106,247,0.9)';ctx.font='bold 14px system-ui';ctx.textAlign='left';
+  ctx.fillText(`R² = ${(r2*100).toFixed(1)}%  |  F = ${Fstat.toFixed(1)}  |  p ${pModel<0.001?'< 0.001':'= '+pModel.toFixed(3)}`, 400, 40);
+}
+
+function setResults(type) {
+  state.results = type;
+  addLog(`Results: ${type} findings`);
+  chapter7();
+}
+
+// ============================================================
+// CHAPTER 7 — Writing the Paper
+// ============================================================
+function chapter7() {
+  state.chapter = 7;
+  render(`
+    <div class="scene-card">
+      <div class="scene-chapter">Chapter 7 · Writing Your Research Paper</div>
+      <div class="scene-title">From Data to Words — The Anatomy of a Research Paper</div>
+      <div class="scene-body">
+        <p>Your analysis is done. Now you write. A research paper has a very specific structure — called <strong style="color:var(--gold2)">IMRaD</strong>:</p>
+
+        <div style="margin:16px 0">
+          ${[
+            {sec:'Abstract',desc:'150–250 word summary of EVERYTHING. Written last. Purpose, method, results, conclusion.',color:'var(--accent2)'},
+            {sec:'Introduction',desc:'Why does this research matter? What gap exists? State your RQ and objectives. End with a "paper structure" paragraph.',color:'var(--teal2)'},
+            {sec:'Literature Review',desc:'What do others say? Synthesise 40–80 papers. Identify the research gap your study fills. NOT a summary — a CONVERSATION.',color:'var(--gold)'},
+            {sec:'Methodology',desc:'How did you do it? Sample, instrument (questionnaire), data collection, analysis method, validity, reliability (Cronbach\'s α).',color:'var(--pink)'},
+            {sec:'Results',desc:'What did the numbers say? Tables, regression output, hypothesis testing. Present without interpretation.',color:'var(--green)'},
+            {sec:'Discussion',desc:'What do results MEAN? Compare with past studies. Explain surprises. Your intellectual contribution lives here.',color:'var(--accent2)'},
+            {sec:'Conclusion',desc:'Summary, implications for practice/policy, limitations, future research directions.',color:'var(--teal2)'},
+            {sec:'References',desc:'APA 7th / Chicago. Every claim cited. Plagiarism check (Turnitin < 15%).',color:'var(--text2)'}
+          ].map((s,i)=>`
+            <div style="display:flex;gap:14px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border)">
+              <div style="background:rgba(124,106,247,0.15);color:${s.color};font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;min-width:80px;text-align:center;flex-shrink:0">${i+1}. ${s.sec}</div>
+              <div style="font-size:13px;color:var(--text2)">${s.desc}</div>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="highlight">
+          <strong>Word count for a PhD thesis:</strong> 60,000–100,000 words. For a journal article: 4,000–8,000 words.<br>
+          <strong>Cronbach's Alpha (α):</strong> Measures reliability of your questionnaire. α > 0.7 = acceptable, > 0.8 = good, > 0.9 = excellent.
+        </div>
+
+        <div class="sim-wrap">
+          <div class="sim-title">📝 Thesis Progress Tracker</div>
+          <div id="thesis-tracker"></div>
+        </div>
+
+        <p><strong style="color:var(--gold2)">Research Proposal for PhD Admission — What you need RIGHT NOW:</strong></p>
+        <div class="callout">
+          Your PhD proposal (2,000–5,000 words) must include:<br>
+          1. <strong>Title</strong> — Specific, clear, keyword-rich<br>
+          2. <strong>Background</strong> — Why this topic now?<br>
+          3. <strong>Research Questions & Objectives</strong><br>
+          4. <strong>Hypotheses</strong><br>
+          5. <strong>Theoretical Framework</strong> — Which theory underpins your work? (TAM, RBV, Stakeholder Theory...)<br>
+          6. <strong>Proposed Methodology</strong><br>
+          7. <strong>Expected Contribution to Knowledge</strong><br>
+          8. <strong>Timeline (Gantt Chart)</strong><br>
+          9. <strong>References</strong> (20–30 key papers)
+        </div>
+      </div>
+      <div class="choices-section">
+        <div class="choices-label">👇 Which journal tier will you target?</div>
+        <button class="choice-btn" onclick="setJournal('q1')"><span class="choice-tag">Elite</span> <strong>Q1 Journal</strong> — SSCI/ABDC-A*. High rejection rate (85–95%). Massive impact factor.</button>
+        <button class="choice-btn" onclick="setJournal('q2')"><span class="choice-tag mix">Strong</span> <strong>Q2/Q3 Journal</strong> — ABDC-A or B. Good credibility. Acceptance 20–40%.</button>
+        <button class="choice-btn" onclick="setJournal('ugc')"><span class="choice-tag q">Starting</span> <strong>UGC-CARE Listed Journal</strong> — Required for Indian PhD. Good first publication.</button>
+      </div>
+    </div>
+  `);
+  // Thesis tracker
+  const sections=['Abstract','Introduction','Literature Review','Methodology','Results','Discussion','Conclusion','References'];
+  const words=[200,2000,8000,3000,2500,3500,1500,500];
+  document.getElementById('thesis-tracker').innerHTML = sections.map((s,i)=>`
+    <div style="margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin-bottom:4px">
+        <span>${s}</span><span>${words[i].toLocaleString()} words</span>
+      </div>
+      <div style="background:var(--bg);border-radius:4px;height:8px;overflow:hidden">
+        <div style="height:100%;width:${5+i*11}%;background:linear-gradient(90deg,var(--accent),var(--teal));border-radius:4px;transition:width 1s"></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function setJournal(tier) {
+  state.journal = tier;
+  addLog(`Target journal: ${tier.toUpperCase()}`);
+  chapter8();
+}
+
+// ============================================================
+// CHAPTER 8 — Peer Review & Publication
+// ============================================================
+function chapter8() {
+  state.chapter = 8;
+  const reviewRounds = state.journal === 'q1' ? 3 : state.journal === 'q2' ? 2 : 1;
+  render(`
+    <div class="scene-card">
+      <div class="scene-chapter">Chapter 8 · Peer Review & Publication</div>
+      <div class="scene-title">The Gauntlet — Getting Published</div>
+      <div class="scene-body">
+        <p>You've submitted your paper. Now the most nerve-wracking part: <strong style="color:var(--accent2)">Peer Review</strong>.</p>
+        <div class="callout">
+          <strong>What is Peer Review?</strong><br>
+          2–3 anonymous experts in your field evaluate your paper. They check: Is the methodology sound? Are the conclusions valid? Is the contribution new? Is the writing clear?
+        </div>
+
+        <div class="sim-wrap">
+          <div class="sim-title">🔄 Publication Journey Simulator</div>
+          <div id="review-timeline" style="position:relative;padding-left:30px"></div>
+        </div>
+
+        <p style="margin-top:16px"><strong style="color:var(--gold2)">What do reviewers actually say? Common outcomes:</strong></p>
+        <table class="data-table">
+          <tr><th>Decision</th><th>What it means</th><th>What you do</th></tr>
+          <tr><td style="color:var(--green)">Accept</td><td>Congratulations! (Rare in top journals)</td><td>Minor corrections, submit final</td></tr>
+          <tr><td style="color:var(--gold)">Major Revision</td><td>Good potential, needs significant work</td><td>Respond to each comment, resubmit</td></tr>
+          <tr><td style="color:var(--accent2)">Minor Revision</td><td>Almost there, small fixes</td><td>Quick corrections, resubmit</td></tr>
+          <tr><td style="color:var(--red)">Reject</td><td>Not a fit, or fatal flaws</td><td>Revise and submit elsewhere</td></tr>
+          <tr><td style="color:var(--pink)">Desk Reject</td><td>Rejected by editor, no review</td><td>Check scope, try another journal</td></tr>
+        </table>
+
+        <div class="warn-box">
+          📅 <strong>Timeline reality check:</strong> Submission → First decision: 3–6 months. Full process: 1–3 years for top journals. Keep submitting, keep revising. <em>Every rejection is feedback.</em>
+        </div>
+
+        <div class="sim-wrap">
+          <div class="sim-title">Reviewer Simulator — What will they say about your study?</div>
+          <div id="reviewer-comments"></div>
+          <button class="nav-btn secondary" style="margin-top:12px;font-size:12px" onclick="generateReviewComments()">🔄 Generate New Review Comments</button>
+        </div>
+
+        <p style="margin-top:14px"><strong style="color:var(--gold2)">After Publication — When can you say "I published this"?</strong></p>
+        <div class="highlight">
+          Once accepted: You receive a <strong>DOI (Digital Object Identifier)</strong> — a permanent link.<br>
+          Published Online First → In Issue → In Volume.<br><br>
+          People can then <strong>CITE your work</strong> as: <em>Sharma, A. (2026). "${state.topicName}: Evidence from India." Journal of Commerce, 42(3), 45–67. https://doi.org/10.xxxx</em>
+        </div>
+      </div>
+      <div class="choices-section">
+        <div class="choices-label">👇 The journal sends back a decision...</div>
+        <button class="choice-btn" onclick="setReviewOutcome('accept')"><span class="choice-tag">Lucky</span> <strong>Minor Revision</strong> — Almost perfect. One round of fixes needed.</button>
+        <button class="choice-btn" onclick="setReviewOutcome('major')"><span class="choice-tag mix">Common</span> <strong>Major Revision</strong> — 3 reviewers, 47 comments. Grind time.</button>
+        <button class="choice-btn" onclick="setReviewOutcome('reject')"><span class="choice-tag q">Grit</span> <strong>Rejected — Revise & Resubmit elsewhere</strong> — The researcher's rite of passage.</button>
+      </div>
+    </div>
+  `);
+
+  // Timeline
+  const events=[
+    {icon:'📤',label:'Submitted to journal',time:'Week 0',color:'var(--teal2)'},
+    {icon:'👁',label:'Editorial desk review (scope check)',time:'Week 1–2',color:'var(--gold)'},
+    {icon:'🔬',label:'Sent to peer reviewers (2–3 experts)',time:'Week 2–4',color:'var(--accent2)'},
+    {icon:'💬',label:'Reviews returned to editor',time:'Week 8–20',color:'var(--pink)'},
+    ...Array(reviewRounds-1).fill({icon:'🔄',label:'Revision & Re-review round',time:'3–6 months',color:'var(--gold)'}),
+    {icon:'✅',label:'Final acceptance decision',time:'Month '+((reviewRounds)*4+2),color:'var(--green)'},
+    {icon:'🌐',label:'Online First publication (DOI assigned)',time:'Month '+((reviewRounds)*4+3),color:'var(--teal2)'},
+    {icon:'📖',label:'Published in journal volume/issue',time:'Month '+((reviewRounds)*4+6),color:'var(--accent2)'},
+  ];
+  document.getElementById('review-timeline').innerHTML = events.map((e,i)=>`
+    <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;position:relative">
+      <div style="position:absolute;left:-24px;width:2px;height:${i<events.length-1?'100%':'0'};background:var(--border);top:20px"></div>
+      <div style="width:32px;height:32px;background:rgba(124,106,247,0.15);border:1px solid ${e.color};border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;margin-left:-16px">${e.icon}</div>
+      <div>
+        <div style="font-size:13px;color:var(--text)">${e.label}</div>
+        <div style="font-size:11px;color:${e.color}">${e.time}</div>
+      </div>
+    </div>
+  `).join('');
+
+  generateReviewComments();
+}
+
+function generateReviewComments() {
+  const comments = [
+    ['The sample size appears adequate, however the authors should discuss non-response bias.','The theoretical framework is not clearly articulated in the introduction.','The regression model should include industry and size as control variables.'],
+    ['Convergent validity should be assessed using AVE values > 0.5.','The discussion section lacks comparison with international studies.','Please clarify the data collection period and potential temporal bias.'],
+    ['The literature review is comprehensive. However, more recent studies (post-2022) should be included.','The moderating hypothesis should be tested using interaction terms, not separate regressions.','Please address common method bias using Harman single factor test.'],
+  ];
+  const set = comments[Math.floor(Math.random()*comments.length)];
+  const el = document.getElementById('reviewer-comments');
+  if(!el) return;
+  el.innerHTML = set.map((c,i)=>`
+    <div style="background:var(--bg);border-left:3px solid ${i===0?'var(--accent2)':i===1?'var(--gold)':'var(--teal2)'};padding:10px 14px;border-radius:0 8px 8px 0;margin-bottom:8px;font-size:12px;color:var(--text2)">
+      <strong style="color:${i===0?'var(--accent2)':i===1?'var(--gold)':'var(--teal2)'}">Reviewer ${i+1}:</strong> ${c}
+    </div>
+  `).join('');
+}
+
+function setReviewOutcome(outcome) {
+  state.reviewOutcome = outcome;
+  addLog(`Review outcome: ${outcome}`);
+  chapter9();
+}
+
+// ============================================================
+// CHAPTER 9 — FINAL
+// ============================================================
+function chapter9() {
+  state.chapter = 9;
+  const outcomeTitles = {
+    accept: '🏆 Your Paper is Published!',
+    major: '💪 Revised & Resubmitted — Accepted After Revision!',
+    reject: '🔥 Rejected, Revised, Resubmitted — Published in a Better Journal!'
+  };
+  const methodBadge = state.methodology === 'quantitative' ? 'quant' : state.methodology === 'qualitative' ? 'qual' : 'mixed';
+  const journalNames = {q1:'Journal of Business Research (Q1 SSCI)', q2:'International Journal of Commerce & Management (Q2)', ugc:'Indian Journal of Commerce (UGC-CARE)'};
+
+  const myScore = (state.hypothesisCount * 8) + (state.methodology==='mixed'?30:20) + (state.analysisMethod==='sem'?25:15) + (state.journal==='q1'?30:state.journal==='q2'?20:10) + (state.reviewOutcome==='reject'?15:10);
+
+  render(`
+    <div class="scene-card">
+      <div class="scene-chapter">Chapter 9 · Publication & Legacy</div>
+      <div class="scene-title">${outcomeTitles[state.reviewOutcome]}</div>
+      <div class="scene-body">
+        <div class="final-card">
+          <h2>📚 Research Published!</h2>
+          <p style="color:var(--gold2);font-size:16px;margin-bottom:20px">"${state.topicName}: Evidence from India"</p>
+          <div class="stat-row" style="text-align:left">
+            <div class="stat-box"><div class="sb-label">Research Type</div><div class="sb-val blue"><span class="badge ${methodBadge}" style="font-size:12px">${state.methodology}</span></div></div>
+            <div class="stat-box"><div class="sb-label">Hypotheses Tested</div><div class="sb-val gold">${state.hypothesisCount}</div></div>
+            <div class="stat-box"><div class="sb-label">Analysis</div><div class="sb-val teal" style="font-size:13px">${state.analysisMethod.toUpperCase()}</div></div>
+            <div class="stat-box"><div class="sb-label">Researcher Score</div><div class="sb-val" style="color:var(--gold2)">${myScore}/100</div></div>
+          </div>
+          <p style="font-size:13px;margin-top:14px;color:var(--text2)">
+            <strong style="color:var(--teal2)">Citation:</strong> Sharma, A. (2026). ${state.topicName}: Evidence from India. <em>${journalNames[state.journal]}</em>, 12(3), 45–67. https://doi.org/10.1016/j.research.2026.0042
+          </p>
+          <p style="font-size:12px;color:var(--text3);margin-top:8px">🔖 Listed on SSRN · Indexed in Scopus · DOI assigned · Open to citations worldwide</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-chapter">Your Complete Research Journey</div>
+      <div class="scene-title">Everything You Did — The Full Map</div>
+      <div class="scene-body">
+        <div id="final-journey-map"></div>
+
+        <p style="margin-top:20px"><strong style="color:var(--gold2)">Your PhD Research Proposal — Quick Draft</strong></p>
+        <div class="formula-box" style="font-size:12px;line-height:1.9;color:var(--teal2)">
+TITLE: ${state.topicName}: Evidence from India
+
+RESEARCH QUESTION: ${topicQuestions[state.topic].rq}
+
+NULL HYPOTHESIS (H₀): ${topicQuestions[state.topic].h0}
+ALT HYPOTHESIS (H₁): ${topicQuestions[state.topic].h1}
+
+METHODOLOGY: ${state.methodology.toUpperCase()} research design
+SAMPLE: ${state.methodology==='qualitative'?'20 in-depth interviews':'300+ respondents via structured questionnaire'}
+ANALYSIS: ${state.analysisMethod.toUpperCase()} using ${state.analysisMethod==='sem'?'SmartPLS 4.0':'SPSS 26.0 / R'}
+EXPECTED CONTRIBUTION: Fills the gap in ${state.topicName} research in Indian context
+TARGET JOURNAL: ${journalNames[state.journal]}
+        </div>
+
+        <div class="warn-box" style="margin-top:16px">
+          🎓 <strong>What's next after publication?</strong><br>
+          → Others cite you → Your h-index grows → You get invited to conferences → You build your academic reputation → More grants, more collaborations, more impact.
+        </div>
+
+        <div class="callout" style="margin-top:14px">
+          <strong>Concepts you've mastered today:</strong><br>
+          Research Paper vs Article vs Report · Hypothesis (H₀ & H₁) · Null vs Alternative · Quantitative vs Qualitative vs Mixed Methods · Normal Distribution · Standard Deviation · T-Test · ANOVA · F-Test · Regression · R² · p-value · Correlation (r) · Peer Review · Publication · Citation · DOI
+        </div>
+      </div>
+      <div class="choices-section">
+        <button class="nav-btn pulse" onclick="chapter1();scatterPoints=[];addLog('--- New Journey Started ---')" style="width:100%;text-align:center">🔄 Start a New Research Journey (Different Topic)</button>
+      </div>
+    </div>
+  `);
+
+  addLog(`Research published! Score: ${myScore}/100`);
+
+  // Final journey map
+  const steps = [
+    {icon:'🎯', label:'Topic Selected', val:state.topicName.split('&')[0]+'...', color:'var(--accent2)'},
+    {icon:'❓', label:'Research Question', val:'Formulated & refined', color:'var(--teal2)'},
+    {icon:'🔬', label:'Hypotheses', val:`${state.hypothesisCount} hypotheses (H₀ & H₁)`, color:'var(--gold)'},
+    {icon:'📊', label:'Methodology', val:state.methodology.toUpperCase(), color:'var(--pink)'},
+    {icon:'📋', label:'Data Collected', val:state.dataCollection, color:'var(--green)'},
+    {icon:'📈', label:'Analysis', val:state.analysisMethod.toUpperCase()+' run', color:'var(--accent2)'},
+    {icon:'✍️', label:'Paper Written', val:'IMRaD structure', color:'var(--teal2)'},
+    {icon:'🔄', label:'Peer Review', val:state.reviewOutcome, color:'var(--gold)'},
+    {icon:'🌐', label:'PUBLISHED', val:`DOI assigned`, color:'var(--green)'},
+  ];
+  document.getElementById('final-journey-map').innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:10px">${steps.map(s=>`
+    <div style="background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;flex:1;min-width:140px">
+      <div style="font-size:20px;margin-bottom:4px">${s.icon}</div>
+      <div style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:1px">${s.label}</div>
+      <div style="font-size:12px;color:${s.color};font-weight:600;margin-top:2px">${s.val}</div>
+    </div>`).join('')}</div>`;
+}
+
+// ---- START ----
+chapter1();
+</script>
+</body>
+</html>
