@@ -1,0 +1,4836 @@
+[
+  {
+    "q_no": 1,
+    "exam_session": "June 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Audit Reports (SA 705)"
+    },
+    "keywords": [
+      "modified report",
+      "qualified report",
+      "disclaimer of opinion",
+      "adverse report",
+      "SA 705"
+    ],
+    "question": "Which of the following types of audit report are termed together as modified reports as per standards on Auditing (SA) 705?",
+    "options": {
+      "a": "A and B Only",
+      "b": "A, B and C Only",
+      "c": "B and C Only",
+      "d": "A, C and D Only"
+    },
+    "sub_items": {
+      "A": "Qualified Report",
+      "B": "Audit Report with an 'Emphasis of Matter' paragraph",
+      "C": "Disclaimer of opinion Report",
+      "D": "Adverse Report"
+    },
+    "answer": "d",
+    "answer_source": "solution page visible in source"
+  },
+  {
+    "q_no": 2,
+    "exam_session": "June 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Management Audit"
+    },
+    "keywords": [
+      "management audit",
+      "statutory requirement",
+      "comprehensive review"
+    ],
+    "question": "Which of the following statements is incorrect for Management Audit?",
+    "options": {
+      "a": "Management audit is a statutory requirement.",
+      "b": "Management audit is a comprehensive and critical review of all aspects of management process.",
+      "c": "Management audit covers wide area of management activities and may be for more than one financial year.",
+      "d": "The shareholders or board of directors may appoint the management auditor."
+    },
+    "answer": "a",
+    "answer_source": "solution page visible in source"
+  },
+  {
+    "q_no": 3,
+    "exam_session": "June 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Current Purchasing Power (CPP) Accounting"
+    },
+    "keywords": [
+      "current purchasing power accounting",
+      "monetary items",
+      "non-monetary items",
+      "debtors",
+      "cash"
+    ],
+    "question": "The working of current Purchasing Power Accounting requires classification of balance sheet items into Monetary Items and Non-Monetary Items. Which of the following is a Non-Monetary Item as per current Purchasing Power Accounting?",
+    "options": {
+      "a": "Cash",
+      "b": "Debentures",
+      "c": "Debtors",
+      "d": "Inventories"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 4,
+    "exam_session": "June 2025",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Indian Accounting Standards (Ind AS)",
+      "sub_branch": "Ind AS List Matching"
+    },
+    "keywords": [
+      "Ind AS 2",
+      "Ind AS 16",
+      "Ind AS 103",
+      "Ind AS 113",
+      "PPE",
+      "fair value measurement",
+      "inventories",
+      "business combinations"
+    ],
+    "question": "Match the LIST-I with LIST-II.",
+    "list_1": {
+      "A": "Ind AS 2",
+      "B": "Ind AS 16",
+      "C": "Ind AS 103",
+      "D": "Ind AS 113"
+    },
+    "list_2": {
+      "I": "Property, Plant and Equipment",
+      "II": "Fair Value Measurement",
+      "III": "Inventories",
+      "IV": "Business Combinations"
+    },
+    "options": {
+      "a": "A-I, B-II, C-III, D-IV",
+      "b": "A-IV, B-III, C-II, D-I",
+      "c": "A-III, B-I, C-IV, D-II",
+      "d": "A-III, B-I, C-II, D-IV"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 5,
+    "exam_session": "June 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Transmission of Shares"
+    },
+    "keywords": [
+      "transmission of shares",
+      "instrument of transfer",
+      "stamp duty",
+      "death",
+      "insolvency"
+    ],
+    "question": "In case of transmission of shares, which of the following is correct?",
+    "options": {
+      "a": "No instrument of transfer is required.",
+      "b": "Transmission of securities is generally made without any consideration.",
+      "c": "Shares continue to be subject to the original liabilities.",
+      "d": "Transmission takes place on death or insolvency of a holder of securities.",
+      "e": "Stamp duty is payable on transmission of securities."
+    },
+    "note": "Question asks to choose the correct answer from combination options below (A,B,C,D,E only). See options list for combinations.",
+    "combination_options": {
+      "a": "A, B, C and D Only",
+      "b": "B, C and D Only",
+      "c": "C, D and E Only",
+      "d": "A, B, C Only"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 6,
+    "exam_session": "June 2025",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Corporate Restructuring",
+      "sub_branch": "Amalgamation - Nature of Merger"
+    },
+    "keywords": [
+      "amalgamation",
+      "merger",
+      "pooling of interest",
+      "purchase consideration",
+      "transferor company"
+    ],
+    "question": "Which of the following statements are incorrect for amalgamation in the nature of merger?",
+    "sub_items": {
+      "A": "All the assets and liabilities of the transferor company are taken over by transferee company.",
+      "B": "Shareholders holding not less than 95% of the face value of the equity shares of the transferor company become equity shareholders of the transferee company.",
+      "C": "Payment of purchase consideration may be made in cash per share.",
+      "D": "Journal entries for recording the merger are passed by pooling of interest method.",
+      "E": "The business of the transferor company is not intended to be carried on by the transferee company."
+    },
+    "options": {
+      "a": "A, B, and C Only",
+      "b": "B, C and D Only",
+      "c": "A and D Only",
+      "d": "B, C and E Only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 7,
+    "exam_session": "June 2025",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Financial Statements",
+      "sub_branch": "Cash Flow Statement - Operating Activities"
+    },
+    "keywords": [
+      "net cash from operating activities",
+      "net profit before tax",
+      "depreciation",
+      "current assets",
+      "current liabilities",
+      "tax paid"
+    ],
+    "question": "What is the amount of net cash from operating activities of A Ltd. if it has net profit before tax Rs.5,90,000; Depreciation on Property, Plant and Equipment Rs.4,30,000; Decrease in current Assets Rs.30,000; Decrease in Current Liabilities Rs.85,000; and Tax Paid Rs.80,000?",
+    "options": {
+      "a": "Rs.9,65,000",
+      "b": "Rs.8,85,000",
+      "c": "Rs.10,75,000",
+      "d": "Rs.9,95,000"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 8,
+    "exam_session": "June 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Indian Accounting Standards (Ind AS)",
+      "sub_branch": "Consolidated Financial Statements"
+    },
+    "keywords": [
+      "Ind AS 110",
+      "consolidated financial statements",
+      "Ind AS 29",
+      "Ind AS 101",
+      "Ind AS 41"
+    ],
+    "question": "Which of the following Ind AS specifically deals with consolidated financial statements?",
+    "options": {
+      "a": "Ind AS 29",
+      "b": "Ind AS 101",
+      "c": "Ind AS 110",
+      "d": "Ind AS 41"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 9,
+    "exam_session": "June 2025",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Corporate Finance",
+      "sub_branch": "Cost of Preference Shares"
+    },
+    "keywords": [
+      "cost of preference shares",
+      "issue price",
+      "coupon rate",
+      "10% preference shares"
+    ],
+    "question": "ABC ltd. issued 2,000, 10% preference shares of Rs.100 each at Rs.95. Calculate the cost of preference shares.",
+    "options": {
+      "a": "8.50%",
+      "b": "10.53%",
+      "c": "12.35%",
+      "d": "15.25%"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 10,
+    "exam_session": "June 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Negotiable Instruments",
+      "sub_branch": "Bill of Exchange"
+    },
+    "keywords": [
+      "bill of exchange",
+      "drawer",
+      "primary liability",
+      "dishonour"
+    ],
+    "question": "What is the primary liability of the drawer of a bill of exchange or cheque?",
+    "options": {
+      "a": "Liability to compensate the holder in case of dishonour.",
+      "b": "Liability to pay the amount at maturity.",
+      "c": "Liability to provide sufficient funds to the drawee.",
+      "d": "Liability to pay the holder without any condition."
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 11,
+    "exam_session": "June 2025",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Conservatism Principle"
+    },
+    "keywords": [
+      "conservatism",
+      "valuation of stock",
+      "provision for bad debts",
+      "investment fluctuation reserve"
+    ],
+    "question": "Which of the following are the applications of the conservatism principle of accounting?",
+    "sub_items": {
+      "A": "Valuation of stock in trade at the lower of cost or market value",
+      "B": "Debiting drawings account and crediting purchases account when goods are withdrawn by the proprietor",
+      "C": "Making provision for bad and doubtful debts",
+      "D": "Making provision for discount on creditors",
+      "E": "Creation of investment fluctuation fund"
+    },
+    "options": {
+      "a": "A and C Only",
+      "b": "A, B and D Only",
+      "c": "B, C and E Only",
+      "d": "A, C and E Only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 12,
+    "exam_session": "June 2025",
+    "question_type": "Sequencing (Levels/Hierarchy)",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Dissolution of Firm"
+    },
+    "keywords": [
+      "dissolution of partnership",
+      "application of assets",
+      "capital",
+      "third parties",
+      "residue"
+    ],
+    "question": "Identify the correct order in which the assets of the firm shall be applied in case of dissolution of a partnership firm.",
+    "sub_items": {
+      "A": "Paying to each partner rateably what is due to him from the firm for advances as distinguished from capital.",
+      "B": "Paying the residues (if any) to partners in the proportion in which they were entitled to share profit.",
+      "C": "Paying the debts of the firm to third parties.",
+      "D": "Paying to each partner rateably what is due to him on account of capital."
+    },
+    "options": {
+      "a": "A, C, D, B",
+      "b": "C, A, B, D",
+      "c": "C, A, D, B",
+      "d": "A, B, C, D"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 13,
+    "exam_session": "June 2025",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Break-even / Target Profit Analysis"
+    },
+    "keywords": [
+      "selling price",
+      "variable cost",
+      "fixed cost",
+      "target profit",
+      "number of units"
+    ],
+    "question": "A Ltd. makes plastic buckets. Selling price per bucket is Rs.210 and variable cost per bucket is Rs.60. Fixed cost of making buckets is Rs.1,50,000 for the year. The number of buckets to be sold to get a profit of Rs.90,000 is:",
+    "options": {
+      "a": "714 buckets",
+      "b": "428 buckets",
+      "c": "1000 buckets",
+      "d": "1600 buckets"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 14,
+    "exam_session": "June 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Working Capital Management",
+      "sub_branch": "Concepts of Working Capital"
+    },
+    "keywords": [
+      "gross working capital",
+      "net working capital",
+      "current assets",
+      "operating cycle"
+    ],
+    "question": "Which one of the following refers to the firm's investment in the current assets?",
+    "options": {
+      "a": "Gross Working Capital",
+      "b": "Net Working Capital",
+      "c": "Gross Current liabilities",
+      "d": "Operating cycle"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 15,
+    "exam_session": "January 2025",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Share Capital - Calls & Forfeiture"
+    },
+    "keywords": [
+      "call-in-advance",
+      "under subscription",
+      "sweat equity shares at discount",
+      "forfeited shares"
+    ],
+    "question": "Which of the following statements are correct:",
+    "sub_items": {
+      "A": "Call-in-advance is the amount paid by the shareholders in excess of the amount due from them.",
+      "B": "When the number of shares applied is more than the number of shares offered to the public for subscription, the issue is termed as under subscription.",
+      "C": "Section 49 of the Companies Act prohibits the issue of shares other than sweat equity shares at discount.",
+      "D": "Unless or until the forfeited shares are re-issued, the balance on the shares forfeited account will be deducted from the paid-up capital.",
+      "E": "The securities premium is an amount in excess of nominal value or face value of the securities."
+    },
+    "options": {
+      "a": "A and E Only",
+      "b": "B, C and D Only",
+      "c": "A, B and C Only",
+      "d": "A, D and E Only"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 16,
+    "exam_session": "January 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Vouching & Verification"
+    },
+    "keywords": [
+      "vouching",
+      "verification",
+      "internal check",
+      "internal control",
+      "documentary evidence"
+    ],
+    "question": "Which one of the following involves comparing entries in the books of accounts with documentary evidence?",
+    "options": {
+      "a": "Internal check",
+      "b": "Internal control",
+      "c": "Vouching",
+      "d": "Verification"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 17,
+    "exam_session": "January 2025",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Working Capital Management",
+      "sub_branch": "Determinants of Working Capital"
+    },
+    "keywords": [
+      "nature of business",
+      "business cycle fluctuations",
+      "credit policy",
+      "long-term source of finance",
+      "employee skills"
+    ],
+    "question": "Which of the following points are considered as factors determining the working capital of a firm?",
+    "sub_items": {
+      "A": "Basic nature of Business",
+      "B": "Business cycle fluctuations",
+      "C": "Credit Policy of the firm",
+      "D": "Long-term source of finance",
+      "E": "Employee Skills"
+    },
+    "options": {
+      "a": "A, B and D only",
+      "b": "B, C and C only",
+      "c": "A, B and C only",
+      "d": "D and E only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 18,
+    "exam_session": "January 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Accounting Fundamentals",
+      "sub_branch": "Types of Accounts"
+    },
+    "keywords": [
+      "prepaid insurance",
+      "real account",
+      "personal account",
+      "nominal account"
+    ],
+    "question": "Prepaid Insurance is which type of account?",
+    "options": {
+      "a": "Real Account",
+      "b": "Personal Account",
+      "c": "Nominal Account",
+      "d": "Real and Nominal Both"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 19,
+    "exam_session": "January 2025",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Accounting Conventions"
+    },
+    "keywords": [
+      "conservatism",
+      "dual aspect",
+      "separate business entity",
+      "consistency"
+    ],
+    "question": "Match the List I with List II.",
+    "list_1": {
+      "A": "Conservatism",
+      "B": "Dual aspect",
+      "C": "Separate Business entity",
+      "D": "Consistency"
+    },
+    "list_2": {
+      "I": "Use of same accounting policies by a firm from period to period",
+      "II": "Enterprise is treated as separate from owner and other persons associated with it",
+      "III": "Every transaction has a two-fold effect",
+      "IV": "Anticipate no profit, but provide for all possible losses"
+    },
+    "options": {
+      "a": "A-IV, B-III, C-II, D-I",
+      "b": "A-I, B-II, C-III, D-IV",
+      "c": "A-II, B-III, C-I, D-IV",
+      "d": "A-III, B-IV, C-I, D-II"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 20,
+    "exam_session": "January 2025",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Ratio Analysis",
+      "sub_branch": "Current Ratio"
+    },
+    "keywords": [
+      "current assets",
+      "inventories",
+      "working capital",
+      "current ratio"
+    ],
+    "question": "Current assets are Rs.4,00,000. Inventories are Rs.2,00,000. Working capital is Rs.2,40,000. Calculate Current Ratio.",
+    "options": {
+      "a": "2:1",
+      "b": "2.5:1",
+      "c": "1.5:1",
+      "d": "1:2"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 21,
+    "exam_session": "January 2025",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Admission of a Partner"
+    },
+    "keywords": [
+      "Indian Partnership Act 1932",
+      "new profit sharing ratio",
+      "sacrificing ratio",
+      "revaluation account"
+    ],
+    "question": "Which of the following statements are true regarding admission of a new partner?",
+    "sub_items": {
+      "A": "According to section 25 of the Indian Partnership Act, 1932, a person can be admitted as partner.",
+      "B": "New Profit-sharing ratio is the ratio in which all partners, including new partners, will share future profits and loses of the firm.",
+      "C": "New Profit Share = Profit Share Sacrificed - Old Profit Share",
+      "D": "Sacrificing Ratio = Old Profit Share - New Profit Share",
+      "E": "The Profit or loss which arises from Revaluation Account will be transferred to partner's capital account"
+    },
+    "options": {
+      "a": "B, D and E only",
+      "b": "A, B and C only",
+      "c": "B, C and D only",
+      "d": "C, D and E only"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 22,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Ratio Analysis",
+      "sub_branch": "Current Ratio"
+    },
+    "keywords": [
+      "current ratio",
+      "purchase of stock for cash",
+      "cash collection from debtors"
+    ],
+    "question": "The current ratio of a company is 2:1. Which one of the following suggestions would improve the current ratio?",
+    "options": {
+      "a": "Purchase of stock for cash",
+      "b": "Cash collection from debtors",
+      "c": "Pay a current liability",
+      "d": "Purchase of fixed assets"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 23,
+    "exam_session": "September 2024",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Forfeiture and Reissue of Shares"
+    },
+    "keywords": [
+      "forfeiture of shares",
+      "reissue",
+      "capital reserve"
+    ],
+    "question": "A company forfeits 100 shares of Rs.10 each on which Rs.300 had been received. 60 shares are reissued at Rs.9 per share. Which one of the following amounts is to be transferred to the Capital Reserve Account?",
+    "options": {
+      "a": "Rs.200",
+      "b": "Rs.180",
+      "c": "Rs.120",
+      "d": "Rs.60"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 24,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Contract Law",
+      "sub_branch": "Undue Influence"
+    },
+    "keywords": [
+      "undue influence",
+      "creditor and debtor",
+      "landlord and tenant",
+      "husband and wife",
+      "parent and child"
+    ],
+    "question": "In which of the following cases, undue influence is presumed:",
+    "options": {
+      "a": "Creditor and debtor",
+      "b": "Landlord and tenant",
+      "c": "Husband and wife",
+      "d": "Parent and child"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 25,
+    "exam_session": "September 2024",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Indian Accounting Standards (Ind AS)",
+      "sub_branch": "Ind AS List Matching"
+    },
+    "keywords": [
+      "Ind AS 12",
+      "Ind AS 17",
+      "Ind AS 19",
+      "Ind AS 23",
+      "leases",
+      "borrowing costs",
+      "employee benefits",
+      "income taxes"
+    ],
+    "question": "Match the column: List-I Ind AS with List-II Related.",
+    "list_1": {
+      "A": "Ind AS-12",
+      "B": "Ind AS-17",
+      "C": "Ind AS-19",
+      "D": "Ind AS-23"
+    },
+    "list_2": {
+      "I": "Leases",
+      "II": "Borrowing Costs",
+      "III": "Employee Benefits",
+      "IV": "Income Taxes"
+    },
+    "options": {
+      "a": "A-IV, B-I, C-III, D-II",
+      "b": "A-III, B-II, C-IV, D-I",
+      "c": "A-I, B-IV, C-III, D-II",
+      "d": "A-IV, B-III, C-I, D-II"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 26,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Business Environment",
+      "sub_branch": "Environment Types"
+    },
+    "keywords": [
+      "socio-cultural environment",
+      "political environment",
+      "economic environment",
+      "human beings attitudes"
+    ],
+    "question": "Which environment shapes the attitudes of human beings, though there may be great diversity in its impact?",
+    "options": {
+      "a": "The Political Environment",
+      "b": "International Environment",
+      "c": "The Socio-Cultural Environment",
+      "d": "The Economic Environment"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 27,
+    "exam_session": "September 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Corporate Restructuring",
+      "sub_branch": "Methods of Purchase Consideration"
+    },
+    "keywords": [
+      "lump sum payment method",
+      "net asset method",
+      "total payment method",
+      "net realization method",
+      "swap rate method"
+    ],
+    "question": "Which of the following is / are the methods of calculation of purchase consideration?",
+    "sub_items": {
+      "A": "Lump-sum payment method",
+      "B": "Net asset method",
+      "C": "Total payment method",
+      "D": "Net realization method",
+      "E": "SWAP rate method"
+    },
+    "options": {
+      "a": "A, B, C only",
+      "b": "B, C, D only",
+      "c": "A, D, E only",
+      "d": "A, B, C, E only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 28,
+    "exam_session": "September 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Financial Statements",
+      "sub_branch": "Cash Flow Statement - Finance Companies"
+    },
+    "keywords": [
+      "investing activities",
+      "cash proceeds sale of fixed assets",
+      "repayment of loan taken",
+      "debenture purchased",
+      "loan advanced",
+      "purchase of patent"
+    ],
+    "question": "Which of the following transactions are shown as investing activities in cash flow statement by finance companies?",
+    "sub_items": {
+      "A": "Cash proceed from sale of fixed assets",
+      "B": "Repayment of loan taken",
+      "C": "Debenture purchased",
+      "D": "Loan advanced",
+      "E": "Purchase of patent"
+    },
+    "options": {
+      "a": "A, B, C only",
+      "b": "A, C, E only",
+      "c": "B, C, D only",
+      "d": "B, D, E only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 29,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Fundamentals of Auditing"
+    },
+    "keywords": [
+      "backbone of auditing",
+      "verification of assets",
+      "internal check",
+      "vouching",
+      "internal audit"
+    ],
+    "question": "Which one of the following is known as the backbone of auditing?",
+    "options": {
+      "a": "Verification of assets",
+      "b": "Internal check",
+      "c": "Vouching",
+      "d": "Internal audit"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 30,
+    "exam_session": "September 2024",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "LLP Incorporation"
+    },
+    "keywords": [
+      "LLP incorporation",
+      "digital signature certificate",
+      "DIN",
+      "LLP agreement",
+      "PAN and TAN"
+    ],
+    "question": "Arrange the following process of incorporation of a new LLP in proper sequence.",
+    "sub_items": {
+      "A": "Reserve LLP Name",
+      "B": "Procure Digital Signature Certificate",
+      "C": "Prepare Documents for Incorporation of LLP",
+      "D": "LLP Incorporation and DIN Application",
+      "E": "Drafting and Filing LLP Agreement",
+      "F": "Apply for PAN and TAN"
+    },
+    "options": {
+      "a": "A, B, C, D, F, E",
+      "b": "B, A, D, C, E, F",
+      "c": "B, A, C, D, F, E",
+      "d": "A, B, C, D, E, F"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 31,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Business Environment",
+      "sub_branch": "Capitalist Economy"
+    },
+    "keywords": [
+      "capitalist economy",
+      "right of private property",
+      "freedom of choice",
+      "government interference",
+      "competition"
+    ],
+    "question": "Which of the following is not a feature of a capitalist economy?",
+    "options": {
+      "a": "Right of private property",
+      "b": "Freedom of choice to consumers",
+      "c": "Government Interference",
+      "d": "High level of competition"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 32,
+    "exam_session": "September 2024",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Managerial Economics",
+      "sub_branch": "Cross-Price Elasticity"
+    },
+    "keywords": [
+      "cross-price elasticity",
+      "tea",
+      "coffee",
+      "demand"
+    ],
+    "question": "The price of one kg of tea is Rs. 30. At this price Rs. 5 kg of tea is demanded. If the price of coffee rises from Rs. 25 to Rs. 35 per kg, the quantity demanded of tea rises from 5 kg to 8 kg. Find the cross-price elasticity of tea.",
+    "options": {
+      "a": "(+)0.5",
+      "b": "(+)1.0",
+      "c": "(+)1.5",
+      "d": "(-)1.8"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 33,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Revenue Recognition"
+    },
+    "keywords": [
+      "revenue from sale of products",
+      "period earnings",
+      "sale is made"
+    ],
+    "question": "Revenue from sale of products, ordinarily, is reported as part of the earnings in the period when:",
+    "options": {
+      "a": "The sale is made",
+      "b": "The cash is collected",
+      "c": "The products are manufactured",
+      "d": "The profit is computed"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 34,
+    "exam_session": "September 2024",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Financial Markets",
+      "sub_branch": "IPO Process"
+    },
+    "keywords": [
+      "IPO",
+      "SEBI verification",
+      "underwriter",
+      "registration",
+      "pricing",
+      "allotment"
+    ],
+    "question": "Arrange the following steps involved in the process of IPO issue in the correct order:",
+    "sub_items": {
+      "A": "Verification by SEBI",
+      "B": "Hiring an underwriter",
+      "C": "Registration for IPO",
+      "D": "Pricing of IPO",
+      "E": "Allotment of shares"
+    },
+    "options": {
+      "a": "A, C, D, B, E",
+      "b": "A, D, C, B, E",
+      "c": "B, C, D, A, E",
+      "d": "B, C, A, D, E"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 35,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Transmission of Shares"
+    },
+    "keywords": [
+      "transmission of shares",
+      "sale",
+      "death",
+      "insolvency",
+      "maturity"
+    ],
+    "question": "Transmission of shares is effected by which of the following?",
+    "options_meaning": {
+      "A": "Sale",
+      "B": "Death",
+      "C": "Insolvency",
+      "D": "Maturity"
+    },
+    "options": {
+      "a": "A & B Only",
+      "b": "B & D Only",
+      "c": "B & C Only",
+      "d": "B & C Only"
+    },
+    "note": "OCR options b and c/d may be duplicated/uncertain in source",
+    "ocr_incomplete": true,
+    "answer": "c"
+  },
+  {
+    "q_no": 36,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Company Meetings"
+    },
+    "keywords": [
+      "statutory meeting",
+      "annual general meeting",
+      "class meeting",
+      "director's meeting"
+    ],
+    "question": "Which of the following is the most frequently held meeting of a company?",
+    "options": {
+      "a": "Statutory Meeting",
+      "b": "Annual General Meeting",
+      "c": "Class Meeting",
+      "d": "Director's Meeting"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 37,
+    "exam_session": "September 2024",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Private Limited Company Registration"
+    },
+    "keywords": [
+      "company name reservation",
+      "DIN",
+      "DSC",
+      "MOA",
+      "AOA",
+      "registration certificate",
+      "SPICE+"
+    ],
+    "question": "Arrange the online registration process of a new private limited company in proper sequence:",
+    "sub_items": {
+      "A": "Select and Reserve Company Name",
+      "B": "Acquire DIN & DSC of promoters",
+      "C": "Draft Memorandum and Articles of Association",
+      "D": "Get Company Registration Certificate",
+      "E": "File SPICE+ Application"
+    },
+    "options": {
+      "a": "A, B, C, E, D",
+      "b": "A, B, E, D, C",
+      "c": "B, A, C, E, D",
+      "d": "B, A, C, D, E"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 38,
+    "exam_session": "September 2024",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Ratio Analysis",
+      "sub_branch": "DuPont Analysis"
+    },
+    "keywords": [
+      "return on assets",
+      "profit margin",
+      "total assets turnover"
+    ],
+    "question": "A company has Return on Assets (ROA) of 10% and profit margin of 2%. Compute the total assets turnover.",
+    "options": {
+      "a": "2.5%",
+      "b": "5%",
+      "c": "7.5%",
+      "d": "10%"
+    },
+    "note": "Standard formula: ROA = Profit margin x Asset turnover, so Asset turnover = ROA/Profit margin = 5 (i.e., 5 times); option likely represents times not percent - OCR uncertain",
+    "ocr_incomplete": true,
+    "answer": "b"
+  },
+  {
+    "q_no": 39,
+    "exam_session": "September 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Rights of Equity Shareholders"
+    },
+    "keywords": [
+      "right to income",
+      "right to claim dividend",
+      "right to control",
+      "right to liquidation",
+      "pre-emptive rights"
+    ],
+    "question": "Which of the following are the rights of equity shareholders?",
+    "sub_items": {
+      "A": "Right to Income",
+      "B": "Right to Claim Dividend",
+      "C": "Right to Control",
+      "D": "Right to Liquidation",
+      "E": "Pre-emptive Rights"
+    },
+    "options": {
+      "a": "A, B, C, D & E",
+      "b": "B, C & E Only",
+      "c": "A, B, C & D Only",
+      "d": "A, C, D & E Only"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 40,
+    "exam_session": "September 2024",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Activity Based Costing (ABC)"
+    },
+    "keywords": [
+      "activity based costing",
+      "cost pools",
+      "cost drivers",
+      "activity identification"
+    ],
+    "question": "Arrange the following steps of Activity Based Costing (ABC) in proper sequence:",
+    "sub_items": {
+      "A": "Staff Training and Review Follow-up",
+      "B": "Identify Main Activities",
+      "C": "Process specification",
+      "D": "Identify Non-value adding Activity and Cost Pools",
+      "E": "Selection of Activity Cost Drivers and Tracing of Costs with Objects"
+    },
+    "options": {
+      "a": "C, B, D, E, A",
+      "b": "B, C, D, E, A",
+      "c": "D, B, C, A, E",
+      "d": "E, D, B, C, A"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 41,
+    "exam_session": "September 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Financial Statements",
+      "sub_branch": "Funds Flow Statement"
+    },
+    "keywords": [
+      "funds flow",
+      "trade creditors sale of land",
+      "cash collection debtors",
+      "bills payable"
+    ],
+    "question": "Which of the following are cases of Funds Flow?",
+    "sub_items": {
+      "A": "Payment of trade creditors by sale of land",
+      "B": "Cash collection from debtors",
+      "C": "Purchase of furniture by issue of bills payable",
+      "D": "Payment of long-term loan by cash",
+      "E": "Payment of bills payable by cash"
+    },
+    "options": {
+      "a": "A, D and E Only",
+      "b": "B, C and D Only",
+      "c": "A, C and D Only",
+      "d": "B and E Only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 42,
+    "exam_session": "September 2024",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Ratio Analysis",
+      "sub_branch": "Debt Service Coverage Ratio"
+    },
+    "keywords": [
+      "debt service coverage ratio",
+      "net profit before interest and tax",
+      "debenture",
+      "installments"
+    ],
+    "question": "Calculate Debt Service coverage ratio from the following data: Net profit before interest and Tax Rs 2,50,000; 10% Debenture (payable in 10 years in equal installments) Rs.1,00,000, Tax rate is 50%.",
+    "options": {
+      "a": "1.25",
+      "b": "1.67",
+      "c": "2.27",
+      "d": "2.67"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 43,
+    "exam_session": "June 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Securities Premium"
+    },
+    "keywords": [
+      "securities premium account",
+      "floating cost",
+      "discount on debentures",
+      "dividend distribution",
+      "bonus issue"
+    ],
+    "question": "The balance of securities premium account cannot be utilized for which one of the following?",
+    "options": {
+      "a": "Writing off floating cost",
+      "b": "Writing of discount on issue of debenture",
+      "c": "Dividend distribution",
+      "d": "Bonus issue"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 44,
+    "exam_session": "June 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Indian Accounting Standards (Ind AS)",
+      "sub_branch": "Cash Flow Statement (Ind AS 7)"
+    },
+    "keywords": [
+      "bank overdraft",
+      "cash equivalent",
+      "Ind AS 7",
+      "AS 3"
+    ],
+    "question": "Bank overdraft payable on demand should be treated as cash and cash equivalent according to which one of the following Accounting Standard?",
+    "options": {
+      "a": "AS - 3 (Revised)",
+      "b": "Ind - AS - 7",
+      "c": "Ind - AS - 107",
+      "d": "Ind - AS - 18"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 45,
+    "exam_session": "June 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Financial Statements",
+      "sub_branch": "Cash Flow Statement - Financial Enterprises"
+    },
+    "keywords": [
+      "dividend paid",
+      "operating activities",
+      "financing activities",
+      "investing activities"
+    ],
+    "question": "In Financial Enterprises, dividend paid are showing which one of the following activities of Cash Flow Statement?",
+    "options": {
+      "a": "Operating activities",
+      "b": "Financing activities",
+      "c": "Investing activities",
+      "d": "Operating and Financing activities both"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 46,
+    "exam_session": "June 2024",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Corporate Finance",
+      "sub_branch": "Capital Expenditure Planning"
+    },
+    "keywords": [
+      "capital expenditure planning",
+      "capital budgeting",
+      "control of capital projects"
+    ],
+    "question": "Arrange the phases of capital expenditure / Investment planning and control from beginning to end.",
+    "sub_items": {
+      "A": "Evaluation of the net benefits",
+      "B": "Identification of Investment opportunities",
+      "C": "Development of forecasts of benefits and costs",
+      "D": "Authorization for progressing and spending capital expenditure",
+      "E": "Control of capital Projects"
+    },
+    "options": {
+      "a": "A, C, D, E, B",
+      "b": "B, C, A, D, E",
+      "c": "A, B, C, D, E",
+      "d": "B, A, D, C, E"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 47,
+    "exam_session": "June 2024",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Financial Statements",
+      "sub_branch": "Balance Sheet Classification"
+    },
+    "keywords": [
+      "interest accrued on investment",
+      "bank overdraft",
+      "trademark",
+      "stores and spares",
+      "current liabilities",
+      "PPE"
+    ],
+    "question": "Match List-I with List-II Head.",
+    "list_1": {
+      "A": "Interest accrued on Investment",
+      "B": "Bank Overdraft",
+      "C": "Trade Mark",
+      "D": "Stores and Spares"
+    },
+    "list_2": {
+      "I": "Current liabilities",
+      "II": "Property, plant, and equipment",
+      "III": "Current Inventory",
+      "IV": "Current Assets other than current Assets"
+    },
+    "options": {
+      "a": "A-IV, B-III, C-II, D-I",
+      "b": "A-III, B-IV, C-II, D-I",
+      "c": "A-IV, B-I, C-II, D-III",
+      "d": "A-IV, B-I, C-III, D-II"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 48,
+    "exam_session": "June 2024",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Ratio Analysis",
+      "sub_branch": "Working Capital, Current & Liquid Ratio"
+    },
+    "keywords": [
+      "working capital",
+      "current ratio",
+      "liquid ratio",
+      "value of inventory"
+    ],
+    "question": "Working capital of a company is Rs. 6,00,000 current ratio is 2.5:1, liquid ratio = 1.5:1. What is the value of inventory?",
+    "options": {
+      "a": "Rs. 6,00,000",
+      "b": "Rs. 10,00,000",
+      "c": "Rs. 4,00,000",
+      "d": "Rs. 2,00,000"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 49,
+    "exam_session": "June 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Types of Partnership"
+    },
+    "keywords": [
+      "partnership at will",
+      "particular partnership",
+      "fixed term",
+      "long period"
+    ],
+    "question": "If a partnership formed to carry on a business without specifying any period of time and continues to exist as long as the partners are willing to carry on, is called:",
+    "options": {
+      "a": "Partnership for fixed term",
+      "b": "Partnership at will",
+      "c": "Particular Partnership",
+      "d": "Partnership for long period"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 50,
+    "exam_session": "June 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Corporate Restructuring",
+      "sub_branch": "Methods of Purchase Consideration"
+    },
+    "keywords": [
+      "lump sum payment method",
+      "net asset method",
+      "total payment method",
+      "net realization method",
+      "swap rate method"
+    ],
+    "question": "Which of the following is / are the methods of calculation of purchase consideration?",
+    "sub_items": {
+      "A": "Lump-sum payment method",
+      "B": "Net asset method",
+      "C": "Total payment method",
+      "D": "Net realization method",
+      "E": "SWAP rate method"
+    },
+    "options": {
+      "a": "A, B, C only",
+      "b": "B, C, D only",
+      "c": "A, D, E only",
+      "d": "A, B, C, E only"
+    },
+    "note": "Duplicate of Q27 (September 2024) rerun in June 2024 sitting",
+    "answer": "d"
+  },
+  {
+    "q_no": 51,
+    "exam_session": "June 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Financial Statements",
+      "sub_branch": "Cash Flow Statement - Finance Companies"
+    },
+    "keywords": [
+      "investing activities",
+      "cash proceeds sale of fixed assets",
+      "repayment of loan taken",
+      "debenture purchased",
+      "loan advanced",
+      "purchase of patent"
+    ],
+    "question": "Which of the following transactions are shown as investing activities in cash flow statement by finance companies?",
+    "sub_items": {
+      "A": "Cash proceed from sale of fixed assets",
+      "B": "Repayment of loan taken",
+      "C": "Debenture purchased",
+      "D": "Loan advanced",
+      "E": "Purchase of patent"
+    },
+    "options": {
+      "a": "A, B, C only",
+      "b": "A, C, E only",
+      "c": "B, C, D only",
+      "d": "B, D, E only"
+    },
+    "note": "Duplicate of Q28 (September 2024) rerun in June 2024 sitting",
+    "answer": "b"
+  },
+  {
+    "q_no": 52,
+    "exam_session": "June 2024",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Indian Accounting Standards (Ind AS)",
+      "sub_branch": "Ind AS List Matching"
+    },
+    "keywords": [
+      "Ind AS 1",
+      "Ind AS 2",
+      "Ind AS 16",
+      "Ind AS 18",
+      "revenue",
+      "property plant equipment",
+      "inventories",
+      "presentation of financial statements"
+    ],
+    "question": "Match List-I with List-II.",
+    "list_1": {
+      "A": "Ind As - 1",
+      "B": "Ind As - 2",
+      "C": "Ind As - 16",
+      "D": "Ind As - 18"
+    },
+    "list_2": {
+      "I": "Revenue",
+      "II": "Property plant and equipment",
+      "III": "Inventories",
+      "IV": "Presentation of Financial Statement"
+    },
+    "options": {
+      "a": "A-I, B-II, C-III, D-IV",
+      "b": "A-IV, B-III, C-II, D-I",
+      "c": "A-III, B-IV, C-I, D-II",
+      "d": "A-IV, B-III, C-I, D-II"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 53,
+    "exam_session": "December 2023",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Financial Markets",
+      "sub_branch": "Asset Classes and Types of Investment"
+    },
+    "keywords": [
+      "asset class equity shares",
+      "government securities",
+      "alternate assets",
+      "corporate bonds"
+    ],
+    "question": "Match List-I with List-II.",
+    "list_1": {
+      "A": "Asset Class A",
+      "B": "Asset Class C",
+      "C": "Asset Class E",
+      "D": "Asset Class G"
+    },
+    "list_2": {
+      "I": "Equity shares of companies traded in futures and options segments",
+      "II": "Government securities and state development loans",
+      "III": "Alternate Assets",
+      "IV": "Corporate bonds/debentures which are listed and rated not below A"
+    },
+    "options": {
+      "a": "A-I, B-IV, C-II, D-III",
+      "b": "A-III, B-II, C-IV, D-I",
+      "c": "A-III, B-IV, C-I, D-II",
+      "d": "A-I, B-III, C-II, D-IV"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 54,
+    "exam_session": "December 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Historical Cost / Going Concern"
+    },
+    "keywords": [
+      "historical cost",
+      "long-lived assets",
+      "entity concept",
+      "going concern",
+      "materiality",
+      "periodicity"
+    ],
+    "question": "Which one of the following accounting concepts and conventions consider it reasonable to use the historical cost to record long-lived assets?",
+    "options": {
+      "a": "The entity concept",
+      "b": "Going concern convention",
+      "c": "Materiality convention",
+      "d": "The periodicity convention"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 55,
+    "exam_session": "December 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Ratio Analysis",
+      "sub_branch": "Ratios Significant to Investors"
+    },
+    "keywords": [
+      "debt-equity ratio",
+      "price-earning ratio",
+      "dividend yield",
+      "asset turnover ratio",
+      "debtor turnover ratio"
+    ],
+    "question": "Which of the following rations are critically significant for an investor?",
+    "sub_items": {
+      "A": "Debt-Equity ration",
+      "B": "Price-Earning ration",
+      "C": "Dividend yield",
+      "D": "Asset turnover ration",
+      "E": "Debtor turnover ration"
+    },
+    "options": {
+      "a": "A, B and C only",
+      "b": "D and E only",
+      "c": "B, C and D only",
+      "d": "A, D and E only"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 56,
+    "exam_session": "December 2023",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Corporate Finance",
+      "sub_branch": "Walter's Dividend Model"
+    },
+    "keywords": [
+      "earning per share",
+      "rate of return on investments",
+      "rate of return by shareholders",
+      "Walter model",
+      "payout ratio"
+    ],
+    "question": "The earning per share for Avanti corporation is Rs.4.0. The rate of return on investments is 16 per cent and the return by its shareholders is 12 percent. What will be the return price share as per the Walter model, if the payout is 40 per cent?",
+    "options": {
+      "a": "Rs. 24",
+      "b": "Rs.36",
+      "c": "Rs.40",
+      "d": "Rs.72"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 57,
+    "exam_session": "December 2023",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Taxation",
+      "sub_branch": "Clubbing of Income / Gross Total Income"
+    },
+    "keywords": [
+      "gross total income",
+      "clubbing of income",
+      "voting power",
+      "salary",
+      "other income"
+    ],
+    "question": "Mr. X is holding equity shares of ABC Ltd with voting power of 26 per cent Mrs. X is working in ABC Ltd at a salary of Rs.20,000 p.m. the other income of Mr. X and Mrs. X are Rs.6,00,000 and Rs. 3,00,000 respectively. The gross total income of Mr.X and Mrs. X are ____.",
+    "options": {
+      "a": "Rs. 6,00,000 and Rs.5,40,000",
+      "b": "Rs.7,90,000 and Rs.3,00,000",
+      "c": "Rs.6,00,000 and Rs.4,90,000",
+      "d": "Rs.8,40,000 and Rs.3,00,000"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 58,
+    "exam_session": "December 2023",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Promoters"
+    },
+    "keywords": [
+      "promoter",
+      "formation of company",
+      "necessary steps"
+    ],
+    "question": "Given below are two statements, one is labelled as Assertion (A) and other one labelled as Reason (R). Assertion (A): A promoter, invariably is the one who has been associated with formation of the company. Reason (R): A promoter is the one who undertakes to form a company with reference to a given object and who takes necessary steps to accomplish that purpose in light of the above statements, choose the correct answer from the options given below:",
+    "options": {
+      "a": "Both A and R are true and R is the correct explanation of A",
+      "b": "Both A and R are true but R is NOT the correct explanation of A",
+      "c": "A is true but R is false",
+      "d": "A is false but R is true"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 59,
+    "exam_session": "December 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Retirement of Partner - Goodwill"
+    },
+    "keywords": [
+      "retiring partner",
+      "goodwill compensation",
+      "gaining ratio",
+      "sacrificing ratio"
+    ],
+    "question": "In which ratio, will the remaining partners compensate the retiring partner for a share of goodwill?",
+    "options": {
+      "a": "Profit-sharing ratio",
+      "b": "Sacrificing ratio",
+      "c": "Gaining ratio",
+      "d": "Capital ratio"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 60,
+    "exam_session": "December 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Cost-Volume-Profit (CVP) Analysis"
+    },
+    "keywords": [
+      "CVP analysis",
+      "limitations",
+      "constant selling price",
+      "margin of safety",
+      "sales mix"
+    ],
+    "question": "Which of the following are considered as the limitations of Cost-Volume-Profit analysis?",
+    "sub_items": {
+      "A": "Constant selling price regardless of sales volume",
+      "B": "Firm efficiency and productivity are constant and the costs are liner",
+      "C": "Margin of safety is constant at varied levels of sales",
+      "D": "Sales mix and inventory levels are constant",
+      "E": "Profit is constant at varied levels of sales price"
+    },
+    "options": {
+      "a": "A, B and C only",
+      "b": "B, C and D only",
+      "c": "C, D and E only",
+      "d": "A, B and D only"
+    },
+    "ocr_incomplete": true,
+    "answer": "d"
+  },
+  {
+    "q_no": 61,
+    "exam_session": "December 2023",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Activity Based Cost Centers"
+    },
+    "keywords": [
+      "unit-level activity",
+      "batch level activity",
+      "product level activity",
+      "facility level activity"
+    ],
+    "question": "Match List-I with List-II.",
+    "list_1": {
+      "A": "Unit-level activity center",
+      "B": "Batch level activity center",
+      "C": "Product level activity center",
+      "D": "Facility level activity center"
+    },
+    "list_2": {
+      "I": "Patent, trademark, and copyright fees",
+      "II": "Direct material and labor costs",
+      "III": "Plant depreciation and maintenance expenses",
+      "IV": "Material handling costs"
+    },
+    "options": {
+      "a": "A-II, B-IV, C-I, D-III",
+      "b": "A-II, B-IV, C-III, D-I",
+      "c": "A-I, B-III, C-II, D-IV",
+      "d": "A-III, B-I, C-IV, D-II"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 62,
+    "exam_session": "December 2023",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Forfeiture of Shares"
+    },
+    "keywords": [
+      "shares issued at premium",
+      "application money",
+      "allotment",
+      "calls",
+      "forfeiture",
+      "share forfeiture account"
+    ],
+    "question": "Laxmi industries issued shares of Rs.1000 at a premium of Rs.10 per share, payable Rs.20 on application, Rs.35 allotment (including premium) and the balance on the first and final call. Mr.X who held 200 shares has paid only the application money and these shares were subsequently forfeited by the company. In this regard, by which amount share forfeiture account will be credited?",
+    "options": {
+      "a": "Rs.4000",
+      "b": "Rs.2000",
+      "c": "Rs.3000",
+      "d": "Rs.200"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 63,
+    "exam_session": "June 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Alteration of Share Capital"
+    },
+    "keywords": [
+      "Section 61 to 64 Companies Act 2013",
+      "alteration proper",
+      "cancellation of unissued shares",
+      "increase share capital"
+    ],
+    "question": "Section 61 to 64 of the company act 2013 states 'Alteration proper' which includes:",
+    "sub_items": {
+      "A": "Cancellation of the unissued shares",
+      "B": "Cancellation of issued shares",
+      "C": "Increase in share capital by issue of new share",
+      "D": "Decrease of share capital by redemption of shares",
+      "E": "Conversion of fully paid shares into stock and vice versa"
+    },
+    "options": {
+      "a": "B, C and D only",
+      "b": "A, C and E only",
+      "c": "C, D and E only",
+      "d": "A, B and C only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 64,
+    "exam_session": "June 2023",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Purpose/Applicability of Concepts"
+    },
+    "keywords": [
+      "going concern concept",
+      "consistency",
+      "cost concept",
+      "materiality"
+    ],
+    "question": "Match list I and list II.",
+    "list_1": {
+      "A": "Going Concern Concept",
+      "B": "Consistency",
+      "C": "Cost Concept",
+      "D": "Materiality"
+    },
+    "list_2": {
+      "I": "The same accounting method used by a firm from one period to another",
+      "II": "Related to the relative size or importance of an item or event",
+      "III": "This an inappropriate assumption for a firm undergoing bankruptcy",
+      "IV": "The normal basis used to account for assets"
+    },
+    "options": {
+      "a": "A-III, B-I, C-IV, D-II",
+      "b": "A-I, B-II, C-III, D-IV",
+      "c": "A-II, B-IV, C-I, D-III",
+      "d": "A-IV, B-III, C-II, D-I"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 65,
+    "exam_session": "June 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Environmental Audit"
+    },
+    "keywords": [
+      "environment management audit",
+      "social audit",
+      "compliance audit",
+      "site property audit",
+      "energy audit"
+    ],
+    "question": "From the operational point of view. Which are the part of Environmental Audit",
+    "sub_items": {
+      "A": "Environment Management System Audit",
+      "B": "Social Audit",
+      "C": "Compliance Audit",
+      "D": "Site Property Audit",
+      "E": "Energy Audit"
+    },
+    "options": {
+      "a": "C, D and E only",
+      "b": "A, C and D only",
+      "c": "B, C and D only",
+      "d": "A, D and E only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 66,
+    "exam_session": "June 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Activity Based Costing (ABC) - Limitations"
+    },
+    "keywords": [
+      "ABC limitations",
+      "support activities",
+      "cost tracing",
+      "setup cost"
+    ],
+    "question": "Which of the following is not the limitation of activity based costing?",
+    "options": {
+      "a": "It involves various support activities in the process of making products.",
+      "b": "It does not provide relevant information for decision making.",
+      "c": "All costs cannot be identified easily with a particular activity",
+      "d": "Set up cost as well as costs of running and updating the ABC system are very high."
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 67,
+    "exam_session": "June 2023",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "International Finance",
+      "sub_branch": "Cross Listing"
+    },
+    "keywords": [
+      "cross listing",
+      "stock price",
+      "cost of capital",
+      "investor base"
+    ],
+    "question": "Given below are two statements: one is labelled A and the other is labelled as Reason R. Assertion A: Cross listing can potentially increase the stock price and lower the cost of capital. Reason R: Cross listing facilitates wider stock ownership and expands investor base for a firm's stock. In the light of the above statements, choose the correct answer from the options Given below:",
+    "options": {
+      "a": "Both A and R are true and R is the correct explanation of A",
+      "b": "Both A and R are true and R is NOT correct explanation of A",
+      "c": "A is true but R is false",
+      "d": "A is false but R is true"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 68,
+    "exam_session": "June 2023",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Retirement of Partner - Revaluation"
+    },
+    "keywords": [
+      "partner retirement",
+      "revaluation of assets liabilities",
+      "current value",
+      "correct balance sheet values"
+    ],
+    "question": "Given below are two statements: One is labelled as Assertion A and the other is labelled as Reason R. Assertion A: When a partner retires, all the assets and liabilities are revalued according to current value. Reason R: The balance sheet should show the correct values of assets and liabilities. In the light of the above statements, choose the most appropriate answer from the options given below:",
+    "options": {
+      "a": "Both A and R are correct and R is the correct explanation of A",
+      "b": "Both A and R are correct but R is not the correct explanation of A",
+      "c": "A is correct but R is not correct",
+      "d": "A is not correct but R is correct"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 69,
+    "exam_session": "June 2023",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Process Costing"
+    },
+    "keywords": [
+      "process costing",
+      "equivalent units",
+      "work in process",
+      "cost per equivalent unit"
+    ],
+    "question": "Arrange the steps of process costing from beginning and ending with the work in process inventory.",
+    "sub_items": {
+      "A": "Summarize total costs to account for work-in-process inventory",
+      "B": "Compute output in terms of equivalent unit",
+      "C": "Compute cost per equivalent unit",
+      "D": "Summarize the flow of physical units (of output)",
+      "E": "Assign total cost to units completed and to units in ending work in process."
+    },
+    "options": {
+      "a": "D, B, A, C, E",
+      "b": "B, C, D, A, E",
+      "c": "C, B, A, D, E",
+      "d": "E, D, A, B, C"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 70,
+    "exam_session": "June 2023",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Dissolution of Firm"
+    },
+    "keywords": [
+      "realization account",
+      "profit or loss on realization",
+      "cash balance",
+      "capital"
+    ],
+    "question": "A and B are equal partners, when partnership is dissolved, their capital are Rs. 40,000 and Rs. 50,000 respectively. After all assets are sold and liabilities paid, there is a cash balance of Rs. 80,000. What is the amount of profit or loss on realization?",
+    "options": {
+      "a": "10,000 (Profit)",
+      "b": "20,000 (Profit)",
+      "c": "30,000 (Profit)",
+      "d": "10,000 (loss)"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 71,
+    "exam_session": "June 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Financial Statements",
+      "sub_branch": "Non-cash Transactions"
+    },
+    "keywords": [
+      "non-cash transaction",
+      "acquisition of assets",
+      "conversion of debt into equity",
+      "dividend received",
+      "acquisition by issue of shares"
+    ],
+    "question": "Which one of the below mentioned transaction is not a non-cash transaction?",
+    "options": {
+      "a": "The acquisition of assets by assuming directly related liabilities",
+      "b": "Conversion of debt into equity",
+      "c": "Interest on dividend received from investing activities",
+      "d": "The acquisition of an enterprise by means of issue of share"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 72,
+    "exam_session": "June 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Accounting Period Concept"
+    },
+    "keywords": [
+      "life of business divided into segments",
+      "periodic matching",
+      "dual aspect",
+      "accounting period",
+      "money measurement"
+    ],
+    "question": "According to which concept, the life of the business is divided into appropriate segments for studying the results shown by the business in each of the segment?",
+    "options": {
+      "a": "Periodic Matching Cost and Revenue Concept",
+      "b": "Dual Aspect Concept",
+      "c": "Accounting Period Concept",
+      "d": "Money Measurement Concept"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 73,
+    "exam_session": "June 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Holding Company Accounts",
+      "sub_branch": "Cross Holding"
+    },
+    "keywords": [
+      "holding subsidiary companies own shares in each other",
+      "cross holding",
+      "partly owned subsidiary",
+      "wholly owned subsidiary"
+    ],
+    "question": "In a situation where the holding and subsidiary companies own shares in each other is known as-",
+    "options": {
+      "a": "Partly owned subsidiary",
+      "b": "Cross holding",
+      "c": "Subsidiary company",
+      "d": "Wholly owned subsidiary"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 74,
+    "exam_session": "June 2023",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Corporate Finance",
+      "sub_branch": "Cost of Equity"
+    },
+    "keywords": [
+      "cost of equity",
+      "dividend growth model",
+      "stock price",
+      "dividend per share",
+      "growth rate"
+    ],
+    "question": "A company's stock sells for Rs. 63. The company pays annual dividend of Rs. 3 per share and has long established record of increasing its dividend by a context 5% annually. For this company, the cost of equity (Ke) is ____.",
+    "options": {
+      "a": "13%",
+      "b": "14%",
+      "c": "10%",
+      "d": "8%"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 75,
+    "exam_session": "June 2023",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Verification of Assets - Furniture and Fixtures"
+    },
+    "keywords": [
+      "depreciation working life",
+      "repair debited profit and loss",
+      "purchase invoice",
+      "stock register"
+    ],
+    "question": "Arrange the steps for verification and value of furniture and fixtures by an auditor.",
+    "sub_items": {
+      "A": "Ensure that the amount and rate of Depreciation charged on different items is based on fair estimate of their working life",
+      "B": "Check that repair to furniture if any, during the current year is debited to Profit and loss Account",
+      "C": "Verify with reference to the purchase invoice in case the assets have been acquired during the current accounting period",
+      "D": "See that payment made on account of purchases of any item of furniture and fixture through the invoices of the suppliers",
+      "E": "Check that a stock register is maintained containing the details of the various items purchased"
+    },
+    "options": {
+      "a": "C, E, A, B, D",
+      "b": "A, B, C, D, E",
+      "c": "B, C, D, A, E",
+      "d": "A, E, C, D, B"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 76,
+    "exam_session": "June 2023",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "International Finance",
+      "sub_branch": "Cross Listing"
+    },
+    "keywords": [
+      "cross listing",
+      "stock price",
+      "cost of capital",
+      "investor base"
+    ],
+    "question": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R. Assertion A: Cross listing can potentially increase the stock price and lower the cost of capital. Reason R: Cross listing facilitates wider stock ownership and expands investor base for a firm's stock. In the light of the above statements, choose the correct answer from the options Given below:",
+    "options": {
+      "a": "Both A and R are true and R is the correct explanation of A",
+      "b": "Both A and R are true and R is NOT correct explanation of A",
+      "c": "A is true but R is false",
+      "d": "A is false but R is true"
+    },
+    "note": "Duplicate of Q67 within same June 2023 sitting",
+    "answer": "a"
+  },
+  {
+    "q_no": 77,
+    "exam_session": "June 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Issue of Shares at Discount"
+    },
+    "keywords": [
+      "shares at discount",
+      "two years passed",
+      "CLB approval",
+      "ordinary resolution",
+      "maximum rate of discount"
+    ],
+    "question": "A company can issue shares at a discount subject to which of the following conditions?",
+    "sub_items": {
+      "A": "Two year must have passed since the date at which the company was allowed to commence business",
+      "B": "The shares to be issued must be of a class already issued",
+      "C": "Issue must take place within three month after the date of the CLB approval",
+      "D": "Issue of shares must be authorised by an ordinary resolution of the company",
+      "E": "Resolution must specify the maximum rate of discount"
+    },
+    "options": {
+      "a": "A, B, C only",
+      "b": "B, C, D only",
+      "c": "B, D, E only",
+      "d": "C, D, E only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 78,
+    "exam_session": "June 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Management Audit - Distinctive Features"
+    },
+    "keywords": [
+      "management audit features",
+      "appraisal of policies and actions",
+      "preventive",
+      "organisation oriented",
+      "dynamic and result oriented"
+    ],
+    "question": "Which of the following enumerates the distinctive features of Management Audit?",
+    "sub_items": {
+      "A": "It is an appraisal of both policies and actions",
+      "B": "It is preventive as well as creative check of cost accounting data",
+      "C": "It is organisation oriented",
+      "D": "It is dynamic and result oriented rather than simply procedure bound",
+      "E": "It ensures the sound and healthy growth of business organisation"
+    },
+    "options": {
+      "a": "A, B, D only",
+      "b": "A, C, E only",
+      "c": "B, D, E only",
+      "d": "A, D, E only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 79,
+    "exam_session": "June 2023",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Retirement of Partner - Goodwill Valuation"
+    },
+    "keywords": [
+      "goodwill valuation",
+      "average profits",
+      "years purchase",
+      "retiring partner's share of goodwill",
+      "capital accounts adjustment"
+    ],
+    "question": "P, R, and M are partners in a firm sharing profits and losses in the ratio of 3:2:1. On 1st April, R retired. The goodwill of the firm was valued at two years' purchase based on the average of the last three years' profits. The profits of the last three years were as follows: 2020-21: Profit Rs.2,48,000; 2021-22: Loss Rs.36,000; 2022-23: Profit Rs.1,48,000. It was decided that R's share of goodwill would be adjusted in the Capital Accounts of P and M. What will be the amount of Goodwill credited to P and M?",
+    "options": {
+      "a": "Rs.60,000, Rs.20,000",
+      "b": "Rs.30,000, Rs.50,000",
+      "c": "Rs.30,000, Rs.60,000",
+      "d": "Rs.40,000, Rs.70,000"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 80,
+    "exam_session": "March 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Marginal Costing - Assumptions"
+    },
+    "keywords": [
+      "marginal costing assumptions",
+      "fixed and variable cost segregation",
+      "fixed cost per unit",
+      "variable cost per unit",
+      "selling price constant"
+    ],
+    "question": "Which of the following are NOT assumptions of Marginal Costing?",
+    "sub_items": {
+      "A": "The total cost can be segregated into fixed and variable components.",
+      "B": "Fixed cost per unit of production remains constant.",
+      "C": "Variable cost remains constant per unit of output.",
+      "D": "The selling price per unit of output remains unchanged.",
+      "E": "Variable cost is variable per unit."
+    },
+    "options": {
+      "a": "A and B only",
+      "b": "B and E only",
+      "c": "C and D only",
+      "d": "B and C only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 81,
+    "exam_session": "March 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Conservatism"
+    },
+    "keywords": [
+      "playing safe policy",
+      "dual aspect",
+      "conservatism convention",
+      "money measurement",
+      "realization concept"
+    ],
+    "question": "Policy of 'Playing Safe' followed by the accountant is based on which one of the following concepts?",
+    "options": {
+      "a": "Dual Aspect Concept",
+      "b": "Conservation Conventions",
+      "c": "Money Measurement Concept",
+      "d": "Realization Concept"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 82,
+    "exam_session": "March 2023",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Information Systems Audit / CATT"
+    },
+    "keywords": [
+      "CATT",
+      "computer assisted audit techniques and tools",
+      "IT governance",
+      "data security",
+      "internal controls"
+    ],
+    "question": "Arrange in proper sequence the following benefits available to Information System Auditor who uses CATT:",
+    "sub_items": {
+      "A": "Check susceptibility to threat. Much of the accounting is done through cloud accounts or other online systems.",
+      "B": "Evaluating the system",
+      "C": "Data security",
+      "D": "Bolsters controls",
+      "E": "Develop IT Governance"
+    },
+    "options": {
+      "a": "E, D, C, B, A",
+      "b": "C, B, A, D, E",
+      "c": "A, B, C, D, E",
+      "d": "B, A, E, C, D"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 83,
+    "exam_session": "March 2023",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Holding Company Accounts",
+      "sub_branch": "Minority Interest"
+    },
+    "keywords": [
+      "minority interest",
+      "holding company",
+      "proportionate shares",
+      "reserves"
+    ],
+    "question": "Given below are two statements: One is labelled as Assertion A and the other is labelled as Reason R. Assertion (A): When holding company holds more than 50% (but not whole) shares of a company, then the holders of the rest of shares will be known as 'Minority'. Reason (R): Minority interest is calculated by considering proportionate shares and reserves of Holding Company.",
+    "options": {
+      "a": "Both A and R are correct and R is the correct explanation of A",
+      "b": "Both A and R are correct but R is not the correct explanation of A",
+      "c": "A is correct but R is not correct",
+      "d": "A is not correct but R is correct"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 84,
+    "exam_session": "March 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Financial Statements",
+      "sub_branch": "Cash Flow Statement - Financing Activities"
+    },
+    "keywords": [
+      "share issued for cash",
+      "dividend distributed",
+      "sale of machinery",
+      "redemption of debentures",
+      "provision for depreciation"
+    ],
+    "question": "Which of the following transactions are related to Financing Activities?",
+    "sub_items": {
+      "A": "Share issued for cash.",
+      "B": "Dividend distributed to shareholders.",
+      "C": "Sale of machinery.",
+      "D": "Redemption of debentures.",
+      "E": "Provision for depreciation."
+    },
+    "options": {
+      "a": "A and E only",
+      "b": "A and C only",
+      "c": "A, B and D only",
+      "d": "A, B, C and D only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 85,
+    "exam_session": "March 2023",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Change in Profit Sharing Ratio"
+    },
+    "keywords": [
+      "surrender of share",
+      "new partner admission",
+      "new profit sharing ratio"
+    ],
+    "question": "X and Y are partners in a firm sharing profits in the ratio 4:5. X surrenders 1/4 of his share and Y surrenders 1/5 of his share in favour of Z, the new partner. What will be the new profit-sharing ratio of the firm's partners?",
+    "options": {
+      "a": "3:4:2",
+      "b": "55:44:81",
+      "c": "4:5:2",
+      "d": "44:55:81"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 86,
+    "exam_session": "March 2023",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Financial Statement Assertions"
+    },
+    "keywords": [
+      "cut-off assertion",
+      "classification assertion",
+      "occurrence assertion",
+      "existence assertion"
+    ],
+    "question": "Match List I (Issue) with List II (Description):",
+    "list_1": {
+      "A": "Cut-off",
+      "B": "Classification",
+      "C": "Occurrence",
+      "D": "Existence"
+    },
+    "list_2": {
+      "I": "Assets, Liabilities, and Equity balances exist at the end of the period.",
+      "II": "Transactions and events have been recorded in proper accounts.",
+      "III": "Whether all assets and liabilities are reported in the appropriate period.",
+      "IV": "Transactions recognized in the financial statements have occurred and relate to the entity."
+    },
+    "options": {
+      "a": "A-II, B-I, C-III, D-IV",
+      "b": "A-IV, B-III, C-II, D-I",
+      "c": "A-I, B-III, C-II, D-IV",
+      "d": "A-III, B-II, C-IV, D-I"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 87,
+    "exam_session": "March 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Indian Accounting Standards (Ind AS)",
+      "sub_branch": "Foreign Exchange Rates"
+    },
+    "keywords": [
+      "Ind AS 21",
+      "effects of changes in foreign exchange rates"
+    ],
+    "question": "Which one of the following Ind AS is related to 'The Effects of Changes in Foreign Exchange Rates'?",
+    "options": {
+      "a": "Ind AS 19",
+      "b": "Ind AS 115",
+      "c": "Ind AS 103",
+      "d": "Ind AS 21"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 88,
+    "exam_session": "March 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Working Capital Management",
+      "sub_branch": "Determinants of Working Capital"
+    },
+    "keywords": [
+      "nature of business",
+      "technology and manufacturing policy",
+      "management skills",
+      "credit policy",
+      "market and demand conditions"
+    ],
+    "question": "Which of the following factors determine the requirements of working capital of a firm?",
+    "sub_items": {
+      "A": "Nature of Business",
+      "B": "Technology and Manufacturing Policy",
+      "C": "Management Skills",
+      "D": "Credit Policy",
+      "E": "Market and Demand Conditions"
+    },
+    "options": {
+      "a": "A, B, C and D only",
+      "b": "A, B, D and E only",
+      "c": "C, D and E only",
+      "d": "A, B and E only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 89,
+    "exam_session": "November 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Corporate Finance",
+      "sub_branch": "Marris Hypothesis"
+    },
+    "keywords": [
+      "Marris Hypothesis",
+      "balanced growth",
+      "return on investment ratio",
+      "debt equity ratio",
+      "retention ratio"
+    ],
+    "question": "A prudent financial policy suggested by Marris Hypothesis to maximize balanced growth of the firm is based on which of following financial ratios?",
+    "sub_items": {
+      "A": "Return on investment ratio",
+      "B": "Debt equity ratio",
+      "C": "Return on capital employed ratio",
+      "D": "Liquidity ratio",
+      "E": "Retention ratio"
+    },
+    "options": {
+      "a": "A, B, and C only",
+      "b": "B, C and D only",
+      "c": "A, C and D only",
+      "d": "B, D and E only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 90,
+    "exam_session": "November 2022",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Indian Accounting Standards (Ind AS)",
+      "sub_branch": "Ind AS List Matching"
+    },
+    "keywords": [
+      "Ind AS 1",
+      "Ind AS 12",
+      "Ind AS 24",
+      "Ind AS 38",
+      "income taxes",
+      "related party disclosures",
+      "intangible assets",
+      "presentation of financial statements"
+    ],
+    "question": "Match the List-I Ind AS with List-II Topic.",
+    "list_1": {
+      "A": "Ind AS 1",
+      "B": "Ind AS 12",
+      "C": "Ind AS 24",
+      "D": "Ind AS 38"
+    },
+    "list_2": {
+      "I": "Income Taxes",
+      "II": "Related Party Disclosures",
+      "III": "Intangible Assets",
+      "IV": "Presentation of Financial Statements"
+    },
+    "options": {
+      "a": "A-I, B-II, C-III, D-IV",
+      "b": "A-IV, B-I, C-II, D-III",
+      "c": "A-IV, B-III, C-II, D-I",
+      "d": "A-II, B-IV, C-I, D-III"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 91,
+    "exam_session": "November 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Audit Planning"
+    },
+    "keywords": [
+      "audit memorandum",
+      "audit planning procedure",
+      "audit notebook",
+      "audit programme"
+    ],
+    "question": "Written plan containing the details regarding the conduct of a particular audit is called:",
+    "options": {
+      "a": "Audit Memorandum",
+      "b": "Audit Planning Procedure",
+      "c": "Audit Notebook",
+      "d": "Audit Programme"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 92,
+    "exam_session": "November 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Prudent Accounting Concepts and Conventions"
+    },
+    "keywords": [
+      "revenues and profits realized",
+      "prevents profits from overstated",
+      "over withdrawal from business",
+      "managerial efficiency",
+      "good customer relations"
+    ],
+    "question": "Which of the following are key features of prudent accounting concepts and conventions?",
+    "sub_items": {
+      "A": "It includes revenues and profits in the accounts when they are realized.",
+      "B": "It prevents profits from being overstated.",
+      "C": "It prevents a trader from more withdrawing from the business than is wise.",
+      "D": "Managerial efficiency and expertise.",
+      "E": "Good customer relations."
+    },
+    "options": {
+      "a": "C, D and E only",
+      "b": "A, D and E only",
+      "c": "B, C and D only",
+      "d": "A, B and C only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 93,
+    "exam_session": "November 2022",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Human Resource Accounting",
+      "sub_branch": "Benefit Model"
+    },
+    "keywords": [
+      "human resource accounting",
+      "gross value of services",
+      "future benefits",
+      "present value",
+      "discount rate"
+    ],
+    "question": "What will be the sequence of steps involved in the 'Benefit Model' of Human Resource Accounting?",
+    "sub_items": {
+      "A": "The gross value of services to be rendered in future by the employee then 1 individual as well as their collective capacity is determined.",
+      "B": "The excess of the value of future human resources over the value of future payments is ascertained.",
+      "C": "The present value of the net benefit is determined by applying a pre-determined discount rate.",
+      "D": "The value of future payments to the employees is determined.",
+      "E": "The amount calculated under 'c' will be the value of human resources to the organization."
+    },
+    "options": {
+      "a": "A, D, B, C, E",
+      "b": "A, B, C, D, E",
+      "c": "A, C, D, B, E",
+      "d": "B, A, C, D, E"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 94,
+    "exam_session": "November 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Working Capital Management",
+      "sub_branch": "Working Capital Financing"
+    },
+    "keywords": [
+      "net working capital",
+      "hedging approach",
+      "operating cycle",
+      "trade-off financing strategy"
+    ],
+    "question": "From the following, select the right option with reference to the working capital:",
+    "options": {
+      "a": "Higher net working capital leads to higher liquidity and higher profitability",
+      "b": "According to hedging approach, current assets should be financed from long-term sources.",
+      "c": "There is an inverse relationship between the length of operating cycle of a firm and its working capital requirements.",
+      "d": "Trade-off plan, in general, is considered an appropriate financing strategy for working capital."
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 95,
+    "exam_session": "November 2022",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Material Usage Variance"
+    },
+    "keywords": [
+      "standard material cost",
+      "actual consumption",
+      "material usage variance",
+      "favourable adverse"
+    ],
+    "question": "Answer the correct material usage variance from the information given below: Standard material cost for manufacturing 1000 units of an output is 400 kgs of material at Rs.2.50 per kg. When 2000 units are produced, it is found that actual consumption was 825 kgs material at a price of Rs.2.70 per kg.",
+    "options": {
+      "a": "Rs.67.50 Favorable",
+      "b": "Rs.67.50 Adverse",
+      "c": "Rs.62.50 Favorable",
+      "d": "Rs.62.50 Adverse"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 96,
+    "exam_session": "November 2022",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Taxation",
+      "sub_branch": "Book Profit under MAT"
+    },
+    "keywords": [
+      "Minimum Alternate Tax",
+      "book profit",
+      "P&L statement",
+      "OCI adjustments",
+      "specific adjustments merger"
+    ],
+    "question": "Steps involved in computation of Book Profit under MAT regime are as follows:",
+    "sub_items": {
+      "A": "Arrive NP as per statement of P/L A /C of the company.",
+      "B": "Specific adjustments in case of merger.",
+      "C": "Make adjustment pertaining to OCI items.",
+      "D": "Adjust the book profit with stipulated exclusion and inclusion.",
+      "E": "Net amount of Book Profit for application of MAT rate."
+    },
+    "options": {
+      "a": "A, D, B, C, E",
+      "b": "A, B, D, C, E",
+      "c": "A, C, B, D, E",
+      "d": "A, B, C, D, E"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 97,
+    "exam_session": "November 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Marginal Costing - Decision Choices"
+    },
+    "keywords": [
+      "special or one-off opportunities",
+      "make or buy",
+      "automation",
+      "competing alternative actions"
+    ],
+    "question": "Which of the following decision choices are valid in relation of marginal costing?",
+    "sub_items": {
+      "A": "Costing 'special or' or 'one off' opportunities.",
+      "B": "Deciding whether to make or buy a product.",
+      "C": "Most appropriate technique because of application of more automation in the industry.",
+      "D": "Choosing between competing alternative actions.",
+      "E": "Employing a penetration or destroyer pricing strategy."
+    },
+    "options": {
+      "a": "A, B, D and E only",
+      "b": "A, B, C and D only",
+      "c": "B, C, D and E only",
+      "d": "A, D and E only"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 98,
+    "exam_session": "November 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Preference Shares"
+    },
+    "keywords": [
+      "preference shares maximum period",
+      "20 years"
+    ],
+    "question": "Preference share in India is issued by a company for a maximum period of:",
+    "options": {
+      "a": "10 years",
+      "b": "15 years",
+      "c": "20 years",
+      "d": "Unlimited period"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 99,
+    "exam_session": "November 2022",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Corporate Finance",
+      "sub_branch": "Cost of New Equity"
+    },
+    "keywords": [
+      "cost of new equity",
+      "expected dividend",
+      "constant growth rate",
+      "flotation cost"
+    ],
+    "question": "The current market price per share of New Age Limited is Rs.80. The dividend expected a year from now is Rs.4 and it is expected to grow at a constant rate of 10 percent. The floatation (issue) cost for the new issue will be 8 percent. What is the cost of new equity?",
+    "options": {
+      "a": "15.43 percent",
+      "b": "15.00 percent",
+      "c": "5.00 percent",
+      "d": "5.43 percent"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 100,
+    "exam_session": "November 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Financial Statements",
+      "sub_branch": "Fund Flow Statement"
+    },
+    "keywords": [
+      "fund flow statement",
+      "not a valid statement",
+      "dividend received",
+      "management discretion"
+    ],
+    "question": "In Fund Flow Statement, which one of the following is not a valid statement?",
+    "options": {
+      "a": "It is prepared to know the total sources and their uses in a year",
+      "b": "Dividend received is a source of funds",
+      "c": "Its preparation is at the discretion of the management",
+      "d": "It is useful for external financial management"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 101,
+    "exam_session": "November 2022",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Management Audit Process"
+    },
+    "keywords": [
+      "identification of responsibility centres",
+      "review of organizational structure",
+      "reporting",
+      "objectives of business"
+    ],
+    "question": "Arrange the following steps in a logical sequence of the process of management audit.",
+    "sub_items": {
+      "A": "Identification of responsibility centres",
+      "B": "Review of organizational structure",
+      "C": "Reporting",
+      "D": "Identifying and segregating the objectives of business",
+      "E": "Review of performance of each responsibility centre"
+    },
+    "options": {
+      "a": "A, D, E, C, B",
+      "b": "A, E, D, B, C",
+      "c": "A, B, E, D, C",
+      "d": "D, B, A, E, C"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 102,
+    "exam_session": "November 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Financial Markets",
+      "sub_branch": "Public Issue Disclosure"
+    },
+    "keywords": [
+      "earning per share",
+      "dividend pay-out ratio",
+      "pre-issue P/E ratio",
+      "net asset value per share"
+    ],
+    "question": "Which among the following information shall be disclosed for all public issues of shares irrespective of their issue price?",
+    "sub_items": {
+      "A": "Earning per share",
+      "B": "Dividend pay-out ratio",
+      "C": "Pre-issue P/E ratio",
+      "D": "Average return on net worth in last 3 years",
+      "E": "Net asset value per share based on last balance sheet"
+    },
+    "options": {
+      "a": "A, B, D and E only",
+      "b": "A, C, D and E only",
+      "c": "B, C, D and E only",
+      "d": "A, B, C and D only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 103,
+    "exam_session": "November 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Money Measurement Concept"
+    },
+    "keywords": [
+      "value of skills gained by employees",
+      "training programmes",
+      "annual financial statements",
+      "money measurement concept"
+    ],
+    "question": "Company does not include the value of skills gained by its employees from training programmes in its annual financial statements. Which one of the following accounting concepts is being applied in this case?",
+    "options": {
+      "a": "Going concern concept",
+      "b": "Money measurement concept",
+      "c": "Revenue recognition concept",
+      "d": "Business entity concept"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 104,
+    "exam_session": "November 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "International Finance",
+      "sub_branch": "Currency Depreciation"
+    },
+    "keywords": [
+      "declining domestic savings",
+      "FDI flows",
+      "portfolio outflows",
+      "currency circulation",
+      "imports and debt servicing"
+    ],
+    "question": "Currency depreciation in the Indian Rupee in recent times has largely been attributed to:",
+    "sub_items": {
+      "A": "Declining domestic savings",
+      "B": "Increasing FDI flows",
+      "C": "Portfolio outflows",
+      "D": "Higher currency circulation",
+      "E": "Higher imports and debt servicing"
+    },
+    "options": {
+      "a": "A, B and C only",
+      "b": "B, C and D only",
+      "c": "A and D only",
+      "d": "C and E only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 105,
+    "exam_session": "November 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Financial Markets",
+      "sub_branch": "Stock Split"
+    },
+    "keywords": [
+      "stock split purpose",
+      "increase number of shares",
+      "market price per share",
+      "impact cost"
+    ],
+    "question": "The purpose (aim) of stock split is to:",
+    "options": {
+      "a": "Increase the number of shares",
+      "b": "Reduce market price per share",
+      "c": "Arrest share price decline",
+      "d": "Encourage wider public ownership",
+      "e": "Reduce impact cost"
+    },
+    "combination_options": {
+      "a": "A, B and C only",
+      "b": "B and D only",
+      "c": "B, C and E only",
+      "d": "A, D and E only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 106,
+    "exam_session": "November 2022",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Types of Costing Methods"
+    },
+    "keywords": [
+      "marginal costing",
+      "ABC costing",
+      "target costing",
+      "process costing"
+    ],
+    "question": "Match List-I with List-II.",
+    "list_1": {
+      "A": "Marginal Costing",
+      "B": "ABC Costing",
+      "C": "Target Costing",
+      "D": "Process Costing"
+    },
+    "list_2": {
+      "I": "Integrated approach to determine product features, product price, product costs and product design that helps ensure a company to earn reasonable profit on new products.",
+      "II": "The amount of any given volume of output by which the aggregate costs are changed if the volume of output is 1 increased by one unit.",
+      "III": "Used when identical units are produced through an on-going series of production steps.",
+      "IV": "Costing system in which costs being traced of activities and then to producing the product."
+    },
+    "options": {
+      "a": "A-II, B-IV, C-I, D-III",
+      "b": "A-I, B-IV, C-III, D-II",
+      "c": "A-II, B-III, C-IV, D-I",
+      "d": "A-I, B-III, C-II, D-IV"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 107,
+    "exam_session": "November 2022",
+    "question_type": "Sequencing (Levels/Hierarchy)",
+    "topic": {
+      "main_branch": "Corporate Finance",
+      "sub_branch": "Altman's Z-Score Ratios"
+    },
+    "keywords": [
+      "Altman 1966",
+      "industrial sickness prediction",
+      "working capital total assets",
+      "retained earnings",
+      "EBIT",
+      "market value equity",
+      "sales total assets"
+    ],
+    "question": "Arrange the following ratios in the increasing order of their significance in the prediction of industrial sickness (Altman, 1966):",
+    "sub_items": {
+      "A": "Working capital / Total Assets",
+      "B": "Retained Earnings / Total Assets",
+      "C": "Earning Before Interest and Taxes / Total Assets",
+      "D": "Market Value of Equity / Book Value of Total Debt",
+      "E": "Sales / Total Assets"
+    },
+    "note": "Options list garbled/cut off in source (OCR incomplete)",
+    "ocr_incomplete": true,
+    "answer": "a",
+    "options": {
+      "a": "D, E, A, B, C",
+      "b": "A, B, C, D, E",
+      "c": "B, C, D, E, A",
+      "d": "C, D, E, A, B"
+    }
+  },
+  {
+    "q_no": 108,
+    "exam_session": "November 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Dissolution - Partner Rights"
+    },
+    "keywords": [
+      "dissolution",
+      "right of equitable distribution",
+      "premium on winding up",
+      "right to be consulted",
+      "restrain partner from firm name"
+    ],
+    "question": "Which one of the following rights is usually not available to a partner consequent to the dissolution of a firm?",
+    "options": {
+      "a": "Right of equitable distribution of firm's property",
+      "b": "Right to return of premium on premature winding up",
+      "c": "Right to be consulted",
+      "d": "Right to restrain any partner or his representatives from the use of firm name or firm property"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 109,
+    "exam_session": "November 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Admission of Partner - Goodwill"
+    },
+    "keywords": [
+      "incoming partner cannot bring goodwill premium",
+      "adjustment through capital account"
+    ],
+    "question": "When the incoming partner cannot bring premium for goodwill, then the necessary adjustment for goodwill is done through which one of the following?",
+    "options": {
+      "a": "Goodwill account of the partners",
+      "b": "Capital account of the new partners",
+      "c": "Balance sheet of the new partnership firm",
+      "d": "Profit & Loss Appropriation account"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 110,
+    "exam_session": "November 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Working Capital Management",
+      "sub_branch": "Approaches to Working Capital Financing"
+    },
+    "keywords": [
+      "matching approach",
+      "conservative approach",
+      "aggressive approach",
+      "traditional approach",
+      "permanent working capital"
+    ],
+    "question": "As per which one of the following approaches, a firm finance a part of its permanent working capital with short term financing?",
+    "options": {
+      "a": "Matching Approach",
+      "b": "Conservative Approach",
+      "c": "Aggressive Approach",
+      "d": "Traditional Approach"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 111,
+    "exam_session": "November 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Duties of Directors"
+    },
+    "keywords": [
+      "duty of good faith",
+      "duty of due and reasonable care",
+      "duty to attend board meetings",
+      "duty not to delegate"
+    ],
+    "question": "Which one of the following duties is not a general duty of directors of a company?",
+    "options": {
+      "a": "Duty of good faith in order to promote the object of the company",
+      "b": "Duty of due and reasonable care, skill and diligence and shall exercise independent judgment",
+      "c": "Duty to attend Board Meetings",
+      "d": "Duty not to delegate or assign his office assignment"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 112,
+    "exam_session": "October 2022",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Indian Accounting Standards (Ind AS)",
+      "sub_branch": "Ind AS List Matching"
+    },
+    "keywords": [
+      "Ind AS 1",
+      "Ind AS 8",
+      "Ind AS 28",
+      "Ind AS 34",
+      "investments in associates",
+      "presentation of financial statements",
+      "interim financial reporting",
+      "accounting policies changes"
+    ],
+    "question": "Match List I Accounting Standard with List II Description.",
+    "list_1": {
+      "A": "Ind-AS:1",
+      "B": "Ind-AS:8",
+      "C": "Ind-AS:28",
+      "D": "Ind-AS:34"
+    },
+    "list_2": {
+      "I": "Investments in Associates and Joint ventures",
+      "II": "Presentation of Financial Statements",
+      "III": "Interim Financial Reporting",
+      "IV": "Accounting Policies, Changes in Accounting Estimates and Errors"
+    },
+    "options": {
+      "a": "A-II, B-III, C-I, D-IV",
+      "b": "A-II, B-IV, C-I, D-III",
+      "c": "A-III, B-I, C-IV, D-II",
+      "d": "A-III, B-IV, C-I, D-II"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 113,
+    "exam_session": "October 2022",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Distribution of Profit with Interest & Salary"
+    },
+    "keywords": [
+      "partner salary",
+      "interest on capital",
+      "profit before appropriation",
+      "current account"
+    ],
+    "question": "The profit for the year before appropriation in a partnership firm was Rs.50,000. Shagun, one of the partners, receives a salary of Rs.4,000 and interest at ten per cent per annum on his capital of Rs.1,00,000. Amir, the other partner, receive interest on capital at the same rate as Shagun. Amir's capital was Rs.89,000. They share profits and losses equally. What was the total share of profits credited to Amir's current account?",
+    "options": {
+      "a": "Rs.13,550",
+      "b": "Rs.15,350",
+      "c": "Rs.22,450",
+      "d": "Rs.24,350"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 114,
+    "exam_session": "October 2022",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Admission of Partner"
+    },
+    "keywords": [
+      "change in profit-sharing ratio",
+      "new partner admission",
+      "combined shares of old partners"
+    ],
+    "question": "Given below are two statements: One is labelled as Assertion A and the other is labelled as Reason R. Assertion (A): There is a change in the profit-sharing ratio of the old partners when a new partner gets his share of profit from all the partners. Reason (R): When a new partner is admitted to the partnership for a certain share of profit, the combined shares of the old partners will be reduced. In the light of the above statements, choose the more appropriate answer from the options given below:",
+    "options": {
+      "a": "Both A and R are correct and R is the correct explanation of A",
+      "b": "Both A and R are correct but R is NOT the correct explanation of A",
+      "c": "A is true but R is false",
+      "d": "A is false but R is true"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 115,
+    "exam_session": "October 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "International Finance",
+      "sub_branch": "Foreign Exchange Translation Methods"
+    },
+    "keywords": [
+      "current/non-current method",
+      "temporal method",
+      "monetary/non-monetary method",
+      "current rate method",
+      "transaction/non-transaction method"
+    ],
+    "question": "A firm is exposed to translation loss if it uses current exchange rate to translate its assets and liabilities. Which among the following are methods in use in translating assets and liabilities?",
+    "sub_items": {
+      "A": "Current/Non-Current method",
+      "B": "Temporal method",
+      "C": "Monetary/Non-monetary method",
+      "D": "Current Rate method",
+      "E": "Transaction/Non-transaction method"
+    },
+    "options": {
+      "a": "A, B, D, E only",
+      "b": "B, C, D, E only",
+      "c": "A, B, C, D only",
+      "d": "C, D, E only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 116,
+    "exam_session": "October 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Vouching"
+    },
+    "keywords": [
+      "examination of documentary evidence",
+      "vouching",
+      "verification",
+      "validation"
+    ],
+    "question": "The examination of documentary evidence in support of transactions contained in the book of accounts is termed as which one of the following?",
+    "options": {
+      "a": "Verification",
+      "b": "Vouching",
+      "c": "Valuation",
+      "d": "Validation"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 117,
+    "exam_session": "October 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Corporate Finance",
+      "sub_branch": "Factoring / Bills Discounting"
+    },
+    "keywords": [
+      "converting receivables into cash",
+      "factoring",
+      "bills discounting",
+      "underwriting",
+      "guaranteeing"
+    ],
+    "question": "Which one of the following is a method of converting a non-productive, inactive asset (ie. Receivable) into a productive asset (viz, cash) by selling receivables to a company that specializes in their collection and administration?",
+    "options": {
+      "a": "Bills discounting",
+      "b": "Underwriting",
+      "c": "Guaranteeing",
+      "d": "Factoring"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 118,
+    "exam_session": "October 2022",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Auditors - Sections"
+    },
+    "keywords": [
+      "appointment of auditors by CAG",
+      "qualifications and disqualification of auditors",
+      "powers and duties of auditors",
+      "remuneration of auditors",
+      "Section 139",
+      "Section 141",
+      "Section 142",
+      "Section 143"
+    ],
+    "question": "Match List I with List II.",
+    "list_1": {
+      "A": "Appointment of auditors by CAG",
+      "B": "Qualifications and disqualification of auditors",
+      "C": "Powers and duties of auditors",
+      "D": "Remuneration of auditors"
+    },
+    "list_2": {
+      "I": "Section 139(5)",
+      "II": "Section 141",
+      "III": "Section 142",
+      "IV": "Section 143"
+    },
+    "options": {
+      "a": "A-I, B-II, C-IV, D-III",
+      "b": "A-I, B-IV, C-II, D-III",
+      "c": "A-I, B-II, C-III, D-IV",
+      "d": "A-IV, B-II, C-III, D-I"
+    },
+    "ocr_incomplete": true,
+    "answer": "a"
+  },
+  {
+    "q_no": 119,
+    "exam_session": "November 2021",
+    "question_type": "Fill in the Blanks",
+    "topic": {
+      "main_branch": "Holding Company Accounts",
+      "sub_branch": "Pre-acquisition & Post-acquisition Profits"
+    },
+    "keywords": [
+      "capital profits",
+      "revenue profits",
+      "holding company subsidiary company",
+      "pre-acquisition post-acquisition"
+    ],
+    "question": "For a holding company, all pre-acquisition profits/losses of the subsidiary company are ____ while all post-acquisition profits/losses of the subsidiary company are ____. Fill in the blanks:",
+    "options": {
+      "a": "capital profits, capital losses",
+      "b": "capital profits/losses, revenue profit/losses",
+      "c": "revenue profits, revenue losses",
+      "d": "revenue profits/losses, capital profits/losses"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 120,
+    "exam_session": "November 2021",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Ratio Analysis",
+      "sub_branch": "Quick Ratio vs Current Ratio"
+    },
+    "keywords": [
+      "quick ratio",
+      "liquidity test",
+      "slow-paying doubtful debtors"
+    ],
+    "question": "Given below are two statements, one is labelled as Assertion A and the other is labelled as Reason R. Assertion A: Quick ratio is a more penetrating test of liquidity than the current ratio, yet a high quick ratio does not necessarily imply sound liquidity. Reason R: A company with a high value of quick ratio can suffer from a shortage of funds if it is slow-paying, doubtful and long duration outstanding debtors. In light of the above statements, choose the most appropriate answer from the options given below:",
+    "options": {
+      "a": "A is correct but R is not correct",
+      "b": "A is not correct but R is correct",
+      "c": "Both A and R are correct and R is the correct explanation of A",
+      "d": "Both A and R are correct but R is NOT the correct explanation of A"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 121,
+    "exam_session": "November 2021",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Indian Accounting Standards (Ind AS)",
+      "sub_branch": "Ind AS List Matching"
+    },
+    "keywords": [
+      "Ind AS 1",
+      "Ind AS 29",
+      "Ind AS 37",
+      "Ind AS 110",
+      "provisions contingent liabilities and contingent assets",
+      "consolidated financial statements",
+      "presentation of financial statements",
+      "financial reporting in hyperinflationary economies"
+    ],
+    "question": "Match List I with List II:",
+    "list_1": {
+      "A": "Ind-AS 1",
+      "B": "Ind-AS 29",
+      "C": "Ind-AS 37",
+      "D": "Ind-AS 110"
+    },
+    "list_2": {
+      "I": "Provisions, Contingent Liabilities and Contingent Assets",
+      "II": "Consolidated Financial Statements",
+      "III": "Presentation of Financial Statements",
+      "IV": "Financial Reporting in Hyperinflationary Economies"
+    },
+    "options": {
+      "a": "A-III, B-I, C-II, D-IV",
+      "b": "A-III, B-IV, C-I, D-II",
+      "c": "A-IV, B-III, C-I, D-II",
+      "d": "A-IV, B-III, C-II, D-I"
+    },
+    "note": "There is also a separate 'Match List I (Ind-AS)' with options Ind-AS 1 / Ind-AS 29 / Ind-AS 37 / Ind-AS 110 appearing again later in the source near Q121-side annotation; treated as same question.",
+    "answer": "b"
+  },
+  {
+    "q_no": 122,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Price Level Accounting"
+    },
+    "keywords": [
+      "replacement cost method",
+      "current purchasing power method",
+      "opportunity cost method",
+      "current cost accounting method",
+      "standard cost method"
+    ],
+    "question": "Which among the following are generally accepted methods of accounting for price level changes?",
+    "sub_items": {
+      "A": "Replacement Cost Method",
+      "B": "Current Purchasing Power Method",
+      "C": "Opportunity Cost Method",
+      "D": "Current Cost Accounting Method",
+      "E": "Standard Cost Method"
+    },
+    "options": {
+      "a": "A and C only",
+      "b": "A, B and C only",
+      "c": "B and D only",
+      "d": "C, D and E only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 123,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Corporate Reporting & Business Standards",
+      "sub_branch": "Indian GAAP (IGAAP)"
+    },
+    "keywords": [
+      "Indian Companies Act 2013",
+      "notifications Ministry of Finance",
+      "accounting standards",
+      "ICAI pronouncements"
+    ],
+    "question": "The sources of the Indian GAAP (IGAAP) include:",
+    "sub_items": {
+      "A": "Indian Companies Act, 2013",
+      "B": "Notifications issued by Ministry of Finance",
+      "C": "Accounting standards",
+      "D": "ICAI's pronouncements"
+    },
+    "options": {
+      "a": "A and C only",
+      "b": "A, B and C only",
+      "c": "A, C and D only",
+      "d": "B, C and D only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 124,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Marginal Costing - Assumptions"
+    },
+    "keywords": [
+      "fixed cost constant",
+      "variable cost constant per unit",
+      "no change in pricing policy",
+      "operating efficiency"
+    ],
+    "question": "The technique of marginal costing is based upon which of the following assumptions:",
+    "sub_items": {
+      "A": "Fixed cost will tend to remain constant or unchanged for the entire volume of production.",
+      "B": "Variable cost remains constant per unit of output irrespective of the level of production.",
+      "C": "There will not be any change in pricing policy due to change in volume, competition, etc.",
+      "D": "Operating efficiency of the firm may increase or decrease."
+    },
+    "options": {
+      "a": "A and B only",
+      "b": "A, B and D only",
+      "c": "A, B and C only",
+      "d": "A, B, C and D"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 125,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Types of Audit"
+    },
+    "keywords": [
+      "structured review of systems and procedures",
+      "cost audit",
+      "financial audit",
+      "management audit",
+      "safety audit"
+    ],
+    "question": "Which one of the following is a structured review of the systems and procedures of an organisation in order to evaluate whether they are being conducted efficiently and effectively?",
+    "options": {
+      "a": "Cost audit",
+      "b": "Financial audit",
+      "c": "Management audit",
+      "d": "Safety audit"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 126,
+    "exam_session": "November 2021",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Contribution-Sales Ratio & Break-even"
+    },
+    "keywords": [
+      "sales",
+      "fixed cost",
+      "break-even point",
+      "C/S ratio",
+      "profit"
+    ],
+    "question": "From the following information about a firm, what will be the contribution to sales (c/s) ratio and the profit? Sales = Rs 100,000; Fixed Cost = Rs 20,000; Break-even Point = Rs 40,000.",
+    "options": {
+      "a": "C/S = 25% and Profit = Rs 60,000",
+      "b": "C/S = 50% and Profit = Rs 30,000",
+      "c": "C/S = 50% and Profit = Rs 60,000",
+      "d": "C/S = 60% and Profit = Rs 30,000"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 127,
+    "exam_session": "November 2021",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Sacrificing Ratio on Admission"
+    },
+    "keywords": [
+      "partners A B C",
+      "admission of D",
+      "sacrificing ratio",
+      "original share retained"
+    ],
+    "question": "'A', 'B' and 'C' are partners sharing profits in the ratio 3:2:1. 'D' is admitted for 1/6 share and 'C' should retain his original share. The sacrificing ratio of A and B will be:",
+    "options": {
+      "a": "1:2",
+      "b": "2:3",
+      "c": "3:2",
+      "d": "2:1"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 128,
+    "exam_session": "November 2021",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Dissolution of Firm - Application of Assets"
+    },
+    "keywords": [
+      "dissolution",
+      "advances distinguished from capital",
+      "on account of capital",
+      "debts to third parties",
+      "dividing among partners entitled to share profits"
+    ],
+    "question": "The assets of the Partnership firm, including any sums contributed by the partners to make-up deficiencies of capital at the time of dissolution, shall be applied in the following manner and order.",
+    "sub_items": {
+      "A": "In paying each partner rateably what is due to him for advances as distinguished from capital.",
+      "B": "In paying to each partner rateably what is due to him on account of capital.",
+      "C": "In paying the debts of the firm to third parties.",
+      "D": "Dividing among the partners in the proportion in which they were entitled to share profits."
+    },
+    "options": {
+      "a": "C, A, B, D",
+      "b": "A, B, C, D",
+      "c": "C, B, A, D",
+      "d": "B, C, A, D"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 129,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Management Accounting",
+      "sub_branch": "Purposes of Management Accounting Information"
+    },
+    "keywords": [
+      "measurement",
+      "control",
+      "recording transactions",
+      "alternative choices"
+    ],
+    "question": "Management Accounting information is used for which of the following distinctive purposes:",
+    "sub_items": {
+      "A": "Measurement",
+      "B": "Control",
+      "C": "Recording transactions",
+      "D": "Alternative choices"
+    },
+    "options": {
+      "a": "A, B and C only",
+      "b": "A, B and D only",
+      "c": "A and D only",
+      "d": "B, C and D only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 130,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Corporate Restructuring",
+      "sub_branch": "Amalgamation Adjustment Account"
+    },
+    "keywords": [
+      "amalgamation adjustment account",
+      "statutory reserve",
+      "transferee company books"
+    ],
+    "question": "Amalgamation adjustment account is used for recording:",
+    "options": {
+      "a": "Capital Reserve in the books of the transferee company",
+      "b": "General Reserve in the books of the transferee company",
+      "c": "Statutory Reserve in the books of the transferee company",
+      "d": "Revenue Reserve in the books of the transferee company"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 131,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Corporate Finance",
+      "sub_branch": "Flotation Costs"
+    },
+    "keywords": [
+      "flotation costs",
+      "legal fees",
+      "administrative expenses",
+      "brokerage",
+      "underwriting",
+      "risk premium"
+    ],
+    "question": "A new issue of debt or shares will invariably involve flotation costs in the form of:",
+    "sub_items": {
+      "A": "Legal fees",
+      "B": "Administrative expenses",
+      "C": "Brokerage",
+      "D": "Underwriting",
+      "E": "Risk premium"
+    },
+    "options": {
+      "a": "A, B, D, E only",
+      "b": "A, C only",
+      "c": "A, B, C, D only",
+      "d": "A, B, C, D, E"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 132,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Taxation",
+      "sub_branch": "Tax Audit"
+    },
+    "keywords": [
+      "tax audit compulsory",
+      "gross receipts profession",
+      "Rs 50 lakh"
+    ],
+    "question": "Tax audit is compulsory in case of a person in the profession whose gross receipts in the profession exceed:",
+    "options": {
+      "a": "Rs. 1 crore",
+      "b": "Rs. 40 lakh",
+      "c": "Rs. 60 lakh",
+      "d": "Rs. 50 lakh"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 133,
+    "exam_session": "November 2021",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Inventory Management",
+      "sub_branch": "Inventory Control Methods"
+    },
+    "keywords": [
+      "JIT system",
+      "ABC analysis",
+      "FSND analysis",
+      "VED analysis"
+    ],
+    "question": "Match List I (Methods of Inventory Control) with List II (Brand).",
+    "list_1": {
+      "A": "JIT System",
+      "B": "ABC Analysis",
+      "C": "FSND Analysis",
+      "D": "VED Analysis"
+    },
+    "list_2": {
+      "I": "Divide the items into the categories in the descending order of their usage rate.",
+      "II": "Divides items into categories in the descending order of their critical use.",
+      "III": "Inventory arrives at the manufacturing sites just a few hours before they are put to use.",
+      "IV": "The items of inventory are classified according to value of usage."
+    },
+    "options": {
+      "a": "A-III, B-I, C-IV, D-II",
+      "b": "A-III, B-IV, C-I, D-II",
+      "c": "A-I, B-III, C-II, D-IV",
+      "d": "A-II, B-I, C-III, D-IV"
+    },
+    "ocr_incomplete": true,
+    "answer": "b"
+  },
+  {
+    "q_no": 134,
+    "exam_session": "November 2021",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Corporate Restructuring",
+      "sub_branch": "Methods of Purchase Consideration"
+    },
+    "keywords": [
+      "lump sum payment method",
+      "net assets method",
+      "net payment method",
+      "swap ratio method"
+    ],
+    "question": "Match List I (Method) with List II (Purchase Consideration).",
+    "list_1": {
+      "A": "Lump-sum Payment Method",
+      "B": "Net Assets Method",
+      "C": "Net Payment Method",
+      "D": "Swap Ratio Method"
+    },
+    "list_2": {
+      "I": "Calculated by adding up the total amount (money value) of existing shares, preference shares, and cash received from the purchasing company for the shareholders of the vendor company.",
+      "II": "On the basis of the ratio which the shares of the transferee company are to be exchanged for the shares of the transferor company.",
+      "III": "The amount to be paid by the transferee company to the transferor company for amalgamation of its business.",
+      "IV": "Arrived at by adding the agreed value of assets taken over and deducting therefrom the agreed values of liabilities."
+    },
+    "options": {
+      "a": "A-I, B-IV, C-III, D-II",
+      "b": "A-III, B-IV, C-I, D-II",
+      "c": "A-IV, B-I, C-II, D-III",
+      "d": "A-IV, B-II, C-I, D-III"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 135,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Accounting Standards",
+      "sub_branch": "AS-2 Valuation of Inventories"
+    },
+    "keywords": [
+      "AS-2",
+      "freight and insurance",
+      "carriage outwards",
+      "depreciation of factory plant",
+      "general administrative overheads"
+    ],
+    "question": "According to AS-2, which of the following costs should be included in valuing the inventories of a manufacturing company?",
+    "sub_items": {
+      "1": "Freight and insurance",
+      "2": "Carriage outwards",
+      "3": "Depreciation of factory plant",
+      "4": "General administrative overheads"
+    },
+    "options": {
+      "a": "1 and 4 only",
+      "b": "1, 2, and 4 only",
+      "c": "2 and 3 only",
+      "d": "1 and 3 only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 136,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Financial Markets",
+      "sub_branch": "Public Issue vs Rights Issue"
+    },
+    "keywords": [
+      "public issue",
+      "rights issue",
+      "over-subscription",
+      "under-subscription",
+      "prospectus advertisement"
+    ],
+    "question": "Which of the following distinction(s) is/are not correct between public issue and rights issue?",
+    "sub_items": {
+      "1": "In a public issue, applications for shares are invited from the general public, and in a rights issue, shares are offered to existing shareholders.",
+      "2": "In a public issue, there is no question of any over-subscription or under-subscription, and in a rights issue, the shares may be under-subscribed or over-subscribed, leading to prorated allotment.",
+      "3": "The price of a public issue is generally less than the market price, and in a rights issue, the price is deliberately made less than the market price.",
+      "4": "In a public issue, the communication of the issue is through prospects or advertisements, and in a rights issue, the communication is between the company and the existing members of the company."
+    },
+    "options": {
+      "a": "2 only",
+      "b": "4 only",
+      "c": "1 and 3 only",
+      "d": "3 and 4 only"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 137,
+    "exam_session": "November 2021",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Sacrificing Ratio on Admission"
+    },
+    "keywords": [
+      "X and Y partners",
+      "admit Z",
+      "1/5th share",
+      "sacrificing ratio"
+    ],
+    "question": "X and Y are partners, sharing profits and losses in the partnership for 1/5th share. X and Y admit Z into the partnership for 1/5th share. X and Y decide to share future profits in the ratio of 2:1. What is the sacrificing ratio of X and Y?",
+    "options": {
+      "a": "4:3",
+      "b": "13:8",
+      "c": "8:13",
+      "d": "4:17"
+    },
+    "ocr_incomplete": true,
+    "note": "Question phrasing partly garbled in source; original likely states X and Y share profits 4:3 and admit Z for 1/5th share",
+    "answer": "d"
+  },
+  {
+    "q_no": 138,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Human Resource Accounting",
+      "sub_branch": "Valuation of Human Assets"
+    },
+    "keywords": [
+      "basic method of valuing human assets",
+      "adjustment",
+      "amortization",
+      "capitalization",
+      "quasi equity"
+    ],
+    "question": "The basic method of valuing human assets is:",
+    "options": {
+      "a": "Adjustment",
+      "b": "Amortization",
+      "c": "Capitalization",
+      "d": "Quasi equity"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 139,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Holding Company Accounts",
+      "sub_branch": "Goodwill on Consolidation"
+    },
+    "keywords": [
+      "investment in subsidiary",
+      "book value of net assets acquired",
+      "goodwill on consolidation",
+      "capital reserve",
+      "minority interest"
+    ],
+    "question": "When the value of 'Investment in subsidiary' in the holding company's balance sheet is more than the book value of the net assets acquired, the difference represents:",
+    "options": {
+      "a": "Capital reserve on consolidation",
+      "b": "Goodwill on consolidation",
+      "c": "Minority Interest",
+      "d": "Post-acquisition profit"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 140,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Corporate Restructuring",
+      "sub_branch": "Purchasing Company as Agent"
+    },
+    "keywords": [
+      "purchasing company agent for vendor",
+      "collection of book debts",
+      "vendor's suspense account",
+      "vendor's debtors account"
+    ],
+    "question": "In case the purchasing company agrees to act as the agent of the vendor for the collection of the book debts, in the books of the purchasing company, the amount of debtors should be credited to:",
+    "options": {
+      "a": "Vendor's debtors account",
+      "b": "Vendor's suspense account",
+      "c": "Debtors account",
+      "d": "Creditors account"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 141,
+    "exam_session": "October 2020",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "New Profit Sharing Ratio on Admission"
+    },
+    "keywords": [
+      "X and Y partners",
+      "admit Z",
+      "1/5 share",
+      "new profit sharing ratio"
+    ],
+    "question": "X and Y are partners in a business sharing profit and losses in the ratio of 3:2. They admit Z as a new partner with a 1/5 share in the profits. Calculate the new profit-sharing ratio of the partners.",
+    "options": {
+      "a": "12:8:5",
+      "b": "12:8:6",
+      "c": "12:7:6",
+      "d": "12:3:7"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 142,
+    "exam_session": "October 2020",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Partnership Law",
+      "sub_branch": "General Partnership Rules"
+    },
+    "keywords": [
+      "partners bound greatest common advantage",
+      "interest on capital payable only if profits",
+      "outgoing partner claim share",
+      "expelled partner consent"
+    ],
+    "question": "Which of the following are false?",
+    "sub_items": {
+      "A": "Partners are not bound to carry on the business of the firm to the greatest common advantage",
+      "B": "Where a partner is entitled to interest on capital subscribed by him, such interest shall be payable whether or not there are profits",
+      "C": "An outgoing partner has a right to claim a share in the profits of the firm till his account is finally settled",
+      "D": "A partner may be expelled from the firm only with the consent of all other partners"
+    },
+    "options": {
+      "a": "A, B, D only",
+      "b": "A, C, D only",
+      "c": "B, D, C only",
+      "d": "C, D only"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 143,
+    "exam_session": "October 2020",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Financial Markets",
+      "sub_branch": "Value of Rights Issue"
+    },
+    "keywords": [
+      "share capital",
+      "market value",
+      "rights issue value",
+      "value of the right"
+    ],
+    "question": "A Ltd. has a share capital of 5,000 equity shares of Rs. 100 each, having a market value of Rs. 150 per share. The company wants to raise additional funds of Rs. 1,20,000 and offers to the existing shareholders the right to apply for a new share at Rs. 120 for every five shares held. What would be the value of the right?",
+    "options": {
+      "a": "Rs. 5",
+      "b": "Rs. 6",
+      "c": "Rs. 6.5",
+      "d": "Rs. 5.5"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 144,
+    "exam_session": "October 2020",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Ratio Analysis",
+      "sub_branch": "Current Ratio - Effect of Equal Increase"
+    },
+    "keywords": [
+      "current ratio",
+      "equal increase in current assets and liabilities"
+    ],
+    "question": "When the current ratio is 2:1 and if there is an equal increase in current assets and current liabilities, it would result in:",
+    "options": {
+      "a": "No change in current ratio",
+      "b": "Increase in current ratio",
+      "c": "Decrease in current ratio",
+      "d": "Current ratio will double"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 145,
+    "exam_session": "October 2020",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Ratio Analysis",
+      "sub_branch": "Financial Ratios and Interpretation"
+    },
+    "keywords": [
+      "inability to pay interest",
+      "liquidity crisis",
+      "inefficient collection of receivable",
+      "return on shareholder fund"
+    ],
+    "question": "Match the items of List I and choose the correct code from the following combination.",
+    "list_1": {
+      "A": "Inability to pay interest",
+      "B": "Liquidity crisis",
+      "C": "Inefficient collection of receivable",
+      "D": "Return of shareholder's fund being much higher than the overall return on investment"
+    },
+    "list_2": {
+      "I": "Current Ratio",
+      "II": "Debtor Turnover Ratio",
+      "III": "Interest coverage ratio",
+      "IV": "Debts-Equity ratio"
+    },
+    "options": {
+      "a": "A-III, B-I, C-II, D-IV",
+      "b": "A-II, B-III, C-I, D-IV",
+      "c": "A-II, B-III, C-I, D-IV",
+      "d": "A-I, B-II, C-III, D-IV"
+    },
+    "ocr_incomplete": true,
+    "answer": "a"
+  },
+  {
+    "q_no": 146,
+    "exam_session": "October 2020",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Accounting Fundamentals",
+      "sub_branch": "Accounting Process/Cycle"
+    },
+    "keywords": [
+      "journalising",
+      "ledger",
+      "recording business transaction",
+      "annual financial statements",
+      "trial balance",
+      "deriving inferences"
+    ],
+    "question": "Sequence the following activities in the process of accounting:",
+    "sub_items": {
+      "A": "Journalising the transaction in the ledger accounts",
+      "B": "Recording the business transaction in the books of entry",
+      "C": "Preparation of Annual Financial Statements",
+      "D": "Preparation of the Trial Balance",
+      "E": "Deriving meaningful inferences for business decisions"
+    },
+    "options": {
+      "a": "A, B, C, D and E",
+      "b": "A, B, D, E and C",
+      "c": "D, C, E, B and A",
+      "d": "B, A, D, C and E"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 147,
+    "exam_session": "October 2020",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Energy Management and Audit"
+    },
+    "keywords": [
+      "minimizing cost of energy consumption",
+      "minimizing waste",
+      "scaling harmful impacts pollution",
+      "minimizing environmental degradation"
+    ],
+    "question": "The objective of energy management and audit invariably includes which of the following in business enterprises?",
+    "sub_items": {
+      "A": "Minimizing the cost of energy consumption.",
+      "B": "Minimizing waste in energy consumption.",
+      "C": "Scaling harmful impacts of pollution on the health of natives.",
+      "D": "Minimizing environmental degradation."
+    },
+    "options": {
+      "a": "A, B, and C only",
+      "b": "B, C, and D only",
+      "c": "A, B, and D only",
+      "d": "A, B, C, and D only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 148,
+    "exam_session": "October 2020",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Accounting Fundamentals",
+      "sub_branch": "Capital Account Equation"
+    },
+    "keywords": [
+      "opening capital",
+      "closing capital",
+      "additional capital",
+      "drawings",
+      "profit or loss"
+    ],
+    "question": "Which one of the following is a correct equation?",
+    "options": {
+      "a": "Opening capital = Closing capital + Additional capital - Drawings - Profit",
+      "b": "Opening capital = Closing capital + Drawings - Additional capital - Losses",
+      "c": "Opening capital = Closing capital + Drawings - Additional capital - Profit",
+      "d": "Opening capital = Closing capital - Drawings - Additional capital - Profit"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 149,
+    "exam_session": "October 2020",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Standard Costing Process"
+    },
+    "keywords": [
+      "establishing standard costs",
+      "measurement of actual costs",
+      "identifying variances",
+      "disposing variances",
+      "comparison of actual and standard costs"
+    ],
+    "question": "Sequence the following activities in the process of standard costing.",
+    "sub_items": {
+      "A": "Establishing standard costs",
+      "B": "Measurement of actual costs",
+      "C": "Identifying variances and causes of variance",
+      "D": "Disposing the variances to cost and profit centers",
+      "E": "Comparison of actual and standard costs"
+    },
+    "options": {
+      "a": "A, B, E, C and D",
+      "b": "A, B, C, D and E",
+      "c": "A, B, E, D and C",
+      "d": "A, B, D, C and E"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 150,
+    "exam_session": "October 2020",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Efficiency Ratio, Activity Ratio, Capacity Ratio"
+    },
+    "keywords": [
+      "activity ratio",
+      "capacity ratio",
+      "efficiency ratio"
+    ],
+    "question": "If the Activity Ratio of a firm is 80% and the Capacity Ratio is 120%, find out its Efficiency Ratio.",
+    "options": {
+      "a": "150%",
+      "b": "100%",
+      "c": "80%",
+      "d": "66.67%"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 151,
+    "exam_session": "October 2020",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Process Costing - Applicability"
+    },
+    "keywords": [
+      "process costing appropriate firms",
+      "oil refining",
+      "logistics and transportation",
+      "pharmaceutical and healthcare",
+      "tourism and hospitality"
+    ],
+    "question": "Process Costing is appropriate for which of the following firms?",
+    "options": {
+      "a": "Logistic and Transportation firms",
+      "b": "Pharmaceutical and Healthcare firms",
+      "c": "Tourism and Hospitality firms",
+      "d": "Oil Refining firms"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 152,
+    "exam_session": "October 2020",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Current Purchasing Power (CPP) Method"
+    },
+    "keywords": [
+      "CPP method",
+      "retail price index",
+      "value of machinery"
+    ],
+    "question": "A company purchased machinery on 01-01-2015 for a sum of Rs. 60,000. The retail price index on that date was 150. What is the value of machinery according to the CPP method on 31st December 2015, when the price index was 200?",
+    "options": {
+      "a": "Rs. 1,00,000",
+      "b": "Rs. 90,000",
+      "c": "Rs. 80,000",
+      "d": "Rs. 70,000"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 153,
+    "exam_session": "October 2020",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Vouching of Sales"
+    },
+    "keywords": [
+      "dispatch of goods",
+      "sales book",
+      "direct notes",
+      "credit notes"
+    ],
+    "question": "Which of the following are related to vouching of sales?",
+    "sub_items": {
+      "A": "Dispatch of goods",
+      "B": "Sales Book",
+      "C": "Direct notes",
+      "D": "Credit notes"
+    },
+    "options": {
+      "a": "B and D only",
+      "b": "A and D only",
+      "c": "B and A only",
+      "d": "B and C only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 154,
+    "exam_session": "October 2020",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Accounting Concepts",
+      "sub_branch": "Going Concern Concept"
+    },
+    "keywords": [
+      "going concern concept",
+      "market value of securities",
+      "consolidating accounts",
+      "depreciating fixed assets",
+      "useful lives"
+    ],
+    "question": "The 'going concern concept' is the underlying basis for:",
+    "options": {
+      "a": "Disclosing the market value of securities",
+      "b": "Consolidating the accounts of subsidiary companies with those of the parent company",
+      "c": "Depreciating fixed assets over their useful lives",
+      "d": "Disclosing the sales and other operating information in the income statement"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 155,
+    "exam_session": "October 2020",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Cost Audit"
+    },
+    "keywords": [
+      "goods inward procedure",
+      "standard cost variance methods",
+      "classification of overhead",
+      "scrap wastage materials transfers",
+      "under or over absorption"
+    ],
+    "question": "Cost audit for materials covers:",
+    "sub_items": {
+      "A": "Goods inward procedure",
+      "B": "Methods of calculating standard cost variance",
+      "C": "Classification of overhead",
+      "D": "Accounting for scrap, wastage, materials transfers",
+      "E": "Accounting treatment of under or over absorption"
+    },
+    "options": {
+      "a": "A, D only",
+      "b": "A, E only",
+      "c": "A, B only",
+      "d": "E, C only"
+    },
+    "ocr_incomplete": true,
+    "answer": "a"
+  },
+  {
+    "q_no": 156,
+    "exam_session": "October 2020",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Partnership Accounting",
+      "sub_branch": "Partnership Deed - True Statements"
+    },
+    "keywords": [
+      "partnership deed absence of provision",
+      "only working partner entitled remuneration",
+      "normal profit no goodwill",
+      "carried on by all partners",
+      "interest on loan"
+    ],
+    "question": "Which one of the following statements is 'True' in partnership?",
+    "options": {
+      "a": "In the absence of any provision in the partnership deed, only a working partner is entitled to remuneration.",
+      "b": "Any firm which earns normal profit has no goodwill.",
+      "c": "The business of the firm must be carried on by all the partners.",
+      "d": "Interest on loan given by a partner to the firm shall be paid if there are profits."
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 157,
+    "exam_session": "October 2020",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Cost & Financial Analysis",
+      "sub_branch": "Concepts Matching"
+    },
+    "keywords": [
+      "standard costing",
+      "margin of safety",
+      "ratio analysis",
+      "JIT system"
+    ],
+    "question": "Match List I with List II.",
+    "list_1": {
+      "A": "Standard Costing",
+      "B": "Margin of Safety",
+      "C": "Ratio Analysis",
+      "D": "JIT System"
+    },
+    "list_2": {
+      "I": "Financial forecasting and planning",
+      "II": "Sales minus break-even sales",
+      "III": "Control of inventory",
+      "IV": "Management by exception"
+    },
+    "options": {
+      "a": "A-IV, B-II, C-I, D-III",
+      "b": "A-III, B-I, C-II, D-IV",
+      "c": "A-II, B-III, C-I, D-IV",
+      "d": "A-I, B-II, C-IV, D-III"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 158,
+    "exam_session": "October 2020",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Partnership Law",
+      "sub_branch": "Types of Partnerships / Agency"
+    },
+    "keywords": [
+      "limited liability partnership",
+      "particular partnership",
+      "partnership",
+      "mutual agency"
+    ],
+    "question": "Match List I (Authors) with List II.",
+    "list_1": {
+      "A": "Limited Liability Partnership",
+      "B": "Particular Partnership",
+      "C": "Partnership",
+      "D": "Mutual Agency"
+    },
+    "list_2": {
+      "I": "It can be formed with a minimum of two individuals or body corporate through their nominees.",
+      "II": "It is formed for a specific venture or for a particular period.",
+      "III": "It is an association of two or more individuals.",
+      "IV": "A partner is both an agent and a principal in a partnership firm."
+    },
+    "options": {
+      "a": "A-I, B-II, C-III, D-IV",
+      "b": "A-II, B-III, C-I, D-IV",
+      "c": "A-I, B-III, C-II, D-IV",
+      "d": "A-IV, B-II, C-III, D-I"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 159,
+    "exam_session": "December 2019",
+    "question_type": "Chronological Sequencing",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Life Cycle of a Public Limited Company"
+    },
+    "keywords": [
+      "public issue of shares IPO",
+      "firm incorporation",
+      "preliminary expenditures",
+      "issue of equity shares to promoters"
+    ],
+    "question": "Following are the events which generally happen in the life of a public limited company. Choose the correct sequence (chronological order) of the events from the options given below:",
+    "sub_items": {
+      "A": "Public issue of shares (IPO)",
+      "B": "Firm Incorporation",
+      "C": "Preliminary expenditures",
+      "D": "Issue of equity shares to promoters of the company"
+    },
+    "options": {
+      "a": "A \u2192 B \u2192 C \u2192 D",
+      "b": "B \u2192 C \u2192 D \u2192 A",
+      "c": "C \u2192 B \u2192 A \u2192 D",
+      "d": "C \u2192 B \u2192 D \u2192 A"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 160,
+    "exam_session": "December 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Corporate Restructuring",
+      "sub_branch": "Methods of Purchase Consideration"
+    },
+    "keywords": [
+      "net payment method",
+      "net assets method",
+      "gross receipts method",
+      "share exchange method"
+    ],
+    "question": "Which of the following is NOT a method for calculating or ascertaining the amount of purchase consideration?",
+    "options": {
+      "a": "Net Payment Method",
+      "b": "Net Assets Method",
+      "c": "Gross Receipts Method",
+      "d": "Share Exchange Method"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 161,
+    "exam_session": "December 2019",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Cost Behavior Determination Methods"
+    },
+    "keywords": [
+      "high and low point method",
+      "least square regression method",
+      "accounting or analytical approach",
+      "non-parametric method"
+    ],
+    "question": "Which of the following are methods of determining cost behavior?",
+    "sub_items": {
+      "A": "High and low point method",
+      "B": "Least square regression method",
+      "C": "Accounting or analytical approach",
+      "D": "Non-parametric method"
+    },
+    "options": {
+      "a": "A, B, and D only",
+      "b": "A, B, and C only",
+      "c": "B, C, and D only",
+      "d": "A, B, and C only"
+    },
+    "ocr_incomplete": true,
+    "answer": "b"
+  },
+  {
+    "q_no": 162,
+    "exam_session": "December 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Taxation",
+      "sub_branch": "Assessment Categories of Partner"
+    },
+    "keywords": [
+      "partnership firm partner assessed",
+      "individual",
+      "HUF",
+      "firm",
+      "body of individual"
+    ],
+    "question": "Under which of the following categories is a partner of a partnership firm assessed?",
+    "options": {
+      "a": "An Individual",
+      "b": "HUF",
+      "c": "Firm",
+      "d": "Body of an Individual"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 163,
+    "exam_session": "December 2019",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Indian Accounting Standards (Ind AS)",
+      "sub_branch": "Carve-outs from IFRS"
+    },
+    "keywords": [
+      "Indian Accounting Standards carve outs",
+      "convergence with IFRS",
+      "IFRS compliant"
+    ],
+    "question": "Assertion (A): Indian Accounting Standards contain some 'carve outs' and for convergence with IFRS with some changes applied in India. Reason (R): Financial statements prepared in India with Indian Accounting Standards will not be IFRS compliant. In the light of the above two statements, choose the correct option:",
+    "options": {
+      "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+      "b": "Both (A) and (R) are true, but (R) is NOT the correct explanation of (A).",
+      "c": "(A) is true, but (R) is false.",
+      "d": "(A) is false, but (R) is true."
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 164,
+    "exam_session": "December 2019",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Taxation",
+      "sub_branch": "Dividend Taxation"
+    },
+    "keywords": [
+      "tax on dividend income",
+      "double taxation",
+      "profit already taxed"
+    ],
+    "question": "Assertion (A): Tax should not be charged on dividend income from the shareholders. Reason (R): Some economists are of the opinion that when tax has already been paid on the profit of the company and balance is distributed as dividend to the owners, tax need not be levied on them. Choose the correct option:",
+    "options": {
+      "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+      "b": "Both (A) and (R) are true, but (R) is NOT the correct explanation of (A).",
+      "c": "(A) and (R) both are correct and (R) is not the right explanation of (A)",
+      "d": "Both (A) and (R) are incorrect."
+    },
+    "ocr_incomplete": true,
+    "answer": "a"
+  },
+  {
+    "q_no": 165,
+    "exam_session": "December 2019",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Auditor's Report and Duties"
+    },
+    "keywords": [
+      "qualified report",
+      "examine valuation and disclosure",
+      "access to records",
+      "misstatement in prospectus"
+    ],
+    "question": "Match List I with List II:",
+    "list_1": {
+      "A": "Qualified Report",
+      "B": "Examine Valuation and Disclosure",
+      "C": "Access to records of Company and subsidiaries",
+      "D": "Misstatement in prospectus in company issue of capital"
+    },
+    "list_2": {
+      "I": "Auditor Duty",
+      "II": "Auditor Liabilities",
+      "III": "Auditor Report",
+      "IV": "Auditor Right"
+    },
+    "options": {
+      "a": "A-II, B-I, C-IV, D-III",
+      "b": "A-III, B-I, C-IV, D-II",
+      "c": "A-III, B-IV, C-II, D-I",
+      "d": "A-I, B-IV, C-III, D-II"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 166,
+    "exam_session": "December 2019",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Auditor Disqualifications"
+    },
+    "keywords": [
+      "chartered accountant certificate of practice",
+      "LLP partners chartered accountants",
+      "officer or employee of company",
+      "chartered accountant more than 10 companies"
+    ],
+    "question": "Who cannot be appointed as an auditor of a company?",
+    "sub_items": {
+      "A": "An individual who is a Chartered Accountant and holds a Certificate of Practice as per CA Act, 1949",
+      "B": "A limited liability partnership firm, which has all partners as Chartered Accountants",
+      "C": "An officer or employee of a company who is a qualified Chartered Accountant degree holder too",
+      "D": "Any Chartered Accountant whose appointment will result in the person being auditor of more than 10 companies"
+    },
+    "options": {
+      "a": "A and B",
+      "b": "B, C, and D",
+      "c": "C and D",
+      "d": "A, B, and D"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 167,
+    "exam_session": "June 2019",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Indian Accounting Standards (Ind AS)",
+      "sub_branch": "Ind AS List Matching"
+    },
+    "keywords": [
+      "Ind AS 16",
+      "Ind AS 38",
+      "Ind AS 17",
+      "Ind AS 12",
+      "income tax",
+      "leasing",
+      "intangible assets",
+      "property plant and equipment"
+    ],
+    "question": "Match List I with List II.",
+    "list_1": {
+      "A": "Ind AS-16",
+      "B": "Ind AS-38",
+      "C": "Ind AS-17",
+      "D": "Ind AS-12"
+    },
+    "list_2": {
+      "I": "Income tax",
+      "II": "Leasing",
+      "III": "Intangible assets",
+      "IV": "Property, plant and equipment"
+    },
+    "options": {
+      "a": "A-IV, B-III, C-II, D-I",
+      "b": "A-IV, B-III, C-II, D-I",
+      "c": "A-III, B-II, C-IV, D-I",
+      "d": "A-IV, B-II, C-I, D-III"
+    },
+    "ocr_incomplete": true,
+    "answer": "a"
+  },
+  {
+    "q_no": 168,
+    "exam_session": "June 2019",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Direct Material Cost Variance"
+    },
+    "keywords": [
+      "standard quantity",
+      "standard price",
+      "actual consumption",
+      "material cost variance"
+    ],
+    "question": "Product A requires 10 kg of material at the rate of Rs.5 per kg. The actual consumption of material for the manufacturing of product A comes to 12 kg of material at the rate of Rs.6 per kg. Direct material cost variance is:",
+    "options": {
+      "a": "Rs.22 (favourable)",
+      "b": "Rs.22 (unfavourable)",
+      "c": "Rs.12 (favourable)",
+      "d": "Rs.12 (unfavourable)"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 169,
+    "exam_session": "June 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Securities Premium Account"
+    },
+    "keywords": [
+      "Section 52 Companies Act 2013",
+      "securities premium account",
+      "dividend payment",
+      "discount off issue of shares",
+      "bonus shares",
+      "capital losses"
+    ],
+    "question": "As per Section 52 of the Companies Act, 2013, the balance in the Security Premium Account cannot be utilized for:",
+    "options": {
+      "a": "payment of dividend",
+      "b": "writing off discount on issue of shares",
+      "c": "issue of fully paid-up bonus shares",
+      "d": "capital losses"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 170,
+    "exam_session": "June 2019",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Auditing",
+      "sub_branch": "Rights of a Statutory Auditor"
+    },
+    "keywords": [
+      "right to receive remuneration",
+      "attend board meetings",
+      "attend general meeting",
+      "visit branch office"
+    ],
+    "question": "Which of the following are the rights of a Statutory Auditor?",
+    "sub_items": {
+      "A": "To receive remuneration",
+      "B": "To attend Board of Directors' Meeting",
+      "C": "To attend the General Meeting",
+      "D": "To visit the branch office"
+    },
+    "options": {
+      "a": "A and B",
+      "b": "A, B and D",
+      "c": "A, C and D",
+      "d": "A, B, C and D"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 171,
+    "exam_session": "June 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Corporate Finance",
+      "sub_branch": "Sale and Lease Back"
+    },
+    "keywords": [
+      "sale and lease back arrangement",
+      "lessee liquidity crisis",
+      "surplus fund",
+      "high profit",
+      "no profit-no loss"
+    ],
+    "question": "A 'sale and lease back' arrangement is more suitable for a lessee having:",
+    "options": {
+      "a": "liquidity crisis",
+      "b": "surplus fund",
+      "c": "high profit",
+      "d": "no-profit-no-loss"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 172,
+    "exam_session": "June 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Types of Goodwill"
+    },
+    "keywords": [
+      "dog goodwill",
+      "cat goodwill",
+      "rat goodwill",
+      "cow goodwill"
+    ],
+    "question": "Which of the following types of goodwill is considered to be the best?",
+    "options": {
+      "a": "Dog goodwill",
+      "b": "Cat goodwill",
+      "c": "Rat goodwill",
+      "d": "Cow goodwill"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 173,
+    "exam_session": "June 2019",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Shut-down Point"
+    },
+    "keywords": [
+      "shut down operations",
+      "revenue less than variable cost",
+      "operation should be closed down"
+    ],
+    "question": "Assertion (A): At times, a business may face the situation where it has to shut down its operations. Reason (R): If the revenue is less than its variable cost, the operation should be closed down. In the context of the above two statements, which one of the following codes is correct?",
+    "options": {
+      "a": "(A) is correct but (R) is not correct",
+      "b": "(A) and (R) both are correct and (R) is the right explanation of (A)",
+      "c": "(A) and (R) both are correct and (R) is not the right explanation of (A)",
+      "d": "Both (A) and (R) are incorrect"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 174,
+    "exam_session": "June 2019",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Cost Accounting",
+      "sub_branch": "Activity-Based Cost Allocation"
+    },
+    "keywords": [
+      "identification of main activities",
+      "collection of cost pool",
+      "determination of activity cost drivers",
+      "calculation of activity driver rate",
+      "charging cost of activities"
+    ],
+    "question": "Following are the steps in the activity-based cost allocation. Select the correct sequence of the above steps:",
+    "sub_items": {
+      "A": "Identification of the main activities",
+      "B": "Collection of cost pool",
+      "C": "Determination of the activity cost drivers",
+      "D": "Calculation of activity driver rate",
+      "E": "Charging of the cost of activities to products"
+    },
+    "options": {
+      "a": "A, B, C, E, D",
+      "b": "A, B, E, D, C",
+      "c": "A, B, C, D, E",
+      "d": "A, D, C, B, E"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 175,
+    "exam_session": "June 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Financial Statements",
+      "sub_branch": "Statement of Changes in Financial Position"
+    },
+    "keywords": [
+      "share capital issued",
+      "dividends declared",
+      "cash dividend declared but not yet paid",
+      "treasury stock"
+    ],
+    "question": "A statement of change in financial position typically would NOT disclose the effect of:",
+    "options": {
+      "a": "share capital issued to acquire productive facilities",
+      "b": "dividends declared",
+      "c": "cash dividend declared but not yet paid",
+      "d": "purchase and retirement of treasury stock"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 176,
+    "exam_session": "June 2019",
+    "question_type": "Numerical/Calculation",
+    "topic": {
+      "main_branch": "Company Law",
+      "sub_branch": "Capital Redemption Reserve"
+    },
+    "keywords": [
+      "redeemable preference shares",
+      "fresh equity shares at discount",
+      "capital redemption reserve"
+    ],
+    "question": "Redeemable preference shares of Rs.2,00,000 are to be redeemed at par for which fresh equity shares of Rs.80,000 are issued at a discount of 10%. What amount should be transferred to Capital Redemption Reserve Account?",
+    "options": {
+      "a": "Rs.2,00,000",
+      "b": "Rs.1,20,000",
+      "c": "Rs.1,28,000",
+      "d": "Rs.72,000"
+    },
+    "answer": "b"
+  }
+]

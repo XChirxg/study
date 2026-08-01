@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UGC NET Commerce - Exam Analysis Dashboard</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Chart.js via CDN (Loads dynamically; with CSS fallback if offline) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    :root {
+      --bg: #000000;
+      --bg-gradient: linear-gradient(180deg, #000000 0%, #05050a 100%);
+      --card-bg: #0c0c0e;
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --primary: #8b5cf6;
+      --primary-glow: #a78bfa;
+      --accent: #ec4899;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --info: #06b6d4;
+      --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+      --font-serif: 'Lora', 'Georgia', 'Charter', serif;
+    }
+
+    .light-mode {
+      --bg: #fafafa;
+      --bg-gradient: linear-gradient(180deg, #fafafa 0%, #f4f4f5 100%);
+      --card-bg: #ffffff;
+      --card-border: rgba(0, 0, 0, 0.08);
+      --text: #18181b;
+      --text-muted: #71717a;
+      --primary: #8b5cf6;
+      --primary-glow: #7c3aed;
+      --accent: #db2777;
+      --success: #059669;
+      --warning: #d97706;
+      --info: #0891b2;
+      --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      background-image: var(--bg-gradient);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+    }
+
+    /* HEADER */
+    header {
+      background: rgba(20, 22, 37, 0.2);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.4rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      cursor: pointer;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo i {
+      color: var(--primary);
+      text-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .icon-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .icon-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+    }
+    .back-btn {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    /* MAIN CONTAINER */
+    main {
+      flex: 1;
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* GLASS CARD */
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    /* HERO BANNER */
+    .hero-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(236, 72, 153, 0.05) 100%);
+      border-color: rgba(139, 92, 246, 0.2);
+    }
+    .hero-text h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to right, #fff, var(--primary-glow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .light-mode .hero-text h1 {
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-text p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    /* STATS SUMMARY ROW */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .stat-card {
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .stat-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      color: var(--primary);
+    }
+    .stat-card:nth-child(2) .stat-icon {
+      background: rgba(236, 72, 153, 0.1);
+      border: 1px solid rgba(236, 72, 153, 0.2);
+      color: var(--accent);
+    }
+    .stat-card:nth-child(3) .stat-icon {
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.2);
+      color: var(--info);
+    }
+    .stat-card:nth-child(4) .stat-icon {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      color: var(--success);
+    }
+    .stat-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 800;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* CHARTS LAYOUT */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 1024px) {
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .chart-container {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      margin-top: 1rem;
+    }
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    /* FILE STATUS / UPLOADER PANEL */
+    .file-status-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .file-pill {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .file-pill.loaded {
+      border-color: rgba(16, 185, 129, 0.3);
+      background: rgba(16, 185, 129, 0.05);
+    }
+    .file-pill.missing {
+      border-color: rgba(239, 68, 68, 0.3);
+      background: rgba(239, 68, 68, 0.05);
+    }
+    .file-status-indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .loaded .file-status-indicator { background: var(--success); box-shadow: 0 0 8px var(--success); }
+    .missing .file-status-indicator { background: #ef4444; box-shadow: 0 0 8px #ef4444; }
+
+    /* REPEATING TOPICS MATRIX */
+    .topics-table-container {
+      overflow-x: auto;
+      margin-top: 1rem;
+    }
+    .topics-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .topics-table th {
+      padding: 1rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-bottom: 2px solid var(--card-border);
+      letter-spacing: 0.05em;
+    }
+    .topics-table td {
+      padding: 1.2rem 1rem;
+      border-bottom: 1px solid var(--card-border);
+      font-size: 0.95rem;
+    }
+    .topics-table tr:hover td {
+      background: rgba(255, 255, 255, 0.015);
+    }
+    .topics-table tr.expandable {
+      cursor: pointer;
+    }
+    .uniqueness-badge {
+      padding: 0.25rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: inline-block;
+    }
+    .uniqueness-high { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
+    .uniqueness-med { background: rgba(6, 182, 212, 0.15); color: var(--info); border: 1px solid rgba(6, 182, 212, 0.3); }
+    .uniqueness-low { background: rgba(139, 92, 246, 0.15); color: var(--primary-glow); border: 1px solid rgba(139, 92, 246, 0.3); }
+
+    .freq-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--primary-glow);
+    }
+
+    /* DETAILED TOPIC DRAWER / ACCORDION QUESTIONS */
+    .questions-expanded-row {
+      background: rgba(0, 0, 0, 0.15) !important;
+      display: none;
+    }
+    .questions-expanded-row.active {
+      display: table-row;
+    }
+    .questions-expanded-cell {
+      padding: 1.5rem !important;
+    }
+    .expanded-questions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .expanded-question-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+    .expanded-question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 0.5rem;
+    }
+    .expanded-q-badge {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* EXPLORER & SEARCH */
+    .explorer-controls {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .explorer-controls {
+        grid-template-columns: 1fr;
+      }
+    }
+    .search-input-wrapper {
+      position: relative;
+    }
+    .search-input-wrapper i {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+    .form-control {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      color: var(--text);
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+    }
+    .search-input-wrapper .form-control {
+      padding-left: 2.75rem;
+    }
+    .explorer-results {
+      max-height: 500px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-right: 0.5rem;
+    }
+    
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(139, 92, 246, 0.3);
+    }
+
+    /* UPLOADER DRAWER overlay */
+    .upload-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+    .upload-overlay.active {
+      display: flex;
+    }
+    .upload-modal {
+      width: 90%;
+      max-width: 600px;
+      padding: 2rem;
+      background: #111322;
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      box-shadow: 0 10px 50px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+    .drag-drop-zone {
+      border: 2px dashed rgba(139, 92, 246, 0.4);
+      padding: 3rem 1.5rem;
+      border-radius: 12px;
+      background: rgba(139, 92, 246, 0.02);
+      cursor: pointer;
+      margin: 1.5rem 0;
+      transition: all 0.2s;
+    }
+    .drag-drop-zone:hover, .drag-drop-zone.dragover {
+      background: rgba(139, 92, 246, 0.08);
+      border-color: var(--primary);
+    }
+    .drag-drop-zone i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    /* OFFLINE FALLBACK BAR CHARTS */
+    .offline-bar-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1rem 0;
+    }
+    .offline-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .offline-bar-label {
+      width: 140px;
+      font-size: 0.85rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      text-align: right;
+    }
+    .offline-bar-track {
+      flex: 1;
+      height: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .offline-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: 8px;
+    }
+    .offline-bar-val {
+      width: 40px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    /* DYNAMIC ACCORDION ARROW */
+    .accordion-toggle i {
+      transition: transform 0.2s;
+    }
+    tr.expandable.active .accordion-toggle i {
+      transform: rotate(180deg);
+    }
+
+    .badge-qtype {
+      background: rgba(99, 102, 241, 0.15);
+      color: var(--primary-glow);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+    .badge-session {
+      background: rgba(236, 72, 153, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(236, 72, 153, 0.2);
+    }
+  </style>
+  <!-- Local JS Data Fallbacks to bypass local CORS -->
+  <script src="u1-business_environment_mcqs.js"></script>
+  <script src="u2-accounting_auditing_mcqs.js"></script>
+  <script src="u3-business_economics_mcqs.js"></script>
+  <script src="u4-business_finance_mcqs.js"></script>
+  <script src="u5-business_statistics_research_methods_mcqs.js"></script>
+  <script src="u6-business_management_hrm_mcqs.js"></script>
+  <script src="u7-banking_financial_institutions_mcqs.js"></script>
+  <script src="u8-marketing_management_mcqs.js"></script>
+  <script src="u9-legal_aspects_of_business_mcqs.js"></script>
+  <script src="u10-income_tax_corporate_tax_planning_mcqs.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>UGC NET Commerce</span>
+      </a>
+      <div class="header-actions">
+        <a href="index.html" class="back-btn">
+          <i class="fa-solid fa-arrow-left"></i> Back to Practice
+        </a>
+        <button class="icon-btn" id="btn-theme" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    
+    <!-- HERO -->
+    <section class="glass-card hero-banner">
+      <div class="hero-text">
+        <h1>Exam Analysis Dashboard</h1>
+        <p>A deep-dive statistical review of UGC NET Commerce PYQs. Identify high-frequency subtopics, repeating questions, exam patterns, and topic distributions dynamically.</p>
+      </div>
+      <div>
+        <button class="icon-btn" id="btn-trigger-upload" title="Upload MCQs JSON File" style="width: 50px; height: 50px; font-size: 1.25rem;">
+          <i class="fa-solid fa-upload"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- DATABASE FILE STATUSES -->
+    <section class="glass-card">
+      <div class="chart-header" style="margin-bottom: 0.5rem; border-bottom: none;">
+        <h3>Database Synchronization Status</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Loads local files automatically. Files are synced dynamically with the Practice Portal via IndexedDB.</p>
+      </div>
+      <div class="file-status-grid" id="file-status-grid">
+        <!-- JS Populated statuses for 10 units -->
+      </div>
+    </section>
+
+    <!-- OVERVIEW STATS -->
+    <section class="stats-row">
+      <!-- Total Questions -->
+      <div class="glass-card stat-card">
+        <div class="stat-icon"><i class="fa-solid fa-database"></i></div>
+        <div class="stat-info">
+          <span class="stat-label">Total PYQs Analysed</span>
+          <span class="stat-number" id="stat-total-q">0</span>
+        </div>
+      </div>
+      <!-- Unique Topics -->
+      <div class="glass-card stat-card">
+        <div class="stat-icon"><i class="fa-solid fa-tags"></i></div>
+        <div class="stat-info">
+          <span class="stat-label">Unique Sub-Topics</span>
+          <span class="stat-number" id="stat-unique-topics">0</span>
+        </div>
+      </div>
+      <!-- Most Tested Session -->
+      <div class="glass-card stat-card">
+        <div class="stat-icon"><i class="fa-solid fa-calendar-days"></i></div>
+        <div class="stat-info">
+          <span class="stat-label">Peak Exam Year</span>
+          <span class="stat-number" id="stat-peak-session">-</span>
+        </div>
+      </div>
+      <!-- Core Repeating Topic -->
+      <div class="glass-card stat-card">
+        <div class="stat-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+        <div class="stat-info">
+          <span class="stat-label">Most Repeated Area</span>
+          <span class="stat-number" id="stat-peak-topic" style="font-size: 1.15rem; font-weight: 700; line-height: 1.2; padding-top: 0.3rem;">-</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARTS SECTION -->
+    <section class="charts-grid">
+      <!-- Question Type Trends -->
+      <div class="glass-card">
+        <div class="chart-header">
+          <h3>Question Format Distribution</h3>
+          <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">By Formats</span>
+        </div>
+        <div class="chart-container" id="chart-container-formats">
+          <canvas id="chart-formats"></canvas>
+          <!-- JS Fallback list goes here if offline/Chart.js fails -->
+        </div>
+      </div>
+      <!-- Top Repeated Topics -->
+      <div class="glass-card">
+        <div class="chart-header">
+          <h3>Top 10 High-Frequency Subtopics</h3>
+          <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">By Occurrences</span>
+        </div>
+        <div class="chart-container" id="chart-container-topics">
+          <canvas id="chart-topics"></canvas>
+          <!-- JS Fallback list goes here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- REPEATING TOPICS & QUESTIONS ACCORDION MATRIX -->
+    <section class="glass-card">
+      <div class="chart-header">
+        <div>
+          <h3>Topic Repetition & Uniqueness Matrix</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Expand any row below to inspect the exact exam questions asked on that topic over the years.</p>
+        </div>
+        <input type="text" class="form-control" id="table-topic-filter" placeholder="Filter by Topic..." style="max-width: 250px;">
+      </div>
+      <div class="topics-table-container">
+        <table class="topics-table">
+          <thead>
+            <tr>
+              <th style="width: 50px;"></th>
+              <th>Main Subject Branch</th>
+              <th>Subtopic Name</th>
+              <th>Frequency</th>
+              <th>Uniqueness Rating</th>
+              <th>Question Types Matrix</th>
+            </tr>
+          </thead>
+          <tbody id="topics-matrix-body">
+            <tr>
+              <td colspan="6" style="text-align: center; color: var(--text-muted); padding: 3rem;">Loading questions database analysis...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- DRILL DOWN QUESTION EXPLORER -->
+    <section class="glass-card">
+      <div class="chart-header" style="border-bottom: none; margin-bottom: 1.5rem;">
+        <div>
+          <h3>Full-Text Question Bank Explorer</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Search and query all loaded questions by text contents, options, keywords, session, or unit.</p>
+        </div>
+      </div>
+      
+      <!-- Filter controls -->
+      <div class="explorer-controls">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="form-control" id="exp-search" placeholder="Search keywords or question text...">
+        </div>
+        <select class="form-control" id="exp-unit">
+          <option value="">-- All Units --</option>
+        </select>
+        <select class="form-control" id="exp-session">
+          <option value="">-- All Sessions --</option>
+        </select>
+        <select class="form-control" id="exp-type">
+          <option value="">-- All Question Types --</option>
+        </select>
+      </div>
+
+      <!-- Results list -->
+      <div class="explorer-results" id="explorer-results-container">
+        <!-- JS populated query result cards -->
+        <div style="text-align: center; color: var(--text-muted); padding: 3rem;">Upload or load JSON files to browse the question bank.</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- UPLOADER OVERLAY -->
+  <div class="upload-overlay" id="upload-overlay">
+    <div class="upload-modal">
+      <div class="chart-header" style="border-bottom: none; margin-bottom: 0;">
+        <h3>Upload MCQ JSON File</h3>
+        <button class="icon-btn" id="btn-close-upload" style="width: 32px; height: 32px; font-size: 0.9rem;">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); text-align: left; margin-top: 0.5rem;">
+        Select the UGC NET unit JSON file. The data will be saved locally in IndexedDB and populated instantly.
+      </p>
+      
+      <div class="drag-drop-zone" id="drag-drop-zone">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        <p style="font-weight: 600; margin-bottom: 0.25rem;">Drag & Drop JSON file here</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">or click to browse local storage</p>
+        <input type="file" id="file-input" accept=".json" style="display: none;">
+      </div>
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+        <select class="form-control" id="upload-unit-select" style="max-width: 250px;">
+          <option value="">-- Autodetect Unit --</option>
+          <option value="u1">Unit 1: Business Environment</option>
+          <option value="u2">Unit 2: Accounting & Auditing</option>
+          <option value="u3">Unit 3: Business Economics</option>
+          <option value="u4">Unit 4: Business Finance</option>
+          <option value="u5">Unit 5: Business Statistics</option>
+          <option value="u6">Unit 6: Business Management & HRM</option>
+          <option value="u7">Unit 7: Banking & Institutions</option>
+          <option value="u8">Unit 8: Marketing Management</option>
+          <option value="u9">Unit 9: Legal Aspects of Business</option>
+          <option value="u10">Unit 10: Income Tax & Tax Planning</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // INDEXED DB LAYER FOR CACHING FILES LOCALLY (Shared with practice index.html)
+    const DB_NAME = "UgcNetCommerceQuizDB";
+    const STORE_NAME = "jsonFiles";
+
+    function openDB() {
+      return new Promise((resolve, reject) => {
+        const request = indexedDB.open(DB_NAME, 1);
+        request.onupgradeneeded = function(e) {
+          const db = e.target.result;
+          if (!db.objectStoreNames.contains(STORE_NAME)) {
+            db.createObjectStore(STORE_NAME, { keyPath: "unitId" });
+          }
+        };
+        request.onsuccess = function(e) {
+          resolve(e.target.result);
+        };
+        request.onerror = function(e) {
+          reject(e.target.error);
+        };
+      });
+    }
+
+    async function saveFileToDB(unitId, data, filename) {
+      try {
+        const db = await openDB();
+        return new Promise((resolve, reject) => {
+          const transaction = db.transaction(STORE_NAME, "readwrite");
+          const store = transaction.objectStore(STORE_NAME);
+          const request = store.put({ unitId, data, filename, timestamp: Date.now() });
+          request.onsuccess = () => resolve();
+          request.onerror = (e) => reject(e.target.error);
+        });
+      } catch (err) {
+        console.error("IndexedDB Save Error:", err);
+      }
+    }
+
+    async function getFileFromDB(unitId) {
+      try {
+        const db = await openDB();
+        return new Promise((resolve, reject) => {
+          const transaction = db.transaction(STORE_NAME, "readonly");
+          const store = transaction.objectStore(STORE_NAME);
+          const request = store.get(unitId);
+          request.onsuccess = (e) => resolve(e.target.result);
+          request.onerror = (e) => reject(e.target.error);
+        });
+      } catch (err) {
+        console.error("IndexedDB Fetch Error:", err);
+        return null;
+      }
+    }
+
+    const UNITS = [
+      { id: "u1", name: "Business Environment & International Business", file: "u1-business_environment_mcqs.json", code: "Unit 1" },
+      { id: "u2", name: "Accounting and Auditing", file: "u2-accounting_auditing_mcqs.json", code: "Unit 2" },
+      { id: "u3", name: "Business Economics", file: "u3-business_economics_mcqs.json", code: "Unit 3" },
+      { id: "u4", name: "Business Finance", file: "u4-business_finance_mcqs.json", code: "Unit 4" },
+      { id: "u5", name: "Business Statistics & Research Methods", file: "u5-business_statistics_research_methods_mcqs.json", code: "Unit 5" },
+      { id: "u6", name: "Business Management & HRM", file: "u6-business_management_hrm_mcqs.json", code: "Unit 6" },
+      { id: "u7", name: "Banking & Financial Institutions", file: "u7-banking_financial_institutions_mcqs.json", code: "Unit 7" },
+      { id: "u8", name: "Marketing Management", file: "u8-marketing_management_mcqs.json", code: "Unit 8" },
+      { id: "u9", name: "Legal Aspects of Business", file: "u9-legal_aspects_of_business_mcqs.json", code: "Unit 9" },
+      { id: "u10", name: "Income Tax & Corporate Tax Planning", file: "u10-income_tax_corporate_tax_planning_mcqs.json", code: "Unit 10" }
+    ];
+
+    // STATE
+    const state = {
+      darkMode: true,
+      unitsData: {}, // { u1: [...questions], u2: ... }
+      allQuestions: [], // Flat list of all questions
+      topicsAnalysis: [], // Aggregated topics data
+      charts: {} // Store Chart.js instances
+    };
+
+    // INIT
+    window.addEventListener("DOMContentLoaded", async () => {
+      initTheme();
+      initHeaderListeners();
+      initUploader();
+      initFilters();
+      
+      await syncAllFiles();
+    });
+
+    // THEME
+    function initTheme() {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        state.darkMode = false;
+        document.body.classList.add("light-mode");
+        document.getElementById("btn-theme").innerHTML = `<i class="fa-solid fa-sun"></i>`;
+      } else {
+        state.darkMode = true;
+        document.body.classList.remove("light-mode");
+        document.getElementById("btn-theme").innerHTML = `<i class="fa-solid fa-moon"></i>`;
+      }
+
+      document.getElementById("btn-theme").addEventListener("click", () => {
+        state.darkMode = !state.darkMode;
+        if (state.darkMode) {
+          document.body.classList.remove("light-mode");
+          localStorage.setItem("theme", "dark");
+          document.getElementById("btn-theme").innerHTML = `<i class="fa-solid fa-moon"></i>`;
+        } else {
+          document.body.classList.add("light-mode");
+          localStorage.setItem("theme", "light");
+          document.getElementById("btn-theme").innerHTML = `<i class="fa-solid fa-sun"></i>`;
+        }
+        recreateCharts();
+      });
+    }
+
+    // SYNC DATABASE FILES (Auto-fetch HTTP -> fallback IndexedDB)
+    async function syncAllFiles() {
+      const grid = document.getElementById("file-status-grid");
+      grid.innerHTML = "";
+
+      for (let unit of UNITS) {
+        let questions = null;
+        let isLoaded = false;
+
+        // 1. Try checking if local script data is loaded (to bypass CORS on file://)
+        if (window[`${unit.id}_data`]) {
+          questions = window[`${unit.id}_data`].questions || window[`${unit.id}_data`];
+          isLoaded = true;
+          // Cache it in IndexedDB for offline mobile speed
+          await saveFileToDB(unit.id, questions, unit.file);
+          console.log(`Unit ${unit.id} loaded from local JS fallbacks.`);
+        }
+
+        // 2. Try Fetch relative HTTP second
+        if (!isLoaded) {
+          try {
+            const res = await fetch(unit.file);
+            if (res.ok) {
+              const data = await res.json();
+              questions = Array.isArray(data) ? data : data.questions;
+              if (questions && questions.length > 0) {
+                isLoaded = true;
+                // Cache it in IndexedDB
+                await saveFileToDB(unit.id, questions, unit.file);
+                console.log(`Unit ${unit.id} loaded from HTTP & cached.`);
+              }
+            }
+          } catch (e) {
+            console.warn(`Unit ${unit.id} HTTP fetch failed. Checking IndexedDB cache...`);
+          }
+        }
+
+        // 3. Try IndexedDB Cache fallback third
+        if (!isLoaded) {
+          const cached = await getFileFromDB(unit.id);
+          if (cached && cached.data && cached.data.length > 0) {
+            questions = cached.data;
+            isLoaded = true;
+            console.log(`Unit ${unit.id} loaded from IndexedDB Cache.`);
+          }
+        }
+
+        // Render pill
+        const pill = document.createElement("div");
+        pill.className = `file-pill ${isLoaded ? 'loaded' : 'missing'}`;
+        pill.innerHTML = `
+          <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+            <span style="font-weight: 700;">${unit.code}</span>
+            <span style="color: var(--text-muted); font-size: 0.75rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 150px;" title="${unit.name}">${unit.name}</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            ${isLoaded ? `<span style="font-size: 0.8rem; font-weight: 700;">${questions.length} Qs</span>` : ''}
+            <div class="file-status-indicator"></div>
+          </div>
+        `;
+        
+        // Clicking pill opens upload overlay for that unit
+        pill.style.cursor = "pointer";
+        pill.addEventListener("click", () => {
+          openUploadModal(unit.id);
+        });
+
+        grid.appendChild(pill);
+
+        if (isLoaded) {
+          state.unitsData[unit.id] = questions;
+        }
+      }
+
+      // Aggregate all data
+      aggregateQuestions();
+      performAnalysis();
+      populateExplorerDropdowns();
+      filterExplorer();
+    }
+
+    // FLAT LIST AGGREGATOR
+    function aggregateQuestions() {
+      state.allQuestions = [];
+      Object.keys(state.unitsData).forEach(unitId => {
+        const unitMeta = UNITS.find(u => u.id === unitId);
+        const questions = state.unitsData[unitId];
+        questions.forEach(q => {
+          // Normalize structure
+          state.allQuestions.push({
+            ...q,
+            unitId,
+            unitCode: unitMeta ? unitMeta.code : "Unit",
+            unitName: unitMeta ? unitMeta.name : "Subject"
+          });
+        });
+      });
+      document.getElementById("stat-total-q").innerText = state.allQuestions.length;
+    }
+
+    // CORE ANALYSIS ENGINE
+    function performAnalysis() {
+      if (state.allQuestions.length === 0) return;
+
+      const topics = {};
+      const sessions = {};
+      const formats = {
+        "Simple MCQ": 0,
+        "Assertion-Reason": 0,
+        "Matching (List-I & List-II)": 0,
+        "Sequencing": 0,
+        "Multi-Select (Statement-based)": 0,
+        "Numerical / Calculations": 0
+      };
+
+      state.allQuestions.forEach(q => {
+        // Topic mapping
+        const mainB = q.topic?.main_branch?.trim() || "General / Uncategorised";
+        const subB = q.topic?.sub_branch?.trim() || "Miscellaneous";
+        const topicKey = `${mainB}::${subB}`;
+        
+        if (!topics[topicKey]) {
+          topics[topicKey] = {
+            mainBranch: mainB,
+            subBranch: subB,
+            count: 0,
+            types: {},
+            sessions: new Set(),
+            questions: []
+          };
+        }
+        topics[topicKey].count++;
+        topics[topicKey].sessions.add(q.exam_session);
+        topics[topicKey].questions.push(q);
+        
+        // Question formats mapping
+        let qType = q.question_type || "Simple MCQ";
+        if (qType.includes("Matching")) qType = "Matching (List-I & List-II)";
+        else if (qType.includes("Sequencing")) qType = "Sequencing";
+        else if (qType.includes("Statement-based") || qType.includes("Multi-Select")) qType = "Multi-Select (Statement-based)";
+        else if (qType.includes("Assertion") || qType.includes("Reason")) qType = "Assertion-Reason";
+        else if (qType.includes("Calculation") || qType.includes("Numerical")) qType = "Numerical / Calculations";
+        else qType = "Simple MCQ";
+
+        formats[qType] = (formats[qType] || 0) + 1;
+        topics[topicKey].types[qType] = (topics[topicKey].types[qType] || 0) + 1;
+
+        // Session frequency
+        if (q.exam_session) {
+          sessions[q.exam_session] = (sessions[q.exam_session] || 0) + 1;
+        }
+      });
+
+      // 1. STAT: Unique Topics
+      const uniqueCount = Object.keys(topics).length;
+      document.getElementById("stat-unique-topics").innerText = uniqueCount;
+
+      // 2. STAT: Peak Exam Year
+      let peakSession = "-";
+      let peakSessionCount = 0;
+      Object.keys(sessions).forEach(s => {
+        if (sessions[s] > peakSessionCount) {
+          peakSessionCount = sessions[s];
+          peakSession = s;
+        }
+      });
+      document.getElementById("stat-peak-session").innerText = peakSession;
+
+      // Convert topics object to sorted array
+      state.topicsAnalysis = Object.values(topics).sort((a, b) => b.count - a.count);
+
+      // 3. STAT: Most Repeated Area
+      if (state.topicsAnalysis.length > 0) {
+        const peakT = state.topicsAnalysis[0];
+        document.getElementById("stat-peak-topic").innerText = `${peakT.subBranch} (${peakT.count} Qs)`;
+      }
+
+      // Populate Repeating Topics UI
+      renderTopicsMatrix(state.topicsAnalysis);
+
+      // Recreate Charts
+      recreateCharts(formats, state.topicsAnalysis.slice(0, 10));
+    }
+
+    // RENDER TOPICS ACCORDION MATRIX
+    function renderTopicsMatrix(topics) {
+      const tbody = document.getElementById("topics-matrix-body");
+      tbody.innerHTML = "";
+
+      if (topics.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; color: var(--text-muted); padding: 3rem;">No repeating topics found. Load MCQ JSON files above to begin.</td></tr>`;
+        return;
+      }
+
+      topics.forEach((t, index) => {
+        const tr = document.createElement("tr");
+        tr.className = "expandable";
+        tr.id = `topic-row-${index}`;
+        
+        // Calculate Uniqueness Score: High uniqueness = low frequency
+        let uniqRating = "Low";
+        let uniqClass = "uniqueness-low";
+        if (t.count === 1) {
+          uniqRating = "High";
+          uniqClass = "uniqueness-high";
+        } else if (t.count <= 3) {
+          uniqRating = "Medium";
+          uniqClass = "uniqueness-med";
+        }
+
+        // Format question types matrix text
+        const typesText = Object.keys(t.types).map(k => `${k}: ${t.types[k]}`).join(", ");
+        const sessionsText = Array.from(t.sessions).join(", ");
+
+        tr.innerHTML = `
+          <td class="accordion-toggle" style="text-align: center; color: var(--primary);"><i class="fa-solid fa-chevron-down"></i></td>
+          <td style="font-weight: 600;">${t.mainBranch}</td>
+          <td style="color: var(--primary-glow); font-weight: 500;">${t.subBranch}</td>
+          <td><div class="freq-circle">${t.count}</div></td>
+          <td><span class="uniqueness-badge ${uniqClass}">${uniqRating} Uniqueness</span></td>
+          <td style="font-size: 0.8rem; color: var(--text-muted); max-width: 300px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;" title="${typesText}">${typesText}</td>
+        `;
+
+        // Expandable drawer row
+        const expTr = document.createElement("tr");
+        expTr.className = "questions-expanded-row";
+        expTr.id = `topic-expanded-${index}`;
+        
+        let questionsHTML = t.questions.map(q => {
+          let ansText = "Not provided";
+          if (q.answer) {
+            ansText = q.answer.toUpperCase();
+            if (q.options && q.options[q.answer]) {
+              ansText += `: ${q.options[q.answer]}`;
+            }
+          }
+
+          return `
+            <div class="expanded-question-card">
+              <div class="expanded-question-header">
+                <div>
+                  <span class="expanded-q-badge badge-session">${q.exam_session || 'PYQ'}</span>
+                  <span class="expanded-q-badge badge-qtype" style="margin-left: 0.25rem;">${q.question_type}</span>
+                </div>
+                <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">${q.unitCode} (Q No: ${q.q_no})</div>
+              </div>
+              <p style="font-family: var(--font-serif); font-size: 1.05rem; line-height: 1.5; margin-bottom: 0.75rem; color: var(--text);">${q.question}</p>
+              ${q.options ? `
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">
+                  ${Object.keys(q.options).map(o => `<div><b>${o.toUpperCase()}</b>: ${q.options[o]}</div>`).join("")}
+                </div>
+              ` : ''}
+              <div style="font-size: 0.9rem; font-weight: 600; color: var(--success); display: flex; align-items: center; gap: 0.4rem;">
+                <i class="fa-solid fa-circle-check"></i> Correct Answer: ${ansText}
+              </div>
+            </div>
+          `;
+        }).join("");
+
+        expTr.innerHTML = `
+          <td colspan="6" class="questions-expanded-cell">
+            <h4 style="margin-bottom: 1rem; font-size: 1rem; color: var(--accent);"><i class="fa-solid fa-list-check"></i> Complete Historical Questions for "${t.subBranch}" (${t.count} total):</h4>
+            <div class="expanded-questions-list">
+              ${questionsHTML}
+            </div>
+          </td>
+        `;
+
+        // Click event to expand
+        tr.addEventListener("click", () => {
+          const isActive = tr.classList.toggle("active");
+          expTr.classList.toggle("active", isActive);
+        });
+
+        tbody.appendChild(tr);
+        tbody.appendChild(expTr);
+      });
+    }
+
+    // SEARCH & EXPLORER FILTERS Populate
+    function populateExplorerDropdowns() {
+      const unitsSelect = document.getElementById("exp-unit");
+      const sessionsSelect = document.getElementById("exp-session");
+      const typesSelect = document.getElementById("exp-type");
+
+      // Reset
+      unitsSelect.innerHTML = `<option value="">-- All Units --</option>`;
+      sessionsSelect.innerHTML = `<option value="">-- All Sessions --</option>`;
+      typesSelect.innerHTML = `<option value="">-- All Question Types --</option>`;
+
+      const uniqUnits = new Set();
+      const uniqSessions = new Set();
+      const uniqTypes = new Set();
+
+      state.allQuestions.forEach(q => {
+        if (q.unitId) uniqUnits.add(JSON.stringify({ id: q.unitId, code: q.unitCode, name: q.unitName }));
+        if (q.exam_session) uniqSessions.add(q.exam_session);
+        if (q.question_type) uniqTypes.add(q.question_type);
+      });
+
+      // Populate Units
+      Array.from(uniqUnits).map(u => JSON.parse(u)).sort((a,b) => a.id.localeCompare(b.id)).forEach(u => {
+        unitsSelect.innerHTML += `<option value="${u.id}">${u.code}: ${u.name}</option>`;
+      });
+
+      // Populate Sessions
+      Array.from(uniqSessions).sort().reverse().forEach(s => {
+        sessionsSelect.innerHTML += `<option value="${s}">${s}</option>`;
+      });
+
+      // Populate Types
+      Array.from(uniqTypes).sort().forEach(t => {
+        typesSelect.innerHTML += `<option value="${t}">${t}</option>`;
+      });
+    }
+
+    // FILTER EXPLORER CARDS
+    function filterExplorer() {
+      const query = document.getElementById("exp-search").value.toLowerCase();
+      const unitId = document.getElementById("exp-unit").value;
+      const session = document.getElementById("exp-session").value;
+      const type = document.getElementById("exp-type").value;
+
+      const container = document.getElementById("explorer-results-container");
+      container.innerHTML = "";
+
+      const filtered = state.allQuestions.filter(q => {
+        // Query search
+        const matchesQuery = !query || 
+          q.question.toLowerCase().includes(query) ||
+          (q.topic && q.topic.main_branch && q.topic.main_branch.toLowerCase().includes(query)) ||
+          (q.topic && q.topic.sub_branch && q.topic.sub_branch.toLowerCase().includes(query)) ||
+          (q.keywords && q.keywords.some(k => k.toLowerCase().includes(query))) ||
+          (q.options && Object.values(q.options).some(o => o.toLowerCase().includes(query)));
+
+        const matchesUnit = !unitId || q.unitId === unitId;
+        const matchesSession = !session || q.exam_session === session;
+        const matchesType = !type || q.question_type === type;
+
+        return matchesQuery && matchesUnit && matchesSession && matchesType;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div style="text-align: center; color: var(--text-muted); padding: 3rem;">No questions match the current explorer query filters. Try adjusting your inputs.</div>`;
+        return;
+      }
+
+      filtered.forEach(q => {
+        const card = document.createElement("div");
+        card.className = "expanded-question-card";
+        card.style.background = "var(--card-bg)";
+
+        let ansText = "Not provided";
+        if (q.answer) {
+          ansText = q.answer.toUpperCase();
+          if (q.options && q.options[q.answer]) {
+            ansText += `: ${q.options[q.answer]}`;
+          }
+        }
+
+        let topicText = q.topic?.sub_branch ? `${q.topic.main_branch} > ${q.topic.sub_branch}` : "General Topic";
+
+        card.innerHTML = `
+          <div class="expanded-question-header">
+            <div>
+              <span class="expanded-q-badge badge-session">${q.exam_session || 'PYQ'}</span>
+              <span class="expanded-q-badge badge-qtype" style="margin-left: 0.25rem;">${q.question_type}</span>
+            </div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary-glow);">${q.unitCode} (Q No: ${q.q_no})</div>
+          </div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;"><i class="fa-solid fa-tag"></i> ${topicText}</div>
+          <p style="font-family: var(--font-serif); font-size: 1.05rem; line-height: 1.5; margin-bottom: 0.75rem; color: var(--text);">${q.question}</p>
+          ${q.options ? `
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">
+              ${Object.keys(q.options).map(o => `<div><b>${o.toUpperCase()}</b>: ${q.options[o]}</div>`).join("")}
+            </div>
+          ` : ''}
+          <div style="font-size: 0.9rem; font-weight: 600; color: var(--success); display: flex; align-items: center; gap: 0.4rem;">
+            <i class="fa-solid fa-circle-check"></i> Correct Answer: ${ansText}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function initFilters() {
+      // Table filter
+      document.getElementById("table-topic-filter").addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll("#topics-matrix-body tr.expandable");
+        
+        rows.forEach((row, idx) => {
+          const mainB = row.cells[1].innerText.toLowerCase();
+          const subB = row.cells[2].innerText.toLowerCase();
+          const isMatch = mainB.includes(query) || subB.includes(query);
+          
+          row.style.display = isMatch ? "" : "none";
+          // Close expanded questions as well
+          const expRow = document.getElementById(`topic-expanded-${idx}`);
+          if (expRow) {
+            expRow.classList.remove("active");
+            row.classList.remove("active");
+            expRow.style.display = "none";
+          }
+        });
+      });
+
+      // Explorer filter triggers
+      document.getElementById("exp-search").addEventListener("input", filterExplorer);
+      document.getElementById("exp-unit").addEventListener("change", filterExplorer);
+      document.getElementById("exp-session").addEventListener("change", filterExplorer);
+      document.getElementById("exp-type").addEventListener("change", filterExplorer);
+    }
+
+    // CHART.JS DRAW / RECREATE
+    function recreateCharts(formats = null, top10 = null) {
+      // Destroy existing charts
+      if (state.charts.formats) state.charts.formats.destroy();
+      if (state.charts.topics) state.charts.topics.destroy();
+
+      const isChartJsLoaded = typeof Chart !== "undefined";
+      const formatContainer = document.getElementById("chart-container-formats");
+      const topicContainer = document.getElementById("chart-container-topics");
+
+      if (!formats && !top10) {
+        // Initial blank states
+        formatContainer.innerHTML = `<div style="text-align: center; color: var(--text-muted); padding: 5rem;">Load MCQ JSON files to render chart metrics.</div>`;
+        topicContainer.innerHTML = `<div style="text-align: center; color: var(--text-muted); padding: 5rem;">Load MCQ JSON files to render chart metrics.</div>`;
+        return;
+      }
+
+      const fontColor = state.darkMode ? "#9ca3af" : "#4b5563";
+      const gridColor = state.darkMode ? "rgba(255, 255, 255, 0.06)" : "rgba(0, 0, 0, 0.05)";
+
+      // Draw Format Pie/Doughnut Chart
+      if (isChartJsLoaded) {
+        formatContainer.innerHTML = `<canvas id="chart-formats"></canvas>`;
+        const ctxFormats = document.getElementById("chart-formats").getContext("2d");
+        
+        state.charts.formats = new Chart(ctxFormats, {
+          type: 'doughnut',
+          data: {
+            labels: Object.keys(formats),
+            datasets: [{
+              data: Object.values(formats),
+              backgroundColor: ['#8b5cf6', '#ec4899', '#06b6d4', '#10b981', '#f59e0b', '#ef4444'],
+              borderWidth: state.darkMode ? 2 : 1,
+              borderColor: state.darkMode ? '#111322' : '#ffffff'
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'right',
+                labels: {
+                  color: fontColor,
+                  font: { family: 'Inter', size: 11 }
+                }
+              }
+            }
+          }
+        });
+      } else {
+        // Fallback for formats
+        let html = `<div class="offline-bar-container">`;
+        const total = Object.values(formats).reduce((a,b)=>a+b, 0);
+        Object.keys(formats).forEach(k => {
+          const val = formats[k];
+          const pct = ((val / total) * 100).toFixed(0);
+          html += `
+            <div class="offline-bar-row">
+              <div class="offline-bar-label">${k}</div>
+              <div class="offline-bar-track">
+                <div class="offline-bar-fill" style="width: ${pct}%"></div>
+              </div>
+              <div class="offline-bar-val">${val}</div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+        formatContainer.innerHTML = html;
+      }
+
+      // Draw Top Topics Horizontal Bar Chart
+      if (isChartJsLoaded) {
+        topicContainer.innerHTML = `<canvas id="chart-topics"></canvas>`;
+        const ctxTopics = document.getElementById("chart-topics").getContext("2d");
+        
+        state.charts.topics = new Chart(ctxTopics, {
+          type: 'bar',
+          data: {
+            labels: top10.map(t => t.subBranch),
+            datasets: [{
+              label: 'Questions Count',
+              data: top10.map(t => t.count),
+              backgroundColor: 'rgba(139, 92, 246, 0.7)',
+              hoverBackgroundColor: '#8b5cf6',
+              borderRadius: 6
+            }]
+          },
+          options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false }
+            },
+            scales: {
+              x: {
+                grid: { color: gridColor },
+                ticks: { color: fontColor }
+              },
+              y: {
+                grid: { display: false },
+                ticks: {
+                  color: fontColor,
+                  font: { family: 'Inter', size: 10 }
+                }
+              }
+            }
+          }
+        });
+      } else {
+        // Fallback for topics
+        let html = `<div class="offline-bar-container">`;
+        const maxVal = top10[0]?.count || 1;
+        top10.forEach(t => {
+          const pct = ((t.count / maxVal) * 100).toFixed(0);
+          html += `
+            <div class="offline-bar-row">
+              <div class="offline-bar-label" title="${t.subBranch}">${t.subBranch}</div>
+              <div class="offline-bar-track">
+                <div class="offline-bar-fill" style="width: ${pct}%"></div>
+              </div>
+              <div class="offline-bar-val">${t.count}</div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+        topicContainer.innerHTML = html;
+      }
+    }
+
+    // UPLOADER PANEL LISTENERS & ENGINE
+    let selectedUploadUnit = null;
+
+    function initUploader() {
+      const modal = document.getElementById("upload-overlay");
+      const dropZone = document.getElementById("drag-drop-zone");
+      const fileInput = document.getElementById("file-input");
+
+      document.getElementById("btn-trigger-upload").addEventListener("click", () => openUploadModal());
+      document.getElementById("btn-close-upload").addEventListener("click", closeUploadModal);
+      
+      // Close modal on click outside
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeUploadModal();
+      });
+
+      // Drag and drop events
+      dropZone.addEventListener("click", () => fileInput.click());
+
+      dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.classList.add("dragover");
+      });
+
+      dropZone.addEventListener("dragleave", () => {
+        dropZone.classList.remove("dragover");
+      });
+
+      dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.classList.remove("dragover");
+        const file = e.dataTransfer.files[0];
+        if (file) handleUploadedFile(file);
+      });
+
+      fileInput.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (file) handleUploadedFile(file);
+      });
+    }
+
+    function openUploadModal(unitId = null) {
+      document.getElementById("upload-overlay").classList.add("active");
+      const selector = document.getElementById("upload-unit-select");
+      
+      if (unitId) {
+        selectedUploadUnit = unitId;
+        selector.value = unitId;
+        selector.disabled = true;
+      } else {
+        selectedUploadUnit = null;
+        selector.value = "";
+        selector.disabled = false;
+      }
+    }
+
+    function closeUploadModal() {
+      document.getElementById("upload-overlay").classList.remove("active");
+      document.getElementById("file-input").value = "";
+    }
+
+    function handleUploadedFile(file) {
+      const reader = new FileReader();
+      
+      reader.onload = async function(e) {
+        try {
+          const text = e.target.result;
+          const json = JSON.parse(text);
+          let questions = Array.isArray(json) ? json : json.questions;
+          
+          if (!questions || !Array.isArray(questions)) {
+            alert("Error: Invalid JSON format. Unable to find question list array.");
+            return;
+          }
+
+          // Autodetect unit ID if not preset
+          let unitId = selectedUploadUnit || document.getElementById("upload-unit-select").value;
+          if (!unitId) {
+            unitId = autodetectUnitIdFromFilename(file.name);
+          }
+
+          if (!unitId) {
+            alert("Error: Unable to detect unit. Please select a unit from the dropdown menu first.");
+            return;
+          }
+
+          // Save to IndexedDB
+          await saveFileToDB(unitId, questions, file.name);
+          
+          closeUploadModal();
+          
+          // Re-load everything
+          await syncAllFiles();
+        } catch (err) {
+          alert("Error parsing JSON file: " + err.message);
+        }
+      };
+      
+      reader.readAsText(file);
+    }
+
+    function autodetectUnitIdFromFilename(filename) {
+      const name = filename.toLowerCase();
+      if (name.includes("environment") || name.includes("u1")) return "u1";
+      if (name.includes("accounting") || name.includes("auditing") || name.includes("u2")) return "u2";
+      if (name.includes("economics") || name.includes("u3")) return "u3";
+      if (name.includes("finance") || name.includes("u4")) return "u4";
+      if (name.includes("statistics") || name.includes("methods") || name.includes("u5")) return "u5";
+      if (name.includes("management") || name.includes("hrm") || name.includes("u6")) return "u6";
+      if (name.includes("banking") || name.includes("institution") || name.includes("u7")) return "u7";
+      if (name.includes("marketing") || name.includes("u8")) return "u8";
+      if (name.includes("legal") || name.includes("u9")) return "u9";
+      if (name.includes("income") || name.includes("tax") || name.includes("u10")) return "u10";
+      return null;
+    }
+
+    function initHeaderListeners() {
+      // Logo redirection
+      document.querySelector(".logo").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+    }
+
+    // UTILITIES
+    function extractLettersFromText(text) {
+      if (!text) return [];
+      const matches = text.match(/[A-G]/g);
+      return matches ? Array.from(new Set(matches.map(l => l.toUpperCase()))) : [];
+    }
+  </script>
+</body>
+</html>

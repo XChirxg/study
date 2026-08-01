@@ -1,0 +1,2274 @@
+window.u9_data = {
+  "_meta": {
+    "title": "Legal Aspects of Business - Unit 09/10 MCQ Bank",
+    "source": "Adda247 Publications, page 501-515 (scanned PDF, transcribed by AI)",
+    "total_questions": 155,
+    "answer_disclaimer": "IMPORTANT: The source pages do NOT print an official answer key. The 'answer' field below is my own best-effort legal determination for each question (based on Indian Companies Act 2013, LLP Act 2008, Indian Contract Act 1872, Sale of Goods Act 1930, Negotiable Instruments Act 1881, Consumer Protection Act, Competition Act 2002, IT Act 2000, RTI Act 2005, GST Acts, etc.) It is NOT sourced from an official answer key and has NOT been independently verified. Please cross-check against Adda247's official answer key or your instructor before using for exam prep. Questions where I have low confidence are flagged with 'confidence': 'low'.",
+    "ocr_note": "Some questions/options had partial column-merge issues in the scan; transcribed as faithfully as possible."
+  },
+  "questions": [
+    {
+      "q_no": 1,
+      "exam_session": "June 2025",
+      "question": "In India, the term of every utility patent granted shall be of ___ years.",
+      "options": {
+        "a": "10",
+        "b": "20",
+        "c": "30",
+        "d": "50"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 2,
+      "exam_session": "June 2025",
+      "question": "Arrange the following steps of incorporation of a new Limited Liability Partnership (LLP) in the proper sequence: A. Reserve LLP Name B. Preparation of Documents for Incorporation of LLP C. Procure Digital Signature Certificate D. LLP Incorporation and DIN Application, and apply for PAN and TAN E. Drafting and Filing LLP Agreement",
+      "options": {
+        "a": "B, A, C, D, E",
+        "b": "A, B, C, D, E",
+        "c": "C, A, B, D, E",
+        "d": "D, E, B, A, C"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 3,
+      "exam_session": "June 2025",
+      "question": "Which of the following statements is correct? A. If a company is an Indian company, then it will automatically be considered a domestic company. B. Foreign company means a company which is not a domestic company. C. The residential status of an Indian company can be non-resident in India. D. The residential status of a foreign company can never be non-resident in India. E. Foreign income of a resident company in India is taxable.",
+      "options": {
+        "a": "Only A, B and C",
+        "b": "Only B, C and D",
+        "c": "Only A, C and E",
+        "d": "Only A, B and E"
+      },
+      "answer": "a",
+      "confidence": "low"
+    },
+    {
+      "q_no": 4,
+      "exam_session": "June 2025",
+      "question": "Arrange the following steps involved in the process of Voluntary Liquidation of a Limited Liability Partnership in correct order. A. Declaration of Solvency B. Designated Partners' Meeting C. Partners' Meeting D. Identification of an Insolvency Professional as liquidator E. Filing of resolutions with Registrar of Companies and Insolvency and Bankruptcy Board of India (IBBI)",
+      "options": {
+        "a": "A, B, C, D, E",
+        "b": "C, B, D, A, E",
+        "c": "B, A, C, D, E",
+        "d": "E, D, C, B, A"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 5,
+      "exam_session": "June 2025",
+      "question": "Who can file a petition to the Tribunal for the Winding up of a Limited Liability Partnership? A. Secured Creditors B. LLP or any of its Partners C. Registrar of Companies D. Any person authorised by the Central Government E. Any Voluntary Association",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, B, C and D only",
+        "c": "B, C and E only",
+        "d": "A, C and E only"
+      },
+      "answer": "b",
+      "confidence": "low"
+    },
+    {
+      "q_no": 6,
+      "exam_session": "June 2025",
+      "question": "What rights does an unpaid seller have against goods?",
+      "options": {
+        "a": "A, B, and C Only",
+        "b": "B, C, and D Only",
+        "c": "C, D, and E Only",
+        "d": "A, C, and D Only"
+      },
+      "note": "Full stem lists: A. Right of lien B. Right to sue for specific performance C. Right of resale D. Right of stoppage of goods in transit E. Right to reorganise possession of goods",
+      "answer": "d",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 7,
+      "exam_session": "June 2025",
+      "question": "Match the LIST-I with LIST-II",
+      "list_1": {
+        "A": "Section 2(85)",
+        "B": "Section 455",
+        "C": "Section 378A",
+        "D": "Section 2(6)"
+      },
+      "list_2": {
+        "I": "Associate Company",
+        "II": "Producer Company",
+        "III": "Dormant Company",
+        "IV": "Small Company"
+      },
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-I, B-III, C-II, D-IV",
+        "c": "A-II, B-III, C-I, D-IV",
+        "d": "A-IV, B-III, C-II, D-I"
+      },
+      "answer": "d",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 8,
+      "exam_session": "June 2025",
+      "question": "\"Active concealment of fact\" is associated with which one of the following?",
+      "options": {
+        "a": "Misrepresentation",
+        "b": "Undue influence",
+        "c": "Fraud",
+        "d": "Mistake"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 9,
+      "exam_session": "January 2025",
+      "question": "Quasi-contracts are based on the doctrine of:",
+      "options": {
+        "a": "Unjust enrichment",
+        "b": "Just enrichment",
+        "c": "Unjust Richment",
+        "d": "Misrepresentation"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 10,
+      "exam_session": "January 2025",
+      "question": "A contract of indemnity is a:",
+      "options": {
+        "a": "Wagering Agreement",
+        "b": "Quasi Contract",
+        "c": "Void Contract",
+        "d": "Contingent Contract"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 11,
+      "exam_session": "January 2025",
+      "question": "Match the Acts with their Years of Establishment:",
+      "list_1": {
+        "A": "Indian Contract Act",
+        "B": "Sales of Goods Act",
+        "C": "Negotiable Instruments Act",
+        "D": "Companies Act"
+      },
+      "list_2": {
+        "I": "2013",
+        "II": "1872",
+        "III": "1930",
+        "IV": "1881"
+      },
+      "options": {
+        "a": "A-II, B-III, C-IV, D-I",
+        "b": "A-I, B-II, C-III, D-IV",
+        "c": "A-IV, B-III, C-II, D-I",
+        "d": "A-III, B-IV, C-I, D-II"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 12,
+      "exam_session": "January 2025",
+      "question": "If a new contract is substituted in place of an existing contract, it is called:",
+      "options": {
+        "a": "Waiver",
+        "b": "Remission",
+        "c": "Novation",
+        "d": "Alteration"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 13,
+      "exam_session": "January 2025",
+      "question": "Match List I with List II (Conflict Handling intentions with descriptions)",
+      "list_1": {
+        "A": "Competing",
+        "B": "Collaborating",
+        "C": "Accommodating",
+        "D": "Compromising"
+      },
+      "list_2": {
+        "I": "The willingness of one party in a conflict to place the negotiating partner's interest above their own",
+        "II": "A situation in which each party to a conflict is willing to give up something to resolve the conflict",
+        "III": "A situation in which each party in a conflict desires to satisfy fully the concerns of all parties",
+        "IV": "A desire to satisfy one's interests regardless of the impact on the other party to the conflict"
+      },
+      "options": {
+        "a": "A-I, B-IV, C-II, D-III",
+        "b": "A-IV, B-I, C-II, D-III",
+        "c": "A-IV, B-I, C-III, D-II",
+        "d": "A-I, B-II, C-III, D-IV"
+      },
+      "answer": "b",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 14,
+      "exam_session": "January 2025",
+      "question": "Which of the following points are considered essential characteristics of a Promissory Note? A. It must be in writing B. It must not contain an undertaking or promise to pay C. The promise to pay must be conditional D. A promissory note must be signed by the maker E. Promise to pay money only",
+      "options": {
+        "a": "A, D and E only",
+        "b": "A, B and E only",
+        "c": "B, C and D only",
+        "d": "B and D only"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 15,
+      "exam_session": "January 2025",
+      "question": "Arrange the following sections of the Indian Contract Act (Sections 14 to 18) in the correct order: A. Definition of free consent B. Misrepresentation C. Fraud D. Undue influence E. Coercion",
+      "options": {
+        "a": "E, D, C, B, A",
+        "b": "D, E, C, A, B",
+        "c": "B, D, E, A, C",
+        "d": "A, E, D, C, B"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 16,
+      "exam_session": "January 2025",
+      "question": "The Consumer Protection Act came into force first on:",
+      "options": {
+        "a": "14 June, 1986",
+        "b": "20 January, 1987",
+        "c": "24 December, 1986",
+        "d": "14 July, 1987"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 17,
+      "exam_session": "January 2025",
+      "question": "Which of the following points are considered as salient features of Limited Liability Partnership (LLP)? A. LLP is a body corporate B. LLP is a legal entity separate from its partners C. LLP does not enjoy perpetual succession D. Partners of LLP have unlimited liability E. LLP is an artificial legal person",
+      "options": {
+        "a": "A, B, and E only",
+        "b": "B, C, and D only",
+        "c": "C, D, and E only",
+        "d": "C and D only"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 18,
+      "exam_session": "September 2024",
+      "question": "Match the column - Classification of goods as per the Sales of Goods Act, 1932 with their Definitions",
+      "list_1": {
+        "A": "Specific Goods",
+        "B": "Ascertained Goods",
+        "C": "Unascertained Goods",
+        "D": "Future Goods"
+      },
+      "list_2": {
+        "I": "The goods which are to be manufactured or produced or acquired by the seller after making the contract of sale",
+        "II": "The goods, which are not identified and agreed upon at the time of formation of the contract of sale",
+        "III": "The goods, which are identified and agreed upon subsequent to the formation of the contract of sale",
+        "IV": "The goods, which are identified and agreed upon at the time of making the contract of sale"
+      },
+      "options": {
+        "a": "A-IV, B-III, C-II, D-I",
+        "b": "A-I, B-II, C-III, D-IV",
+        "c": "A-IV, B-II, C-III, D-I",
+        "d": "A-I, B-III, C-II, D-IV"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 19,
+      "exam_session": "September 2024",
+      "question": "Which of the following are true about Digital Signature under Information Technology (IT) Act, 2000? A. A Digital Signature is an Electronic Signature B. Digital Signatures are accepted Globally C. Each vendor can make his own standard to regulate Digital Signatures D. The term Electronic Signature is broader than Digital Signature E. A Digital Signature is less secure than Electronic Signature",
+      "options": {
+        "a": "A, D and E only",
+        "b": "A, B and D only",
+        "c": "C, B and E only",
+        "d": "B, C and D only"
+      },
+      "answer": "b",
+      "confidence": "low"
+    },
+    {
+      "q_no": 20,
+      "exam_session": "September 2024",
+      "question": "Arrange the following steps for the Incorporation of a new LLP (Limited Liability Partnership) in the correct order: A. Drafting of LLP Agreement B. Deciding the partners and designated partners C. Electronic filing of documents with ROC & issuing of Certificate of Incorporation by ROC (Registrar of Companies) D. Checking the availability of Name E. Obtaining DPIN & Digital Signature Certificate",
+      "options": {
+        "a": "B, E, D, A, C",
+        "b": "C, A, B, D, E",
+        "c": "A, B, C, D, E",
+        "d": "E, A, C, D, B"
+      },
+      "answer": "a",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 21,
+      "exam_session": "September 2024",
+      "question": "Match the column - Negotiable Instruments with their Explanation",
+      "list_1": {
+        "A": "Inchoate Instrument",
+        "B": "Ambiguous Instrument",
+        "C": "Escrow",
+        "D": "Fictitious Bill"
+      },
+      "list_2": {
+        "I": "When a negotiable instrument is delivered conditionally or for a specific purpose as a collateral security or for safe custody only",
+        "II": "When the name of the drawer, or the payee, or both are fake in a bill",
+        "III": "When the instrument owing to its faulty drafting may be interpreted either as a promissory note or bill of exchange",
+        "IV": "An incomplete instrument in some respect, where a person signs & delivers to another a blank or incomplete paper"
+      },
+      "options": {
+        "a": "A-II, B-III, C-I, D-IV",
+        "b": "A-III, B-II, C-IV, D-I",
+        "c": "A-IV, B-III, C-I, D-II",
+        "d": "A-I, B-II, C-III, D-IV"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 22,
+      "exam_session": "September 2024",
+      "question": "\"An agreement which is enforceable by law at the option of one or more of the parties but not at the option of the other or others\" is called:",
+      "options": {
+        "a": "Void contract",
+        "b": "Valid contract",
+        "c": "Voidable contract",
+        "d": "Illegal contract"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 23,
+      "exam_session": "September 2024",
+      "question": "Which of the following is/are correct for formation of a company under section 3 of the Companies Act, 2013? A. Seven or more persons, where the company formed is to be a public company. B. Two or more persons, where the company is to be formed to be a private company. C. One person, where the company to be formed is to be one person company. D. Five or more persons, where the company formed is to be a public company.",
+      "options": {
+        "a": "A, B only",
+        "b": "B, C only",
+        "c": "A, B, C only",
+        "d": "B, C, D only"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 24,
+      "exam_session": "September 2024",
+      "question": "Which one of the following Provident Fund is set up under the Provident Fund Act 1925?",
+      "options": {
+        "a": "Statutory Provident Fund",
+        "b": "Recognised Provident Fund",
+        "c": "Unrecognised Provident Fund",
+        "d": "Public Provident Fund"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 25,
+      "exam_session": "September 2024",
+      "question": "The maximum number of partners in a Limited Liability Partnership can be:",
+      "options": {
+        "a": "Seven",
+        "b": "Fifty",
+        "c": "Hundred",
+        "d": "No Limit"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 26,
+      "exam_session": "September 2024",
+      "question": "Where there is an unconditional contract for the sale of specific goods in a deliverable state, the property (ownership) in goods passes to the buyer when:",
+      "options": {
+        "a": "The contract is made",
+        "b": "The payment is made",
+        "c": "The goods are delivered",
+        "d": "The goods are dispatched"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 27,
+      "exam_session": "September 2024",
+      "question": "What is the time limit within which information is to be provided regarding the life and liberty of a person under RTI Act, 2005?",
+      "options": {
+        "a": "30 days",
+        "b": "60 days",
+        "c": "24 hours",
+        "d": "48 hours"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 28,
+      "exam_session": "September 2024",
+      "question": "Match List-I with List-II",
+      "list_1": {
+        "A": "Transfer of ownership",
+        "B": "Sale of goodwill after dissolution",
+        "C": "Buy back of shares",
+        "D": "Promissory Note"
+      },
+      "list_2": {
+        "I": "Negotiable Instrument",
+        "II": "Contract of Sale of Goods",
+        "III": "Dissolution of Partnership Firm",
+        "IV": "Share Capital of Company"
+      },
+      "options": {
+        "a": "A-II, B-III, C-IV, D-I",
+        "b": "A-I, B-II, C-III, D-IV",
+        "c": "A-II, B-III, C-I, D-IV",
+        "d": "A-I, B-III, C-II, D-IV"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 29,
+      "exam_session": "September 2024",
+      "question": "Which of the following can file a petition for winding up of a company? A. Shareholders B. The creditor or prospective creditors C. The legal heirs D. The person authorised by the central government",
+      "options": {
+        "a": "A, B and C only",
+        "b": "B, C and D only",
+        "c": "A, C and D only",
+        "d": "A, B and D only"
+      },
+      "answer": "d",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 30,
+      "exam_session": "September 2024",
+      "question": "What is the privilege of a holder in due course?",
+      "options": {
+        "a": "The right to cancel the instrument at any time",
+        "b": "Instrument cleansing of all defects",
+        "c": "Exemption from legal obligations",
+        "d": "Unrestricted transfer of the instrument"
+      },
+      "answer": "b",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 31,
+      "exam_session": "September 2024",
+      "question": "Which of the following sections of the Companies Act, 2013 deals with amalgamation, absorption, and reconstruction?",
+      "options": {
+        "a": "Section 139",
+        "b": "Section 219",
+        "c": "Section 319",
+        "d": "Section 391"
+      },
+      "answer": "d",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 32,
+      "exam_session": "September 2024",
+      "question": "Arrange the provisions section wise under the Companies Act, 2013 in ascending order: A. Prospectus B. Incorporation of company C. Articles D. Formation of company E. Service of Documents",
+      "options": {
+        "a": "B, A, C, D, E",
+        "b": "E, C, B, D, A",
+        "c": "D, C, B, E, A",
+        "d": "A, B, C, D, E"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 33,
+      "exam_session": "September 2024",
+      "question": "Match the offence and their corresponding penalties as per I.T. Act-2000",
+      "list_1": {
+        "A": "Tampering with computer source documents (Sec.65)",
+        "B": "Penalty for mis-representation (Sec.71)",
+        "C": "Penalty for Breach of confidentiality and privacy (Sec.72)",
+        "D": "Punishment for cyber terrorism (Sec.66F)"
+      },
+      "list_2": {
+        "I": "Imprisonment upto 2 years and/or fine upto Rs.1 lakh",
+        "II": "Imprisonment upto 3 years, or fine of Rs.2 lakh",
+        "III": "Imprisonment upto 2 years or fine which may extend to one lakh rupees or with both",
+        "IV": "Imprisonment extends to imprisonment for life"
+      },
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-I, C-IV, D-III",
+        "c": "A-II, B-III, C-I, D-IV",
+        "d": "A-III, B-IV, C-I, D-II"
+      },
+      "answer": "b",
+      "confidence": "low"
+    },
+    {
+      "q_no": 34,
+      "exam_session": "September 2024",
+      "question": "The liquidator, after realizing the assets of the company, should distribute the proceeds among the below-mentioned claimants in which order? A. Liquidator's remuneration and cost of expenses of winding up B. Legal charges C. Claims of secured creditors D. Preferential creditors and creditors secured by floating charges E. Unsecured creditors",
+      "options": {
+        "a": "A, D, B, C, E",
+        "b": "B, A, C, D, E",
+        "c": "D, E, C, A, B",
+        "d": "B, C, D, A, E"
+      },
+      "answer": "b",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 35,
+      "exam_session": "June 2024",
+      "question": "Arrange the provisions section wise under the Companies Act, 2013 in ascending order: A. Prospectus B. Incorporation of company C. Articles D. Formation of company E. Service of Documents",
+      "options": {
+        "a": "B, A, C, D, E",
+        "b": "E, C, B, D, A",
+        "c": "D, C, B, E, A",
+        "d": "A, B, C, D, E"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 36,
+      "exam_session": "June 2024",
+      "question": "Which of the following is substantive document used in foreign trade?",
+      "options": {
+        "a": "Commercial invoice",
+        "b": "Certificate of origin",
+        "c": "Bill of exchange",
+        "d": "Inspection certificate"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 37,
+      "exam_session": "June 2024",
+      "question": "Under which sections of the Central Goods and Services Tax Act, 2017, the provisions of Input Tax Credit has been provided?",
+      "options": {
+        "a": "Section 12 to Section 15",
+        "b": "Section 16 to Section 21",
+        "c": "Section 31 to Section 34",
+        "d": "Section 35 to Section 26"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 38,
+      "exam_session": "June 2024",
+      "question": "Which of the following is/are correct about free consent when it is not caused by? A. Coercion B. Undue Influence C. Fraud D. Misrepresentation E. Bailment",
+      "options": {
+        "a": "A, B, C only",
+        "b": "B, C, D only",
+        "c": "A, B, C, D only",
+        "d": "B, C, D, E only"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 39,
+      "exam_session": "June 2024",
+      "question": "\"The bailment of goods as security for payment of a debt or performance of a promise\" is called:",
+      "options": {
+        "a": "Bailment",
+        "b": "Pledge",
+        "c": "Pledgee",
+        "d": "Pawnee"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 40,
+      "exam_session": "June 2024",
+      "question": "Match List - I with List - II (Provisions under the Indian Contract Act, 1872 with Relevant Sections)",
+      "list_1": {
+        "A": "Contingent contract",
+        "B": "Bailment",
+        "C": "Fraud",
+        "D": "Coercion"
+      },
+      "list_2": {
+        "I": "Section 31",
+        "II": "Section 15",
+        "III": "Section 17",
+        "IV": "Section 148"
+      },
+      "options": {
+        "a": "A-I, B-IV, C-III, D-II",
+        "b": "A-I, B-III, C-II, D-IV",
+        "c": "A-II, B-III, C-IV, D-I",
+        "d": "A-IV, B-III, C-I, D-II"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 41,
+      "exam_session": "June 2024",
+      "question": "Match List - I with List - II (Contents/Provisions under the Central Goods & Services Tax Act, 2017 with Chapter discussion)",
+      "list_1": {
+        "A": "Levy and collection of Tax",
+        "B": "Registration",
+        "C": "Input Tax credit",
+        "D": "Payment of Tax"
+      },
+      "list_2": {
+        "I": "Chapter VI",
+        "II": "Chapter III",
+        "III": "Chapter X",
+        "IV": "Chapter V"
+      },
+      "options": {
+        "a": "A-III, B-I, C-II, D-IV",
+        "b": "A-II, B-I, C-IV, D-III",
+        "c": "A-III, B-II, C-IV, D-I",
+        "d": "A-IV, B-II, C-III, D-I"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 42,
+      "exam_session": "June 2024",
+      "question": "Which one of the following Provident Fund is set up under the Provident Fund Act 1925?",
+      "options": {
+        "a": "Statutory Provident Fund",
+        "b": "Recognised Provident Fund",
+        "c": "Unrecognised Provident Fund",
+        "d": "Public Provident Fund"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 43,
+      "exam_session": "June 2024",
+      "question": "\"An agreement which is enforceable by law at the option of one or more of the parties but not at the option of the other or others\" is called:",
+      "options": {
+        "a": "Void contract",
+        "b": "Valid contract",
+        "c": "Voidable contract",
+        "d": "Illegal contract"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 44,
+      "exam_session": "June 2024",
+      "question": "Which of the following is/are correct for formation of a company under section 3 of the companies Act, 2013?",
+      "options": {
+        "a": "Seven or more persons, where the company formed is to be a public company.",
+        "b": "Two or more persons, where the company is to be formed to be a private company.",
+        "c": "One person, where the company to be formed is to be one person company.",
+        "d": "Five or more persons, where the company formed is to be a public company."
+      },
+      "note": "Options given as single statements A-D in the original; standard correct combination is A, B and C.",
+      "options_combo": {
+        "a": "A, B only",
+        "b": "B, C only",
+        "c": "A, B, C only",
+        "d": "B, C, D only"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 45,
+      "exam_session": "December 2023",
+      "question": "Which of the following can become the member of an LLP? A. Resident Indians B. Limited Liability Partnership C. Corporation Sole D. Co-operative society E. Companies (including foreign companies)",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, C and D only",
+        "c": "A, B and D only",
+        "d": "A, E and B only"
+      },
+      "answer": "d",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 46,
+      "exam_session": "December 2023",
+      "question": "Which are the states where every supplier of goods and/or services is required to obtain registration if his aggregate turnover exceeds the threshold limit of Rs.20 lakh for supply of goods and/or services? A. Arunachal Pradesh B. Meghalaya C. Manipur D. Mizoram E. Sikkim",
+      "options": {
+        "a": "B, C and A only",
+        "b": "C, D and E only",
+        "c": "E, B and A only",
+        "d": "All of the above"
+      },
+      "answer": "c",
+      "confidence": "low"
+    },
+    {
+      "q_no": 47,
+      "exam_session": "December 2023",
+      "question": "Match List -I with List -II (Features with Remedies for breach of contract)",
+      "list_1": {
+        "A": "Breach of promise to marry",
+        "B": "Part performance (as much as earned)",
+        "C": "Absolution from all obligations",
+        "D": "Mode of securing specific performance of negative terms of contract"
+      },
+      "list_2": {
+        "I": "Suit for injunction",
+        "II": "Rescission of contract",
+        "III": "Sue for quantum meruit",
+        "IV": "Vindictive damage"
+      },
+      "options": {
+        "a": "A-IV, B-III, C-II, D-I",
+        "b": "A-I, B-II, C-III, D-IV",
+        "c": "A-III, B-IV, C-I, D-II",
+        "d": "A-II, B-I, C-IV, D-III"
+      },
+      "answer": "a",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 48,
+      "exam_session": "December 2023",
+      "question": "Which of the following are considered while avoiding conflict? A. Conflict based on interpersonal relationships B. All conflict are not bad and can be taken positively C. Conflict over content and goals of the work D. Conflict do not support a group's goal and improve its performance E. Conflict over how work gets done",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, B and E only",
+        "c": "A, C and E only",
+        "d": "B, C and D only"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 49,
+      "exam_session": "December 2023",
+      "question": "In case of anti-competitive activities by a firm, the Competition Commission of India can impose a penalty which shall be not more than",
+      "options": {
+        "a": "Five percent of the average turnover/income of the firm of the three preceding financial years",
+        "b": "Ten percent of the average turnover/income of firm of the three preceding financial years",
+        "c": "Fifteen percent of the average turnover/income of firm of the three preceding financial years",
+        "d": "Five percent of the average turnover/income of firm of the five preceding financial years"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 50,
+      "exam_session": "December 2023",
+      "question": "The trademarks can be broadly classified into which of the following categories? A. Descriptive B. Normative C. Generic D. Explanatory E. Invented",
+      "options": {
+        "a": "A, B and D only",
+        "b": "D, E and C only",
+        "c": "B, C and E only",
+        "d": "C, A and E only"
+      },
+      "answer": "d",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 51,
+      "exam_session": "December 2023",
+      "question": "Arrange the following steps in the investigation process of combinations by the Competition Commission of India in the correct order. A. Call for a report from the Director General B. Invite and person, affected parties to file written objections C. Direct the parties of combination to publish details of the combination D. Call for additional information from the parties of the combination E. Issue a notice for show-cause to the parties of the combination",
+      "options": {
+        "a": "A, B, C, D, E",
+        "b": "E, A, C, B, D",
+        "c": "D, E, C, A, B",
+        "d": "B, A, C, D, E"
+      },
+      "answer": "b",
+      "confidence": "low"
+    },
+    {
+      "q_no": 52,
+      "exam_session": "December 2023",
+      "question": "Which one of the following is invalid for the relationship among the agent, the sub-agent, and the principal?",
+      "options": {
+        "a": "Sun-agent works under the control and on the directions of the agent",
+        "b": "Sub-agent is responsible to be agent only",
+        "c": "Privity of contract exists between the principle and the sub-agent",
+        "d": "Agent is responsible to the principle for the acts of the sub-agent"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 53,
+      "exam_session": "December 2023",
+      "question": "The Competition (Amendment) Act, 2023 revamped the competition act in which of the following perspectives: A. The CCI needs to be intimated if the value of merger and acquisition deal exceeds Rs. 2000 crores B. The overall timeline for assessment of combination has been reduced to 150 days from 210 days C. \"Exclusive selling agreements\" has been replaced with \"exclusive dealing agreement\" D. Entities who are not engaged in identical or similar trade shall also be part of an Anti-competitive Agreement under Section 3(3) of the Act E. Anti-competitive conduct like \"tie-up arrangements\" \"re-sale price Maintenance\" and \"exclusive distribution agreement\" have been redefined",
+      "options": {
+        "a": "A, B and C only",
+        "b": "C and E only",
+        "c": "A, B, C and D only",
+        "d": "A, B, C, D and E"
+      },
+      "answer": "d",
+      "confidence": "low"
+    },
+    {
+      "q_no": 54,
+      "exam_session": "June 2023",
+      "question": "Arrange the procedure to make payment using electronic cash ledger. A. Generation of challan Identification number (CIN) and Amount credited to electronic cash ledger B. Form GST PMT-07 and correction in electronic cash ledger C. Challan of CIN (challan identification number) and mandate form payment through NEFT or RTGS mode D. Generate the challan in form GST PMT-6 from portal and enter the details E. Amount as per payment rule can be deposited by using internet banking, debit credit card etc.",
+      "options": {
+        "a": "A, D, B, C, E",
+        "b": "A, B, C, D, E",
+        "c": "D, E, C, A, B",
+        "d": "B, C, D, A, E"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 55,
+      "exam_session": "June 2023",
+      "question": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R. Assertion A: \"Promise is an agreement\" Reason R: \"An agreement is the sum total of offer and 'acceptance'\"",
+      "options": {
+        "a": "Both A and R are correct and R is the correct explanation of A",
+        "b": "Both A and R are correct but R is NOT the correct explanation of A",
+        "c": "A is correct but R is not correct",
+        "d": "A is not correct but R is correct"
+      },
+      "answer": "a",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 56,
+      "exam_session": "June 2023",
+      "question": "Which of the following is not an essential characteristic of negotiable instrument?",
+      "options": {
+        "a": "Time of Payment must be Certain",
+        "b": "Flexibility in transfer",
+        "c": "Easy negotiability",
+        "d": "Transferor can sue in own name without giving notice to the debtor"
+      },
+      "answer": "b",
+      "confidence": "low"
+    },
+    {
+      "q_no": 57,
+      "exam_session": "June 2023",
+      "question": "In which of the following cases, the agreement is void ab-initio? A. Mistake is caused by fraud or misreperatation B. Mistake as to the identify of person contracted with C. Mistake as to the nature and character of a written document D. Bilateral mistake E. Unilateral mistake",
+      "options": {
+        "a": "C, D, E only",
+        "b": "A, C, E only",
+        "c": "B, A, C only",
+        "d": "D, E, B only"
+      },
+      "answer": "a",
+      "confidence": "low"
+    },
+    {
+      "q_no": 58,
+      "exam_session": "June 2023",
+      "question": "Four schedule have seen added at the end of the Limited Liability Partnership (LLP) Act, the second schedule entertains which one of the following?",
+      "options": {
+        "a": "Provisions to conversion from private company into limited liability partnership",
+        "b": "Provisions regarding matters to mutual rights and duties of partners and limited liability partnership and its partners applicable in the absence of any agreement on such matters",
+        "c": "Provisions relating to conversion of a firm into limited liability partnership",
+        "d": "Provisions for conversion from unlisted public company into limited liability partnership"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 59,
+      "exam_session": "June 2023",
+      "question": "Match List I with List II (Schedules of the Companies Act, 2013 with what they deal with)",
+      "list_1": {
+        "A": "Schedule III",
+        "B": "Schedule IV",
+        "C": "Schedule V",
+        "D": "Schedule VII"
+      },
+      "list_2": {
+        "I": "Code for independent directors",
+        "II": "Corporate social responsibility activities",
+        "III": "Preparation of Balance sheet and statement of profit and loss",
+        "IV": "Appointment and remuneration to managerial personnels"
+      },
+      "options": {
+        "a": "A-II, B-IV, C-III, D-I",
+        "b": "A-III, B-I, C-IV, D-II",
+        "c": "A-I, B-III, C-II, D-IV",
+        "d": "A-IV, B-II, C-I, D-III"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 60,
+      "exam_session": "June 2023",
+      "question": "One or more parties to a negotiable instrument is/are discharged from liability in which of the following ways? A. By giving the notice dishonour by the holder B. By deliberately cancelling the name of party/parties C. By taking qualified acceptance D. By allowing drawee 24 hours to accept E. By material alteration",
+      "options": {
+        "a": "B, C, D only",
+        "b": "D, A, C only",
+        "c": "E, C, B only",
+        "d": "A, B, C only"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 61,
+      "exam_session": "June 2023",
+      "question": "The application for information is rejected under the Right to Information Act 2005. The CPIO/SPIO is obligated which of the following to furnish the person seeking the information? A. Power and functions of information commission B. Reason for such rejection C. Obligation of public authorities D. The particulars of the appellant authority E. The period within which an appeal against such rejection may be preferred",
+      "options": {
+        "a": "B and C only",
+        "b": "B, C and D only",
+        "c": "A, C and E only",
+        "d": "B, D and E only"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 62,
+      "exam_session": "June 2023",
+      "question": "Arrange the following steps in a logical sequence in resource to dishonoring a negotiable instruments. A. Noting B. Compensation C. Protesting D. Notice of dishonor E. Penalties",
+      "options": {
+        "a": "D, A, C, B, E",
+        "b": "C, D, A, B, E",
+        "c": "C, D, E, B, A",
+        "d": "A, C, D, B, E"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 63,
+      "exam_session": "June 2023",
+      "question": "A letter of acceptance is sufficiently stamped and duly addressed put into course of transmission. There is a:",
+      "options": {
+        "a": "Contract voidable at the option of acceptor",
+        "b": "Contract voidable at the option of offeror",
+        "c": "No contract at all",
+        "d": "Valid contract"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 64,
+      "exam_session": "June 2023",
+      "question": "Match the list I with list II (Schedules under the companies Act, 2013 with underlying themes)",
+      "list_1": {
+        "A": "Schedule-I",
+        "B": "Schedule-II",
+        "C": "Schedule-III",
+        "D": "Schedule-IV"
+      },
+      "list_2": {
+        "I": "Computation of Depreciation",
+        "II": "Code for independent directors",
+        "III": "Memorandum of Association",
+        "IV": "Preparation of balance sheet and statement of profit and loss"
+      },
+      "options": {
+        "a": "A-II, B-I, C-IV, D-III",
+        "b": "A-III, B-I, C-IV, D-II",
+        "c": "A-III, B-IV, C-I, D-II",
+        "d": "A-I, B-III, C-II, D-IV"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 65,
+      "exam_session": "June 2023",
+      "question": "'A' sells a mobile phone to 'B' a mirror who pays for it by his cheque. 'A' endorses the cheque to 'C' who takes it in good faith and for value. The cheque is dishonored on presentation. Can 'C' enforce payment of the cheque?",
+      "options": {
+        "a": "'C' can enforce the payment of cheque only against 'A'",
+        "b": "'C' can enforce the payment of cheque either against 'A' or 'B'",
+        "c": "'C' can enforce payment of cheque both against 'A' and 'B'",
+        "d": "'C' can enforce the payment of cheque only against 'B'"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 66,
+      "exam_session": "June 2023",
+      "question": "A multinational company can use which prices to create profits in low tax regimes and loss in high tax regimes?",
+      "options": {
+        "a": "Divisional prices",
+        "b": "Inter-Divisional Prices",
+        "c": "Holding company prices",
+        "d": "Transfer prices"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 67,
+      "exam_session": "June 2023",
+      "question": "The doctrine of 'Caveat emptor' applies in which of the following situations?",
+      "options": {
+        "a": "When goods are sold by description",
+        "b": "When goods are sold by sample",
+        "c": "When goods are sold under implied conditions and warranties",
+        "d": "When the buyer does not intimate the purpose to the seller and depends upon his own skill and judgment"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 68,
+      "exam_session": "June 2023",
+      "question": "An agent is personally liable to third parties in which of the following situations? A. If an agent acts for an undisclosed Principal B. Trade usage and customs makes agent personally liable C. If an agent signs a contract in Principal's name D. If an agent acts for the named Principal E. If an agent works for a foreign Principal",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, B and E only",
+        "c": "C, D and E only",
+        "d": "B, C and D only"
+      },
+      "answer": "b",
+      "confidence": "low"
+    },
+    {
+      "q_no": 69,
+      "exam_session": "March 2023",
+      "question": "Arrange the Intellectual Capital Management Process Flow Stages in a proper sequential order: A. Index B. Capture C. Replicate D. Identify E. Store",
+      "options": {
+        "a": "B, D, A, E, C",
+        "b": "B, D, A, C, E",
+        "c": "D, B, A, E, C",
+        "d": "D, A, B, E, C"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 70,
+      "exam_session": "March 2023",
+      "question": "If anyone fraudulently or dishonestly makes use of the electronic signature, password or any other unique identification feature of any other person then under which section of IT Act 2000, punishment shall be given?",
+      "options": {
+        "a": "Section 63",
+        "b": "Section 66B",
+        "c": "Section 66C",
+        "d": "Section 67B"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 71,
+      "exam_session": "March 2023",
+      "question": "An instrument is to be called 'Negotiable' as per Negotiable Instruments Act, 1881, if it possesses which of the following characteristics? A. Can be transferred infinitum B. Having minimum lock-in period C. Freely transferable D. The holder cannot sue in his own name E. Holder's title free from defects",
+      "options": {
+        "a": "A, C and E only",
+        "b": "A, B and E only",
+        "c": "B, D and E only",
+        "d": "A, B, C and E only"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 72,
+      "exam_session": "March 2023",
+      "question": "Intellectual Capital of an enterprise includes its: A. Processes B. Designs C. Relationships developed with its customers and suppliers D. Internet domain names E. Copyrights",
+      "options": {
+        "a": "A, B, C and D only",
+        "b": "B, C and E only",
+        "c": "C, D and E only",
+        "d": "A, B, C, D and E"
+      },
+      "answer": "d",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 73,
+      "exam_session": "March 2023",
+      "question": "From Dec. 1, 2022 which body handles all complaints related to Profiteering under Goods and Services Tax (GST)?",
+      "options": {
+        "a": "National Anti-Profiteering Authority (NAA)",
+        "b": "NITI Aayog",
+        "c": "Competition Commission of India (CCI)",
+        "d": "GST Council"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 74,
+      "exam_session": "March 2023",
+      "question": "Match List I with List II",
+      "list_1": {
+        "A": "Sale by Auction",
+        "B": "Breach of Warranty",
+        "C": "Sale by Description",
+        "D": "Transfer of Title"
+      },
+      "list_2": {
+        "I": "15",
+        "II": "27",
+        "III": "13",
+        "IV": "64"
+      },
+      "options": {
+        "a": "A-IV, B-III, C-I, D-II",
+        "b": "A-IV, B-I, C-III, D-II",
+        "c": "A-III, B-IV, C-II, D-I",
+        "d": "A-III, B-I, C-II, D-IV"
+      },
+      "answer": "a",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 75,
+      "exam_session": "March 2023",
+      "question": "As per RTI Act, 2005, which of the following are exempted from disclosure [U/S 8(1)]? A. Information, the disclosure of which cause a breach of privilege of Parliament or the State Legislature. B. The monthly remuneration received by employee. C. Information received in confidence from foreign government. D. Information which relates to personal information the disclosure of which has no relationship to any public activity or interest. E. A statement of the categories of documents that are held by public authority or under its control.",
+      "options": {
+        "a": "A, B and E only",
+        "b": "A, C and D only",
+        "c": "C, D and E only",
+        "d": "B, C and D only"
+      },
+      "answer": "b",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 76,
+      "exam_session": "March 2023",
+      "question": "The practice of forging a return address on an e-mail so that the recipient is fooled into revealing private information is termed as:",
+      "options": {
+        "a": "Hacking",
+        "b": "Cracking",
+        "c": "Dumpster diving",
+        "d": "Spoofing"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 77,
+      "exam_session": "November 2022",
+      "question": "As per Section 68 of the Indian Companies Act, a company may purchase its own shares out of which of the following? A. Free reserves B. Securities premium account C. General reserve D. Proceeds of any other shares E. Proceeds of same kind of shares",
+      "options": {
+        "a": "A, B, C and E only",
+        "b": "A, B and D only",
+        "c": "B, C, D and E only",
+        "d": "A, C, D and E only"
+      },
+      "answer": "b",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 78,
+      "exam_session": "November 2022",
+      "question": "A contract is discharged by supervening impossibility under which of the following situations? A. Destruction of subject matter B. Death or disablement of parties C. Rescission D. Remission E. Accord and satisfaction",
+      "options": {
+        "a": "A, C and D only",
+        "b": "A and B only",
+        "c": "A, B and E only",
+        "d": "A and D only"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 79,
+      "exam_session": "November 2022",
+      "question": "Who among the following are identified as the Key managerial personnel in the Indian Companies Act 2013? A. Chief Executive Officer B. Whole Time Director C. Company secretary D. Chief Risk Officer E. Manager",
+      "options": {
+        "a": "A, B and D only",
+        "b": "A and B only",
+        "c": "A, B, C and D only",
+        "d": "A, B, C and E only"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 80,
+      "exam_session": "November 2022",
+      "question": "In case of a warranty the buyer can:",
+      "options": {
+        "a": "Repudiate the contract",
+        "b": "Claim damages only",
+        "c": "Return the goods",
+        "d": "Refuse to pay the price"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 81,
+      "exam_session": "November 2022",
+      "question": "Which one of the following is not valid as per the Limited Liability Partnership Act 2008?",
+      "options": {
+        "a": "LLP shall maintain its books of accounts on double entry system and one cash or accrual basis.",
+        "b": "LLP shall prepare a Statement of Account and Solvency for each financial year.",
+        "c": "Every LLP shall file an annual return with the Registrar of Companies",
+        "d": "Every LLP is a separate legal entity independent of its partners."
+      },
+      "answer": "a",
+      "confidence": "low"
+    },
+    {
+      "q_no": 82,
+      "exam_session": "November 2022",
+      "question": "If the information sought has been supplied by third party or is treated as confidential by that third party, the third party must give a representation before the PIO in reply to the notice issued to it within how many days from the date of receipt of such notice?",
+      "options": {
+        "a": "5 days",
+        "b": "15 days",
+        "c": "10 days",
+        "d": "7 days"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 83,
+      "exam_session": "November 2022",
+      "question": "Which of the following are essentially anti-competitive agreements as per the Competition Act, 2002 in India? A. Exclusive distribution agreement B. Resale price maintenance C. Exclusive supply agreement D. Non-compete agreement E. Tie-in agreement",
+      "options": {
+        "a": "A, B and C only",
+        "b": "C, D and E only",
+        "c": "A, B, C and D only",
+        "d": "A, B, C and E only"
+      },
+      "answer": "d",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 84,
+      "exam_session": "November 2022",
+      "question": "Sequence the following in copyright ecosystem for literary creation under the Indian Copyright Act, 1957: A. Public communication B. Copyright assignment C. Content development D. Relinquish copyright E. Copyright transmission",
+      "options": {
+        "a": "A, E, B, D, C",
+        "b": "C, A, B, E, D",
+        "c": "E, C, B, D, A",
+        "d": "B, C, E, A, D"
+      },
+      "answer": "b",
+      "confidence": "low"
+    },
+    {
+      "q_no": 85,
+      "exam_session": "November 2022",
+      "question": "Which of the following companies cannot be a 'Small Company'? A. A holding company or a subsidiary company B. A company registered under Section 8 C. A company or body corporate governed by any Special Act D. One Person Company (OPC)",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, B, C and D only",
+        "c": "B, C and D only",
+        "d": "A and D only"
+      },
+      "answer": "a",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 86,
+      "exam_session": "November 2022",
+      "question": "Arrange the following process of making of a contract in the chronological sequence from the first to the last. A. Agreement B. Promise C. Offer or proposal D. Contract E. Acceptance",
+      "options": {
+        "a": "C, E, B, A, D",
+        "b": "A, D, E, C, D",
+        "c": "B, D, C, A, E",
+        "d": "E, B, A, C, D"
+      },
+      "answer": "a",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 87,
+      "exam_session": "November 2022",
+      "question": "Who are not eligible to get information under the RTI Act from the following? A. Corporations B. Associations C. Companies D. Citizen E. Legal entities",
+      "options": {
+        "a": "A, B, D and E only",
+        "b": "A, B, C and E only",
+        "c": "B and D only",
+        "d": "A, D and E only"
+      },
+      "answer": "b",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 88,
+      "exam_session": "November 2022",
+      "question": "Out of the following statements, which are not true in respect of a Limited Liability Partnership? A. There must be at least one Designated member at all times. B. Designated members do not have the same rights and duties as any other member. C. There is no specific requirement to have any non-designated members. D. A Limited Liability Partnership may be established such that all members are considered to be designated members",
+      "options": {
+        "a": "A, C and D only",
+        "b": "A and B only",
+        "c": "B and D only",
+        "d": "B, C and D only"
+      },
+      "answer": "b",
+      "confidence": "low"
+    },
+    {
+      "q_no": 89,
+      "exam_session": "October 2022",
+      "question": "Limited liability partnership may be wound up by which one of the following?",
+      "options": {
+        "a": "Voluntarily",
+        "b": "By the Registrar, if the firm fails to file annual return in the prescribed form with the Registrar of Companies within 60 days of closer of the financial year",
+        "c": "By the tribunal established under the Companies Act, 2013",
+        "d": "Either voluntarily or by the tribunal established under the Companies Act, 2013"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 90,
+      "exam_session": "October 2022",
+      "question": "Which one of the following provident funds is set up under Provident Fund Act, 1952?",
+      "options": {
+        "a": "Statutory Provident Fund",
+        "b": "Recognized Provident Fund",
+        "c": "Public Provident Fund",
+        "d": "Unrecognized Provident Fund"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 91,
+      "exam_session": "October 2022",
+      "question": "Which one of the following does not fall in the ambit of the objectives of the Competitions Act, 2002 in India?",
+      "options": {
+        "a": "Encourage competition",
+        "b": "Prevent abuse of dominant position",
+        "c": "Prevent monopolistic rights arising out of intellectual property",
+        "d": "Regulate mergers and acquisitions"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 92,
+      "exam_session": "October 2022",
+      "question": "Which one the following statements is correct regarding the Negotiable Instruments Act in India?",
+      "options": {
+        "a": "A cheque is always drawn on a banker",
+        "b": "A cheque requires the acceptance by the drawee",
+        "c": "In a bill of exchange can be drawn payable to bearer on demand",
+        "d": "A promissory note containing a conditional promise to pay is a valid promissory note"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 93,
+      "exam_session": "October 2022",
+      "question": "Match List I with List II (Model/delivery with Explanation)",
+      "list_1": {
+        "A": "Actual delivery",
+        "B": "Constructive",
+        "C": "Symbolic",
+        "D": "Delivery"
+      },
+      "list_2": {
+        "I": "Seller hands over to the buyer the key of the godown where the goods are stored",
+        "II": "Physical handing over of the possession of goods by the seller to the buyer",
+        "III": "Voluntary transfer of possession of goods from seller to buyer",
+        "IV": "Acknowledgement by third person on behalf of and at the disposal of the buyer"
+      },
+      "options": {
+        "a": "A-IV, B-II, C-III, D-I",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-III, B-I, C-II, D-IV",
+        "d": "A-I, B-II, C-IV, D-III"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 94,
+      "exam_session": "October 2022",
+      "question": "Which of the following issues are addressed by the Information Technology Act, 2000? A. Legal recognition of electronic documents B. Redressal of grievances C. Offenses and contraventions D. Disputes settlements E. Justice dispensation system for cyber crimes",
+      "options": {
+        "a": "A, C, D only",
+        "b": "C, D, E only",
+        "c": "B, D, E only",
+        "d": "A, C, E only"
+      },
+      "answer": "a",
+      "confidence": "low"
+    },
+    {
+      "q_no": 95,
+      "exam_session": "October 2022",
+      "question": "Given below are two statements: One is labelled as Assertion A and the other is labelled as Reason R. Assertion (A): 'Lien' is the right to retain possession of goods and refuse to deliver them to the buyer until the price due in respect of them is paid or tendered. Reason (R): An unpaid seller in possession of goods sold is entitled to exercise his lien on the goods where the goods have been sold without any stipulation as to credit.",
+      "options": {
+        "a": "Both A and R are correct and R is the correct explanation of A",
+        "b": "Both A and R are correct but R is NOT the correct explanation of A",
+        "c": "A is correct but R is not correct",
+        "d": "A is not correct but R is correct"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 96,
+      "exam_session": "October 2022",
+      "question": "Arrange the following in the winding up process of a company by tribunal in chronological sequence from the first to the last- A. Settlement of list of contributors and application of assets B. Submission of report by company liquidator C. Petition for winding up D. Direction of Tribunal on report of company liquidator E. Appointment of company liquidator",
+      "options": {
+        "a": "E, B, A, C, D",
+        "b": "A, E, B, C, D",
+        "c": "C, E, B, D, A",
+        "d": "B, D, C, A, E"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 97,
+      "exam_session": "November 2021",
+      "question": "Given below are two statements: Statement I: patents are defined as monopoly rights which one is granted by the government, for full disclosure of invention for a limited period of time, that is for 20 years. Statement II: The purpose of granting patents is to encourage inventions by promoting their protection and utilization so as to contribute to the development of Industries.",
+      "options": {
+        "a": "Both Statement I and Statement II are correct",
+        "b": "Both Statement I and Statement II are incorrect",
+        "c": "Statement I is incorrect but Statement II is correct",
+        "d": "Statement I is correct but Statement II is incorrect"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 98,
+      "exam_session": "November 2021",
+      "question": "Arrange in the sequence, steps in the procedure for calling a statutory meeting of the company: A. Contents of the statutory report B. A list of members must be produced at the commencement C. Twenty-one days notice D. Certification of the statutory report by not less than two directors, one of whom must be the managing director E. A certified copy of the statutory report must be delivered to the Registrar",
+      "options": {
+        "a": "A, D, E, B, C",
+        "b": "B, E, C, A, D",
+        "c": "C, A, D, E, B",
+        "d": "D, C, B, A, E"
+      },
+      "answer": "c",
+      "confidence": "low"
+    },
+    {
+      "q_no": 99,
+      "exam_session": "November 2021",
+      "question": "Match List I with List II",
+      "list_1": {
+        "A": "Actionable Claim",
+        "B": "Appropriation of Goods",
+        "C": "Existing Goods",
+        "D": "Future Goods"
+      },
+      "list_2": {
+        "I": "Goods which are to be manufactured or produced or acquired by the seller after the making of the contract",
+        "II": "Goods owned by the seller at the time of the making of the contract of sale",
+        "III": "Separating the goods sold from other goods so as to determine and identify the actual goods to be delivered",
+        "IV": "Recovered only by means of a suit or action in a court of law"
+      },
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-III, B-I, C-IV, D-II",
+        "d": "A-IV, B-III, C-II, D-I"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 100,
+      "exam_session": "November 2021",
+      "question": "Which of the following statements are TRUE in a contractual capacity? A. Law presumes that every person is competent to contract unless otherwise proved B. That a minor can make a contract for necessities of life C. That a person of unsound mind can enter into the family contracts D. A convict cannot enter into a valid contract nor can sue E. That a wife can always make valid business contracts and bind her husband",
+      "options": {
+        "a": "A and E only",
+        "b": "A, C and E only",
+        "c": "B and D only",
+        "d": "A, B, C and E only"
+      },
+      "answer": "b",
+      "confidence": "low"
+    },
+    {
+      "q_no": 101,
+      "exam_session": "November 2021",
+      "question": "Which of the following are objectives of the Competition Act, 2002? A. To prevent practices having an adverse effect on competition B. To impede and torment competition in the market C. To protect the interests of sellers D. To ensure freedom of trade carried on by other participants in markets",
+      "options": {
+        "a": "A and D only",
+        "b": "A, B and C only",
+        "c": "A, B and D only",
+        "d": "B, C and D only"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 102,
+      "exam_session": "November 2021",
+      "question": "A contract is said to be discharged by rescission: A. When terms of a contract are altered B. When a party makes novation of a contract C. When an aggrieved party exercises his option to avoid the contract D. When a party to a contract waives his rights under the contract E. Where none of the parties has performed its part for a long time and no other party has objected against it",
+      "options": {
+        "a": "A, D and E only",
+        "b": "B and D only",
+        "c": "B, C and E only",
+        "d": "C and E only"
+      },
+      "answer": "b",
+      "confidence": "low"
+    },
+    {
+      "q_no": 103,
+      "exam_session": "November 2021",
+      "question": "Which one of the following is NOT true regarding input tax credit to avoid cascading effect?",
+      "options": {
+        "a": "Input Tax credit of CGST can be utilised for payment of CGST first and balance for payment of IGST on outward supply",
+        "b": "Input Tax credit of SGST/UTGST can be utilised for payment of CGST",
+        "c": "Input Tax credit of UTGST can be utilised for payment of UTGST first and balance for payment of IGST on outward supply",
+        "d": "Input Tax credits of SGST can be utilised for payment of SGST first and balance for payment of IGST on outward supply"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 104,
+      "exam_session": "November 2021",
+      "question": "Which one of the following statements are TRUE about the contract of Bailment?",
+      "options": {
+        "a": "A contract of Bailment does not result when a person leaves some goods with his friend for being looked after",
+        "b": "Bailee has a right of the general lien",
+        "c": "Hiring of bank locker is a contract of Bailment",
+        "d": "Money deposited in fixed deposit with a bank is a contract of Bailment"
+      },
+      "answer": "c",
+      "confidence": "low"
+    },
+    {
+      "q_no": 105,
+      "exam_session": "November 2021",
+      "question": "Which one of the following State Taxes have NOT been replaced by GST?",
+      "options": {
+        "a": "Luxury Tax",
+        "b": "Purchase Tax",
+        "c": "Special additional duty of customs",
+        "d": "Taxes on lotteries, betting, and gambling"
+      },
+      "answer": "c",
+      "confidence": "low"
+    },
+    {
+      "q_no": 106,
+      "exam_session": "November 2021",
+      "question": "In which of the following cases, the Doctrine of Supervening impossibility will apply?",
+      "options": {
+        "a": "Commercial Impossibility",
+        "b": "Difficulty in performance",
+        "c": "Impossibility known to the parties at the time of making of the contract",
+        "d": "Strikes, Locks-outs, and civil disturbances"
+      },
+      "answer": "a",
+      "confidence": "low"
+    },
+    {
+      "q_no": 107,
+      "exam_session": "November 2021",
+      "question": "Match List I with List II",
+      "list_1": {
+        "A": "Actual Delivery",
+        "B": "Constructive Delivery",
+        "C": "Symbolic Delivery",
+        "D": "Delivery"
+      },
+      "list_2": {
+        "I": "Delivery of means of obtaining possession of goods by the seller to the buyer",
+        "II": "Physical handing over of the possession of goods by the seller to the buyer",
+        "III": "Voluntary transfer of possession of goods from seller to buyer",
+        "IV": "Acknowledgement by a third person in possession of goods to hold them on behalf of and at the disposal of the buyers"
+      },
+      "options": {
+        "a": "A-IV, B-I, C-III, D-II",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-I, B-III, C-IV, D-II",
+        "d": "A-III, B-I, C-II, D-IV"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 108,
+      "exam_session": "November 2021",
+      "question": "'A' Minor takes a loan of Rs.4,000/- from 'B' during his minority, on attaining majority, he applies to 'B' for a further loan of Rs.3,000/- 'B' gives this loan and obtains from 'A' a combined promissory note of Rs.7,000/- for the two loans. This is considered as:",
+      "options": {
+        "a": "Void Contract",
+        "b": "Valid Contract",
+        "c": "Illegal Contract",
+        "d": "Unilateral Contract"
+      },
+      "answer": "a",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 109,
+      "exam_session": "November 2021",
+      "question": "Which of the following taxes have been replaced by the GST? A. Central Excise duty B. Service tax C. Taxes on advertisements D. Duties of Excise-Medicinal and toilet preparations",
+      "options": {
+        "a": "A, B, D only",
+        "b": "A, B only",
+        "c": "B, C, D only",
+        "d": "C, D only"
+      },
+      "answer": "a",
+      "confidence": "low"
+    },
+    {
+      "q_no": 110,
+      "exam_session": "November 2021",
+      "question": "Which among the following essence of the Information Technology Act is not a correct statement?",
+      "options": {
+        "a": "Legal Recognition of Electronic documents",
+        "b": "Any contract for the sale or conveyance of immovable property or any interest in such property",
+        "c": "Legal Recognition of Digital signatures",
+        "d": "Justice Dispensation system for cyber crimes"
+      },
+      "answer": "b",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 111,
+      "exam_session": "November 2021",
+      "question": "Given below are two statements: One is labelled as Assertion A and the other is labelled as Reason R. Assertion A: A, the owner of a ship by fraudulently representing her to be seaworthy induces B, an underwriter to insure the ship. Reason R: B can obtain cancellation of the policy, as it is a fraud on account of fraudulent misrepresentation under the contract act.",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true and R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 112,
+      "exam_session": "November 2021",
+      "question": "Which of the following statements are true regarding the objectives of the Right to Information Act? A. To operationalize the fundamental right to information B. To set up systems and mechanisms that facilitate people's easy access to information C. To promote transparency and accountability in governance D. To minimize corruption and inefficiency in public offices and ensure people participation in governance and decision-making",
+      "options": {
+        "a": "(B), (C), and (D) only",
+        "b": "(A), (B), (C) and (D) all",
+        "c": "(A), (B), and (C) only",
+        "d": "(A), (B), and (D) only"
+      },
+      "answer": "b",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 113,
+      "exam_session": "November 2021",
+      "question": "On which of the following grounds, the Tribunal may order for the winding-up of a company or a petition submitted to it. A. Passing of special resolution for the winding up B. Conducting affairs in a fraudulent manner C. Reduction in membership D. Inability to pay debts",
+      "options": {
+        "a": "(A), (B), and (C) only",
+        "b": "(A), (B), and (D) only",
+        "c": "(A), (B), (C), and (D) all",
+        "d": "(B), (C), and (D) only"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 114,
+      "exam_session": "November 2021",
+      "question": "Arrange the following stages of formation of companies in a proper sequence: 1. Promotion stage 2. Raising of share capital stage 3. Incorporation stage 4. Commencement stage 5. Selection of name",
+      "options": {
+        "a": "3, 1, 5, 4, 2",
+        "b": "2, 5, 1, 3, 4",
+        "c": "1, 5, 3, 2, 4",
+        "d": "4, 1, 2, 3, 5"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 115,
+      "exam_session": "November 2021",
+      "question": "Match List I with List II",
+      "list_1": {
+        "A": "Ordinary damages",
+        "B": "Special damages",
+        "C": "Exemplary damages",
+        "D": "Nominal damages"
+      },
+      "list_2": {
+        "I": "Never granted by way of compensation for the loss",
+        "II": "They are quite heavy in amount and are awarded by way of punishment only",
+        "III": "Arise in the ordinary course of events from the breach of contract",
+        "IV": "They constitute indirect loss suffered by the aggrieved party on account of breach of contract"
+      },
+      "options": {
+        "a": "A-III, B-IV, C-II, D-I",
+        "b": "A-IV, B-III, C-II, D-I",
+        "c": "A-I, B-II, C-IV, D-III",
+        "d": "A-II, B-I, C-III, D-IV"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 116,
+      "exam_session": "November 2021",
+      "question": "Which of the following are not the objectives of the Competition Act, 2002? 1. Ensure freedom of trade for other participants in incidental and connected markets. 2. Provide a reasonable level of reliability and connect operation. 3. Adhere to generally accepted security procedures. 4. Protect the interests of consumers.",
+      "options": {
+        "a": "1, 3, 4 only",
+        "b": "2, 3, 4 only",
+        "c": "1, 3 only",
+        "d": "2, 3 only"
+      },
+      "answer": "d",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 117,
+      "exam_session": "November 2021",
+      "question": "Which of the following statements are false? Indicate the correct code. 1. No company has to file any prescribed declaration before the commencement of business 2. A company can ratify the contract entered into by the promoters with third parties on behalf of the company before its formation 3. The date mentioned in the certificate for commencement of business is taken as the date of birth of a public company 4. A private company has to file a \"Settlement in lieu of prospectus\" with the registrar.",
+      "options": {
+        "a": "1, 2, and 4 only",
+        "b": "1 and 2 only",
+        "c": "2, 3, and 4 only",
+        "d": "3 and 4 only"
+      },
+      "answer": "c",
+      "confidence": "low"
+    },
+    {
+      "q_no": 118,
+      "exam_session": "November 2021",
+      "question": "Which one of the following conditions does not constitute a valid agency by necessity?",
+      "options": {
+        "a": "There should have been actual and definite commercial necessity for the agent to act promptly",
+        "b": "The agent should have acted bona fide and for the benefit of the principal",
+        "c": "The agent should have adopted the most reasonable and practicable course under the circumstances",
+        "d": "Destruction of the subject matter of the agency"
+      },
+      "answer": "d",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 119,
+      "exam_session": "November 2021",
+      "question": "The first offence for infringement of copyright can be for a maximum of imprisonment for a term of:",
+      "options": {
+        "a": "6 months and a fine of ₹20,000",
+        "b": "3 years and a fine of ₹50,000",
+        "c": "3 years and a fine of ₹2,00,000",
+        "d": "1 year and a fine of ₹3,00,000"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 120,
+      "exam_session": "November 2021",
+      "question": "A claim for 'quantum meruit' cannot succeed:",
+      "options": {
+        "a": "When a divisible contract is partly performed",
+        "b": "When an indivisible contract for a lump sum is partly performed",
+        "c": "When a contract is discovered to be unenforceable due to some technical defect",
+        "d": "In the case of breach of contract, the aggrieved party can claim reasonable compensation for what he has done under the contract"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 121,
+      "exam_session": "November 2021",
+      "question": "Which one of the following statements is a promissory note?",
+      "options": {
+        "a": "I promise to pay Q ₹7,000, 7 days after my marriage",
+        "b": "On demand, I promise to pay B or bearer ₹5,000",
+        "c": "I promise to pay ₹5,000 on C's death provided C leaves with me enough money to pay that sum",
+        "d": "I acknowledge to be indebted to you for ₹10,000 to be paid on demand for value received"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 122,
+      "exam_session": "October 2020",
+      "question": "Intellectual Property Rights (IPRs) protect the use of information and ideas that are of:",
+      "options": {
+        "a": "Social value",
+        "b": "Moral value",
+        "c": "Commercial value",
+        "d": "Ethical value"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 123,
+      "exam_session": "October 2020",
+      "question": "Match the items of List I with the items of list II and choose the correct code of combination:",
+      "list_1": {
+        "A": "Indian Contract Act",
+        "B": "Right to Information Act",
+        "C": "Information Technology Act",
+        "D": "Competition Act"
+      },
+      "list_2": {
+        "I": "2002",
+        "II": "1872",
+        "III": "2005",
+        "IV": "2000"
+      },
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-III, B-IV, C-II, D-I",
+        "d": "A-II, B-III, C-IV, D-I"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 124,
+      "exam_session": "October 2020",
+      "question": "Statement I: Contracts whose objects or consideration are unlawful are void. Statement II: Contracts in restraint of legal proceedings are void.",
+      "options": {
+        "a": "Both Statements are correct",
+        "b": "Both Statements are incorrect",
+        "c": "Statement I is correct but II is incorrect",
+        "d": "Statement I is incorrect but II is correct"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 125,
+      "exam_session": "October 2020",
+      "question": "Belated return u/s 139(4) can be filed at any time:",
+      "options": {
+        "a": "Before the expiry of the relevant assessment year",
+        "b": "Before the expiry of one year from the relevant assessment year",
+        "c": "Before the expiry of the relevant assessment year or before the assessment is complete, whichever is earlier",
+        "d": "Before the expiry of one year from the end of the relevant assessment year or before the assessment year, whichever is earlier"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 126,
+      "exam_session": "October 2020",
+      "question": "Meaning of unpaid seller is:",
+      "options": {
+        "a": "The person who has not paid the price.",
+        "b": "The person who has sold the goods and received the price.",
+        "c": "The person who has sold the goods and has not yet received the price.",
+        "d": "The person who has not sold the goods."
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 127,
+      "exam_session": "October 2020",
+      "question": "Arrange the following legal enactments in India in the chronological sequence from the first to the last. A. The Mines Act B. The Minimum Wages Act C. The Payment of Gratuity Act D. The Child Labour (Prohibition and Regulation) Act E. The Apprentices Act",
+      "options": {
+        "a": "B, D, C, A, E",
+        "b": "B, A, E, C, D",
+        "c": "A, E, B, C, D",
+        "d": "E, B, A, C, D"
+      },
+      "answer": "b",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 128,
+      "exam_session": "October 2020",
+      "question": "Which one is the correct sequence implied in the Indian Contract Act, 1872? A. Offer of proposal B. Contract C. Promise D. Agreement E. Acceptance",
+      "options": {
+        "a": "C, E, A, D, B",
+        "b": "D, B, C, A, E",
+        "c": "B, D, C, E, A",
+        "d": "A, E, C, D, B"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 129,
+      "exam_session": "October 2020",
+      "question": "Out of the following statements, which is not correct about the RTI Act, 2005? A. The RTI Act came into force on October 13, 2005. B. Any citizen may request information from a Public Authority (both Govt. and Private). C. Reply for information asked can be given within 30 days. D. There is a nominal application fee that needs to be paid to get information under the RTI application. E. For getting information, the applicant has to pay Rs. 10/- per page of information for Central Govt. Departments.",
+      "options": {
+        "a": "(A), (B), (E) only",
+        "b": "(B), (E) only",
+        "c": "(C), (E) only",
+        "d": "(B), (C), (D), (E) only"
+      },
+      "answer": "b",
+      "confidence": "low"
+    },
+    {
+      "q_no": 130,
+      "exam_session": "October 2020",
+      "question": "Which of the following is not an implied condition in a contract of sale?",
+      "options": {
+        "a": "Condition as to quality or fitness",
+        "b": "Condition as to merchantable quality",
+        "c": "Condition as to wholesomeness",
+        "d": "Condition as to free from encumbrances"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 131,
+      "exam_session": "October 2020",
+      "question": "Under which section of the Information Technology Act of 2000, updated in 2008, stealing any digital asset or information is considered as cybercrime?",
+      "options": {
+        "a": "65",
+        "b": "65-D",
+        "c": "67",
+        "d": "70"
+      },
+      "answer": "a",
+      "confidence": "low"
+    },
+    {
+      "q_no": 132,
+      "exam_session": "October 2020",
+      "question": "Which one is False as per the relevant provisions of the Indian Contract Act, 1872?",
+      "options": {
+        "a": "A void agreement is one that is not enforceable by law.",
+        "b": "Assignment is the obvious mode of discharge of a contract.",
+        "c": "Where a party waives its rights under the contract, the other party is released of its obligations under the contract.",
+        "d": "Where the subject matter of a contract is destroyed for no fault of the promisor, the contract does not become void by impossibility of performance."
+      },
+      "answer": "b",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 133,
+      "exam_session": "October 2020",
+      "question": "Assertion (A): Trade mark registration gives exclusive proprietary rights to the trademark owner. Reason (R): A trademark is a recognizable sign, design, or expression that identifies products or services of a particular source from those of others.",
+      "options": {
+        "a": "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+        "b": "Both (A) and (R) are true but (R) is NOT the correct explanation of (A)",
+        "c": "(A) is true but (R) is false",
+        "d": "(A) is false but (R) is true"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 134,
+      "exam_session": "October 2020",
+      "question": "Out of the following, which are not the features of GST 2017 in India? A. GST is applicable on 'supply' of Goods and Services. B. GST is based on the principle of origin-based taxation rather than the principle of destination-based consumption. C. Import of Goods is treated as Inter-State supplies and would be subject to IGST in addition to applicable Custom Duties. D. It is a dual taxation with Centre and State simultaneously levying it on a common base. E. GST is applicable to all Goods and Services without any exemptions.",
+      "options": {
+        "a": "(A), (B), (E) only",
+        "b": "(B), (C), (E) only",
+        "c": "(B), (E) only",
+        "d": "(C), (D), (E) only"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 135,
+      "exam_session": "December 2019",
+      "question": "According to the Sale of Goods Act, which two of the following are defined as 'goods'? A. Moveable property B. Growing crops C. Actionable claims D. Book debt",
+      "options": {
+        "a": "(A) and (D)",
+        "b": "(B) and (C)",
+        "c": "(A) and (B)",
+        "d": "(D) and (B)"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 136,
+      "exam_session": "December 2019",
+      "question": "Which of the following sections of Companies Act, 2013 facilitates amalgamation, absorption, and reconstruction of companies?",
+      "options": {
+        "a": "319",
+        "b": "320",
+        "c": "410",
+        "d": "502"
+      },
+      "answer": "c",
+      "confidence": "low"
+    },
+    {
+      "q_no": 137,
+      "exam_session": "December 2019",
+      "question": "The indemnity holder is NOT entitled to:",
+      "options": {
+        "a": "All damages which he may be compelled to pay in any suit in respect of any matter to which the promise applies",
+        "b": "All costs that he may be compelled to bear in defending any such suit",
+        "c": "All sums that he may have paid under the terms of any compromise of any such suit",
+        "d": "Damages for liability incurred which is not absolute"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 138,
+      "exam_session": "December 2019",
+      "question": "Match List I with List II",
+      "list_1": {
+        "A": "Transfer of ownership",
+        "B": "Sale of goodwill after dissolution",
+        "C": "Buy-back of securities",
+        "D": "Promissory Note"
+      },
+      "list_2": {
+        "I": "Negotiable Instrument",
+        "II": "Contract of sale of goods",
+        "III": "Dissolution of partnership firm",
+        "IV": "Share Capital of company"
+      },
+      "options": {
+        "a": "A-II, B-III, C-IV, D-I",
+        "b": "A-III, B-IV, C-II, D-I",
+        "c": "A-IV, B-III, C-II, D-I",
+        "d": "A-I, B-III, C-II, D-IV"
+      },
+      "answer": "a",
+      "confidence": "high"
+    },
+    {
+      "q_no": 139,
+      "exam_session": "December 2019",
+      "question": "Which of the following are true about conditions according to the Sale of Goods Act? A. Title B. Description C. Quiet possession D. Encumbrances",
+      "options": {
+        "a": "(A) and (D) only",
+        "b": "(B) and (C) only",
+        "c": "(A), (C), and (D) only",
+        "d": "(A) and (B) only"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 140,
+      "exam_session": "December 2019",
+      "question": "Which one of the following is a void contract?",
+      "options": {
+        "a": "Unilateral contract",
+        "b": "A contract which ceases to be enforceable by law",
+        "c": "Implied contract",
+        "d": "Express contract"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 141,
+      "exam_session": "December 2019",
+      "question": "Which of the following is the odd one out?",
+      "options": {
+        "a": "Specific goods",
+        "b": "Unascertained goods",
+        "c": "Future goods",
+        "d": "Ascertained goods"
+      },
+      "answer": "b",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 142,
+      "exam_session": "December 2019",
+      "question": "Which of the following is NOT a presumption about a negotiable instrument?",
+      "options": {
+        "a": "Date",
+        "b": "Consideration",
+        "c": "Stamp",
+        "d": "Absolute and good title to the transferee"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 143,
+      "exam_session": "December 2019",
+      "question": "Which one of the following relates to warranty?",
+      "options": {
+        "a": "It is of vital importance for completion of the contract",
+        "b": "If there is a breach, the aggrieved party can repudiate the contract",
+        "c": "It is essential to the main purpose of the contract",
+        "d": "In case of breach, the aggrieved party can claim only damages"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 144,
+      "exam_session": "December 2019",
+      "question": "The Competition Act, 2002 replaced which of the following Acts?",
+      "options": {
+        "a": "Indian Contract Act, 1872",
+        "b": "Companies Act, 1956",
+        "c": "Monopolies and Restrictive Trade Practices (MRTP) Act, 1969",
+        "d": "Foreign Exchange Regulation Act, 1973"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 145,
+      "exam_session": "December 2019",
+      "question": "Who are the parties to a cheque? A. Drawer B. Payee C. Acceptor D. Holder",
+      "options": {
+        "a": "(A) and (B) only",
+        "b": "(A), (B), and (D) only",
+        "c": "(A) and (C) only",
+        "d": "(A), (B), (C), and (D)"
+      },
+      "answer": "b",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 146,
+      "exam_session": "June 2019",
+      "question": "Which of the following does NOT come under the definition of 'information' as per the Right to Information Act (RTI Act), 2005?",
+      "options": {
+        "a": "Logbooks",
+        "b": "Data material held in electronic form",
+        "c": "File noting",
+        "d": "Circular"
+      },
+      "answer": "c",
+      "confidence": "low"
+    },
+    {
+      "q_no": 147,
+      "exam_session": "June 2019",
+      "question": "Arrange the following in order of their manifestations: (a) Offer (b) Acceptance (c) Breach of contract (d) Contract",
+      "options": {
+        "a": "A, B, C, D",
+        "b": "A, B, D, C",
+        "c": "B, C, A, D",
+        "d": "A, D, C, B"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 148,
+      "exam_session": "June 2019",
+      "question": "'Doctrine of Caveat Emptor' means",
+      "options": {
+        "a": "Buyer should make payment well in time",
+        "b": "Buyer should be beware of all aspects of buying",
+        "c": "Buyer will be responsible for the whole payment",
+        "d": "Buyer will not be responsible at any cost"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 149,
+      "exam_session": "June 2019",
+      "question": "Which of the following does NOT fall in the ambit of the objectives of the Competition Act, 2002?",
+      "options": {
+        "a": "Encourage Competition",
+        "b": "Prevent abuse of dominant position",
+        "c": "Prevent monopolistic rights arising out of intellectual property",
+        "d": "Regulate mergers and acquisitions"
+      },
+      "answer": "c",
+      "confidence": "medium"
+    },
+    {
+      "q_no": 150,
+      "exam_session": "June 2019",
+      "question": "Which of the following commodities is kept outside the purview of GST?",
+      "options": {
+        "a": "Tobacco products",
+        "b": "Petroleum products",
+        "c": "Edible oils",
+        "d": "Insurance products"
+      },
+      "answer": "b",
+      "confidence": "high"
+    },
+    {
+      "q_no": 151,
+      "exam_session": "June 2019",
+      "question": "Statement (I): Agreement without consideration is always valid. Statement (II): All contracts are agreements, but all agreements are not contracts. In the context of the above two statements, which one of the following codes is correct?",
+      "options": {
+        "a": "Statements (I) and (II) both are correct",
+        "b": "Both Statements (I) and (II) are incorrect",
+        "c": "Statement (I) is incorrect and Statement (II) is correct",
+        "d": "Statement (I) is correct but Statement (II) is incorrect"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 152,
+      "exam_session": "June 2019",
+      "question": "Match List-I with List-II",
+      "list_1": {
+        "A": "Cyber Crime",
+        "B": "Doctrine of Caveat Emptor",
+        "C": "Dishonour of Bill",
+        "D": "Patent and Copyrights"
+      },
+      "list_2": {
+        "I": "Intellectual Property Rights Act",
+        "II": "Negotiable Instrument Act",
+        "III": "Sale of Goods Act",
+        "IV": "The Information Technology Act"
+      },
+      "options": {
+        "a": "A-III, B-IV, C-I, D-II",
+        "b": "A-III, B-II, C-IV, D-I",
+        "c": "A-IV, B-III, C-II, D-I",
+        "d": "A-II, B-IV, C-III, D-I"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 153,
+      "exam_session": "June 2019",
+      "question": "Redressal mechanism for consumer disputes under Section 9 of the Consumer Protection Act envisages a",
+      "options": {
+        "a": "Single-tier system",
+        "b": "Two-tier system",
+        "c": "Three-tier system",
+        "d": "Open system independent of hierarchy"
+      },
+      "answer": "c",
+      "confidence": "high"
+    },
+    {
+      "q_no": 154,
+      "exam_session": "June 2019",
+      "question": "Which among the following is NOT included in negotiable instruments?",
+      "options": {
+        "a": "Cheque",
+        "b": "Demand Draft",
+        "c": "Promissory Note",
+        "d": "Mutual Fund"
+      },
+      "answer": "d",
+      "confidence": "high"
+    },
+    {
+      "q_no": 155,
+      "exam_session": "June 2019",
+      "question": "Which of the following committees is related to investor protection?",
+      "options": {
+        "a": "Bhagwati Committee",
+        "b": "N. K. Mitra Committee",
+        "c": "J. R. Verma Committee",
+        "d": "L. C. Gupta Committee"
+      },
+      "answer": "d",
+      "confidence": "low"
+    }
+  ]
+};

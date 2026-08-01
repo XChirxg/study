@@ -1,0 +1,2280 @@
+{
+  "meta": {
+    "title": "UGC NET Banking/Financial Sector PYQs (June 2019 - June 2025)",
+    "total_questions": 147,
+    "source_note": "Transcribed from scanned previous-year question paper photos (compiled by a coaching provider, e.g. Adda247-style compilation). These are recycled exam questions, not original content owned by the compiler.",
+    "data_quality_note": "Questions flagged 'ocr_incomplete': true have uncertain stems, options, and/or answers due to low scan resolution or faint print. Their 'answer' field may be null or a best-effort guess explained in 'note'. All flagged items should be verified against an official answer key before use in study/quiz material.",
+    "fields": {
+      "q_no": "Question number (1-147), sequential across all exam sessions in this set",
+      "exam_session": "The UGC NET exam session this question appeared in",
+      "question_type": "Format of the question (Simple MCQ, Multi-Select, Matching, Sequencing, Chronological Sequencing, Assertion-Reason, Statement-based True/False)",
+      "question": "The question text",
+      "options": "Answer options keyed a/b/c/d",
+      "list_1": "(Matching questions only) List-I items",
+      "list_2": "(Matching questions only) List-II items",
+      "answer": "Correct option letter, or null if unconfirmed",
+      "note": "Explanation/reasoning for the answer, or a flag about transcription uncertainty",
+      "ocr_incomplete": "true if the source scan was too degraded to transcribe with full confidence"
+    }
+  },
+  "questions": [
+    {
+      "q_no": 1,
+      "exam_session": "June 2025",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following in chronological order of the milestones achieved by the National Stock Exchange of India: A. Commencement of Trading in Index options B. Launch of Securities Lending and Borrowing Scheme C. Commencement of Derivatives Trading in Index Futures D. Launch of Mutual Fund Service System E. Launch of S&P CNX Nifty",
+      "options": {
+        "a": "B,D,E,A,C",
+        "b": "A,C,E,B,D",
+        "c": "E,A,C,D,B",
+        "d": "E,C,A,D,B"
+      },
+      "answer": "d",
+      "note": "Per the printed solution: Launch of S&P CNX Nifty (1996) -> Commencement of Derivatives Trading in Index Futures (2000) -> Commencement of Trading in Index Options (2001) -> Launch of Mutual Fund Service System (2009) -> Launch of Securities Lending and Borrowing Scheme (2012)."
+    },
+    {
+      "q_no": 2,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "question": "A term loan becomes Non Performing Asset (NPA) if its interest and/or installment of principal remains overdue for a period of more than:",
+      "options": {
+        "a": "30 days",
+        "b": "60 days",
+        "c": "75 days",
+        "d": "90 days"
+      },
+      "answer": "d",
+      "note": "Confirmed by printed solution: RBI norms classify a loan as NPA once interest/principal is overdue for more than 90 days."
+    },
+    {
+      "q_no": 3,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "question": "In which year did the State Bank of India come into existence?",
+      "options": {
+        "a": "1947",
+        "b": "1950",
+        "c": "1955",
+        "d": "1969"
+      },
+      "answer": "c",
+      "note": "SBI was constituted on 1 July 1955 under the SBI Act, 1955 (from the Imperial Bank of India)."
+    },
+    {
+      "q_no": 4,
+      "exam_session": "June 2025",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the LIST-I (Term) with LIST-II (Explanation): A. Nostro Account, B. Vostro Account, C. Bid, D. Offer / I. Account held by a foreign bank with a local bank, II. An Indian Bank's Swiss Franc A/C with a bank in Switzerland, III. Price at which the dealer is willing to buy another currency, IV. Price at which the dealer is willing to sell another currency",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-I, C-III, D-IV",
+        "c": "A-II, B-I, C-IV, D-III",
+        "d": "A-I, B-II, C-IV, D-III"
+      },
+      "list_1": {
+        "A": "Nostro Account",
+        "B": "Vostro Account",
+        "C": "Bid",
+        "D": "Offer"
+      },
+      "list_2": {
+        "I": "Account held by a foreign bank with a local bank",
+        "II": "An Indian Bank's Swiss Franc A/C with a bank in Switzerland",
+        "III": "Price at which the dealer is willing to buy another currency",
+        "IV": "Price at which the dealer is willing to sell another currency"
+      },
+      "answer": "b",
+      "note": "Nostro = 'our account with you' (domestic bank's foreign-currency account abroad, e.g. an Indian bank's account in Switzerland) = II; Vostro = 'your account with us' (a foreign bank's account with the local bank) = I; Bid = price dealer will buy at = III; Offer = price dealer will sell at = IV."
+    },
+    {
+      "q_no": 5,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "question": "In which of the following years was the Investor Protection and Education Fund Regulations issued by the Securities and Exchange Board of India?",
+      "options": {
+        "a": "1992",
+        "b": "1999",
+        "c": "2003",
+        "d": "2009"
+      },
+      "answer": "d",
+      "note": "SEBI (Investor Protection and Education Fund) Regulations were notified in 2009."
+    },
+    {
+      "q_no": 6,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "question": "An unsecured short-term promissory note, negotiable and transferable by endorsement and delivery, with a fixed maturity period, issued at a discount by creditworthy corporates, primary dealers, and all-India financial institutions is known as:",
+      "options": {
+        "a": "Treasury Bill",
+        "b": "Commercial Paper",
+        "c": "Certificates of Deposit",
+        "d": "Repo"
+      },
+      "answer": "b",
+      "note": "This is the standard textbook definition of Commercial Paper."
+    },
+    {
+      "q_no": 7,
+      "exam_session": "June 2025",
+      "question_type": "Chronological Sequencing",
+      "question": "Arrange the following Development Financial Institutions in chronological order of their establishment (Old to New): A. IFCI B. IDBI C. NABARD D. SIDBI",
+      "options": {
+        "a": "A,B,C,D",
+        "b": "B,A,C,D",
+        "c": "C,D,A,B",
+        "d": "D,C,B,A"
+      },
+      "answer": "a",
+      "note": "IFCI: 1948, IDBI: 1964, NABARD: 1982, SIDBI: 1990 -> chronological old-to-new is A,B,C,D."
+    },
+    {
+      "q_no": 8,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is a value-added service of EXIM Bank?",
+      "options": {
+        "a": "Export Facilitation",
+        "b": "Export product Development",
+        "c": "Workshops and Seminars",
+        "d": "Export Marketing"
+      },
+      "answer": null,
+      "note": "Options and exact answer are not fully legible in the scan; verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 9,
+      "exam_session": "January 2025",
+      "question_type": "Chronological Sequencing",
+      "question": "Arrange the following institutions in ascending order of their year of establishment: A. SEBI B. Reserve Bank of India C. State Bank of India D. NABARD E. NHB",
+      "options": {
+        "a": "C,B,E,A,D",
+        "b": "B,C,A,E,D",
+        "c": "B,C,D,E,A",
+        "d": "B,C,A,E,D"
+      },
+      "answer": "c",
+      "note": "RBI: 1935, SBI: 1955, NABARD: 1982, NHB: 1988, SEBI (statutory): 1992 -> B,C,D,E,A. Exact option lettering in the scan is faint; verify.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 10,
+      "exam_session": "January 2025",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the Financial Inclusion Yojanas with their respective years of launch: A. PM Jan Dhan B. PM Mudra C. Stand Up India D. Vaya Vandana / I. 2016 II. 2014 III. 2017 IV. 2015",
+      "options": {
+        "a": "A-II, B-IV, C-I, D-III",
+        "b": "A-II, B-I, C-IV, D-III",
+        "c": "A-IV, B-I, C-III, D-II",
+        "d": "A-II, B-III, C-I, D-IV"
+      },
+      "list_1": {
+        "A": "PM Jan Dhan",
+        "B": "PM Mudra",
+        "C": "Stand Up India",
+        "D": "Vaya Vandana"
+      },
+      "list_2": {
+        "I": "2016",
+        "II": "2014",
+        "III": "2017",
+        "IV": "2015"
+      },
+      "answer": "a",
+      "note": "PM Jan Dhan Yojana: 2014, PM Mudra Yojana: 2015, Stand Up India: 2016, Pradhan Mantri Vaya Vandana Yojana: 2017."
+    },
+    {
+      "q_no": 11,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following conditions is NOT true as per the IRDA Act, 1999 for entry of private players into the insurance market?",
+      "options": {
+        "a": "The company's sole purpose is to carry on life insurance business or general insurance business or reinsurance business",
+        "b": "The minimum paid-up equity capital for life insurance or general insurance business is Rs. 100 crore",
+        "c": "The minimum paid-up capital for carrying reinsurance business is Rs. 200 crore",
+        "d": "Insurance companies are required to invest not less than 15 percent of their funds in infrastructure and social sectors"
+      },
+      "answer": null,
+      "note": "Text is partly faint in the scan; the false statement (answer) could not be confirmed with confidence. Verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 12,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following are the features of Treasury Bills? A. Negotiable Securities B. Issued at par and are repaid at premium on maturity C. High liquidity on account of short tenure D. Assured Yield E. High transaction cost",
+      "options": {
+        "a": "A, B, E only",
+        "b": "A, C, D only",
+        "c": "B, C, D only",
+        "d": "A, C, D, E only"
+      },
+      "answer": "b",
+      "note": "T-Bills are negotiable, issued at a discount (not premium) and repaid at par, highly liquid, and carry assured yield; low transaction cost -> A,C,D fit best."
+    },
+    {
+      "q_no": 13,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "The Securities Exchange Board of India (SEBI) regulates and supervises the securities market through:",
+      "options": {
+        "a": "Regulations",
+        "b": "Rules",
+        "c": "Guidelines",
+        "d": "Orders"
+      },
+      "answer": null,
+      "note": "Options list is faint (A. Regulations B. Rules C. Guidelines D. Orders) and answer combination not confirmed; verify.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 14,
+      "exam_session": "January 2025",
+      "question_type": "Chronological Sequencing",
+      "question": "Arrange the following SEBI regulations in the ascending year of their enactment: A. RDR regulations B. Intermediaries regulations C. Real estate investment trust regulations D. Buy-Back of Securities by listed companies regulations E. Listing Obligations and Disclosure Requirements Regulations",
+      "options": {
+        "a": "D,B,A,C,E",
+        "b": "D,A,E,C,B",
+        "c": "A,C,D,E,B",
+        "d": "B,A,E,D,C"
+      },
+      "answer": null,
+      "note": "Option lettering is not fully legible in the scan; verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 15,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is the development role of RBI?",
+      "options": {
+        "a": "Formulates, implements, and monitors the monetary policy",
+        "b": "Prescribes broad parameters of banking operations",
+        "c": "Issues, exchanges, and destroys currency notes",
+        "d": "Performs a wide range of promotional functions to support national objectives"
+      },
+      "answer": "d",
+      "note": "RBI's developmental role (as distinct from its regulatory/monetary functions) is described as performing promotional functions supporting national objectives."
+    },
+    {
+      "q_no": 16,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "The Capital Adequacy Ratio (CAR) for Indian Public Sector banks set by RBI is:",
+      "options": {
+        "a": "9%",
+        "b": "10%",
+        "c": "11%",
+        "d": "12%"
+      },
+      "answer": "c",
+      "note": "RBI mandates a minimum CAR of 9% under Basel norms, but Indian PSU banks are required to maintain 12% (higher than the regulatory minimum) per government policy — this option combination is uncertain from the scan; verify.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 17,
+      "exam_session": "September 2024",
+      "question_type": "Chronological Sequencing",
+      "question": "Arrange the following banks in the increasing order of their year of formation: A. State Bank of India B. Imperial Bank of India C. Reserve Bank of India D. Regional Rural Banks E. Small Finance Bank",
+      "options": {
+        "a": "E,D,C,B,A",
+        "b": "E,D,A,B,C",
+        "c": "B,C,A,D,E",
+        "d": "C,B,A,D,E"
+      },
+      "answer": "c",
+      "note": "Imperial Bank of India: 1921, RBI: 1935, SBI: 1955, RRBs: 1975, Small Finance Banks: 2015 -> order B,C,A,D,E."
+    },
+    {
+      "q_no": 18,
+      "exam_session": "September 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the columns: List-I Institutions: A. National Housing Bank B. Industrial Development Bank of India C. Small Industrial Development Bank of India D. Industrial Finance Corporation of India / List-II Date of establishment: I. 01-07-1964 II. 01-07-1948 III. 02-04-1990 IV. 09-07-1988",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-III, B-I, C-IV, D-II",
+        "c": "A-I, B-IV, C-III, D-II",
+        "d": "A-IV, B-I, C-III, D-II"
+      },
+      "list_1": {
+        "A": "National Housing Bank",
+        "B": "Industrial Development Bank of India",
+        "C": "Small Industrial Development Bank of India",
+        "D": "Industrial Finance Corporation of India"
+      },
+      "list_2": {
+        "I": "01-07-1964",
+        "II": "01-07-1948",
+        "III": "02-04-1990",
+        "IV": "09-07-1988"
+      },
+      "answer": "d",
+      "note": "NHB established 1988, IDBI 1964, SIDBI 1990, IFCI 1948 -> A-IV, B-I, C-III, D-II."
+    },
+    {
+      "q_no": 19,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following subsidiaries are fully owned by the Reserve Bank of India? A. National Housing Bank B. National Bank for Agriculture and Rural Development C. The Deposit Insurance and Credit Guarantee Corporation of India D. Bhartiya Reserve Bank Note Mudran Private Limited E. Securities Trading Corporation of India",
+      "options": {
+        "a": "A, C & D Only",
+        "b": "A, D & E Only",
+        "c": "B, D & E Only",
+        "d": "B, C & E Only"
+      },
+      "answer": "c",
+      "note": "DICGC and BRBNMPL are wholly owned RBI subsidiaries; NHB's ownership was transferred to the Government in 2019 (previously RBI-owned).",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 20,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is a Value Added Service of EXIM Bank?",
+      "options": {
+        "a": "Line of Credit",
+        "b": "Pre-shipment Credit",
+        "c": "Buyers Credit",
+        "d": "Export Marketing Services"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 21,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the instruments of qualitative Credit Control Methods in India's Monetary Policy?",
+      "options": {
+        "a": "Cash Reserve Ratio",
+        "b": "Consumer Credit Regulation",
+        "c": "Altering Margin Requirements",
+        "d": "Statutory Liquidity Ratio",
+        "e": "Differential Rate of Interest"
+      },
+      "answer": null,
+      "note": "This is a multi-select statement question (choose the correct combination) — the combination options (a)-(d) with letter groupings were not legible in the scan; qualitative tools are Consumer Credit Regulation, Margin Requirements and Differential/Direct interest rate action (B, C, E), while CRR and SLR are quantitative tools.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 22,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "The Narasimham Committee 1991 recommended reforms with respect to the banking sector. These reforms are also known as:",
+      "options": {
+        "a": "First generation reforms",
+        "b": "Second generation reforms",
+        "c": "Financial sector reforms",
+        "d": "Third generation reforms"
+      },
+      "answer": "c",
+      "note": "The Narasimham Committee-I (1991) reforms are generally referred to as financial sector reforms."
+    },
+    {
+      "q_no": 23,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "SEBI permitted the issue of commercial papers within the framework of its guidelines. Which one of the following committees recommended these guidelines?",
+      "options": {
+        "a": "Verma Committee",
+        "b": "Padmanabhan Committee",
+        "c": "Kalia Committee",
+        "d": "Vaghul Committee"
+      },
+      "answer": "d",
+      "note": "The Vaghul Working Group (1987) recommended introduction of Commercial Paper in India."
+    },
+    {
+      "q_no": 24,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are primary functions of Commercial Banks? A. Accepting Deposits B. Agency Service C. Discounting Trade Bills D. Financing Foreign Trade E. General Utility Service",
+      "options": {
+        "a": "A, C & E only",
+        "b": "A, B & D only",
+        "c": "B, C & E only",
+        "d": "A, C & D only"
+      },
+      "answer": "d",
+      "note": "Accepting deposits, discounting trade bills, and financing foreign trade are all forms of the core banking function (deposits/lending); agency and general utility services are secondary functions."
+    },
+    {
+      "q_no": 25,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the participants in T-Bills Market? A. Reserve Bank of India B. Commercial Banks C. Foreign Banks D. Provident Funds E. Corporates",
+      "options": {
+        "a": "A, B, C & E only",
+        "b": "A, B, C & D only",
+        "c": "A, B, D & E only",
+        "d": "A, B, C, D & E"
+      },
+      "answer": "d",
+      "note": "RBI, commercial banks, foreign banks, provident funds, and corporates/institutions all participate in the T-Bills market."
+    },
+    {
+      "q_no": 26,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are different types of dumping? A. Persistent Dumping B. Predatory Dumping C. Sporadic Dumping D. Nomadic Dumping",
+      "options": {
+        "a": "A & B Only",
+        "b": "A, B & C Only",
+        "c": "B & D Only",
+        "d": "C & D Only"
+      },
+      "answer": "b",
+      "note": "The recognised types of dumping are Persistent, Predatory, and Sporadic dumping; 'Nomadic dumping' is not a standard category."
+    },
+    {
+      "q_no": 27,
+      "exam_session": "September 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II: List-I Instruments: A. Forwards B. Certificate of Deposits C. FPO D. IPO / List-II Market: I. Primary Market II. Money Market III. Derivative Market IV. Stock Market",
+      "options": {
+        "a": "A-I, B-III, C-II, D-IV",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-IV, B-II, C-III, D-I",
+        "d": "A-III, B-II, C-I, D-IV"
+      },
+      "list_1": {
+        "A": "Forwards",
+        "B": "Certificate of Deposits",
+        "C": "FPO",
+        "D": "IPO"
+      },
+      "list_2": {
+        "I": "Primary Market",
+        "II": "Money Market",
+        "III": "Derivative Market",
+        "IV": "Stock Market"
+      },
+      "answer": "d",
+      "note": "Forwards trade in the derivatives market (III), Certificates of Deposit in the money market (II), FPO happens in the primary market (I), and post-IPO shares trade on the stock market (IV)."
+    },
+    {
+      "q_no": 28,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the schemes promoted by NABARD? A. Kisan Credit Card (KCC) B. Capital Investment Subsidy Scheme C. Special Economic Zone Scheme D. Rural Innovation Fund E. Tribal Development Fund",
+      "options": {
+        "a": "A & B Only",
+        "b": "A, B, D & E Only",
+        "c": "B & C Only",
+        "d": "C & D Only"
+      },
+      "answer": "b",
+      "note": "NABARD promotes KCC, Capital Investment Subsidy Scheme, Rural Innovation Fund, and Tribal Development Fund; Special Economic Zones are not a NABARD scheme."
+    },
+    {
+      "q_no": 29,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "In which of the following ratios is the share capital of RRBs prescribed for the Central Government, State Government, and Sponsoring bank?",
+      "options": {
+        "a": "50:30:20",
+        "b": "60:20:20",
+        "c": "50:20:30",
+        "d": "50:15:35"
+      },
+      "answer": "d",
+      "note": "RRB share capital is held by Central Government, State Government, and the sponsor bank in the ratio 50:15:35."
+    },
+    {
+      "q_no": 30,
+      "exam_session": "June 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II: List-I Institution: A. Industrial Finance Corporation of India (IFCI) B. Industrial Development Bank of India (IDBI) C. Industrial Credit and Investment Corporation of India (ICICI) D. India Infrastructure Finance Company Limited (IIFCL) / List-II Year of establishment: I. 2006 II. 1964 III. 1955 IV. 1948",
+      "options": {
+        "a": "A-IV, B-II, C-III, D-I",
+        "b": "A-IV, B-I, C-II, D-III",
+        "c": "A-III, B-II, C-I, D-IV",
+        "d": "A-III, B-II, C-IV, D-I"
+      },
+      "list_1": {
+        "A": "Industrial Finance Corporation of India (IFCI)",
+        "B": "Industrial Development Bank of India (IDBI)",
+        "C": "Industrial Credit and Investment Corporation of India (ICICI)",
+        "D": "India Infrastructure Finance Company Limited (IIFCL)"
+      },
+      "list_2": {
+        "I": "2006",
+        "II": "1964",
+        "III": "1955",
+        "IV": "1948"
+      },
+      "answer": "a",
+      "note": "IFCI: 1948, IDBI: 1964, ICICI: 1955, IIFCL: 2006 -> A-IV, B-II, C-III, D-I."
+    },
+    {
+      "q_no": 31,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "In which type of insurance should insurable interest be present at the time when the policy is taken?",
+      "options": {
+        "a": "Life Insurance only",
+        "b": "Fire Insurance only",
+        "c": "Marine Insurance only",
+        "d": "Life and Marine Insurance only"
+      },
+      "answer": "a",
+      "note": "For life insurance, insurable interest must exist at the time the policy is taken (not necessarily at the time of claim); for fire insurance it's needed at inception and at loss, for marine insurance it's needed at the time of loss (can be acquired after the policy is taken)."
+    },
+    {
+      "q_no": 32,
+      "exam_session": "June 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following Statements are correct about Regional Rural Banks? A. The first RRB's were established on October 02, 1975 B. The RRB's Act of 1976 is applicable C. The minimum paid up capital of RRB's is 10 crores D. The Service of RRB's are not available in the state of Goa and Sikkim E. RRB's are owned by Central Government, State governments and the sponsor bank in the proportion of 50%, 15% and 35%",
+      "options": {
+        "a": "A, B, C & D only",
+        "b": "B, C, D & E only",
+        "c": "A, B, D & E only",
+        "d": "A, B, C, D & E"
+      },
+      "answer": "c",
+      "note": "First RRBs began 2 Oct 1975; governed by the RRB Act, 1976; not present in Goa and Sikkim; ownership ratio is 50:15:35 (Centre:State:Sponsor bank)."
+    },
+    {
+      "q_no": 33,
+      "exam_session": "June 2024",
+      "question_type": "Chronological Sequencing",
+      "question": "Arrange the following financial institutions according to their year of establishment, from earlier to later: A. Imperial Bank B. State Bank of India C. Life Insurance Corporation of India D. Unit Trust of India E. Regional Rural Banks",
+      "options": {
+        "a": "A,B,C,D,E",
+        "b": "C,D,A,B,E",
+        "c": "B,A,C,D,E",
+        "d": "A,C,B,D,E"
+      },
+      "answer": "a",
+      "note": "Imperial Bank of India: 1921, SBI: 1955, LIC: 1956, UTI: 1964, RRBs: 1975."
+    },
+    {
+      "q_no": 34,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "The minimum capital prescribed by the RBI for starting a new small finance bank is:",
+      "options": {
+        "a": "Rs. 100 crore",
+        "b": "Rs. 200 crore",
+        "c": "Rs. 50 crore",
+        "d": "Rs. 1800 crore"
+      },
+      "answer": "b",
+      "note": "RBI's revised (2019) guidelines set minimum paid-up capital for a Small Finance Bank at Rs. 200 crore."
+    },
+    {
+      "q_no": 35,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "The system where two or more banking companies are controlled by one or two individuals is called:",
+      "options": {
+        "a": "Chain Banking",
+        "b": "Group Banking",
+        "c": "Mixed Banking",
+        "d": "Branch Banking"
+      },
+      "answer": "a",
+      "note": "Chain banking is where control of two or more independently chartered banks is held by a small group of individuals."
+    },
+    {
+      "q_no": 36,
+      "exam_session": "June 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are quantitative credit control methods? A. Bank Rate Policy B. Open market Operations C. Rationing of credit D. Margin requirements E. Variable reserve ratio",
+      "options": {
+        "a": "A, B, C only",
+        "b": "C, D, E only",
+        "c": "A, B, E only",
+        "d": "B, C, D only"
+      },
+      "answer": "c",
+      "note": "Bank rate, open market operations, and variable reserve ratio (CRR/SLR) are quantitative tools; margin requirements and credit rationing are selective/qualitative tools."
+    },
+    {
+      "q_no": 37,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "A committee was set up in 1993 under the chairmanship of R.N. Malhotra to evaluate which of the following?",
+      "options": {
+        "a": "Banking Industry",
+        "b": "Small-Scale Industry",
+        "c": "Mutual Fund Industry",
+        "d": "Insurance Industry"
+      },
+      "answer": "d",
+      "note": "The Malhotra Committee (1993) was constituted to recommend reforms in the Indian insurance sector."
+    },
+    {
+      "q_no": 38,
+      "exam_session": "June 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II: List-I Institution: A. Industrial Finance Corporation of India (IFCI) B. Industrial Development Bank of India (IDBI) C. Industrial Credit and Investment Corporation of India (ICICI) D. India Infrastructure Finance Company Limited (IIFCL) / List-II Year of establishment: I. 1948 II. 1964 III. 1955 IV. 2006",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-III, B-II, C-I, D-IV",
+        "c": "A-I, B-III, C-II, D-IV",
+        "d": "A-II, B-I, C-III, D-IV"
+      },
+      "list_1": {
+        "A": "Industrial Finance Corporation of India (IFCI)",
+        "B": "Industrial Development Bank of India (IDBI)",
+        "C": "Industrial Credit and Investment Corporation of India (ICICI)",
+        "D": "India Infrastructure Finance Company Limited (IIFCL)"
+      },
+      "list_2": {
+        "I": "1948",
+        "II": "1964",
+        "III": "1955",
+        "IV": "2006"
+      },
+      "answer": "a",
+      "note": "IFCI: 1948, IDBI: 1964, ICICI: 1955, IIFCL: 2006 -> A-I, B-II, C-III, D-IV."
+    },
+    {
+      "q_no": 39,
+      "exam_session": "June 2024",
+      "question_type": "Chronological Sequencing",
+      "question": "Arrange the following financial institutions according to the order in which they were established: A. NABARD B. NHB C. EXIM Bank D. SIDBI",
+      "options": {
+        "a": "C,A,B,D",
+        "b": "A,C,B,D",
+        "c": "A,C,D,B",
+        "d": "C,A,D,B"
+      },
+      "answer": "a",
+      "note": "EXIM Bank: Jan 1982, NABARD: Jul 1982, NHB: 1988, SIDBI: 1990 -> C,A,B,D."
+    },
+    {
+      "q_no": 40,
+      "exam_session": "December 2023",
+      "question_type": "Chronological Sequencing",
+      "question": "Arrange the following Regional Rural Banks in an increasing order of their existence since formation: A. Rajasthan Marudhara Gramin Bank B. Telangana Gramin Bank C. Saurashtra Gramin Bank D. Madhyanchal Gramin Bank E. Arunachal Pradesh Rural Bank",
+      "options": {
+        "a": "A,D,B,E,C",
+        "b": "C,E,D,A,B",
+        "c": "B,A,C,E,D",
+        "d": "E,B,A,D,C"
+      },
+      "answer": null,
+      "note": "Establishment years of these specific RRBs could not be verified with confidence; scan is also faint here. Verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 41,
+      "exam_session": "December 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following factors are associated with weakening of Indian rupee? A. Rupee payment for international trade B. Rising cost of imports C. Widening trade deficit D. Opening of Rupee Vostro accounts E. Rupee UPI payment for overseas transactions",
+      "options": {
+        "a": "A, B and C only",
+        "b": "C, D and E only",
+        "c": "A, D and E only",
+        "d": "B, C and D only"
+      },
+      "answer": null,
+      "note": "Rising cost of imports (B) and widening trade deficit (C) are clear drivers of rupee weakness; rupee payment for trade, Vostro accounts, and UPI for overseas transactions instead support/internationalize the rupee. Exact option lettering is uncertain from the scan; verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 42,
+      "exam_session": "December 2023",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the steps in the book building process for pricing an issue of shares in India: A. Determine issue price, market clearing price and price discovery B. Book runner and syndicate members generate awareness, create demand and run the order book C. Appointment of the merchant banker and syndicate members (SEBI-registered intermediaries/underwriters) D. Preparation and filing of red herring prospectus with the SEBI for approval E. Allotment and listing of shares on stock exchange(s)",
+      "options": {
+        "a": "C,D,B,A,E",
+        "b": "D,C,A,B,E",
+        "c": "A,B,C,D,E",
+        "d": "B,C,D,E,A"
+      },
+      "answer": "a",
+      "note": "Logical order: appoint merchant banker/underwriters -> file the red herring prospectus with SEBI -> book building/demand generation -> price discovery -> allotment and listing."
+    },
+    {
+      "q_no": 43,
+      "exam_session": "December 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are functions of the Reserve Bank of India? A. Bank of Issue B. Banker's bank and lender of the last resort C. Regulator of fiscal policy D. Controller of credit E. Custodian of foreign exchange reserves",
+      "options": {
+        "a": "A, B, C and D only",
+        "b": "A, B, D and E only",
+        "c": "B, C, D and E only",
+        "d": "A, B and D only"
+      },
+      "answer": "b",
+      "note": "RBI is Bank of Issue, banker's bank/lender of last resort, controller of credit, and custodian of forex reserves; it is not a regulator of fiscal policy (that is the government's domain — RBI regulates monetary policy)."
+    },
+    {
+      "q_no": 44,
+      "exam_session": "December 2023",
+      "question_type": "Chronological Sequencing",
+      "question": "The following legislations in primary and secondary market in ascending order of its enactment: A. Mutual fund regulations B. Credit rating agencies Regulations C. Credit rating regulations D. SEBI intermediaries regulations E. Sweat equity regulations",
+      "options": {
+        "a": "A,C,D,B,E",
+        "b": "C,D,E,A,B",
+        "c": "B,A,C,D,E",
+        "d": "A,B,C,D,E"
+      },
+      "answer": null,
+      "note": "Option lettering is faint in the scan; verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 45,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which are correct regulatory provisions for foreign bank operations in India? A. They are incorporated in India and have their head office in a foreign country B. Foreign banks since 2012 have been allowed to set up their subsidiaries in India C. The foreign banks are allowed to operate in India even if they are not financially sound D. They have to operate according to the banking regulations in India E. RBI approved that foreign banks which are present in India could open their branches",
+      "options": {
+        "a": "A, C, E only",
+        "b": "A, B, C only",
+        "c": "B, D, E only",
+        "d": "A, B, D only"
+      },
+      "answer": "c",
+      "note": "Foreign banks may set up wholly-owned subsidiaries in India (from 2013 guidelines), must comply with Indian banking regulations, and RBI approves branch expansion; they must be financially sound (C is false)."
+    },
+    {
+      "q_no": 46,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following subsidiaries is NOT owned by the Reserve Bank of India?",
+      "options": {
+        "a": "National Housing Bank (NHB)",
+        "b": "Industrial Development Finance Corporation (IDFC)",
+        "c": "National Bank for Agriculture and Rural Development (NABARD)",
+        "d": "Deposit Insurance and Credit Guarantee Corporation of India (DICGC)"
+      },
+      "answer": "b",
+      "note": "IDFC was never an RBI subsidiary. (NABARD's and NHB's RBI shareholding was also transferred to the Government over time, but among these options IDFC is the clear non-RBI entity.)"
+    },
+    {
+      "q_no": 47,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is an operational technique of hedging transaction exposure?",
+      "options": {
+        "a": "Hedging through money market",
+        "b": "Hedging through forward",
+        "c": "Hedging through swap",
+        "d": "Hedging through leading & lagging"
+      },
+      "answer": "d",
+      "note": "A mark in the source suggests option (d); note that (a),(b),(c) are also standard hedging techniques, so this may be a 'choose the odd one out' framing — verify wording against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 48,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Growing financial stress endangering economic stability in developed economies is the immediate consequence of which of the following?",
+      "options": {
+        "a": "Fiscal indiscipline",
+        "b": "Rising price level",
+        "c": "Over leverage",
+        "d": "Increased interest rates"
+      },
+      "answer": "d",
+      "note": "A mark in the source indicates option (d)."
+    },
+    {
+      "q_no": 49,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "'Category I' companies (as classified by SEBI in this context) are:",
+      "options": {
+        "a": "Existing listed companies making a public issue",
+        "b": "New companies with less than 12 months in operation",
+        "c": "Companies having a good track record of profit",
+        "d": "Privately held companies"
+      },
+      "answer": "c",
+      "note": "Best inference from context; exact wording is faint in the scan — verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 50,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is concerned with Endowment Policy?",
+      "options": {
+        "a": "The insurer has the advantage of receiving money at regular intervals of the policy with a specific sum of money at the expiry of the policy",
+        "b": "At the expiry of the policy, the insured receives the sum of the insurance policy",
+        "c": "It covers the insured for the whole life; his nominee receives the assured sum with bonus after the death of the insured",
+        "d": "The premium cost is high; if the insurer dies, the nominee receives the insurance amount"
+      },
+      "answer": "b",
+      "note": "An endowment policy pays the sum assured either at maturity (expiry of the term) or on earlier death."
+    },
+    {
+      "q_no": 51,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "What are the positive attributes of mobile banking? A. Negative experience in European countries B. Wireless Application Protocol (WAP) C. Advanced Penetration of Mobile network D. Less security E. Faster data processing speed",
+      "options": {
+        "a": "A, C, D only",
+        "b": "B, D, E only",
+        "c": "B, C, E only",
+        "d": "C, D, E only"
+      },
+      "answer": "c",
+      "note": "WAP enablement, advanced mobile penetration, and faster data processing are positive attributes; negative European experience and less security are negatives."
+    },
+    {
+      "q_no": 52,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are considered as off-balance-sheet activities of a commercial Bank? A. Lending money to a depositor B. Borrowing from RBI C. Purchasing a futures contract D. Issuing letter of credit E. Engaging in a Swap Contract",
+      "options": {
+        "a": "A, B, D only",
+        "b": "B, C, E only",
+        "c": "C, D, E only",
+        "d": "A, D, E only"
+      },
+      "answer": "c",
+      "note": "Futures contracts, letters of credit, and swap contracts are classic off-balance-sheet items; lending and borrowing appear on the balance sheet."
+    },
+    {
+      "q_no": 53,
+      "exam_session": "June 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II: List-I Committee: A. Bagri Committee B. Raghuram Rajan Committee C. Vaghul Committee D. Urjit Patel Committee / List-II Purpose: I. India's Money Market II. Reforms for Financial sector III. Supervision of Bank IV. Examining the monetary framework",
+      "options": {
+        "a": "A-II, B-III, C-IV, D-I",
+        "b": "A-III, B-II, C-I, D-IV",
+        "c": "A-III, B-IV, C-II, D-I",
+        "d": "A-II, B-IV, C-III, D-I"
+      },
+      "list_1": {
+        "A": "Bagri Committee",
+        "B": "Raghuram Rajan Committee",
+        "C": "Vaghul Committee",
+        "D": "Urjit Patel Committee"
+      },
+      "list_2": {
+        "I": "India's Money Market",
+        "II": "Reforms for Financial sector",
+        "III": "Supervision of Bank",
+        "IV": "Examining the monetary framework"
+      },
+      "answer": "b",
+      "note": "Vaghul Committee shaped India's money market (I), Raghuram Rajan Committee addressed financial sector reforms (II), Urjit Patel Committee examined the monetary policy framework (IV), leaving Bagri Committee with bank supervision (III)."
+    },
+    {
+      "q_no": 54,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "The coexistence and cooperation between the formal and informal financial sector is commonly referred to as:",
+      "options": {
+        "a": "Flexibility of operation",
+        "b": "Financial dualism",
+        "c": "Well regulated financial system",
+        "d": "Catering the financial needs of modern economy"
+      },
+      "answer": "b",
+      "note": "'Financial dualism' is the standard term for coexistence of formal and informal finance."
+    },
+    {
+      "q_no": 55,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "As the economy weakens, one would expect investment of funds in _____ to increase and investment in _____ funds to decrease.",
+      "options": {
+        "a": "long term; short term",
+        "b": "equity; bond",
+        "c": "money market; mutual",
+        "d": "municipal bonds; money market mutual"
+      },
+      "answer": null,
+      "note": "Question stem and options are faint/partial in the scan; verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 56,
+      "exam_session": "June 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II: List-I Committee: A. Study of all aspects of Electronic fund transfer (EFT) B. Working group on NBFCs C. Suggest alternate methods of lending D. Expert group on foreign exchange markets / List-II Year: I. Rashid Jilani Committee (1992) II. Sodhani Committee (1994) III. Marathe Committee (1991) IV. Shere Committee (1995)",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-I, B-III, C-IV, D-II",
+        "c": "A-III, B-I, C-IV, D-II",
+        "d": "A-I, B-IV, C-III, D-II"
+      },
+      "list_1": {
+        "A": "Study of all aspects of Electronic fund transfer (EFT)",
+        "B": "Working group on NBFCs",
+        "C": "Suggest alternate methods of lending",
+        "D": "Expert group on foreign exchange markets"
+      },
+      "list_2": {
+        "I": "Rashid Jilani Committee (1992)",
+        "II": "Sodhani Committee (1994)",
+        "III": "Marathe Committee (1991)",
+        "IV": "Shere Committee (1995)"
+      },
+      "answer": null,
+      "note": "Committee-purpose mapping and lettering are not fully legible in the scan; verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 57,
+      "exam_session": "June 2023",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Sequence the following steps in the operational functioning of Asset Reconstruction Companies as per the SARFAESI Act, 2002: A. Charge a 2 percent management fee B. Issue security receipts to bank C. Make payment to bank D. Buys loans of bank at a discount E. Carry out the recovery",
+      "options": {
+        "a": "D,C,A,E,B",
+        "b": "D,B,E,A,C",
+        "c": "D,B,C,E,A",
+        "d": "D,A,B,E,C"
+      },
+      "answer": null,
+      "note": "Logical process order should be: buy loans at a discount (D) -> make payment to the bank (C) -> issue security receipts (B) -> charge management fee (A) -> carry out recovery (E); this does not exactly match any transcribed option, so the option lettering here is uncertain. Verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 58,
+      "exam_session": "June 2023",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Starting from the earliest, sequence the steps taken to develop the money market in India: A. Introduction of Interest Rate Swaps (IRSs) B. Introduction of Commercial Paper C. Introduction of Ways and Means Advances (WMA) linked to bank rate D. Introduction of Liquidity Adjustment Facility (LAF) E. Implementation of Real Time Gross Settlement (RTGS)",
+      "options": {
+        "a": "C,B,D,A,E",
+        "b": "D,C,B,E,A",
+        "c": "B,D,C,E,A",
+        "d": "B,C,A,D,E"
+      },
+      "answer": "d",
+      "note": "Commercial Paper was introduced 1990, WMA linked to Bank Rate in 1997, Interest Rate Swaps permitted 1999, LAF introduced 1999-2000, and RTGS implemented 2004.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 59,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "The Directorate General of Foreign Trade (DGFT) facilitates and promotes foreign trade in India and also implements the foreign trade policy of India. Which of the following union ministries governs the DGFT?",
+      "options": {
+        "a": "Ministry of Commerce and Industry",
+        "b": "Ministry of Science and Technology",
+        "c": "Ministry of Finance",
+        "d": "Ministry of External Affairs"
+      },
+      "answer": "a",
+      "note": "DGFT operates under the Ministry of Commerce and Industry."
+    },
+    {
+      "q_no": 60,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "From the following, which is an uncommon feature of Private Equity and Venture Capital?",
+      "options": {
+        "a": "Both invest in companies that are not able to or ready to gain capital from the public",
+        "b": "Their investment is used for financial or operating restructuring of the investee companies",
+        "c": "They are set up as independent pools of capital contributed by institutions or high net worth individuals",
+        "d": "Their activities are subject to few regulations"
+      },
+      "answer": "b",
+      "note": "Using investment for financial/operating restructuring of mature firms is characteristic of Private Equity, distinguishing it from Venture Capital (which funds early-stage growth) — making it the 'uncommon' (non-shared) feature."
+    },
+    {
+      "q_no": 61,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "In the context of banking sector, Spread is defined as a function of:",
+      "options": {
+        "a": "Forex",
+        "b": "Net Interest Income",
+        "c": "Rate Sensitive Assets",
+        "d": "Asset Ratio",
+        "e": "Leverage Ratio"
+      },
+      "answer": "b",
+      "note": "Spread (the gap between interest earned and interest paid) is closely tied to a bank's Net Interest Income."
+    },
+    {
+      "q_no": 62,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which are the RBI notified domestic accredited credit rating agencies? A. Brickwork ratings B. Active ratings C. CRISIL ratings D. Standard and Poor's E. Moody's",
+      "options": {
+        "a": "B and C only",
+        "b": "A and C only",
+        "c": "D and E only",
+        "d": "C and E only"
+      },
+      "answer": "b",
+      "note": "Brickwork Ratings and CRISIL are RBI-accredited domestic credit rating agencies; S&P and Moody's are international agencies."
+    },
+    {
+      "q_no": 63,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which is the legal framework governing Regional Rural Banks (RRBs)? A. Regional Rural Banks Act, 1976 B. Regional Rural Banks Act, 1966 C. Small Industries Development Bank of India Act, 1949 D. Banking Regulation Act, 1949 E. Indian Partnership Act, 1932",
+      "options": {
+        "a": "A and D only",
+        "b": "B and D only",
+        "c": "A and C only",
+        "d": "B and E only"
+      },
+      "answer": "a",
+      "note": "RRBs are governed by the Regional Rural Banks Act, 1976, and (like other banks) by the Banking Regulation Act, 1949."
+    },
+    {
+      "q_no": 64,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is a fully owned subsidiary of the RBI?",
+      "options": {
+        "a": "Indian Institute of Bank Management (IIBM)",
+        "b": "National Institute of Bank Management (NIBM)",
+        "c": "Indian Institute of Banking and Finance (IIBF)",
+        "d": "Indian Financial Technology and Allied Services (IFTAS)"
+      },
+      "answer": "d",
+      "note": "IFTAS is a wholly-owned RBI subsidiary set up for IT/technology services to the banking sector."
+    },
+    {
+      "q_no": 65,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which committee had recommended a comprehensive framework of reform in the insurance sector?",
+      "options": {
+        "a": "Ghosh Committee (1992)",
+        "b": "Sodhani Committee (1994)",
+        "c": "Malhotra Committee (1993)",
+        "d": "Kalia Committee (1994)"
+      },
+      "answer": "c",
+      "note": "The Malhotra Committee (1993) recommended comprehensive insurance sector reforms."
+    },
+    {
+      "q_no": 66,
+      "exam_session": "March 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the functions of Reserve Bank of India? A. Issue of Currency B. Accepting Deposits C. Banker to Government D. Credit Control",
+      "options": {
+        "a": "A and D only",
+        "b": "B and D only",
+        "c": "A and C only",
+        "d": "B and C only"
+      },
+      "answer": null,
+      "note": "RBI's core functions among these include issue of currency (A), banker to government (C), and credit control (D); accepting public deposits (B) is a commercial-bank function, not RBI's. The exact intended two-item combination in the source is unclear (A,C,D are all legitimate RBI functions); verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 67,
+      "exam_session": "March 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the advantages of Mobile Banking? A. Insecure B. Fraud reduction C. Time saving D. Separate internet required E. Increased efficiency",
+      "options": {
+        "a": "B, C and E only",
+        "b": "A, B and D only",
+        "c": "C, D and E only",
+        "d": "B, D and E only"
+      },
+      "answer": "a",
+      "note": "Fraud reduction, time saving, and increased efficiency are advantages; insecurity and needing separate internet access are drawbacks/requirements, not advantages."
+    },
+    {
+      "q_no": 68,
+      "exam_session": "March 2023",
+      "question_type": "Simple MCQ",
+      "question": "Average clause in insurance is applicable for which one of the following cases?",
+      "options": {
+        "a": "Double Insurance",
+        "b": "Re-insurance",
+        "c": "Over Insurance",
+        "d": "Under Insurance"
+      },
+      "answer": "d",
+      "note": "The 'average clause' applies in cases of under-insurance, proportionately reducing the claim payout."
+    },
+    {
+      "q_no": 69,
+      "exam_session": "March 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "For ongoing maintenance of regulatory capital, which of the following risks were covered by Pillar-1 Minimum Capital Requirement? A. Credit Risk B. Financial risk C. Operation Risk D. Market Risk E. Reputational Risk",
+      "options": {
+        "a": "A, C and D only",
+        "b": "A, B and D only",
+        "c": "B, C and E only",
+        "d": "A, C and E only"
+      },
+      "answer": "a",
+      "note": "Basel's Pillar 1 (Minimum Capital Requirements) covers Credit Risk, Operational Risk, and Market Risk."
+    },
+    {
+      "q_no": 70,
+      "exam_session": "March 2023",
+      "question_type": "Simple MCQ",
+      "question": "When the Central Bank conducts a sale of securities, the cash reserve of commercial banks shall:",
+      "options": {
+        "a": "Increase at slow rate",
+        "b": "Decrease",
+        "c": "Remain constant",
+        "d": "Increase at fast rate"
+      },
+      "answer": "b",
+      "note": "Open market sale of securities by the central bank absorbs liquidity, decreasing commercial banks' cash reserves."
+    },
+    {
+      "q_no": 71,
+      "exam_session": "October 2022",
+      "question_type": "Simple MCQ",
+      "question": "According to FEMA, foreign exchange does not include which one of the following?",
+      "options": {
+        "a": "Deposit payable in any foreign currency",
+        "b": "Bills of exchange drawn in Indian currency but payable in any foreign currency",
+        "c": "Traveller's cheques drawn by institutions outside India but payable in Indian currency",
+        "d": "Draft drawn by banks outside India and payable in Indian currency"
+      },
+      "answer": "d",
+      "note": "A mark in the source indicates option (d)."
+    },
+    {
+      "q_no": 72,
+      "exam_session": "October 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are subsidiaries of RBI? A. National Housing Bank (NHB) B. National Bank for Agriculture and Rural Development (NABARD) C. Export Import Bank (EXIM Bank) D. Deposit Insurance and Credit Guarantee Corporation of India (DICGC) E. Bhartiya Reserve Bank Note Mudran Private Limited (BRBNMPL)",
+      "options": {
+        "a": "A, B, C, D only",
+        "b": "A, B, D, E only",
+        "c": "B, C, D, E only",
+        "d": "D and E only"
+      },
+      "answer": "d",
+      "note": "DICGC and BRBNMPL are current wholly-owned RBI subsidiaries (RBI's shareholding in NHB and NABARD has since been transferred to the Government, and EXIM Bank was never RBI-owned).",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 73,
+      "exam_session": "October 2022",
+      "question_type": "Simple MCQ",
+      "question": "The Central Bank can significantly influence the savings, investments, and consumer spending in the economy through which one of the following policies?",
+      "options": {
+        "a": "Fiscal policy",
+        "b": "Monetary policy",
+        "c": "Industrial policy",
+        "d": "Foreign exchange policy"
+      },
+      "answer": "b",
+      "note": "Monetary policy (interest rates, money supply) is the central bank's main lever affecting savings, investment, and spending."
+    },
+    {
+      "q_no": 74,
+      "exam_session": "October 2022",
+      "question_type": "Statement-based (True/False)",
+      "question": "Which of the following statement(s) are correct? A. Asset liability management is a mechanism to address the risk arising due to mismatch of assets and liabilities B. Non-performing Assets (NPA) must be written off as loss in the financial year in which the NPA has been identified",
+      "options": {
+        "a": "A only",
+        "b": "B only",
+        "c": "Both A and B",
+        "d": "Neither A nor B"
+      },
+      "answer": "a",
+      "note": "Statement A correctly defines Asset-Liability Management. Statement B is false — NPAs are classified through stages (sub-standard, doubtful, loss) rather than being automatically written off the year they're identified."
+    },
+    {
+      "q_no": 75,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Banker's sale of a mortgage portfolio by setting up mortgage pass-through securities is an example of:",
+      "options": {
+        "a": "Credit enhancement",
+        "b": "Unbundling",
+        "c": "Derivatives",
+        "d": "Securitization"
+      },
+      "answer": "d",
+      "note": "Pooling and selling mortgages via pass-through securities is the classic example of securitization."
+    },
+    {
+      "q_no": 76,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Why do Central banks intervene to affect exchange rates? A. To influence domestic production B. To influence trade flows C. To influence domestic interest rates D. To inject liquidity in domestic markets E. To smoothen fluctuations in exchange rates",
+      "options": {
+        "a": "A, B and D only",
+        "b": "C, D and E only",
+        "c": "B, C and D only",
+        "d": "A, B and E only"
+      },
+      "answer": "d",
+      "note": "Central bank forex intervention is generally aimed at influencing domestic production/trade competitiveness (via trade flows) and smoothing exchange rate volatility."
+    },
+    {
+      "q_no": 77,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is an example of Secondary Reserves?",
+      "options": {
+        "a": "Cash in hand and balances with other banks in current accounts",
+        "b": "Balances with RBI for CRR",
+        "c": "Investment in commercial paper",
+        "d": "Investment in Government Securities for SLR"
+      },
+      "answer": "c",
+      "note": "Secondary reserves are liquid, income-earning assets (like commercial paper/T-bills) held beyond mandatory cash reserves."
+    },
+    {
+      "q_no": 78,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "If the subject matter of insurance is the ship, the marine insurance is called:",
+      "options": {
+        "a": "Cargo insurance",
+        "b": "Hull insurance",
+        "c": "Freight insurance",
+        "d": "Voyage insurance"
+      },
+      "answer": "b",
+      "note": "Insurance on the ship itself is Hull insurance (as opposed to Cargo insurance for goods carried)."
+    },
+    {
+      "q_no": 79,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "A spot sale of a currency combined with a forward repurchase of the same currency is called which one of the following?",
+      "options": {
+        "a": "Forex swap",
+        "b": "Swap rate",
+        "c": "Forward rate",
+        "d": "Spot rate"
+      },
+      "answer": "a",
+      "note": "Combining a spot transaction with an offsetting forward transaction in the same currency defines a forex swap."
+    },
+    {
+      "q_no": 80,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is a myth about rural markets?",
+      "options": {
+        "a": "All villages are not equally populated",
+        "b": "Rural buyers are a heterogeneous lot",
+        "c": "Rural buyers are able to discriminate between products and brands",
+        "d": "Only low-priced products sell in rural markets"
+      },
+      "answer": "d",
+      "note": "'Only low-priced products sell in rural markets' is the commonly cited myth — rural buyers do buy premium/branded products too."
+    },
+    {
+      "q_no": 81,
+      "exam_session": "November 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II (partially legible in the scan — table continues onto the next page)",
+      "options": {
+        "a": "Not legible",
+        "b": "Not legible",
+        "c": "Not legible",
+        "d": "Not legible"
+      },
+      "answer": null,
+      "note": "This question's table spans a page break in the scan and could not be reliably transcribed. Verify against the original source.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 82,
+      "exam_session": "November 2022",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Pricing of housing loan by a commercial bank may follow the following steps in a logical sequence: A. Competitive price determination B. Specification of spread C. Application of MCLR D. Conduct of Credit Assessment E. Quoting to prospective borrower",
+      "options": {
+        "a": "C,B,A,D,E",
+        "b": "A,B,D,C,E",
+        "c": "B,A,D,C,E",
+        "d": "D,C,B,A,E"
+      },
+      "answer": "d",
+      "note": "Logical order: conduct credit assessment -> apply MCLR -> specify the spread -> arrive at the competitive price -> quote it to the borrower."
+    },
+    {
+      "q_no": 83,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "The banks wherein a majority of depositors are non-residents are called:",
+      "options": {
+        "a": "Cross Payment Banks",
+        "b": "Currency Banks",
+        "c": "Foreign Banks",
+        "d": "Offshore Banks"
+      },
+      "answer": "d",
+      "note": "Offshore banks are defined by having predominantly non-resident depositors."
+    },
+    {
+      "q_no": 84,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Under which one of the following does the Basel framework place restrictions on participation by banks in system-wide credit booms with the aim of reducing their losses in a credit bust?",
+      "options": {
+        "a": "Catastrophic Reserve Capital",
+        "b": "Countercyclical Capital Buffer",
+        "c": "Deferred Capital",
+        "d": "Conservative Preference Capital"
+      },
+      "answer": "b",
+      "note": "Basel III's Countercyclical Capital Buffer is designed exactly for this purpose."
+    },
+    {
+      "q_no": 85,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Choose the correct options regarding banking: A. Chain banking indicates the form of bank cartel that occurs when a small group of people control at least three banks that are independently chartered B. PAN number is required for deposits in a commercial bank for Rs. 50,000 and above C. Upon detection of counterfeit notes at the counter, the bank can impound the note and issue a receipt D. The interest rate on bank's contribution to Rural Infrastructure Development Fund is fixed by NABARD E. RBI Act 1934 prohibits the making or issuing of promissory notes expressed to be payable to the bearer thereof",
+      "options": {
+        "a": "B, D and E only",
+        "b": "A, C and D only",
+        "c": "A, D and E only",
+        "d": "A, B and C only"
+      },
+      "answer": null,
+      "note": "Statements A, C, D, and E all appear individually accurate (chain banking definition, counterfeit note impounding, NABARD-fixed RIDF interest, and RBI Act s.26 restriction on bearer promissory notes); the exact 3-item combination intended is uncertain from the scan. Verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 86,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "The share capital of an RRB is subscribed by the Central Government, State Government, and the Sponsoring Bank in which one of the following ratios?",
+      "options": {
+        "a": "40:40:20",
+        "b": "50:15:35",
+        "c": "50:35:15",
+        "d": "60:30:10"
+      },
+      "answer": "b",
+      "note": "Standard RRB share capital ratio is 50% Centre : 15% State : 35% Sponsor bank."
+    },
+    {
+      "q_no": 87,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "RBI's Financial Inclusion Index (FI-Index) parameters capture information on which of the following? A. Financial B. Consumer protection C. Ease of access D. Availability and usage E. Inequality and deficiency in service",
+      "options": {
+        "a": "A, B and C only",
+        "b": "C, D and E only",
+        "c": "A, D and E only",
+        "d": "A, B and D only"
+      },
+      "answer": "d",
+      "note": "The FI-Index is built on three broad parameters — Access, Usage, and Quality — the 'Quality' dimension incorporates financial literacy and consumer protection; exact lettering match is uncertain from the scan.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 88,
+      "exam_session": "November 2022",
+      "question_type": "Statement-based (True/False)",
+      "question": "Given below are two statements: Statement I: In the case of Life Insurance, insurable interest must be present at the time when the event has happened to the person insured, or at the time when the policy is taken. Statement II: In the case of Fire Insurance, the insurable interest must be present in the object insured at the time the policy is taken and the event has happened. Choose the correct answer:",
+      "options": {
+        "a": "Both Statement I and Statement II are true",
+        "b": "Both Statement I and Statement II are false",
+        "c": "Statement I is true but Statement II is false",
+        "d": "Statement I is false but Statement II is true"
+      },
+      "answer": "a",
+      "note": "Both statements correctly describe when insurable interest must exist for life and fire insurance respectively."
+    },
+    {
+      "q_no": 89,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is used for international money transfer?",
+      "options": {
+        "a": "RTGS",
+        "b": "NEFT",
+        "c": "SWIFT",
+        "d": "IMPS"
+      },
+      "answer": "c",
+      "note": "SWIFT is the standard messaging network used for cross-border money transfers (RTGS, NEFT, and IMPS are domestic Indian systems)."
+    },
+    {
+      "q_no": 90,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the parameters in the Financial Inclusion Index in India? A. Affordability B. Availability and usage C. Ease of access D. Transparency and disclosure E. Quality of financial inclusion",
+      "options": {
+        "a": "A, B and C only",
+        "b": "C, D and E only",
+        "c": "A, B and D only",
+        "d": "B, C and E only"
+      },
+      "answer": "d",
+      "note": "RBI's FI-Index is built on Access (C), Usage (B), and Quality (E) as its three parameters."
+    },
+    {
+      "q_no": 91,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "SEBI's 'Skin in the game' rule is applicable to which of the following financial intermediaries?",
+      "options": {
+        "a": "Merchant bankers",
+        "b": "Financial Advisors",
+        "c": "Mutual funds",
+        "d": "Brokerages"
+      },
+      "answer": "c",
+      "note": "'Skin in the game' requires AMC key personnel to invest in the mutual fund schemes they manage."
+    },
+    {
+      "q_no": 92,
+      "exam_session": "November 2022",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Which of the following order is followed in the issue of shares under the 'Fixed Price Offer Method'? A. Issue of prospectus B. Receipt by the company of applications for shares C. Selection of merchant banker D. Issue of share certificates E. Allotment of shares to the applicant",
+      "options": {
+        "a": "A,D,E,C,B",
+        "b": "C,A,B,E,D",
+        "c": "C,B,A,D,E",
+        "d": "E,B,A,C,D"
+      },
+      "answer": "b",
+      "note": "Logical order: select merchant banker -> issue prospectus -> receive applications -> allot shares -> issue share certificates."
+    },
+    {
+      "q_no": 93,
+      "exam_session": "November 2021",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II: List-I: A. Bulk of Commercial Bank's Assets B. NBFC Service C. Non-Depository Institutions D. Depository Institution / List-II: I. Help to consumers II. Mutual saving bank III. Hire purchase IV. Mutual fund",
+      "options": {
+        "a": "A-I, B-III, C-IV, D-II",
+        "b": "A-II, B-I, C-III, D-IV",
+        "c": "A-I, B-II, C-III, D-IV",
+        "d": "A-IV, B-III, C-II, D-I"
+      },
+      "list_1": {
+        "A": "Bulk of Commercial Bank's Assets",
+        "B": "NBFC Service",
+        "C": "Non-Depository Institutions",
+        "D": "Depository Institution"
+      },
+      "list_2": {
+        "I": "Help to consumers",
+        "II": "Mutual saving bank",
+        "III": "Hire purchase",
+        "IV": "Mutual fund"
+      },
+      "answer": null,
+      "note": "Question number and option lettering are obscured in the scan; verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 94,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following is INCORRECT about the ways RBI can affect the structure of interest rates? A. By changing the treasury bill rate B. Blending lending and trading activities C. By changing the Bank rate D. Fixing the maximum interest on time deposits with the bank E. Ineffective tapping and mobilization of savings",
+      "options": {
+        "a": "A and D only",
+        "b": "A, C, D and E only",
+        "c": "B and E only",
+        "d": "D and E only"
+      },
+      "answer": null,
+      "note": "This is a 'which is INCORRECT' framing; RBI does affect rates via treasury bill rate, bank rate, and ceilings on deposit interest, so the incorrect items are likely among B/E. Exact answer not confirmed from the scan; verify.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 95,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the limitations in the creation of credit by commercial banks? A. The amount of cash that commercial banks possess B. Supply of collateral security C. Monetary policy of the central bank D. Allied deposits scheme E. Deposits linked with special benefits",
+      "options": {
+        "a": "A, C and E only",
+        "b": "A, B and C only",
+        "c": "C and D only",
+        "d": "B and E only"
+      },
+      "answer": null,
+      "note": "Cash availability, collateral security, and central bank monetary policy are standard textbook limitations on credit creation; exact option combination not confirmed from the scan. Verify.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 96,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is NOT a feature of the Indian capital market?",
+      "options": {
+        "a": "Co-promotes state-level venture funds",
+        "b": "Government rules and regulations",
+        "c": "Link between savers and investment opportunities",
+        "d": "Utilizes intermediaries"
+      },
+      "answer": "a",
+      "note": "Best guess based on a mark in the source; verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 97,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following statements is FALSE regarding transactions of Internet Banking?",
+      "options": {
+        "a": "Balance inquiry",
+        "b": "Statement of account for a specific period",
+        "c": "Transfer of funds from one account to another account",
+        "d": "Withdrawal of cash anywhere in India"
+      },
+      "answer": "d",
+      "note": "Physical cash withdrawal is not a function of internet banking (it requires an ATM/branch), so this is the false statement."
+    },
+    {
+      "q_no": 98,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "In Banking Technologies, Star Topology involves:",
+      "options": {
+        "a": "Devices are connected in a closed loop",
+        "b": "Devices on the network are connected to a single continuous cable",
+        "c": "Each node is joined to the central node by a separate medium",
+        "d": "Information is passed from one node to another in series"
+      },
+      "answer": "c",
+      "note": "Star topology's defining feature is each node having its own dedicated link to a central hub."
+    },
+    {
+      "q_no": 99,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "An economy grows at 5%, 12%, and 7% over the last three years. The average annual increase over this period would be:",
+      "options": {
+        "a": "8% or less",
+        "b": "At least 9%",
+        "c": "Equal to 8%",
+        "d": "Less than 9%"
+      },
+      "answer": "c",
+      "note": "(5+12+7)/3 = 8%."
+    },
+    {
+      "q_no": 100,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is considered a necessary precondition by Richard Roll for markets to become efficient?",
+      "options": {
+        "a": "Costless trading",
+        "b": "Free access to flow of information",
+        "c": "Prices approximate a random walk",
+        "d": "Traders who make a living by 'beating the market' through trading"
+      },
+      "answer": "a",
+      "note": "Costless (frictionless) trading is cited as a precondition for market efficiency; random-walk pricing is a consequence, not a precondition."
+    },
+    {
+      "q_no": 101,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is NOT a characteristic of mutual funds?",
+      "options": {
+        "a": "Consistent investment process",
+        "b": "Strong fund management",
+        "c": "Diversity in interest rates",
+        "d": "Differences from the benchmark"
+      },
+      "answer": "c",
+      "note": "Mutual funds diversify across securities/asset classes, not 'interest rates' as such."
+    },
+    {
+      "q_no": 102,
+      "exam_session": "November 2021",
+      "question_type": "Statement-based (True/False)",
+      "question": "Given below are two statements: Statement I: Capital market plays an important role in mobilising resources and diverting them into productive channels. Statement II: Capital market is a market where buyers and sellers engage in trade of financial securities like bonds, stocks, etc. Choose the correct answer:",
+      "options": {
+        "a": "Both Statement I and Statement II are true",
+        "b": "Both Statement I and Statement II are false",
+        "c": "Statement I is true but Statement II is false",
+        "d": "Statement I is false but Statement II is true"
+      },
+      "answer": "a",
+      "note": "Both statements are standard, accurate descriptions of the capital market."
+    },
+    {
+      "q_no": 103,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following statements is true about the risks considered for capital requirements under Basel III?",
+      "options": {
+        "a": "Credit risk, interest rate risk and foreign exchange risk",
+        "b": "Credit risk, market risk and operational risk",
+        "c": "Credit risk, political risk and country risk",
+        "d": "Credit risk, interest rate risk and political risk"
+      },
+      "answer": "b",
+      "note": "Basel's capital adequacy framework is built around credit risk, market risk, and operational risk."
+    },
+    {
+      "q_no": 104,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "The reasons put forth for the control over the activities of international banks are: (A) These banks encourage inflation by adding to the supply of money through credit creation (B) These banks are sometimes responsible for bank failures that hurt the interests of depositors (C) They cause unmanageable indebtedness among borrowing governments by aiding governments (D) They do not adhere to the credit allocation policy of the host government",
+      "options": {
+        "a": "(A) and (B) only",
+        "b": "(A), (B) and (C) only",
+        "c": "(B), (C) and (D) only",
+        "d": "(A), (B), (C) and (D)"
+      },
+      "answer": "d",
+      "note": "All four are commonly cited critiques/reasons for regulating international banks; marks in the source suggest all four apply.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 105,
+      "exam_session": "November 2021",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II (Risk / Description): A. Market risk B. Financial risk C. External business risk D. Internal business risk / I. Associated with efficiency in operations widened by improved upon control II. Arises due to change in operating conditions caused by conditions that are beyond control III. Variations in returns sparked off by real, social, political and economic events IV. Associated with capital structure of a firm",
+      "options": {
+        "a": "A-(I), B-(II), C-(III), D-(IV)",
+        "b": "A-(III), B-(IV), C-(I), D-(II)",
+        "c": "A-(III), B-(II), C-(I), D-(IV)",
+        "d": "A-(IV), B-(III), C-(II), D-(I)"
+      },
+      "list_1": {
+        "A": "Market risk",
+        "B": "Financial risk",
+        "C": "External business risk",
+        "D": "Internal business risk"
+      },
+      "list_2": {
+        "I": "Associated with efficiency in operations, widened or narrowed by improved control",
+        "II": "Arises due to change in operating conditions caused by conditions that are beyond control",
+        "III": "Variations in returns sparked off by real, social, political and economic events",
+        "IV": "Associated with the capital structure of a firm"
+      },
+      "answer": "b",
+      "note": "Market risk relates to real/social/political/economic variations (III), financial risk relates to a firm's capital structure (IV), external business risk arises from conditions beyond control (I), internal business risk relates to operational efficiency/control (II)."
+    },
+    {
+      "q_no": 106,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is NOT a service provided under NBFCs?",
+      "options": {
+        "a": "Leasing services",
+        "b": "Implementing modernisation services",
+        "c": "Asset management services",
+        "d": "Mutual benefit finance services bank"
+      },
+      "answer": "b",
+      "note": "'Implementing modernisation services' is not a recognised category of NBFC service, unlike leasing, asset management, and mutual benefit finance company (Nidhi) functions."
+    },
+    {
+      "q_no": 107,
+      "exam_session": "November 2021",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps in a logical sequence of debt recovery by financial institutions through Debt Recovery Tribunals (DRTs): (I) Restrain him from dealing with/disposing of the concerned assets/properties pending at the hearing of the application (II) Direct him to disclose particulars of properties other than those specified by the applicant bank (III) Show cause within 30 days as to why the relief should not be granted to the bank",
+      "options": {
+        "a": "(I),(II),(III)",
+        "b": "(III),(I),(II)",
+        "c": "(I),(III),(II),(I)",
+        "d": "(III),(II),(I)"
+      },
+      "answer": null,
+      "note": "Sequence text is not fully legible in the scan (steps appear cut off/repeated); verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 108,
+      "exam_session": "November 2021",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps in the logical sequence of operations for the registration of portfolio managers: 1. Prior approval of the SEBI 2. Adequate steps for redressal of investors' grievances 3. Maintenance of the specified capital adequacy requirements 4. Payment of Fee 5. Abide by the regulations under the SEBI Act",
+      "options": {
+        "a": "3,5,1,2,4",
+        "b": "4,1,2,5,3",
+        "c": "1,3,4,1,2",
+        "d": "1,4,2,3,5"
+      },
+      "answer": "d",
+      "note": "Logical order: prior SEBI approval -> payment of fee -> maintain capital adequacy -> investor grievance redressal mechanisms -> ongoing compliance with SEBI Act regulations.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 109,
+      "exam_session": "November 2021",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II: List-I Act: A. Insurance Act B. Life Insurance Act C. Motor Vehicle Act D. Marine Insurance Act / List-II Year: I. 1938 II. 1956 III. 1939 IV. 1963",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-I, B-III, C-IV, D-II",
+        "c": "A-III, B-I, C-IV, D-II",
+        "d": "A-I, B-IV, C-II, D-III"
+      },
+      "list_1": {
+        "A": "Insurance Act",
+        "B": "Life Insurance Act",
+        "C": "Motor Vehicle Act",
+        "D": "Marine Insurance Act"
+      },
+      "list_2": {
+        "I": "1938",
+        "II": "1956",
+        "III": "1939",
+        "IV": "1963"
+      },
+      "answer": null,
+      "note": "The Insurance Act, 1938, LIC Act, 1956, and Marine Insurance Act, 1963 are correct dates; the Motor Vehicles Act referenced here is 1939 (predecessor to 1988 Act), but exact option lettering could not be confirmed from the scan. Verify.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 110,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following statements is/are false regarding transactions of Internet Banking?  I. Funds/securities settlement may not be effected in the case of securities trading business II. Provide information for determining the adequacy of loan loss provisions",
+      "options": {
+        "a": "1, 2 and 3 only",
+        "b": "1, 3 and 4 only",
+        "c": "2 and 3 only",
+        "d": "1 only"
+      },
+      "answer": null,
+      "note": "This item's stem/options are faint and only partially legible in the scan; verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 111,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following statements is not true about the Indian Money Market? 1. Profitable investment 2. Dichotomy in the Indian Money Market 3. Financing Industry 4. Diversity in interest rates",
+      "options": {
+        "a": "1, 2 and 3 only",
+        "b": "2 and 4 only",
+        "c": "1, 2 and 4 only",
+        "d": "2 and 4 only"
+      },
+      "answer": "d",
+      "note": "A duality/dichotomy in the market and diversity in interest rates are the classic textbook features of Indian money market defects — verify combination against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 112,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following statements are false regarding the electronic purse? Indicate the correct code: 1. Retinal pattern verification 2. Visual recognition 3. No risk of bad payment 4. Method of accepting payments with no cash flow to manage and no risk of theft",
+      "options": {
+        "a": "1, 2 and 3 only",
+        "b": "2, 3 and 4 only",
+        "c": "1 and 2 only",
+        "d": "3 and 4 only"
+      },
+      "answer": null,
+      "note": "Question stem/options are faint in the scan; verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 113,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following forms may not result in credit risk? 1. Principal and/or interest amount may not be repaid in the case of direct lending 2. In case of guarantees or letters of credit, funds may not be forthcoming from the constituents upon crystallization of the liability",
+      "options": {
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
+      },
+      "answer": null,
+      "note": "Question is phrased as 'may not result in credit risk' but both listed scenarios are classic credit-risk situations; exact intended answer is unclear from the scan. Verify.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 114,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Financial crises take the form of: A. Currency crisis B. Banking crisis C. Systemic financial crisis D. Foreign debt crisis",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, B and D only",
+        "c": "B, C and D only",
+        "d": "A, B, C and D"
+      },
+      "answer": "d",
+      "note": "All four (currency crisis, banking crisis, systemic financial crisis, and foreign/sovereign debt crisis) are recognised categories of financial crises."
+    },
+    {
+      "q_no": 115,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following statements is NOT true about the Indian Money Market?",
+      "options": {
+        "a": "Non-Banking Finance Companies (NBFCs) are financial institutions that constitute an organized component of the money market",
+        "b": "Money market mutual funds are allowed to sell units to corporates and individuals",
+        "c": "A well-developed money market is essential for a modern economy",
+        "d": "In the Indian Money Market, the predominant place is enjoyed by government and semi-government securities"
+      },
+      "answer": "a",
+      "note": "NBFCs have traditionally been treated as part of the unorganized/semi-organized segment of the Indian money market, not the organized component — making this the false statement."
+    },
+    {
+      "q_no": 116,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is NOT an advantage of the Derivatives market?",
+      "options": {
+        "a": "Leveraging increases risk",
+        "b": "They enhance liquidity in the market for underlying assets",
+        "c": "They represent a form of insurance against risks",
+        "d": "They reduce price volatility"
+      },
+      "answer": "a",
+      "note": "Leveraging increasing risk is a drawback, not an advantage, of derivatives."
+    },
+    {
+      "q_no": 117,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following statements is correct relating to the Indian Financial System?",
+      "options": {
+        "a": "RBI has direct supervision over depositories and mutual funds",
+        "b": "Monetary control is exercised through cash reserve ratio and statutory liquidity ratio",
+        "c": "Primary dealers mainly deal in shares and mutual fund units",
+        "d": "The decrease in statutory liquidity ratio contracts credit creation"
+      },
+      "answer": "b",
+      "note": "CRR and SLR are RBI's classic quantitative monetary-control tools; the other statements are false (SEBI, not RBI, regulates depositories/mutual funds; primary dealers deal in government securities; a lower SLR expands, not contracts, credit creation)."
+    },
+    {
+      "q_no": 118,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Under the Basel-I Accord, BCBS fixed the minimum requirement of capital fund for banks at:",
+      "options": {
+        "a": "8 percent of the total risk-weighted assets",
+        "b": "9 percent of the total risk-weighted assets",
+        "c": "10 percent of the total risk-weighted assets",
+        "d": "1000 crore"
+      },
+      "answer": "a",
+      "note": "Basel I set the minimum Capital Adequacy Ratio at 8% of risk-weighted assets."
+    },
+    {
+      "q_no": 119,
+      "exam_session": "October 2020",
+      "question_type": "Assertion-Reason",
+      "question": "Assertion (A): Credit flows to agriculture and priority sectors have increased in recent years. Reasoning (R): Reserve Bank of India has gradually relaxed various controls in the credit market.",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "Both A and R are false"
+      },
+      "answer": "a",
+      "note": "Both the assertion and reason are accurate, and the relaxation of credit-market controls is a recognised driver of increased priority-sector credit flow."
+    },
+    {
+      "q_no": 120,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Reverse Repo Rate is a tool used by RBI primarily to:",
+      "options": {
+        "a": "Inject liquidity",
+        "b": "Absorb liquidity",
+        "c": "Protect bank credit",
+        "d": "Build reserve"
+      },
+      "answer": "b",
+      "note": "Under reverse repo, RBI borrows from banks, absorbing (mopping up) excess liquidity from the system."
+    },
+    {
+      "q_no": 121,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following apply to steps taken to alleviate the financial stress of borrowers at the bottom of the pyramid, by reducing their cost of credit in view of the COVID-19 pandemic? A. A generic loan moratorium to all borrowers B. Two percent interest subvention on Kisan Credit Cards under the Pradhan Mantri Kisan Samman Nidhi C. Provisioning Rs. 1,500 Crore for the Animal Husbandry Infrastructure Development Fund (AHIDF) to help investment in dairying, meat processing, and animal feed plants D. Financial incentives to Farmer Producer Organizations (FPOs) and Micro, Small and Medium Enterprises (MSMEs)",
+      "options": {
+        "a": "A, B and C only",
+        "b": "B and C only",
+        "c": "A, B, C and D",
+        "d": "D only"
+      },
+      "answer": "b",
+      "note": "The KCC interest subvention (B) and AHIDF provisioning (C) were the targeted cost-of-credit relief steps; the generic moratorium (A) covered all borrowers rather than specifically reducing cost of credit, and D relates to broader financial incentives rather than credit cost.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 122,
+      "exam_session": "October 2020",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the items of List-I with the items of List-II and suggest the correct code: List-I: A. Relationship Banking B. Merchant Banking C. Indigenous Banking D. Development Banking / List-II: I. Dealing in hundis and acceptance of deposits II. Widening the entrepreneurial base and assisting a rapid rate of industrial growth III. Engaged in the business of capital management IV. Creating, maintaining and enhancing strong relationships with customers",
+      "options": {
+        "a": "A-IV, B-III, C-I, D-II",
+        "b": "A-II, B-III, C-I, D-IV",
+        "c": "A-IV, B-I, C-III, D-II",
+        "d": "A-III, B-IV, C-II, D-I"
+      },
+      "list_1": {
+        "A": "Relationship Banking",
+        "B": "Merchant Banking",
+        "C": "Indigenous Banking",
+        "D": "Development Banking"
+      },
+      "list_2": {
+        "I": "Dealing in hundis and acceptance of deposits",
+        "II": "Widening the entrepreneurial base and assisting a rapid rate of industrial growth",
+        "III": "Engaged in the business of capital management",
+        "IV": "Creating, maintaining and enhancing strong relationships with customers"
+      },
+      "answer": "a",
+      "note": "Relationship Banking centres on customer relationships (IV), Merchant Banking is about capital management (III), Indigenous Banking deals in hundis/deposits (I), and Development Banking widens the entrepreneurial base (II)."
+    },
+    {
+      "q_no": 123,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following industry verticals received a boost amid the COVID-19 pandemic lockdown? A. Online education, gaming and entertainment B. E-Commerce and E-Payment infrastructure C. Retailing and pharmaceuticals D. Hospitality and healthcare services E. Manufacturing and MSMEs",
+      "options": {
+        "a": "A, B, C and D only",
+        "b": "A, B and C only",
+        "c": "B, C and D only",
+        "d": "A, B, C, D and E"
+      },
+      "answer": "a",
+      "note": "Marks in the source indicate online education/entertainment, e-commerce/e-payments, retail/pharma, and hospitality/healthcare (A-D) were boosted; manufacturing/MSMEs (E) were generally hit hard by the lockdown rather than boosted.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 124,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "In order to calculate the Capital Adequacy Ratio, banks are required to take into consideration which of the following risks? A. Credit risk B. Market risk C. Operational risk",
+      "options": {
+        "a": "A and C only",
+        "b": "A and B only",
+        "c": "B and C only",
+        "d": "A, B and C only"
+      },
+      "answer": "d",
+      "note": "CAR calculation under Basel norms factors in credit risk, market risk, and operational risk."
+    },
+    {
+      "q_no": 125,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following truly describe government intervention in the MSME space in view of the COVID-19 pandemic? A. Provisioning of collateral-free automatic loans worth Rs. 3 lakh crore B. Provision of 100% credit guarantee coverage to banks and NBFCs on principal and interest for loans to NBFCs C. Redefined MSMEs to include both investment and turnover criteria D. Created a war chest of Rs. 3,00,000 crore for MSME and employment protection E. Allocated Rs. 3,00,000 crore for MSME loans, moratorium and waiver",
+      "options": {
+        "a": "A, B and C only",
+        "b": "B, C and D only",
+        "c": "A, C and D only",
+        "d": "A, B, C, D and E"
+      },
+      "answer": "a",
+      "note": "Collateral-free automatic loans (Rs. 3 lakh crore), 100% credit guarantee coverage, and the redefinition of MSMEs on investment/turnover criteria were all part of India's Atmanirbhar Bharat COVID relief package.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 126,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Basel III capital regulations are based on which three mutually reinforcing pillars? A. Minimum capital standards B. Supervisory review of capital adequacy C. Credit risk management D. Market discipline E. Management control",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, B and D only",
+        "c": "C, D and E only",
+        "d": "A, C and E only"
+      },
+      "answer": "b",
+      "note": "Basel III's three pillars are Minimum Capital Requirements, Supervisory Review Process, and Market Discipline."
+    },
+    {
+      "q_no": 127,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which among the following are correct statements with regard to NBFCs in India? A. All NBFCs should be registered with RBI B. NBFCs cannot accept demand deposits C. NBFCs do not form part of the payment and settlement system and cannot issue cheques drawn on themselves D. The Deposit Insurance facility of the Deposit Insurance and Credit Guarantee Corporation is not available to depositors of NBFCs",
+      "options": {
+        "a": "A, B and C only",
+        "b": "B, C and D only",
+        "c": "A, B and D only",
+        "d": "A, B, C and D"
+      },
+      "answer": "d",
+      "note": "All four are correct, well-established statements about the regulatory treatment of NBFCs in India."
+    },
+    {
+      "q_no": 128,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following financial institutions merged with their subsidiary?",
+      "options": {
+        "a": "UTI",
+        "b": "IFCI, ICICI",
+        "c": "ICICI, Global Trust Bank",
+        "d": "ICICI"
+      },
+      "answer": null,
+      "note": "ICICI Ltd. merged with its subsidiary ICICI Bank in 2002; exact option wording/lettering is unclear from the scan. Verify.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 129,
+      "exam_session": "October 2020",
+      "question_type": "Chronological Sequencing",
+      "question": "Arrange the following initiatives taken by the Government of India to tackle Non-Performing Assets (NPAs) in ascending chronological order: A. Corporate Debt Restructuring B. Compromise Settlement C. The Debt Recovery Tribunals (DRTs) D. Credit Information Bureau E. SARFAESI Act",
+      "options": {
+        "a": "C,D,B,A,E",
+        "b": "A,B,D,C,E",
+        "c": "D,C,B,A,E",
+        "d": "C,D,A,B,E"
+      },
+      "answer": "a",
+      "note": "Debt Recovery Tribunals (1993) -> Credit Information Bureau/CIBIL (2000) -> Compromise Settlement schemes -> Corporate Debt Restructuring (2001) -> SARFAESI Act (2002)."
+    },
+    {
+      "q_no": 130,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is a long-term source of finance?",
+      "options": {
+        "a": "Commercial Paper (CP)",
+        "b": "External Commercial Borrowings (ECB)",
+        "c": "Factoring",
+        "d": "Line of Credit (LOC)"
+      },
+      "answer": "b",
+      "note": "ECBs are long-term/medium-term borrowings; CP, factoring, and LOC are short-term financing instruments."
+    },
+    {
+      "q_no": 131,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "What is a 'Repo Rate'?",
+      "options": {
+        "a": "The rate at which RBI lends to the Government",
+        "b": "The rate at which international agencies lend to RBI",
+        "c": "The rate at which the RBI lends to banks against short-term maturity",
+        "d": "The rate at which RBI borrows funds from banks in the country"
+      },
+      "answer": "c",
+      "note": "Repo Rate is the rate at which RBI lends short-term funds to commercial banks against government securities."
+    },
+    {
+      "q_no": 132,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Objectives of IMPS (Immediate Payment Service) are: A. To enable bank customers to use mobile instruments as a channel for accessing their accounts and remit funds 24x7 B. Making payments simpler, just with the mobile number of the beneficiary C. To build the foundation for a full range of mobile-based banking services D. To create competition with NEFT and RTGS",
+      "options": {
+        "a": "A, B and C only",
+        "b": "B, C and D only",
+        "c": "A, B and D only",
+        "d": "B and C only"
+      },
+      "answer": "a",
+      "note": "IMPS's stated objectives are 24x7 mobile-based fund access, payment simplicity, and building a foundation for mobile banking — not explicitly to compete with NEFT/RTGS."
+    },
+    {
+      "q_no": 133,
+      "exam_session": "December 2019",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following types of cyber attacks may occur in the process of mobile banking? A. Backdoor attack B. Front door attack C. Denial of service attack D. Direct access attack",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, C and D only",
+        "c": "B, C and D only",
+        "d": "A, B, C and D"
+      },
+      "answer": null,
+      "note": "Question framing ('three of the following') and exact option combination are unclear from the scan; backdoor, denial-of-service, and direct access attacks are recognised mobile-banking cyber threats. Verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 134,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "The National Housing Bank (NHB) was established in 1987 as a wholly-owned subsidiary of which of the following?",
+      "options": {
+        "a": "State Bank of India",
+        "b": "Life Insurance Corporation of India",
+        "c": "Reserve Bank of India",
+        "d": "Industrial Finance Corporation of India"
+      },
+      "answer": "c",
+      "note": "NHB was originally set up as a wholly-owned RBI subsidiary (ownership later transferred to the Government of India in 2019)."
+    },
+    {
+      "q_no": 135,
+      "exam_session": "December 2019",
+      "question_type": "Chronological Sequencing",
+      "question": "Arrange the following financial institutions in ascending order of establishment: A. National Housing Bank B. Export-Import Bank of India C. NABARD D. Unit Trust of India",
+      "options": {
+        "a": "B,D,C,A",
+        "b": "D,B,A,C",
+        "c": "A,D,B,C",
+        "d": "D,B,C,A"
+      },
+      "answer": "d",
+      "note": "UTI: 1964, EXIM Bank: 1982, NABARD: 1982, NHB: 1988."
+    },
+    {
+      "q_no": 136,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is NOT a type of capital market instrument?",
+      "options": {
+        "a": "Equity shares",
+        "b": "Debentures",
+        "c": "Commercial Paper",
+        "d": "Preference shares"
+      },
+      "answer": "c",
+      "note": "Commercial Paper is a money market (short-term) instrument, not a capital market instrument."
+    },
+    {
+      "q_no": 137,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "Which among the following is NOT a correct statement?",
+      "options": {
+        "a": "The Reserve Bank of India worked as the Central Bank of Burma till April 1947",
+        "b": "The Reserve Bank of India worked as the Central Bank of Pakistan till June 1948",
+        "c": "The Reserve Bank of India worked as the Central Bank of Bangladesh from January 1972 to December 1975",
+        "d": "The Reserve Bank of India commenced its operations on April 1, 1935"
+      },
+      "answer": "c",
+      "note": "RBI never served as the central bank of Bangladesh — Bangladesh Bank was established as its own central bank in December 1971, right after independence."
+    },
+    {
+      "q_no": 138,
+      "exam_session": "December 2019",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Non-Banking Financial Companies can be classified as: A. Asset Finance Company (AFC) B. Investment Company (IC) C. Loan Company (LC) D. Foreign Trade Company (FTC)",
+      "options": {
+        "a": "A, B and C only",
+        "b": "B, C and D only",
+        "c": "A, C and D only",
+        "d": "A, B and D only"
+      },
+      "answer": "a",
+      "note": "AFC, IC, and LC are recognised NBFC categories; 'Foreign Trade Company' is not an NBFC classification."
+    },
+    {
+      "q_no": 139,
+      "exam_session": "December 2019",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the following Banking Sector reform committees with their respective purposes: List-I Committee: A. T.V. Reddy Committee B. Ranbir Dilani Committee C. S.M. Kelkar Committee D. I.T. Vaz Committee / List-II Purpose: I. Revised method of lending in place of cash-credit system II. Rationalisation of interest rate on small savings III. Working capital lending norms IV. Regional Rural Banks",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-I, C-IV, D-III",
+        "c": "A-III, B-IV, C-I, D-II",
+        "d": "A-IV, B-III, C-II, D-I"
+      },
+      "list_1": {
+        "A": "T.V. Reddy Committee",
+        "B": "Ranbir Dilani Committee",
+        "C": "S.M. Kelkar Committee",
+        "D": "I.T. Vaz Committee"
+      },
+      "list_2": {
+        "I": "Revised method of lending in place of cash-credit system",
+        "II": "Rationalisation of interest rate on small savings",
+        "III": "Working capital lending norms",
+        "IV": "Regional Rural Banks"
+      },
+      "answer": null,
+      "note": "Committee names and mapping are largely illegible in the scan; verify against official key.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 140,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "Choose the INCORRECT statement:",
+      "options": {
+        "a": "28 Day T-bills were introduced in 1998",
+        "b": "364 Days T-bills were introduced in 1992",
+        "c": "182 Days T-bills were introduced in 1996",
+        "d": "273 Days T-bills were introduced in 2000"
+      },
+      "answer": "c",
+      "note": "182-day T-bills were reintroduced in 1999 (not 1996) after having been discontinued earlier, making this the incorrect statement; low confidence given scan legibility.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 141,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "14-Day Intermediate Treasury Bills were brought into effect from 1996-97 after the abolition of which of the following?",
+      "options": {
+        "a": "91 Days T-bills",
+        "b": "182 Days T-bills",
+        "c": "273 Days T-bills",
+        "d": "364 Days T-bills"
+      },
+      "answer": "a",
+      "note": "The 14-day Intermediate Treasury Bill replaced the system of ad hoc/91-day Treasury Bills used for financing government deficits.",
+      "ocr_incomplete": true
+    },
+    {
+      "q_no": 142,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "Which among the following is NOT true about BASEL?",
+      "options": {
+        "a": "Initially, it was named the Committee on Banking Regulations and Supervisory Practices",
+        "b": "BASEL was established by the Central Bank Governors of fifteen countries",
+        "c": "It was established at the end of 1974",
+        "d": "Disturbances in international currency and banking markets were responsible for its establishment"
+      },
+      "answer": "b",
+      "note": "The Basel Committee was originally established by the central bank governors of the G10 countries (ten, not fifteen)."
+    },
+    {
+      "q_no": 143,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "question": "Creditworthiness score in India ranges between:",
+      "options": {
+        "a": "300 to 600",
+        "b": "300 to 900",
+        "c": "500 to 1000",
+        "d": "900 to 1600"
+      },
+      "answer": "b",
+      "note": "Standard CIBIL/credit scores in India range from 300 to 900."
+    },
+    {
+      "q_no": 144,
+      "exam_session": "June 2019",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "New reforms in the Indian banking system include: A. Digitisation of bank operations B. Banking consolidation C. Borrowing from Government D. Agency work",
+      "options": {
+        "a": "A and B",
+        "b": "C and D",
+        "c": "B and D",
+        "d": "A, B and C"
+      },
+      "answer": "a",
+      "note": "Digitisation and consolidation (merger) of banks are the widely cited recent reforms; borrowing from government and agency work are not reform measures."
+    },
+    {
+      "q_no": 145,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "question": "SIDBI was set up as a subsidiary of IDBI to:",
+      "options": {
+        "a": "Take over the functions of small business financing of IDBI",
+        "b": "Take over the venture capital operations of IDBI",
+        "c": "Reconstruct and rehabilitate the sick and closed industrial units financed by IDBI",
+        "d": "Facilitate, finance and promote India's foreign trade"
+      },
+      "answer": "a",
+      "note": "SIDBI was carved out of IDBI specifically to take over small-scale/MSME financing."
+    },
+    {
+      "q_no": 146,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is used for international money transfer?",
+      "options": {
+        "a": "RTGS",
+        "b": "NEFT",
+        "c": "SWIFT",
+        "d": "DD"
+      },
+      "answer": "c",
+      "note": "SWIFT is the network used for international money transfer messaging."
+    },
+    {
+      "q_no": 147,
+      "exam_session": "June 2019",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are included in the digital payment system? A. RTGS B. NEFT C. SWIFT D. Cheque",
+      "options": {
+        "a": "A, C and D only",
+        "b": "B and D only",
+        "c": "A and B only",
+        "d": "B, C and D only"
+      },
+      "answer": "c",
+      "note": "RTGS and NEFT are India's core digital fund-transfer systems; cheques are a paper instrument, and SWIFT is a messaging network rather than a domestic payment system.",
+      "ocr_incomplete": true
+    }
+  ]
+}

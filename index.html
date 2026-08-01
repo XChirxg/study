@@ -1,0 +1,3954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UGC NET Commerce PYQ Practice Portal</title>
+  
+  <!-- FontAwesome Icons & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Theme colors - Pure Black AMOLED Mode */
+      --bg-color: #000000;
+      --bg-gradient: linear-gradient(180deg, #000000 0%, #05050a 100%);
+      --card-bg: #0c0c0e;
+      --card-hover-bg: #121216;
+      --card-border: rgba(255, 255, 255, 0.12);
+      --card-border-hover: rgba(139, 92, 246, 0.6);
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      
+      --primary: #8b5cf6; /* Violet accent */
+      --primary-glow: rgba(139, 92, 246, 0.3);
+      --primary-hover: #7c3aed;
+      
+      --correct: #10b981; /* Emerald */
+      --correct-glow: rgba(16, 185, 129, 0.25);
+      --incorrect: #ef4444; /* Rose */
+      --incorrect-glow: rgba(239, 68, 68, 0.25);
+      --warning: #f59e0b; /* Amber */
+      
+      /* Claude AI-like Typography: Serif Lora for reading content, Inter/Outfit for UI */
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-serif: 'Lora', 'Georgia', 'Charter', serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --shadow-indigo: 0 10px 25px -5px rgba(139, 92, 246, 0.2);
+    }
+
+    .light-mode {
+      --bg-color: #fafafa;
+      --bg-gradient: linear-gradient(180deg, #fafafa 0%, #f4f4f5 100%);
+      --card-bg: #ffffff;
+      --card-hover-bg: #fafafa;
+      --card-border: rgba(0, 0, 0, 0.08);
+      --card-border-hover: rgba(139, 92, 246, 0.4);
+      --text-main: #18181b;
+      --text-muted: #71717a;
+      --shadow-indigo: 0 10px 25px -5px rgba(139, 92, 246, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-sans);
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background: var(--bg-color);
+      background-image: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    header {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.3);
+    }
+    .light-mode header {
+      background: rgba(241, 245, 249, 0.3);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    button.icon-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      box-shadow: var(--shadow-sm);
+    }
+    button.icon-btn:hover {
+      background: var(--card-hover-bg);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* GLASS CARD STYLE */
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 1.5rem;
+    }
+
+    /* DASHBOARD */
+    .dashboard-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .dashboard-subtitle {
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .unit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .unit-card {
+      position: relative;
+      cursor: pointer;
+      transform: translateY(0);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .unit-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--card-border-hover);
+      box-shadow: var(--shadow-indigo);
+    }
+
+    .unit-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .unit-badge {
+      background: rgba(99, 102, 241, 0.15);
+      color: #818cf8;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.3rem 0.6rem;
+      border-radius: 8px;
+      text-transform: uppercase;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .status-online { color: var(--correct); }
+    .status-offline { color: var(--text-muted); }
+    .status-uploaded { color: var(--warning); }
+
+    .unit-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .unit-stats {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .unit-footer {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: auto;
+    }
+
+    /* BUTTONS */
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      border: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.4);
+    }
+    .btn-primary:hover:not(:disabled) {
+      background: var(--primary-hover);
+      box-shadow: 0 6px 20px 0 rgba(99, 102, 241, 0.6);
+      transform: translateY(-1px);
+    }
+    .btn-primary:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+    }
+    .btn-secondary:hover:not(:disabled) {
+      background: var(--card-hover-bg);
+      border-color: var(--text-muted);
+    }
+
+    .btn-small {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      border-radius: 8px;
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* UPLOAD FALLBACK SECTION */
+    .upload-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed var(--card-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      cursor: pointer;
+    }
+    .upload-container:hover {
+      border-color: var(--primary);
+      background: rgba(99, 102, 241, 0.03);
+    }
+    .upload-container i {
+      font-size: 2rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .upload-input {
+      display: none;
+    }
+
+    /* SETTINGS AND CONFIG MODAL */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(2, 6, 17, 0.8);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 1rem;
+    }
+
+    .modal-content {
+      max-width: 500px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.75rem;
+    }
+    .modal-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .form-select, .form-input {
+      width: 100%;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 0.75rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .light-mode .form-select, .light-mode .form-input {
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .form-select:focus, .form-input:focus {
+      border-color: var(--primary);
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    .checkbox-group input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--primary);
+    }
+
+    /* QUIZ WORKSPACE */
+    .quiz-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .quiz-layout {
+        grid-template-columns: 3fr 1fr;
+      }
+    }
+
+    .quiz-main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .quiz-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* QUESTION PANEL */
+    .question-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      align-items: center;
+    }
+    
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+    }
+    .badge-primary { background: rgba(99, 102, 241, 0.2); color: #818cf8; }
+    .badge-warning { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+    .badge-info { background: rgba(14, 165, 233, 0.2); color: #38bdf8; }
+
+    .question-text {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 500;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+      color: var(--text-main);
+    }
+
+    /* ANSWER OPTIONS GENERAL */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .option-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      position: relative;
+      overflow: hidden;
+      transform: scale(1);
+      transition: transform 0.1s ease, border-color 0.2s, background-color 0.2s;
+    }
+    .option-card:hover {
+      background: var(--card-hover-bg);
+      border-color: var(--primary-glow);
+    }
+    .option-card:active {
+      transform: scale(0.99);
+    }
+
+    .option-letter {
+      background: rgba(255, 255, 255, 0.08);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: 0.85rem;
+    }
+    .option-content {
+      font-size: 1.05rem;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    /* SELECTED STATE */
+    .option-card.selected {
+      border-color: var(--primary);
+      background: rgba(99, 102, 241, 0.1);
+    }
+    .option-card.selected .option-letter {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* CORRECT STATE */
+    .option-card.correct {
+      border-color: var(--correct);
+      background: rgba(16, 185, 129, 0.1);
+      box-shadow: 0 0 12px var(--correct-glow);
+    }
+    .option-card.correct .option-letter {
+      background: var(--correct);
+      color: #fff;
+    }
+
+    /* INCORRECT STATE */
+    .option-card.incorrect {
+      border-color: var(--incorrect);
+      background: rgba(239, 68, 68, 0.1);
+      box-shadow: 0 0 12px var(--incorrect-glow);
+    }
+    .option-card.incorrect .option-letter {
+      background: var(--incorrect);
+      color: #fff;
+    }
+
+    /* OPTION & STATEMENT ELIMINATION STYLING */
+    .faded {
+      opacity: 0.35 !important;
+      text-decoration: line-through;
+      background: rgba(255, 255, 255, 0.01) !important;
+      border-color: rgba(255, 255, 255, 0.05) !important;
+      box-shadow: none !important;
+    }
+    .eliminate-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.95rem;
+      transition: color 0.2s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.6;
+    }
+    .eliminate-btn:hover {
+      color: var(--incorrect);
+      transform: scale(1.2);
+      opacity: 1;
+    }
+
+    /* ASSERTION-REASONING STYLING */
+    .ar-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .ar-box {
+      border-left: 4px solid var(--primary);
+      padding: 1rem;
+      border-radius: 0 12px 12px 0;
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .ar-assertion { border-color: #38bdf8; }
+    .ar-reason { border-color: #c084fc; }
+    
+    .ar-label {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.05em;
+    }
+    .ar-assertion .ar-label { color: #38bdf8; }
+    .ar-reason .ar-label { color: #c084fc; }
+    .ar-content {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    /* MULTI-SELECT (STATEMENT-BASED) */
+    .statements-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .statement-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      cursor: pointer;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      user-select: none;
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+    .statement-item:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .statement-item.active {
+      border-color: var(--primary-glow);
+      background: rgba(99, 102, 241, 0.04);
+    }
+    .statement-checkbox {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 2px solid var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .statement-item.active .statement-checkbox {
+      border-color: var(--primary);
+      background: var(--primary);
+      color: #fff;
+    }
+    .statement-letter {
+      font-weight: 700;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    /* SEQUENCING LAYOUT */
+    .sequence-container {
+      margin-bottom: 1.5rem;
+    }
+    .sequence-bar {
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px dashed var(--primary);
+      border-radius: 10px;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      min-height: 48px;
+    }
+    .sequence-bar-placeholder {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+    .seq-badge {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .seq-arrow {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+    .sequence-pool {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .seq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      cursor: grab;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+    .seq-item:hover {
+      border-color: var(--primary-glow);
+    }
+    .seq-item.dragging {
+      opacity: 0.4;
+      background: rgba(139, 92, 246, 0.1) !important;
+      border-color: var(--primary) !important;
+      box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+    }
+    .seq-item-left {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .seq-item-num {
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .seq-controls {
+      display: flex;
+      gap: 0.3rem;
+    }
+    .seq-control-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid var(--card-border);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .seq-control-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--text-muted);
+    }
+
+    /* MATCHING LAYOUT */
+    .matching-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .matching-column {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      z-index: 2;
+    }
+    .matching-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+    .match-node {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 52px;
+      font-size: 0.95rem;
+      position: relative;
+    }
+    .match-node:hover {
+      border-color: var(--primary-glow);
+    }
+    .match-node.active-source {
+      border-color: var(--primary);
+      box-shadow: 0 0 8px var(--primary-glow);
+    }
+    .match-node.connected {
+      border-color: var(--primary-glow);
+    }
+    .match-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0 0.25rem;
+    }
+
+    /* SVG CANVAS FOR DRAWING LINES */
+    .matching-canvas-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* MOBILE FALLBACK DROPDOWNS */
+    .matching-mobile-selectors {
+      display: none;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .matching-mobile-row {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* NAVIGATION BUTTONS */
+    .quiz-nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+      border-top: 1px solid var(--card-border);
+      padding-top: 1.5rem;
+    }
+
+    /* STATS SIDEBAR PANEL */
+    .progress-bar-container {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--primary);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    
+    .timer-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .timer-danger {
+      color: var(--incorrect);
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    /* BOOKMARKS & NOTES */
+    .action-row {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .action-btn {
+      flex: 1;
+      padding: 0.6rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .action-btn:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-main);
+    }
+    .action-btn.active {
+      color: var(--warning);
+      border-color: rgba(245, 158, 11, 0.3);
+      background: rgba(245, 158, 11, 0.05);
+    }
+
+    .notes-textarea {
+      width: 100%;
+      height: 80px;
+      background: rgba(15, 23, 42, 0.4);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 0.5rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      resize: none;
+      outline: none;
+      margin-top: 0.5rem;
+    }
+    .light-mode .notes-textarea {
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .notes-textarea:focus {
+      border-color: var(--primary);
+    }
+
+    /* SELF-VERIFICATION PANEL */
+    .self-verify-panel {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .self-verify-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--warning);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .self-verify-btns {
+      display: flex;
+      gap: 0.6rem;
+    }
+    .self-verify-btn {
+      flex: 1;
+      padding: 0.5rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+    .self-verify-correct {
+      background: var(--correct);
+      color: #fff;
+    }
+    .self-verify-incorrect {
+      background: var(--incorrect);
+      color: #fff;
+    }
+
+    /* NOTES OR EXPLANATION IN STUDY MODE */
+    .explanation-panel {
+      background: rgba(16, 185, 129, 0.05);
+      border: 1px solid rgba(16, 185, 129, 0.15);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-top: 1.5rem;
+      animation: slideDown 0.3s ease;
+    }
+    .explanation-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--correct);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .explanation-content {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text-main);
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* PROGRESS GRID IN SIDEBAR */
+    .question-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+      gap: 0.4rem;
+      max-height: 250px;
+      overflow-y: auto;
+      padding-right: 0.25rem;
+    }
+    .q-nav-dot {
+      aspect-ratio: 1;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .q-nav-dot:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+    }
+    .q-nav-dot.active {
+      border-color: var(--primary);
+      box-shadow: 0 0 6px var(--primary-glow);
+      color: var(--text-main);
+    }
+    .q-nav-dot.attempted {
+      background: rgba(99, 102, 241, 0.15);
+      border-color: rgba(99, 102, 241, 0.3);
+      color: #818cf8;
+    }
+    .q-nav-dot.correct {
+      background: rgba(16, 185, 129, 0.15);
+      border-color: rgba(16, 185, 129, 0.3);
+      color: var(--correct);
+    }
+    .q-nav-dot.incorrect {
+      background: rgba(239, 68, 68, 0.15);
+      border-color: rgba(239, 68, 68, 0.3);
+      color: var(--incorrect);
+    }
+    .q-nav-dot.bookmarked {
+      border-color: var(--warning);
+      background: rgba(245, 158, 11, 0.05);
+    }
+
+    /* SUMMARY AND STATS SCREEN */
+    .summary-title {
+      font-size: 2rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--correct), #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .stats-circle-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-box {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      padding: 1.5rem;
+      border-radius: 14px;
+      min-width: 140px;
+      flex: 1;
+      max-width: 200px;
+    }
+    .stat-val {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+    .stat-val.correct { color: var(--correct); }
+    .stat-val.incorrect { color: var(--incorrect); }
+    .stat-lbl {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .wrong-answers-list {
+      margin-top: 2rem;
+    }
+    .wrong-answer-item {
+      background: rgba(239, 68, 68, 0.03);
+      border: 1px solid rgba(239, 68, 68, 0.1);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+    .wrong-answer-item:hover {
+      border-color: rgba(239, 68, 68, 0.3);
+      background: rgba(239, 68, 68, 0.05);
+    }
+    .wrong-ans-head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--incorrect);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--card-border);
+      margin-top: auto;
+    }
+
+    /* UTILITY CLASSES */
+    .hidden { display: none !important; }
+    .flex-center { display: flex; align-items: center; justify-content: center; }
+
+    /* SWITCH TOGGLE STYLES */
+    .switch-slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+    input:checked + .switch-slider {
+      background-color: var(--primary) !important;
+    }
+    input:checked + .switch-slider:before {
+      transform: translateX(20px);
+    }
+    .option-card.stmt-eliminated {
+      opacity: 0.35;
+      border-color: rgba(239, 68, 68, 0.15);
+    }
+
+    /* RESPONSIVE UPDATES */
+    @media (max-width: 768px) {
+      main { padding: 1rem 1rem; }
+      .dashboard-title { font-size: 1.8rem; }
+      .matching-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .matching-canvas-svg { display: none; }
+      .matching-mobile-selectors { display: flex; }
+      .stats-circle-container { gap: 1rem; }
+      .stat-box { min-width: 100px; padding: 1rem; }
+      .stat-val { font-size: 1.7rem; }
+      .mobile-hide { display: none; }
+    }
+  </style>
+  <!-- Local JS Data Fallbacks to bypass local CORS -->
+  <script src="u1-business_environment_mcqs.js"></script>
+  <script src="u2-accounting_auditing_mcqs.js"></script>
+  <script src="u3-business_economics_mcqs.js"></script>
+  <script src="u4-business_finance_mcqs.js"></script>
+  <script src="u5-business_statistics_research_methods_mcqs.js"></script>
+  <script src="u6-business_management_hrm_mcqs.js"></script>
+  <script src="u7-banking_financial_institutions_mcqs.js"></script>
+  <script src="u8-marketing_management_mcqs.js"></script>
+  <script src="u9-legal_aspects_of_business_mcqs.js"></script>
+  <script src="u10-income_tax_corporate_tax_planning_mcqs.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo" id="header-logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>UGC NET Commerce</span>
+      </div>
+      <div class="header-actions">
+        <a href="analysis.html" class="icon-btn" title="Exam Analysis Dashboard" style="display: flex; align-items: center; justify-content: center; text-decoration: none; gap: 0.5rem; width: auto; padding: 0.4rem 0.8rem; font-size: 0.85rem; font-weight: 600; border-radius: 8px; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); color: var(--primary-glow);">
+          <i class="fa-solid fa-chart-line"></i>
+          <span class="mobile-hide">Exam Analysis</span>
+        </a>
+        <button class="icon-btn" id="sound-toggle" title="Toggle Sound" aria-label="Toggle Sound">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button class="icon-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- VIEW 1: DASHBOARD -->
+    <section id="view-dashboard" class="view">
+      <h1 class="dashboard-title">UGC NET Commerce PYQ Bank</h1>
+      <p class="dashboard-subtitle">Select a unit to start practicing. Sound and progress persist locally.</p>
+      
+      <div class="unit-grid" id="units-container">
+        <!-- Units populated dynamically -->
+      </div>
+
+      <div class="glass-card" style="margin-top: 1.5rem;">
+        <h3 style="margin-bottom: 0.5rem; font-weight: 700;"><i class="fa-solid fa-cloud-arrow-up" style="margin-right: 0.5rem; color: var(--primary);"></i>Upload Custom Unit JSON</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+          Missing a file or running offline? Drag and drop any unit's MCQ JSON file here. It will be cached locally using IndexedDB.
+        </p>
+        <div class="upload-container" id="drop-zone">
+          <i class="fa-solid fa-file-arrow-up"></i>
+          <p style="font-weight: 600;">Drag & Drop JSON file or click to browse</p>
+          <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">Supports standard compilation array/object formats</span>
+          <input type="file" id="json-file-input" class="upload-input" accept=".json">
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 2: QUIZ WORKSPACE -->
+    <section id="view-quiz" class="view hidden">
+      <div class="quiz-layout">
+        <!-- Left: Question Area -->
+        <div class="quiz-main">
+          <div style="margin-bottom: 1rem; padding: 0.5rem 0;">
+            <div class="question-header">
+              <span class="badge badge-primary" id="badge-qno">Q1</span>
+              <span class="badge badge-info" id="badge-session">Session</span>
+              <span class="badge" id="badge-type">Type</span>
+              <span class="badge badge-warning hidden" id="badge-no-answer">⚠️ Answer Key Missing</span>
+            </div>
+            
+            <div class="question-text" id="question-text">
+              Question text here...
+            </div>
+
+            <!-- Dynamic Embedded Statements Container -->
+            <div id="question-statements-container" class="statements-list hidden" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+              <!-- Embedded A, B, C statements -->
+            </div>
+
+            <!-- DYNAMIC INTERFACES DEPENDING ON QUESTION TYPE -->
+            
+            <!-- Simple MCQ & Numerical Interface -->
+            <div id="interface-mcq" class="options-grid">
+              <!-- Dynamically populated option cards -->
+            </div>
+
+            <!-- Multi-Select Statement Interface -->
+            <div id="interface-multi-select" class="hidden">
+              <div class="statements-list" id="multi-statements-container">
+                <!-- A, B, C statement cards -->
+              </div>
+              <div class="options-grid" id="multi-options-container">
+                <!-- Combination options a, b, c, d -->
+              </div>
+            </div>
+
+            <!-- Matching Interface -->
+            <div id="interface-matching" class="hidden">
+              <div class="matching-container">
+                <div class="matching-column" id="match-col-left">
+                  <div class="matching-title">List I</div>
+                  <!-- List 1 nodes -->
+                </div>
+                <div class="matching-column" id="match-col-right">
+                  <div class="matching-title">List II</div>
+                  <!-- List 2 nodes -->
+                </div>
+                <svg class="matching-canvas-svg" id="matching-svg"></svg>
+              </div>
+              
+              <!-- Touch selectors for mobile -->
+              <div class="matching-mobile-selectors" id="matching-mobile-rows">
+                <!-- Row-by-row selects -->
+              </div>
+
+              <div class="options-grid" id="matching-options-container" style="margin-top: 1.5rem;">
+                <!-- Matching combination options a, b, c, d -->
+              </div>
+            </div>
+
+            <!-- Sequencing Interface -->
+            <div id="interface-sequencing" class="hidden">
+              <div class="sequence-container">
+                <div class="sequence-title" style="font-weight: 700; margin-bottom: 0.5rem; font-size: 0.95rem; color: var(--text-muted); text-transform: uppercase;">Your Sequence</div>
+                <div class="sequence-bar" id="seq-active-bar">
+                  <span class="sequence-bar-placeholder">Click items below to set sequence order...</span>
+                </div>
+                <div class="sequence-pool" id="seq-pool-container">
+                  <!-- Sortable items -->
+                </div>
+              </div>
+              <div class="options-grid" id="sequencing-options-container" style="margin-top: 1.5rem;">
+                <!-- Sequencing combination options a, b, c, d -->
+              </div>
+            </div>
+
+            <!-- SELF-VERIFICATION BAR (WHEN ANSWER KEY IS NULL) -->
+            <div id="self-verify-panel" class="self-verify-panel hidden">
+              <div class="self-verify-title">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>This question has no official answer key. Please self-verify:</span>
+              </div>
+              <div class="self-verify-btns">
+                <button class="self-verify-btn self-verify-correct" id="self-verify-ok-btn">Mark Correct (+1 pt)</button>
+                <button class="self-verify-btn self-verify-incorrect" id="self-verify-wrong-btn">Mark Incorrect</button>
+              </div>
+            </div>
+
+            <!-- STUDY MODE STUDY MATERIAL/EXPLANATION -->
+            <div id="explanation-panel" class="explanation-panel hidden">
+              <div class="explanation-title">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Explanation & Notes</span>
+              </div>
+              <div class="explanation-content" id="explanation-content">
+                Explanation text here...
+              </div>
+            </div>
+
+            <div class="quiz-nav-container">
+              <button class="btn btn-secondary" id="quiz-btn-prev"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+              <button class="btn btn-primary" id="quiz-btn-next">Next <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Progress & Stats Sidebar -->
+        <div class="quiz-sidebar">
+          <div class="glass-card">
+            <h3 style="margin-bottom: 1rem; font-weight: 700;"><i class="fa-solid fa-chart-line" style="margin-right: 0.5rem; color: var(--primary);"></i>Practice Stats</h3>
+            
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9rem;">
+              <span id="quiz-progress-text">Progress: 0/0</span>
+              <span id="quiz-progress-percent">0%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" id="quiz-progress-bar"></div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; margin: 1.5rem 0 1rem 0; text-align: center;">
+              <div style="flex: 1;">
+                <div style="font-size: 1.4rem; font-weight: 700; color: var(--correct);" id="sidebar-score-correct">0</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Correct</div>
+              </div>
+              <div style="flex: 1; border-left: 1px solid var(--card-border); border-right: 1px solid var(--card-border);">
+                <div style="font-size: 1.4rem; font-weight: 700; color: var(--incorrect);" id="sidebar-score-wrong">0</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Wrong</div>
+              </div>
+              <div style="flex: 1;">
+                <div style="font-size: 1.4rem; font-weight: 700;" id="sidebar-score-accuracy">0%</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Accuracy</div>
+              </div>
+            </div>
+
+            <div class="timer-container hidden" id="quiz-timer-box" style="margin-top: 1rem; border-top: 1px solid var(--card-border); padding-top: 1rem; justify-content: center;">
+              <i class="fa-solid fa-stopwatch"></i>
+              <span id="quiz-timer">00:00</span>
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <div class="action-row">
+              <button class="action-btn" id="btn-bookmark"><i class="fa-regular fa-bookmark"></i> Bookmark</button>
+              <button class="action-btn" id="btn-clear-stats"><i class="fa-solid fa-rotate-left"></i> Reset Stats</button>
+            </div>
+            
+            <div class="form-group" style="margin-top: 1rem;">
+              <label class="form-label" style="font-size: 0.85rem;"><i class="fa-regular fa-note-sticky" style="margin-right: 0.3rem;"></i>Custom Notes</label>
+              <textarea class="notes-textarea" id="question-notes" placeholder="Type your personal study notes here... (auto-saved)"></textarea>
+            </div>
+          </div>
+
+          <!-- Advanced Prep Tools -->
+          <div class="glass-card">
+            <h4 style="font-weight: 700; margin-bottom: 0.75rem;"><i class="fa-solid fa-screwdriver-wrench" style="margin-right: 0.5rem; color: var(--primary);"></i>Advanced Prep Tools</h4>
+            
+            <!-- Font Resizer & Dyslexia Toggle -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; font-size: 0.85rem;">
+              <span>Font Size:</span>
+              <div style="display: flex; gap: 0.25rem;">
+                <button class="btn btn-secondary btn-small" id="font-dec" style="padding: 0.2rem 0.5rem; font-size: 0.75rem;">A-</button>
+                <button class="btn btn-secondary btn-small" id="font-reset" style="padding: 0.2rem 0.5rem; font-size: 0.75rem;">A</button>
+                <button class="btn btn-secondary btn-small" id="font-inc" style="padding: 0.2rem 0.5rem; font-size: 0.75rem;">A+</button>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; font-size: 0.85rem;">
+              <span>Dyslexia Font:</span>
+              <button class="btn btn-secondary btn-small" id="toggle-dyslexia" style="padding: 0.2rem 0.5rem; font-size: 0.75rem;">Toggle</button>
+            </div>
+            
+            <div style="border-top: 1px solid var(--card-border); padding-top: 1rem; margin-top: 0.5rem;"></div>
+
+            <!-- Exam Mode & Ambient Sounds -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; font-size: 0.85rem;">
+              <span>Strict Exam Simulator:</span>
+              <label class="switch-container" style="position: relative; display: inline-block; width: 40px; height: 20px;">
+                <input type="checkbox" id="toggle-exam-mode" style="opacity: 0; width: 0; height: 0;">
+                <span class="switch-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255,255,255,0.1); border-radius: 20px; transition: 0.4s;"></span>
+              </label>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; font-size: 0.85rem;">
+              <span>Nature Ambient Sound:</span>
+              <label class="switch-container" style="position: relative; display: inline-block; width: 40px; height: 20px;">
+                <input type="checkbox" id="toggle-ambient-noise" style="opacity: 0; width: 0; height: 0;">
+                <span class="switch-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255,255,255,0.1); border-radius: 20px; transition: 0.4s;"></span>
+              </label>
+            </div>
+
+            <div style="border-top: 1px solid var(--card-border); padding-top: 1rem; margin-top: 0.5rem;"></div>
+
+            <!-- Mistake bank & PDF print -->
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <button class="btn btn-secondary btn-small" id="toggle-mistakes-only" style="width: 100%; text-align: left; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; padding: 0.5rem 0.75rem;">
+                <span>🎯 Mistake Bank Review</span>
+                <span class="badge" id="badge-mistake-count">0</span>
+              </button>
+              <button class="btn btn-secondary btn-small" id="btn-export-pdf" style="width: 100%; text-align: left; font-size: 0.8rem; padding: 0.5rem 0.75rem;"><i class="fa-solid fa-file-pdf" style="margin-right: 0.5rem; color: #ef4444;"></i> Export Revision Sheet</button>
+              <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                <button class="btn btn-secondary btn-small" id="btn-backup-export" style="flex: 1; font-size: 0.75rem; padding: 0.4rem 0.25rem;"><i class="fa-solid fa-file-export"></i> Backup Stats</button>
+                <button class="btn btn-secondary btn-small" id="btn-backup-import" style="flex: 1; font-size: 0.75rem; padding: 0.4rem 0.25rem;"><i class="fa-solid fa-file-import"></i> Import Backup</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <h4 style="font-weight: 700; margin-bottom: 0.75rem;">Question Navigation</h4>
+            <div class="question-nav-grid" id="question-dots-container">
+              <!-- Dots added dynamically -->
+            </div>
+            <button class="btn btn-secondary btn-small" id="quiz-btn-end" style="width: 100%; margin-top: 1rem;"><i class="fa-solid fa-circle-check"></i> End & View Summary</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 3: PRACTICE CONFIGURATION MODAL -->
+    <div class="modal-backdrop" id="modal-config">
+      <div class="modal-content glass-card">
+        <div class="modal-header">
+          <div class="modal-title" id="config-title">Practice Settings</div>
+          <button class="icon-btn btn-small" id="config-close-btn" style="border-radius: 50%;"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">Practice Mode</label>
+          <select class="form-select" id="config-mode">
+            <option value="study" selected>Study Mode (Immediate answer check & explanations)</option>
+            <option value="exam">Exam Mode (Timed, no immediate feedback, view key at end)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Question Source / Filter</label>
+          <select class="form-select" id="config-filter-scope">
+            <option value="all" selected>All Questions</option>
+            <option value="bookmarked">Bookmarked Questions Only</option>
+            <option value="unattempted">Unattempted Questions Only</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Limit Questions</label>
+          <select class="form-select" id="config-limit">
+            <option value="all" selected>All Available Questions</option>
+            <option value="10">10 Questions</option>
+            <option value="25">25 Questions</option>
+            <option value="50">50 Questions</option>
+            <option value="100">100 Questions</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Filter by Exam Session</label>
+          <select class="form-select" id="config-session">
+            <option value="all" selected>All Sessions</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Filter by Sub-Topic</label>
+          <select class="form-select" id="config-topic">
+            <option value="all" selected>All Sub-Topics</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Filter by Question Type</label>
+          <select class="form-select" id="config-qtype">
+            <option value="all" selected>All Question Types</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-group">
+            <input type="checkbox" id="config-shuffle" checked>
+            <span>Shuffle / Randomize question order</span>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-group">
+            <input type="checkbox" id="config-verified-only">
+            <span>Show verified answers only (skip questions with missing answer keys)</span>
+          </label>
+        </div>
+
+        <button class="btn btn-primary" id="config-start-btn" style="width: 100%; margin-top: 1rem;"><i class="fa-solid fa-play"></i> Start Quiz</button>
+      </div>
+    </div>
+
+    <!-- VIEW 4: SUMMARY & RESULTS -->
+    <section id="view-summary" class="view hidden">
+      <div class="glass-card" style="text-align: center; padding: 2.5rem 1.5rem;">
+        <h1 class="summary-title">Practice Session Complete</h1>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Here is a breakdown of your performance on this unit.</p>
+        
+        <div class="stats-circle-container">
+          <div class="stat-box">
+            <div class="stat-val" id="sum-score-correct">0</div>
+            <div class="stat-lbl correct">Correct</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val" id="sum-score-wrong">0</div>
+            <div class="stat-lbl incorrect">Wrong</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val" id="sum-score-accuracy">0%</div>
+            <div class="stat-lbl">Accuracy</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val" id="sum-score-time">00:00</div>
+            <div class="stat-lbl">Time Taken</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+          <button class="btn btn-primary" id="sum-btn-retry"><i class="fa-solid fa-rotate-left"></i> Practice Again</button>
+          <button class="btn btn-secondary" id="sum-btn-dashboard"><i class="fa-solid fa-house"></i> Back to Dashboard</button>
+        </div>
+      </div>
+
+      <div class="wrong-answers-list hidden" id="wrong-answers-section">
+        <h2 style="font-weight: 700; margin-bottom: 1rem;"><i class="fa-solid fa-triangle-exclamation" style="margin-right: 0.5rem; color: var(--incorrect);"></i>Review Incorrect Attempts</h2>
+        <div id="wrong-answers-container">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 UGC NET Commerce PYQ Quiz Portal. Powered by Antigravity AI.</p>
+  </footer>
+
+  <script>
+    // INDEXED DB LAYER FOR CACHING FILES LOCALLY (Offline/Mobile Friendly)
+    const DB_NAME = "UgcNetCommerceQuizDB";
+    const STORE_NAME = "jsonFiles";
+
+    function openDB() {
+      return new Promise((resolve, reject) => {
+        const request = indexedDB.open(DB_NAME, 1);
+        request.onupgradeneeded = function(e) {
+          const db = e.target.result;
+          if (!db.objectStoreNames.contains(STORE_NAME)) {
+            db.createObjectStore(STORE_NAME, { keyPath: "unitId" });
+          }
+        };
+        request.onsuccess = function(e) {
+          resolve(e.target.result);
+        };
+        request.onerror = function(e) {
+          reject(e.target.error);
+        };
+      });
+    }
+
+    async function saveFileToDB(unitId, data, filename) {
+      try {
+        const db = await openDB();
+        return new Promise((resolve, reject) => {
+          const transaction = db.transaction(STORE_NAME, "readwrite");
+          const store = transaction.objectStore(STORE_NAME);
+          const request = store.put({ unitId, data, filename, timestamp: Date.now() });
+          request.onsuccess = () => resolve();
+          request.onerror = (e) => reject(e.target.error);
+        });
+      } catch (err) {
+        console.error("IndexedDB Save Error:", err);
+      }
+    }
+
+    async function getFileFromDB(unitId) {
+      try {
+        const db = await openDB();
+        return new Promise((resolve, reject) => {
+          const transaction = db.transaction(STORE_NAME, "readonly");
+          const store = transaction.objectStore(STORE_NAME);
+          const request = store.get(unitId);
+          request.onsuccess = (e) => resolve(e.target.result);
+          request.onerror = (e) => reject(e.target.error);
+        });
+      } catch (err) {
+        console.error("IndexedDB Fetch Error:", err);
+        return null;
+      }
+    }
+
+    // 10 UNITS METADATA OF UGC NET COMMERCE
+    const UNITS = [
+      { id: "u1", name: "Business Environment & International Business", file: "u1-business_environment_mcqs.json", code: "Unit 1" },
+      { id: "u2", name: "Accounting and Auditing", file: "u2-accounting_auditing_mcqs.json", code: "Unit 2" },
+      { id: "u3", name: "Business Economics", file: "u3-business_economics_mcqs.json", code: "Unit 3" },
+      { id: "u4", name: "Business Finance", file: "u4-business_finance_mcqs.json", code: "Unit 4" },
+      { id: "u5", name: "Business Statistics & Research Methods", file: "u5-business_statistics_research_methods_mcqs.json", code: "Unit 5" },
+      { id: "u6", name: "Business Management & HRM", file: "u6-business_management_hrm_mcqs.json", code: "Unit 6" },
+      { id: "u7", name: "Banking & Financial Institutions", file: "u7-banking_financial_institutions_mcqs.json", code: "Unit 7" },
+      { id: "u8", name: "Marketing Management", file: "u8-marketing_management_mcqs.json", code: "Unit 8" },
+      { id: "u9", name: "Legal Aspects of Business", file: "u9-legal_aspects_of_business_mcqs.json", code: "Unit 9" },
+      { id: "u10", name: "Income Tax & Corporate Tax Planning", file: "u10-income_tax_corporate_tax_planning_mcqs.json", code: "Unit 10" }
+    ];
+
+    // APPLICATION STATE
+    let state = {
+      soundEnabled: true,
+      darkMode: true,
+      currentUnit: null,
+      loadedQuestions: [],
+      filteredQuestions: [],
+      currentQuestionIndex: 0,
+      selectedAnswer: null, // Holds the option letter 'a', 'b', 'c', 'd'
+      attempts: {}, // Format: { questionId: { selected: 'a', isCorrect: true, isSelfVerified: false } }
+      bookmarks: [], // Array of questionIds: `${unitId}_${q_no}`
+      notes: {}, // Format: { questionId: "notes text" }
+      quizMode: "study", // study vs exam
+      quizStartTime: 0,
+      quizTimerInterval: null,
+      examTimeSpent: 0,
+      
+      // Matching question temporary state
+      matchingLinks: {}, // Left letter -> Right roman (e.g. 'A' -> 'III')
+      activeMatchSource: null,
+      
+      // Sequencing question temporary state
+      activeSequence: [], // Array of sub_items letters in current selected order
+
+      // Advanced Prep Tools state properties
+      fontScale: 1.0,
+      dyslexiaFont: false,
+      mistakesOnly: false,
+      ambientNoise: false,
+      questionStartTime: 0
+    };
+
+    // AUDIO CONTEXT SYNTHESIZER FOR CORRECT / INCORRECT SOUNDS
+    let audioCtx = null;
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function playSound(isCorrect) {
+      if (!state.soundEnabled) return;
+      try {
+        const ctx = getAudioContext();
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        if (isCorrect) {
+          // Bright rising chime
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(523.25, now); // C5
+          osc.frequency.setValueAtTime(659.25, now + 0.08); // E5
+          osc.frequency.setValueAtTime(783.99, now + 0.16); // G5
+          
+          gain.gain.setValueAtTime(0, now);
+          gain.gain.linearRampToValueAtTime(0.12, now + 0.05);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now);
+          osc.stop(now + 0.4);
+        } else {
+          // Low warning beep
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(220, now); // A3
+          osc.frequency.setValueAtTime(180, now + 0.12); // F#3
+          
+          gain.gain.setValueAtTime(0, now);
+          gain.gain.linearRampToValueAtTime(0.15, now + 0.02);
+          gain.gain.setValueAtTime(0.15, now + 0.1);
+          gain.gain.linearRampToValueAtTime(0.001, now + 0.3);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now);
+          osc.stop(now + 0.3);
+        }
+      } catch (err) {
+        console.error("Audio error:", err);
+      }
+    }
+
+    // LOCAL STORAGE LOAD/SAVE
+    function loadSavedState() {
+      // Sound Settings
+      const savedSound = localStorage.getItem("soundEnabled");
+      if (savedSound !== null) {
+        state.soundEnabled = savedSound === "true";
+        updateSoundButtonUI();
+      }
+      
+      // Theme Settings
+      const savedTheme = localStorage.getItem("darkMode");
+      if (savedTheme !== null) {
+        state.darkMode = savedTheme === "true";
+        if (!state.darkMode) {
+          document.body.classList.add("light-mode");
+          document.getElementById("theme-toggle").querySelector("i").className = "fa-solid fa-sun";
+        }
+      }
+
+      // Bookmarks & Notes
+      try {
+        const savedBookmarks = localStorage.getItem("bookmarks");
+        state.bookmarks = savedBookmarks ? (JSON.parse(savedBookmarks) || []) : [];
+      } catch (e) {
+        state.bookmarks = [];
+      }
+
+      try {
+        const savedNotes = localStorage.getItem("notes");
+        state.notes = savedNotes ? (JSON.parse(savedNotes) || {}) : {};
+      } catch (e) {
+        state.notes = {};
+      }
+
+      try {
+        const savedAttempts = localStorage.getItem("attempts");
+        state.attempts = savedAttempts ? (JSON.parse(savedAttempts) || {}) : {};
+      } catch (e) {
+        state.attempts = {};
+      }
+    }
+
+    function saveStateToStorage() {
+      localStorage.setItem("bookmarks", JSON.stringify(state.bookmarks));
+      localStorage.setItem("notes", JSON.stringify(state.notes));
+      localStorage.setItem("attempts", JSON.stringify(state.attempts));
+    }
+
+    // INITIALIZATION AND VIEW NAVIGATION
+    document.addEventListener("DOMContentLoaded", () => {
+      loadSavedState();
+      renderDashboard();
+      setupEventListeners();
+      if (typeof setupAdvancedPrepTools === "function") {
+        setupAdvancedPrepTools();
+      }
+    });
+
+    function setupEventListeners() {
+      // Logo click returns to dashboard
+      document.getElementById("header-logo").addEventListener("click", showDashboard);
+      
+      // Header sound toggle
+      document.getElementById("sound-toggle").addEventListener("click", () => {
+        state.soundEnabled = !state.soundEnabled;
+        localStorage.setItem("soundEnabled", state.soundEnabled);
+        updateSoundButtonUI();
+      });
+
+      // Header theme toggle
+      document.getElementById("theme-toggle").addEventListener("click", () => {
+        state.darkMode = !state.darkMode;
+        localStorage.setItem("darkMode", state.darkMode);
+        if (state.darkMode) {
+          document.body.classList.remove("light-mode");
+          document.getElementById("theme-toggle").querySelector("i").className = "fa-solid fa-moon";
+        } else {
+          document.body.classList.add("light-mode");
+          document.getElementById("theme-toggle").querySelector("i").className = "fa-solid fa-sun";
+        }
+        // redraw SVGs in case sizing/colors change
+        if (typeof drawMatchingLines === "function") {
+          drawMatchingLines();
+        }
+      });
+
+      // File Uploader
+      const dropZone = document.getElementById("drop-zone");
+      const fileInput = document.getElementById("json-file-input");
+      
+      dropZone.addEventListener("click", () => fileInput.click());
+      fileInput.addEventListener("change", (e) => handleFileUpload(e.target.files[0]));
+      
+      dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.style.borderColor = "var(--primary)";
+      });
+      dropZone.addEventListener("dragleave", () => {
+        dropZone.style.borderColor = "var(--card-border)";
+      });
+      dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.style.borderColor = "var(--card-border)";
+        if (e.dataTransfer.files.length > 0) {
+          handleFileUpload(e.dataTransfer.files[0]);
+        }
+      });
+
+      // Quiz Configuration
+      document.getElementById("config-close-btn").addEventListener("click", () => {
+        document.getElementById("modal-config").style.display = "none";
+      });
+      document.getElementById("config-start-btn").addEventListener("click", startQuiz);
+
+      // Quiz Navigation Buttons
+      document.getElementById("quiz-btn-prev").addEventListener("click", prevQuestion);
+      document.getElementById("quiz-btn-next").addEventListener("click", nextQuestion);
+      document.getElementById("quiz-btn-end").addEventListener("click", endQuiz);
+      
+      // Bookmark button
+      document.getElementById("btn-bookmark").addEventListener("click", toggleBookmark);
+
+      // Notes editor
+      document.getElementById("question-notes").addEventListener("input", (e) => {
+        const q = state.filteredQuestions[state.currentQuestionIndex];
+        const key = `${state.currentUnit.id}_${q.q_no}`;
+        state.notes[key] = e.target.value;
+        saveStateToStorage();
+      });
+
+      // Reset Stats
+      document.getElementById("btn-clear-stats").addEventListener("click", () => {
+        if (confirm("Are you sure you want to clear your attempt history for this unit?")) {
+          // clear attempts for this unit only
+          Object.keys(state.attempts).forEach(k => {
+            if (k.startsWith(state.currentUnit.id + "_")) {
+              delete state.attempts[k];
+            }
+          });
+          saveStateToStorage();
+          playSound(true);
+          // Refresh UI
+          renderQuestionNavGrid();
+          updateQuizStatsSidebar();
+        }
+      });
+
+      // Self-Verification Click Handlers
+      document.getElementById("self-verify-ok-btn").addEventListener("click", () => selfVerify(true));
+      document.getElementById("self-verify-wrong-btn").addEventListener("click", () => selfVerify(false));
+
+      // Summary Return Controls
+      document.getElementById("sum-btn-retry").addEventListener("click", () => {
+        showView("view-quiz");
+        initQuizParameters();
+      });
+      document.getElementById("sum-btn-dashboard").addEventListener("click", showDashboard);
+    }
+
+    function updateSoundButtonUI() {
+      const btn = document.getElementById("sound-toggle");
+      if (state.soundEnabled) {
+        btn.querySelector("i").className = "fa-solid fa-volume-high";
+      } else {
+        btn.querySelector("i").className = "fa-solid fa-volume-xmark";
+      }
+    }
+
+    function showView(viewId) {
+      document.querySelectorAll(".view").forEach(v => v.classList.add("hidden"));
+      document.getElementById(viewId).classList.remove("hidden");
+    }
+
+    function showDashboard() {
+      // Clear timers
+      if (state.quizTimerInterval) {
+        clearInterval(state.quizTimerInterval);
+        state.quizTimerInterval = null;
+      }
+      showView("view-dashboard");
+      renderDashboard(); // Refresh completion percentages
+    }
+
+    // RENDER DASHBOARD & LOADING STATUS
+    async function renderDashboard() {
+      const container = document.getElementById("units-container");
+      container.innerHTML = "";
+
+      for (const unit of UNITS) {
+        // Calculate progress stats
+        const unitAttempts = Object.keys(state.attempts).filter(k => k.startsWith(unit.id + "_"));
+        const completedCount = unitAttempts.length;
+        
+        let fileStatus = "Checking...";
+        let statusClass = "status-offline";
+        let questionsCountText = "JSON file missing";
+        let startDisabled = true;
+        let fileData = null;
+
+        // 1. Try checking if local script data is loaded (to bypass CORS on file://)
+        if (window[`${unit.id}_data`]) {
+          fileData = window[`${unit.id}_data`].questions || window[`${unit.id}_data`];
+          fileStatus = "Available";
+          statusClass = "status-online";
+          startDisabled = false;
+          // Cache it in IndexedDB for offline mobile speed
+          await saveFileToDB(unit.id, fileData, unit.file);
+        } else {
+          // 2. Try getting from IndexedDB second
+          const cached = await getFileFromDB(unit.id);
+          if (cached) {
+            fileData = cached.data;
+            fileStatus = "Offline Saved";
+            statusClass = "status-uploaded";
+            startDisabled = false;
+          } else {
+            // Try fetching from server relative path
+            try {
+              const response = await fetch(`./${unit.file}`);
+              if (response.ok) {
+                const data = await response.json();
+                fileData = data;
+                fileStatus = "Available";
+                statusClass = "status-online";
+                startDisabled = false;
+                // Cache it in IndexedDB for offline mobile speed
+                await saveFileToDB(unit.id, data, unit.file);
+              } else {
+                fileStatus = "Offline File Missing";
+                statusClass = "status-offline";
+              }
+            } catch (err) {
+              fileStatus = "Offline File Missing";
+              statusClass = "status-offline";
+            }
+          }
+        }
+
+        let totalQuestions = 0;
+        if (fileData) {
+          if (Array.isArray(fileData)) totalQuestions = fileData.length;
+          else if (fileData.questions) totalQuestions = fileData.questions.length;
+          questionsCountText = `${totalQuestions} Questions Available`;
+        }
+
+        const pct = totalQuestions > 0 ? Math.round((completedCount / totalQuestions) * 100) : 0;
+        const progressHTML = fileData ? `
+          <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem; color: var(--text-muted);">
+            <span>Completed: ${completedCount}/${totalQuestions}</span>
+            <span>${pct}%</span>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" style="width: ${pct}%;"></div>
+          </div>
+        ` : `<div style="height: 22px;"></div>`;
+
+        const card = document.createElement("div");
+        card.className = "glass-card unit-card";
+        card.innerHTML = `
+          <div>
+            <div class="unit-header">
+              <span class="unit-badge">${unit.code}</span>
+              <span class="status-indicator ${statusClass}">
+                <i class="fa-solid ${fileData ? 'fa-circle-check' : 'fa-circle-xmark'}"></i> ${fileStatus}
+              </span>
+            </div>
+            <h3 class="unit-title">${unit.name}</h3>
+            <p class="unit-stats">${questionsCountText}</p>
+          </div>
+          <div style="margin-top: 1rem;">
+            ${progressHTML}
+            <div class="unit-footer" style="margin-top: 1rem;">
+              <button class="btn btn-primary btn-small" ${startDisabled ? 'disabled' : ''} onclick="openPracticeConfig('${unit.id}')">
+                <i class="fa-solid fa-play"></i> Practice
+              </button>
+              ${!fileData ? `
+                <button class="btn btn-secondary btn-small" onclick="document.getElementById('json-file-input').click()">
+                  <i class="fa-solid fa-upload"></i> Upload
+                </button>
+              ` : ''}
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      }
+    }
+
+    // UPLOAD A FILE MANUALLY
+    async function handleFileUpload(file) {
+      if (!file) return;
+      
+      // Parse file name to guess unit
+      const nameLower = file.name.toLowerCase();
+      let detectedUnit = null;
+
+      if (nameLower.includes("environment") || nameLower.includes("u1")) detectedUnit = UNITS[0];
+      else if (nameLower.includes("accounting") || nameLower.includes("auditing") || nameLower.includes("u2")) detectedUnit = UNITS[1];
+      else if (nameLower.includes("economics") || nameLower.includes("u3")) detectedUnit = UNITS[2];
+      else if (nameLower.includes("finance") || nameLower.includes("u4")) detectedUnit = UNITS[3];
+      else if (nameLower.includes("statistics") || nameLower.includes("research") || nameLower.includes("u5")) detectedUnit = UNITS[4];
+      else if (nameLower.includes("management") || nameLower.includes("hrm") || nameLower.includes("u6")) detectedUnit = UNITS[5];
+      else if (nameLower.includes("banking") || nameLower.includes("u7")) detectedUnit = UNITS[6];
+      else if (nameLower.includes("marketing") || nameLower.includes("u8")) detectedUnit = UNITS[7];
+      else if (nameLower.includes("legal") || nameLower.includes("u9")) detectedUnit = UNITS[8];
+      else if (nameLower.includes("tax") || nameLower.includes("u10")) detectedUnit = UNITS[9];
+
+      if (!detectedUnit) {
+        // Prompt user to select unit
+        const optionsList = UNITS.map((u, i) => `${i+1}. ${u.name}`).join("\n");
+        const select = prompt(`We couldn't auto-detect the unit from filename "${file.name}".\nPlease enter the unit number (1-10):\n\n${optionsList}`);
+        const idx = parseInt(select) - 1;
+        if (idx >= 0 && idx < 10) {
+          detectedUnit = UNITS[idx];
+        } else {
+          alert("Upload cancelled or invalid unit index.");
+          return;
+        }
+      }
+
+      const reader = new FileReader();
+      reader.onload = async function(e) {
+        try {
+          const parsed = JSON.parse(e.target.result);
+          // Verify format (must be array or contain questions array)
+          let questions = [];
+          if (Array.isArray(parsed)) questions = parsed;
+          else if (parsed.questions) questions = parsed.questions;
+
+          if (questions.length === 0) {
+            throw new Error("No questions found in this JSON schema.");
+          }
+
+          await saveFileToDB(detectedUnit.id, parsed, file.name);
+          alert(`Successfully uploaded and cached ${questions.length} questions for Unit ${detectedUnit.code}!`);
+          playSound(true);
+          renderDashboard();
+        } catch (err) {
+          alert("Error parsing JSON: " + err.message);
+          playSound(false);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    // OPEN PRACTICE CONFIG MODAL
+    async function openPracticeConfig(unitId) {
+      const unit = UNITS.find(u => u.id === unitId);
+      state.currentUnit = unit;
+
+      let fileData = null;
+      if (window[`${unit.id}_data`]) {
+        fileData = window[`${unit.id}_data`].questions || window[`${unit.id}_data`];
+      } else {
+        const cached = await getFileFromDB(unit.id);
+        if (cached) fileData = cached.data;
+      }
+
+      if (!fileData) {
+        alert("JSON file data could not be loaded.");
+        return;
+      }
+
+      // Read questions list
+      if (Array.isArray(fileData)) state.loadedQuestions = JSON.parse(JSON.stringify(fileData));
+      else if (fileData.questions) state.loadedQuestions = JSON.parse(JSON.stringify(fileData.questions));
+
+      // Auto-detect & Normalize Question Types based on fields & keywords
+      state.loadedQuestions.forEach(q => {
+        const qTextLower = (q.question || "").toLowerCase();
+        
+        if (q.list_1 && q.list_2) {
+          q.question_type = "Matching (List-I & List-II)";
+        } else if (q.sub_items) {
+          const isSequenceKeywords = qTextLower.includes("sequence") || 
+                                     qTextLower.includes("order") || 
+                                     qTextLower.includes("arrange") || 
+                                     qTextLower.includes("chronological") ||
+                                     qTextLower.includes("steps");
+          
+          if (isSequenceKeywords) {
+            q.question_type = "Sequencing";
+          } else {
+            // Check if options are combination statements
+            let hasCombinations = false;
+            if (q.options) {
+              Object.keys(q.options).forEach(ok => {
+                const optText = String(q.options[ok]).toLowerCase();
+                if (optText.includes("only") || optText.includes("and") || optText.includes("&")) {
+                  hasCombinations = true;
+                }
+              });
+            }
+            if (hasCombinations) {
+              q.question_type = "Multi-Select (Statement-based)";
+            }
+          }
+        }
+      });
+
+      // Reset filter selectors in configuration modal
+      populateConfigFilters();
+
+      // Show config modal
+      document.getElementById("config-title").innerText = `Practice Settings: ${unit.code}`;
+      document.getElementById("modal-config").style.display = "flex";
+    }
+
+    function populateConfigFilters() {
+      // Sessions
+      const sessions = [...new Set(state.loadedQuestions.map(q => q.exam_session).filter(Boolean))].sort();
+      const sessionSelect = document.getElementById("config-session");
+      sessionSelect.innerHTML = '<option value="all" selected>All Exam Sessions</option>';
+      sessions.forEach(s => {
+        sessionSelect.innerHTML += `<option value="${s}">${s}</option>`;
+      });
+
+      // Sub topics (main_branch)
+      const topics = [...new Set(state.loadedQuestions.map(q => q.topic ? q.topic.main_branch : null).filter(Boolean))].sort();
+      const topicSelect = document.getElementById("config-topic");
+      topicSelect.innerHTML = '<option value="all" selected>All Sub-Topics</option>';
+      topics.forEach(t => {
+        topicSelect.innerHTML += `<option value="${t}">${t}</option>`;
+      });
+
+      // Question types
+      const qTypes = [...new Set(state.loadedQuestions.map(q => q.question_type).filter(Boolean))].sort();
+      const typeSelect = document.getElementById("config-qtype");
+      typeSelect.innerHTML = '<option value="all" selected>All Question Types</option>';
+      qTypes.forEach(t => {
+        typeSelect.innerHTML += `<option value="${t}">${t}</option>`;
+      });
+    }
+
+    // START QUIZ WITH APPLIED FILTERS
+    function startQuiz() {
+      const mode = document.getElementById("config-mode").value;
+      const filterScope = document.getElementById("config-filter-scope").value;
+      const limitVal = document.getElementById("config-limit").value;
+      const sessionVal = document.getElementById("config-session").value;
+      const topicVal = document.getElementById("config-topic").value;
+      const qtypeVal = document.getElementById("config-qtype").value;
+      const shuffle = document.getElementById("config-shuffle").checked;
+      const verifiedOnly = document.getElementById("config-verified-only").checked;
+
+      state.quizMode = mode;
+
+      // Apply filtering
+      let list = [...state.loadedQuestions];
+
+      // 1. Filter Scope (bookmarks, unattempted)
+      if (filterScope === "bookmarked") {
+        list = list.filter(q => state.bookmarks.includes(`${state.currentUnit.id}_${q.q_no}`));
+      } else if (filterScope === "unattempted") {
+        list = list.filter(q => !state.attempts[`${state.currentUnit.id}_${q.q_no}`]);
+      }
+
+      // 2. Exam Session
+      if (sessionVal !== "all") {
+        list = list.filter(q => q.exam_session === sessionVal);
+      }
+
+      // 3. Sub-Topic
+      if (topicVal !== "all") {
+        list = list.filter(q => q.topic && q.topic.main_branch === topicVal);
+      }
+
+      // 4. Question Type
+      if (qtypeVal !== "all") {
+        list = list.filter(q => q.question_type === qtypeVal);
+      }
+
+      // 5. Verified Answers Only
+      if (verifiedOnly) {
+        list = list.filter(q => {
+          const ans = q.answer;
+          return ans !== null && ans !== undefined && ans !== '' &&
+                 !String(ans).toLowerCase().includes('not provided') &&
+                 !String(ans).toLowerCase().includes('unverified');
+        });
+      }
+
+      // 6. Check empty
+      if (list.length === 0) {
+        alert("No questions matched your selected filters. Please adjust and try again.");
+        return;
+      }
+
+      // 7. Shuffle
+      if (shuffle) {
+        list.sort(() => Math.random() - 0.5);
+      }
+
+      // 8. Limit
+      if (limitVal !== "all") {
+        const count = parseInt(limitVal);
+        list = list.slice(0, count);
+      }
+
+      state.filteredQuestions = list;
+      
+      // Hide modal
+      document.getElementById("modal-config").style.display = "none";
+      
+      // Initialize Quiz Parameters
+      initQuizParameters();
+      showView("view-quiz");
+      playSound(true);
+    }
+
+    function initQuizParameters() {
+      state.currentQuestionIndex = 0;
+      state.examTimeSpent = 0;
+      
+      // Setup timers
+      if (state.quizTimerInterval) clearInterval(state.quizTimerInterval);
+      
+      if (state.quizMode === "exam") {
+        document.getElementById("quiz-timer-box").classList.remove("hidden");
+        state.quizStartTime = Date.now();
+        state.quizTimerInterval = setInterval(() => {
+          state.examTimeSpent++;
+          const min = String(Math.floor(state.examTimeSpent / 60)).padStart(2, '0');
+          const sec = String(state.examTimeSpent % 60).padStart(2, '0');
+          document.getElementById("quiz-timer").innerText = `${min}:${sec}`;
+        }, 1000);
+      } else {
+        document.getElementById("quiz-timer-box").classList.add("hidden");
+      }
+
+      // Render first question
+      renderQuestion();
+      renderQuestionNavGrid();
+      updateQuizStatsSidebar();
+    }
+
+    function parseEmbeddedStatements(qText) {
+      // 1. First check for Statement I / Statement II
+      if (qText.match(/Statement\s*(?:[IVX]+|[0-9]+)\s*:/i)) {
+        const stmtRegex = /(Statement\s*(?:[IVX]+|[0-9]+))\s*:?\s*(.+?)(?=(?:Statement\s*(?:[IVX]+|[0-9]+))|$|Choose|In the light|Based on|Options|Codes)/gi;
+        const matches = [...qText.matchAll(stmtRegex)];
+        if (matches.length >= 2) {
+          const firstIdx = qText.indexOf(matches[0][0]);
+          const mainQuestion = qText.substring(0, firstIdx).trim();
+          let statements = {};
+          matches.forEach(m => {
+            let key = m[1].replace(/\s+/g, " "); // normalize spacing, e.g. "Statement I"
+            let val = m[2].trim();
+            // clean up trailing punctuation / directive keywords
+            const chooseIndex = val.search(/(?:Choose the correct|In the light of|Based on|Options:|Codes:|From the options|Choose the most)/i);
+            if (chooseIndex !== -1) {
+              val = val.substring(0, chooseIndex).trim();
+            }
+            val = val.replace(/[\s\.,;:]+$/, "");
+            statements[key] = val;
+          });
+
+          let instruction = "Choose the correct answer from the options given below:";
+          const instrMatch = qText.match(/(?:Choose the correct|In the light of|Based on|choose the correct|Choose the most).+/i);
+          if (instrMatch) {
+            instruction = instrMatch[0];
+          }
+          return { question: mainQuestion, statements, instruction };
+        }
+      }
+
+      // 2. Check for A., B., C., D. or (A), (B), (C), (D)
+      const alphaRegex = /(?:\s+|^)([A-G])[\.\)]\s+|(?:\s+|^)\(([A-G])\)\s+/g;
+      const alphaMatches = [...qText.matchAll(alphaRegex)];
+      if (alphaMatches.length >= 2) {
+        const firstMarkerIndex = qText.search(/(?:\s+|^)[A-G][\.\)]\s+|(?:\s+|^)\([A-G]\)\s+/);
+        if (firstMarkerIndex !== -1) {
+          const mainQuestion = qText.substring(0, firstMarkerIndex).trim();
+          const rest = qText.substring(firstMarkerIndex);
+          const splitRegex = /((?:\s+|^)[A-G][\.\)]\s+|(?:\s+|^)\(([A-G])\)\s+)/;
+          const parts = rest.split(splitRegex);
+          let statements = {};
+          let currentKey = null;
+
+          for (let part of parts) {
+            if (!part) continue;
+            const markerMatch = part.match(/([A-G])/);
+            if (markerMatch && part.trim().length <= 5) {
+              currentKey = markerMatch[1].toUpperCase();
+            } else if (currentKey) {
+              let text = part.trim();
+              const chooseIndex = text.search(/(?:Choose the correct|In the light of|Based on|Options:|Codes:|From the options|Choose the most)/i);
+              if (chooseIndex !== -1) {
+                text = text.substring(0, chooseIndex).trim();
+              }
+              text = text.replace(/[\s\.,;:]+$/, "");
+              statements[currentKey] = text;
+            }
+          }
+          let instruction = "Choose the correct answer from the options given below:";
+          const instrMatch = qText.match(/(?:Choose the correct|In the light of|Based on|choose the correct|Choose the most).+/i);
+          if (instrMatch) instruction = instrMatch[0];
+          return { question: mainQuestion, statements, instruction };
+        }
+      }
+
+      // 3. Check for 1., 2., 3., 4. lists
+      const numRegex = /(?:\s+|^)([1-9])[\.\)]\s+/g;
+      const numMatches = [...qText.matchAll(numRegex)];
+      if (numMatches.length >= 2) {
+        const firstMarkerIndex = qText.search(/(?:\s+|^)[1-9][\.\)]\s+/);
+        if (firstMarkerIndex !== -1) {
+          const mainQuestion = qText.substring(0, firstMarkerIndex).trim();
+          const rest = qText.substring(firstMarkerIndex);
+          const splitRegex = /((?:\s+|^)[1-9][\.\)]\s+)/;
+          const parts = rest.split(splitRegex);
+          let statements = {};
+          let currentKey = null;
+
+          for (let part of parts) {
+            if (!part) continue;
+            const markerMatch = part.match(/([1-9])/);
+            if (markerMatch && part.trim().length <= 3) {
+              currentKey = markerMatch[1];
+            } else if (currentKey) {
+              let text = part.trim();
+              const chooseIndex = text.search(/(?:Choose the correct|In the light of|Based on|Options:|Codes:|From the options|Choose the most)/i);
+              if (chooseIndex !== -1) {
+                text = text.substring(0, chooseIndex).trim();
+              }
+              text = text.replace(/[\s\.,;:]+$/, "");
+              statements[currentKey] = text;
+            }
+          }
+          let instruction = "Choose the correct answer from the options given below:";
+          const instrMatch = qText.match(/(?:Choose the correct|In the light of|Based on|choose the correct|Choose the most).+/i);
+          if (instrMatch) instruction = instrMatch[0];
+          return { question: mainQuestion, statements, instruction };
+        }
+      }
+
+    }
+
+    function updateCrossHighlights() {
+      // Find all statements that are currently faded
+      const fadedStmts = Array.from(document.querySelectorAll(".statement-item.faded, .seq-item.faded"))
+        .map(el => {
+          const match = el.id.match(/(?:embed-stmt|stmt|seq-item)-(.*)/);
+          return match ? match[1] : null;
+        })
+        .filter(Boolean);
+
+      // Now go through all option cards
+      const optionCards = document.querySelectorAll(".option-card");
+      optionCards.forEach(card => {
+        const contentEl = card.querySelector(".option-content") || card.querySelector(".option-text") || card;
+        if (!contentEl) return;
+        
+        let origText = card.getAttribute("data-orig-text");
+        if (!origText) {
+          origText = contentEl.innerText.trim();
+          card.setAttribute("data-orig-text", origText);
+        }
+
+        let htmlText = origText;
+        let isAnyTokenFaded = false;
+
+        fadedStmts.forEach(token => {
+          // Escape token for regex
+          const escapedToken = token.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+          const regex = new RegExp(`\\b${escapedToken}\\b`, 'g');
+          
+          if (regex.test(origText)) {
+            isAnyTokenFaded = true;
+            htmlText = htmlText.replace(regex, `<span style="color: #ef4444; text-decoration: line-through; font-weight: 800;">${token}</span>`);
+          }
+        });
+
+        contentEl.innerHTML = htmlText;
+
+        if (isAnyTokenFaded) {
+          card.classList.add("stmt-eliminated");
+        } else {
+          card.classList.remove("stmt-eliminated");
+        }
+      });
+    }
+
+    // RENDER ACTIVE QUESTION
+    function renderQuestion() {
+      const q = state.filteredQuestions[state.currentQuestionIndex];
+      const key = `${state.currentUnit.id}_${q.q_no}`;
+
+      // Reset temporary states
+      state.selectedAnswer = null;
+      state.matchingLinks = {};
+      state.activeMatchSource = null;
+      state.activeSequence = [];
+      
+      if (typeof startQuestionStopwatch === "function") {
+        startQuestionStopwatch();
+      }
+
+      // Update Header Badges
+      document.getElementById("badge-qno").innerText = `Question ${state.currentQuestionIndex + 1} of ${state.filteredQuestions.length}`;
+      document.getElementById("badge-session").innerText = q.exam_session || "PYQ";
+      document.getElementById("badge-type").innerText = q.question_type;
+
+      // Bookmark active state
+      const isBookmarked = state.bookmarks.includes(key);
+      const bBtn = document.getElementById("btn-bookmark");
+      if (isBookmarked) {
+        bBtn.classList.add("active");
+        bBtn.innerHTML = `<i class="fa-solid fa-bookmark"></i> Bookmarked`;
+      } else {
+        bBtn.classList.remove("active");
+        bBtn.innerHTML = `<i class="fa-regular fa-bookmark"></i> Bookmark`;
+      }
+
+      // Check if verified key exists
+      const isAnswerMissing = q.answer === null || q.answer === undefined || q.answer === '' ||
+                               String(q.answer).toLowerCase().includes('not provided') ||
+                               String(q.answer).toLowerCase().includes('unverified');
+      
+      if (isAnswerMissing) {
+        document.getElementById("badge-no-answer").classList.remove("hidden");
+      } else {
+        document.getElementById("badge-no-answer").classList.add("hidden");
+      }
+
+      // Load Saved Notes
+      document.getElementById("question-notes").value = state.notes[key] || "";
+
+      // Hide all interfaces initially
+      document.getElementById("interface-mcq").classList.add("hidden");
+      document.getElementById("interface-multi-select").classList.add("hidden");
+      document.getElementById("interface-matching").classList.add("hidden");
+      document.getElementById("interface-sequencing").classList.add("hidden");
+      document.getElementById("self-verify-panel").classList.add("hidden");
+      document.getElementById("explanation-panel").classList.add("hidden");
+
+      const statementsContainer = document.getElementById("question-statements-container");
+      statementsContainer.innerHTML = "";
+      statementsContainer.classList.add("hidden");
+
+      // Check if attempt history exists
+      const attempt = state.attempts[key];
+
+      // Parse question text (separate Assertion / Reason if applicable)
+      const qText = q.question;
+      let arParsed = null;
+      
+      // Strip common assertion-reason meta-introductions to prevent regex overlap
+      let cleanQText = qText.replace(/Given\s+below\s+are\s+two\s+statements\s*:?\s*(?:one\s+is\s+labelled\s+as\s+)?Assertion\s*\(?A\)?\s+and\s+the\s+other\s+(?:is\s+)?labelled\s+as\s+Reason\s*\(?R\)?\.?/gi, "");
+      cleanQText = cleanQText.replace(/One\s+is\s+labelled\s+as\s+Assertion\s*\(?A\)?\s+and\s+the\s+other\s+(?:is\s+)?labelled\s+as\s+Reason\s*\(?R\)?\.?/gi, "");
+
+      // Assertion-Reason detection regex
+      if (q.question_type === "Assertion-Reason" || qText.includes("Assertion (A)") || qText.includes("Assertion(A)") || qText.includes("Assertion A") || qText.includes("Assertion  A")) {
+        // Attempt parsing
+        const assMatch = cleanQText.match(/(?:Assertion\s*\(?A\)?|Assertion\s*A)\s*:?\s*(.+?)(?=(?:Reason\s*\(?R\)?|Reason\s*R)\s*:?|$)/i);
+        const reasonMatch = cleanQText.match(/(?:Reason\s*\(?R\)?|Reason\s*R)\s*:?\s*(.+?)(?=(?:In the light of|In\s*light\s*of|Based\s*on|choose|Choose|$))/i);
+        const instructionMatch = cleanQText.match(/(?:In the light of|In\s*light\s*of|Based\s*on|choose\s*the\s*correct|Choose\s*the\s*correct).+/i);
+        
+        if (assMatch && reasonMatch) {
+          arParsed = {
+            assertion: assMatch[1].trim(),
+            reason: reasonMatch[1].trim(),
+            instruction: instructionMatch ? instructionMatch[0].trim() : "Choose the correct answer from the options given below:"
+          };
+        }
+      }
+
+      let parsedStmts = null;
+      if (!arParsed) {
+        parsedStmts = parseEmbeddedStatements(qText);
+      }
+
+      if (arParsed) {
+        document.getElementById("question-text").innerHTML = `
+          <div class="ar-container">
+            <div class="ar-box ar-assertion">
+              <div class="ar-label">Assertion (A)</div>
+              <div class="ar-content">${arParsed.assertion}</div>
+            </div>
+            <div class="ar-box ar-reason">
+              <div class="ar-label">Reason (R)</div>
+              <div class="ar-content">${arParsed.reason}</div>
+            </div>
+          </div>
+          <div style="font-size: 1.1rem; font-weight: 500; margin-top: 1rem;">${arParsed.instruction}</div>
+        `;
+      } else if (parsedStmts) {
+        document.getElementById("question-text").innerText = parsedStmts.question;
+        
+        // Render statements in container
+        statementsContainer.classList.remove("hidden");
+        Object.keys(parsedStmts.statements).forEach(key => {
+          const stmtText = parsedStmts.statements[key];
+          const sCard = document.createElement("div");
+          sCard.className = "statement-item";
+          sCard.id = `embed-stmt-${key}`;
+          sCard.innerHTML = `
+            <div class="statement-letter" style="font-weight: 700; color: var(--primary);">${key}.</div>
+            <div style="flex: 1; font-size: 1.05rem; line-height: 1.45;">${stmtText}</div>
+            <button class="eliminate-btn" title="Fade statement" style="padding: 0 0.5rem; z-index: 10;">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          `;
+          
+          const elimBtn = sCard.querySelector(".eliminate-btn");
+          if (attempt) {
+            elimBtn.style.display = "none";
+          } else {
+            elimBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              sCard.classList.toggle("faded");
+              playSound(false);
+              updateCrossHighlights();
+            });
+          }
+          
+          statementsContainer.appendChild(sCard);
+        });
+
+        // Append the instruction below statements
+        const instrDiv = document.createElement("div");
+        instrDiv.style = "font-size: 1.1rem; font-weight: 500; margin-top: 1rem;";
+        instrDiv.innerText = parsedStmts.instruction;
+        statementsContainer.appendChild(instrDiv);
+      } else {
+        // Standalone question rendering
+        document.getElementById("question-text").innerText = qText;
+        
+        // Check if there are sub_items but it is standard MCQ
+        if (q.sub_items && q.question_type !== "Multi-Select (Statement-based)" && !q.question_type.startsWith("Sequencing")) {
+          statementsContainer.classList.remove("hidden");
+          Object.keys(q.sub_items).forEach(key => {
+            const stmtText = q.sub_items[key];
+            const sCard = document.createElement("div");
+            sCard.className = "statement-item";
+            sCard.id = `embed-stmt-${key}`;
+            sCard.innerHTML = `
+              <div class="statement-letter" style="font-weight: 700; color: var(--primary);">${key}.</div>
+              <div style="flex: 1; font-size: 1.05rem; line-height: 1.45;">${stmtText}</div>
+              <button class="eliminate-btn" title="Fade statement" style="padding: 0 0.5rem; z-index: 10;">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            `;
+            
+            const elimBtn = sCard.querySelector(".eliminate-btn");
+            if (attempt) {
+              elimBtn.style.display = "none";
+            } else {
+              elimBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                sCard.classList.toggle("faded");
+                playSound(false);
+                updateCrossHighlights();
+              });
+            }
+            
+            statementsContainer.appendChild(sCard);
+          });
+        }
+      }
+
+      // RENDER CORE INTERFACE BY TYPE
+      if (q.question_type === "Matching (List-I & List-II)" && q.list_1 && q.list_2) {
+        renderMatchingInterface(q, attempt, isAnswerMissing);
+      } else if (q.question_type && q.question_type.startsWith("Sequencing") && q.sub_items) {
+        renderSequencingInterface(q, attempt, isAnswerMissing);
+      } else if (q.question_type === "Multi-Select (Statement-based)" && q.sub_items) {
+        renderMultiSelectInterface(q, attempt, isAnswerMissing);
+      } else {
+        // Standard MCQ & Numerical / Calculation
+        renderMcqInterface(q, attempt, isAnswerMissing);
+      }
+
+      // Render verification / explanation bar
+      updateNavigationControls();
+      updateCrossHighlights();
+    }
+
+    // INTERFACE: STANDARD MCQ & NUMERICAL
+    function renderMcqInterface(q, attempt, isAnswerMissing) {
+      const container = document.getElementById("interface-mcq");
+      container.innerHTML = "";
+      container.classList.remove("hidden");
+
+      Object.keys(q.options).forEach(optKey => {
+        const optionText = q.options[optKey];
+        const card = document.createElement("div");
+        card.className = "option-card";
+        card.id = `opt-${optKey}`;
+        card.innerHTML = `
+          <div class="option-letter">${optKey.toUpperCase()}</div>
+          <div class="option-content" style="flex: 1;">${optionText}</div>
+          <button class="eliminate-btn" title="Eliminate option" style="z-index: 10;">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        `;
+
+        const elimBtn = card.querySelector(".eliminate-btn");
+        if (attempt) {
+          elimBtn.style.display = "none";
+        } else {
+          elimBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            card.classList.toggle("faded");
+            playSound(false);
+          });
+        }
+
+        // Apply attempt visual status
+        if (attempt) {
+          const isSelected = attempt.selected === optKey;
+          const isCorrect = q.answer === optKey;
+
+          if (isSelected) {
+            card.classList.add(attempt.isCorrect ? "correct" : "incorrect");
+          }
+          // In study mode, show the correct answer regardless of choice
+          if (state.quizMode === "study" && isCorrect && !isAnswerMissing) {
+            card.classList.add("correct");
+          }
+        } else {
+          card.addEventListener("click", () => {
+            if (card.classList.contains("faded")) return;
+            handleAnswerSelection(optKey);
+          });
+        }
+
+        container.appendChild(card);
+      });
+
+      // Self verification panel
+      if (attempt && isAnswerMissing && state.quizMode === "study" && !attempt.isSelfVerified) {
+        showSelfVerifyPanel();
+      }
+      
+      if (attempt && state.quizMode === "study" && q.note) {
+        showExplanationPanel(q.note);
+      }
+    }
+
+    // INTERFACE: MULTI-SELECT (STATEMENT BASED)
+    function renderMultiSelectInterface(q, attempt, isAnswerMissing) {
+      const container = document.getElementById("interface-multi-select");
+      container.classList.remove("hidden");
+
+      const statementsCont = document.getElementById("multi-statements-container");
+      const optionsCont = document.getElementById("multi-options-container");
+      
+      statementsCont.innerHTML = "";
+      optionsCont.innerHTML = "";
+
+      // Render statements (A, B, C...)
+      const activeCheckedStatements = new Set();
+
+      Object.keys(q.sub_items).forEach(letter => {
+        const text = q.sub_items[letter];
+        const sCard = document.createElement("div");
+        sCard.className = "statement-item";
+        sCard.id = `stmt-${letter}`;
+        sCard.innerHTML = `
+          <div class="statement-checkbox"><i class="fa-solid fa-check hidden"></i></div>
+          <div class="statement-letter">${letter}.</div>
+          <div style="flex: 1;">${text}</div>
+          <button class="eliminate-btn" title="Fade statement" style="padding: 0 0.5rem; z-index: 10;">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        `;
+
+        const elimBtn = sCard.querySelector(".eliminate-btn");
+        if (attempt) {
+          elimBtn.style.display = "none";
+        } else {
+          elimBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            sCard.classList.toggle("faded");
+            playSound(false);
+            updateCrossHighlights();
+          });
+        }
+
+        if (!attempt) {
+          sCard.addEventListener("click", () => {
+            if (sCard.classList.contains("faded")) return;
+            sCard.classList.toggle("active");
+            const check = sCard.querySelector(".statement-checkbox i");
+            check.classList.toggle("hidden");
+            
+            if (sCard.classList.contains("active")) {
+              activeCheckedStatements.add(letter);
+            } else {
+              activeCheckedStatements.delete(letter);
+            }
+            
+            // Auto match combination option
+            autoHighlightMatchingMultiOption(q, activeCheckedStatements);
+          });
+        }
+
+        statementsCont.appendChild(sCard);
+      });
+
+      // Render options (a, b, c, d combination option cards)
+      Object.keys(q.options).forEach(optKey => {
+        const optionText = q.options[optKey];
+        const card = document.createElement("div");
+        card.className = "option-card";
+        card.id = `opt-${optKey}`;
+        card.innerHTML = `
+          <div class="option-letter">${optKey.toUpperCase()}</div>
+          <div class="option-content" style="flex: 1;">${optionText}</div>
+          <button class="eliminate-btn" title="Eliminate option" style="z-index: 10;">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        `;
+
+        const elimBtn = card.querySelector(".eliminate-btn");
+        if (attempt) {
+          elimBtn.style.display = "none";
+        } else {
+          elimBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            card.classList.toggle("faded");
+            playSound(false);
+          });
+        }
+
+        if (attempt) {
+          const isSelected = attempt.selected === optKey;
+          const isCorrect = q.answer === optKey;
+
+          if (isSelected) {
+            card.classList.add(attempt.isCorrect ? "correct" : "incorrect");
+          }
+          if (state.quizMode === "study" && isCorrect && !isAnswerMissing) {
+            card.classList.add("correct");
+          }
+
+          // Highlight statements matching correct option
+          if (state.quizMode === "study") {
+            const correctOptText = q.options[q.answer] || "";
+            // Find letters A, B, C... in the option text
+            const correctLetters = extractLettersFromText(correctOptText);
+            correctLetters.forEach(l => {
+              const el = document.getElementById(`stmt-${l}`);
+              if (el) {
+                el.classList.add("active");
+                el.querySelector(".statement-checkbox").style.backgroundColor = "var(--correct)";
+                el.querySelector(".statement-checkbox").style.borderColor = "var(--correct)";
+                el.querySelector(".statement-checkbox i").classList.remove("hidden");
+              }
+            });
+          }
+        } else {
+          card.addEventListener("click", () => {
+            if (card.classList.contains("faded")) return;
+            handleAnswerSelection(optKey);
+          });
+        }
+
+        optionsCont.appendChild(card);
+      });
+
+      // Auto highlight matching statements if user selects a combination option directly
+      function autoHighlightMatchingMultiOption(q, checkedSet) {
+        // Find which option matches the set of checked items
+        let bestOpt = null;
+        Object.keys(q.options).forEach(optKey => {
+          const text = q.options[optKey];
+          const lettersInOpt = extractLettersFromText(text);
+          
+          // Compare arrays/sets
+          const isMatch = lettersInOpt.length === checkedSet.size && 
+                          lettersInOpt.every(l => checkedSet.has(l));
+          
+          const optCard = document.getElementById(`opt-${optKey}`);
+          if (isMatch) {
+            bestOpt = optKey;
+            optCard.classList.add("selected");
+          } else {
+            optCard.classList.remove("selected");
+          }
+        });
+        state.selectedAnswer = bestOpt;
+      }
+
+      if (attempt && isAnswerMissing && state.quizMode === "study" && !attempt.isSelfVerified) {
+        showSelfVerifyPanel();
+      }
+      if (attempt && state.quizMode === "study" && q.note) {
+        showExplanationPanel(q.note);
+      }
+    }
+
+    // Helper: Extracts letters (A, B, C) from texts like "A, B and C Only"
+    function extractLettersFromText(text) {
+      if (!text) return [];
+      const cleaned = text.replace(/only/i, "").replace(/and/i, "");
+      const letters = cleaned.match(/[A-G]/g) || [];
+      return letters;
+    }
+
+    // INTERFACE: SEQUENCING
+    function renderSequencingInterface(q, attempt, isAnswerMissing) {
+      const container = document.getElementById("interface-sequencing");
+      container.classList.remove("hidden");
+
+      const seqBar = document.getElementById("seq-active-bar");
+      const seqPool = document.getElementById("seq-pool-container");
+      const optionsCont = document.getElementById("sequencing-options-container");
+
+      seqBar.innerHTML = "";
+      seqPool.innerHTML = "";
+      optionsCont.innerHTML = "";
+
+      // Render pool items (draggable)
+      Object.keys(q.sub_items).forEach(letter => {
+        const itemText = q.sub_items[letter];
+        const card = document.createElement("div");
+        card.className = "seq-item";
+        card.id = `seq-item-${letter}`;
+        card.innerHTML = `
+          <div class="seq-drag-handle" style="cursor: grab; padding: 0 0.5rem; color: var(--text-muted);"><i class="fa-solid fa-grip-vertical"></i></div>
+          <div class="seq-item-left" style="flex: 1; pointer-events: none;">
+            <div class="seq-item-num">${letter}</div>
+            <div>${itemText}</div>
+          </div>
+          <button class="eliminate-btn" title="Fade item" style="padding: 0 0.5rem; z-index: 10;">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        `;
+
+        const elimBtn = card.querySelector(".eliminate-btn");
+        const dragHandle = card.querySelector(".seq-drag-handle");
+        
+        if (attempt) {
+          elimBtn.style.display = "none";
+          dragHandle.style.display = "none";
+        } else {
+          elimBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            card.classList.toggle("faded");
+            playSound(false);
+          });
+        }
+
+        seqPool.appendChild(card);
+      });
+
+      // Render options
+      Object.keys(q.options).forEach(optKey => {
+        const optionText = q.options[optKey];
+        const card = document.createElement("div");
+        card.className = "option-card";
+        card.id = `opt-${optKey}`;
+        card.innerHTML = `
+          <div class="option-letter">${optKey.toUpperCase()}</div>
+          <div class="option-content" style="flex: 1;">${optionText}</div>
+          <button class="eliminate-btn" title="Eliminate option" style="z-index: 10;">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        `;
+
+        const elimBtn = card.querySelector(".eliminate-btn");
+        if (attempt) {
+          elimBtn.style.display = "none";
+        } else {
+          elimBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            card.classList.toggle("faded");
+            playSound(false);
+          });
+        }
+
+        if (attempt) {
+          const isSelected = attempt.selected === optKey;
+          const isCorrect = q.answer === optKey;
+
+          if (isSelected) {
+            card.classList.add(attempt.isCorrect ? "correct" : "incorrect");
+          }
+          if (state.quizMode === "study" && isCorrect && !isAnswerMissing) {
+            card.classList.add("correct");
+          }
+
+          // Show correct sequence in bar
+          if (state.quizMode === "study") {
+            const correctOptText = q.options[q.answer] || "";
+            const letters = extractLettersFromText(correctOptText);
+            
+            seqBar.innerHTML = "";
+            letters.forEach((l, idx) => {
+              seqBar.innerHTML += `<div class="seq-badge">${l}</div>`;
+              if (idx < letters.length - 1) {
+                seqBar.innerHTML += `<i class="fa-solid fa-arrow-right seq-arrow"></i>`;
+              }
+              const item = document.getElementById(`seq-item-${l}`);
+              if (item) item.classList.add("selected");
+            });
+          }
+        } else {
+          card.addEventListener("click", () => {
+            if (card.classList.contains("faded")) return;
+            handleAnswerSelection(optKey);
+          });
+        }
+
+        optionsCont.appendChild(card);
+      });
+
+      function updateActiveSequenceUI(q) {
+        if (state.activeSequence.length === 0) {
+          seqBar.innerHTML = `<span class="sequence-bar-placeholder">Drag items to reorder them...</span>`;
+          Object.keys(q.options).forEach(optKey => {
+            document.getElementById(`opt-${optKey}`).classList.remove("selected");
+          });
+          state.selectedAnswer = null;
+          return;
+        }
+
+        seqBar.innerHTML = "";
+        state.activeSequence.forEach((l, idx) => {
+          seqBar.innerHTML += `<div class="seq-badge">${l}</div>`;
+          if (idx < state.activeSequence.length - 1) {
+            seqBar.innerHTML += `<i class="fa-solid fa-arrow-right seq-arrow"></i>`;
+          }
+        });
+
+        // Match sequence against options
+        const seqStr = state.activeSequence.join("");
+        let matchedOpt = null;
+
+        Object.keys(q.options).forEach(optKey => {
+          const text = q.options[optKey];
+          const lettersInOpt = extractLettersFromText(text).join("");
+
+          const optCard = document.getElementById(`opt-${optKey}`);
+          if (lettersInOpt === seqStr) {
+            matchedOpt = optKey;
+            optCard.classList.add("selected");
+          } else {
+            optCard.classList.remove("selected");
+          }
+        });
+
+        state.selectedAnswer = matchedOpt;
+      }
+
+      function updateSeqOrderFromDOM(container, q) {
+        const items = [...container.querySelectorAll(".seq-item")];
+        const currentSeq = items.map(item => item.id.replace("seq-item-", ""));
+        state.activeSequence = currentSeq;
+        updateActiveSequenceUI(q);
+      }
+
+      function makeSequencingDraggable(container, q) {
+        let draggedItem = null;
+
+        // Mobile touch reordering
+        container.addEventListener("touchstart", (e) => {
+          const handle = e.target.closest(".seq-drag-handle");
+          if (!handle) return;
+          
+          const item = handle.closest(".seq-item");
+          draggedItem = item;
+          item.classList.add("dragging");
+        }, { passive: true });
+
+        container.addEventListener("touchmove", (e) => {
+          if (!draggedItem) return;
+          
+          const touch = e.touches[0];
+          const targetEl = document.elementFromPoint(touch.clientX, touch.clientY);
+          if (!targetEl) return;
+          
+          const targetItem = targetEl.closest(".seq-item");
+          if (targetItem && targetItem !== draggedItem) {
+            const rect = targetItem.getBoundingClientRect();
+            const next = touch.clientY <= rect.top + rect.height / 2;
+            container.insertBefore(draggedItem, next ? targetItem : targetItem.nextSibling);
+          }
+        }, { passive: true });
+
+        container.addEventListener("touchend", () => {
+          if (draggedItem) {
+            draggedItem.classList.remove("dragging");
+            draggedItem = null;
+            updateSeqOrderFromDOM(container, q);
+          }
+        });
+
+        // Desktop HTML5 drag & drop
+        container.querySelectorAll(".seq-item").forEach(item => {
+          item.setAttribute("draggable", "true");
+
+          item.addEventListener("dragstart", (e) => {
+            draggedItem = item;
+            item.classList.add("dragging");
+            e.dataTransfer.effectAllowed = "move";
+          });
+
+          item.addEventListener("dragend", () => {
+            item.classList.remove("dragging");
+            draggedItem = null;
+            updateSeqOrderFromDOM(container, q);
+          });
+
+          item.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            const dragging = container.querySelector(".dragging");
+            if (!dragging) return;
+            const siblings = [...container.querySelectorAll(".seq-item:not(.dragging)")];
+            
+            let nextSibling = siblings.find(sibling => {
+              const rect = sibling.getBoundingClientRect();
+              return e.clientY <= rect.top + rect.height / 2;
+            });
+            
+            container.insertBefore(dragging, nextSibling);
+          });
+        });
+      }
+
+      // Initialize sequencing order
+      if (!attempt) {
+        makeSequencingDraggable(seqPool, q);
+        updateSeqOrderFromDOM(seqPool, q);
+      } else {
+        // If attempt exists, set the sequence to the saved attempt
+        const attemptOptText = q.options[attempt.selected] || "";
+        state.activeSequence = extractLettersFromText(attemptOptText);
+        updateActiveSequenceUI(q);
+      }
+
+      if (attempt && isAnswerMissing && state.quizMode === "study" && !attempt.isSelfVerified) {
+        showSelfVerifyPanel();
+      }
+      if (attempt && state.quizMode === "study" && q.note) {
+        showExplanationPanel(q.note);
+      }
+    }
+
+    // INTERFACE: MATCHING LIST-I & LIST-II (Tactile Drag-and-Drop Table)
+    function renderMatchingInterface(q, attempt, isAnswerMissing) {
+      const container = document.getElementById("interface-matching");
+      container.classList.remove("hidden");
+
+      const colLeft = document.getElementById("match-col-left");
+      const colRight = document.getElementById("match-col-right");
+      const optionsCont = document.getElementById("matching-options-container");
+      const mobileSelectors = document.getElementById("matching-mobile-rows");
+
+      // Reset DOM
+      colLeft.innerHTML = `<div class="matching-title">List I (Fixed)</div>`;
+      colRight.innerHTML = `<div class="matching-title">List II (Drag to Match)</div>`;
+      optionsCont.innerHTML = "";
+      mobileSelectors.innerHTML = ""; // Hide/clear old mobile selectors
+
+      // List 1 items (A, B, C, D) in fixed order
+      const letters = Object.keys(q.list_1).sort();
+      letters.forEach(letter => {
+        const text = q.list_1[letter];
+        const div = document.createElement("div");
+        div.className = "match-node";
+        div.id = `match-left-${letter}`;
+        div.style.minHeight = "4.5rem";
+        div.style.display = "flex";
+        div.style.alignItems = "center";
+        div.innerHTML = `
+          <span><strong>${letter}.</strong> ${text}</span>
+        `;
+        colLeft.appendChild(div);
+      });
+
+      // List 2 items (I, II, III, IV)
+      // Determine display order of List II
+      let romanKeys = Object.keys(q.list_2);
+      
+      if (attempt) {
+        // Arrange List II based on user selection or correct key
+        const showOptKey = (state.quizMode === "study" && !isAnswerMissing) ? q.answer : attempt.selected;
+        const optText = q.options[showOptKey] || "";
+        const parsedLinks = parseMatchingOptionText(optText); // e.g. { A: 'III', B: 'I'... }
+        
+        // Map List II roman keys in the exact order of letters A, B, C, D
+        const orderedRomans = [];
+        letters.forEach(l => {
+          if (parsedLinks[l]) orderedRomans.push(parsedLinks[l]);
+        });
+        
+        // Fallback to all keys if missing
+        if (orderedRomans.length === romanKeys.length) {
+          romanKeys = orderedRomans;
+        }
+      }
+
+      // Render List 2 items
+      romanKeys.forEach(roman => {
+        const text = q.list_2[roman];
+        const div = document.createElement("div");
+        div.className = "match-node";
+        div.id = `match-right-${roman}`;
+        div.style.minHeight = "4.5rem";
+        div.style.display = "flex";
+        div.style.alignItems = "center";
+        
+        const dragHandle = attempt ? "" : `<div class="match-drag-handle" style="cursor: grab; padding: 0 0.5rem; color: var(--text-muted);"><i class="fa-solid fa-grip-vertical"></i></div>`;
+        
+        div.innerHTML = `
+          ${dragHandle}
+          <div style="flex: 1; pointer-events: none; display: flex; align-items: center; gap: 0.5rem;">
+            <strong>${roman}.</strong>
+            <div>${text}</div>
+          </div>
+        `;
+        
+        colRight.appendChild(div);
+      });
+
+      // Render options
+      Object.keys(q.options).forEach(optKey => {
+        const optionText = q.options[optKey];
+        const card = document.createElement("div");
+        card.className = "option-card";
+        card.id = `opt-${optKey}`;
+        card.innerHTML = `
+          <div class="option-letter">${optKey.toUpperCase()}</div>
+          <div class="option-content" style="flex: 1;">${optionText}</div>
+          <button class="eliminate-btn" title="Eliminate option" style="z-index: 10;">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        `;
+
+        const elimBtn = card.querySelector(".eliminate-btn");
+        if (attempt) {
+          elimBtn.style.display = "none";
+        } else {
+          elimBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            card.classList.toggle("faded");
+            playSound(false);
+          });
+        }
+
+        if (attempt) {
+          const isSelected = attempt.selected === optKey;
+          const isCorrect = q.answer === optKey;
+
+          if (isSelected) {
+            card.classList.add(attempt.isCorrect ? "correct" : "incorrect");
+          }
+          if (state.quizMode === "study" && isCorrect && !isAnswerMissing) {
+            card.classList.add("correct");
+          }
+        } else {
+          card.addEventListener("click", () => {
+            if (card.classList.contains("faded")) return;
+            handleAnswerSelection(optKey);
+          });
+        }
+
+        optionsCont.appendChild(card);
+      });
+
+      // Parse matches from text like "A-III, B-I, C-IV, D-II"
+      function parseMatchingOptionText(text) {
+        const links = {};
+        if (!text) return links;
+        const matches = text.match(/([A-G])\s*-\s*([I|V|X]+)/g) || [];
+        matches.forEach(m => {
+          const parts = m.split("-");
+          const left = parts[0].trim();
+          const right = parts[1].trim();
+          links[left] = right;
+        });
+        return links;
+      }
+
+      function updateMatchingConnectionsUI(q) {
+        // Construct links based on current List II reordered items
+        const items = [...colRight.querySelectorAll(".match-node")];
+        const currentRomans = items.map(item => item.id.replace("match-right-", ""));
+        
+        state.matchingLinks = {};
+        letters.forEach((l, idx) => {
+          if (currentRomans[idx]) {
+            state.matchingLinks[l] = currentRomans[idx];
+          }
+        });
+
+        // Check if matching combination exists in options
+        let matchedOpt = null;
+        Object.keys(q.options).forEach(optKey => {
+          const text = q.options[optKey];
+          const parsed = parseMatchingOptionText(text);
+          
+          let isMatch = true;
+          letters.forEach(k => {
+            if (parsed[k] !== state.matchingLinks[k]) isMatch = false;
+          });
+
+          const optCard = document.getElementById("opt-" + optKey);
+          if (isMatch) {
+            matchedOpt = optKey;
+            optCard.classList.add("selected");
+          } else {
+            optCard.classList.remove("selected");
+          }
+        });
+
+        state.selectedAnswer = matchedOpt;
+      }
+
+      function makeMatchingDraggable(container, q) {
+        let draggedItem = null;
+
+        // Mobile touch reordering
+        container.addEventListener("touchstart", (e) => {
+          const handle = e.target.closest(".match-drag-handle");
+          if (!handle) return;
+          
+          const item = handle.closest(".match-node");
+          draggedItem = item;
+          item.classList.add("dragging");
+        }, { passive: true });
+
+        container.addEventListener("touchmove", (e) => {
+          if (!draggedItem) return;
+          
+          const touch = e.touches[0];
+          const targetEl = document.elementFromPoint(touch.clientX, touch.clientY);
+          if (!targetEl) return;
+          
+          const targetItem = targetEl.closest(".match-node");
+          if (targetItem && targetItem !== draggedItem) {
+            const rect = targetItem.getBoundingClientRect();
+            const next = touch.clientY <= rect.top + rect.height / 2;
+            container.insertBefore(draggedItem, next ? targetItem : targetItem.nextSibling);
+          }
+        }, { passive: true });
+
+        container.addEventListener("touchend", () => {
+          if (draggedItem) {
+            draggedItem.classList.remove("dragging");
+            draggedItem = null;
+            updateMatchingConnectionsUI(q);
+          }
+        });
+
+        // Desktop HTML5 drag & drop
+        container.querySelectorAll(".match-node").forEach(item => {
+          item.setAttribute("draggable", "true");
+
+          item.addEventListener("dragstart", (e) => {
+            draggedItem = item;
+            item.classList.add("dragging");
+            e.dataTransfer.effectAllowed = "move";
+          });
+
+          item.addEventListener("dragend", () => {
+            item.classList.remove("dragging");
+            draggedItem = null;
+            updateMatchingConnectionsUI(q);
+          });
+
+          item.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            const dragging = container.querySelector(".dragging");
+            if (!dragging) return;
+            const siblings = [...container.querySelectorAll(".match-node:not(.dragging)")];
+            
+            let nextSibling = siblings.find(sibling => {
+              const rect = sibling.getBoundingClientRect();
+              return e.clientY <= rect.top + rect.height / 2;
+            });
+            
+            container.insertBefore(dragging, nextSibling);
+          });
+        });
+      }
+
+      // Initialize matching reorder state
+      if (!attempt) {
+        makeMatchingDraggable(colRight, q);
+        updateMatchingConnectionsUI(q);
+      }
+      
+      // Dummy function to keep theme switcher and resize handlers from failing
+      window.drawMatchingLines = function() {};
+
+      if (attempt && isAnswerMissing && state.quizMode === "study" && !attempt.isSelfVerified) {
+        showSelfVerifyPanel();
+      }
+      if (attempt && state.quizMode === "study" && q.note) {
+        showExplanationPanel(q.note);
+      }
+    }
+
+    // HANDLE USER OPTION CLICK SELECTION
+    function handleAnswerSelection(optKey) {
+      if (state.quizMode === "study") {
+        // Study mode: immediate feedback
+        const q = state.filteredQuestions[state.currentQuestionIndex];
+        const key = `${state.currentUnit.id}_${q.q_no}`;
+
+        const isAnswerMissing = q.answer === null || q.answer === undefined || q.answer === '' ||
+                                 String(q.answer).toLowerCase().includes('not provided') ||
+                                 String(q.answer).toLowerCase().includes('unverified');
+
+        let isCorrect = false;
+        if (!isAnswerMissing) {
+          isCorrect = q.answer === optKey;
+        }
+
+        // Save Attempt
+        state.attempts[key] = {
+          selected: optKey,
+          isCorrect: isCorrect,
+          isSelfVerified: false
+        };
+        saveStateToStorage();
+
+        // Play Sound
+        if (!isAnswerMissing) playSound(isCorrect);
+        else playSound(true); // default correct sound for self-verify prompt trigger
+
+        // Re-render
+        renderQuestion();
+        updateQuizStatsSidebar();
+        renderQuestionNavGrid();
+      } else {
+        // Exam mode: hold selection, wait for Next / manual proceed
+        state.selectedAnswer = optKey;
+        
+        // Visual feedback (select option)
+        document.querySelectorAll(".options-grid .option-card").forEach(c => c.classList.remove("selected"));
+        const card = document.getElementById("opt-" + optKey);
+        if (card) card.classList.add("selected");
+      }
+    }
+
+    // SELF-VERIFICATION FUNCTIONS (NO ANSWER KEY IN JSON)
+    function showSelfVerifyPanel() {
+      document.getElementById("self-verify-panel").classList.remove("hidden");
+    }
+
+    function selfVerify(isCorrect) {
+      const q = state.filteredQuestions[state.currentQuestionIndex];
+      const key = `${state.currentUnit.id}_${q.q_no}`;
+      const activeAttempt = state.attempts[key];
+
+      if (activeAttempt) {
+        activeAttempt.isCorrect = isCorrect;
+        activeAttempt.isSelfVerified = true;
+        
+        saveStateToStorage();
+        playSound(isCorrect);
+
+        // Hide panel & Refresh
+        document.getElementById("self-verify-panel").classList.add("hidden");
+        updateQuizStatsSidebar();
+        renderQuestionNavGrid();
+        
+        // Auto scroll to notes / next
+        if (q.note) showExplanationPanel(q.note);
+      }
+    }
+
+    // SHOW NOTES / STUDY MATERIAL IN STUDY MODE
+    function showExplanationPanel(note) {
+      const p = document.getElementById("explanation-panel");
+      const c = document.getElementById("explanation-content");
+      
+      c.innerText = note;
+      p.classList.remove("hidden");
+    }
+
+    // SIDEBAR STATS UPDATE
+    function updateQuizStatsSidebar() {
+      // Find attempts in active set
+      let correct = 0;
+      let wrong = 0;
+      let attemptedCount = 0;
+
+      state.filteredQuestions.forEach(q => {
+        const key = `${state.currentUnit.id}_${q.q_no}`;
+        const att = state.attempts[key];
+        if (att) {
+          attemptedCount++;
+          if (att.isCorrect) correct++;
+          else wrong++;
+        }
+      });
+
+      const total = state.filteredQuestions.length;
+      const progressPercent = total > 0 ? Math.round((attemptedCount / total) * 100) : 0;
+
+      // Stats
+      document.getElementById("quiz-progress-text").innerText = `Progress: ${attemptedCount}/${total}`;
+      document.getElementById("quiz-progress-percent").innerText = `${progressPercent}%`;
+      document.getElementById("quiz-progress-bar").style.width = `${progressPercent}%`;
+
+      document.getElementById("sidebar-score-correct").innerText = correct;
+      document.getElementById("sidebar-score-wrong").innerText = wrong;
+      
+      const accuracy = attemptedCount > 0 ? Math.round((correct / attemptedCount) * 100) : 0;
+      const accEl = document.getElementById("sidebar-score-accuracy");
+      accEl.innerText = `${accuracy}%`;
+
+      // Percentile Projection
+      const scoreLabel = accEl.nextElementSibling; // the label underneath
+      if (scoreLabel) {
+        if (attemptedCount >= 5) {
+          if (accuracy >= 75) {
+            scoreLabel.innerText = "JRF projected";
+            scoreLabel.style.color = "var(--correct)";
+          } else if (accuracy >= 55) {
+            scoreLabel.innerText = "NET projected";
+            scoreLabel.style.color = "var(--primary)";
+          } else {
+            scoreLabel.innerText = "Below Cutoff";
+            scoreLabel.style.color = "var(--incorrect)";
+          }
+        } else {
+          scoreLabel.innerText = "ACCURACY";
+          scoreLabel.style.color = "var(--text-muted)";
+        }
+      }
+
+      // Update mistake count badge
+      updateMistakeCountBadge();
+    }
+
+    // SIDEBAR DOTS GRID
+    function renderQuestionNavGrid() {
+      const container = document.getElementById("question-dots-container");
+      container.innerHTML = "";
+
+      state.filteredQuestions.forEach((q, idx) => {
+        const key = `${state.currentUnit.id}_${q.q_no}`;
+        const dot = document.createElement("button");
+        dot.className = "q-nav-dot";
+        dot.innerText = idx + 1;
+
+        // Apply attempt visual status
+        const attempt = state.attempts[key];
+        const isBookmarked = state.bookmarks.includes(key);
+
+        if (idx === state.currentQuestionIndex) dot.classList.add("active");
+        if (attempt) {
+          dot.classList.add("attempted");
+          // If study mode, show correctness color coding
+          if (state.quizMode === "study") {
+            dot.classList.add(attempt.isCorrect ? "correct" : "incorrect");
+          }
+        }
+        if (isBookmarked) dot.classList.add("bookmarked");
+
+        dot.addEventListener("click", () => {
+          // If exam mode, save active selection before changing
+          saveExamSelectionState();
+          state.currentQuestionIndex = idx;
+          renderQuestion();
+          renderQuestionNavGrid();
+        });
+
+        container.appendChild(dot);
+      });
+    }
+
+    // SAVE INTERMEDIATE ANSWER FOR EXAM MODE
+    function saveExamSelectionState() {
+      if (state.quizMode !== "exam") return;
+      
+      const q = state.filteredQuestions[state.currentQuestionIndex];
+      const key = `${state.currentUnit.id}_${q.q_no}`;
+
+      // Save active selection if selected
+      if (state.selectedAnswer) {
+        const isAnswerMissing = q.answer === null || q.answer === undefined || q.answer === '' ||
+                                 String(q.answer).toLowerCase().includes('not provided') ||
+                                 String(q.answer).toLowerCase().includes('unverified');
+
+        let isCorrect = false;
+        if (!isAnswerMissing) {
+          isCorrect = q.answer === state.selectedAnswer;
+        }
+
+        state.attempts[key] = {
+          selected: state.selectedAnswer,
+          isCorrect: isCorrect,
+          isSelfVerified: isAnswerMissing // Auto mark selfVerified in exam mode as we show key at end
+        };
+        saveStateToStorage();
+        state.selectedAnswer = null; // reset
+      }
+    }
+
+    // PREV / NEXT QUESTION CONTROL
+    function prevQuestion() {
+      saveExamSelectionState();
+      if (state.currentQuestionIndex > 0) {
+        state.currentQuestionIndex--;
+        renderQuestion();
+        renderQuestionNavGrid();
+      }
+    }
+
+    function nextQuestion() {
+      saveExamSelectionState();
+      if (state.currentQuestionIndex < state.filteredQuestions.length - 1) {
+        state.currentQuestionIndex++;
+        renderQuestion();
+        renderQuestionNavGrid();
+      } else {
+        // End quiz summary prompt
+        if (confirm("You are on the last question. Would you like to end the session and view the results?")) {
+          endQuiz();
+        }
+      }
+    }
+
+    function updateNavigationControls() {
+      document.getElementById("quiz-btn-prev").disabled = state.currentQuestionIndex === 0;
+      
+      const isLast = state.currentQuestionIndex === state.filteredQuestions.length - 1;
+      const nextBtn = document.getElementById("quiz-btn-next");
+      if (isLast) {
+        nextBtn.innerHTML = `Finish <i class="fa-solid fa-circle-check"></i>`;
+      } else {
+        nextBtn.innerHTML = `Next <i class="fa-solid fa-arrow-right"></i>`;
+      }
+    }
+
+    // TOGGLE BOOKMARKS
+    function toggleBookmark() {
+      const q = state.filteredQuestions[state.currentQuestionIndex];
+      const key = `${state.currentUnit.id}_${q.q_no}`;
+      const idx = state.bookmarks.indexOf(key);
+
+      if (idx > -1) {
+        state.bookmarks.splice(idx, 1);
+        playSound(false);
+      } else {
+        state.bookmarks.push(key);
+        playSound(true);
+      }
+
+      saveStateToStorage();
+      renderQuestion();
+      renderQuestionNavGrid();
+    }
+
+    // END QUIZ SUMMARY VIEW
+    function endQuiz() {
+      saveExamSelectionState(); // save final question if set
+      
+      if (state.quizTimerInterval) {
+        clearInterval(state.quizTimerInterval);
+        state.quizTimerInterval = null;
+      }
+
+      showView("view-summary");
+      playSound(true);
+
+      // Compile stats
+      let correct = 0;
+      let wrong = 0;
+      let unattempted = 0;
+      const wrongList = [];
+
+      state.filteredQuestions.forEach((q, idx) => {
+        const key = `${state.currentUnit.id}_${q.q_no}`;
+        const att = state.attempts[key];
+
+        if (att) {
+          if (att.isCorrect) correct++;
+          else {
+            wrong++;
+            wrongList.push({ question: q, attempt: att, index: idx + 1 });
+          }
+        } else {
+          unattempted++;
+        }
+      });
+
+      const totalAttempted = correct + wrong;
+      const accuracy = totalAttempted > 0 ? Math.round((correct / totalAttempted) * 100) : 0;
+
+      document.getElementById("sum-score-correct").innerText = correct;
+      document.getElementById("sum-score-wrong").innerText = wrong;
+      document.getElementById("sum-score-accuracy").innerText = `${accuracy}%`;
+      
+      const minutes = String(Math.floor(state.examTimeSpent / 60)).padStart(2, '0');
+      const seconds = String(state.examTimeSpent % 60).padStart(2, '0');
+      document.getElementById("sum-score-time").innerText = `${minutes}:${seconds}`;
+
+      // Populate wrong answers list for review
+      const wrongCont = document.getElementById("wrong-answers-container");
+      const wrongSection = document.getElementById("wrong-answers-section");
+      
+      wrongCont.innerHTML = "";
+
+      if (wrongList.length > 0) {
+        wrongSection.classList.remove("hidden");
+        wrongList.forEach(w => {
+          const item = document.createElement("div");
+          item.className = "glass-card wrong-answer-item";
+          
+          let correctText = w.question.answer ? `Correct Option: ${w.question.answer.toUpperCase()}` : "No official answer key";
+          if (w.question.options && w.question.answer) {
+             correctText += ` (${w.question.options[w.question.answer]})`;
+          }
+
+          item.innerHTML = `
+            <div class="wrong-ans-head">
+              <span>Question ${w.index} (Q.No ${w.question.q_no})</span>
+              <span>Your Select: ${w.attempt.selected.toUpperCase()} | ${correctText}</span>
+            </div>
+            <div style="font-weight:600; margin-bottom: 0.5rem; line-height: 1.4;">${w.question.question}</div>
+            ${w.question.note ? `<div style="color:var(--correct); font-size:0.9rem; border-top:1px solid var(--card-border); padding-top:0.5rem; margin-top:0.5rem;"><i class="fa-solid fa-lightbulb"></i> Note: ${w.question.note}</div>` : ''}
+          `;
+
+          // Allow clicking to jump to review that question
+          item.addEventListener("click", () => {
+            state.currentQuestionIndex = state.filteredQuestions.indexOf(w.question);
+            showView("view-quiz");
+            // Set study mode temporarily for review
+            state.quizMode = "study";
+            renderQuestion();
+            renderQuestionNavGrid();
+            updateQuizStatsSidebar();
+          });
+
+          wrongCont.appendChild(item);
+        });
+      } else {
+        wrongSection.classList.add("hidden");
+      }
+    }
+
+    // ----------------------------------------------------
+    // ADVANCED PREP TOOLS IMPLEMENTATION
+    // ----------------------------------------------------
+    let ambientAudioCtx = null;
+    let ambientSourceNode = null;
+    let ambientGainNode = null;
+    let stopwatchInterval = null;
+
+    function playAmbientNoise() {
+      try {
+        if (!ambientAudioCtx) {
+          ambientAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        
+        const bufferSize = 2 * ambientAudioCtx.sampleRate;
+        const noiseBuffer = ambientAudioCtx.createBuffer(1, bufferSize, ambientAudioCtx.sampleRate);
+        const output = noiseBuffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+          output[i] = Math.random() * 2 - 1;
+        }
+
+        ambientSourceNode = ambientAudioCtx.createBufferSource();
+        ambientSourceNode.buffer = noiseBuffer;
+        ambientSourceNode.loop = true;
+
+        const filter = ambientAudioCtx.createBiquadFilter();
+        filter.type = 'lowpass';
+        filter.frequency.value = 350;
+
+        ambientGainNode = ambientAudioCtx.createGain();
+        ambientGainNode.gain.value = 0.05;
+
+        ambientSourceNode.connect(filter);
+        filter.connect(ambientGainNode);
+        ambientGainNode.connect(ambientAudioCtx.destination);
+
+        ambientSourceNode.start();
+      } catch (err) {
+        console.error("Ambient noise synthesis failed", err);
+      }
+    }
+
+    function stopAmbientNoise() {
+      if (ambientSourceNode) {
+        try {
+          ambientSourceNode.stop();
+          ambientSourceNode.disconnect();
+        } catch (e) {}
+        ambientSourceNode = null;
+      }
+    }
+
+    function setupAdvancedPrepTools() {
+      // 1. Font Size Multipliers
+      document.getElementById("font-dec").addEventListener("click", () => {
+        state.fontScale = Math.max(0.75, state.fontScale - 0.1);
+        document.documentElement.style.setProperty('--content-font-scale', state.fontScale);
+      });
+      document.getElementById("font-reset").addEventListener("click", () => {
+        state.fontScale = 1.0;
+        document.documentElement.style.setProperty('--content-font-scale', state.fontScale);
+      });
+      document.getElementById("font-inc").addEventListener("click", () => {
+        state.fontScale = Math.min(1.5, state.fontScale + 0.1);
+        document.documentElement.style.setProperty('--content-font-scale', state.fontScale);
+      });
+
+      // 2. Dyslexia Font Toggle
+      document.getElementById("toggle-dyslexia").addEventListener("click", () => {
+        state.dyslexiaFont = !state.dyslexiaFont;
+        if (state.dyslexiaFont) {
+          document.documentElement.style.setProperty('--font-sans', "'Comic Sans MS', cursive, sans-serif");
+          document.documentElement.style.setProperty('--font-serif', "'Comic Sans MS', cursive, sans-serif");
+        } else {
+          document.documentElement.style.setProperty('--font-sans', "'Inter', sans-serif");
+          document.documentElement.style.setProperty('--font-serif', "'Lora', serif");
+        }
+      });
+
+      // 3. Strict Exam Simulator Toggle
+      const examModeToggle = document.getElementById("toggle-exam-mode");
+      examModeToggle.addEventListener("change", (e) => {
+        const mode = e.target.checked ? "exam" : "study";
+        state.quizMode = mode;
+        renderQuestion();
+      });
+
+      // 4. Nature Ambient Sound Toggle
+      const ambientToggle = document.getElementById("toggle-ambient-noise");
+      ambientToggle.addEventListener("change", (e) => {
+        state.ambientNoise = e.target.checked;
+        if (state.ambientNoise) {
+          playAmbientNoise();
+        } else {
+          stopAmbientNoise();
+        }
+      });
+
+      // 5. Mistake Bank Review Filter
+      document.getElementById("toggle-mistakes-only").addEventListener("click", () => {
+        state.mistakesOnly = !state.mistakesOnly;
+        const btn = document.getElementById("toggle-mistakes-only");
+        
+        if (state.mistakesOnly) {
+          const wrongKeys = Object.keys(state.attempts).filter(k => k.startsWith(state.currentUnit.id + "_") && !state.attempts[k].isCorrect);
+          const wrongQNos = new Set(wrongKeys.map(k => parseInt(k.split("_")[1])));
+          
+          state.filteredQuestions = state.loadedQuestions.filter(q => wrongQNos.has(q.q_no));
+          
+          btn.style.background = "var(--primary)";
+          btn.style.color = "#fff";
+          
+          if (state.filteredQuestions.length === 0) {
+            alert("No mistakes logged in this unit! Showing all questions.");
+            state.mistakesOnly = false;
+            state.filteredQuestions = [...state.loadedQuestions];
+            btn.style.background = "";
+            btn.style.color = "";
+          }
+        } else {
+          state.filteredQuestions = [...state.loadedQuestions];
+          btn.style.background = "";
+          btn.style.color = "";
+        }
+        
+        state.currentQuestionIndex = 0;
+        renderQuestion();
+        renderQuestionNavGrid();
+        updateQuizStatsSidebar();
+      });
+
+      // 6. Export Revision Sheet
+      document.getElementById("btn-export-pdf").addEventListener("click", () => {
+        const bookmarked = state.bookmarks.filter(k => k.startsWith(state.currentUnit.id + "_"));
+        if (bookmarked.length === 0) {
+          alert("Please bookmark some questions in this unit first to export a revision sheet!");
+          return;
+        }
+
+        const bookmarkedQNos = new Set(bookmarked.map(k => parseInt(k.split("_")[1])));
+        const bQs = state.loadedQuestions.filter(q => bookmarkedQNos.has(q.q_no));
+
+        const w = window.open("", "_blank");
+        let html = `
+          <html>
+          <head>
+            <title>UGC NET Commerce Revision Sheet - ${state.currentUnit.name}</title>
+            <style>
+              body { font-family: 'Lora', Georgia, serif; padding: 2rem; color: #111; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+              h1 { font-family: 'Outfit', sans-serif; border-bottom: 2px solid #8b5cf6; padding-bottom: 0.5rem; color: #8b5cf6; }
+              .card { margin-bottom: 2rem; border-bottom: 1px dashed #ccc; padding-bottom: 1.5rem; }
+              .num { font-weight: 700; color: #8b5cf6; }
+              .options { margin-top: 0.5rem; font-size: 0.95rem; color: #444; }
+              .ans { font-weight: bold; color: #10b981; margin-top: 0.5rem; }
+              .note { font-style: italic; color: #6b7280; font-size: 0.9rem; margin-top: 0.5rem; }
+            </style>
+          </head>
+          <body>
+            <h1>UGC NET Commerce Revision Sheet</h1>
+            <h3>Unit: ${state.currentUnit.name} (${bQs.length} Bookmarked Questions)</h3>
+            <hr style="border: none; border-top: 1px solid #ddd; margin: 1rem 0;">
+        `;
+
+        bQs.forEach((q, idx) => {
+          html += `
+            <div class="card">
+              <p><span class="num">Q.${idx + 1} (Q.No ${q.q_no})</span> [${q.question_type}]</p>
+              <p style="font-size: 1.1rem; font-weight: 500;">${q.question}</p>
+              ${q.options ? `
+                <div class="options">
+                  ${Object.keys(q.options).map(o => `<div><b>${o.toUpperCase()}</b>: ${q.options[o]}</div>`).join("")}
+                </div>
+              ` : ""}
+              <p class="ans">Correct Answer: ${q.answer ? q.answer.toUpperCase() : 'N/A'}</p>
+              ${q.note ? `<p class="note"><b>Explanation Note:</b> ${q.note}</p>` : ""}
+            </div>
+          `;
+        });
+
+        html += `
+          </body>
+          </html>
+        `;
+
+        w.document.write(html);
+        w.document.close();
+        w.print();
+      });
+
+      // 7. Backup Export / Import
+      document.getElementById("btn-backup-export").addEventListener("click", () => {
+        const backupData = {
+          attempts: state.attempts,
+          bookmarks: state.bookmarks,
+          notes: state.notes
+        };
+        const str = JSON.stringify(backupData, null, 2);
+        const blob = new Blob([str], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `ugc_net_commerce_backup_${Date.now()}.json`;
+        a.click();
+      });
+
+      document.getElementById("btn-backup-import").addEventListener("click", () => {
+        const input = document.createElement("input");
+        input.type = "file";
+        input.accept = ".json";
+        input.onchange = (e) => {
+          const file = e.target.files[0];
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = (evt) => {
+            try {
+              const data = JSON.parse(evt.target.result);
+              if (data.attempts) {
+                state.attempts = { ...state.attempts, ...data.attempts };
+                localStorage.setItem("attempts", JSON.stringify(state.attempts));
+              }
+              if (data.bookmarks) {
+                state.bookmarks = Array.from(new Set([...state.bookmarks, ...data.bookmarks]));
+                localStorage.setItem("bookmarks", JSON.stringify(state.bookmarks));
+              }
+              if (data.notes) {
+                state.notes = { ...state.notes, ...data.notes };
+                localStorage.setItem("notes", JSON.stringify(state.notes));
+              }
+              alert("Backup imported and merged successfully!");
+              location.reload();
+            } catch (err) {
+              alert("Error parsing backup JSON file: " + err.message);
+            }
+          };
+          reader.readAsText(file);
+        };
+        input.click();
+      });
+
+      // 8. Pace stopwatch timer per question
+      startQuestionStopwatch();
+
+      // 9. Keyboard Shortcuts
+      document.addEventListener("keydown", (e) => {
+        if (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA") return;
+
+        const k = e.key.toLowerCase();
+        if (['1', '2', '3', '4'].includes(k)) {
+          const index = parseInt(k) - 1;
+          const options = Object.keys(state.filteredQuestions[state.currentQuestionIndex].options || {});
+          if (options[index]) {
+            handleAnswerSelection(options[index]);
+          }
+        } else if (['a', 'b', 'c', 'd'].includes(k)) {
+          const options = Object.keys(state.filteredQuestions[state.currentQuestionIndex].options || {});
+          if (options.includes(k)) {
+            handleAnswerSelection(k);
+          }
+        } else if (e.key === " ") {
+          e.preventDefault();
+          document.getElementById("quiz-btn-next").click();
+        } else if (e.key === "ArrowLeft") {
+          document.getElementById("quiz-btn-prev").click();
+        } else if (k === 'b') {
+          document.getElementById("btn-bookmark").click();
+        }
+      });
+    }
+
+    function startQuestionStopwatch() {
+      if (stopwatchInterval) clearInterval(stopwatchInterval);
+      state.questionStartTime = Date.now();
+      
+      stopwatchInterval = setInterval(() => {
+        const elapsed = Math.round((Date.now() - state.questionStartTime) / 1000);
+        const m = Math.floor(elapsed / 60).toString().padStart(2, '0');
+        const s = (elapsed % 60).toString().padStart(2, '0');
+        
+        let timerHTML = `⏱️ ${m}:${s}`;
+        
+        let paceColor = "var(--correct)";
+        if (elapsed > 120) paceColor = "var(--incorrect)";
+        else if (elapsed > 60) paceColor = "var(--warning)";
+        
+        const badge = document.getElementById("badge-qno");
+        if (badge) {
+          const baseText = `Question ${state.currentQuestionIndex + 1} of ${state.filteredQuestions.length}`;
+          badge.innerHTML = `${baseText} <span style="margin-left: 8px; font-weight: 500; font-family: var(--font-mono); color: ${paceColor};">${timerHTML}</span>`;
+        }
+      }, 1000);
+    }
+
+    function updateMistakeCountBadge() {
+      if (!state.currentUnit) return;
+      const wrongKeys = Object.keys(state.attempts).filter(k => k.startsWith(state.currentUnit.id + "_") && !state.attempts[k].isCorrect);
+      const badge = document.getElementById("badge-mistake-count");
+      if (badge) badge.innerText = wrongKeys.length;
+    }
+  </script>
+</body>
+</html>

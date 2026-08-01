@@ -1,0 +1,3852 @@
+window.u4_data = {
+  "unit": "Business Finance (UGC NET / Adda247 previous-year MCQs)",
+  "total_questions": 161,
+  "answer_key_note": "Only answers for Q1, Q2 and Q3 are confirmed from the printed solution excerpt included in the source scan (Q1=c, Q2=a, Q3=d). All other 'answer' fields are marked 'unverified' because the corresponding solution pages were not included in the provided material; verify against an official answer key before use.",
+  "questions": [
+    {
+      "q_no": 1,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "Operating Leverage"
+      },
+      "keywords": [
+        "operating leverage",
+        "contribution margin",
+        "fixed cost"
+      ],
+      "question": "A company produces and sells 10,000 toys. The selling price per toy is ₹500, variable cost is ₹200 per unit, and fixed operating cost is ₹25,00,000. Calculate operating leverage.",
+      "options": {
+        "a": "4 times",
+        "b": "5 times",
+        "c": "6 times",
+        "d": "8 times"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 2,
+      "exam_session": "June 2025",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Financial Management Fundamentals",
+        "sub_branch": "Time Value of Money Formulas"
+      },
+      "keywords": [
+        "present value",
+        "future value",
+        "annuity",
+        "time value of money"
+      ],
+      "question": "Match the LIST-I Concept with LIST-II Formula.",
+      "list_1": {
+        "A": "Present Value",
+        "B": "Future Value",
+        "C": "Future Value of Annuity",
+        "D": "Present Value of Annuity"
+      },
+      "list_2": {
+        "I": "Cash flow x (1+r)^4",
+        "II": "Cash flow / (1+r)^4",
+        "III": "R (PVIFi,n)",
+        "IV": "R (FVIFAi,n)"
+      },
+      "options": {
+        "a": "A-II, B-I, C-IV, D-III",
+        "b": "A-I, B-II, C-IV, D-III",
+        "c": "A-III, B-IV, C-I, D-II",
+        "d": "A-I, B-III, C-II, D-IV"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 3,
+      "exam_session": "June 2025",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Discounted Cash Flow Techniques"
+      },
+      "keywords": [
+        "discounted cash flow",
+        "NPV",
+        "IRR",
+        "profitability index",
+        "payback period",
+        "ARR"
+      ],
+      "question": "Which of the following are the discounted cash flow techniques of capital budgeting? A. Payback Period B. Accounting Rate of Return C. Net Present Value D. Internal Rate of Return E. Profitability Index",
+      "options": {
+        "a": "A, C, D Only",
+        "b": "B, C, E Only",
+        "c": "C and D Only",
+        "d": "C, D and E Only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 4,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "Overall Cost of Capital"
+      },
+      "keywords": [
+        "cost of capital",
+        "debentures",
+        "EBIT",
+        "equity capitalisation rate"
+      ],
+      "question": "A company has 10%, ₹20 lakh debentures. The EBIT of the company is ₹5,00,000, and the equity capitalisation rate is 16%. Calculate the overall cost of capital (Ko).",
+      "options": {
+        "a": "9.5%",
+        "b": "10.8%",
+        "c": "12.9%",
+        "d": "14.5%"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 5,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Working Capital Management",
+        "sub_branch": "Operating/Working Capital Cycle"
+      },
+      "keywords": [
+        "working capital cycle",
+        "raw material holding period",
+        "creditors period",
+        "debtors period"
+      ],
+      "question": "A company holds raw material for 60 days. It gets credit from suppliers for 15 days, production process takes 15 days, finished goods are held for 30 days, and 30 days credit is given to debtors. Calculate the total working capital cycle.",
+      "options": {
+        "a": "150 days",
+        "b": "120 days",
+        "c": "100 days",
+        "d": "90 days"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 6,
+      "exam_session": "June 2025",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Multinational Capital Budgeting"
+      },
+      "keywords": [
+        "multinational capital budgeting",
+        "net cash flow",
+        "discount rate",
+        "evaluation technique"
+      ],
+      "question": "Arrange the following steps of Multinational Capital Budgeting in correct order: A. Estimate net cash flow from the project B. Determine net investment outlay C. Apply appropriate evaluation technique D. Identify appropriate discount rate",
+      "options": {
+        "a": "A, B, C, D",
+        "b": "C, A, B, D",
+        "c": "D, C, B, A",
+        "d": "B, A, D, C"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 7,
+      "exam_session": "January 2025",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "Material Variances"
+      },
+      "keywords": [
+        "direct material variance",
+        "cost variance",
+        "price variance",
+        "usage variance",
+        "mix variance"
+      ],
+      "question": "Match the List I [Direct Material Variance] with List II [Formula].",
+      "list_1": {
+        "A": "Direct material cost variance",
+        "B": "Direct material price variance",
+        "C": "Direct material usage variance",
+        "D": "Direct material mix variance"
+      },
+      "list_2": {
+        "I": "Standard price x (Revised Standard Quantity - Actual Quantity)",
+        "II": "(Standard Price - Actual price) x Actual Quantity",
+        "III": "(Standard Quantity for actual output - Actual Quantity) x Standard price",
+        "IV": "Standard cost for actual output - Actual cost"
+      },
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-IV, B-III, C-I, D-II",
+        "c": "A-IV, B-III, C-II, D-I",
+        "d": "A-III, B-IV, C-II, D-I"
+      },
+      "answer": "c",
+      "note": "Codes/formula wording partially reconstructed from OCR; verify against official key."
+    },
+    {
+      "q_no": 8,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Payback Period"
+      },
+      "keywords": [
+        "payback period",
+        "cash outflow",
+        "cash inflow"
+      ],
+      "question": "A proposal requires a cash outflow of ₹18,500 and is expected to generate cash inflows of ₹8,000, ₹4,000, ₹2,000, ₹2,000, and ₹2,000 over 5 years respectively. The payback period is:",
+      "options": {
+        "a": "4 Years",
+        "b": "3.25 Years",
+        "c": "3.50 Years",
+        "d": "4.25 Years"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 9,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "P/V Ratio & Margin of Safety"
+      },
+      "keywords": [
+        "P/V ratio",
+        "fixed cost",
+        "margin of safety",
+        "actual sales"
+      ],
+      "question": "Determine the P/V ratio from the following particulars: Total Fixed Cost = ₹12,000, Actual Sales = ₹48,000, Margin of Safety = ₹8,000",
+      "options": {
+        "a": "20%",
+        "b": "25%",
+        "c": "30%",
+        "d": "40%"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 10,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Composition of Capital Structure"
+      },
+      "keywords": [
+        "capital structure",
+        "debentures",
+        "preference shares",
+        "equity shares"
+      ],
+      "question": "Which one of the following refers to the composition of long-term funds such as debentures, long-term borrowing, preference shares, and equity shares in the capitalization of a company?",
+      "options": {
+        "a": "Cost of capital",
+        "b": "Capital budgeting",
+        "c": "Working Capital",
+        "d": "Capital structure"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 11,
+      "exam_session": "January 2025",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "International Finance",
+        "sub_branch": "Exchange Rate Concepts"
+      },
+      "keywords": [
+        "exchange rate",
+        "forward market",
+        "arbitrage",
+        "direct quotation"
+      ],
+      "question": "Match the financial concepts with their meanings.",
+      "list_1": {
+        "A": "Exchange Rate",
+        "B": "Forward market",
+        "C": "Arbitrage",
+        "D": "Direct Quotation"
+      },
+      "list_2": {
+        "I": "It refers to the price of one unit of foreign currency in terms of some units of home currency",
+        "II": "It is the process of making risk less profits by exploiting price differences of assets in different markets",
+        "III": "When transactions are entered into for settlement on a future date",
+        "IV": "It is a price of one unit of a currency in terms of some units of another currency"
+      },
+      "options": {
+        "a": "A-IV, B-III, C-II, D-I",
+        "b": "A-III, B-IV, C-II, D-I",
+        "c": "A-I, B-II, C-III, D-IV",
+        "d": "A-I, B-III, C-II, D-IV"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 12,
+      "exam_session": "January 2025",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Computing Net Present Value"
+      },
+      "keywords": [
+        "NPV",
+        "present value",
+        "cash inflow",
+        "cash outflow"
+      ],
+      "question": "Arrange the following steps in logical sequence regarding how to compute Net Present Value (NPV).",
+      "options": {
+        "a": "A, B, C, E, D",
+        "b": "B, C, E, D, A",
+        "c": "A, C, B, E, D",
+        "d": "B, C, D, E, A"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 13,
+      "exam_session": "January 2025",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Financial Management Fundamentals",
+        "sub_branch": "Time Value of Money"
+      },
+      "keywords": [
+        "time value of money",
+        "present value",
+        "future value"
+      ],
+      "question": "Identify correct statements from the following regarding Time Value of money: A. The interest which may be earned/saved on the money held at present underlies the concept of time value of money. B. The money which is receivable at present has less value than the money receivable in future. C. The relationship that exists between the value of money receivable at present and the value of money receivable in future is referred to as time value of money. D. Value of money receivable at present - money receivable in future - Time value of money. E. Future value of money is the value of money held presently at some given future time at a given rate of interest.",
+      "options": {
+        "a": "B and D Only",
+        "b": "A, C and E Only",
+        "c": "B, C and D Only",
+        "d": "C, D and E Only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 14,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "Break-even / CVP Analysis"
+      },
+      "keywords": [
+        "selling price",
+        "variable cost",
+        "fixed cost",
+        "target profit"
+      ],
+      "question": "If selling price per unit is ₹56.00, variable cost per unit is ₹32.00, and total fixed cost is ₹60,000, what is the number of units that need to be sold to achieve a profit of ₹84,000?",
+      "options": {
+        "a": "6000 units",
+        "b": "8400 units",
+        "c": "5000 units",
+        "d": "6500 units"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 15,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Business Finance Fundamentals",
+        "sub_branch": "Cost-Value-Price Relationship"
+      },
+      "keywords": [
+        "cost-value-price",
+        "manufacturer pricing"
+      ],
+      "question": "Which one of the following cost-value-price trio, a manufacturer would like to seek?",
+      "options": {
+        "a": "Value > Price > Costs",
+        "b": "Price > Value > Costs",
+        "c": "Price > Costs > Value",
+        "d": "Value = Price = Costs"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 16,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "WTO/GATT & Multilateral Trade System",
+        "sub_branch": "Domestic Support Boxes"
+      },
+      "keywords": [
+        "WTO",
+        "subsidies",
+        "boxes",
+        "Agriculture Agreement",
+        "Article 6"
+      ],
+      "question": "In WTO terminology, subsidies in general are identified by 'boxes.' Domestic support measures considered to distort production and trade, which is defined in Article 6 of the Agriculture Agreement, fall into which box?",
+      "options": {
+        "a": "Amber Box",
+        "b": "Jumbo Box",
+        "c": "Greenfield Box",
+        "d": "Black Box"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 17,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Theories of Capital Structure"
+      },
+      "keywords": [
+        "arbitrage process",
+        "capital structure theory",
+        "MM approach"
+      ],
+      "question": "Which one of the following theory of capital structure discusses Arbitrage Process?",
+      "options": {
+        "a": "Traditional Approach",
+        "b": "Modigliani and Miller (MM) Approach",
+        "c": "Net Operating Income (NOI) Approach",
+        "d": "Net Income (NI) Approach"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 18,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Gordon's Dividend Model"
+      },
+      "keywords": [
+        "Gordon model",
+        "dividend capitalization",
+        "assumptions"
+      ],
+      "question": "Which of the following are the assumptions of Gordon's dividend-capitalization model? A. No taxes B. Cost of capital is less than the growth rate C. No internal financing D. Constant retention E. Constant cost of capital",
+      "options": {
+        "a": "A, B & D only",
+        "b": "B, C & E only",
+        "c": "A, C & D only",
+        "d": "A, D & E only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 19,
+      "exam_session": "September 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Capital Budgeting Techniques"
+      },
+      "keywords": [
+        "profitability index",
+        "ARR",
+        "IRR",
+        "MIRR"
+      ],
+      "question": "Match the column.",
+      "list_1": {
+        "A": "Profitability Index",
+        "B": "Accounting Rate of Return (ARR)",
+        "C": "Internal Rate of Return (IRR)",
+        "D": "Modified Internal Rate of Return (MIRR)"
+      },
+      "list_2": {
+        "I": "Rate that equates the investment outlay with the present value of cash inflow received after one period",
+        "II": "Compound average annual rate calculated with a reinvestment rate different than the project's IRR",
+        "III": "Rate that is computed by dividing the average profit after tax with the average investment",
+        "IV": "Ratio of the present value of cash inflows, at the required rate of return, to the initial cash outflow of the investment"
+      },
+      "options": {
+        "a": "A-IV, B-III, C-I, D-II",
+        "b": "A-I, B-IV, C-II, D-III",
+        "c": "A-II, B-I, C-III, D-IV",
+        "d": "A-III, B-II, C-IV, D-I"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 20,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Dividend Growth Model"
+      },
+      "keywords": [
+        "dividend growth model",
+        "cost of equity"
+      ],
+      "question": "According to Dividend Growth Model, the cost of equity is equal to:",
+      "options": {
+        "a": "Retained Earning + Dividend yield",
+        "b": "Dividend yield + Expected Growth in Dividend",
+        "c": "Retained Earning + Expected Growth in Dividend",
+        "d": "Dividend yield + Intrinsic value"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 21,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "P/V Ratio & Margin of Safety"
+      },
+      "keywords": [
+        "P/V ratio",
+        "margin of safety",
+        "net profit"
+      ],
+      "question": "The profit volume ratio of a company is 50%, and the margin of safety is 40%. Calculate the net profit if the sales volume is Rs.1,00,000.",
+      "options": {
+        "a": "10,000",
+        "b": "18,000",
+        "c": "20,000",
+        "d": "25,000"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 22,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "FDI & International Business Entry",
+        "sub_branch": "Forms of FDI"
+      },
+      "keywords": [
+        "FDI",
+        "wholly owned subsidiary",
+        "joint venture",
+        "GDR",
+        "acquisition"
+      ],
+      "question": "Which of the following are included in Foreign Direct Investment? A. Wholly owned subsidiary B. Joint venture C. Investment in GDR D. Acquisition E. Investment by FIIs",
+      "options": {
+        "a": "A & B Only",
+        "b": "B, C & E Only",
+        "c": "C, D & E Only",
+        "d": "A, B & D Only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 23,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Walter's Model"
+      },
+      "keywords": [
+        "Walter's model",
+        "valuation formula",
+        "dividend per share",
+        "earnings per share"
+      ],
+      "question": "What is the valuation formula based on the Walter's model if P: Price per equity share, D: Dividend per share, E: Earnings per share, r: Rate of return on investment, k: Cost of equity?",
+      "options": {
+        "a": "P = [D + (E-k)/r] / r",
+        "b": "P = [E + (E-D)r/k] / k",
+        "c": "P = [D + (E-D)r/k] / k",
+        "d": "P = E + (E-D)r/k"
+      },
+      "answer": "c",
+      "note": "Formula formatting reconstructed from a partially garbled scan; verify exact form against official source."
+    },
+    {
+      "q_no": 24,
+      "exam_session": "September 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Capital Structure Models"
+      },
+      "keywords": [
+        "CAPM",
+        "Gordon model",
+        "WACC",
+        "traditional model"
+      ],
+      "question": "Match List-I with List-II.",
+      "list_1": {
+        "A": "Capital Asset Pricing Model",
+        "B": "Gordon Model",
+        "C": "Weighted Average Cost of Capital",
+        "D": "Traditional Model"
+      },
+      "list_2": {
+        "I": "E/V.Ye + D/V.Yd(1-Tc)",
+        "II": "Re = Rf + βE(Rm - Rf)",
+        "III": "P = m(D + E/3)",
+        "IV": "P0 = E1(1-b) / (k-br)"
+      },
+      "options": {
+        "a": "A-IV, B-I, C-II, D-III",
+        "b": "A-II, B-I, C-III, D-IV",
+        "c": "A-I, B-II, C-III, D-IV",
+        "d": "A-II, B-IV, C-I, D-III"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 25,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Modigliani-Miller Proposition II"
+      },
+      "keywords": [
+        "MM proposition II",
+        "financial leverage",
+        "shareholder wealth"
+      ],
+      "question": "According to Proposition II of Modigliani-Miller theory of capital structure, which of the following statement is true?",
+      "options": {
+        "a": "Financial leverage has no effect on the wealth of shareholders",
+        "b": "Financial leverage increases the wealth of shareholders",
+        "c": "Rate of return expected by shareholders increases with the increase in equity financing",
+        "d": "Rate of return expected by shareholders increases with financial leverage"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 26,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "Labour Variances"
+      },
+      "keywords": [
+        "labour mix variance",
+        "standard rate",
+        "actual time"
+      ],
+      "question": "Which of the following is correct to compute Labour Mix Variance (LMV)?",
+      "options": {
+        "a": "LMV = Actual rate (Revised Std. time - Actual time)",
+        "b": "LMV = Actual time (Std. Rate - Actual rate)",
+        "c": "LMV = Std. Rate (Revised Std. time - Actual time)",
+        "d": "LMV = Std. time (Actual rate - Std. rate)"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 27,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "MM Theory Assumptions"
+      },
+      "keywords": [
+        "MM theory",
+        "perfect capital market",
+        "homogeneous risk class"
+      ],
+      "question": "Which of the following are assumptions underlying MM Theory of capital structure? A. Perfect Capital Market B. Heterogeneous Expectations C. Absence of Taxes D. 100% Dividend Payout E. Equivalent Risk Class",
+      "options": {
+        "a": "A, C, & E Only",
+        "b": "B, C & E Only",
+        "c": "A, B, C & D Only",
+        "d": "B, C, D & E Only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 28,
+      "exam_session": "September 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Capital Budgeting Process"
+      },
+      "keywords": [
+        "capital budgeting process",
+        "investment proposals",
+        "capital budget"
+      ],
+      "question": "Arrange the steps of Capital Budgeting Process in correct sequence: A. Preparation of Capital Budget and Appropriation B. Performance Review C. Assembling of Investment Proposals D. Identification of Investment Opportunities & Decision Making",
+      "options": {
+        "a": "D, C, A, B",
+        "b": "A, C, D, B",
+        "c": "A, D, C, B",
+        "d": "B, D, C, A"
+      },
+      "answer": "a",
+      "note": "Original options in source scan reference a 5th step (E) not listed among A-D; option lettering reconstructed to the 4 listed steps only. Verify against official key."
+    },
+    {
+      "q_no": 29,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "International Finance",
+        "sub_branch": "Exposure Types"
+      },
+      "keywords": [
+        "exchange rate fluctuation",
+        "operating exposure",
+        "future costs"
+      ],
+      "question": "The effect of exchange rate fluctuations on a firm's future cost and revenues is termed as:",
+      "options": {
+        "a": "Transaction Exposure",
+        "b": "Translation Exposure",
+        "c": "Accounting Exposure",
+        "d": "Operating Exposure"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 30,
+      "exam_session": "September 2024",
+      "question_type": "Chronological Sequencing",
+      "topic": {
+        "main_branch": "International Financial Institutions",
+        "sub_branch": "International Monetary System"
+      },
+      "keywords": [
+        "gold standard",
+        "bretton woods",
+        "floating exchange rate",
+        "chronology"
+      ],
+      "question": "Arrange the following phases of the International Monetary System in chronological order (old to new): A. Gold Bullion Standard B. Gold Specie Standard C. Floating Exchange Rate D. Gold Exchange Standard E. Bretton Woods System",
+      "options": {
+        "a": "A, B, E, D, C",
+        "b": "A, D, E, C, B",
+        "c": "B, A, D, E, C",
+        "d": "B, D, A, C, E"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 31,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "NOI Approach"
+      },
+      "keywords": [
+        "NOI approach",
+        "cost of debt",
+        "cost of equity",
+        "debt-equity ratio"
+      ],
+      "question": "The management of Vibgyor Fabrics subscribes to the NOI approach and believes that its cost of debt and overall cost of capital will remain at 9% and 12% respectively. If the debt-equity ratio is 0.8, what is the cost of equity?",
+      "options": {
+        "a": "16.4%",
+        "b": "12.4%",
+        "c": "14.4%",
+        "d": "8.12%"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 32,
+      "exam_session": "September 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Types of Traders"
+      },
+      "keywords": [
+        "hedger",
+        "speculator",
+        "arbitrageur",
+        "scalper"
+      ],
+      "question": "Match the column.",
+      "list_1": {
+        "A": "Hedger",
+        "B": "Speculator",
+        "C": "Arbitrageur",
+        "D": "Scalper"
+      },
+      "list_2": {
+        "I": "Buying and selling shares quickly",
+        "II": "Reducing investment Risk",
+        "III": "Taking increased Risk willingly",
+        "IV": "Taking advantage of the mismatch of the prices in two markets"
+      },
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-I, C-III, D-IV",
+        "c": "A-II, B-III, C-IV, D-I",
+        "d": "A-III, B-IV, C-II, D-I"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 33,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Discounting Criteria Techniques"
+      },
+      "keywords": [
+        "capital budgeting",
+        "discounting criteria",
+        "NPV",
+        "IRR"
+      ],
+      "question": "Which of the following capital budgeting techniques follow the discounting criteria? A. Net Present Value B. Benefit-Cost Ratio C. Accounting Rate of Return D. Internal Rate of Return E. Payback Period",
+      "options": {
+        "a": "A, B, C, D Only",
+        "b": "B, C, D Only",
+        "c": "A, B, D Only",
+        "d": "A, C, D Only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 34,
+      "exam_session": "September 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Export-Import Operations & Trade Finance",
+        "sub_branch": "Securitization Process"
+      },
+      "keywords": [
+        "securitization",
+        "SPV",
+        "credit enhancement"
+      ],
+      "question": "Arrange the following steps of securitization in the correct sequence: A. Forming SPV B. Transfer to SPV C. Credit Enhancement D. Seasoning E. Issuance of Securities",
+      "options": {
+        "a": "A, B, C, D, E",
+        "b": "B, C, A, D, E",
+        "c": "D, C, A, B, E",
+        "d": "D, C, B, A, E"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 35,
+      "exam_session": "September 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Trade Tariffs & Barriers",
+        "sub_branch": "Anti-Dumping Process"
+      },
+      "keywords": [
+        "anti-dumping",
+        "initiation",
+        "preliminary findings"
+      ],
+      "question": "Arrange the following anti-dumping process in proper sequence: A. Initiation B. Preliminary screening C. Rejection under de minimis, unsubstantiated information, etc. D. Exporting country allowed to modify practice. E. Preliminary findings followed by final finding and measures.",
+      "options": {
+        "a": "B, C, A, D, E",
+        "b": "A, B, C, D, E",
+        "c": "B, A, C, D, E",
+        "d": "B, C, A, E, D"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 36,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Value of Growth Opportunities"
+      },
+      "keywords": [
+        "EPS",
+        "share price",
+        "growth opportunities",
+        "capitalization rate"
+      ],
+      "question": "The price of a company's share is ₹80, and the value of growth opportunities is ₹20. If the company's capitalization rate is 15%, how much is the EPS?",
+      "options": {
+        "a": "₹20",
+        "b": "₹12",
+        "c": "₹3",
+        "d": "₹9"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 37,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Terminal Year Cash Flows"
+      },
+      "keywords": [
+        "terminal year",
+        "capital gains tax",
+        "net working capital"
+      ],
+      "question": "For the purpose of taking Capital Budgeting Decisions in respect of a company in India, the following are taken into consideration in computing cash flows in the terminal year of the project: A. Tax loss on short-term capital gains B. Tax loss on short-term capital loss C. Release of net working capital D. Tax saving on short-term capital loss E. Tax saving on short-term capital gains",
+      "options": {
+        "a": "A, C & D only",
+        "b": "B, C & E only",
+        "c": "C & E only",
+        "d": "B & E only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 38,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Dividend Per Share Calculation"
+      },
+      "keywords": [
+        "EPS",
+        "DPS",
+        "target payout ratio",
+        "adjustment rate"
+      ],
+      "question": "What will be the dividend per share for the year 2024 given the following information about Rohtas Industries: EPS for 2024 = 13, DPS for 2023 = 1.2, Target Payout Ratio = 0.6, Adjustment Rate = 0.7",
+      "options": {
+        "a": "Rs.1.8",
+        "b": "Rs.1.62",
+        "c": "Rs.1.52",
+        "d": "Rs.1.72"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 39,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Working Capital Management",
+        "sub_branch": "Working Capital Approaches"
+      },
+      "keywords": [
+        "aggressive approach",
+        "conservative approach",
+        "matching approach",
+        "liquidity",
+        "profitability"
+      ],
+      "question": "Which one of the following is true with respect to working capital finance?",
+      "options": {
+        "a": "Liquidity is higher in aggressive approach",
+        "b": "Profitability is higher in conservative approach",
+        "c": "Liquidity is lower in matching approach",
+        "d": "Profitability is higher in aggressive approach"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 40,
+      "exam_session": "June 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Risk Analysis Methods"
+      },
+      "keywords": [
+        "sensitivity analysis",
+        "scenario analysis",
+        "simulation analysis",
+        "decision tree analysis"
+      ],
+      "question": "Match List - I [Methods of risk analysis] with List - II [Meaning].",
+      "list_1": {
+        "A": "Sensitivity Analysis",
+        "B": "Scenario Analysis",
+        "C": "Simulation Analysis",
+        "D": "Decision Tree Analysis"
+      },
+      "list_2": {
+        "I": "A computer generates a very large number of scenarios according to the probability distribution of variable",
+        "II": "Provide a way to present different possibilities so that we can be sure of the decision we make today",
+        "III": "Analysing the project's NPV (or IRR) for a given change one variable at a time",
+        "IV": "Analysing the project NPV (IRR) for a given change in combination of variable"
+      },
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-IV, B-III, C-I, D-II",
+        "c": "A-III, B-IV, C-I, D-II",
+        "d": "A-III, B-IV, C-I, D-II"
+      },
+      "answer": "c",
+      "note": "Options (c) and (d) appear identical in the scanned source (likely OCR duplication); verify against official key."
+    },
+    {
+      "q_no": 41,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Net Income Approach Originator"
+      },
+      "keywords": [
+        "Net Income approach",
+        "Durand"
+      ],
+      "question": "Which one of the following has given the Net Income approach of capital structure?",
+      "options": {
+        "a": "Durand",
+        "b": "Walter",
+        "c": "Gorden",
+        "d": "Modigiliani - Miller"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 42,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "Operating Leverage"
+      },
+      "keywords": [
+        "degree of operating leverage",
+        "EBIT",
+        "PBT",
+        "fixed cost"
+      ],
+      "question": "If EBIT = 1120, PBT = 320, Fixed cost = 700. What is the value of degree of operating leverage?",
+      "options": {
+        "a": "2.67",
+        "b": "5.6",
+        "c": "1.25",
+        "d": "1.625"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 43,
+      "exam_session": "June 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Business Environment Fundamentals",
+        "sub_branch": "Steps of Financial Accounting"
+      },
+      "keywords": [
+        "financial accounting",
+        "recording",
+        "classification",
+        "summarisation"
+      ],
+      "question": "Arrange in proper sequence the steps of Financial Accounting: A. Summarisation B. Identification and measures of financial transaction C. Classification D. Recording E. Interpretation of result",
+      "options": {
+        "a": "C, B, A, E, D",
+        "b": "C, B, D, A, E",
+        "c": "B, D, C, A, E",
+        "d": "B, D, A, C, E"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 44,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "CAPM"
+      },
+      "keywords": [
+        "CAPM",
+        "cost of equity",
+        "risk-free rate",
+        "beta",
+        "market risk premium"
+      ],
+      "question": "What is value of cost of equity if risk-free rate is 6 percent, market risk premium is 9 percent and beta is 1.54?",
+      "options": {
+        "a": "19.86%",
+        "b": "5.48%",
+        "c": "14.46%",
+        "d": "13.86%"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 45,
+      "exam_session": "June 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Export-Import Operations & Trade Finance",
+        "sub_branch": "Types of Leases"
+      },
+      "keywords": [
+        "finance lease",
+        "operating lease",
+        "sale and leaseback",
+        "direct lease"
+      ],
+      "question": "Match List - I with List - II.",
+      "list_1": {
+        "A": "Finance lease",
+        "B": "Operating lease",
+        "C": "Sale and lease back",
+        "D": "Direct lease"
+      },
+      "list_2": {
+        "I": "The lessor transfers substantially all the risk and rewards incidental to the ownership of the asset to the lessee",
+        "II": "The lease under which lessor owns/acquires the assets that are leased to a given lessee",
+        "III": "The lessee sell an asset for cash to prospective lessor",
+        "IV": "The lessor does not transfer all the risk and rewards incidental to ownership of the assets"
+      },
+      "options": {
+        "a": "A-I, B-IV, C-III, D-II",
+        "b": "A-IV, B-I, C-III, D-II",
+        "c": "A-I, B-II, C-III, D-IV",
+        "d": "A-I, B-III, C-IV, D-II"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 46,
+      "exam_session": "June 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Net Income Approach Assumptions"
+      },
+      "keywords": [
+        "Net Income approach",
+        "assumptions",
+        "cost of debt",
+        "cost of equity"
+      ],
+      "question": "Which of the following assumption is of Net Income Approach of capital structure? A. Cost of debt is less than cost of equity B. There is no tax C. Risk perception of investor will not change by the use of debt D. Change in capital structure of a company does not affect market value of the firm E. The business risk will remain constant at every level of debt and equity mix",
+      "options": {
+        "a": "A, B only",
+        "b": "D, E only",
+        "c": "A, B, C only",
+        "d": "C, D, E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 47,
+      "exam_session": "June 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Merits of NPV Method"
+      },
+      "keywords": [
+        "NPV",
+        "merits",
+        "time value of money",
+        "value additivity"
+      ],
+      "question": "Which of the following are merits of NPV method of capital budgeting? A. Considers all cash flows. B. Consider the time value of money. C. Give more weightage to future receipt. D. Satisfies the value additivity principle. E. No relation with the wealth maximisation principle.",
+      "options": {
+        "a": "A, B, C only",
+        "b": "C, D, E only",
+        "c": "B, C, E only",
+        "d": "A, B, D only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 48,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Static Trade-off Theory"
+      },
+      "keywords": [
+        "static theory",
+        "tax benefit of debt",
+        "financial distress"
+      ],
+      "question": "Which of the following theories of capital structure articulates that firm borrows debt up to the point where the tax benefit extra debt is exactly equal to the cost that comes from the increased probability of financial distress?",
+      "options": {
+        "a": "The static theory",
+        "b": "Net income approach",
+        "c": "Modigliani-Miller theory",
+        "d": "Net operating income approach"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 49,
+      "exam_session": "December 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "Differential Cost Analysis"
+      },
+      "keywords": [
+        "opportunity cost",
+        "sunk cost",
+        "marginal revenue",
+        "incremental cost"
+      ],
+      "question": "Which of the following are relevant in deciding among different courses of action, the manager needs to consider the differential revenue and costs of alternatives? A. Opportunity costs and economic profits B. Fixed and Sunk Costs C. Marginal Revenue and Marginal Cost D. Incremental and marginal costs E. Economies and dis-economies of scale",
+      "options": {
+        "a": "A and D only",
+        "b": "B and C only",
+        "c": "D and E only",
+        "d": "A and B only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 50,
+      "exam_session": "December 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Immediate Payment Service (IMPS)"
+      },
+      "keywords": [
+        "IMPS",
+        "digital payments",
+        "RBI"
+      ],
+      "question": "Which of the following are objectives of Immediate Payment Service (IMPS)?",
+      "options": {
+        "a": "A, C, D and E only",
+        "b": "A, B, C and D only",
+        "c": "B, C, D and E only",
+        "d": "B, A, E and D only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 51,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "International Financial Institutions",
+        "sub_branch": "NBFC Regulatory Committees"
+      },
+      "keywords": [
+        "NBFC",
+        "regulatory framework",
+        "committee"
+      ],
+      "question": "Which one of the following committees has suggested the establishment of NBFC's regulatory framework?",
+      "options": {
+        "a": "Raj Study Group (1975)",
+        "b": "Chakkravarty Committee (1985)",
+        "c": "Vaghul Committee (1987)",
+        "d": "Shah Committee (1992)"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 52,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "International Finance",
+        "sub_branch": "Hedging Instruments"
+      },
+      "keywords": [
+        "forward contract",
+        "hedging",
+        "foreign currency transaction"
+      ],
+      "question": "Which one of the following instruments is often used to protect the value of a foreign currency denominated transaction?",
+      "options": {
+        "a": "Forward contract",
+        "b": "Forward swap",
+        "c": "Forward hedge",
+        "d": "Forward premium"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 53,
+      "exam_session": "December 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Bond Rates and Risk"
+      },
+      "keywords": [
+        "coupon rate",
+        "yield to maturity",
+        "interest rate risk",
+        "current yield"
+      ],
+      "question": "Match List -I [Bond rates and risk] with List II [Description].",
+      "list_1": {
+        "A": "Coupon rate",
+        "B": "Yield to maturity",
+        "C": "Interest rate risk",
+        "D": "Current (bond) yield"
+      },
+      "list_2": {
+        "I": "The interest rate required in the market on a bond",
+        "II": "It is obtained by dividing annual coupon (stated interest payment) by the bond price",
+        "III": "It germinates and originates from fluctuating interest rates",
+        "IV": "The annual coupon (stated interest payment) divided by the face value of bond"
+      },
+      "options": {
+        "a": "A-IV, B-I, C-III, D-II",
+        "b": "A-II, B-III, C-I, D-IV",
+        "c": "A-III, B-II, C-IV, D-I",
+        "d": "A-I, B-III, C-II, D-IV"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 54,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "NPCI Payment Systems"
+      },
+      "keywords": [
+        "NPCI",
+        "digital payment system",
+        "RuPay"
+      ],
+      "question": "Which one of the following digital payment systems is developed and managed by the National Payments Corporation of India?",
+      "options": {
+        "a": "Paytm",
+        "b": "Bhartpay",
+        "c": "Mastercard",
+        "d": "RuPay"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 55,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Financial Inclusion Barriers"
+      },
+      "keywords": [
+        "financial inclusion",
+        "transaction costs",
+        "trust"
+      ],
+      "question": "Which one of the following are disposed to promote financial inclusion?",
+      "options": {
+        "a": "Poor quality of services rendered",
+        "b": "High transaction costs",
+        "c": "Universal access to financial services",
+        "d": "Lack of trust in the system"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 56,
+      "exam_session": "December 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "Sales Variance Analysis"
+      },
+      "keywords": [
+        "sales price variance",
+        "sales volume variance",
+        "sales activity variance"
+      ],
+      "question": "By reducing the sales price from Rs.80 per unit to Rs.78 per unit, the sales manager has succeeded in selling 1000 units more of a product. Which of the following decisive conclusions can be drawn from this? A. Sales price variance is unfavourable B. Sales volume variance is unfavourable C. Total sales variance is unfavourable D. Sales activity variance is Rs.80000 (favourable) E. Sales price variance is Rs.2000 (unfavourable)",
+      "options": {
+        "a": "A, B and C only",
+        "b": "C, D and E only",
+        "c": "A, B and D only",
+        "d": "B, D and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 57,
+      "exam_session": "December 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Balance of Payments & Foreign Exchange",
+        "sub_branch": "Reserve Currency Policy Conflicts"
+      },
+      "keywords": [
+        "reserve currency",
+        "monetary policy",
+        "fiscal policy"
+      ],
+      "question": "When a country's currency is accepted as a reserve currency, the potential conflict may arise between which of following policy objectives? A. Domestic monetary policy B. Domestic fiscal policy C. External currency policy D. Foreign trade policy E. Inland trade policy",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, C and D only",
+        "c": "B, D and E only",
+        "d": "C, D and E only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 58,
+      "exam_session": "December 2023",
+      "question_type": "Statement-based (True/False)",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Treasury Bills"
+      },
+      "keywords": [
+        "ordinary treasury bills",
+        "ad hoc treasury bills",
+        "RBI"
+      ],
+      "question": "Statement I: The ordinary treasury bills that are marketable and have a secondary market are issued to the public and financial institutions. Statement II: Ad hoc treasury bills are issued only in favour of the Reserve Bank of India which is authorized to issue currency notes against them.",
+      "options": {
+        "a": "Both Statement I and Statement II are true",
+        "b": "Both Statement I and Statement II are false",
+        "c": "Statement I is true but Statement II is false",
+        "d": "Statement I is false but Statement II is true"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 59,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Adjusted Present Value"
+      },
+      "keywords": [
+        "adjusted present value",
+        "MNC",
+        "law of one price"
+      ],
+      "question": "The adjusted present value model used by MNCs to evaluate capital budgeting decision is based on",
+      "options": {
+        "a": "Gresham's principle",
+        "b": "Value additivity approach",
+        "c": "Law of one price",
+        "d": "Multilateral Netting approach"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 60,
+      "exam_session": "June 2023",
+      "question_type": "Assertion-Reason",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "Yield on Capital"
+      },
+      "keywords": [
+        "assertion reason",
+        "return on capital",
+        "yield"
+      ],
+      "question": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R. Assertion A: The return on capital invested is a concept that measures the profit which a firm earns on investing a unit of capital. Reason R: Yield on capital is another term employed to express the idea.",
+      "options": {
+        "a": "Both A and R are correct and R is the correct explanation of A",
+        "b": "Both A and R are correct but R is NOT the correct explanation of A",
+        "c": "A is correct but R is not correct",
+        "d": "A is not correct but R is correct"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 61,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "IRR Method Limitations"
+      },
+      "keywords": [
+        "IRR",
+        "mutually exclusive projects",
+        "reinvestment"
+      ],
+      "question": "Which of the following elements cause problem while applying internal rate of return method while evaluating mutually exclusive projects? A. Discount rate B. Timing C. Scale D. Reversing flow E. Leverage",
+      "options": {
+        "a": "A, B only",
+        "b": "D, E only",
+        "c": "B, C only",
+        "d": "A, D only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 62,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "MM Dividend Irrelevance Theory"
+      },
+      "keywords": [
+        "dividend irrelevance",
+        "MM theory",
+        "investment policy"
+      ],
+      "question": "The dividend-irrelevance theory of Miller and Modigliani depends on which one of the following relationships between investment policy and dividend policy?",
+      "options": {
+        "a": "Since dividend policy is irrelevant, there is no relationship between investment policy and dividend policy",
+        "b": "The level of investment does not influence or matter to the dividend decision",
+        "c": "Once dividend policy is set, the investment decisions are residuals",
+        "d": "The investment policy is set ahead of time and not altered by change in dividend policy"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 63,
+      "exam_session": "June 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Capital Structure Theories"
+      },
+      "keywords": [
+        "MM approach",
+        "pecking order theory",
+        "trade off theory",
+        "signaling theory"
+      ],
+      "question": "Match List I with List II.",
+      "list_1": {
+        "A": "MM approach",
+        "B": "Pecking order theory",
+        "C": "Trade off Theory",
+        "D": "Signaling Theory"
+      },
+      "list_2": {
+        "I": "Coast of financial distress",
+        "II": "Assymetric information",
+        "III": "No target capital structure",
+        "IV": "Home made Leverage"
+      },
+      "options": {
+        "a": "A-III, B-II, C-IV, D-I",
+        "b": "A-IV, B-III, C-I, D-II",
+        "c": "A-IV, B-I, C-III, D-II",
+        "d": "A-IV, B-III, C-II, D-I"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 64,
+      "exam_session": "June 2023",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Export-Import Operations & Trade Finance",
+        "sub_branch": "Securitisation Process"
+      },
+      "keywords": [
+        "securitisation",
+        "SPV",
+        "tradeable securities"
+      ],
+      "question": "Sequence the following steps in the process of securitisation: A. Special purpose vehicle (SPV) issue tradeble securities to find the purchase of pool of assets B. SPV subcotracts (outsource) the originator for collection of intrest and principle payments on the pool of assets C. SPV repay the funds to the investor or cashflow arise on the pool of assets D. Originator maker a pool of assets and sold it to the SPV E. SPV pays the funds to the origination for the pool of assets",
+      "options": {
+        "a": "B, D, A, C, E",
+        "b": "D, E, B, A, C",
+        "c": "D, B, A, E, C",
+        "d": "E, A, B, D, C"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 65,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Balance of Payments & Foreign Exchange",
+        "sub_branch": "Intervention Currency"
+      },
+      "keywords": [
+        "intervention currency",
+        "vehicle currency",
+        "cross-border transactions"
+      ],
+      "question": "Which of the following describe an intervention currency:",
+      "options": {
+        "a": "The currency in which exporter choose to invoice their exports",
+        "b": "The currency in which cross-border transactions are paid and closed",
+        "c": "The currency in terms of which a domestic currency is quoted",
+        "d": "The vehicle currency"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 66,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "International Financial Institutions",
+        "sub_branch": "Euro Currency Market"
+      },
+      "keywords": [
+        "euro currency market",
+        "unregulated",
+        "CRR",
+        "SLR"
+      ],
+      "question": "Which of the following are the characteristics of the Euro Currency market? A. The euro currency market does not have geographical limits B. The euro currency market is unregulated C. The euro currency market does not have deposit insurance D. There are no restriction on the maximum interest payable or chargeable E. The euro currency market does not attract CRR and SLR restrictions",
+      "options": {
+        "a": "A, B and C only",
+        "b": "B, E and D only",
+        "c": "E, C and A only",
+        "d": "D, A and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 67,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "Return on Total Capital Employed"
+      },
+      "keywords": [
+        "return on capital employed",
+        "net profit",
+        "fixed assets"
+      ],
+      "question": "From the following information you are required to compute Return on Total Capital employed. Net Profit Rs.100,000, Provision for tax Rs.100,000, Income from Investment Rs.10,000, Fixed Assets Rs.450,000, Current assets Rs.1,50,000, Interest on debenture Rs.10,000, Reserves Rs.100,000",
+      "options": {
+        "a": "30%",
+        "b": "50%",
+        "c": "60%",
+        "d": "40%"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 68,
+      "exam_session": "June 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "International Finance",
+        "sub_branch": "Hedging Techniques"
+      },
+      "keywords": [
+        "pooling",
+        "financial hedge",
+        "natural hedge",
+        "netting"
+      ],
+      "question": "Match List I with List II [Feature].",
+      "list_1": {
+        "A": "Pooling",
+        "B": "Financial hedge",
+        "C": "Natural hedge",
+        "D": "Netting"
+      },
+      "list_2": {
+        "I": "Setting up production facilities in a number of countries",
+        "II": "Reduction of Foreign exchange risk through leading and lagging",
+        "III": "Simultaneous borrowing and lending in two different currencies",
+        "IV": "Holding and managing of cash by the affiliates"
+      },
+      "options": {
+        "a": "A-I, B-IV, C-II, D-III",
+        "b": "A-IV, B-III, C-I, D-II",
+        "c": "A-IV, B-II, C-I, D-III",
+        "d": "A-I, B-II, C-III, D-IV"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 69,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Mutual Fund Regulation"
+      },
+      "keywords": [
+        "mutual funds",
+        "SEBI",
+        "regulation"
+      ],
+      "question": "Mutual Funds in India are regulated by:",
+      "options": {
+        "a": "Unit Trust of India",
+        "b": "Department for Promotion of Industries and Internal trade",
+        "c": "The Securities and Exchange Board of India",
+        "d": "Department of financial Services"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 70,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Balance of Payments & Foreign Exchange",
+        "sub_branch": "Real Return Calculation"
+      },
+      "keywords": [
+        "total return",
+        "inflation",
+        "real return"
+      ],
+      "question": "The total return for an equity stock during a year was 12.5 per cent. The rate of inflation during that year was 3.5 per cent. The real (inflation-adjusted) return was:",
+      "options": {
+        "a": "9.26 per cent",
+        "b": "16.00 per cent",
+        "c": "7.65 per cent",
+        "d": "8.70 per cent"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 71,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "International Business Strategy",
+        "sub_branch": "Managing M&A Anxiety"
+      },
+      "keywords": [
+        "mergers and acquisitions",
+        "employee anxiety",
+        "integration"
+      ],
+      "question": "Which of the interventions can be used to manage the anxiety created by mergers and acquisitions? A. Speed-up of the integration process B. Articulate a new vision, common goals and organizational symbols C. Employee counselling and stress management training D. Disengage efforts such as termination ceremonies E. Social support from spouse, friends, supervisors and coworkers",
+      "options": {
+        "a": "A, B and C only",
+        "b": "B, C and D only",
+        "c": "A, C and E only",
+        "d": "A, B and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 72,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Optimal Capital Budget"
+      },
+      "keywords": [
+        "optimal capital budget",
+        "investment opportunity curve",
+        "marginal cost of capital"
+      ],
+      "question": "The optimal capital budget of a firm is reflected by the intersection point of",
+      "options": {
+        "a": "Security market line and capital market line",
+        "b": "Weighted average cost of capital curve and marginal cost of capital curve",
+        "c": "Investment opportunity curve and marginal cost of capital curve",
+        "d": "Weighted average cost of capital curve and investment opportunity curve"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 73,
+      "exam_session": "March 2023",
+      "question_type": "Statement-based (True/False)",
+      "topic": {
+        "main_branch": "International Finance",
+        "sub_branch": "Translation vs Transaction Exposure"
+      },
+      "keywords": [
+        "translation exposure",
+        "transaction exposure"
+      ],
+      "question": "Statement I: Translation exposure refers to the exchange gain or loss occurring from the difference in the exchange rate at the beginning and the end of the accounting period. Statement II: Transaction exposure refers to the change in the value of the firm caused by the unexpected changes in the exchange rate.",
+      "options": {
+        "a": "Both Statement I and Statement II are correct",
+        "b": "Both Statement I and Statement II are incorrect",
+        "c": "Statement I is correct but Statement II is incorrect",
+        "d": "Statement I is incorrect but Statement II is correct"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 74,
+      "exam_session": "March 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Required Rate of Return (Gordon Growth)"
+      },
+      "keywords": [
+        "Gordon growth model",
+        "required rate of return",
+        "dividend growth"
+      ],
+      "question": "The current market price of a company's share is Rs.90 and the expected dividend per share next year is Rs.4.50. If the dividends are expected to grow at a constant rate of 8%, the shareholders required rate of return is:",
+      "options": {
+        "a": "5%",
+        "b": "8%",
+        "c": "13%",
+        "d": "20%"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 75,
+      "exam_session": "March 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Value-Additivity Principle"
+      },
+      "keywords": [
+        "value additivity",
+        "NPV method"
+      ],
+      "question": "'Value-additivity principle' implies which one of the following methods of capital budgeting?",
+      "options": {
+        "a": "Payback period method",
+        "b": "NPV method",
+        "c": "IRR method",
+        "d": "ARR method"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 76,
+      "exam_session": "March 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Export-Import Operations & Trade Finance",
+        "sub_branch": "Factoring Types"
+      },
+      "keywords": [
+        "invoice discounting",
+        "non-recourse factoring",
+        "full factoring"
+      ],
+      "question": "If invoice discounting is not confidential in nature, the customers of the client are advised to make payment directly to the factor. This facility, when offered with a non-recourse, is known as:",
+      "options": {
+        "a": "Agency Factoring",
+        "b": "Protected invoice discounting",
+        "c": "Full factoring",
+        "d": "Odd line factoring"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 77,
+      "exam_session": "March 2023",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Budgeting Process Sequence"
+      },
+      "keywords": [
+        "budgeting",
+        "proposal screening",
+        "implementation"
+      ],
+      "question": "Arrange the following steps involved in the budgeting in a proper sequence: A. Screening of the proposal B. Evaluation of various proposals C. Identification of Investment proposal D. Performance review E. Implementing the proposal",
+      "options": {
+        "a": "C, A, B, D, E",
+        "b": "C, A, B, E, D",
+        "c": "A, C, B, E, D",
+        "d": "A, B, C, D, E"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 78,
+      "exam_session": "March 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Primary Capital Market Instruments"
+      },
+      "keywords": [
+        "primary market",
+        "IPO",
+        "venture capital"
+      ],
+      "question": "Which of the following are related to primary capital market? A. IPO B. Long Term Loans C. Venture Capital D. Letters of Credit E. Participation Certificates",
+      "options": {
+        "a": "A, B and E only",
+        "b": "C, D and E only",
+        "c": "A, B and C only",
+        "d": "A, D and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 79,
+      "exam_session": "March 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "CAPM"
+      },
+      "keywords": [
+        "CAPM",
+        "cost of equity",
+        "beta"
+      ],
+      "question": "The risk-free rate is 6 per cent, the market risk premium is 9 per cent and the beta of share is 1.54, then what is the cost of equity?",
+      "options": {
+        "a": "23%",
+        "b": "19%",
+        "c": "13%",
+        "d": "20%"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 80,
+      "exam_session": "March 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "CVP Concepts"
+      },
+      "keywords": [
+        "margin of safety",
+        "break even point",
+        "P/V ratio",
+        "contribution"
+      ],
+      "question": "Match List I with List II:",
+      "list_1": {
+        "A": "Margin of Safety",
+        "B": "Break Even Point",
+        "C": "P V Ratio",
+        "D": "Contribution"
+      },
+      "list_2": {
+        "I": "Profit x sales/PV Ratio",
+        "II": "Difference between total revenue and total variable costs",
+        "III": "Total Sales-Total Variable Cost / Total Sales",
+        "IV": "Equality between contribution and total fixed costs"
+      },
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-I, B-IV, C-III, D-II",
+        "c": "A-III, B-I, C-II, D-I",
+        "d": "A-IV, B-I, C-II, D-III"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 81,
+      "exam_session": "March 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Export-Import Operations & Trade Finance",
+        "sub_branch": "Types of Leases"
+      },
+      "keywords": [
+        "finance lease",
+        "operating lease",
+        "sale and leaseback",
+        "direct lease"
+      ],
+      "question": "Match List I with List II:",
+      "list_1": {
+        "A": "Finance Lease",
+        "B": "Operating Lease",
+        "C": "Sale and Lease back",
+        "D": "Direct lease"
+      },
+      "list_2": {
+        "I": "The lessee and the owner of the equipment are two different entities",
+        "II": "Lessee sells an asset for cash to a prospective lessor and then leases back the same assets",
+        "III": "The lessor does not transfer all the risk and rewards incidental to the ownership of the assets",
+        "IV": "The lessor transfers substantially all the risks and rewards incidental to the ownership of the assets to the lessee"
+      },
+      "options": {
+        "a": "A-IV, B-III, C-II, D-I",
+        "b": "A-IV, B-III, C-I, D-II",
+        "c": "A-I, B-II, C-III, D-IV",
+        "d": "A-I, B-II, C-IV, D-III"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 82,
+      "exam_session": "March 2023",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "International Business Strategy",
+        "sub_branch": "Private Equity Ownership Share Calculation"
+      },
+      "keywords": [
+        "private equity",
+        "EBITDA",
+        "ownership share",
+        "FVF"
+      ],
+      "question": "ABC Ventures private equity investor considering investing Rs.1,000 million in the equity of XYZ ltd. ABC Ventures requires a return of 30% on investment with planned holding period of 5 years. The likely debt of XYZ ltd. will be Rs.1000 million and cash balance of Rs.300 million with a projected EBITDA of Rs.1500 million for the year 5. The desired ownership share of ABC Ventures in XYZ ltd., given FVF_0.30,5= 3.713, will be:",
+      "options": {
+        "a": "37.13%",
+        "b": "30.00%",
+        "c": "37.90%",
+        "d": "7.13%"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 83,
+      "exam_session": "March 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Capital Rationing Factors"
+      },
+      "keywords": [
+        "capital rationing",
+        "imperfect capital markets"
+      ],
+      "question": "Which are the major factors that lead to capital rationing? A. Imperfection of capital market. B. Reluctance to broaden the equity share-base for the fear of losing control. C. Inability to manage. D. Deficiencies in market information which might affect the availability of capital. E. Efficiency of Capital Market.",
+      "options": {
+        "a": "A, B, D only",
+        "b": "C, D, E only",
+        "c": "A, B, C, E only",
+        "d": "A, B, C, D only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 84,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Consumer Protection & Business Law",
+        "sub_branch": "Vivad se Vishwas Act"
+      },
+      "keywords": [
+        "Vivad se Vishwas",
+        "disputed tax",
+        "declarant"
+      ],
+      "question": "Under the Vivad se Vishwas Act 2020, the amount payable by the declarant U/S 3 on or after January 1, 2021 is:",
+      "options": {
+        "a": "Amount of disputed",
+        "b": "The aggregate of the amount of disputed tax and 10% of disputed tax",
+        "c": "Amount of penalty and amount computed by CBDT",
+        "d": "Average of tax arrears for last three assessment years"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 85,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "Break-even Point"
+      },
+      "keywords": [
+        "break even point",
+        "fixed cost",
+        "variable cost"
+      ],
+      "question": "Break-even point is not affected with the changes in which one of the following?",
+      "options": {
+        "a": "Sale price per unit",
+        "b": "Variable cost per unit",
+        "c": "Number of units sold",
+        "d": "Total fixed cost"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 86,
+      "exam_session": "November 2022",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "FDI & International Business Entry",
+        "sub_branch": "GDR Issue Process"
+      },
+      "keywords": [
+        "GDR",
+        "custodian",
+        "listing"
+      ],
+      "question": "Arrange the following steps in the process of GDR Issues: A. Registration with prescribed authority B. Appointment and vesting of shares with the custodian C. Approval of the regulatory authorities D. Listing of GDR E. GDR allotment",
+      "options": {
+        "a": "C, A, B, E, D",
+        "b": "A, B, C, D, E",
+        "c": "A, C, B, E, D",
+        "d": "B, A, C, D, E"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 87,
+      "exam_session": "November 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Balance of Payments & Foreign Exchange",
+        "sub_branch": "Types of Foreign Exchange Exposure"
+      },
+      "keywords": [
+        "economic exposure",
+        "translation exposure",
+        "transaction exposure",
+        "operating exposure"
+      ],
+      "question": "Match List-I with List-II.",
+      "list_1": {
+        "A": "Economic Exposure",
+        "B": "Translation Exposure",
+        "C": "Transaction Exposure",
+        "D": "Operating Exposure"
+      },
+      "list_2": {
+        "I": "Potential changes in all future cash flows of a firm that result from unanticipated changes in exchange rates",
+        "II": "It arises when items of financial statements that are stated in foreign currencies are restated in the home currency of an MNC",
+        "III": "It arises when a firm's contract obligations are exposed to unanticipated changes in exchange rate",
+        "IV": "When a firm's real assets are exposed to unanticipated changes in exchange rates"
+      },
+      "options": {
+        "a": "A-III, B-IV, C-II, D-I",
+        "b": "A-I, B-II, C-III, D-IV",
+        "c": "A-IV, B-III, C-II, D-I",
+        "d": "A-I, B-IV, C-III, D-II"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 88,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Indian Money Market Interest Structure"
+      },
+      "keywords": [
+        "call rates",
+        "liquidity crunch",
+        "money market"
+      ],
+      "question": "Which one of the following is false with respect to interest structure in the Indian money market?",
+      "options": {
+        "a": "A very tight liquidity position will increase the call rates while excess liquidity will give fairly low and stable rates",
+        "b": "If the liquidity crunch of the banks is passed on to the system, it may lead to high volatility in the call rates",
+        "c": "Call rates under normal liquidity conditions are the cap rate for the term money market",
+        "d": "In a volatile call market situation, lending will yield high return and by selling Inter-bank participation the bank will have more money to play in the call market"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 89,
+      "exam_session": "November 2022",
+      "question_type": "Assertion-Reason",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Debt Capacity"
+      },
+      "keywords": [
+        "assertion reason",
+        "debt capacity",
+        "capital structure"
+      ],
+      "question": "Given below are two statements: One is labelled as Assertion (A): and the other is labelled as Reason (R). Assertion (A): Capital structure is determined within the debt capacity of a company and it should not be exceeded. Reason(R): Debt capacity of a company depends on its ability to generate cash flow. It should generate enough to pay lenders' fixed charges and principal sum.",
+      "options": {
+        "a": "Both A and R are correct R is the correct explanation of A",
+        "b": "Both A and R are correct but R is NOT correct explanation of A",
+        "c": "A is correct but R is not correct",
+        "d": "A is not correct but R is correct"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 90,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Gordon's Dividend Model Assumptions"
+      },
+      "keywords": [
+        "Gordon model",
+        "assumptions",
+        "retention ratio"
+      ],
+      "question": "Which of the following are key assumptions of Gordon's Dividend Model? A. Ke > br B. r and Ke are changing C. The firm is not all-equity firm D. The firm has perpetual life E. The retention ratio, once decided, is constant",
+      "options": {
+        "a": "A, D, E only",
+        "b": "B, C, E only",
+        "c": "A, B, D only",
+        "d": "C, D, E only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 91,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Traditional Approach"
+      },
+      "keywords": [
+        "traditional approach",
+        "debt financing",
+        "value of firm"
+      ],
+      "question": "Which one of the following approaches of capital structure pleads that debt financing initially increases the value of the firm; however excess debt financing beyond a particular point reduces the value of the firm?",
+      "options": {
+        "a": "Net Income Approach",
+        "b": "Net Operating Income Approach",
+        "c": "Traditional Approach",
+        "d": "Modigliani-Miller Approach"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 92,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "After-tax Cost of Perpetual Debt"
+      },
+      "keywords": [
+        "perpetual debt",
+        "after tax cost",
+        "premium"
+      ],
+      "question": "A company has 10% perpetual debt of Rs.1,00,000. The tax rate is 35%. Which one of the following is the after-tax cost of capital assuming that the debt is issued at 10% premium?",
+      "options": {
+        "a": "10%",
+        "b": "5.91%",
+        "c": "6.5%",
+        "d": "7.22%"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 93,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "Interest Coverage Ratio"
+      },
+      "keywords": [
+        "interest coverage ratio",
+        "EBIT",
+        "term loan"
+      ],
+      "question": "The information with respect to a company is: EBIT = ₹35 lakhs, 15%; Term loan = ₹50 lakhs; Working capital term loan from bank @20% = ₹30 lakhs; 10% Preference share capital = ₹10 lakhs; Public deposit accepted @ 14% = ₹15 lakhs. Which one among the following is the Interest Coverage Ratio for the company?",
+      "options": {
+        "a": "0.45",
+        "b": "1.98",
+        "c": "2.24",
+        "d": "2.59"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 94,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "MM Dividend Irrelevance Assumptions"
+      },
+      "keywords": [
+        "MM hypothesis",
+        "dividend irrelevance",
+        "assumptions"
+      ],
+      "question": "The MM hypothesis of the irrelevance of dividends is based on which of the following critical assumptions? A. Investors are able to forecast future prices and dividends with certainty B. The firm has a given investment policy which does not change C. All financing is done through retained earnings D. There are not taxes E. Perfect capital markets in which all investors are rational",
+      "options": {
+        "a": "A, B and C only",
+        "b": "C, D and E only",
+        "c": "A, B, D and E only",
+        "d": "B, C, D and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 95,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "Contribution Margin"
+      },
+      "keywords": [
+        "contribution margin",
+        "selling price",
+        "sales mix"
+      ],
+      "question": "The contribution margin can be increased by which of the following? A. Increasing the selling price per unit B. Changing the sales mixture and selling more profitable products for which the P/V ratio is higher C. Keeping the marginal cost unchanged D. Increase the amount of fixed assets E. Decreasing the selling price per unit",
+      "options": {
+        "a": "B, C and E only",
+        "b": "A, C and D only",
+        "c": "A and B only",
+        "d": "D and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 96,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Consumer Protection & Business Law",
+        "sub_branch": "Capital Gains Scheme (Section 54)"
+      },
+      "keywords": [
+        "section 54",
+        "capital gains",
+        "exemption"
+      ],
+      "question": "Amount unutilized in the capital gain scheme for which exemption was claimed under section 54 shall be treated as long-term capital in the previous year:",
+      "options": {
+        "a": "In which period of 2 years has expired from the date of deposit",
+        "b": "In which period of 2 years has expired from the date of transfer",
+        "c": "In which period of 3 years has expired from date of deposit",
+        "d": "In which period of 3 years has expired from the date of transfer"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 97,
+      "exam_session": "November 2022",
+      "question_type": "Assertion-Reason",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Government Bond Price Risk"
+      },
+      "keywords": [
+        "assertion reason",
+        "bond prices",
+        "interest rates"
+      ],
+      "question": "Given below are two statements, one is labelled as Assertion A and the other is labelled as Reason R. Assertion A: By switching to long-term government bonds, the investor acquires an asset whose price fluctuates as interest rates vary. Reason R: Bond prices fall when interest rates rise and rise when interest rates fall.",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true but R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 98,
+      "exam_session": "October 2022",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Balance of Payments & Foreign Exchange",
+        "sub_branch": "Central Bank Interest Rate Policy"
+      },
+      "keywords": [
+        "central banks",
+        "interest rates",
+        "inflation"
+      ],
+      "question": "What has been the primary motive of central banks raising interest rates in recent times?",
+      "options": {
+        "a": "Gaining competitiveness",
+        "b": "Taming inflation",
+        "c": "Raising employment levels",
+        "d": "Currency depreciation"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 99,
+      "exam_session": "October 2022",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "International Financial Institutions",
+        "sub_branch": "Insurance Solvency Margin"
+      },
+      "keywords": [
+        "insurance",
+        "solvency margin",
+        "policy holders"
+      ],
+      "question": "The safety margin that insurers must maintain in order to protect the interest of the policy holders is called:",
+      "options": {
+        "a": "Protection margin",
+        "b": "Solvency margin",
+        "c": "Profit margin",
+        "d": "Cost of risk bearing"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 100,
+      "exam_session": "October 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Cost & Management Accounting",
+        "sub_branch": "Material Usage Variance Causes"
+      },
+      "keywords": [
+        "material usage variance",
+        "causes",
+        "wastage"
+      ],
+      "question": "Which of the following may be the reason for a material usage variance? A. Negligence in the use of materials B. Changes in basic prices of materials C. Poor or improper machine handling D. Wastage due to inefficient production methods E. Change in product design requiring usage different from the standard",
+      "options": {
+        "a": "A, B, C, D only",
+        "b": "B, C, D, E only",
+        "c": "A, C, D, E only",
+        "d": "A, B, D, E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 101,
+      "exam_session": "October 2022",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Balance of Payments & Foreign Exchange",
+        "sub_branch": "Translation Exposure"
+      },
+      "keywords": [
+        "translation exposure",
+        "consolidated financial statements"
+      ],
+      "question": "The potential that a firm's consolidated financial statements be affected as a result of changes in exchange rates is called as:",
+      "options": {
+        "a": "Transaction exposure",
+        "b": "Economic exposure",
+        "c": "Translation exposure",
+        "d": "Operating exposure"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 102,
+      "exam_session": "October 2022",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "FDI & International Business Entry",
+        "sub_branch": "Foreign vs Domestic Equity Investment"
+      },
+      "keywords": [
+        "dividend yield",
+        "capital appreciation",
+        "foreign investment"
+      ],
+      "question": "In comparison to domestic equity investment, foreign investment would be preferred if it offers which of the following situations?",
+      "options": {
+        "a": "Higher dividend yield and high rate of capital appreciation",
+        "b": "Lower divided yield and lower rate of capital appreciation",
+        "c": "Higher divided yield and lower rate of capital appreciation",
+        "d": "Lower divided yield and high rate of capital appreciation"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 103,
+      "exam_session": "October 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Earnings Valuation Ratios"
+      },
+      "keywords": [
+        "P/E ratio",
+        "earnings yield",
+        "price-book ratio"
+      ],
+      "question": "Match List I [Earnings-valuation] with List II [Underlying descriptions]",
+      "list_1": {
+        "A": "Price-earning (P.E) ratio",
+        "B": "Earnings yield ratio",
+        "C": "Price-book ratio",
+        "D": "Relative P.E ratio"
+      },
+      "list_2": {
+        "I": "Stock price divided by accounting net worth",
+        "II": "Firm's P.E ratio divided by an index P.E ratio",
+        "III": "Stock price divided by the earnings per share",
+        "IV": "Earnings per share divided by stock price"
+      },
+      "options": {
+        "a": "A-II, B-IV, C-I, D-III",
+        "b": "A-I, B-IV, C-III, D-II",
+        "c": "A-II, B-III, C-IV, D-I",
+        "d": "A-III, B-IV, C-I, D-II"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 104,
+      "exam_session": "October 2022",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "NPV Evaluation Steps"
+      },
+      "keywords": [
+        "NPV method",
+        "investment proposal evaluation"
+      ],
+      "question": "Rearrange the steps followed in evaluation of an investment proposal using NPV method: A. Calculate the present value of cash inflows B. Identify an appropriate discount rate C. Forecasting cash flows D. Rank the projects as per NPV E. Computer the net present value",
+      "options": {
+        "a": "B, E, A, D, C",
+        "b": "A, B, C, D, E",
+        "c": "C, B, A, E, D",
+        "d": "D, A, C, B, E"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 105,
+      "exam_session": "October 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "MM Hypothesis Assumptions"
+      },
+      "keywords": [
+        "MM hypothesis",
+        "WACC",
+        "perfect capital markets"
+      ],
+      "question": "Which of the following assumptions form the basis of the MM Hypothesis in stating irrelevance of capital structure regarding weighted average cost of capital remaining constant? A. Perfect capital markets B. Heterogeneous risk class C. Absence of taxes D. Full dividend pay-out E. Same expectation of firm's EBIT with which to evaluate the value of a firm",
+      "options": {
+        "a": "B, C, D, E only",
+        "b": "A, C, D, E only",
+        "c": "A, B, C, D only",
+        "d": "A, B, D, E only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 106,
+      "exam_session": "October 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "International Financial Institutions",
+        "sub_branch": "Basel II Pillars"
+      },
+      "keywords": [
+        "Basel II",
+        "capital requirements",
+        "supervisory review",
+        "market discipline"
+      ],
+      "question": "Which of the following are three pillars of BASEL-II? A. Minimum Capital Requirements B. Supervisory Review C. Leverage D. Market Discipline E. Capital Conservation Buffer",
+      "options": {
+        "a": "A, C, D only",
+        "b": "A, D, E only",
+        "c": "A, B, D only",
+        "d": "B, C, E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 107,
+      "exam_session": "November 2021",
+      "question_type": "Assertion-Reason",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Dividend and Share Price"
+      },
+      "keywords": [
+        "assertion reason",
+        "dividend policy",
+        "discounted value"
+      ],
+      "question": "Given below are two statements, one is labelled as Assertion A and the other is labelled as Reason R. Assertion A: Two companies with the same general earning power and same general position in an industry, the one paying larger dividend will almost always sell at a higher price. Reason R: The discounted value of near dividends is higher than the present worth of distant dividends.",
+      "options": {
+        "a": "A is correct but R is not correct",
+        "b": "A is not correct but R is correct",
+        "c": "Both A and R are correct and R is the correct explanation of A",
+        "d": "Both A and R are correct but R is NOT the correct explanation of A"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 108,
+      "exam_session": "November 2021",
+      "question_type": "Assertion-Reason",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Dividend and Share Price (Repeat)"
+      },
+      "keywords": [
+        "assertion reason",
+        "dividend policy",
+        "discounted value"
+      ],
+      "question": "Given below are two statements, one is labelled as Assertion A and the other is labelled as Reason R. Assertion A: Two companies with the same general earning power and same general position in an industry, the one paying larger dividend will almost always sell at a higher price. Reason R: The discounted value of near dividends is higher than the present worth of distant dividends.",
+      "options": {
+        "a": "A is correct but R is not correct",
+        "b": "A is not correct but R is correct",
+        "c": "Both A and R are correct and R is the correct explanation of A",
+        "d": "Both A and R are correct but R is NOT the correct explanation of A"
+      },
+      "answer": "c",
+      "note": "This item repeats the assertion-reason pair also seen at Q107 in the source scan (same session, possibly a printing duplication). Verify against official paper."
+    },
+    {
+      "q_no": 109,
+      "exam_session": "November 2021",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "International Financial Institutions",
+        "sub_branch": "Insurance Claim Settlement"
+      },
+      "keywords": [
+        "insurance claim",
+        "settlement procedure",
+        "notice of loss"
+      ],
+      "question": "Arrange the following steps in a logical sequence of the claim settlement procedure in Insurance: A. Scrutinisation B. Investigation of an assessment C. Claim form D. Notice of loss E. Settlement and Arbitration",
+      "options": {
+        "a": "A, B, C, D, E",
+        "b": "C, A, D, B, E",
+        "c": "B, C, A, E, D",
+        "d": "D, C, A, B, E"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 110,
+      "exam_session": "November 2021",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Option Hedging Concepts"
+      },
+      "keywords": [
+        "European option",
+        "American option",
+        "in-the-money option",
+        "option premium"
+      ],
+      "question": "Match List I [Hedging Concepts] with List II [Description]:",
+      "list_1": {
+        "A": "European option",
+        "B": "Option premium",
+        "C": "In-the-money option",
+        "D": "American option"
+      },
+      "list_2": {
+        "I": "Option contract exercised on any date up to maturity",
+        "II": "When the immediate exercise of an option yields a positive value to its holder",
+        "III": "Option contract exercised only on the maturity date",
+        "IV": "It is paid by the buyer of the options upfront to the option seller"
+      },
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-I, B-II, C-IV, D-III",
+        "c": "A-I, B-IV, C-II, D-III",
+        "d": "A-III, B-IV, C-II, D-I"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 111,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Working Capital Management",
+        "sub_branch": "Components of Credit Policy"
+      },
+      "keywords": [
+        "credit policy",
+        "collection policy",
+        "terms of sale"
+      ],
+      "question": "Identify the components of the credit policy of a business firm from the following: A. Collection policy B. Factoring C. Credit rating D. Credit analysis E. Terms of sale",
+      "options": {
+        "a": "A, C and D only",
+        "b": "A, D and E only",
+        "c": "B, C and D only",
+        "d": "C, D and E only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 112,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "MM Approach Assumptions"
+      },
+      "keywords": [
+        "MM approach",
+        "efficient capital markets",
+        "dividend payout"
+      ],
+      "question": "The basic premise of the MM-approach is based on which of the following assumptions? A. Asymmetrical information B. Efficient capital markets C. Investor rationality D. Diverse business risk profile E. 100% dividend payout ratio",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, C and E only",
+        "c": "B, C and E only",
+        "d": "C, D and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 113,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Cash Flow Reinvestment Rate"
+      },
+      "keywords": [
+        "cash flow reinvestment",
+        "cost of capital",
+        "discount rate"
+      ],
+      "question": "Cash flows are presumably reinvested in capital budgeting decisions at: A. Discount rate B. Market rate C. Cost of capital D. Riskless rate E. Internal rate of return",
+      "options": {
+        "a": "A, C and D only",
+        "b": "A, C and E only",
+        "c": "B, C and D only",
+        "d": "C, D and E only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 114,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Sustainable Growth Rate"
+      },
+      "keywords": [
+        "sustainable growth rate",
+        "ROE",
+        "payout ratio"
+      ],
+      "question": "What is the sustainable growth rate of the company that enjoys return on equity = 30 percent and a dividend payout ratio of 40 percent?",
+      "options": {
+        "a": "12 percent",
+        "b": "18 percent",
+        "c": "30 percent",
+        "d": "40 percent"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 115,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Working Capital Management",
+        "sub_branch": "Financial Slack"
+      },
+      "keywords": [
+        "financial slack",
+        "internally generated cash"
+      ],
+      "question": "Companies strive to stockpile internally generated cash. Such a cash reserve is called:",
+      "options": {
+        "a": "Financial float",
+        "b": "Financial slack",
+        "c": "Margin of safety",
+        "d": "Reserve float"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 116,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "International Finance",
+        "sub_branch": "Leading and Lagging"
+      },
+      "keywords": [
+        "leading and lagging",
+        "receivables",
+        "payables",
+        "exchange rate"
+      ],
+      "question": "The practice of delaying receipts from the foreign currency designated receivables whose currencies are likely to appreciate and delaying foreign currency designated payables whose currencies are likely to depreciate is known as:",
+      "options": {
+        "a": "Lagging",
+        "b": "Netting",
+        "c": "Leading",
+        "d": "Risk hedging"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 117,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "MM Approach Value of Levered Firm"
+      },
+      "keywords": [
+        "MM approach",
+        "levered firm",
+        "value of firm",
+        "tax shield"
+      ],
+      "question": "What is the value of a levered firm 'L' if it has the same EBIT as an unlevered firm 'U'. (With value of = 700 lac), has a debt of = 200 lac, tax rate 35% under MM approach?",
+      "options": {
+        "a": "Rs.950 lac",
+        "b": "Rs.630 lac",
+        "c": "Rs.770 lac",
+        "d": "Rs.525 lac"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 118,
+      "exam_session": "November 2021",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "Debt Capacity Assessment (Cash Flow Approach)"
+      },
+      "keywords": [
+        "debt capacity",
+        "cash flow approach",
+        "tolerance limit"
+      ],
+      "question": "The cash flow approach to assessing debt capacity involves the following steps: Arrange these steps in a correct sequence: (A) Specify the tolerance limit on the probability of default. (B) Estimate the probability distribution of cash flows, taking into account the projected performance of the firm. (C) Calculate the fixed charges by way of interest payment and principal repayment associated with various levels of debt. (D) Estimate the debt capacity of the firm as the highest level of debt that is acceptable.",
+      "options": {
+        "a": "(D), (C), (A), (B)",
+        "b": "(A), (B), (C), (D)",
+        "c": "(B), (C), (D), (A)",
+        "d": "(D), (A), (C), (B)"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 119,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Export-Import Operations & Trade Finance",
+        "sub_branch": "Reasons for Securitization"
+      },
+      "keywords": [
+        "securitization",
+        "funding sources",
+        "cost reduction"
+      ],
+      "question": "Which of the following are the reasons for raising funds via securitization? (A) To raise capital using non-conventional sources (B) To accelerate earnings for financial reporting purposes (C) To diversify funding resources (D) The potential for reducing funding cost",
+      "options": {
+        "a": "(A), (C), (D) only",
+        "b": "(B), (C), (D) only",
+        "c": "(C), (D) only",
+        "d": "(A), (B), (D) only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 120,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Internal Rate of Return Definition"
+      },
+      "keywords": [
+        "internal rate of return",
+        "discount rate",
+        "capital investment appraisal"
+      ],
+      "question": "________ is a percentage discount rate used in capital investment appraisals which brings the cost of a project and its future cash inflows into equality.",
+      "options": {
+        "a": "Accounting rate of return",
+        "b": "Internal rate of return",
+        "c": "Profitability Index",
+        "d": "Net present value"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 121,
+      "exam_session": "November 2021",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "International Financial Institutions",
+        "sub_branch": "Founding Years of Institutions"
+      },
+      "keywords": [
+        "IFC",
+        "IDA",
+        "WIPO",
+        "IBRD"
+      ],
+      "question": "Match List I with List II:",
+      "list_1": {
+        "A": "International Finance Corporation",
+        "B": "International Development Association",
+        "C": "World Intellectual Property Organisation",
+        "D": "International Bank for Reconstruction and Development"
+      },
+      "list_2": {
+        "I": "1944",
+        "II": "1967",
+        "III": "1966",
+        "IV": "1960"
+      },
+      "options": {
+        "a": "A-IV, B-I, C-III, D-II",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-III, B-II, C-IV, D-I",
+        "d": "A-III, B-IV, C-II, D-I"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 122,
+      "exam_session": "November 2021",
+      "question_type": "Statement-based (True/False)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "MIRR and Value-Additivity"
+      },
+      "keywords": [
+        "MIRR",
+        "reinvestment assumption",
+        "value additivity"
+      ],
+      "question": "Statement I: Modified Internal Rate of Return is based on reinvestment assumption. Statement II: Value-additivity principle is not applicable in NPV.",
+      "options": {
+        "a": "Both Statement I and Statement II are correct",
+        "b": "Both Statement I and Statement II are incorrect",
+        "c": "Statement I is correct but Statement II is incorrect",
+        "d": "Statement I is incorrect but Statement II is correct"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 123,
+      "exam_session": "November 2021",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Stages of Capital Budgeting"
+      },
+      "keywords": [
+        "capital budgeting stages",
+        "investment opportunities",
+        "implementation"
+      ],
+      "question": "Arrange the following items i.e., stages of capital budgeting in correct sequence: 1. Identification of potential investment opportunities 2. Assembling of proposed investments 3. Decision making 4. Implementation and performance review 5. Preparation of capital budget and appropriations",
+      "options": {
+        "a": "2, 1, 5, 3, 4",
+        "b": "5, 3, 1, 2, 4",
+        "c": "3, 5, 4, 2, 1",
+        "d": "1, 2, 3, 5, 4"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 124,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Working Capital Management",
+        "sub_branch": "Changes in Working Capital Schedule"
+      },
+      "keywords": [
+        "working capital schedule",
+        "current assets",
+        "current liabilities"
+      ],
+      "question": "Which of the following rules stands true while preparing a schedule of changes in working capital? 1. An increase in current assets increases working capital 2. An increase in current assets decreases working capital 3. An increase in current liabilities decreases working capital 4. An increase in current liabilities increases working capital",
+      "options": {
+        "a": "1 and 3 only",
+        "b": "1 and 4 only",
+        "c": "2 and 4 only",
+        "d": "1, 2, and 3 only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 125,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Accounting Rate of Return"
+      },
+      "keywords": [
+        "ARR",
+        "depreciation",
+        "earnings before depreciation and tax"
+      ],
+      "question": "If a project cost is ₹40,000, and its stream of earnings before depreciation and tax during the first five years is expected to be ₹10,000, ₹12,000, ₹14,000, ₹16,000, and ₹20,000, assume: A 50% tax rate; Depreciation on a straight-line basis. What is the project's ARR (Accounting Rate of Return)?",
+      "options": {
+        "a": "14.40%",
+        "b": "72%",
+        "c": "16%",
+        "d": "55.56%"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 126,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Export-Import Operations & Trade Finance",
+        "sub_branch": "Securitization Structures"
+      },
+      "keywords": [
+        "securitization",
+        "collateralized structure",
+        "self-liquidating structure"
+      ],
+      "question": "In securitization, when no assets are acquired and the collateral is fixed for the life of the asset, the type of structure is called as:",
+      "options": {
+        "a": "Revolving structure",
+        "b": "Amortized structure",
+        "c": "Collateralized structure",
+        "d": "Self-liquidating structure"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 127,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Business Environment Fundamentals",
+        "sub_branch": "Elasticity of Demand"
+      },
+      "keywords": [
+        "elasticity of demand",
+        "total revenue",
+        "price decline"
+      ],
+      "question": "For a 'decline in price,' total revenue declines if the demand of the product is:",
+      "options": {
+        "a": "Elastic",
+        "b": "Inelastic",
+        "c": "Unitary elastic",
+        "d": "Zero elastic"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 128,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Financial Management Fundamentals",
+        "sub_branch": "Wealth Maximization"
+      },
+      "keywords": [
+        "wealth maximization",
+        "present value of cash flows"
+      ],
+      "question": "The value of the firm in wealth maximization objective is measured by:",
+      "options": {
+        "a": "Present value of all expected future cash flows",
+        "b": "All expected future cash flows",
+        "c": "Present value of all expected future profits",
+        "d": "All expected future profits"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 129,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "Overall Cost of Capital"
+      },
+      "keywords": [
+        "cost of debt",
+        "cost of equity",
+        "overall cost of capital"
+      ],
+      "question": "Suppose that a firm has 20% debts and 80% equity in its capital structure. The cost of debts and cost of equity are assumed to be 10% and 15% respectively. What is the overall cost of capital?",
+      "options": {
+        "a": "11%",
+        "b": "12%",
+        "c": "13%",
+        "d": "14%"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 130,
+      "exam_session": "October 2020",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Capital Budgeting Process Sequence"
+      },
+      "keywords": [
+        "capital budgeting process",
+        "cash flow estimation",
+        "project selection"
+      ],
+      "question": "Sequence the following in the capital budgeting process: (A) Cash flow estimation (B) Identify discounting rate (C) Project selection decision (D) Determination of NPV",
+      "options": {
+        "a": "(A), (B), (C) and (D)",
+        "b": "(A), (B), (D) and (C)",
+        "c": "(D), (A), (B) and (C)",
+        "d": "(B), (A), (D) and (C)"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 131,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Walter's Model - Price Per Share"
+      },
+      "keywords": [
+        "Walter's model",
+        "EPS",
+        "ROI",
+        "payout ratio"
+      ],
+      "question": "The following information is available for a Corporation: EPS = Rs. 4, ROI = 18%, Rate of return required by shareholders = 15%. What will be the price per share as per Walter model if the payout ratio is 40%?",
+      "options": {
+        "a": "Rs. 29.87",
+        "b": "Rs. 29.33",
+        "c": "Rs. 28.80",
+        "d": "Rs. 30.63"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 132,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "International Business Strategy",
+        "sub_branch": "Political Risk Management"
+      },
+      "keywords": [
+        "political risk",
+        "multinational capital budgeting"
+      ],
+      "question": "Political risk management comes in the ambit of which of the following financial decisions?",
+      "options": {
+        "a": "Non-conventional capital budgeting",
+        "b": "International currency arbitrage",
+        "c": "Foreign exchange market",
+        "d": "Multinational capital budgeting"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 133,
+      "exam_session": "October 2020",
+      "question_type": "Sequencing (Levels/Hierarchy)",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Pecking Order Theory"
+      },
+      "keywords": [
+        "pecking order theory",
+        "financing preference",
+        "new equity issue"
+      ],
+      "question": "Arrange the following financing choices in order of preference suggested by the pecking order theory: A. Reinvestment of earnings B. New issue of equity C. Issue of debt",
+      "options": {
+        "a": "(A), (B), (C)",
+        "b": "(A), (C), (B)",
+        "c": "(B), (C), (A)",
+        "d": "(B), (A), (C)"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 134,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Portfolio Theory and Diversification"
+      },
+      "keywords": [
+        "portfolio theory",
+        "diversification",
+        "unsystematic risk"
+      ],
+      "question": "The portfolio theory articulates diversification to reduce which of the following risks?",
+      "options": {
+        "a": "Market risk",
+        "b": "Financial risk",
+        "c": "Unsystematic risk",
+        "d": "Business risk"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 135,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "NPV-IRR Conflict"
+      },
+      "keywords": [
+        "NPV IRR conflict",
+        "cash flow pattern",
+        "investment size"
+      ],
+      "question": "Net Present Value (NPV) and Internal Rate of Return (IRR) methods yield conflicting outcomes due to __________. (A) Unconventional cash flows (B) Investment size disparity (C) Investment life disparity (D) Cash flow pattern disparity",
+      "options": {
+        "a": "(A) and (B) only",
+        "b": "(A) and (C) only",
+        "c": "(A), (B), and (C) only",
+        "d": "(B), (C), and (D) only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 136,
+      "exam_session": "October 2020",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Arbitrage Pricing Theory Operation"
+      },
+      "keywords": [
+        "arbitrage pricing theory",
+        "macroeconomic factors",
+        "factor sensitivities"
+      ],
+      "question": "Arrange the following steps in the logical sequence of operation of the Arbitrage Pricing Theory (APT): (A) Estimate the Factor Sensitivities (B) Estimate the Risk Premium for Factors (C) Identify the Macroeconomic Factors",
+      "options": {
+        "a": "(A), (B), (C)",
+        "b": "(B), (A), (C)",
+        "c": "(C), (B), (A)",
+        "d": "(C), (A), (B)"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 137,
+      "exam_session": "October 2020",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Financial Markets",
+        "sub_branch": "Alternative Capital Instruments"
+      },
+      "keywords": [
+        "mezzanine capital",
+        "private equity",
+        "GDR",
+        "venture capital"
+      ],
+      "question": "Match List I with List II:",
+      "list_1": {
+        "A": "Mezzanine Capital",
+        "B": "Private Equity",
+        "C": "Global Depository Receipts",
+        "D": "Venture Capital"
+      },
+      "list_2": {
+        "I": "It is the speedy source of finance less regulated by the regulatory environment of debt and capital markets",
+        "II": "It is long-term capital embraced by high net worth and high-risk appetite investors",
+        "III": "It is an equity instrument issued in overseas markets and is listed and traded on bourses on an OTC basis",
+        "IV": "It refers to subordinated debt or preferred equity that allows firms to borrow additional capital beyond the levels lenders are willing to finance through bank loans"
+      },
+      "options": {
+        "a": "A-II, B-IV, C-III, D-I",
+        "b": "A-I, B-II, C-III, D-IV",
+        "c": "A-IV, B-I, C-III, D-II",
+        "d": "A-III, B-II, C-I, D-IV"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 138,
+      "exam_session": "October 2020",
+      "question_type": "Sequencing (Process/Procedure)",
+      "topic": {
+        "main_branch": "Business Environment Fundamentals",
+        "sub_branch": "Manufacturing Decision Sequence"
+      },
+      "keywords": [
+        "manufacturing decisions",
+        "forecasting",
+        "budgets"
+      ],
+      "question": "Arrange the following in the sequence of decisions in manufacturing enterprises: A. Making of forecasts B. Determination of key factors C. Consideration of alternative combinations of forecasts D. Preparation of budgets E. Combination of factors",
+      "options": {
+        "a": "A, B, C, E, D",
+        "b": "C, A, E, B, D",
+        "c": "B, A, C, E, D",
+        "d": "A, C, B, E, D"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 139,
+      "exam_session": "October 2020",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Capital Structure Concepts"
+      },
+      "keywords": [
+        "target capital structure",
+        "optimum capital structure",
+        "MM proposition II"
+      ],
+      "question": "Match List I with List II:",
+      "list_1": {
+        "A": "Target Capital Structure",
+        "B": "Optimum Capital Structure",
+        "C": "Cost of financial distress",
+        "D": "MM proposition-II"
+      },
+      "list_2": {
+        "I": "Expected yield on the equity capital is equal to the pure equity return plus a premium for financial risk",
+        "II": "It refers to the perceived costs due to the increased ratio of debt in the firm",
+        "III": "It is the debt ratio the firm strives to achieve",
+        "IV": "It is the debt-equity ratio that maximizes the value of the firm"
+      },
+      "options": {
+        "a": "A-III, B-IV, C-II, D-I",
+        "b": "A-III, B-IV, C-I, D-II",
+        "c": "A-IV, B-II, C-III, D-I",
+        "d": "A-I, B-III, C-II, D-IV"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 140,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "When Payback Period is Advised"
+      },
+      "keywords": [
+        "payback period method",
+        "business conditions"
+      ],
+      "question": "In which of the following situations is the payback period method advised for the evaluation of investment opportunities? (A) Overleveraged businesses (B) Cash-rich businesses (C) Uncertain market conditions (D) Stable market conditions",
+      "options": {
+        "a": "(A) and (B) only",
+        "b": "(A) and (C) only",
+        "c": "(B) and (C) only",
+        "d": "(C) and (D) only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 141,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "International Finance",
+        "sub_branch": "Natural Hedge"
+      },
+      "keywords": [
+        "natural hedge",
+        "matching exposure",
+        "maturities"
+      ],
+      "question": "When foreign currency assets and liabilities match in terms of amount of exposure and timing of maturities, it is described as:",
+      "options": {
+        "a": "Financial hedge",
+        "b": "Natural hedge",
+        "c": "Perfect hedge",
+        "d": "Netting"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 142,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Working Capital Management",
+        "sub_branch": "Economic Order Quantity"
+      },
+      "keywords": [
+        "EOQ",
+        "ordering cost",
+        "carrying cost"
+      ],
+      "question": "A manufacturing enterprise monthly consumes 1,350 units of raw material at the cost of Rs. 20 per unit. Determine its economic order quantity given ordering cost of Rs. 2,400 and carrying cost of inventory being 30 percent of the price paid.",
+      "options": {
+        "a": "3,600 units",
+        "b": "2,400 units",
+        "c": "4,800 units",
+        "d": "2,700 units"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 143,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "Cost of Perpetual Debt (Before/After Tax)"
+      },
+      "keywords": [
+        "perpetual debt",
+        "before tax cost",
+        "after tax cost",
+        "premium"
+      ],
+      "question": "Beta Company Ltd issued 10% perpetual debt of ₹1,00,000. The company's tax rate is 50%. Determine the cost of capital (before tax as well as after tax) assuming the debt is issued at 10% premium.",
+      "options": {
+        "a": "Before tax cost = 9.09% and after tax cost = 4.54%",
+        "b": "Before tax cost = 4.54% and after tax cost = 9%",
+        "c": "Before tax cost = 9.90% and after tax cost = 4.45%",
+        "d": "Before tax cost = 10.09% and after tax cost = 5.54%"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 144,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Business Environment Fundamentals",
+        "sub_branch": "Production Functions"
+      },
+      "keywords": [
+        "constant elasticity of substitution",
+        "production function",
+        "Cobb-Douglas"
+      ],
+      "question": "A production function expressed as: Q=A[αK^-β + (1-α)L^-β]^(-1/β), Or Q=A[αL^-β + (1-α)K^-β]^(-1/β), Where A>0, 0<α<1 and β>-1, where L = labour, K = capital, A, α, and β are three parameters, is called:",
+      "options": {
+        "a": "Constant elasticity substitution function",
+        "b": "Variable elasticity substitution function",
+        "c": "Leontief-type function",
+        "d": "Cobb-Douglas function"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 145,
+      "exam_session": "December 2019",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Dividend Theories - True Statements"
+      },
+      "keywords": [
+        "dividend payout ratio",
+        "bird in hand",
+        "MM model",
+        "Walter's model"
+      ],
+      "question": "Which of the following statements are correct? A. Dividend payout ratio refers to the portion of total earnings distributed among equity shareholders. B. 'Bird in Hand' argument is given by Gordon's Model. C. MM model suggests dividend payment is very relevant for the firm's value. D. Walter's Model suggests that dividend payment does not affect the market price of the share.",
+      "options": {
+        "a": "A and B",
+        "b": "A and C",
+        "c": "B and C",
+        "d": "C and D"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 146,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "CAPM Expected Return"
+      },
+      "keywords": [
+        "CAPM",
+        "expected rate of return",
+        "beta"
+      ],
+      "question": "If the risk-free return (Rf) is 6%, Beta (β) is 1.5, and the market rate of return (Km) is 10%, what is the expected rate of return?",
+      "options": {
+        "a": "15%",
+        "b": "12%",
+        "c": "17.5%",
+        "d": "16%"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 147,
+      "exam_session": "December 2019",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Payback and ARR - True Statements"
+      },
+      "keywords": [
+        "payback period",
+        "ARR",
+        "NPV",
+        "shareholder wealth"
+      ],
+      "question": "Which of the following statements are true? (A) Pay-back period method considers all cash flows of a project. (B) Pay-back period method concerns more with the recovery of cost than profitability. (C) Net Present Value (NPV) represents net addition to shareholder wealth. (D) Accounting Rate of Return (ARR) method incorporates risk as well as time value of money.",
+      "options": {
+        "a": "(A) and (B)",
+        "b": "(B) and (C)",
+        "c": "(A) and (D)",
+        "d": "(B) and (D)"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 148,
+      "exam_session": "December 2019",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "Capital Budgeting Method Formulas"
+      },
+      "keywords": [
+        "ARR",
+        "payback period",
+        "NPV",
+        "profitability index"
+      ],
+      "question": "Match the following methods of capital budgeting with their respective formulas:",
+      "list_1": {
+        "A": "ARR Method",
+        "B": "Payback Period Method",
+        "C": "NPV Method",
+        "D": "Profitability Index"
+      },
+      "list_2": {
+        "I": "Present Value of Cash Inflows - Present Value of Cash Outflows",
+        "II": "Present Value of Cash Inflows / Present Value of Cash Outflows",
+        "III": "Average Income / Average Investment",
+        "IV": "Investment / Annual Cash Inflows"
+      },
+      "options": {
+        "a": "A-III, B-IV, C-I, D-II",
+        "b": "A-III, B-IV, C-II, D-I",
+        "c": "A-III, B-I, C-II, D-IV",
+        "d": "A-I, B-IV, C-II, D-III"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 149,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "Cost of Debentures Issued at Discount"
+      },
+      "keywords": [
+        "debentures",
+        "discount",
+        "cost of capital",
+        "tax rate"
+      ],
+      "question": "A company raises ₹1,00,000 by issuing 1000, 10% debentures of ₹100 each at a 2% discount, redeemable after 10 years. If the corporate tax rate is 40%, what is the cost of capital?",
+      "options": {
+        "a": "6.82%",
+        "b": "5.98%",
+        "c": "6.18%",
+        "d": "5.5%"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 150,
+      "exam_session": "December 2019",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Balance of Payments & Foreign Exchange",
+        "sub_branch": "Exposure Types - True Statements"
+      },
+      "keywords": [
+        "transaction exposure",
+        "translation exposure",
+        "economic exposure",
+        "operating exposure"
+      ],
+      "question": "Which of the following statements are true? A. Transaction exposure is inherent in all foreign currency-denominated contractual transactions. B. Translation exposure relates to the change in accounting income and balance sheet statements caused by change in exchange rate. C. Economic exposure has an impact on the valuation of a firm. D. Operating exposure does not have any impact on the firm's future operating revenues or future operating costs.",
+      "options": {
+        "a": "A and B only",
+        "b": "B and C only",
+        "c": "B and D only",
+        "d": "A, B and C only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 151,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Traditional Approach - Linear Cost of Equity"
+      },
+      "keywords": [
+        "traditional approach",
+        "cost of equity",
+        "leverage"
+      ],
+      "question": "Under which approach does the cost of equity increase linearly with leverage, i.e., the average cost of capital remains constant with increased use of leverage?",
+      "options": {
+        "a": "Net Operating Income Approach",
+        "b": "Net Income Approach",
+        "c": "Traditional Approach",
+        "d": "Walter Approach"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 152,
+      "exam_session": "June 2019",
+      "question_type": "Matching (List-I & List-II)",
+      "topic": {
+        "main_branch": "Business Finance Fundamentals",
+        "sub_branch": "Cross-Topic Concept Matching"
+      },
+      "keywords": [
+        "net income approach",
+        "Gordon model",
+        "IRR",
+        "reorder level"
+      ],
+      "question": "Match List I with List II:",
+      "list_1": {
+        "A": "Net income approach",
+        "B": "Gordon model",
+        "C": "Internal rate of return",
+        "D": "Reorder level"
+      },
+      "list_2": {
+        "I": "Inventory management",
+        "II": "Capital budgeting",
+        "III": "Capital structure theory",
+        "IV": "Dividend theory"
+      },
+      "options": {
+        "a": "A-II, B-III, C-IV, D-I",
+        "b": "A-III, B-IV, C-II, D-I",
+        "c": "A-III, B-IV, C-I, D-II",
+        "d": "A-II, B-I, C-IV, D-III"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 153,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Working Capital Management",
+        "sub_branch": "Economic Order Quantity"
+      },
+      "keywords": [
+        "EOQ",
+        "carrying cost",
+        "purchase order cost"
+      ],
+      "question": "A firm consumes 90,000 units of a certain item of raw material in its production process annually. It costs ₹9 per unit, the cost per purchase order is ₹300, and the inventory carrying cost is 20% per year. What is the EOQ?",
+      "options": {
+        "a": "9470 units",
+        "b": "9487 units",
+        "c": "9480 units",
+        "d": "9840 units"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 154,
+      "exam_session": "June 2019",
+      "question_type": "Multi-Select (Statement-based)",
+      "topic": {
+        "main_branch": "Capital Budgeting",
+        "sub_branch": "NPV-IRR Conflict Situations"
+      },
+      "keywords": [
+        "NPV IRR",
+        "time disparity",
+        "life disparity"
+      ],
+      "question": "Under which of the following situations, the decision outcome on evaluation of investment opportunities vary under NPV and IRR methods per se? (A) Time disparity (B) Cost disparity (C) Life disparity (D) Volume disparity",
+      "options": {
+        "a": "(A) and (D) only",
+        "b": "(B) and (D) only",
+        "c": "(A), (B) and (C) only",
+        "d": "(B), (C) and (D) only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 155,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "International Finance",
+        "sub_branch": "Currency Swap"
+      },
+      "keywords": [
+        "currency swap",
+        "hedging",
+        "foreign exchange risk"
+      ],
+      "question": "Currency swap is a method of",
+      "options": {
+        "a": "Hedging against foreign exchange risk",
+        "b": "Speculating in foreign exchange",
+        "c": "Leverage instrument used by cooperative banks",
+        "d": "Mode of payment in international trade"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 156,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Dividend Policy",
+        "sub_branch": "Required Rate of Return (Gordon Growth)"
+      },
+      "keywords": [
+        "Gordon growth model",
+        "required rate of return"
+      ],
+      "question": "The current market price of a company's share is ₹90 and the expected dividend per share next year is ₹4.50. If the dividend is expected to grow at a constant rate of 8%, the shareholder's required rate of return will be",
+      "options": {
+        "a": "8%",
+        "b": "5%",
+        "c": "20%",
+        "d": "13%"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 157,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Working Capital Management",
+        "sub_branch": "Miller-Orr Model"
+      },
+      "keywords": [
+        "Miller-Orr model",
+        "cash management"
+      ],
+      "question": "Miller-Orr model is used in the management of",
+      "options": {
+        "a": "Inventory",
+        "b": "Leverage",
+        "c": "Receivables",
+        "d": "Cash"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 158,
+      "exam_session": "June 2019",
+      "question_type": "Assertion-Reason",
+      "topic": {
+        "main_branch": "Capital Structure",
+        "sub_branch": "Net Income Approach and Firm Value"
+      },
+      "keywords": [
+        "Net Income approach",
+        "valuation of firm",
+        "degree of leverage"
+      ],
+      "question": "According to Net Income (NI) approach, capital structure decision is relevant to the valuation of the firm. Reason (R): A firm can change its total value and its overall cost of capital by changing the degree of leverage in its capital structure. In the context of the above two statements, which one of the following options is correct?",
+      "options": {
+        "a": "Both A and R are correct and R is the correct explanation of A",
+        "b": "Both A and R are correct but R is not the correct explanation of A",
+        "c": "Both A and R are incorrect",
+        "d": "A is correct and R is not correct"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 159,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "Cost of Irredeemable Preference Shares"
+      },
+      "keywords": [
+        "irredeemable preference shares",
+        "cost of preference share",
+        "issue price"
+      ],
+      "question": "A company issues 10% irredeemable preference shares. The face value per share is ₹100, but the issue price is ₹95. What is the cost of preference share?",
+      "options": {
+        "a": "10.63%",
+        "b": "10.73%",
+        "c": "10.83%",
+        "d": "10.53%"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 160,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Cost of Capital",
+        "sub_branch": "Risk-Return Analysis Methods"
+      },
+      "keywords": [
+        "CAPM",
+        "risk-return analysis",
+        "financial decisions"
+      ],
+      "question": "Which one of the following analyses is suitable for risk-return analysis in financial decisions?",
+      "options": {
+        "a": "CAPM analysis",
+        "b": "SWOT analysis",
+        "c": "Capital gearing",
+        "d": "EVA analysis"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 161,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "topic": {
+        "main_branch": "Financial Management Fundamentals",
+        "sub_branch": "Classification of Financial Decisions"
+      },
+      "keywords": [
+        "financing decisions",
+        "capital structure",
+        "leverage"
+      ],
+      "question": "Capital structure and leverage decisions come in the ambit of",
+      "options": {
+        "a": "Investment decisions",
+        "b": "Distribution decisions",
+        "c": "Financing decisions",
+        "d": "Dividend decisions"
+      },
+      "answer": "c"
+    }
+  ]
+};

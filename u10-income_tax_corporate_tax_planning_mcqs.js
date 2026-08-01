@@ -1,0 +1,1886 @@
+window.u10_data = {
+  "unit": "10 - Income-tax and Corporate Tax Planning",
+  "total_questions": 155,
+  "note_on_source": "Questions transcribed from a previous-year-questions (PYQ) compilation booklet (Adda247-style). Answers below were worked out independently using standard Income Tax Act / Companies Act / GST provisions. Where a match/sequence table appears OCR-garbled in the source scan or an answer could not be verified with full confidence, this is flagged in the 'note' field - please cross-check those against an official key before relying on them for scoring.",
+  "questions": [
+    {
+      "q_no": 1,
+      "exam_session": "June 2025",
+      "question": "In case the income of an individual includes the income of ₹25,000 of his minor child in terms of section 64(1A), such individual shall be entitled to an exemption under section 10(32) of:",
+      "options": {
+        "a": "₹25,000",
+        "b": "₹1,500",
+        "c": "₹2,500",
+        "d": "₹15,000"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 2,
+      "exam_session": "June 2025",
+      "question": "Any assessee (except an eligible assessee in respect of an eligible business referred to in section 44AD or 44ADA) must pay up to 75 percent of advance tax payable:",
+      "options": {
+        "a": "on or before June 15 of the previous year",
+        "b": "on or before September 15 of the previous year",
+        "c": "on or before December 15 of the previous year",
+        "d": "on or before March 15 of the previous year"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 3,
+      "exam_session": "June 2025",
+      "question": "If the employee pays tax under the alternative tax regime under Section 115BAC, then from Assessment Year 2025-26, the standard deduction from salary income is:",
+      "options": {
+        "a": "NIL",
+        "b": "₹50,000 or gross salary, whichever is lower",
+        "c": "₹75,000 or gross salary, whichever is lower",
+        "d": "₹40,000 or gross salary, whichever is lower"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 4,
+      "exam_session": "June 2025",
+      "question": "Arm's length price as per section 92F is the price applied or proposed to be applied when:",
+      "options": {
+        "a": "two unrelated persons enter into a transaction in uncontrolled conditions",
+        "b": "two related persons enter into a transaction in uncontrolled conditions",
+        "c": "two unrelated persons enter into a transaction in controlled conditions",
+        "d": "two related persons enter into a transaction in controlled conditions"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 5,
+      "exam_session": "June 2025",
+      "question": "Which of the following statements are correct with regard to tax avoidance? A. Tax avoidance is legitimate arrangement of affairs in such a way so as to minimize tax liability. B. There is an element of malafide motive involved in tax avoidance. C. Tax avoidance takes into account the loop-holes of law. D. Tax avoidance is intentional attempt to avoid payment of tax after the liability to tax has arisen. E. Tax avoidance is same as tax omission.",
+      "options": {
+        "a": "A and C Only",
+        "b": "A, B and C Only",
+        "c": "B, D and E Only",
+        "d": "A, C and E Only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 6,
+      "exam_session": "June 2025",
+      "question": "Match the LIST-I with LIST-II: A. Deduction in respect of medical insurance premium B. Deduction in case of a person with disability C. Deduction in respect of interest on loan taken for higher education D. Deduction in respect of contribution to Agnipath Scheme -- I. Section 80CCH II. Section 80D III. Section 80U IV. Section 80E",
+      "options": {
+        "a": "A-IV, B-I, C-II, D-III",
+        "b": "A-III, B-IV, C-I, D-II",
+        "c": "A-II, B-III, C-IV, D-I",
+        "d": "A-I, B-II, C-III, D-IV"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 7,
+      "exam_session": "June 2025",
+      "question": "Which of the following requirements must be satisfied for an assessee to claim deduction under Section 91 for doubly taxed income? A. Non-resident in relevant PY. B. Resident in India in the relevant previous year. C. Income must have accrued/arisen during that PY in India. D. Income must have accrued/arisen during that PY outside India. E. Assessee must have paid tax under the law in force in the foreign country in respect of that income.",
+      "options": {
+        "a": "A and C Only",
+        "b": "B and D Only",
+        "c": "B, D and E Only",
+        "d": "A, C and E Only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 8,
+      "exam_session": "June 2025",
+      "question": "The scheme of partial integration of tax on non-agricultural income with income derived from agriculture is applicable if an individual has:",
+      "options": {
+        "a": "Non-Agricultural income of more than the exemption limit or agricultural income exceeding ₹5000",
+        "b": "Non-Agricultural income of more than the exemption limit or agricultural income exceeding ₹2500",
+        "c": "Non-Agricultural income of more than the exemption limit and agricultural income exceeding ₹2500",
+        "d": "Non-Agricultural income of more than the exemption limit and agricultural income exceeding ₹5000"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 9,
+      "exam_session": "June 2025",
+      "question": "Match the items in LIST-I with the corresponding sections in LIST-II: A. Deduction of Tax at source on fees for professional and technical services B. Deduction of Tax at source from income by way of rent C. Deduction of Tax at source from winnings from lotteries or crossword puzzles, etc. D. Deduction of Tax at source from interest on securities -- I. Section 194B II. Section 193 III. Section 194-I IV. Section 194J",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-IV, B-III, C-I, D-II",
+        "c": "A-IV, B-III, C-II, D-I",
+        "d": "A-II, B-I, C-IV, D-III"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 10,
+      "exam_session": "January 2025",
+      "question": "Which of the following are taxes (GST) applicable in the case of supply of goods? I. From West Bengal to Chandigarh II. From Puducherry to Chennai",
+      "options": {
+        "a": "I. CGST II. IGST",
+        "b": "I. IGST II. IGST",
+        "c": "I. UTGST II. UTGST",
+        "d": "I. SGST II. UTGST"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 11,
+      "exam_session": "January 2025",
+      "question": "Identify which of the following statements are true: (A) Commuted pension received by a government employee is fully exempted from Income Tax. (B) Section 30 of the Income Tax Act, 1961, discusses deduction in respect of rent, rates, taxes, repairs, and insurance of building used by the assessee for the purpose of business. (C) Section 33 of the Income Tax Act, 1961, defines provision regarding depreciation of tangible assets. (D) Capital gain arises from the transfer of any asset. (E) Short-term capital assets are defined under section 2(42A) of the Income Tax Act, 1961.",
+      "options": {
+        "a": "A, B, and E Only",
+        "b": "C, D, and E only",
+        "c": "A and B only",
+        "d": "C and D only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 12,
+      "exam_session": "January 2025",
+      "question": "Which section of the Income Tax Act 1961 mentions unilateral relief?",
+      "options": {
+        "a": "90",
+        "b": "89",
+        "c": "91",
+        "d": "92"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 13,
+      "exam_session": "January 2025",
+      "question": "Arrange the following points step by step regarding computation of Gross Total Income: (A) Computation of Gross Total Income (B) Set off and carry forward of Losses (C) Clubbing of Income of spouse, minor child etc (D) Computation of Income under each head of Income (E) Determination of Residential Status",
+      "options": {
+        "a": "E, D, C, B, A",
+        "b": "A, B, C, D, E",
+        "c": "C, D, E, A, B",
+        "d": "B, C, D, E, A"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 14,
+      "exam_session": "January 2025",
+      "question": "Match the List I (Sections) with List II (TDS): (A) Section 194 of the Income Tax Act, 1961 (B) Section 194C of the Income Tax Act, 1961 (C) Section 194E of the Income Tax Act, 1961 (D) Section 194F of the Income Tax Act, 1961 -- I. Payment on account of repurchase of units by mutual fund II. Payments to the non-resident sportsman III. Payment to contractor and subcontractor IV. Dividend",
+      "options": {
+        "a": "A-IV, B-III, C-II, D-I",
+        "b": "A-I, B-III, C-II, D-IV",
+        "c": "A-I, B-III, C-II, D-IV",
+        "d": "A-III, B-IV, C-I, D-II"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 15,
+      "exam_session": "January 2025",
+      "question": "Which one of the following sections of the Income Tax Act, 1961 defines the method for computing Arm's Length Price?",
+      "options": {
+        "a": "90C",
+        "b": "91C",
+        "c": "92C",
+        "d": "93C"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 16,
+      "exam_session": "January 2025",
+      "question": "Which of the following refers to an attempt to avoid payment of taxes by using illegal means?",
+      "options": {
+        "a": "Tax Management",
+        "b": "Tax Planning",
+        "c": "Tax Avoidance",
+        "d": "Tax Evasion"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 17,
+      "exam_session": "January 2025",
+      "question": "Arrange the following points in their section-wise order (Section 23 to 27) as per the Income Tax Act, 1961: (A) Deemed ownership (B) Provision for arrears of rent and unrealized rent received subsequently (C) Determination of annual value (D) Treatment of income from co-owned property (E) Deduction from (Annual Value) Income from house property",
+      "options": {
+        "a": "A, C, B, D, E",
+        "b": "C, E, B, D, A",
+        "c": "A, B, C, D, E",
+        "d": "B, C, D, E, A"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 18,
+      "exam_session": "January 2025",
+      "question": "Bret Lee, an Australian cricket player visits India for 100 days in every financial year. This has been his practice for the past 10 financial years. Find out his residential status for the Assessment Year 2023-24.",
+      "options": {
+        "a": "Resident of India",
+        "b": "Resident and ordinarily resident of India",
+        "c": "Resident but not ordinarily resident in India",
+        "d": "Non-resident in India"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 19,
+      "exam_session": "January 2025",
+      "question": "Identify which of the following statements are True: (A) Assessment Year means the period of 12 months commencing on the first day of April every year. (B) Rounding off of total income is defined under Section 288B of the Income Tax Act. (C) Rounding off of tax is defined under Section 288A of the Income Tax Act, 1961. (D) Assessee is always a person, but a person may or may not be an assessee. (E) A person may not have assessable income but may still be an assessee.",
+      "options": {
+        "a": "B and C only",
+        "b": "A, D, E only",
+        "c": "A, B, C only",
+        "d": "B, C, D only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 20,
+      "exam_session": "January 2025",
+      "question": "Match the List I (Key definition Under IT Act 2000) with List II (Sections): (A) Addressee (B) Adjudicating Officer (C) Affixing Electronic Signature (D) Asymmetric Crypto System -- I. Section 2(1)(f) of the Information Technology Act 2000 II. Section 2(1)(d) III. Section 2(1)(c) IV. Section 2(1)(b)",
+      "options": {
+        "a": "A-IV, B-III, C-I, D-II",
+        "b": "A-III, B-IV, C-I, D-II",
+        "c": "A-II, B-I, C-III, D-IV",
+        "d": "A-I, B-II, C-III, D-IV"
+      },
+      "answer": "a",
+      "note": "Table looks OCR-mismatched (my direct section-by-section reading gives A-IV,B-III,C-II,D-I, one step off from option a). Verify against official key."
+    },
+    {
+      "q_no": 21,
+      "exam_session": "September 2024",
+      "question": "Compute the after-tax cost of capital of a company in case a perpetual bond (face value is ₹100) is sold as well as redeemed at par, having coupon rate of interest being 7%, and corporate tax rate is 30%.",
+      "options": {
+        "a": "2.1%",
+        "b": "4.9%",
+        "c": "7%",
+        "d": "10%"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 22,
+      "exam_session": "September 2024",
+      "question": "X Ltd. incurred a capital expenditure of ₹5,00,000 for the purpose of promoting family planning amongst its employees during the assessment year 2024-25. How much deduction in respect of such expenditure can be claimed by X Ltd. during the assessment year 2024-25, while computing income under the head Profits and Gains of Business or Profession?",
+      "options": {
+        "a": "₹5,00,000",
+        "b": "₹2,50,000",
+        "c": "₹1,00,000",
+        "d": "₹50,000"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 23,
+      "exam_session": "September 2024",
+      "question": "What is the correct sequence to be followed for the following transactions undertaken by an individual while computing his gross total income as per the Income-tax Act, 1961? (A) Investment in own public provident fund (B) Investment in one residential house in India for exemption from capital gains (C) Interest on capital borrowed for purchasing a self-occupied house property (D) Tax on employment (E) Payment of Medical insurance premium on his own life",
+      "options": {
+        "a": "C, B, D, A, E",
+        "b": "D, C, B, A, E",
+        "c": "B, D, A, C, E",
+        "d": "C, D, B, E, A"
+      },
+      "answer": null,
+      "note": "Option lettering partially illegible/inconsistent in the source scan - not confident enough to give a single answer. Logic: house-property/salary head computations (C, D, B) precede Chapter VI-A deductions (A, E). Verify against official key."
+    },
+    {
+      "q_no": 24,
+      "exam_session": "September 2024",
+      "question": "Compute the tax liability under default tax regime of Mr. X (35 year), having total income of Rs.51,75,000 for the assessment year 2024-25. Assume that his total income comprises salary, income from house property and interest on fixed deposit.",
+      "options": {
+        "a": "13,75,000",
+        "b": "13,77,750",
+        "c": "15,50,000",
+        "d": "14,75,000"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 25,
+      "exam_session": "September 2024",
+      "question": "An employer has provided an employee with the facility of a 1.8 litre (1800 cc) car for both official and private use. All expenses, including the driver's salary, are borne by the employer. The total expenses incurred by the employer during the previous year amounted to ₹60,000, and the employer recovered ₹1,000 per month from the employee for this facility. What amount per year shall be reduced by the employer from the actual expenditure for tax purposes?",
+      "options": {
+        "a": "₹32,400",
+        "b": "₹16,800",
+        "c": "₹39,600",
+        "d": "₹21,600"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 26,
+      "exam_session": "June 2024",
+      "question": "Which of the following exemption or deduction will not be available, if assessee opt to be taxed under section 115 BAC for assessment year 2024-25? (A) House Rent Allowance. (B) Leave Travel Concession. (C) Standard deduction. (D) Tax on Employment. (E) Interest on loan taken for self-occupied house property.",
+      "options": {
+        "a": "A, C, D, E only",
+        "b": "A, B, C only",
+        "c": "A, B, D, E only",
+        "d": "B, C, D, E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 27,
+      "exam_session": "June 2024",
+      "question": "Which of the following income from house property is not charged to tax? (A) Farm House. (B) Property held for charitable purposes. (C) More than two self-occupied house. (D) Place of ex-ruler. (E) House property of registered trade union.",
+      "options": {
+        "a": "B, C, D, E only",
+        "b": "A, C, D only",
+        "c": "A, D, E only",
+        "d": "A, B, D, E only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 28,
+      "exam_session": "June 2024",
+      "question": "Match List - I with List - II: (A) Agriculture Income (B) Amount Received on voluntary retirement (C) House Rent Allowance (D) Provident Fund -- I. Section 10(13A) II. Section 10(11) III. Section 10(10CC) IV. Section 10(1)",
+      "options": {
+        "a": "A-IV, B-III, C-I, D-II",
+        "b": "A-IV, B-III, C-II, D-I",
+        "c": "A-I, B-II, C-III, D-IV",
+        "d": "A-II, B-I, C-IV, D-III"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 29,
+      "exam_session": "June 2024",
+      "question": "SUGAM is also known as:",
+      "options": {
+        "a": "ITR-1",
+        "b": "ITR-2",
+        "c": "ITR-3",
+        "d": "ITR-4"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 30,
+      "exam_session": "June 2024",
+      "question": "Which one of the following is rate of TDS on payment to contractor if the recipient is an individual?",
+      "options": {
+        "a": "1%",
+        "b": "2%",
+        "c": "5%",
+        "d": "10%"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 31,
+      "exam_session": "June 2024",
+      "question": "Match List - I with List - II: (A) Section 80DDB (B) Section 80E (C) Section 80GC (D) Section 80GGB -- I. Deducted in respect of Contribution given by companies to political party II. Deduction in respect of rent paid III. Deduction for Interest paid on loan taken for pursuing higher education IV. Deduction in respect of Medical treatment",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-III, C-I, D-IV",
+        "c": "A-IV, B-III, C-II, D-I",
+        "d": "A-III, B-IV, C-I, D-II"
+      },
+      "answer": "c",
+      "note": "Item (C) 'Section 80GC' looks like an OCR error, likely 80GGC; answered by elimination against the codes given."
+    },
+    {
+      "q_no": 32,
+      "exam_session": "June 2024",
+      "question": "Under section 44 AB of Income Tax Act, audit is compulsory if a person is carrying on business, whose gross turnover exceeds:",
+      "options": {
+        "a": "Rs. 60 lakhs",
+        "b": "Rs. 1.0 crore",
+        "c": "Rs. 50 lakhs",
+        "d": "Rs. 2.0 crore"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 33,
+      "exam_session": "June 2024",
+      "question": "Arrange the following procedure of e-filing of income tax return in proper sequence: (A) Login (B) Register (C) Verification (D) Downloading utility and preparing return (E) e-filing Income Tax Return",
+      "options": {
+        "a": "B, A, D, E, C",
+        "b": "A, B, C, D, E",
+        "c": "D, A, B, C, E",
+        "d": "B, A, C, D, E"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 34,
+      "exam_session": "December 2023",
+      "question": "Which of the following are deemed to be dividend for the purpose of computing income chargeable under the head, Income from other sources, as per the Income Tax Act, 1961? (A) Payment on buy-back of shares (B) Payment to shareholders on reduction of capital (C) Distribution of debentures to shareholders (D) Loan granted to shareholders in the ordinary course of business (E) Loan granted to shareholders by a closely held company",
+      "options": {
+        "a": "B, C and E only",
+        "b": "B, C and E only",
+        "c": "A, B and C only",
+        "d": "A and C only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 35,
+      "exam_session": "December 2023",
+      "question": "As per the sub-section (8A) of Section 139 of the Income Tax Act, a person may furnish an updated return of his income for the previous year relevant to such assessment year, within _______ from the end of assessment year?",
+      "options": {
+        "a": "6 months",
+        "b": "12 months",
+        "c": "24 months",
+        "d": "36 months"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 36,
+      "exam_session": "December 2023",
+      "question": "Which of the following will be clubbed into the income of Mr. Q whose Income from Profession is Rs. 85,000? (A) Income from Mrs. Q's profession, Rs. 45,000 (B) Mrs. Q's salary as a clerk, Rs.66,000 (C) Minor son's earned interest on deposits of money gifted to him by his uncle, Rs.15,000 (D) Minor daughter's earnings from sports, Rs.85,000 (E) Minor son's winnings from lottery, Rs. 1,05,000",
+      "options": {
+        "a": "A, C, D and E only",
+        "b": "C, D and E only",
+        "c": "C and D only",
+        "d": "C and E only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 37,
+      "exam_session": "December 2023",
+      "question": "Arrange the following in the ascending order of application TDS (Tax deducted at source) rates for the Financial Year, 2023-24. (A) Payment of Rs.6,55,000 rent by an individual in a year (B) Payment of Rs.20,000 on winnings from horse races (C) Payment of Rs.8,000 as dividend by cheque (D) Payment of Rs.35,000 to an individual contractor for repair by university (E) Payment of Rs.38,000 as fees for professional and technical services by a call center",
+      "options": {
+        "a": "A, B, C, D, E",
+        "b": "D, E, A, C, B",
+        "c": "E, D, C, B, A",
+        "d": "A, E, C, D, B"
+      },
+      "answer": null,
+      "note": "By TDS rates (D≈1% u/s194C, A≈5% u/s194-IB, C=E≈10% u/s194/194J, B=30% u/s194BB) the ascending order works out to roughly D, A, C/E, B - this does not cleanly match any listed option. Verify with official key."
+    },
+    {
+      "q_no": 38,
+      "exam_session": "December 2023",
+      "question": "A charitable trust (registered under section 12 AB of the Income Tax Act) is registered under GST in New Delhi. It Provided yoga training to middle-aged people, coaching for Basket-ball to teenagers and skill development services to persons over the age of 65 years residing in New Delhi in the month of July. This trust is liable to pay GST on:",
+      "options": {
+        "a": "Yoga training",
+        "b": "Skill-development services",
+        "c": "Coaching for basket-ball",
+        "d": "Coaching for basket-ball and Yoga training"
+      },
+      "answer": "b",
+      "note": "GST exemption Notification 12/2017 for charitable trusts covers yoga/spirituality training and skill-development for over-65s residing specifically in rural areas; since this trust operates in New Delhi (urban), skill-development is not exempt. Recommend verifying against the official answer key."
+    },
+    {
+      "q_no": 39,
+      "exam_session": "December 2023",
+      "question": "Every seller who receives an amount exceeding _______ as consideration for sale of a motor vehicle, shall collect tax @1% of the sale consideration from the buyer at the time of receipt of such amount.",
+      "options": {
+        "a": "Rs. 25 lakhs",
+        "b": "Rs. 15 lakhs",
+        "c": "Rs. 10 lakhs",
+        "d": "Rs. 50 lakhs"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 40,
+      "exam_session": "December 2023",
+      "question": "Which one of the following is the allowable deduction as per the Income Tax Act, 1961 in respect of entertainment allowance paid a government employee?",
+      "options": {
+        "a": "Lower of one-fourth of basic salary or Rs.5000 or entertainment allowance received",
+        "b": "Lower of one-fifth of basic salary of Rs.5000 or entertainment allowance received",
+        "c": "Lower of one-fifth of salary or Rs.500 or entertainment allowance received",
+        "d": "Lower of one-fifth of salary or Rs.50 or entertainment allowance received"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 41,
+      "exam_session": "December 2023",
+      "question": "Match List-I with List-II: List-I (Assets Transferred) / List-II (Exemptions of capital gains Sections 54-54EC Income Tax Act) [table appears garbled in source scan]",
+      "options": {
+        "a": "A-III, B-II, C-I, D-IV",
+        "b": "A-I, B-IV, C-II, D-III",
+        "c": "A-IV, B-I, C-III, D-II",
+        "d": "A-III, B-I, C-IV, D-II"
+      },
+      "answer": null,
+      "note": "The List-I column in the source image is corrupted/mismatched (it repeats TDS-section wording instead of asset-type wording), so this could not be reliably answered. Please refer to the original paper/official key."
+    },
+    {
+      "q_no": 42,
+      "exam_session": "June 2023",
+      "question": "\"Pin Money\" is used for ________.",
+      "options": {
+        "a": "Receipt on account of Dharmshala, Goshala etc(c)",
+        "b": "Women gets from her husband certain amount",
+        "c": "Income of non-residents from shipping business",
+        "d": "Income from building used for agriculture"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 43,
+      "exam_session": "June 2023",
+      "question": "Which are the conditions in which unilateral relief is granted in cases where section 90 is not applicable in income tax? (A) Assessee should be resident of India is the previous year (B) The income should have accrued outside India (C) The assesse should not have paid the tax in such foreign country by deduction (D) The income should not accrued outside India (E) The income should be taxed both in India and a foreign country with which India has no agreement for relief",
+      "options": {
+        "a": "A, B, E only",
+        "b": "B, C, E only",
+        "c": "A, D, E only",
+        "d": "A, C, E only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 44,
+      "exam_session": "June 2023",
+      "question": "Which expenses are expressly disallowed under profits from Business or Profession? (A) Salary paid out of India or to a non-resident in India (B) Wealth tax (C) Payment to any Rural Development Programme (D) Expenditure incurred by companies on notified skill development project (E) Interest royalty or fees payable outside India",
+      "options": {
+        "a": "A, D, E only",
+        "b": "A, B, only",
+        "c": "C, D, E only",
+        "d": "A, B, E only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 45,
+      "exam_session": "June 2023",
+      "question": "Tax planning involves which of the following features? (A) It is an inherent right of the tax payer (B) It has originated from the very existence of certain exemptions, deduction etc (C) Transaction take the form of colourable devices (D) It is legal and accepted by judiciary (E) It is based on principle of disclosure",
+      "options": {
+        "a": "A, B, D only",
+        "b": "B, D, E only",
+        "c": "B, C, D only",
+        "d": "A, D, C only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 46,
+      "exam_session": "June 2023",
+      "question": "What are the correct steps of procedures of e-filing of Income Tax Return? (A) Filing details and computation of tax (B) Generate XML file. filing income tax return and use of digital signature (C) Register and login on portal and select application return form (D) Use of ITR form V and sending ITR-V to CPC (E) Making payment of balance tax and contain the data provided for",
+      "options": {
+        "a": "A, D, C, E, B",
+        "b": "C, A, E, B, D",
+        "c": "A, C, D, E, B",
+        "d": "A, B, C, D, E"
+      },
+      "answer": null,
+      "note": "Best-guess logical order is Register/Login(C) -> Fill details & compute tax(A) -> Generate XML/e-file(B) -> Pay balance tax(E) -> ITR-V to CPC(D), which doesn't cleanly match any listed option. Verify against official key."
+    },
+    {
+      "q_no": 47,
+      "exam_session": "June 2023",
+      "question": "Business has been discontinued in the previous year 2021-22. The business loss.",
+      "options": {
+        "a": "Can be carried forward and set off against profit gain of business and profession",
+        "b": "Can be set-off against income from business or profession or income under any other head",
+        "c": "Can be carried forward and set off for indefinite period whether business is carried or discontinued",
+        "d": "Can be carried forward and set of for six years whether business is carried or discontinued"
+      },
+      "answer": "d",
+      "note": "Standard rule is that business loss can be carried forward for 8 assessment years regardless of continuance; option (d) as printed says 'six years' which appears to be a typo in the source for 'eight years'."
+    },
+    {
+      "q_no": 48,
+      "exam_session": "June 2023",
+      "question": "Match List I with List II [TDS rate table - appears garbled in source scan]: (A) On income from Dividend (B) On income by way of short term capital gain referred to in section 111 A (C) On income by way of winning from horse race (D) On income by way of royalty or fees for technical services payable by Government",
+      "options": {
+        "a": "A-III, B-IV, C-I, D-II",
+        "b": "A-II, B-III, C-I, D-IV",
+        "c": "A-I, B-II, C-III, D-IV",
+        "d": "A-IV, B-II, C-I, D-III"
+      },
+      "answer": null,
+      "note": "List-II descriptions in the source scan appear mismatched with List-I items (mixes a rate value '15%' with unrelated description items). Could not confidently resolve - verify against official key."
+    },
+    {
+      "q_no": 49,
+      "exam_session": "June 2023",
+      "question": "When no liability for payment of tax in advance arise by an assesses on his income if tax payable is:",
+      "options": {
+        "a": "Less than 10,000",
+        "b": "Less than 50,000",
+        "c": "Less than 5,00,000",
+        "d": "Less than 7,50,000"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 50,
+      "exam_session": "June 2023",
+      "question": "When the income of a minor child is clubbed with the income of mother or father, how much deduction will be allowed to mother or father?",
+      "options": {
+        "a": "Rs. 1500",
+        "b": "Rs. 2000",
+        "c": "Actual income clubbed with the income of mother or father, whichever is less",
+        "d": "No deduction"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 51,
+      "exam_session": "June 2023",
+      "question": "Which of the following are correct for Agricultural Income? (A) Income from self-grown grass, trees, bamboo (B) Rent and Rates derived from land (C) Income from making the produce fit for marketing (D) Income from land used for storing agriculture produce (E) Income from farmhouse",
+      "options": {
+        "a": "B, C and E only",
+        "b": "B, D and E only",
+        "c": "A, C and D only",
+        "d": "C, D and E only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 52,
+      "exam_session": "June 2023",
+      "question": "\"It is an art of dodging tax without actually breaking the law\". This is related with:",
+      "options": {
+        "a": "Tax Management",
+        "b": "Tax Avoidance",
+        "c": "Tax Planning",
+        "d": "Tax Evasion"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 53,
+      "exam_session": "June 2023",
+      "question": "Which are the appropriate tax planning perspectives in case of shut down or continue decision under Income Tax Act, 1961? (A) Business loss and unabsorbed depreciation can be carry forward and set off against profit and gain. (B) The loss making and profit making company may merge to avail the tax benefit (C) Tax benefit of deduction u/s 33 AB and 115 VT may be withdrawn and liable to tax for the year in which business is discontinue (D) The condition of section 80 IB / 80 IC of the Act, a deduction is allowed to Such undertaking (E) If a person has more than one business, the loss making business may not be discontinue",
+      "options": {
+        "a": "A, C and D only",
+        "b": "B, D and E only",
+        "c": "C, D and E only",
+        "d": "A, C and E only"
+      },
+      "answer": "d",
+      "note": "Low confidence - verify against official key."
+    },
+    {
+      "q_no": 54,
+      "exam_session": "June 2023",
+      "question": "Arrange the following advance payment of tax in ascending order (Section 207 to section 211) of the Income Tax Act 1961. (A) Instalment of advance tax and due date (B) Liability for payment of Advance Tax (C) Payment of advance tax by the assesse on own record (D) Condition of liability to pay advance tax. (E) Computation of advance tax",
+      "options": {
+        "a": "A, B, D, C, E",
+        "b": "B, D, E, C, A",
+        "c": "B, D, E, A, C",
+        "d": "C, D, E, A, B"
+      },
+      "answer": "b",
+      "note": "Moderate confidence - verify against official key."
+    },
+    {
+      "q_no": 55,
+      "exam_session": "June 2023",
+      "question": "X was appointed on 1 July 2022 as a lecturer in a University. He was continued On 30 April 2023. What would be the duration of the previous year for the assessment year 2023-24 for computation of income under the head Salary?",
+      "options": {
+        "a": "1 July 2022 to 30 April 2023",
+        "b": "1 April 2022 to 31 March 2023",
+        "c": "1 April 2022 to 30 April 2023",
+        "d": "1 July 2022 to 31 March 2023"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 56,
+      "exam_session": "June 2023",
+      "question": "Match List I with List II: (A) The person is liable to penalty and prosecution (B) Tax is reduced by taking advantage of loopholes of the law (C) Main aim is compliance with legal formalities (D) It is a guide in decision making -- I. Tax Management II. Tax Avoidance III. Tax Evasion IV. Tax planning",
+      "options": {
+        "a": "A-II, B-III, C-IV, D-I",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-III, B-II, C-I, D-IV",
+        "d": "A-III, B-I, C-IV, D-II"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 57,
+      "exam_session": "June 2023",
+      "question": "On attaining the age of majority, A minor's agreement:",
+      "options": {
+        "a": "Can be ratified by him",
+        "b": "Cannot be ratified by him",
+        "c": "Becomes void",
+        "d": "Becomes valid"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 58,
+      "exam_session": "June 2023",
+      "question": "Which one of the following is the Net Annual Value (NAV) of house for the given details: Municipal value = Rs. 360000, Fair Rental value - Rs.400000, Standard Rent - Rs.500000, Actual Rent (Annual Rent) - Rs.480000, Municipal Tax = Rs.12000 (due but not paid)",
+      "options": {
+        "a": "400000",
+        "b": "480000",
+        "c": "4680000",
+        "d": "500000"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 59,
+      "exam_session": "March 2023",
+      "question": "Computation of income from house property for let-out house, the following items are deducte. Arrange them in a proper sequence: (A) Local taxes/Municipal Taxes. (B) Standard deductions. (C) Unrealized Rent. (D) Interest on loan for the period the prior to previous year in which the house is completed (in five equal annual instalments). (E) Interest on loan taken for purchase, construction or repair of the house, relating to the previous year.",
+      "options": {
+        "a": "A, B, E, D, C",
+        "b": "C, A, B, E, D",
+        "c": "A, C, B, E, D",
+        "d": "D, A, B, E, C"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 60,
+      "exam_session": "March 2023",
+      "question": "Tax on declared dividend is paid by whom?",
+      "options": {
+        "a": "Shareholders/ Receiver of the dividend",
+        "b": "Manager",
+        "c": "Distributor of the dividend",
+        "d": "Company"
+      },
+      "answer": "a",
+      "note": "Reflects current law (post-2020) where dividend is taxable in the hands of the recipient; DDT paid by companies was abolished from FY2020-21. If the question intends the pre-2020 DDT regime the answer would be (d) Company - verify which regime is intended."
+    },
+    {
+      "q_no": 61,
+      "exam_session": "March 2023",
+      "question": "Which one of the following is NOT related to Income Tax in India?",
+      "options": {
+        "a": "Taxpayer Identification Number (TIN)",
+        "b": "Dearness Allowance (DA)",
+        "c": "Leave Travel Allowance (LTA)",
+        "d": "Tax Deduction and Collection Account Number (TAN)"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 62,
+      "exam_session": "March 2023",
+      "question": "Net profit after taxes of a firm is Rs.1,00,000 and its fixed interest charges on long term debt are Rs. 20,000. What is the interest coverage ratio if the rate of income tax is 60%?",
+      "options": {
+        "a": "13 times",
+        "b": "13.5 times",
+        "c": "12.5 times",
+        "d": "5 times"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 63,
+      "exam_session": "March 2023",
+      "question": "Which of the following conditions should be fulfilled by an Assessee to avail deduction u/s.91 of Income Tax Act. 1961? (A) The Assesse is a tax resident in India during the relevant previous year. (B) The income accrues or arises to him/her outside India (C) There is an agreement for relief from double taxation between India and the other country when the income has accrued or arisen. (D) The Assesse has paid tax on his/her foreign income in the foreign country (E) India does not have any agreement for relief from double taxation with the country.",
+      "options": {
+        "a": "A and E only",
+        "b": "B and C only",
+        "c": "A, B, D and E only",
+        "d": "A, B, E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 64,
+      "exam_session": "March 2023",
+      "question": "Match List I with List II: (A) ITR-2 (B) ITR-6 (C) ITR-7 (D) ITR-4 (Sugam) -- I. For a company other than a company claiming exemption under section 11 II. For presumptive business income covered u/s44 AD and 44 AE III. For a person (including a company) who are required to furnished return u/s 139(4A) or 139(4B) or 139(4C) or 139(4D) IV. For individual and HUF not having income for business and profession",
+      "options": {
+        "a": "A-IV, B-I, C-II, D-III",
+        "b": "A-IV, B-I, C-III, D-II",
+        "c": "A-IV, B-I, C-II, D-III",
+        "d": "A-IV, B-I, C-II, D-III"
+      },
+      "answer": "b",
+      "note": "Table as printed in source pairs descriptions to the wrong ITR forms in places; answered based on correct ITR-form definitions rather than the (possibly OCR-corrupted) table order."
+    },
+    {
+      "q_no": 65,
+      "exam_session": "March 2023",
+      "question": "Which one of the following is NOT correct for Tonnage Tax System?",
+      "options": {
+        "a": "It is a scheme of presumptive taxation.",
+        "b": "It is applicable for the taxation of income derived from shipping activities.",
+        "c": "It is applicable for both Indian as well as foreign companies.",
+        "d": "Computation of tonnage income is covered U/S 115 VG."
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 66,
+      "exam_session": "March 2023",
+      "question": "Income received and accrued or arisen outside India from a business controlled in or a profession set up in India, is taxed in the hands of which of the following? (A) Every citizen of India (B) Domicile of India (C) Ordinary Resident (D) Non-Ordinarily Resident (E) Non-Resident",
+      "options": {
+        "a": "A and C only",
+        "b": "A and B only",
+        "c": "C and D only",
+        "d": "C, D and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 67,
+      "exam_session": "March 2023",
+      "question": "Which of the following are related to tax-evasion? (A) Claiming bogus expenses and losses. (B) Hiding capital nature of profits. (C) Showing sales transactions. (D) Showing excess transactions. (E) Showing real income and expenses.",
+      "options": {
+        "a": "A and B only",
+        "b": "A, B and D only",
+        "c": "A, B and C only",
+        "d": "C and D only"
+      },
+      "answer": "a",
+      "note": "Low-moderate confidence, items C and D are ambiguously worded in the source scan; verify against official key."
+    },
+    {
+      "q_no": 68,
+      "exam_session": "March 2023",
+      "question": "Section 80 GGC of Income Tax Act is related with which one of the following?",
+      "options": {
+        "a": "Deduction in respect of contribution given by any company to political parties.",
+        "b": "Deduction in respect of contribution given by any person to political parties.",
+        "c": "Deduction in respect of rent paid",
+        "d": "Deduction in respect of certain donation for scientific research."
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 69,
+      "exam_session": "November 2022",
+      "question": "Arm's length price computation method under 92 (B) of the Income Tax Act. 1961 does not include which one of the following?",
+      "options": {
+        "a": "Comparable uncontrolled price",
+        "b": "Transaction net margin",
+        "c": "Resale price",
+        "d": "Slum sale price method"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 70,
+      "exam_session": "November 2022",
+      "question": "Tax holiday under the Income Tax Act 1961 has been used in the context of which one of the following?",
+      "options": {
+        "a": "Section 80IA",
+        "b": "Section 80D",
+        "c": "Section 80CCC",
+        "d": "Section10(5)"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 71,
+      "exam_session": "November 2022",
+      "question": "Under Indian Income Tax Act. Allowances which are non-taxable for the individual assesse are: (A) Sumptuary allowances. (B) Compensatory allowance paid to judges. (C) Overtime allowance. (D) Allowance paid to Govt. employees posted abroad. (E) Non- practicing allowance.",
+      "options": {
+        "a": "A, B, D, E only",
+        "b": "A, C, D, E only",
+        "c": "A, B, D only",
+        "d": "A, B, C, D, E"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 72,
+      "exam_session": "November 2022",
+      "question": "Presumptive taxation involves which one of the following?",
+      "options": {
+        "a": "The use of indirect methods to calculate tax liability, which differ from the usual sales based on the tax payers accounts",
+        "b": "Transfer of tax liability from State to the Centre.",
+        "c": "Calculation of short term capital gain",
+        "d": "Calculation of rebate U/S 89"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 73,
+      "exam_session": "November 2022",
+      "question": "Rates of Income Tax under new regime applicable for financial year 2021-22 in India are: (A) 5% (B) 10% (C) 12% (D) 15% (E) 20%",
+      "options": {
+        "a": "A, B, C only",
+        "b": "A, B, D only",
+        "c": "A, B, D, E only",
+        "d": "B, C, D, E only"
+      },
+      "answer": "c",
+      "note": "Assumes '(C) 12%' is an OCR error for the actual 25% slab of the FY2021-22 new regime (5/10/15/20/25/30%)."
+    },
+    {
+      "q_no": 74,
+      "exam_session": "November 2022",
+      "question": "Under Indian Income Tax Act, in order to claim deduction of interest on home loan for house property, which of the following things need taken care of? (A) The home loan must be used for the purchase/construction of the house property. (B) The load must be taken on or after 1st April 2019. (C) The amount of loan must be used within 10 days from the date of loan taken. (D) The purchase or construction must be completed within 5 years from the end of Financial Year in which the loan was taken. (E) The rate of interest on loan cannot exceed 22%.",
+      "options": {
+        "a": "A, B, D only",
+        "b": "A, C, D, E only",
+        "c": "B, C, D, E only",
+        "d": "A and D only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 75,
+      "exam_session": "November 2022",
+      "question": "Match List I with List II: (A) Donation to National Defence Fund (B) Hedging of Tax (C) Compliance with legal Formalities (D) Permanent Account Number (PAN) -- I. Section 140(A) II. Tax Management III. Tax Avoidance IV. 100% Deduction",
+      "options": {
+        "a": "A-III, B-II, C-I, D-IV",
+        "b": "A-IV, B-III, C-II, D-I",
+        "c": "A-II, B-III, C-I, D-IV",
+        "d": "A-I, B-IV, C-II, D-III"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 76,
+      "exam_session": "November 2022",
+      "question": "Which of the following are included in Salary as per Section 17(1) of the Income Tax Act? (A) Wages (B) Any pension or annuity (C) Any interest from Government securities (D) Any gratuity (E) Any advance of salary",
+      "options": {
+        "a": "A, B, C and D only",
+        "b": "A, B, C, D and E",
+        "c": "A, B, D and E only",
+        "d": "C and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 77,
+      "exam_session": "November 2022",
+      "question": "Which section of the Indian Companies Act, 2013 among the following, provides for the appointment of first auditors by the Board of Directors within one month of the date of registration of the company?",
+      "options": {
+        "a": "139 (2)",
+        "b": "139 (6)",
+        "c": "142 (1)",
+        "d": "142 (2)"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 78,
+      "exam_session": "November 2022",
+      "question": "Which of the following cannot use ITR-1 form to file return under the Indian Income Tax Act? (A) An individual who is a director in a company (B) An individual who has any asset located outside India (C) An individual whose total income does not exceed Rs. 50,00,000 (D) An individual who has income from any source outside India (E) An individual who has any unlisted equity shares at any time during the previous year",
+      "options": {
+        "a": "a, b, c and d only",
+        "b": "a, b, d and e only",
+        "c": "a, c and e only",
+        "d": "b, c and e only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 79,
+      "exam_session": "November 2022",
+      "question": "A is entitled to children education allowance @₹80 p.m. per child, for three children, it amounts to ₹240 p.m. it will be exempted to the extent to which one of the following under the Indian Income Tax Act?",
+      "options": {
+        "a": "₹200 p.m.",
+        "b": "₹160 p.m.",
+        "c": "₹240 p.m.",
+        "d": "₹300 p.m."
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 80,
+      "exam_session": "November 2022",
+      "question": "Sequence the procedure for e-filing of ITR-1 and ITR-2: (A) Login (B) Register (C) Verification (D) Downloading utility and preparing the Return (E) e-Filing Income Tax Return",
+      "options": {
+        "a": "A, B, E, D, C",
+        "b": "B, A, D, E, C",
+        "c": "A, B, D, C, E",
+        "d": "A, B, D, E, C"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 81,
+      "exam_session": "November 2022",
+      "question": "If the assesse is engaged in the business of growing and manufacturing tea in India, the agriculture income in that case shall be:",
+      "options": {
+        "a": "25% of the income of such business",
+        "b": "40% of the income of such business",
+        "c": "60% of the income of such business",
+        "d": "75% of the income of such business"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 82,
+      "exam_session": "October 2022",
+      "question": "Which of the following are the tax categories under the GST? (A) 5% (B) 10% (C) 12% (D) 20% (E) 28%",
+      "options": {
+        "a": "A, D, E only",
+        "b": "B, C, D only",
+        "c": "A, C, E only",
+        "d": "B, D, E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 83,
+      "exam_session": "October 2022",
+      "question": "Residential status in Indian Income Tax Act is determined for which one of the following?",
+      "options": {
+        "a": "Previous year",
+        "b": "Assessment year,",
+        "c": "Accounting year",
+        "d": "Both previous and assessment year"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 84,
+      "exam_session": "October 2022",
+      "question": "Tax audit is compulsory in the case of a person carrying on profession and whose gross receipts exceeds which one of the following?",
+      "options": {
+        "a": "60 lakhs",
+        "b": "1 crore",
+        "c": "40 lakhs",
+        "d": "50 lakhs"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 85,
+      "exam_session": "October 2022",
+      "question": "Bank are not required to deduct the TDS from depositors who have submitted declaration in which one of the following forms under the Income Tax Rule, 1962.",
+      "options": {
+        "a": "Form 16 (a)",
+        "b": "Form 16 (H)",
+        "c": "Form 15 (G)",
+        "d": "Form 15 (a)"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 86,
+      "exam_session": "October 2022",
+      "question": "Sequence the following steps to compute tax where there is agriculture income also. (A) Add agricultural income and non-agricultural income and calculate tax on aggregate income as if such aggregate income is the total income (B) Add agricultural income to the maximum exemption limit available in the case of assesse and compute tax on such amount as if it is total income (C) Deduct the amount of Income tax as computed from the tax computed from Claim rebate u/s 87 (D) if applicable (E) Add surcharge if applicable along with the Health and Education cess @ 4%",
+      "options": {
+        "a": "A, B, C, D, E",
+        "b": "A, B, D, C, E",
+        "c": "B, A, C, D, E",
+        "d": "B, A, D, C, E"
+      },
+      "answer": null,
+      "note": "Could not confidently determine which lettering order the exam key intends - logically it should be A, B, C, D, E as printed. Verify against official key."
+    },
+    {
+      "q_no": 87,
+      "exam_session": "October 2022",
+      "question": "Which of the following losses are allowed to be carried forward and set off in the subsequent assessment years? (A) House property loss (B) Business loss (C) Speculation loss (D) Capital loss (E) Loss on account of owning and maintaining race horses",
+      "options": {
+        "a": "A, B, C, D only",
+        "b": "B, C, D, E only",
+        "c": "A, E only",
+        "d": "A, B, C, D, E"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 88,
+      "exam_session": "October 2022",
+      "question": "The following information with respect to a company is given below: Net profit before tax =1,00,000; 10% Preference share capital (1 each) = 1,00,000; Equity share capital (10 each) = 1,00,000; Taxation at 50% of Net profit. Which one among the following is the earning per share?",
+      "options": {
+        "a": "Zero",
+        "b": "4",
+        "c": "10",
+        "d": "40"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 89,
+      "exam_session": "October 2022",
+      "question": "A project requires and initial investment of Rs. 56125 and its estimated salvage value is Rs. 3,000. The annual estimated income after depreciation and tax for its entire life of 5 years are Rs.3375, Rs.5375, Rs.7375, Rs.9375 and Rs.11375 respectively. Which one of the following is its average rate of return?",
+      "options": {
+        "a": "26.28%",
+        "b": "24.9%",
+        "c": "29.94%",
+        "d": "60.88%"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 90,
+      "exam_session": "October 2022",
+      "question": "Given below are two statements: Statement I: Tax planning promotes professionalism and strengthens economic and political situation of the country. Statements II: Tax evasion is an act within the permissible range of the Act to achieve social and economic benefits. In the light of the above statements, choose the correct answer from the options given below:",
+      "options": {
+        "a": "Both Statements I and Statements II are true",
+        "b": "Bot Statements I and Statements II are false",
+        "c": "Statements I is true but Statements II is false,",
+        "d": "Statements I is false but Statements II is true"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 91,
+      "exam_session": "November 2021",
+      "question": "The exemption with respect to HRA is based upon the following factors: (A) Rent paid (B) Place of residence (C) Salary (D) HRA received (E) Fair rent (F) Market rent",
+      "options": {
+        "a": "(A), (B), (C), (D) only",
+        "b": "(A), (C), (D), (F) only",
+        "c": "(A), (B), (C), (F) only",
+        "d": "(A), (B), (E), (F) only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 92,
+      "exam_session": "November 2021",
+      "question": "Which of the followings are included in \"person\" under section 2(31)? (A) A Hindu Undivided Family (HUF) (B) A company (C) A firm (D) An individual (E) A local authority (F) An association of persons",
+      "options": {
+        "a": "A, C, D, F only",
+        "b": "C, D, E, F only",
+        "c": "B, D, E, F only",
+        "d": "A, B, C, D, E and F"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 93,
+      "exam_session": "November 2021",
+      "question": "Which of the following income is generally chargeable under the head of Income from Other Sources? (A) Income from subletting house property (B) Director fee (C) Ground Rent (D) Agricultural Income from outside India (E) Insurance commission (F) Income from sale of securities",
+      "options": {
+        "a": "(A), (B), (D), (E) only",
+        "b": "(B), (C), (D), (E), (F) only",
+        "c": "(A), (B), (C), (E), (F) only",
+        "d": "(A), (B), (C), (D), (E) only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 94,
+      "exam_session": "November 2021",
+      "question": "Sequence the steps for computing depreciation in income from Business and Profession. (A) The written down value of each block as on the last day of the previous year (B) Find the value of each block at the beginning of each year (C) The money received along with scrap value, if any in respect of the same blocks, which are sold/discarded during the year (D) 'Assets required during the year in the respective blocks to which the new assets belong",
+      "options": {
+        "a": "(A), (B), (C), (D)",
+        "b": "(B), (D), (A), (C)",
+        "c": "(A), (B), (D), (C)",
+        "d": "(D), (B), (C), (A)"
+      },
+      "answer": "b",
+      "note": "Moderate confidence - verify against official key."
+    },
+    {
+      "q_no": 95,
+      "exam_session": "November 2021",
+      "question": "Maximum tax-free limit for payment received under a voluntary retirement scheme is:",
+      "options": {
+        "a": "Rs. 4,00,000",
+        "b": "Rs. 5,00,000",
+        "c": "Rs. 8,00,000",
+        "d": "Rs. 10,00,000"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 96,
+      "exam_session": "November 2021",
+      "question": "A is a resident in India aged 60 years, who earned agricultural income of Rs.5,00,000 and non-agricultural income of Rs.3,00,000 during the previous year 2019-20. What is the tax liability of A?",
+      "options": {
+        "a": "Rs. 72,000",
+        "b": "Rs. 72,100",
+        "c": "Rs. 2,600",
+        "d": "Nil"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 97,
+      "exam_session": "November 2021",
+      "question": "Match List I with List II: (a) Section 80EE (b) Section 80GG (c) Section 80GGA (d) Section 80E -- (I) Deduction in respect of rent paid (II) Deduction in respect of certain donations for scientific researches (III) Deduction in respect of interest on loan taken for residental house (IV) Deduction in respect of payment of interest on loan taken for higher eduction",
+      "options": {
+        "a": "(a)-(II), (b)-(IV), (c)-(I), (d)-(III)",
+        "b": "(a)-(III), (b)-(I), (c)-(II), (d)-(IV)",
+        "c": "(a)-(III), (b)-(I), (c)-(IV), (d)-(II)",
+        "d": "(a)-(II), (b)-(IV), (c)-(III), (d)-(I)"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 98,
+      "exam_session": "November 2021",
+      "question": "Given below are two statements: One is labelled as Assertion A and the other is labelled as Reason R. Assertion A: ITR-1 can be used by an individual whose total income does not exceed ₹1 crore. Reason R: ITR-1 cannot be used by an individual who is a director in a company. In the light of the above statements, choose the most appropriate answer from the options given below:",
+      "options": {
+        "a": "Both A and R are correct and R is the correct explanation of A",
+        "b": "Both A and R are correct and R is NOT the correct explanation of A",
+        "c": "A is correct but R is not correct",
+        "d": "A is not correct but R is correct"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 99,
+      "exam_session": "November 2021",
+      "question": "Given below are two statements: Statement I: Deferred Tax Liabilities (Net) is the amount of tax on the temporary difference between the accounting income and taxable income. It arises when the accounting income is more than the taxable income. Statement II: Deferred Tax Liabilities (Net) and Deferred Tax Assets (Net) are only book entries, i.e., they are neither actual liability nor actual asset. In the light of the above statements, choose the correct answer from the options given below:",
+      "options": {
+        "a": "Both Statement I and Statement II are true",
+        "b": "Both Statement I and Statement II are false",
+        "c": "Statement I is true but Statement II is false",
+        "d": "Statement I is false but Statement II is true"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 100,
+      "exam_session": "November 2021",
+      "question": "Sequence the steps for computing gross annual value of income from house property: 1. Find out the rent actually received or receivable after excluding unrealized rent before deducting loss due to vacancy. 2. Find out the loss because of vacancy. 3. Find out the reasonable expected rent of the property. 4. Find out which one is the higher amount computed in 3 or 1. 5. 4-2 is gross annual value.",
+      "options": {
+        "a": "3, 1, 4, 2, 5",
+        "b": "1, 4, 3, 2, 5",
+        "c": "4, 1, 3, 2, 5",
+        "d": "1, 2, 3, 4, 5"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 101,
+      "exam_session": "November 2021",
+      "question": "Choose the correct answer: (A) Section 35(1)(ii) (B) Section 35(1)(iii) (C) Section 35(1)(ii a) (D) Section 35(2AA) -- I. Payment made to certain institutions for scientific research II. Payment made to certain institutions for research in social sciences III. Payment made to a company to be used for scientific research IV. Payment made to Indian Institute of Technology for scientific research",
+      "options": {
+        "a": "(A)-(IV), (B)-(II), (C)-(III), (D)-(I)",
+        "b": "(A)-(IV), (B)-(III), (C)-(II), (D)-(I)",
+        "c": "(A)-(I), (B)-(II), (C)-(III), (D)-(IV)",
+        "d": "(A)-(I), (B)-(II), (C)-(IV), (D)-(III)"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 102,
+      "exam_session": "November 2021",
+      "question": "Which of the following losses are not deductible from business income? 1. Loss sustained before the business is commenced. 2. Losses incurred in the closing down of the business. 3. Loss incurred due to damage, destruction, etc., of capital assets. 4. Loss of raw material and finished goods in transit. 5. Loss of stock-in-trade due to enemy action.",
+      "options": {
+        "a": "1, 2, 3 only",
+        "b": "2, 3, 4 only",
+        "c": "1, 4, 5 only",
+        "d": "1, 2, 4 only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 103,
+      "exam_session": "November 2021",
+      "question": "Which of the following persons cannot use ITR-4? 1. Who is a director of a company 2. Who has held any unlisted equity shares 3. Who has any asset located outside India 4. A firm (other than LLP) if the assessee is a Resident 5. Who has income from other sources",
+      "options": {
+        "a": "1, 2, 3 only",
+        "b": "1, 2, 4 only",
+        "c": "2, 4, 5 only",
+        "d": "3, 4, 5 only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 104,
+      "exam_session": "November 2021",
+      "question": "Which of the following provident funds is approved by the provident fund commissioner?",
+      "options": {
+        "a": "Statutory provident fund",
+        "b": "Recognized provident fund",
+        "c": "Unrecognized provident fund",
+        "d": "Public provident fund"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 105,
+      "exam_session": "November 2021",
+      "question": "X, an employee of a private company, gets ₹30,000 p.m. basic salary and is entitled to ₹1,500 p.m. as entertainment allowance. What is the deduction u/s 16(ii) from gross salary in respect of the entertainment allowance?",
+      "options": {
+        "a": "₹5,000",
+        "b": "₹18,000",
+        "c": "₹72,000",
+        "d": "Nil"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 106,
+      "exam_session": "November 2021",
+      "question": "AMT provisions are applicable on:",
+      "options": {
+        "a": "Corporate assessee",
+        "b": "Non-corporate assessee",
+        "c": "HUF",
+        "d": "An individual"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 107,
+      "exam_session": "November 2021",
+      "question": "If the assessee is engaged in the business of growing and manufacturing tea in India, the non-agricultural income in that case be:",
+      "options": {
+        "a": "40% of the income from such business",
+        "b": "25% of the income from such business",
+        "c": "60% of the income from such business",
+        "d": "75% of the income from such business"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 108,
+      "exam_session": "November 2021",
+      "question": "Given below are two statements: Statement I: Assessee is always a person but a person may or may not be an assessee. Statement II: The term 'person' includes an individual, a HUF, a company, a firm, an association of persons, local authority and every artificial juridical person. In light of the above statements, choose the most appropriate answer from the options given below:",
+      "options": {
+        "a": "Both Statement I and Statement II are correct",
+        "b": "Both Statement I and Statement II are incorrect",
+        "c": "Statement I is correct but Statement II is incorrect",
+        "d": "Statement I is incorrect but Statement II is correct"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 109,
+      "exam_session": "November 2021",
+      "question": "Arrange in sequence the steps in the procedure of e-filing of an Income Tax Return: (A) Login (B) Register (C) Verification (D) e-filing (E) Downloading utility and preparing the return",
+      "options": {
+        "a": "A, B, C, D, E",
+        "b": "A, B, C, E, D",
+        "c": "A, B, E, C, D",
+        "d": "B, A, E, D, C"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 110,
+      "exam_session": "November 2021",
+      "question": "Choose the correct answer: (A) Section 10(1) (B) Section 10(10C) (C) Section 10 13 (A) (D) Section 10(AA) -- I. Amount received involuntary retirement II. Agricultural income III. Leave Encashment IV. House Rent Allowance",
+      "options": {
+        "a": "A-II, B-I, C-III, D-IV",
+        "b": "A-II, B-I, C-IV, D-III",
+        "c": "A-IV, B-III, C-I, D-II",
+        "d": "A-IV, B-III, C-II, D-I"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 111,
+      "exam_session": "November 2021",
+      "question": "An ITR-1 can be used by an individual having an income from: (A) One house property (B) Pension (C) Interest on Fixed Deposits in Banks (D) Winnings from lottery",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, B and D only",
+        "c": "A, C and D only",
+        "d": "B, C and D only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 112,
+      "exam_session": "November 2021",
+      "question": "Which of the following losses are NOT deductible from business income? (A) Loss incurred in closing down the business (B) Loss incurred due to damage, destruction, et of capital assets (C) Loss of stock-in-trade due to enemy action. (D) Loss sustained before the business is commenced (E) Loss of raw material finished good-in-transit",
+      "options": {
+        "a": "A, B, C only",
+        "b": "A, B, D only",
+        "c": "A, D, E only",
+        "d": "C, D and E only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 113,
+      "exam_session": "November 2021",
+      "question": "Which of the following are required to be studied for a deep understanding of Income Tax procedures? (A) The Income Tax Act, 1961 (B) The Income Tax Rules, 1962 (C) Notifications, circulars and classification issued from time to time by the CBDT (D) Judicial decisions (E) Companies Act, 2013",
+      "options": {
+        "a": "A, B and E only",
+        "b": "A, B, C and D only",
+        "c": "A, C, D and E only",
+        "d": "B, C, D and E only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 114,
+      "exam_session": "November 2021",
+      "question": "Buoyancy is a basic principle of taxation which means:",
+      "options": {
+        "a": "The system should be such that cost of collection is least",
+        "b": "Tax obligation of the payers should be well determined",
+        "c": "The system should be such that the tax revenue has the inherent tendency to increase as the economy grows",
+        "d": "Tax base should be fairly diversified so that the tax burden is widely spread"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 115,
+      "exam_session": "November 2021",
+      "question": "The partial integration of agricultural with non-agricultural income is done in case of:",
+      "options": {
+        "a": "AOP/BOI",
+        "b": "Company",
+        "c": "Co-operative society",
+        "d": "Firm"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 116,
+      "exam_session": "November 2021",
+      "question": "Section 80GGC of Income tax is:",
+      "options": {
+        "a": "Deduction in respect of certain donation for scientific research",
+        "b": "Deduction in respect of contribution given by any company to political parties.",
+        "c": "Deduction in respect of contribution given by any person to political parties.",
+        "d": "Deduction in respect of rent paid"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 117,
+      "exam_session": "November 2021",
+      "question": "The due date of the first installment of advance tax paid by an assessee other than the company is:",
+      "options": {
+        "a": "15th April",
+        "b": "15th June",
+        "c": "15th December",
+        "d": "15th September"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 118,
+      "exam_session": "November 2021",
+      "question": "Tax Audit is compulsory in case a person is carrying on a business whose gross turnover/receipts exceeds:",
+      "options": {
+        "a": "Rs. 1 crore",
+        "b": "Rs. 40 lakh",
+        "c": "Rs. 50 lakh",
+        "d": "Rs. 60 lakh"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 119,
+      "exam_session": "October 2020",
+      "question": "Mr. X is entitled to a transport allowance of Rs.1,800 p.m. for commuting from his residence to the office and back, and he spends Rs.1,400 p.m. The exemption shall be allowed of:",
+      "options": {
+        "a": "Rs.1,800 p.m.",
+        "b": "Rs.1,400 p.m.",
+        "c": "Rs.1,600 p.m.",
+        "d": "Nil"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 120,
+      "exam_session": "October 2020",
+      "question": "Tax audit is compulsory in case of a person carrying on business whose gross turnover exceeds:",
+      "options": {
+        "a": "Rs.60 Lakhs",
+        "b": "Rs.1 Crore",
+        "c": "Rs.40 Lakhs",
+        "d": "Rs.2 Crore"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 121,
+      "exam_session": "October 2020",
+      "question": "Which of the following are true of the Goods and Services Tax (GST) introduced in India in recent times? (A) It is a destination tax. (B) It benefits producing states more. (C) It benefits consuming states more. (D) It is progressive taxation. (E) It is an umbrella tax to improve ease of doing business.",
+      "options": {
+        "a": "(B), (D), and (E) only",
+        "b": "(A), (C), and (D) only",
+        "c": "(A), (D), and (E) only",
+        "d": "(A), (C), and (E) only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 122,
+      "exam_session": "October 2020",
+      "question": "Match the item of List I with the items of List II and suggest the correct code: (A) 80 GGC (B) 80GG (C) 80GGA (D) 80GGB -- I. Deduction in respect of rent paid II. Deduction in respect of contribution given by company to political parties III. Deduction in respect of contribution given by any person to political parties IV. Deduction in respect of certain donation for scientific research",
+      "options": {
+        "a": "A-III, B-I, C-II, D-IV",
+        "b": "A-III, B-II, C-IV, D-I",
+        "c": "A-III, B-I, C-IV, D-II",
+        "d": "A-I, B-II, C-III, D-IV"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 123,
+      "exam_session": "October 2020",
+      "question": "What is the correct sequence of distribution of amount realised under section 154 of CGST rules? (A) Appropriated against the administrative cost of the recovery process. (B) Appropriated against any other amount due from the defaulter under the Act or IGST Act, 2017. (C) Appropriated against the amount due to be recovered from defaulter. (D) Balance amount, if any, shall be refunded to the defaulter.",
+      "options": {
+        "a": "A, B, D, C",
+        "b": "A, C, B, D",
+        "c": "C, A, B, D",
+        "d": "C, B, A, D"
+      },
+      "answer": null,
+      "note": "Logical order should be A, B, C, D per the wording, which is not exactly among the given options - moderate-to-low confidence, verify against official key."
+    },
+    {
+      "q_no": 124,
+      "exam_session": "October 2020",
+      "question": "Which two of the following are correct about TDS certificates? (A) TDS on salary payment - Form 16 (B) TDS on non-salary payment - Form 16A (C) TDS on rent - Form 16B (D) TDS on sale of property - Form 16C",
+      "options": {
+        "a": "(A) and (B)",
+        "b": "(A) and (C)",
+        "c": "(A) and (D)",
+        "d": "(B) and (C)"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 125,
+      "exam_session": "October 2020",
+      "question": "Arrange the following in correct sequence: (A) Income under the different heads of Income. (B) Deduction from gross total income. (C) Adjustment of losses of the current year and earlier years. (D) rounding off.",
+      "options": {
+        "a": "A, C, B, D",
+        "b": "A, B, C, D",
+        "c": "A, B, D, C",
+        "d": "A, D, B, C"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 126,
+      "exam_session": "October 2020",
+      "question": "Match List I with List II: (A) 80 GG (B) 80GGA (C) 80GGB (D) 80GGC -- I. Deduction in respect of contribution given by companies to political parties. II. Deduction in respect of contribution given by any person to political parties. III. Deduction in respect of scientific research. IV. Deduction in respect of rent paid.",
+      "options": {
+        "a": "A-IV, B-III, C-I, D-II",
+        "b": "A-III, B-IV, C-II, D-I",
+        "c": "A-IV, B-III, C-IV, D-I",
+        "d": "A-IV, B-II, C-I, D-III"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 127,
+      "exam_session": "October 2020",
+      "question": "Mohan rendered his services in India and retired in 2015. He then shifted and settled in Singapore. The pension received by him for such services would be:",
+      "options": {
+        "a": "Deemed to accrue or arise outside India",
+        "b": "Deemed to accrue or arise in India only when it is received in India",
+        "c": "Deemed to accrue or arise in India only when it is received outside India",
+        "d": "Deemed to accrue or arise in India"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 128,
+      "exam_session": "October 2020",
+      "question": "Sugam is also known as:",
+      "options": {
+        "a": "ITR-1",
+        "b": "ITR-2",
+        "c": "ITR-4",
+        "d": "ITR-6"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 129,
+      "exam_session": "October 2020",
+      "question": "What is the rate of tax deduction at source from insurance commission in case of 'Person'?",
+      "options": {
+        "a": "2 percent",
+        "b": "5 percent",
+        "c": "10 percent",
+        "d": "4 percent"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 130,
+      "exam_session": "October 2020",
+      "question": "As per Section 80G, the maximum deduction allowed for any cash donation is up to:",
+      "options": {
+        "a": "Rs. 1,000",
+        "b": "Rs. 2,000",
+        "c": "Rs. 5,000",
+        "d": "Rs. 10,000"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 131,
+      "exam_session": "October 2020",
+      "question": "Which one of the following statements is true for the set-off and carry forward of loss under the head 'house property' in India?",
+      "options": {
+        "a": "Can be carried forward for 8 years",
+        "b": "Cannot be carried forward",
+        "c": "Can be carried forward for 4 years",
+        "d": "Can be carried forward infinitely"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 132,
+      "exam_session": "October 2020",
+      "question": "Surcharge of 10% is payable by an individual where the total income exceeds:",
+      "options": {
+        "a": "Rs. 7,50,000/-",
+        "b": "Rs. 8,50,000/-",
+        "c": "Rs. 50,00,000/-",
+        "d": "Rs. 20,00,000/-"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 133,
+      "exam_session": "October 2020",
+      "question": "Given below are two statements: Statement (I): Gratuity received by Government employee is exempted from tax under Section 10(10)(i) of the Indian Income Tax Act, 1961. Statement (II): Gratuity received by local authority employee is exempted from tax. In the light of the above statements, choose the correct answer from the options given below:",
+      "options": {
+        "a": "Both Statement (I) and Statement (II) are true",
+        "b": "Both Statement (I) and Statement (II) are false",
+        "c": "Statement (I) is correct but Statement (II) is false",
+        "d": "Statement (I) is incorrect but Statement (II) is true"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 134,
+      "exam_session": "October 2020",
+      "question": "Which of the following expenses debited to Profit and Loss a/c but disallowed while computing income from Business? (A) General Expenses (B) Personal Expenses (C) Expenses of Income which is taxable under the other heads of income (D) Charities and donations",
+      "options": {
+        "a": "(A) only",
+        "b": "(B), (C) only",
+        "c": "(C), (D) only",
+        "d": "(B), (C), (D) only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 135,
+      "exam_session": "October 2020",
+      "question": "Arrange the following procedure of Income Tax return e-Filing in India: (A) Login (B) Register (C) Verification (D) Downloading utility and preparing return (E) e-Filing Income Tax Return",
+      "options": {
+        "a": "(A), (B), (C), (D), (E)",
+        "b": "(A), (C), (B), (E), (D)",
+        "c": "(B), (A), (E), (D), (C)",
+        "d": "(B), (A), (D), (E), (C)"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 136,
+      "exam_session": "October 2020",
+      "question": "Which of the following is correct about deduction available in respect of contribution to various provident funds in case of salaried employees? (A) Employer's contribution to recognised provident fund is exempted up to 12% of salary. (B) Employer's contribution to unrecognised provident fund is exempted from tax. (C) Employer does not contribute to Public Provident Fund (D) Deduction under Section 80C is available for employer's contribution in unrecognised provident fund",
+      "options": {
+        "a": "(A), (B), (C) only",
+        "b": "(A), (B), (D) only",
+        "c": "(B), (C), (D) only",
+        "d": "(A), (C), (D) only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 137,
+      "exam_session": "December 2019",
+      "question": "Which two of the following are correct about the due date of issue of the TDS certificate? (A) Form No 16 - Annual (B) Form No 16 A - Quarterly (C) Form No 16 B - Half Yearly (D) Form No 16 C - Monthly",
+      "options": {
+        "a": "(A) and (D)",
+        "b": "(A) and (C)",
+        "c": "(A) and (B)",
+        "d": "(C) and (D)"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 138,
+      "exam_session": "December 2019",
+      "question": "ADEN Rules, 1953 is related to which of the following?",
+      "options": {
+        "a": "Tax exemption",
+        "b": "Residential status",
+        "c": "Double taxation relief",
+        "d": "Assessment of corporate entity"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 139,
+      "exam_session": "December 2019",
+      "question": "Match the following countries with the types of Double Taxation Avoidance Agreement signed by India with them: (A) Austria (B) Bahamas (C) Lebanon (D) Sri Lanka -- (i) Limited Agreement (ii) Comprehensive Agreements (iii) Comprehensive Agreements/ Limited Multilateral (iv) Tax Information Exchange Agreement",
+      "options": {
+        "a": "(A)-(IV); (B)-(II); (C)-(I); (D)-(III)",
+        "b": "(A)-(II); (B)-(IV); (C)-(I); (D)-(III)",
+        "c": "(A)-(IV); (B)-(II); (C)-(III); (D)-(I)",
+        "d": "(A)-(I); (B)-(II); (C)-(III); (D)-(IV)"
+      },
+      "answer": null,
+      "note": "Could not confidently verify specific DTAA type per country from general knowledge - flagged for verification against official key."
+    },
+    {
+      "q_no": 140,
+      "exam_session": "December 2019",
+      "question": "Which two of the following are correct about TDS Certificates? (A) TDS on non-salary payment - Form 16 (B) TDS on salary payment - Form 16 A (C) TDS on sale of property - Form 16 B (D) TDS on rent - Form 16 C",
+      "options": {
+        "a": "(A) and (B)",
+        "b": "(C) and (D)",
+        "c": "(A) and (D)",
+        "d": "(B) and (C)"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 141,
+      "exam_session": "December 2019",
+      "question": "Which among the following is a correct statement about the residential status of a company?",
+      "options": {
+        "a": "A company can be classified as \"not ordinarily resident\"",
+        "b": "A company can never be classified as \"not ordinarily resident\"",
+        "c": "A company can be classified as \"not ordinarily resident\" with the permission from the Ministry of Finance",
+        "d": "A company can be classified as \"not ordinarily resident\" with the permission from the Ministry of Commerce"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 142,
+      "exam_session": "December 2019",
+      "question": "Arrange the steps to e-filing of Income Tax Return in correct sequence: (a) Register yourself (b) Verify ITR V (c) Select the requisite form (d) Fill form and upload",
+      "options": {
+        "a": "A -> C -> D -> B",
+        "b": "A -> B -> C -> D",
+        "c": "A -> B -> D -> C",
+        "d": "C -> A -> D -> B"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 143,
+      "exam_session": "December 2019",
+      "question": "Which one of the following is NOT an example of direct tax?",
+      "options": {
+        "a": "Income Tax",
+        "b": "Corporate Tax",
+        "c": "Goods and Services Tax (GST)",
+        "d": "Capital Gains Tax"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 144,
+      "exam_session": "December 2019",
+      "question": "Which two of the following are correct in terms of the rate of tax deduction at source (TDS)? (A) Income by way of winning from horse race: @ 30% (B) Insurance Commission: @ 10% (C) Rent of Plant & Machinery: @ 5% (D) Rent of furniture: @ 10%",
+      "options": {
+        "a": "(A) and (B)",
+        "b": "(A) and (C)",
+        "c": "(A) and (D)",
+        "d": "(B) and (C)"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 145,
+      "exam_session": "December 2019",
+      "question": "What percentage of income from compensation on disaster is exempted from tax liability?",
+      "options": {
+        "a": "100%",
+        "b": "75%",
+        "c": "50%",
+        "d": "25%"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 146,
+      "exam_session": "June 2019",
+      "question": "Match List I with List II: (A) Sec 6(i) (B) Sect 10AA (C) Sec 10(i) (D) Sec 10(5) -- I. Agriculture Income II. Leave Travel Concession III. Resident IV. Leave Salary",
+      "options": {
+        "a": "A-I, B-IV, C-III, D-II",
+        "b": "A-III, B-IV, C-II, D-I",
+        "c": "A-III, B-II, C-IV, D-I",
+        "d": "A-III, B-IV, C-I, D-II"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 147,
+      "exam_session": "June 2019",
+      "question": "Match List I with List II: (A) 80 TTA (B) 80 CCD (C) 80E (D) 80EE -- I. Deduction in respect of payment of interest on loan taken for higher education II. Deduction in respect of interest on loan taken for residential house property III. Deduction in respect of interest on deposited in saving account IV. Deduction in respect of contribution to national pension system",
+      "options": {
+        "a": "A-I, B-IV, C-II, D-III",
+        "b": "A-III, B-IV, C-I, D-II",
+        "c": "A-III, B-I, C-IV, D-II",
+        "d": "A-II, B-III, C-IV, D-I"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 148,
+      "exam_session": "June 2019",
+      "question": "Return of income is submitted under which Section of the Income Tax Act?",
+      "options": {
+        "a": "Section 138(1)",
+        "b": "Section 142(1)",
+        "c": "Section 139(1)",
+        "d": "Section 129(1)"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 149,
+      "exam_session": "June 2019",
+      "question": "Amount unutilized in the capital gain account scheme for which exemption is claimed u/s 54 shall be treated as long-term capital gain, if:",
+      "options": {
+        "a": "2 years have expired from the date of transfer",
+        "b": "2 years have expired from the date of deposit",
+        "c": "3 years have expired from the date of transfer",
+        "d": "3 years have expired from the date of deposit"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 150,
+      "exam_session": "June 2019",
+      "question": "X is an individual of 55 years of age having gross total income ₹3,50,000. What is the tax liability for the assessment year 2018-19?",
+      "options": {
+        "a": "₹5,000",
+        "b": "₹2,500",
+        "c": "₹2,575",
+        "d": "₹3,000"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 151,
+      "exam_session": "June 2019",
+      "question": "SUGAM is also known as:",
+      "options": {
+        "a": "ITR-1",
+        "b": "ITR-2",
+        "c": "ITR-3",
+        "d": "ITR-4"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 152,
+      "exam_session": "June 2019",
+      "question": "Statement (I): If the tax liability has been reduced within the legal framework, it is tax planning. Statement (II): If tax liability has been reduced to get the benefit of deductions, it is called tax evasion. Which one of the following codes is correct?",
+      "options": {
+        "a": "Both the Statements (I) and (II) are correct",
+        "b": "Statement (I) is correct but (II) is incorrect",
+        "c": "Both Statements (I) and (II) are incorrect",
+        "d": "Statement (II) is correct but (I) is incorrect"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 153,
+      "exam_session": "June 2019",
+      "question": "Following are the information for a house property: Municipal Value: ₹4,50,000; Fair Rental Value: ₹5,00,000; Standard Rent: ₹4,80,000; Actual Rent: ₹4,20,000. What is the gross annual value of the house property?",
+      "options": {
+        "a": "₹4,80,000",
+        "b": "₹5,00,000",
+        "c": "₹4,20,000",
+        "d": "₹4,50,000"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 154,
+      "exam_session": "June 2019",
+      "question": "Deduction u/s 37(1) is allowed under tax laws for those expenditures which are:",
+      "options": {
+        "a": "Revenue",
+        "b": "Capital",
+        "c": "Both revenue and capital",
+        "d": "Deferred revenue expenses"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 155,
+      "exam_session": "June 2019",
+      "question": "In tax laws, donation to approved and notified associations for scientific research is allowed as:",
+      "options": {
+        "a": "125% of the donation",
+        "b": "100% of the donation",
+        "c": "175% of the donation",
+        "d": "150% of the donation"
+      },
+      "answer": "b"
+    }
+  ]
+};

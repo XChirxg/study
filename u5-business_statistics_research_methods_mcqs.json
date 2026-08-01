@@ -1,0 +1,2332 @@
+{
+  "source": "UGC NET Business Statistics and Research Methods - Unit 5 (previous-year questions, adapted from Adda247 Publications compilation)",
+  "note": "Questions extracted and transcribed from a scanned question bank (pages 250-265). Answers were determined by the compiler using standard statistics/research-methodology knowledge since the source pages did not show a marked answer key. Items flagged 'answer_uncertain': true have lower confidence (illegible OCR, ambiguous option text, or answer inferred rather than directly computed) and should be verified against an official answer key before use in a quiz.",
+  "total_questions": 175,
+  "questions": [
+    {
+      "q_no": 1,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "question": "The questions that are actually asked from the respondent are known as:",
+      "options": {
+        "a": "Management Questions",
+        "b": "Research Questions",
+        "c": "Investigative Questions",
+        "d": "Measurement Questions"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 2,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "question": "What is the Harmonic Mean of two numbers whose Arithmetic Mean and Geometric Mean are 30 and 24 respectively?",
+      "options": {
+        "a": "4.8",
+        "b": "9.6",
+        "c": "19.2",
+        "d": "76.8"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 3,
+      "exam_session": "June 2025",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are properties of regression coefficients? A. The coefficient of correlation and the two regression coefficients have the same signs. B. The coefficient of correlation is the harmonic mean between the regression coefficients. C. If one of the regression coefficients is greater than unity, the other must also be greater than unity. D. If one of the regression coefficients is greater than unity, the other must be less than unity. E. The regression coefficients are independent of change of origin but not of scale.",
+      "options": {
+        "a": "A and D Only",
+        "b": "B, C and E Only",
+        "c": "A, B and C Only",
+        "d": "A, D and E Only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 4,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "question": "A type of validity which demonstrates statistically a relationship between scores on a selection procedure and job performance is called:",
+      "options": {
+        "a": "Test validity",
+        "b": "Criterion validity",
+        "c": "Content validity",
+        "d": "Construct validity"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 5,
+      "exam_session": "June 2025",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Identify the correct sequence of the Sampling Design Process from the given options: A. Determine the Sample size B. Select a sampling technique C. Selection of sampling frame D. Defining target population",
+      "options": {
+        "a": "A, B, C, D",
+        "b": "B, A, D, C",
+        "c": "A, B, D, C",
+        "d": "D, C, B, A"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 6,
+      "exam_session": "June 2025",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following statements are correct with regard to mathematical properties of standard deviation? A. Standard deviation is independent of change of origin and change of scale. B. Standard deviation is independent of change of origin but not scale. C. The standard deviation of first n natural numbers is sqrt((n^2-1)/12). D. The standard deviation of first n natural numbers is sqrt((n^2-1)/6).",
+      "options": {
+        "a": "B and C Only",
+        "b": "B, C, and E Only",
+        "c": "A and C Only",
+        "d": "B, D and E Only"
+      },
+      "answer": "a",
+      "note": "B and C are the mathematically correct statements; options mentioning 'E' appear to be an OCR artifact since only A-D were given.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 7,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "question": "The parametric test that can be used for hypothesis testing of paired samples is:",
+      "options": {
+        "a": "t test",
+        "b": "z test",
+        "c": "Chi-Square test",
+        "d": "Mann-Whitney test"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 8,
+      "exam_session": "June 2025",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the LIST-I with LIST-II. LIST-I (Components commonly present in reports): A. Prefatory Information B. Introductory Information C. Main Research Body D. Supplementary Information. LIST-II (Contents): I. Executive Summary II. Glossary III. Problem Definition IV. Research Design",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-I, C-IV, D-III",
+        "c": "A-I, B-III, C-II, D-IV",
+        "d": "A-I, B-III, C-IV, D-II"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 9,
+      "exam_session": "June 2025",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the LIST-I (Types of Skewness Measures) with LIST-II (Corresponding Formulas): A. Karl Pearson's coefficient of skewness B. Bowley's coefficient of skewness C. Kelly's coefficient of skewness D. Moment coefficient of skewness. LIST-II: I. (mu3)^2/(mu2)^3 II. (P90+P10-2*Median)/(P90-P10) III. (Q3+Q1-2*Median)/(Q3-Q1) IV. (Mean-Mode)/Standard Deviation",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-IV, B-III, C-II, D-I",
+        "c": "A-II, B-III, C-IV, D-I",
+        "d": "A-III, B-IV, C-I, D-II"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 10,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "question": "If a random variable X follows a Poisson distribution such that P(X=1)=4P(X=2), the variance of X is:",
+      "options": {
+        "a": "1/2",
+        "b": "1",
+        "c": "2",
+        "d": "1/4"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 11,
+      "exam_session": "June 2025",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Identify the correct sequence of the Research Design Process from the given options: A. Measurement technique selection B. Research approach selection C. Data collection technique selection D. Sample design selection E. Data analysis method selection",
+      "options": {
+        "a": "A, B, C, D, E",
+        "b": "B, A, D, C, E",
+        "c": "D, C, E, A, B",
+        "d": "C, E, D, B, A"
+      },
+      "answer": "b",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 12,
+      "exam_session": "January 2025",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are true for Skewness? A. It is a measure of symmetry of a frequency distribution. B. For the right-skewed distribution, the mean is to the right of the median. C. For the right-skewed distribution, the mean is to the right of the mode. D. For the right-skewed distribution, the mean is to the left of the median. E. For the right-skewed distribution, the mean is to the left of the mode.",
+      "options": {
+        "a": "A, B, C only",
+        "b": "A, C, D only",
+        "c": "A, D, E only",
+        "d": "A, B, D only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 13,
+      "exam_session": "January 2025",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are True for a random variable? A. A random variable is a certain quantity, whose value depends on chance. B. A continuous random variable can assume at most two countable number of values. C. A discrete random variable can assume at most a countable number of values. D. A random variable is a function of the sample space. E. A random variable is an uncertain quantity, whose value depends on chance.",
+      "options": {
+        "a": "A, B, D only",
+        "b": "A, B, C only",
+        "c": "B, C, D only",
+        "d": "C, D, E only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 14,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "What is the value of the Standard Deviation of the first seven natural numbers?",
+      "options": {
+        "a": "sqrt(48)",
+        "b": "2",
+        "c": "sqrt(8)",
+        "d": "4"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 15,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "Standard Deviation of Sampling Distribution is called",
+      "options": {
+        "a": "Sampling Error",
+        "b": "Probable Error",
+        "c": "Standard Error",
+        "d": "Measurable Error"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 16,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is a non-probability method of selecting a sample from a population?",
+      "options": {
+        "a": "Simple Random Sampling",
+        "b": "Multi Stage Sampling",
+        "c": "Cluster Sampling",
+        "d": "Snow Ball Sampling"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 17,
+      "exam_session": "January 2025",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the prefatory information of report writing in a logical sequence. A. Executive Summary B. Authorization Statement C. Title Page D. Letter of transmittal E. Table of Contents",
+      "options": {
+        "a": "A, B, C, D, E",
+        "b": "C, D, E, B, A",
+        "c": "D, C, B, A, E",
+        "d": "D, B, C, E, A"
+      },
+      "answer": "b",
+      "note": "Standard order is Title Page, Letter of Transmittal, Authorization Statement, Table of Contents, Executive Summary; the closest listed option is used, but this should be verified against the official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 18,
+      "exam_session": "January 2025",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the statistical tests with their explanations: List I (Statistical Test): A. Z-Test B. Chi-Square C. ANOVA D. Mann-Whitney Test (U-test). List II (Explanation): I. Tests the significance of the association between two attributes II. Compares the difference in the mean values of two independent sample groups (non-parametric data) III. Tests the significance of different between average of two large sized sample groups (Parametric data) IV. Compares the difference in the mean values of more than two sample groups (Parametric data)",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-III, B-I, C-IV, D-II",
+        "c": "A-II, B-III, C-I, D-IV",
+        "d": "A-IV, B-I, C-III, D-II"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 19,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following research designs is the most precise one?",
+      "options": {
+        "a": "Experimental",
+        "b": "Exploratory",
+        "c": "Diagnostic",
+        "d": "Descriptive"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 20,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "An exploratory study is finished when the researcher has achieved the following: A. Established the major dimensions of the research task B. Defined a set of subsidiary investigative questions that can be used as guides to a detailed research design C. Developed several hypotheses about possible causes of a management dilemma D. Learned that certain other hypotheses are such remote possibilities that they can be safely ignored in any subsequent study E. Concluded additional research is needed and it is feasible",
+      "options": {
+        "a": "A & B only",
+        "b": "A, B & C only",
+        "c": "A, B, C & D only",
+        "d": "B, C, D & E only"
+      },
+      "answer": "c",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 21,
+      "exam_session": "September 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the steps of Sampling Design in a form of questions that are to be answered in securing a sample: A. What is the appropriate sampling method? B. What are the parameters of interest? C. What size sample is needed? D. What is the target population? E. What is the sampling frame?",
+      "options": {
+        "a": "E, D, B, A, C",
+        "b": "B, E, A, C, D",
+        "c": "C, B, A, E, D",
+        "d": "D, B, E, A, C"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 22,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following selection tests answers the question 'Does this test measure what it's supposed to measure?'",
+      "options": {
+        "a": "Content validity",
+        "b": "Criterion validity",
+        "c": "Construct validity",
+        "d": "Test validity"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 23,
+      "exam_session": "September 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps of the decision-making process in the application of Economics in Business decision-making from starting to end: A. Selection and Implementation of the Decision B. Inventing, developing possible Courses of Action C. Collection and Analysis of Relevant Data D. Identifying Business Related Issues E. Determining and defining objectives",
+      "options": {
+        "a": "D, C, E, B, A",
+        "b": "C, D, B, E, A",
+        "c": "B, C, D, E, A",
+        "d": "E, D, C, B, A"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 24,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is the standard deviation of the first 7 (1 to 7) natural numbers?",
+      "options": {
+        "a": "4",
+        "b": "3",
+        "c": "2",
+        "d": "6"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 25,
+      "exam_session": "September 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the given Prefatory Information sub-modules into a sequence to form a Long Management Report: A. Title Page B. Executive Summary C. Table of Contents D. Letter of Transmittal E. Authorization Statement",
+      "options": {
+        "a": "B, C, D, A, E",
+        "b": "E, D, B, C, A",
+        "c": "D, A, E, B, C",
+        "d": "C, A, D, E, B"
+      },
+      "answer": "b",
+      "note": "Standard order is Title Page, Letter of Transmittal, Authorization Statement, Table of Contents, Executive Summary; verify against official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 26,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "An exploratory study is finished when the researcher has achieved the following: A. Established the major dimensions of the research task B. Defined a set of subsidiary investigative questions that can be used as guides to a detailed research design C. Developed several hypotheses about possible causes of a management dilemma D. Learned that certain other hypotheses are such remote possibilities that they can be safely ignored in any subsequent study E. Concluded additional research is needed and it is feasible",
+      "options": {
+        "a": "A & B only",
+        "b": "A, B & C only",
+        "c": "A, B, C & D only",
+        "d": "B, C, D & E only"
+      },
+      "answer": "c",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 27,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is the pre-condition for applying Chi-square test?",
+      "options": {
+        "a": "Data should not be presented in percentage or ratio form",
+        "b": "The sample should consist of at least 50 observations",
+        "c": "The sample should not be drawn randomly",
+        "d": "All the individual observations in a sample should not be independent"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 28,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are true about chi-square test and chi-square distribution? A. Chi-square test is a non-parametric test. B. Chi-square test was developed by Spearman. C. Chi-square distribution can never be negative. D. Chi-square distribution is a discrete distribution. E. Chi-square distribution is a function of its degree of freedom.",
+      "options": {
+        "a": "B, C & D Only",
+        "b": "A, C & E Only",
+        "c": "A, B & D Only",
+        "d": "B, D & E Only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 29,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "The distribution of data which has a long left tail is known as:",
+      "options": {
+        "a": "Positively skewed distribution",
+        "b": "Negatively skewed distribution",
+        "c": "Symmetrical distribution",
+        "d": "Mesokurtic distribution"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 30,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "When the number of trials (n) is large but the probability of success (p) is small, Binomial probability distribution can be approximated using:",
+      "options": {
+        "a": "Normal Distribution",
+        "b": "Hypergeometric Distribution",
+        "c": "Poisson Distribution",
+        "d": "Bernoulli Distribution"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 31,
+      "exam_session": "September 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following stages of investigation in proper sequence. A. Plan work to be done and timing. B. Obtain instructions from the client and prepare terms of reference. C. Make necessary calculations to eliminate inconsistencies. D. Collect necessary information and documents. E. Formulate conclusions/analysis of findings.",
+      "options": {
+        "a": "B, A, D, C, E",
+        "b": "A, B, D, C, E",
+        "c": "B, D, A, C, E",
+        "d": "A, D, B, C, E"
+      },
+      "answer": "a",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 32,
+      "exam_session": "September 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I with List II: List I: A. Joint occurrence of Events B. Outcome of an experiment consisting of all possible events C. One of the events cannot be expected to occur in preference over the other D. The occurrence of one event implies that the other cannot occur. List II: I. Collective Exhaustive Events II. Equally likely Events III. Compound Event IV. Mutually Exclusive Events",
+      "options": {
+        "a": "A-III, B-I, C-II, D-IV",
+        "b": "A-IV, B-II, C-I, D-III",
+        "c": "A-III, B-II, C-I, D-IV",
+        "d": "A-I, B-II, C-III, D-IV"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 33,
+      "exam_session": "September 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Determine the correct sequence of the steps involved in the process of hypothesis testing: A. Setting the null and alternative hypothesis B. Setting the level of significance C. Determining the appropriate statistical test D. Setting the decision rule E. Analyzing the collected data",
+      "options": {
+        "a": "B, A, C, D, E",
+        "b": "B, C, A, D, E",
+        "c": "A, C, B, D, E",
+        "d": "A, B, C, D, E"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 34,
+      "exam_session": "September 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the steps of the research process in the correct logical order: A. Formulate a research question B. Literature review C. Collect data D. Develop a research plan E. Interpret the result",
+      "options": {
+        "a": "B, A, D, C, E",
+        "b": "A, B, D, C, E",
+        "c": "A, C, D, B, E",
+        "d": "B, A, C, D, E"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 35,
+      "exam_session": "September 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps of the sampling design process in correct order: A. Sampling frame must be determined B. Target population should be defined according to objective C. Sampling process must be effectively executed D. Selecting a sampling technique E. Number of elements to be included in the study must be carefully determined",
+      "options": {
+        "a": "B, D, E, C, A",
+        "b": "A, B, D, E, C",
+        "c": "A, C, B, D, E",
+        "d": "B, A, D, E, C"
+      },
+      "answer": "d",
+      "note": "Logical order should be: target population(B) -> number of elements(E) -> sampling frame(A) -> sampling technique(D) -> execute process(C); closest listed option chosen but verify against official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 36,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "From the following, identify the measures of dispersion: A. Mean Deviation B. Range C. Standard Deviation D. Coefficient of Variation E. Coefficient of Correlation",
+      "options": {
+        "a": "B, C, D & E only",
+        "b": "A, B, D & E only",
+        "c": "A, C, D & E only",
+        "d": "A, B, C & D only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 37,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "If two regression lines are: 8x-10y+66=0 and 40x-18y=214, then x and y are respectively:",
+      "options": {
+        "a": "13, 14",
+        "b": "16, 15",
+        "c": "14, 13",
+        "d": "13, 17"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 38,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "For the test hypothesis H0: mu1<=mu2 and H1: mu1>mu2, the critical region (Z) at alpha=0.10 and n>30 will be:",
+      "options": {
+        "a": "Z<=1.96",
+        "b": "Z>1.96",
+        "c": "Z>1.645",
+        "d": "Z<=-1.645"
+      },
+      "answer": "c",
+      "note": "Strictly, for alpha=0.10 one-tailed the critical value is Z>1.28; option (c) (Z>1.645, the alpha=0.05 value) is the closest listed option. Verify against official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 39,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "A person applies for a loan of Rs.1,00,000. The bank informed him that over the years, it had received 2920 loan applications per year and the probability of approval was, on an average, 0.85. The applicant wants to know the average number of loans approved per year by the bank. What can be that number?",
+      "options": {
+        "a": "1920",
+        "b": "3250",
+        "c": "1000",
+        "d": "2482"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 40,
+      "exam_session": "September 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the List I with List II: List I (Lift Shapes) A, B, C, D (curve shapes shown). List II (Type of Distribution): I. Platykurtic Distribution II. Positively Skewed III. Nagatively Skewed IV. Leptokurtic Distribution",
+      "options": {
+        "a": "A-III, B-IV, C-I, D-II",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-III, B-I, C-IV, D-II",
+        "d": "A-IV, B-I, C-III, D-II"
+      },
+      "answer": "a",
+      "note": "Answer depends on the visual curve shapes in the original image, which cannot be verified with certainty from OCR; verify against the official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 41,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "A firm wants to launch a new brand of television and refrigerator. The firm conducted a survey and found that 60% of the households have television. 65% have refrigerator and 35% both a television and a refrigerator. If a household is randomly selected, what is the probability that the household has either a television or refrigerator?",
+      "options": {
+        "a": "0.70",
+        "b": "0.90",
+        "c": "0.80",
+        "d": "0.60"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 42,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "A card is drawn from a pack of playing cards. What is the probability of drawing a king or red card?",
+      "options": {
+        "a": "1/2",
+        "b": "30/52",
+        "c": "16/26",
+        "d": "7/13"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 43,
+      "exam_session": "June 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following is probability sampling? A. Simple random sampling B. Clustered sampling C. Quota sampling D. Stratified sampling E. Snowball sampling",
+      "options": {
+        "a": "A, B, C, E only",
+        "b": "A, C, D, E only",
+        "c": "A, B, D only",
+        "d": "B, C, D only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 44,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "What are the two numbers whose arithmetic mean = 18 and harmonic mean = 16?",
+      "options": {
+        "a": "20 and 16",
+        "b": "30 and 6",
+        "c": "24 and 12",
+        "d": "22 and 14"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 45,
+      "exam_session": "June 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I Theorem with List-II Formula: A. Theorem of Addition B. Theorem of Multiplication C. Conditional probability D. Bayes' Theorem. List-II: I. P=(Hi/E)=P(Hi\u2229E)/P(E) II. P(E1/E1)=P(Hi\u2229E2)/P(E1) III. P(E1\u222aE2)=P(E1\u222aE2)=P(E1)+P(E2) IV. P(E1\u222aE2)=P(E1)+\u00d7P(E2)",
+      "options": {
+        "a": "A-III, B-IV, C-I, D-II",
+        "b": "A-IV, B-III, C-II, D-I",
+        "c": "A-III, B-IV, C-II, D-I",
+        "d": "A-IV, B-I, C-III, D-II"
+      },
+      "answer": "a",
+      "note": "List II formulas are garbled by OCR; verify against official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 46,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "If two regression co-efficients are byx and bxy. Which one of the following is the value of correlation?",
+      "options": {
+        "a": ".2857",
+        "b": "-.5345",
+        "c": ".5345",
+        "d": "-.2857"
+      },
+      "answer": "c",
+      "note": "Numeric values of byx and bxy were not legible in the source image; answer inferred from typical answer pattern. Verify against official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 47,
+      "exam_session": "June 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps of the process of hypothesis testing in the proper sequence: A. Set up null and alternative hypothesis B. Establish the decision rule C. Select statistics D. Select the level of significance E. Perform computation and draw a conclusion",
+      "options": {
+        "a": "A, D, C, B, E",
+        "b": "D, A, C, E, B",
+        "c": "D, A, C, B, E",
+        "d": "C, D, A, B, E"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 48,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "If an average 2 customers arrive at a shopping mall per minute, what is probability that in given minute exactly 4 customers will arrive? e^-2=.1353",
+      "options": {
+        "a": ".1804",
+        "b": ".0902",
+        "c": ".1353",
+        "d": ".2706"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 49,
+      "exam_session": "June 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps involved in qualitative research in the proper sequence: A. Reviewing of literature. B. Identifying a research topic. C. Setting the purpose and selection of participant. D. Writing the report E. Data collection and data analysis.",
+      "options": {
+        "a": "A, B, C, E, D",
+        "b": "C, A, B, D, E",
+        "c": "C, B, A, E, D",
+        "d": "B, A, C, E, D"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 50,
+      "exam_session": "June 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following is properties of standard deviation (sigma)? A. sigma_x+K=sigma_x B. sigma_x-K=sigma_x-K C. sigma_x/K=sigma_x/K D. sigma_x*K=K*sigma_x E. sigma_x*K=sigma_x",
+      "options": {
+        "a": "A, B, C only",
+        "b": "C, D, E only",
+        "c": "A, C, D only",
+        "d": "B, C, E only"
+      },
+      "answer": "c",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 51,
+      "exam_session": "June 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps of the process of hypothesis testing in the proper sequence: A. Set up null and alternative hypothesis B. Establish the decision rule C. Select statistics D. Select the level of significance E. Perform computation and draw a conclusion",
+      "options": {
+        "a": "A, D, C, B, E",
+        "b": "D, A, C, E, B",
+        "c": "D, A, C, B, E",
+        "d": "C, D, A, B, E"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 52,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "If an average 2 customers arrive at a shopping mall per minute, what is probability that in given minute exactly 4 customers will arrive? e^-2=.1353",
+      "options": {
+        "a": ".1804",
+        "b": ".0902",
+        "c": ".1353",
+        "d": ".2706"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 53,
+      "exam_session": "June 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps involved in qualitative research in the proper sequence: A. Reviewing of literature. B. Identifying a research topic. C. Setting the purpose and selection of participant. D. Writing the report E. Data collection and data analysis.",
+      "options": {
+        "a": "A, B, C, E, D",
+        "b": "C, A, B, D, E",
+        "c": "C, B, A, E, D",
+        "d": "B, A, C, E, D"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 54,
+      "exam_session": "December 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II: List I (Description): A. The time dimension B. The purpose of the study C. The topical scope of the study D. The degree to which the research question has been crystallized. List II (Research design): I. Exploratory study II. Statistical study III. Descriptive study IV. Cross-sectional study",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-IV, B-III, C-II, D-I",
+        "c": "A-II, B-IV, C-I, D-III",
+        "d": "A-III, B-I, C-IV, D-II"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 55,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "In a certain population, 22% of people are smokers, 57% of people are males, 12% males are smokers. If a person is chosen at random from the population, what is that probability that selected person is either a male or a smoke?",
+      "options": {
+        "a": "0.79",
+        "b": "0.22",
+        "c": "0.45",
+        "d": "0.67"
+      },
+      "answer": "d",
+      "note": "Computed as P(male)+P(smoker)-P(male and smoker)=0.57+0.22-0.12=0.67; option (d) OCR'd as '067'."
+    },
+    {
+      "q_no": 56,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "In one-factor ANOVA, the computed F-value will be negative:",
+      "options": {
+        "a": "when there is no difference in the treatment of means",
+        "b": "when there is no difference within treatments",
+        "c": "when SST (total variance) is larger than SSE (error variance)",
+        "d": "under no circumstances"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 57,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "The price earning ration for firms in a certain industry follows the normal distribution. A firm's price-earnings ration has a standardized value (Z) 1.0 and it is included in the highest ____ of firms in the industry.",
+      "options": {
+        "a": "99.73%",
+        "b": "68.27%",
+        "c": "15.87%",
+        "d": "34.13%"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 58,
+      "exam_session": "December 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "In order to conduct exploratory data analysis, which of following are used by a researcher in the five number summary? A. Median B. First quartile C. Mean D. Third quartile E. Smallest and largest values",
+      "options": {
+        "a": "A, C, D and E only",
+        "b": "A, B, D and E only",
+        "c": "B, C, D and E only",
+        "d": "A, B, C and E only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 59,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "A discrete probability distribution ____.",
+      "options": {
+        "a": "is a listing of all possible values of the random variable",
+        "b": "assigns a probability to each possible value of the random variable",
+        "c": "can assume the value between -1 and 1",
+        "d": "is independent of the parameters of the distribution"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 60,
+      "exam_session": "December 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of following are pre-experimental designs? A. One-group pre test-post test B. Pre-test post-test control group C. Quasi-experiments D. Static group comparison E. After-only study",
+      "options": {
+        "a": "D, B, C only",
+        "b": "A, D, E only",
+        "c": "A, C, E only",
+        "d": "B, E, D only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 61,
+      "exam_session": "December 2023",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps of a well planned experiment in the sequential order. A. Specify the treatment levels B. Assign subject to groups and conduct pilot test C. Choose an experimental design suited to the hypotheses D. Control the environmental and extraneous factors E. Select relevant variables for testing",
+      "options": {
+        "a": "C, D, E, A, B",
+        "b": "A, C, D, E, B",
+        "c": "E, A, C, D, B",
+        "d": "D, C, B, A, E"
+      },
+      "answer": "c",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 62,
+      "exam_session": "December 2023",
+      "question_type": "Statement-based (True/False)",
+      "question": "Given below are two statements: Statement I: For a given sample size and level of significance (alpha), the critical value of Student's t always exceeds that of z. Statement II: For a given level of significance (alpha), the critical value of Student's t increases as n increases.",
+      "options": {
+        "a": "Both Statement I and Statement II are true.",
+        "b": "Both Statement I and Statement II are false.",
+        "c": "Statement I is true but Statement II is false.",
+        "d": "Statement I is false but Statement II is true."
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 63,
+      "exam_session": "June 2023",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "The problem-definition process involves following steps. Arrange them in a logical Sequence. A. Determine the unit of analysis B. Determine the relevant variables C. Write managerial decision statement and research objectives D. Write research question and/or research hypothesis E. Identify key problems",
+      "options": {
+        "a": "A, B, E, D, C",
+        "b": "C, D, A, B, E",
+        "c": "B, E, A, C, D",
+        "d": "E, C, A, B, D"
+      },
+      "answer": "a",
+      "note": "Logical order derived is E, A, B, D, C; the closest listed option is used but should be verified against the official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 64,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "A point estimator is said to be consistent when",
+      "options": {
+        "a": "It has smaller standard error",
+        "b": "Its expected value is equal to the population parameter",
+        "c": "It tend to become closer to the population parameter as the sample size become larger",
+        "d": "It is based on all available information"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 65,
+      "exam_session": "June 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I with List II: LIST I (Non-parametric test (Counterpart of parameter test)): A. Friedman Test B. Mann-Whitney U Test C. Kriskal Wallis Test D. Wilcoxon signed Rank Test. LIST II (Parametric test): I. One-way ANOVA II. t-test III. Paired t-test IV. two-way ANOVA",
+      "options": {
+        "a": "A-I, B-III, C-IV, D-II",
+        "b": "A-IV, B-II, C-I, D-III",
+        "c": "A-III, B-I, C-II, D-IV",
+        "d": "A-II, B-IV, C-III, D-I"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 66,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "To remove 'order bias' in a questionnaire, usually researcher use which of the following:",
+      "options": {
+        "a": "B, E and A only",
+        "b": "D, E and B only",
+        "c": "E, B and C only",
+        "d": "C, D and A only"
+      },
+      "answer": "a",
+      "note": "Underlying items: A. Pivot questions B. Multiple grid questions C. Funnel technique D. Filter questions E. Leading questions. Pivot questions (rotation of item order) is the standard technique for reducing order bias.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 67,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "In case of two variables, the estimated regression equation is y = 60+5x. The total sum of squares is 15730 and sum of square due to error is 1530. The estimated regression line based on this information is a",
+      "options": {
+        "a": "Poorest fit",
+        "b": "Moderate fit",
+        "c": "Good fit",
+        "d": "Best fit"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 68,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "A population has a mean of 200 and a standard deviation of 50. Suppose a simple random sample of size 100 is selected then the probability that the sample mean will be \u00b1 5 of the population mean is",
+      "options": {
+        "a": "0.7523",
+        "b": "0.6928",
+        "c": "0.9544",
+        "d": "0.6826"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 69,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Experimental treatment in research design signifies which of the following?",
+      "options": {
+        "a": "Selection of dependent variable",
+        "b": "Manipulating independent variable",
+        "c": "Selection of independent variable",
+        "d": "Manipulating dependent variable"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 70,
+      "exam_session": "June 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I with List II: LIST I Regression variations: A. Total Sum of square B. Sum of Square due to regression C. Sum of Square due to curve D. Standard error of estimate. LIST II Measurement: I. Sum(y_hat_v - y_bar_i)^2 II. Sum(y_i - y_hat_v)^2 III. Sum(y_i - y_bar_v)^2 IV. sqrt(Sum(y_i - y_hat_i)^2/(n-2))",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-III, B-I, C-II, D-IV",
+        "c": "A-IV, B-III, C-I, D-II",
+        "d": "A-II, B-IV, C-III, D-I"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 71,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "One factor Analysis of Variance (ANOVA)",
+      "options": {
+        "a": "is a perfect generalization of the t-test for paired observations",
+        "b": "requires that the number of observations in each group be identical",
+        "c": "has less power when the number of observations in each group is not identical",
+        "d": "is extremally sensitive to slight departure from normality"
+      },
+      "answer": "c",
+      "note": "Answer chosen by elimination; verify against official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 72,
+      "exam_session": "June 2023",
+      "question_type": "Sequencing (Levels/Hierarchy)",
+      "question": "The following statistical distribution and tests in the increasing order of symmetry: A. Z-distribution B. Chi-square distribution C. T-distribution D. F-distribution E. Uniform distribution",
+      "options": {
+        "a": "B, D, C, A",
+        "b": "B, D, A, C",
+        "c": "D, B, C, A",
+        "d": "A, C, D, B"
+      },
+      "answer": "a",
+      "note": "Options were not fully legible in the source image; sequence given (Chi-square, F, T, Z in increasing symmetry) is a best estimate. Verify against official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 73,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "____ is a most useful type of non probability sampling method when individuals with the desired characteristics experience or attitudes are difficult to identify or reach.",
+      "options": {
+        "a": "Purposive Sampling",
+        "b": "Convenience Sampling",
+        "c": "Snowball Sampling",
+        "d": "Quota Sampling"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 74,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Before writing the research report (Pre-writing), researcher usually considers: A. Purpose of study B. Readers of report C. Climax order of report D. Visualization of report E. Uses of report",
+      "options": {
+        "a": "A, B, C only",
+        "b": "C, E, B only",
+        "c": "A, B, E only",
+        "d": "C, E, A only"
+      },
+      "answer": "c",
+      "note": "Answer options were not fully legible in the source image; standard pre-writing considerations are purpose, readers, and use of the report.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 75,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following non-parametric test has no corresponding parametric test?",
+      "options": {
+        "a": "Sparman rank correlation test",
+        "b": "Kruskal Wallir test",
+        "c": "Mann-Whitney test",
+        "d": "Ward-Walfowitz one sample runs test"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 76,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "For the interval-scale and ratio-scale data usually which of the following measure of association are used? A. Kendall's tau b B. Correlation ratio (eta) C. Partial correlation D. Spearman's rho E. Product moment correlation",
+      "options": {
+        "a": "A, D, E only",
+        "b": "B, A, E only",
+        "c": "C, B, E only",
+        "d": "D, B, E only"
+      },
+      "answer": "c",
+      "note": "Best-effort answer; product moment correlation (E) and partial correlation (C) are standard for interval/ratio data. Verify against official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 77,
+      "exam_session": "June 2023",
+      "question_type": "Statement-based (True/False)",
+      "question": "Given below are two statements: Statement I: The judgmental attribution error is the tendency to over estimate the influence of external factor and underestimate the influence of internal factors when making judgements about the behaviour of others. Statement II: Self-seeing bias is the tendency for individual to attribute then own success to internal factors while pulling the blame for failures on external factors in the light of the above statements.",
+      "options": {
+        "a": "Both Statement 1 and Statement II are correct",
+        "b": "Both Statement I and Statement II are incorrect",
+        "c": "Statement I is correct but Statement II is incorrect",
+        "d": "Statement I is incorrect but Statement II is correct"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 78,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Some bottles of soft drink were supplied by X to Y. Y got injured due to busting of one of the bottles. Y claimed damages from X due to?",
+      "options": {
+        "a": "Condition as to fitness as quality",
+        "b": "Condition as to wholesomeness",
+        "c": "Condition as to merchatability",
+        "d": "Condition in a sale by description"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 79,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following distributions aptly describes the ownership of income and property in a capitalist economy?",
+      "options": {
+        "a": "Normal distribution",
+        "b": "Poisson distribution",
+        "c": "F- distribution",
+        "d": "Pareto distribution"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 80,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following factors influence the selection and construction of the scale? A. Multicollinearity B. Data properties C. Number of dimensions D. Level of Significance E. Research objectives",
+      "options": {
+        "a": "A, B, C only",
+        "b": "D, E, B only",
+        "c": "C, E, B only",
+        "d": "A, E, D only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 81,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "The coefficient of variation for a Poisson distribution with lambda (mean) = 5 is ____.",
+      "options": {
+        "a": "31.1 percent",
+        "b": "44.7 percent",
+        "c": "35.2 percent",
+        "d": "58.9 percent"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 82,
+      "exam_session": "March 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following statements is true?",
+      "options": {
+        "a": "For a symmetrical distribution beta1=0",
+        "b": "Kurtosis means 'lack of symmetry'",
+        "c": "beta2 can be negative",
+        "d": "Skewness studies the flatness or peakedness of the distribution"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 83,
+      "exam_session": "March 2023",
+      "question_type": "Simple MCQ",
+      "question": "If two regression coefficients are 0.8 and 1.2, which one of the following is the value of the coefficient of correlation?",
+      "options": {
+        "a": "0.97",
+        "b": "0.96",
+        "c": "1.00",
+        "d": "0.80"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 84,
+      "exam_session": "March 2023",
+      "question_type": "Simple MCQ",
+      "question": "A scale that measures a fair sample of the tasks and skills actually needed for the job in question is known as:",
+      "options": {
+        "a": "Test validity",
+        "b": "Criterion validity",
+        "c": "Content validity",
+        "d": "Construct validity"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 85,
+      "exam_session": "March 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which among the following are the measures of Central Tendency or Measures of Location? A. Mean B. Range C. Mode D. Median E. Variance",
+      "options": {
+        "a": "A, B, C and E only",
+        "b": "C, D and E only",
+        "c": "A, C and D only",
+        "d": "B, C and D only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 86,
+      "exam_session": "March 2023",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps involved in a research process to carry out orderly and systematic research: A. Formulating hypothesis. B. Collection and analysis of data. C. Defining research problem. D. Prepare research design. E. Interpretation and report writing.",
+      "options": {
+        "a": "A, C, D, B, E",
+        "b": "C, A, D, B, E",
+        "c": "D, C, A, B, E",
+        "d": "C, D, A, B, E"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 87,
+      "exam_session": "March 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I with List II: List I (Application narratives): A. Time interval between successive arrival of customers in a queue. B. Distribution of income, property and certain human abilities in a capitalistic society. C. Movement of stock prices and distributing of income in a socialistic society. D. Distribution of rare events i.e. the probability of occurrence is very small but the number of trials are very large. List II (Statistical distributions): I. Pareto distribution II. Poisson distribution III. Exponential distribution IV. Lognormal distribution",
+      "options": {
+        "a": "A-II, B-IV, C-III, D-I",
+        "b": "A-III, B-I, C-IV, D-II",
+        "c": "A-I, B-IV, C-II, D-III",
+        "d": "A-I, B-II, C-III, D-IV"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 88,
+      "exam_session": "March 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "In which of the following practical situations, Poisson Distribution can be used? A. Number of customers arriving at the super markets per hour. B. Number of typographical errors per page in a typed material. C. Number of accidents taking place per day on a busy road. D. Dice throwing problems. E. Number of defective material say, blades, etc. in a packing manufactured by a good concern.",
+      "options": {
+        "a": "B, D and E only",
+        "b": "A, B, C and E only",
+        "c": "A, C, D and E only",
+        "d": "A, B, C and D only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 89,
+      "exam_session": "March 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I with List II: List I (Type of Test): A. Kruskal-Wallis test B. Z-test C. ANOVA test D. Chi-square test. List II (Subject matter of the problem): I. Parametric test to compare means of more than two population groups. II. Non-parametric test to compare means of more than two population groups. III. Non-parametric test to test the goodness of fit. IV. Testing the difference between means of two sample groups.",
+      "options": {
+        "a": "A-II, B-IV, C-I, D-III",
+        "b": "A-I, B-III, C-II, D-IV",
+        "c": "A-IV, B-I, C-III, D-II",
+        "d": "A-III, B-II, C-IV, D-I"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 90,
+      "exam_session": "March 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following statements is incorrect?",
+      "options": {
+        "a": "Algebraic sum of deviations taken from Arithmetic Mean is zero",
+        "b": "The sum of absolute deviations taken from Median is the largest",
+        "c": "Standard deviation is always less than range",
+        "d": "The sum of the squares of deviations of a given set of observations is minimum, when taken about the arithmetic mean"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 91,
+      "exam_session": "March 2023",
+      "question_type": "Simple MCQ",
+      "question": "One of the assumptions in the Black-Scholes Option Pricing Model is that underlying asset prices are:",
+      "options": {
+        "a": "Equi-distributed",
+        "b": "Marginally distributed",
+        "c": "Log-normally distributed",
+        "d": "Normally distributed"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 92,
+      "exam_session": "March 2023",
+      "question_type": "Statement-based (True/False)",
+      "question": "Given below are two statements: Statement I: If a population from which a sample is to be drawn does not constitute a homogenous group, stratified sampling technique is generally applied in order to obtain a representative sample. Statement II: In the case of small samples, z-test is applied even if the population standard deviation is not available (given).",
+      "options": {
+        "a": "Both Statement I and Statement II are correct.",
+        "b": "Both Statement I and Statement II are incorrect.",
+        "c": "Statement I is correct but Statement II is incorrect.",
+        "d": "Statement I is incorrect but Statement II is correct."
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 93,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following constructs hold true for research analysis and design? A. Research design is a framework for every stage of the collection and analysis of data. B. The choice between qualitative and quantitative methods in a research experiment depends upon Cronbach alpha. C. Experiments as source of data is not appropriate for a qualitative study. D. Plagiarism is the failure of researcher to acknowledge the borrowed material in his/her publication. E. Content Analysis is a method commonly used in qualitative research to aid data collection.",
+      "options": {
+        "a": "A, B, E only",
+        "b": "B, C, D only",
+        "c": "A, C, D, E only",
+        "d": "B, E only"
+      },
+      "answer": "c",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 94,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following statements are correct? A. The difference between sample variance and population variance computation is mu replaced by x-bar. B. Cronbach alpha value less than 0.30 indicates reliability of research instrument.",
+      "options": {
+        "a": "A, B, E only",
+        "b": "B, C, D only",
+        "c": "A, C, D, E only",
+        "d": "B, E only"
+      },
+      "answer": "a",
+      "note": "Only statement A is a correct, standard fact (sample variance formula replaces population mean mu with sample mean x-bar); statement B is false since a low alpha indicates poor, not good, reliability. Full option text/other statements were not fully legible in the source image; verify against official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 95,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "In a statistical experiment, an effect size is described as:",
+      "options": {
+        "a": "Effective testing of hypothesis",
+        "b": "Probable success of an experimental manipulation",
+        "c": "Quantitative measurement of the magnitude of the experimental effect",
+        "d": "Standardized measure of the magnitude of the effect observed in an experiment"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 96,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following statements are correct? A. Internal reliability is described as the consistency of a measure taken at two different points in time. B. A distribution is a random walk if it has a mean of 0 and variance of 1. C. Increase and decrease in scores measured overtime that produce a variance of less than 50% is reliable. D. Normal distribution cannot be applied to real life situations. E. Factor Analysis supersedes multiple discriminant analysis.",
+      "options": {
+        "a": "A, B and E only",
+        "b": "C, D, E only",
+        "c": "B, C, D only",
+        "d": "B, D, E only"
+      },
+      "answer": "b",
+      "note": "Confidence is low for this item since it depends on interpretation of statements not fully verifiable from the source image; verify against official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 97,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is not an assumption of the simple liner regression model?",
+      "options": {
+        "a": "The set of expected values of the dependent variable v for given values of independent variable x, are normally distributed.",
+        "b": "The standard deviation and variance of expected values of the dependent variable about the regression line are constant for all values of the independent variable x for the set of observations in a sample.",
+        "c": "The dependent variable y is a continuous random variable.",
+        "d": "The errors in the value of y are identical in successive observations."
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 98,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following distributions aptly describes the ownership of income and property in a capitalist economy?",
+      "options": {
+        "a": "Normal distribution",
+        "b": "Poisson distribution",
+        "c": "F- distribution",
+        "d": "Pareto distribution"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 99,
+      "exam_session": "November 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I with List II. Choose the correct answer from the options given. List I (Objectives of business firms): A. Sales Revenue maximization B. Maximization of Firm's growth rate C. Long-term survival D. Satisfying behavior. List II (Suggested by): I. K.W. Rothschild II. Cyert and March III. W.J. Baumol IV. Robin Marris",
+      "options": {
+        "a": "A-III, B-IV, C-I, D-II",
+        "b": "A-IV, B-III, C-II, D-I",
+        "c": "A-II, B-I, C-IV, D-III",
+        "d": "A-I, B-II, C-III, D-IV"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 100,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Properties of a good point estimator includes which of the following? A. Stationarity B. Efficiency C. Consistency D. Neutrality E. Unbiasedness",
+      "options": {
+        "a": "A, B and C only",
+        "b": "C, D and E only",
+        "c": "A, D and E only",
+        "d": "B, C and E only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 101,
+      "exam_session": "November 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I with List II. List I Formula/statistic: A. Sum((0-E)^2/E) B. (12/(n(n+1))) * Sum(R_j^2/n_j) - 3(n+1) C. (X_bar - mu)/SE D. SS_between/SS_within. List II Test: I. Z-test II. H-test (Kruskal-Wallis test) III. F-test (ANOVA) IV. Chi-square test",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-III, B-IV, C-II, D-I",
+        "c": "A-IV, B-II, C-I, D-III",
+        "d": "A-IV, B-II, C-III, D-I"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 102,
+      "exam_session": "November 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II: List-I Statistical identity: A. Power of test B. Standard error C. P-value D. F-test. List-II Description: I. Maximum level of significance at which the null hypothesis would be accepted. II. Test for significance of regression equation. III. Standard deviation of an estimate from a sample. IV. The probability that test will lead to rejection of null hypothesis when it is false.",
+      "options": {
+        "a": "A-III, B-II, C-IV, D-I",
+        "b": "A-IV, B-III, C-I, D-II",
+        "c": "A-II, B-IV, C-I, D-III",
+        "d": "A-I, B-IV, C-II, D-III"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 103,
+      "exam_session": "November 2022",
+      "question_type": "Assertion-Reason",
+      "question": "Given below are two statements, one is labelled as Assertion A and the other is labelled as Reason R. Assertion A: R2 tends to be smaller for cross-sectional data than for the time series data. Reason R: Wider fluctuations in the cross-sectional data cause smaller value of R2.",
+      "options": {
+        "a": "Both A and R are true and r is the correct explanation of A",
+        "b": "Both A and R are true but R is not the correct explanation of A",
+        "c": "A is true but R is false.",
+        "d": "A is false but R is true."
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 104,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following statistical identities are useful in comparing the two regression equations based on different sample sizes?",
+      "options": {
+        "a": "Coefficient of determination (r^2)",
+        "b": "Coefficient of multiple determination (R^2)",
+        "c": "Adjusted R^2 (R-bar^2)",
+        "d": "Logistic regression"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 105,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which wandering in jungle, King Dushyant married Shankuntala as narrated in the 'Abhigyan Shankuntalam'. He gave her royal ring which could serve her identity when she would come to meet him, in future. However, she had lost the ring while going to meet him. When she arrived at Dushyant's palace, he failed to recognize her as she did not have the ring. Which of the following statistical error King Dushyant had committed in this narrative?",
+      "options": {
+        "a": "Type I error",
+        "b": "Type II error",
+        "c": "Sampling error",
+        "d": "Non-Sampling error"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 106,
+      "exam_session": "November 2022",
+      "question_type": "Statement-based (True/False)",
+      "question": "Given below are two statements. Statement I: The probable error (P.E.) of the coefficient of correlation (r) is defined as: PE = (1-r^2)/sqrt(n). Statement II: When a null hypothesis is true but the test statistic rejects it, this is known as Type-1 error in hypothesis testing.",
+      "options": {
+        "a": "Both Statement I and Statement II are correct",
+        "b": "Both Statement I and Statement II are incorrect",
+        "c": "Statement I is correct but Statement II is incorrect",
+        "d": "Statement I is incorrect but Statement II is correct"
+      },
+      "answer": "d",
+      "note": "Standard formula for P.E. is 0.6745*(1-r^2)/sqrt(n); the coefficient 0.6745 is missing in Statement I, making it incomplete/incorrect as stated."
+    },
+    {
+      "q_no": 107,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Multicollinearity in the regression analysis is measured by:",
+      "options": {
+        "a": "Tolerance (1-R^2)",
+        "b": "Homoscedasticity",
+        "c": "Partial F-test",
+        "d": "Durbin-Watson statistic"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 108,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are properties of Binomial distribution? A. May be symmetrical or skewed B. Uni-modal, bell-shaped and symmetrical C. Asymptotic to the x-axis D. n and p are the two parameters E. mu and sigma are the two parameters",
+      "options": {
+        "a": "B and E only",
+        "b": "A and D only",
+        "c": "C and E only",
+        "d": "B, C and D only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 109,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following expressions is not correct to calculate the coefficient of correlation between two variables?",
+      "options": {
+        "a": "Sum(xy)/(n*sigma_x*sigma_y)",
+        "b": "sqrt(byx*bxy)",
+        "c": "Cov(x,y)/(sigma_x^2 * sigma_y^2)",
+        "d": "Cov(x,y)/(sigma_x*sigma_y)"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 110,
+      "exam_session": "October 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following measures of central tendency is not affected by the presence of extreme values in the data of the distribution?",
+      "options": {
+        "a": "Arithmetic average",
+        "b": "Geometric average",
+        "c": "Positional average",
+        "d": "Harmonic average"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 111,
+      "exam_session": "October 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following statements is true?",
+      "options": {
+        "a": "The sum of absolute deviations measured from Median is the least",
+        "b": "If each value in a given series is multiplied by a constant, K the variance of the new series would be equal to the variance of the given series",
+        "c": "The variance is the square of the value of the standard deviation divided by mean",
+        "d": "Z-score value of 'X' is the ratio between 'X' divided by mean"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 112,
+      "exam_session": "October 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following samples are non-random or non-probability samples? A. Systematic sample B. Quota sample C. Cluster or area sample D. Purposive sample E. Replicated sample",
+      "options": {
+        "a": "A, C only",
+        "b": "B, C, D only",
+        "c": "A, D, E only",
+        "d": "B, D only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 113,
+      "exam_session": "October 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I with List II: List I Type of test: A. ANOVA Test B. Z-Test C. Chi-square Test D. Kruskal-Wallis Test. List II Testing situation: I. Testing whether a standard probability distribution fits well to a given frequency distribution II. Parametric test to test the hypothesis of differences in more than two sample means III. Non-parametric test to test the hypothesis of differences in more than two sample means IV. Hypothesis testing for mean when u is known or unknown",
+      "options": {
+        "a": "A-IV, B-II, C-I, D-III",
+        "b": "A-I, B-IV, C-I, D-III",
+        "c": "A-II, B-IV, C-I, D-III",
+        "d": "A-III, B-II, C-IV, D-I"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 114,
+      "exam_session": "October 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following statements is false?",
+      "options": {
+        "a": "Regression coefficients are Independent of change of origin but not of change of scale",
+        "b": "(option not fully legible)",
+        "c": "(option not fully legible)",
+        "d": "(option not fully legible)"
+      },
+      "answer": "uncertain - full option text not legible in source image",
+      "note": "Only option (a) was fully legible in the source image; the remaining options could not be transcribed reliably. Verify against official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 115,
+      "exam_session": "October 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the complete experimental research designs? A. Factorial design B. One group after-only design C. Before-after design with one experiment and two control groups D. Latin square design E. One-group before-after design",
+      "options": {
+        "a": "A, C, D only",
+        "b": "A, D, E only",
+        "c": "B, C, D only",
+        "d": "A, B, C only"
+      },
+      "answer": "a",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 116,
+      "exam_session": "October 2022",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following processes in a proper sequence to conduct scientific research: A. Induction B. Making Prediction C. Observation of facts D. Testing of prediction E. Development of explanations",
+      "options": {
+        "a": "A, B, C, E, D",
+        "b": "C, A, E, B, D",
+        "c": "E, A, B, C, D",
+        "d": "A, D, B, C, E"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 117,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "If each value in a given set is increased by K, which of the following is correct?",
+      "options": {
+        "a": "Increase the Pearson's coefficient of skewness value",
+        "b": "No change in Pearson's coefficient of skewness value",
+        "c": "No change in Bowley's coefficient of skewness value",
+        "d": "Reduce the value of Pearson's coefficient of skewness"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 118,
+      "exam_session": "November 2021",
+      "question_type": "Statement-based (True/False)",
+      "question": "Statement (I): The arithmetic mean is an all-purpose average. Statement (II): Median and mode are called positional averages. In the context of the above two statements, which one of the following codes is correct?",
+      "options": {
+        "a": "Both the statements (I) and (II) are correct",
+        "b": "Both the statements (I) and (II) are incorrect",
+        "c": "Statement (I) is correct but (II) is incorrect",
+        "d": "Statement (II) is correct but (I) is incorrect"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 119,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "The arithmetic mean of 10 items is 50. If each item is increased by 5, then the new arithmetic mean would be:",
+      "options": {
+        "a": "50",
+        "b": "55",
+        "c": "60",
+        "d": "45"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 120,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are NOT sources of secondary data? A. Interview B. Questionnaire C. Observation D. Unpublished thesis E. Annual report",
+      "options": {
+        "a": "(A), (D), and (E)",
+        "b": "(B), (C), and (D)",
+        "c": "(C), (D), and (E)",
+        "d": "(A), (B) and (C)"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 121,
+      "exam_session": "October 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are considered non-parametric tests? A. Mann-Whitney U test B. Kruskal-Wallis test C. F-test D. T-test E. Chi-square test",
+      "options": {
+        "a": "(A), (B), and (E)",
+        "b": "(A), (B), and (C)",
+        "c": "(A), (B), (C), and (D)",
+        "d": "(A), (E), (B), (C), (D)"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 122,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "What is the probability that the sum of outcomes on a pair of dice is equal to 8?",
+      "options": {
+        "a": "6/36",
+        "b": "5/36",
+        "c": "4/36",
+        "d": "3/36"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 123,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "For a very large population, the ratio between SEX and sigma is 8:40. The sample size n will be:",
+      "options": {
+        "a": "5",
+        "b": "25",
+        "c": "32",
+        "d": "48"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 124,
+      "exam_session": "October 2021",
+      "question_type": "Statement-based (True/False)",
+      "question": "Statement (I): t-test and F-test are based on the identical assumptions. Statement (II): t-test is used for comparison between two groups whereas F-test is used for comparison between more than two groups. In the context of the above two statements, which one of the following codes is correct?",
+      "options": {
+        "a": "Both Statements (I) and (II) are correct",
+        "b": "Both Statements (I) and (II) are incorrect",
+        "c": "Statement (I) is correct but (II) is incorrect",
+        "d": "Statement (II) is correct but (I) is incorrect"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 125,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "If two regression coefficients are -0.8 and -0.2, then the value of the coefficient of correlation is:",
+      "options": {
+        "a": "-0.16",
+        "b": "+0.40",
+        "c": "-0.50",
+        "d": "-0.40"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 126,
+      "exam_session": "November 2021",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II: List I: A. j=(X_bar - M0)/sigma B. j=(Q3+Q1-2Me)/(Q3-Q1) C. j=(P90+P10-2P50)/(P90-P10). List II: I. Kelly's coefficient of skewness II. Bowley's measure of skewness III. Karl Pearson's coefficient of skewness",
+      "options": {
+        "a": "A-III, B-II, C-I",
+        "b": "A-III, B-I, C-II",
+        "c": "A-I, B-II, C-III",
+        "d": "A-II, B-I, C-III"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 127,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "A coin and pair of dice are tossed together, the total number of possible outcomes for an experiment is:",
+      "options": {
+        "a": "12",
+        "b": "72",
+        "c": "36",
+        "d": "24"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 128,
+      "exam_session": "November 2021",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps of formulating a research proposal in a logical sequential order: A. Defining research problem. B. Formulation of hypothesis. C. Review of literature. D. Collection of data. E. Research design.",
+      "options": {
+        "a": "A, C, B, E, D",
+        "b": "A, B, C, D, E",
+        "c": "C, A, B, E, D",
+        "d": "A, C, E, B, D"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 129,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Each of the values of a series is decreased by K, which of the following does not hold in the context?",
+      "options": {
+        "a": "The quartile deviation does not change",
+        "b": "The co-efficient of quartile deviation remain unchanged",
+        "c": "The lower and upper quartile values each decreases by K",
+        "d": "The quartile coefficient of dispersion rises"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 130,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the correct statements with regard to positive skewed distribution? A. Mean > Median > Mode B. Mean < Median < Mode C. Q3 - Median < Median - Q1 D. Q3 - Median > Median - Q1 E. Mean = Median = Mode",
+      "options": {
+        "a": "(A), (D) only",
+        "b": "(A), (C) only",
+        "c": "(B), (C), (D) only",
+        "d": "(B), (C), (D), (E) only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 131,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "If each value in a given set of data is divided by 4, how will it affect Karl Pearson's coefficient of Skewness?",
+      "options": {
+        "a": "It will reduce the value of coefficient to one-fourth",
+        "b": "It will increase the value of coefficient to four times",
+        "c": "It will not affect the coefficient of Skewness value",
+        "d": "Nothing can be said about the change"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 132,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "A type of validity based on showing that scores on the test (Predictors) are related to job performance is:",
+      "options": {
+        "a": "Test validity",
+        "b": "Criterion validity",
+        "c": "Content validity",
+        "d": "Construct validity"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 133,
+      "exam_session": "November 2021",
+      "question_type": "Assertion-Reason",
+      "question": "Given below are two statements: One is labelled as Assertion A and the other is labelled as Reason R. Assertion A: Mean deviation is about 80% of Standard Deviation. Reason R: The quartile deviation is about 2/3 of the Standard Deviation.",
+      "options": {
+        "a": "Both A and R are true and R is the correct explanation of A",
+        "b": "Both A and R are true and R is NOT the correct explanation of A",
+        "c": "A is true but R is false",
+        "d": "A is false but R is true"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 134,
+      "exam_session": "November 2021",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I with List II: List I: A. Probability distribution B. Binomial distribution C. Hyper geometric distribution D. Uniform distribution. List II: I. sigma=sqrt((b-q)^2/12) II. sigma=sqrt(Sum p(x-mu)^2) III. sigma=sqrt(npq) IV. sigma=sqrt(n*(N1/N)*(N2/N)*(N-n)/(N-1))",
+      "options": {
+        "a": "(A)-(II), (B)-(III), (C)-(IV), (D)-(I)",
+        "b": "(A)-(II), (B)-(III), (C)-(I), (D)-(IV)",
+        "c": "(A)-(II), (B)-(I), (C)-(IV), (D)-(III)",
+        "d": "(A)-(I), (B)-(II), (C)-(III), (D)-(IV)"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 135,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "For a very large sample size, the ratio between SEx and sigma is 8:40. Determine the sample size n:",
+      "options": {
+        "a": "25",
+        "b": "5",
+        "c": "4",
+        "d": "16"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 136,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following statement is correct?",
+      "options": {
+        "a": "Co-efficient of variance = sigma/x_bar * 100",
+        "b": "If values in a series are negative, the standard deviation is also negative",
+        "c": "If values in a series are multiplied by sigma, the variance would be multiplied by 36",
+        "d": "Standard deviation is equal to the square of variance"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 137,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "For a poisson distribution variable X, P(X=0)=2P(X=1), its standard deviation would be:",
+      "options": {
+        "a": "sqrt(2)",
+        "b": "0.5",
+        "c": "sqrt(0.5)",
+        "d": "2"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 138,
+      "exam_session": "November 2021",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following stages of processing of data in a correct sequence: 1. Coding 2. Editing 3. Tabulation 4. Classification 5. Using Percentages",
+      "options": {
+        "a": "1, 2, 3, 4, 5",
+        "b": "4, 1, 2, 3, 5",
+        "c": "2, 1, 4, 3, 5",
+        "d": "2, 1, 4, 3, 5"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 139,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following statements are correct about the Chi-Square test? 1. The only parameter of a Chi-Square distribution is its number of degrees of freedom. 2. The null hypothesis in a given Chi-Square test is rejected when the calculated value of the variable exceeds its critical value. 3. The rejection region in a goodness-of-fit test lies only in the right tail of the distribution. 4. The Chi-Square test is a parametric test. 5. At alpha=0.05 and V=1, the critical value of x^2 is equal to the Z-value at the same level of significance.",
+      "options": {
+        "a": "2, 4, 5 only",
+        "b": "1, 3, 5 only",
+        "c": "1, 2, 3 only",
+        "d": "2, 3, 4 only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 140,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are correct about complementary events? 1. Mutually exclusive 2. Independent 3. Such that their probabilities add up to 1 4. Collectively exhaustive",
+      "options": {
+        "a": "1, 2, 3 only",
+        "b": "1, 2, 4 only",
+        "c": "2, 3, 4 only",
+        "d": "1, 3, 4 only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 141,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following is correct about the Mann-Whitney U-test? 1. It is a non-parametric test 2. It requires that samples are independent 3. It can be used when populations involved are normally distributed 4. It is used to test the null hypothesis that the two populations involved are identical 5. It is always a two-tailed test",
+      "options": {
+        "a": "1, 2, 4 only",
+        "b": "1, 3, 4 only",
+        "c": "1, 4, 5 only",
+        "d": "1, 2, 5 only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 142,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "For a given set of paired data, the correlation and regression coefficients have been calculated as being equal to r, bxyb, and byx respectively. Now, each of the values of the x-series is divided by 5. What effect does this have on each of these coefficients?",
+      "options": {
+        "a": "The three coefficients remain unchanged",
+        "b": "There is no change in r, but x changes to byx/5 and bxy changes to 5bxy",
+        "c": "Each of the coefficients will be reduced to one-fourth of its value",
+        "d": "There is no change in r, but byx changes to byx*5 and bxy changes to bxy/5"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 143,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following statements are CORRECT? (A) The critical value of Z for two-tailed test with alpha=0.5 is 1.96 (B) The critical value of Z for a two-tailed test with alpha=0.01 is 2.575 (C) The critical value of Z for one-tailed test with alpha=0.05 is 1.96 (D) The critical value of Z for a left-tailed test with alpha=0.01 is -2.33",
+      "options": {
+        "a": "A and B only",
+        "b": "A, B and C only",
+        "c": "A, B and D only",
+        "d": "B, C and D only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 144,
+      "exam_session": "November 2021",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps in the process of hypothesis testing in proper sequence: A. Select the level of significance B. Setup null and alternative hypothesis C. Establish the decision rule D. Performance computations E. Select test statistics F. Draw conclusion",
+      "options": {
+        "a": "A, B, C, D, E, F",
+        "b": "B, A, C, D, E, F",
+        "c": "B, A, E, D, C, F",
+        "d": "B, A, E, C, D, F"
+      },
+      "answer": "d",
+      "note": "Answer options were not fully legible in the source image; logical order B(hypothesis)->A(significance level)->E(test statistic)->C(decision rule)->D(computations)->F(conclusion) is used. Verify against official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 145,
+      "exam_session": "November 2021",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Choose the correct answer from the options given below. List I (Statistical Concepts): A. Dispersion B. Karl Pearson's Measure of Skewness C. Bowley's Measure of Skewness D. Kelly's Measure of Skewness. List II (Description): I. Involving relationship between the median and quartile II. Based on the relationship between the averages III. Using percentile IV. Amount of variation in given data",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-IV, B-I, C-II, D-III",
+        "c": "A-IV, B-II, C-I, D-III",
+        "d": "A-IV, B-III, C-II, D-I"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 146,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "The values in one of the series in a bivariate data set are multiplied by a constant K, which of the following would change as a result of this? A. Karl Pearson's coefficient of correlation B. Standard deviation C. Covariance between the variables D. Rank correlation coefficient",
+      "options": {
+        "a": "A and D only",
+        "b": "A, B and C only",
+        "c": "A, B and D only",
+        "d": "B and C only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 147,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "A certain bivariate data byx and bxy have been calculated which is equal to 2.4 and 0.4, respectively. If the value of the x series are all multiplied by 5 and all values of y series are divided by 2, how would it affect the value of the two coefficients?",
+      "options": {
+        "a": "Both the coefficients get multiplied so byx=6.0 and bxy=4.0",
+        "b": "Both the coefficients remain unchanged",
+        "c": "The coefficients are revised by byx=0.24 and bxy=4.0",
+        "d": "The coefficients are revised by byx=24 and bxy=0.04"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 148,
+      "exam_session": "October 2020",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the items of Units I with those of Units II and choose the correct code of combination: List I: A. P(Hi|E)=P(Hi\u2229E)/P(E) B. P(E2|E1)=P(E1\u2229E2)/P(E1) C. P(E1\u2229E2)=P(E1)+P(E2) D. P(E1\u222aE2)=P(E1)+P(E2). List II: I. Theorem of addition II. Theorem of multiplication III. Conditional Probability IV. Bayes' Theorem",
+      "options": {
+        "a": "A-I, B-IV, C-II, D-III",
+        "b": "A-IV, B-III, C-II, D-I",
+        "c": "A-III, B-IV, C-I, D-II",
+        "d": "A-IV, B-III, C-I, D-II"
+      },
+      "answer": "c",
+      "note": "List II formulas appear duplicated/garbled by OCR; verify against the official key.",
+      "answer_uncertain": true
+    },
+    {
+      "q_no": 149,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following retail analytic applications involve(s) the use of search techniques to gain insights into customer's buying pattern?",
+      "options": {
+        "a": "Factor analysis",
+        "b": "Regression analysis",
+        "c": "Data mining",
+        "d": "Data scrapping"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 150,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following include problems in forecasting? A. Estimates becoming more reliable the further you forecast into the future B. Specification error C. Cyclical variation D. Stationarity in data series E. Consistency in data series",
+      "options": {
+        "a": "A and B only",
+        "b": "B, C, and D only",
+        "c": "B and C only",
+        "d": "A and C only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 151,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "In a survey, people are chosen from class friends or neighbors for the purpose of knowing their preference for a certain brand of soft drink. This is an example of:",
+      "options": {
+        "a": "Convenience sampling",
+        "b": "Judgement sampling",
+        "c": "Cluster sampling",
+        "d": "Stratified sampling"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 152,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "If on an average, 2 customers arrive at a shopping mall per minute, what is the probability that in a given minute, exactly 3 customers will arrive? (e^-2=0.1353)",
+      "options": {
+        "a": "0.1804",
+        "b": "0.3532",
+        "c": "0.2352",
+        "d": "0.1404"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 153,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Goodness of fit of a distribution is tested by:",
+      "options": {
+        "a": "t-test",
+        "b": "F-test",
+        "c": "Chi-square test",
+        "d": "Z-test"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 154,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following narratives describe Fisher (Irving) effect?",
+      "options": {
+        "a": "Nominal interest rate is equal to a real interest rate plus an expected interest rate",
+        "b": "Real interest rate is equal to nominal interest rate minus expected rate of inflation",
+        "c": "Exchange rate differential between two currencies is explained by interest-inflation rate differential",
+        "d": "Exchange rate differential between two currencies is explained by comparative cost advantage and purchasing power parity"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 155,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "In a moderately skewed distribution, which of the following equation indicates the relationship among mean, median, and mode?",
+      "options": {
+        "a": "Mean = 2 Mode - 3 Median",
+        "b": "Mode = 3 Median - 2 Mean",
+        "c": "Median = 3 Mean - 2 Mode",
+        "d": "Mode = 3 Mean - 2 Median"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 156,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following could be problems with consumer interviews? A. A non-random sample B. The identification problem C. Response bias",
+      "options": {
+        "a": "A and B only",
+        "b": "B and C only",
+        "c": "A and C only",
+        "d": "B only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 157,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is not an example of compressed data?",
+      "options": {
+        "a": "Data array",
+        "b": "Frequency distribution",
+        "c": "Histogram",
+        "d": "Ogive"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 158,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are positional averages?",
+      "options": {
+        "a": "(B), (C) only",
+        "b": "(B), (C), (D) only",
+        "c": "(B), (C), (A) only",
+        "d": "(A), (B), (C), (D) only"
+      },
+      "answer": "a",
+      "note": "Underlying items: A. Arithmetic Mean B. Median C. Mode D. Geometric Mean E. Harmonic Mean. Median and Mode are the standard positional averages."
+    },
+    {
+      "q_no": 159,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "When sampling is done without replacement, the standard error of mean is:",
+      "options": {
+        "a": "SE_xbar = sigma/sqrt(n)",
+        "b": "SE_xbar = (sigma/sqrt(n))*sqrt((N-n)/(N-1))",
+        "c": "SE_xbar = (sigma/sqrt(n))*sqrt((N-n)/(N-1))",
+        "d": "SE_xbar = (sigma/sqrt(n))*sqrt(1-n/N)"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 160,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is not correct about the properties of the correlation coefficient?",
+      "options": {
+        "a": "Depends on the origin",
+        "b": "Depends on the scale",
+        "c": "Depends on both origin and scale",
+        "d": "Is independent with respect to origin"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 161,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "What type of defense mechanism is used by a person when they get angry at their child or spouse because they had a bad day at work?",
+      "options": {
+        "a": "Denial",
+        "b": "Repression",
+        "c": "Projection",
+        "d": "Displacement",
+        "e": "Regression"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 162,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "The standard deviation of the binomial distribution is:",
+      "options": {
+        "a": "np",
+        "b": "sqrt(np)",
+        "c": "npq",
+        "d": "sqrt(npq)"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 163,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "The regression coefficient is independent of the change of:",
+      "options": {
+        "a": "Scale only",
+        "b": "Origin only",
+        "c": "Both Scale and Origin",
+        "d": "Neither Scale nor Origin"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 164,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "What is the probability that a randomly chosen card from a deck of cards will either be a King or a Spade?",
+      "options": {
+        "a": "0.3077",
+        "b": "0.3269",
+        "c": "0.0384",
+        "d": "0.3169"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 165,
+      "exam_session": "October 2020",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I with List II: List I: A. Bayes' Theorem B. Conditional Probability C. Theorem of complementary events D. Theorem of addition. List II: I. P(E-bar) = 1 - P(E) II. P(E1\u222aE2) = P(E1)+P(E2) III. P(E2|E1) = P(E1\u2229E2)/P(E1) IV. P(Hi|E) = P(Hi\u2229E)/P(E)",
+      "options": {
+        "a": "(A)-(I), (B)-(IV), (C)-(III), (D)-(II)",
+        "b": "(A)-(III), (B)-(IV), (C)-(II), (D)-(I)",
+        "c": "(A)-(III), (B)-(IV), (C)-(I), (D)-(II)",
+        "d": "(A)-(IV), (B)-(III), (C)-(I), (D)-(II)"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 166,
+      "exam_session": "October 2020",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following stages of research in a proper sequence: A. Report Writing B. Budgeting C. Data Collection D. Field Work E. Research outcomes",
+      "options": {
+        "a": "(B), (D), (C), (E), (A)",
+        "b": "(D), (A), (B), (C), (E)",
+        "c": "(D), (C), (B), (E), (A)",
+        "d": "(B), (E), (D), (C), (A)"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 167,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "In continuous compounding, the time it takes to double the sum grossly follows the 'Rule of 69'. If it is changed to discrete compounding, the relevant rule of thumb is:",
+      "options": {
+        "a": "Rule of 69.3",
+        "b": "Rule of 72",
+        "c": "Rule of 84",
+        "d": "Rule of 64"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 168,
+      "exam_session": "December 2019",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the tests with suitable situations of their application for hypothesis-testing: Test: A. z-test B. ANOVA C. Chi-Square Test D. Kruskal-Wallis Test. Situation: I. Comparing the differences in the mean values of more than two sample groups (Parametric data) II. Testing the significance of the difference between averages of two large-sized sample groups (Parametric data) III. Comparing the differences in the mean values of more than two sample groups (Non-parametric data) IV. Testing the significance of the association between two attributes",
+      "options": {
+        "a": "(A)-(I), (B)-(II), (C)-(III), (D)-(IV)",
+        "b": "(A)-(II), (B)-(I), (C)-(IV), (D)-(III)",
+        "c": "(A)-(II), (B)-(I), (C)-(III), (D)-(IV)",
+        "d": "(A)-(I), (B)-(II), (C)-(IV), (D)-(III)"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 169,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following statements is false?",
+      "options": {
+        "a": "When the value of the correlation coefficient is one, the two regression lines coincide",
+        "b": "The regression coefficients are independent of the change of origin and scale",
+        "c": "The sign of the regression coefficients are always the same",
+        "d": "The square of the coefficient of correlation is called coefficient of determination"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 170,
+      "exam_session": "December 2019",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "For calculating posterior probabilities (conditional probabilities under statistical dependence), the following information is available: A. Conditional probabilities B. Original probability estimates (prior probabilities) of mutually exclusive and collectively exhaustive events C. Arbitrary event with probability != 0 and for which conditional probabilities are also known D. Joint probabilities of prior probability and conditional probability. Given the information that the arbitrary event has occurred, arrange the above information in a sequence as per their requirement of Bayes' Theorem.",
+      "options": {
+        "a": "(A)->(B)->(D)->(C)",
+        "b": "(B)->(A)->(C)->(D)",
+        "c": "(C)->(D)->(B)->(A)",
+        "d": "(B)->(A)->(D)->(C)"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 171,
+      "exam_session": "December 2019",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which two of the following statements are true? (A) Skewness studies the flatness or peakedness of the distribution (B) A positively skewed distribution curve is stretched more to the right than to the left (C) On the basis of empirical relationship between mean, mode, and median for moderately asymmetrical distribution, Karl Pearson's coefficient of skewness can be measured by 3 (Mean-Median) divided by Standard Deviation (D) If mean < mode, the distribution is positively skewed",
+      "options": {
+        "a": "(A) and (B)",
+        "b": "(B) and (C)",
+        "c": "(C) and (D)",
+        "d": "(B) and (D)"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 172,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is an incomplete experimental research design?",
+      "options": {
+        "a": "Before and after with control group design",
+        "b": "Factorial design",
+        "c": "One group before-after design",
+        "d": "Latin Square design"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 173,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "The sum total of the values of two variables X and Y is equal for all the observations. The value of the coefficient of correlation between X and Y is:",
+      "options": {
+        "a": "+1 (Perfectly Positive)",
+        "b": "-1 (Perfectly Negative)",
+        "c": "Zero (No Correlation)",
+        "d": "Between 0 and 1 (Imperfect Correlation)"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 174,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is a non-random method of selecting samples from a given population?",
+      "options": {
+        "a": "Stratified Sampling",
+        "b": "Systematic Sampling",
+        "c": "Quota Sampling",
+        "d": "Multi-stage Sampling"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 175,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "question": "Study the following information: Covariance between X and Y series = -17.8. Standard deviation of X series = 6.6. Standard deviation of Y series = 4.2. No. of pairs of observation = 20. The coefficient of correlation is:",
+      "options": {
+        "a": "-0.642",
+        "b": "0.642",
+        "c": "0.253",
+        "d": "-0.253"
+      },
+      "answer": "a"
+    }
+  ]
+}

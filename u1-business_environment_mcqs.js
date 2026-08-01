@@ -1,0 +1,3916 @@
+window.u1_data = [
+  {
+    "q_no": 1,
+    "exam_session": "June 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Business Environment Fundamentals",
+      "sub_branch": "Micro Environment"
+    },
+    "keywords": [
+      "micro environment",
+      "customers",
+      "suppliers",
+      "competitors",
+      "technology"
+    ],
+    "question": "Which of the following is NOT an element of the Micro environment?",
+    "options": {
+      "a": "Customers",
+      "b": "Suppliers",
+      "c": "Technology",
+      "d": "Competitors"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 2,
+    "exam_session": "June 2025",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Trade Tariffs & Barriers",
+      "sub_branch": "Types of Tariffs"
+    },
+    "keywords": [
+      "specific tariff",
+      "ad valorem tariff",
+      "compound tariff",
+      "variable tariff"
+    ],
+    "question": "Match the LIST-I (TRADE TARIFF) with LIST-II (Explanation).",
+    "list_1": {
+      "A": "Specific Tariff",
+      "B": "Ad valorem Tariff",
+      "C": "Compound Tariff",
+      "D": "Variable Tariff"
+    },
+    "list_2": {
+      "I": "Fixed percentage of the value of the commodity",
+      "II": "Fixed amount of money per unit",
+      "III": "Duty fixed to bring the price of imported commodity to the level of domestic support price",
+      "IV": "Combination of Ad valorem and Specific Tariff"
+    },
+    "options": {
+      "a": "A-I, B-II, C-III, D-IV",
+      "b": "A-II, B-I, C-IV, D-III",
+      "c": "A-III, B-IV, C-II, D-I",
+      "d": "A-IV, B-III, C-II, D-I"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 3,
+    "exam_session": "June 2025",
+    "question_type": "Chronological Sequencing",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "Formation of Trade Blocs"
+    },
+    "keywords": [
+      "NAFTA",
+      "European Union",
+      "SAARC",
+      "ASEAN",
+      "chronology"
+    ],
+    "question": "Arrange the following in chronological order of their establishment (Old to New): A. NAFTA B. European Union C. SAARC D. ASEAN",
+    "options": {
+      "a": "A, B, C, D",
+      "b": "B, A, D, C",
+      "c": "D, C, B, A",
+      "d": "C, D, A, B"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 4,
+    "exam_session": "June 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Business Environment Fundamentals",
+      "sub_branch": "PESTLE Framework"
+    },
+    "keywords": [
+      "PESTLE",
+      "legal factors"
+    ],
+    "question": "What does 'L' represent in the PESTLE framework?",
+    "options": {
+      "a": "Labour",
+      "b": "Legal",
+      "c": "Land",
+      "d": "Latest"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 5,
+    "exam_session": "June 2025",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Business Environment Fundamentals",
+      "sub_branch": "Microeconomics vs Macroeconomics"
+    },
+    "keywords": [
+      "microeconomics",
+      "product pricing",
+      "consumer behaviour",
+      "factor pricing"
+    ],
+    "question": "Which of the following are part of microeconomics? A. Product pricing B. Consumer behaviour C. Interest rate D. Factor pricing",
+    "options": {
+      "a": "A, B and C Only",
+      "b": "A, B and D Only",
+      "c": "A and D Only",
+      "d": "A, B, C and D"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 6,
+    "exam_session": "June 2025",
+    "question_type": "Chronological Sequencing",
+    "topic": {
+      "main_branch": "International Trade Theories",
+      "sub_branch": "Theories & Propounders"
+    },
+    "keywords": [
+      "mercantilism",
+      "comparative advantage",
+      "product life cycle",
+      "Heckscher-Ohlin",
+      "chronology"
+    ],
+    "question": "Arrange the following theories of international trade in chronological order (old to new): A. Mercantilism Theory B. Comparative Advantage Theory C. Product Life Cycle Theory D. Heckscher-Ohlin Theory",
+    "options": {
+      "a": "A, B, C, D",
+      "b": "A, B, D, C",
+      "c": "C, B, A, D",
+      "d": "B, A, C, D"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 7,
+    "exam_session": "June 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "Types of FDI"
+    },
+    "keywords": [
+      "greenfield investment",
+      "FDI types",
+      "new assets"
+    ],
+    "question": "Which of the following types of FDI includes creation of new assets and production facilities in the country?",
+    "options": {
+      "a": "Brownfield investment",
+      "b": "Merger and Acquisition",
+      "c": "Strategic alliances",
+      "d": "Greenfield investment"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 8,
+    "exam_session": "June 2025",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "BoP Accounts"
+    },
+    "keywords": [
+      "current account",
+      "capital account",
+      "balance of trade",
+      "balancing item"
+    ],
+    "question": "Match the LIST-I with LIST-II.",
+    "list_1": {
+      "A": "Balance of payment-current A/C",
+      "B": "Balance of payment-capital A/C",
+      "C": "Balance of Trade",
+      "D": "Balancing item"
+    },
+    "list_2": {
+      "I": "Inflow and outflow of capital",
+      "II": "International Transactions of goods and services",
+      "III": "Import and export of goods only",
+      "IV": "Entry for net errors and omissions"
+    },
+    "options": {
+      "a": "A-I, B-II, C-III, D-IV",
+      "b": "A-III, B-II, C-IV, D-I",
+      "c": "A-IV, B-III, C-I, D-II",
+      "d": "A-II, B-I, C-III, D-IV"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 9,
+    "exam_session": "June 2025",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "Objectives of WTO"
+    },
+    "keywords": [
+      "WTO objectives",
+      "trade rules",
+      "dispute resolution"
+    ],
+    "question": "Which of the following are the key objectives of WTO? A. To set rules for international trade B. To resolve trade disputes C. To resolve border disputes D. To provide a forum for negotiating trade liberalisation",
+    "options": {
+      "a": "A, B, D Only",
+      "b": "A, C Only",
+      "c": "B, C, D Only",
+      "d": "A, B, C and D"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 10,
+    "exam_session": "June 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Business Environment Fundamentals",
+      "sub_branch": "Features of Business Environment"
+    },
+    "keywords": [
+      "business environment",
+      "complex",
+      "dynamic",
+      "static"
+    ],
+    "question": "Which of the following is NOT a feature of the business environment?",
+    "options": {
+      "a": "Complex",
+      "b": "Dynamic",
+      "c": "Multi-faceted",
+      "d": "Static"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 11,
+    "exam_session": "June 2025",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "NAFTA Membership"
+    },
+    "keywords": [
+      "NAFTA",
+      "member countries"
+    ],
+    "question": "Which of the following countries were part of NAFTA? A. United States B. Canada C. Mexico D. Brazil",
+    "options": {
+      "a": "A, B Only",
+      "b": "A, B, C Only",
+      "c": "B, C, D Only",
+      "d": "B, C Only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 12,
+    "exam_session": "June 2025",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Business Environment Fundamentals",
+      "sub_branch": "Macroeconomics"
+    },
+    "keywords": [
+      "macro economics",
+      "national income",
+      "balance of payments",
+      "savings and investment"
+    ],
+    "question": "Identify the areas of macro economics. A. National Income B. Balance of Payments C. Level of savings and investment D. Location of industry E. Behaviour of firms",
+    "options": {
+      "a": "A, B and C Only",
+      "b": "B, C and E Only",
+      "c": "B, C, D Only",
+      "d": "A, B, C, D and E"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 13,
+    "exam_session": "June 2025",
+    "question_type": "Chronological Sequencing",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "Exchange Rate Systems"
+    },
+    "keywords": [
+      "gold standard",
+      "commodity specie",
+      "fixed parity",
+      "floating exchange rate"
+    ],
+    "question": "Arrange the following exchange rate arrangements of the international monetary system in chronological order (Oldest to Newest): A. Gold Standard B. Commodity Specie Standard C. Fixed Parity System D. Floating Exchange Rate",
+    "options": {
+      "a": "A, B, C, D",
+      "b": "B, A, C, D",
+      "c": "C, B, D, A",
+      "d": "B, C, A, D"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 14,
+    "exam_session": "January 2025",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "Establishment Years"
+    },
+    "keywords": [
+      "UNCTAD",
+      "WTO",
+      "NAFTA",
+      "ASEAN",
+      "establishment year"
+    ],
+    "question": "Match the institutions with their years of establishment.",
+    "list_1": {
+      "A": "UNCTAD",
+      "B": "WTO",
+      "C": "NAFTA",
+      "D": "ASEAN"
+    },
+    "list_2": {
+      "I": "1967",
+      "II": "1994",
+      "III": "1964",
+      "IV": "1995"
+    },
+    "options": {
+      "a": "A-I, B-II, C-III, D-IV",
+      "b": "A-III, B-IV, C-II, D-I",
+      "c": "A-I, B-III, C-IV, D-II",
+      "d": "A-I, B-II, C-IV, D-III"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 15,
+    "exam_session": "January 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "Bretton Woods Institutions"
+    },
+    "keywords": [
+      "Bretton Woods",
+      "IMF"
+    ],
+    "question": "________ is the result of the Bretton Woods Conference of nations held in 1944.",
+    "options": {
+      "a": "WTO",
+      "b": "IMF",
+      "c": "IBRD",
+      "d": "ADB"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 16,
+    "exam_session": "January 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "BoP Disequilibrium Correction"
+    },
+    "keywords": [
+      "monetary measures",
+      "devaluation",
+      "exchange control"
+    ],
+    "question": "Which of the following is not a monetary measure for correcting disequilibrium in the Balance of Payment?",
+    "options": {
+      "a": "Monetary Contraction",
+      "b": "Devaluation",
+      "c": "Exchange Control",
+      "d": "Abolition of Export Duties"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 17,
+    "exam_session": "January 2025",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "Balance of Trade"
+    },
+    "keywords": [
+      "adverse balance of trade",
+      "imports",
+      "exports"
+    ],
+    "question": "Which of the following is a situation of adverse balance of trade?",
+    "options": {
+      "a": "Import more than exports",
+      "b": "Exports more than imports",
+      "c": "Exports equal to imports",
+      "d": "Export Surplus"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 18,
+    "exam_session": "January 2025",
+    "question_type": "Sequencing (Levels/Hierarchy)",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "Levels of Economic Integration"
+    },
+    "keywords": [
+      "free trade area",
+      "customs union",
+      "common market",
+      "economic union",
+      "political union"
+    ],
+    "question": "Arrange the following levels of economic integration in increasing order: A. Political Union B. Free Trade Area C. Customs Union D. Common Market E. Economic Union",
+    "options": {
+      "a": "B, C, D, E, A",
+      "b": "B, A, C, D, E",
+      "c": "B, A, D, C, E"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 19,
+    "exam_session": "January 2025",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Economic History & Economists",
+      "sub_branch": "Economists & Contributions"
+    },
+    "keywords": [
+      "Adam Smith",
+      "Marshall",
+      "Hicks",
+      "Leontief"
+    ],
+    "question": "Match the Economists with their Contributions.",
+    "list_1": {
+      "A": "Adam Smith",
+      "B": "A. Marshall",
+      "C": "J. R. Hicks",
+      "D": "Wassily Leontief"
+    },
+    "list_2": {
+      "I": "Principles of Economics",
+      "II": "Value and Capital",
+      "III": "The Wealth of Nations",
+      "IV": "Input Output Economics"
+    },
+    "options": {
+      "a": "A-I, B-III, C-II, D-IV",
+      "b": "A-I, B-II, C-IV, D-III",
+      "c": "A-III, B-I, C-II, D-IV",
+      "d": "A-III, B-II, C-I, D-IV"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 20,
+    "exam_session": "January 2025",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "International Trade Theories",
+      "sub_branch": "Theories & Authors"
+    },
+    "keywords": [
+      "comparative cost advantage",
+      "opportunity cost",
+      "factor endowment",
+      "absolute advantage"
+    ],
+    "question": "Match the List II (Theory) with List II (Author(s)).",
+    "list_1": {
+      "A": "Theory of Comparative Cost Advantage",
+      "B": "Theory of Opportunity Cost",
+      "C": "Theory of Factor Endowment",
+      "D": "Theory of Absolute Advantage"
+    },
+    "list_2": {
+      "I": "Heckscher & Ohlin",
+      "II": "David Ricardo",
+      "III": "Haberler",
+      "IV": "Adam Smith"
+    },
+    "options": {
+      "a": "A-I, B-III, C-II, D-IV",
+      "b": "A-II, B-III, C-I, D-IV",
+      "c": "A-III, B-II, C-I, D-IV",
+      "d": "A-IV, B-III, C-II, D-I"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 21,
+    "exam_session": "January 2025",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "FEMA"
+    },
+    "keywords": [
+      "FEMA",
+      "foreign exchange management",
+      "RBI"
+    ],
+    "question": "Which of the following are the features of FEMA? A. Central government can regulate payments to and from a person situated outside the country. B. Holding of immovable property outside India is restricted. C. RBI can restrict transactions from the capital account even if it is done by an authorized person. D. All foreign financial transactions are to be done through an authorized FEMA person. E. FEMA applies to Indian citizens living abroad.",
+    "options": {
+      "a": "A, B, C only",
+      "b": "B, D, E only",
+      "c": "A, B, E only",
+      "d": "A, C, D only"
+    },
+    "answer": "c",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 22,
+    "exam_session": "September 2024",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "International Business Strategy",
+      "sub_branch": "Theories of International Investment"
+    },
+    "keywords": [
+      "eclectic theory",
+      "appropriability theory",
+      "market imperfection theory",
+      "OLI"
+    ],
+    "question": "Match the List-I with List-II.",
+    "list_1": {
+      "A": "Eclectic Theory",
+      "B": "Appropriability Theory",
+      "C": "Market Imperfection Theory",
+      "D": "Theory of Capital Movements"
+    },
+    "list_2": {
+      "I": "FDI occurs largely in oligopolistic industries rather than in industries operating under near-perfect competition",
+      "II": "Capital as an investment will move to countries where it is abundant to countries where it is scarce because returns on investment are higher where capital is limited",
+      "III": "The firm should be able to keep the benefits resulting from its innovation and research for its exclusive use",
+      "IV": "The framework follows three tiers - ownership, location, and internalization, assuming that companies are not likely to follow through the FDI if they can get the service or product internally and at lower costs"
+    },
+    "options": {
+      "a": "A-IV, B-I, C-III, D-II",
+      "b": "A-I, B-III, C-II, D-I",
+      "c": "A-III, B-IV, C-II, D-I",
+      "d": "A-IV, B-III, C-II, D-I"
+    },
+    "answer": "d",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 23,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "GATS Preferential Treatment"
+    },
+    "keywords": [
+      "WTO 8th Ministerial",
+      "Article II",
+      "GATS",
+      "least-developed countries"
+    ],
+    "question": "WTO in its 8th Ministerial conference adopted a decision allowing members to waive the provisions of Article II (most favored-Nation Treatment) of the GATS to allow the granting of preferential treatment to services and service supplies to which countries?",
+    "options": {
+      "a": "Adjacent Countries",
+      "b": "Non-Nuclear Countries",
+      "c": "Least-Developed Countries",
+      "d": "SAARC Countries"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 24,
+    "exam_session": "September 2024",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Export-Import Operations & Trade Finance",
+      "sub_branch": "Export Factoring"
+    },
+    "keywords": [
+      "export factoring",
+      "import factor",
+      "export factor",
+      "invoice",
+      "credit risk"
+    ],
+    "question": "In international trade, factoring is widely used in short-term transactions as a continuous arrangement. Arrange the steps of export factoring operations in sequence: A. The export factor transfers the invoice to the import factor, who, in return, assumes credit risk and undertakes the administration of receivables. B. The export factor pays cash in advance to the exporter against receivables until the payment is received from the importer. C. The importer and exporter enter into a sales contract and agree on the terms of sale. D. The import factor presents the invoice to the importer, takes payment, and pays to the export factor. E. The exporter ships the goods to the importer and submits the invoice to the export factor.",
+    "options": {
+      "a": "E,A,B,D,C",
+      "b": "E,B,A,D,C",
+      "c": "C,B,E,D,A",
+      "d": "C,E,B,A,D"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 25,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "IDA Tools"
+    },
+    "keywords": [
+      "IDA",
+      "Crisis Response Window",
+      "natural disasters"
+    ],
+    "question": "The tool that International Development Association (IDA) uses to address the impact of severe natural disasters, public health emergencies by providing extra finances is known as:",
+    "options": {
+      "a": "Emergency Response Fund (ERF)",
+      "b": "Long term Lending system",
+      "c": "Crisis Response Window (CRW)",
+      "d": "Monetary Fund"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 26,
+    "exam_session": "September 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Export-Import Operations & Trade Finance",
+      "sub_branch": "Import of Services"
+    },
+    "keywords": [
+      "import of service",
+      "supplier",
+      "recipient",
+      "place of supply"
+    ],
+    "question": "Import of service means: A. The Supplier of service is located in India B. The Supplier of service is located outside India C. The Recipient of service is located in India D. The Recipient of service is located outside India E. The place of Supply of service is in India",
+    "options": {
+      "a": "A, B & E Only",
+      "b": "A, D & E Only",
+      "c": "B, C & E Only",
+      "d": "B, C & E Only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 27,
+    "exam_session": "September 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "GATT Principles"
+    },
+    "keywords": [
+      "GATT principles",
+      "trade without discrimination",
+      "tariffs"
+    ],
+    "question": "Which of the following is/are the principles of General Agreement on Tariff and Trade (GATT)? A. Trade without discrimination B. Protection only through Tariffs C. Stable Trade D. Consultation E. Unfair distribution of wealth",
+    "options": {
+      "a": "A, B, C, E only",
+      "b": "A, B, C, D only",
+      "c": "B, C, D, E only",
+      "d": "A, C, D, E only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 28,
+    "exam_session": "September 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Business Environment Fundamentals",
+      "sub_branch": "Economic Environment"
+    },
+    "keywords": [
+      "economic environment",
+      "financial system",
+      "economic policies"
+    ],
+    "question": "Which of the following factors constitute the Economic Environment of a country? A. Financial System B. Socio-cultural environment C. Economic Policies D. Educational environment E. Structural Equilibrium",
+    "options": {
+      "a": "A, B & C only",
+      "b": "A, C & E only",
+      "c": "B, D & E only",
+      "d": "C, D & E only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 29,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "WTO Structure"
+    },
+    "keywords": [
+      "WTO apex body",
+      "Ministerial Conference"
+    ],
+    "question": "Which of the following is the apex decision-making body of WTO?",
+    "options": {
+      "a": "General Council",
+      "b": "Executive Council",
+      "c": "Ministerial Conference",
+      "d": "TRIMS"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 30,
+    "exam_session": "September 2024",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Consumer Protection & Business Law",
+      "sub_branch": "Consumer Rights"
+    },
+    "keywords": [
+      "consumer rights",
+      "right to safety",
+      "right to be informed",
+      "right to choose",
+      "right to be heard"
+    ],
+    "question": "Match List-I with List-II.",
+    "list_1": {
+      "A": "Right to Safety",
+      "B": "Right to be assured",
+      "C": "Right to be informed",
+      "D": "Right to be heard"
+    },
+    "list_2": {
+      "I": "Protection against marketing of goods/services hazardous to life & property",
+      "II": "Right to be known about quality, quantity, potency, standard and price of goods/services",
+      "III": "Right to be assured that interest will receive due consideration at appropriate forums/commission",
+      "IV": "Opportunity to choose from a wide range of products at reasonable rates"
+    },
+    "options": {
+      "a": "A-I, B-IV, C-II, D-III",
+      "b": "A-II, B-III, C-I, D-IV",
+      "c": "A-III, B-II, C-I, D-IV",
+      "d": "A-IV, B-III, C-II, D-I"
+    },
+    "answer": "verify",
+    "note": "Row labels in the source table appear scrambled relative to standard consumer-rights definitions; verify against official key"
+  },
+  {
+    "q_no": 31,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Business Law",
+      "sub_branch": "Fiduciary Relationship"
+    },
+    "keywords": [
+      "fiduciary relationship",
+      "trust"
+    ],
+    "question": "\"Fiduciary relationship\" is a relationship based on:",
+    "options": {
+      "a": "Legal obligations",
+      "b": "Absolute trust and reliance",
+      "c": "Trade relation",
+      "d": "Monetary benefits"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 32,
+    "exam_session": "September 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "Bretton Woods System"
+    },
+    "keywords": [
+      "Bretton Woods",
+      "fixed rate system"
+    ],
+    "question": "The Bretton Woods monetary system was based on the fixed rate monetary system. It lasted between the years:",
+    "options": {
+      "a": "1946 to 1974",
+      "b": "1944 to 1974",
+      "c": "1940 to 1974",
+      "d": "1944 to 1971"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 33,
+    "exam_session": "September 2024",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Consumer Protection & Business Law",
+      "sub_branch": "Acts/Institutions & Years"
+    },
+    "keywords": [
+      "Consumer Protection Act",
+      "FEMA",
+      "IMF",
+      "UNCTAD"
+    ],
+    "question": "Match List-I with List-II.",
+    "list_1": {
+      "A": "Consumer Protection Act",
+      "B": "FEMA",
+      "C": "IMF",
+      "D": "UNCTAD"
+    },
+    "list_2": {
+      "I": "1964",
+      "II": "1945",
+      "III": "1999",
+      "IV": "2019"
+    },
+    "options": {
+      "a": "A-IV, B-III, C-II, D-I",
+      "b": "A-II, B-III, C-I, D-IV",
+      "c": "A-III, B-IV, C-II, D-I",
+      "d": "A-I, B-II, C-III, D-IV"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 34,
+    "exam_session": "September 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Globalization & Economic Integration",
+      "sub_branch": "Benefits of Globalization"
+    },
+    "keywords": [
+      "globalization benefits",
+      "competition",
+      "innovation",
+      "consumer choice"
+    ],
+    "question": "Which of the following are the benefits of globalization? A. Increase in competition would make companies more cost & quality conscious and innovative B. An open economy spurs innovation with fresh ideas from abroad C. Liberalization & global competition enhances consumer choice and consumer surplus D. Developing countries could be very vulnerable to the harmful effects of globalization E. Globalization opens up enormous domestic and global opportunities for firms in developing countries",
+    "options": {
+      "a": "A, B, C & D Only",
+      "b": "C, D & E Only",
+      "c": "B, C, D & E Only",
+      "d": "A, B, C & E Only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 35,
+    "exam_session": "September 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "International Business Approaches",
+      "sub_branch": "EPRG Framework"
+    },
+    "keywords": [
+      "EPRG",
+      "ethnocentric",
+      "polycentric",
+      "regiocentric",
+      "geocentric"
+    ],
+    "question": "Which of the following are included under EPRG framework of internationalization?",
+    "options": {
+      "a": "B, C, D & E Only",
+      "b": "A, B, C & E Only",
+      "c": "A, C, D & E Only",
+      "d": "A, B, D & E Only"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 36,
+    "exam_session": "September 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "UNCTAD Functions"
+    },
+    "keywords": [
+      "UNCTAD functions",
+      "international trade",
+      "developing countries"
+    ],
+    "question": "Which of the following are the principal functions of UNCTAD? A. To promote international trade with a view to accelerating economic development B. To assist economic development of developing countries by promoting private enterprises C. To negotiate multilateral trade agreements D. To make proposals for putting its principles and policies into effect",
+    "options": {
+      "a": "A, B & C only",
+      "b": "B, C & D only",
+      "c": "A, B & D only",
+      "d": "A, C & D only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 37,
+    "exam_session": "September 2024",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Financial Markets",
+      "sub_branch": "Traders & Functions"
+    },
+    "keywords": [
+      "hedger",
+      "speculator",
+      "arbitrageur",
+      "scalper"
+    ],
+    "question": "Match the column.",
+    "list_1": {
+      "A": "Hedger",
+      "B": "Speculator",
+      "C": "Arbitrageur",
+      "D": "Scalper"
+    },
+    "list_2": {
+      "I": "Buying and selling shares quickly",
+      "II": "Reducing investment Risk",
+      "III": "Taking increased Risk willingly",
+      "IV": "Taking advantage of the mismatch of the prices in two markets"
+    },
+    "options": {
+      "a": "A-I, B-II, C-III, D-IV",
+      "b": "A-II, B-III, C-IV, D-I",
+      "c": "A-II, B-I, C-III, D-IV",
+      "d": "A-III, B-IV, C-II, D-I"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 38,
+    "exam_session": "June 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Economic History & Economists",
+      "sub_branch": "Terms of Trade"
+    },
+    "keywords": [
+      "Alfred Marshall",
+      "Terms of Trade"
+    ],
+    "question": "In which book did Alfred Marshall have for the first time used the term/word \"Terms of Trade\"?",
+    "options": {
+      "a": "Money, Credit and Commerce",
+      "b": "Principles of Economies",
+      "c": "The Economics of Industry",
+      "d": "On Rent"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 39,
+    "exam_session": "June 2024",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "International Business Approaches",
+      "sub_branch": "Approaches & Meaning"
+    },
+    "keywords": [
+      "ethnocentric approach",
+      "polycentric approach",
+      "regiocentric approach",
+      "geocentric approach"
+    ],
+    "question": "Match List-I with List-II.",
+    "list_1": {
+      "A": "Ethnocentric Approach",
+      "B": "Polycentric Approach",
+      "C": "Regioncentric Approach",
+      "D": "Geocentric Approach"
+    },
+    "list_2": {
+      "I": "Companies establish foreign subsidiary and empower their executives",
+      "II": "The domestic companies view foreign market as an extension to domestic markets",
+      "III": "Companies view the entire world as a single country",
+      "IV": "Subsidiaries consider regional Environment for Policy strategy formulation"
+    },
+    "options": {
+      "a": "A-II, B-I, C-IV, D-III",
+      "b": "A-I, B-III, C-IV, D-II",
+      "c": "A-II, B-III, C-I, D-IV",
+      "d": "A-IV, B-I, C-II, D-III"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 40,
+    "exam_session": "June 2024",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "International Trade Theories",
+      "sub_branch": "Theories & Propounders"
+    },
+    "keywords": [
+      "comparative advantage",
+      "competitive advantage",
+      "purchasing power parity",
+      "absolute advantage"
+    ],
+    "question": "Match List-I with List-II.",
+    "list_1": {
+      "A": "Theory of comparative Advantage",
+      "B": "Theory of competitive Advantage",
+      "C": "The Purchasing Power Parity Theory",
+      "D": "Theory of Absolute Advantage"
+    },
+    "list_2": {
+      "I": "Michael Porter",
+      "II": "David Ricardo",
+      "III": "Adam Smith",
+      "IV": "Gustav Cassel"
+    },
+    "options": {
+      "a": "A-II, B-I, C-IV, D-III",
+      "b": "A-II, B-I, C-III, D-IV",
+      "c": "A-I, B-III, C-IV, D-II",
+      "d": "A-III, B-I, C-II, D-IV"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 41,
+    "exam_session": "June 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "Meaning of Foreign Exchange"
+    },
+    "keywords": [
+      "foreign exchange meaning",
+      "exchange rate"
+    ],
+    "question": "Which of the following comes under the significant meaning of foreign exchange? A. It is used to denote the rate at which monetary units are exchanged. B. It is a process through which international payments are liquidated by different countries. C. It indicates the rate of sale and purchase of foreign currency. D. Foreign exchange situation in one country does not indicate the strength of the economy.",
+    "options": {
+      "a": "A, B, C only",
+      "b": "A, C, D only",
+      "c": "A, B, D only",
+      "d": "A, B, C, D"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 42,
+    "exam_session": "June 2024",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "GATT Formation"
+    },
+    "keywords": [
+      "GATT",
+      "1947"
+    ],
+    "question": "In which year the General Agreement on Tariffs and Trade (GATT) was set up?",
+    "options": {
+      "a": "October 1947",
+      "b": "November 1964",
+      "c": "January 1995",
+      "d": "July 1991"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 43,
+    "exam_session": "June 2024",
+    "question_type": "Chronological Sequencing",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "Formation of Organisations"
+    },
+    "keywords": [
+      "GATT",
+      "WTO",
+      "UNCTAD",
+      "ASIDE",
+      "chronology"
+    ],
+    "question": "Arrange the following international organisations according to their year of formation from earlier to latest: A. General Agreement on Tariff and Trade (GATT) B. World Trade Organisation (WTO) C. United Nations Conference on Trade and Development (UNCTAD) D. Assistance to States for Developing Export Infrastructure and Allied Activities (ASIDE)",
+    "options": {
+      "a": "A, B, C, D",
+      "b": "A, C, B, D",
+      "c": "B, A, C, D",
+      "d": "C, A, D, B"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 44,
+    "exam_session": "June 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "GATT Principles"
+    },
+    "keywords": [
+      "GATT principles",
+      "trade without discrimination"
+    ],
+    "question": "Which of the following is/are the principles of General Agreement on Tariff and Trade (GATT)? A. Trade without discrimination B. Protection only through Tariffs C. Stable Trade D. Consultation E. Unfair distribution of wealth",
+    "options": {
+      "a": "A, B, C, E only",
+      "b": "A, B, C, D only",
+      "c": "B, C, D, E only",
+      "d": "A, C, D, E only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 45,
+    "exam_session": "June 2024",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "Location Advantages (OLI)"
+    },
+    "keywords": [
+      "FDI location",
+      "OLI paradigm",
+      "ownership advantage"
+    ],
+    "question": "For Foreign Direct Investment, it is argued that a location in question attracts FDI because it combines the unique advantage of which of the following conditions? A. Internalization Advantage B. First Mover Advantage C. Knowledge Advantage D. Ownership Advantage E. Location Advantage",
+    "options": {
+      "a": "E, A and C only",
+      "b": "E, A and D only",
+      "c": "C, B and D only",
+      "d": "C, B and E only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 46,
+    "exam_session": "December 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "SAFTA"
+    },
+    "keywords": [
+      "SAFTA",
+      "NLDCS",
+      "LDCS"
+    ],
+    "question": "SAFTA (South Asian Free Trade Agreement) categorizes member nations as Non-Least Developed Contracting States (NLDCS) and Least Developed Contracting States (LDCS). Identify the NLDSC states from the following: A. Bangladesh B. Pakistan C. Bhutan D. India E. Sri Lanka",
+    "options": {
+      "a": "A, B and D only",
+      "b": "A, C and E only",
+      "c": "E, A and B only",
+      "d": "E, D and B only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 47,
+    "exam_session": "December 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "Trilemma of International Finance"
+    },
+    "keywords": [
+      "impossible trinity",
+      "fixed exchange rate",
+      "monetary policy",
+      "capital mobility"
+    ],
+    "question": "Which of the following are constituents of the trilemma of international finance? A. Fixed exchange rate B. Independent monetary policy C. Free mobility of capital D. Global recessionary tendency E. Rising inflationary conditions",
+    "options": {
+      "a": "A, B and C only",
+      "b": "C, D and E only",
+      "c": "A, C and E only",
+      "d": "A, C and D only"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 48,
+    "exam_session": "December 2023",
+    "question_type": "Chronological Sequencing",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "GATT/WTO Negotiation Rounds"
+    },
+    "keywords": [
+      "Kennedy round",
+      "Doha round",
+      "Annecy round",
+      "Torquay round",
+      "Tokyo round"
+    ],
+    "question": "Arrange the following rounds for multilateral trade negotiations under GATT/WTO in a chronological order.",
+    "options": {
+      "a": "C, D, A, E, B",
+      "b": "D, C, E, A, B",
+      "c": "B, A, E, C, D",
+      "d": "B, E, A, D, C"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 49,
+    "exam_session": "December 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Corporate Reporting & Business Standards",
+      "sub_branch": "Digital Business Reporting"
+    },
+    "keywords": [
+      "XBRL reporting",
+      "digital reporting standard"
+    ],
+    "question": "Which of the following frameworks is considered as the Open International Standard for Digital Business Reporting?",
+    "options": {
+      "a": "CSR reporting",
+      "b": "TBL reporting",
+      "c": "XBRL reporting",
+      "d": "PPP reporting"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 50,
+    "exam_session": "December 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Export-Import Operations & Trade Finance",
+      "sub_branch": "INCOTERMS"
+    },
+    "keywords": [
+      "INCOTERMS",
+      "CPT",
+      "delivery terms"
+    ],
+    "question": "In International Commercial Terms (INCOTERMES), identify the one, under which the delivery of goods to the named place of destination (discharge) takes place at the seller's expense. Buyers assumes the cargo insurance, import custom clearance, payment of custom duties, taxes and other costs and risk.",
+    "options": {
+      "a": "Carriage and Insurance Paid To (CIP)",
+      "b": "Cost, Insurance and Freight (CIF)",
+      "c": "Carriage Paid To (CPT)",
+      "d": "Cost and Freight (CFR)"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 51,
+    "exam_session": "December 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Export-Import Operations & Trade Finance",
+      "sub_branch": "Foreign Trade Policy Schemes"
+    },
+    "keywords": [
+      "Niryat Bandhu Scheme",
+      "DGFT",
+      "exporter mentoring"
+    ],
+    "question": "________ as defined under the Foreign Trade Policy (FTP), implemented by Director General of Foreign Trade has the main aim to \"mentor new and potential exporters on the intricacies of foreign trade through counselling, training and outreach programmes\" so that they can get into international trade.",
+    "options": {
+      "a": "Niryat Bharat Scheme",
+      "b": "Niryat Bandhu Scheme",
+      "c": "Niryat Benefit Scheme",
+      "d": "Niryat Border Scheme"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 52,
+    "exam_session": "December 2023",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "Global Monetary System Evolution"
+    },
+    "keywords": [
+      "global monetary system",
+      "protectionism",
+      "capital flows"
+    ],
+    "question": "Sequentially arrange the following impacts of the evolving global monetary system on the economics.",
+    "options": {
+      "a": "B, D, A, C, E",
+      "b": "C, A, D, E, B",
+      "c": "C, E, D, A, B",
+      "d": "E, B, D, A, C"
+    },
+    "answer": "verify",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 53,
+    "exam_session": "December 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Business Strategy & Innovation",
+      "sub_branch": "Technological Innovations"
+    },
+    "keywords": [
+      "innovation",
+      "incremental innovation",
+      "isoquants"
+    ],
+    "question": "Which of the following are relevant in technological innovations? A. Most innovations are incremental B. Most innovations involve the commercial utilization of ideas C. Innovations cannot be explained with isoquants D. Introduction of innovations is not stimulated by strong domestic rivalry and geographic concentrations E. The risk in introducing innovations is usually high",
+    "options": {
+      "a": "B, D and E only",
+      "b": "A, C and E only",
+      "c": "A, B and E only",
+      "d": "A, B and C only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 54,
+    "exam_session": "December 2023",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "FDI Automatic Route Limits"
+    },
+    "keywords": [
+      "FDI automatic route",
+      "TDR",
+      "multi-brand trading",
+      "petroleum refining"
+    ],
+    "question": "Match List-I with List-II.",
+    "list_1": {
+      "A": "Trading in Transferable Development Right (TDR)",
+      "B": "Multi-Brand Trading",
+      "C": "Satellite (Establishment and Operations)",
+      "D": "Petroleum Refining (by PSUs)"
+    },
+    "list_2": {
+      "I": "49%",
+      "II": "Prohibited",
+      "III": "51%",
+      "IV": "100%"
+    },
+    "options": {
+      "a": "A-IV, B-II, C-III, D-I",
+      "b": "A-II, B-III, C-IV, D-I",
+      "c": "A-I, B-III, C-II, D-IV",
+      "d": "A-IV, B-II, C-I, D-III"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 55,
+    "exam_session": "December 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Export-Import Operations & Trade Finance",
+      "sub_branch": "Piggy Backing"
+    },
+    "keywords": [
+      "rider",
+      "carrier",
+      "piggy backing"
+    ],
+    "question": "The exporting firm is termed 'rider' where the other firm with an established distribution channel in the target country is termed as 'Carrier'. This phenomenon is known as:",
+    "options": {
+      "a": "Counter Trade",
+      "b": "Barter",
+      "c": "Piggy Backing",
+      "d": "Switch Trading"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 56,
+    "exam_session": "June 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "Current Account Deficit"
+    },
+    "keywords": [
+      "current account deficit",
+      "savings",
+      "fiscal deficit"
+    ],
+    "question": "The problem of persistent current account deficit can be avoided by pursuing which of the following polices? A. Encouraging Savings B. Controlling fiscal deficit C. Devaluation of the domestic currency D. Curtailing productivity E. Reduced dependence in costly external commercial borrowings",
+    "options": {
+      "a": "A, B, D only",
+      "b": "B, C, E only",
+      "c": "C, D, E only",
+      "d": "D, E, A only"
+    },
+    "answer": "b",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 57,
+    "exam_session": "June 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Globalization & Economic Integration Index",
+      "sub_branch": "A.T. Kearney Index"
+    },
+    "keywords": [
+      "globalization index",
+      "A.T. Kearney"
+    ],
+    "question": "A.T. Kearney foreign Policy Globalization Index (2007) is a comprehensive framework to measure globalisation. It is based in 12 variables, grouped into which of the following four baskets?",
+    "options": {
+      "a": "Economic integration, Political integration, Knowledge Integration, Social Integration",
+      "b": "Personal Integration, Technological integration, Economic integration, Political integration",
+      "c": "Social integration, Political integration, Personal integration, Technological Integration",
+      "d": "Knowledge integration, Economic integration, Political integration, Technological integration"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 58,
+    "exam_session": "June 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "Benefits of FDI"
+    },
+    "keywords": [
+      "FDI benefits",
+      "host country",
+      "technology transfer"
+    ],
+    "question": "The potential benefit of FDI to host countries include which of the following: A. Access to superior technology and increased competition B. Employment generation C. Increase in domestic investments D. Outflow of capital E. Human capital development",
+    "options": {
+      "a": "B, D, E only",
+      "b": "A, B, D only",
+      "c": "C, E, D only",
+      "d": "A, B, E only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 59,
+    "exam_session": "June 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "International Business Strategy",
+      "sub_branch": "Drivers of Global Business"
+    },
+    "keywords": [
+      "digitally interconnected world",
+      "trade blocs",
+      "demographic dividend"
+    ],
+    "question": "Which of the following drive growth of international business in a digitally interconnected world? A. Strong consumption in global south B. Dynamic exchange, interest and inflation rates C. Formation of trade promoting regional groups D. Regulated capital and portfolio flows E. Demographic dividend and low cost manufacturing",
+    "options": {
+      "a": "A, B and C only",
+      "b": "C, D and E only",
+      "c": "B, D and E only",
+      "d": "A, C and E only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 60,
+    "exam_session": "June 2023",
+    "question_type": "Chronological Sequencing",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "GATT/WTO Negotiation Rounds"
+    },
+    "keywords": [
+      "Kennedy round",
+      "Doha round",
+      "Geneva round",
+      "Tokyo round",
+      "Uruguay round"
+    ],
+    "question": "Sequence the conduct of following trade negotiation and facilitation rounds in chronological order.",
+    "options": {
+      "a": "B, D, C, A, E",
+      "b": "C, A, D, E, B",
+      "c": "A, B, D, C, E",
+      "d": "D, C, A, E, B"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 61,
+    "exam_session": "June 2023",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "International Trade Theories",
+      "sub_branch": "Theory & Propounder"
+    },
+    "keywords": [
+      "factor endowment theory",
+      "product life cycle theory",
+      "absolute cost advantage",
+      "competitive advantage"
+    ],
+    "question": "Match List I with List II.",
+    "list_1": {
+      "A": "Factor Endowment theory",
+      "B": "Product life cycle theory",
+      "C": "Absolute cost advantages theory",
+      "D": "Competitive advantage theory"
+    },
+    "list_2": {
+      "I": "Adam Smith",
+      "II": "Michael Porter",
+      "III": "Heckscher and Ohlin",
+      "IV": "Raymond Vernon"
+    },
+    "options": {
+      "a": "A-I, B-III, C-II, D-IV",
+      "b": "A-III, B-IV, C-I, D-II",
+      "c": "A-II, B-III, C-I, D-IV",
+      "d": "A-IV, B-I, C-III, D-II"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 62,
+    "exam_session": "June 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "NAFTA"
+    },
+    "keywords": [
+      "NAFTA",
+      "member countries"
+    ],
+    "question": "Regional Economic Integration is an attempt to achieve economic gains from the free flow of trade and investment between countries. One such association is NAFTA. NAFTA comprises of the following countries:",
+    "options": {
+      "a": "USA, Canada, Mexico",
+      "b": "USA, Canada, Brazil",
+      "c": "USA, Mexico, Brazil",
+      "d": "Canada, Mexico, panama"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 63,
+    "exam_session": "June 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "BoP Accounts"
+    },
+    "keywords": [
+      "official reserves account",
+      "gold holdings"
+    ],
+    "question": "In which of the following balance of payment accounts changes in holdings of gold and foreign currencies by official monetary institutions are accounted for?",
+    "options": {
+      "a": "Current Account",
+      "b": "Capital Account",
+      "c": "Official Reserves Account",
+      "d": "Foreign Exchange Account"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 64,
+    "exam_session": "June 2023",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "International Business Strategy",
+      "sub_branch": "Going International Steps"
+    },
+    "keywords": [
+      "going international",
+      "market entry decision"
+    ],
+    "question": "The steps to be followed by a firm while strategizing to go international are as follows: A. Deciding when to enter B. Deciding which markets to enter C. Deciding whether to go global D. Choosing a mode of entry E. Deciding how to enter the chosen market.",
+    "options": {
+      "a": "E, D, C, B, A",
+      "b": "C, A, E, D, B",
+      "c": "C, B, A, E, D",
+      "d": "A, B, C, E, D"
+    },
+    "answer": "b",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 65,
+    "exam_session": "June 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Economic History & Economists",
+      "sub_branch": "National Wealth"
+    },
+    "keywords": [
+      "William Petty",
+      "labour",
+      "national wealth"
+    ],
+    "question": "Who was of the opinion that labor was \"the father of wealth\" and it must be included in any estimate of national wealth?",
+    "options": {
+      "a": "William Far",
+      "b": "William Petty",
+      "c": "William C. Pyle",
+      "d": "Flamholtz"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 66,
+    "exam_session": "June 2023",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Globalization & Economic Integration Index",
+      "sub_branch": "A.T. Kearney Index Variables"
+    },
+    "keywords": [
+      "globalization index variables",
+      "tourism",
+      "internet users",
+      "FDI"
+    ],
+    "question": "Match the list I and II.",
+    "list_1": {
+      "A": "Economic Integration",
+      "B": "Personal Integration",
+      "C": "Technological Integration",
+      "D": "Political Integration"
+    },
+    "list_2": {
+      "I": "International Tourism and Travel",
+      "II": "Internet Users",
+      "III": "Foreign Direct Investment",
+      "IV": "Ratification and multilateral treaties"
+    },
+    "options": {
+      "a": "A-IV, B-III, C-II, D-I",
+      "b": "A-III, B-I, C-II, D-IV",
+      "c": "A-III, B-II, C-I, D-IV",
+      "d": "A-IV, B-I, C-II, D-III"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 67,
+    "exam_session": "June 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "ASEAN Membership"
+    },
+    "keywords": [
+      "ASEAN",
+      "member countries"
+    ],
+    "question": "Which one group of the following countries are members of ASEAN?",
+    "options": {
+      "a": "Laos, Cambodi, Brunei",
+      "b": "Malaysia, Thailand, Taiwan",
+      "c": "Myanmar, Singapore, Hong Kong",
+      "d": "Fiji, Laos, Cambodia"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 68,
+    "exam_session": "June 2023",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Export-Import Operations & Trade Finance",
+      "sub_branch": "Sale and Leaseback"
+    },
+    "keywords": [
+      "sale and leaseback",
+      "fixed assets",
+      "leasing"
+    ],
+    "question": "Given below are two statements: Assertion A and Reason R. Assertion A: Usually manufacturing companies use sale and lease back arrangement to unlock investment in fixed assets. Reason R: In a sale and lease back arrangement, the companies sell the asset to a leasing company, and lease it back to enjoy the uninterrupted use of the asset in their business.",
+    "options": {
+      "a": "Both A and R are true and R is the correct explanation of A",
+      "b": "Both A and R are true but R is NOT the correct explanation of A",
+      "c": "A is true but R is not correct",
+      "d": "A is not correct but R is correct"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 69,
+    "exam_session": "June 2023",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "Trading Blocs & Competition"
+    },
+    "keywords": [
+      "trade blocs",
+      "competition",
+      "local industry"
+    ],
+    "question": "Given below are two statements: One is labelled as Assertion A and the other is labelled as Reason R. Assertion A: By removing barriers between national markets, trading blocks create competition due to bigger trading area. Reason R: Increased competition can lead to the closure of local industry and harm domestic consumption.",
+    "options": {
+      "a": "Both A and R are correct and R is the correct explanation of A",
+      "b": "Both A and R are correct but R is not the correct explanation of A",
+      "c": "A is correct but R is not correct",
+      "d": "A is not correct but R is correct"
+    },
+    "answer": "a",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 70,
+    "exam_session": "June 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "Supply Factors of FDI"
+    },
+    "keywords": [
+      "FDI supply factors",
+      "resource availability",
+      "logistics"
+    ],
+    "question": "Which of the following one considered as supply factors affecting the flow of Foreign Direct Investment (FDI)? A. Customer Access B. Economic Priorities C. Resource Availability D. Avoidance of Trade Barrier E. Logistics",
+    "options": {
+      "a": "A and B only",
+      "b": "B and D only",
+      "c": "C and E only",
+      "d": "A and E only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 71,
+    "exam_session": "June 2023",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Human Resource Accounting",
+      "sub_branch": "Approaches & Developers"
+    },
+    "keywords": [
+      "opportunity cost approach",
+      "replacement cost",
+      "historical cost",
+      "standard cost"
+    ],
+    "question": "Match List I with List II.",
+    "list_1": {
+      "A": "Opportunity cost Approach",
+      "B": "Replacement cost Approach",
+      "C": "Historical cost Approach",
+      "D": "Standard cost Approach"
+    },
+    "list_2": {
+      "I": "David Watson",
+      "II": "Rensis Likert and Eric G. Flamholiz",
+      "III": "Brummet Flamholtz and Pyle",
+      "IV": "Hekimian and Jones"
+    },
+    "options": {
+      "a": "A-I, B-II, C-III, D-IV",
+      "b": "A-II, B-III, C-I, D-IV",
+      "c": "A-I, B-IV, C-III, D-II",
+      "d": "A-IV, B-II, C-III, D-I"
+    },
+    "answer": "verify",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 72,
+    "exam_session": "March 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "International Business Strategy",
+      "sub_branch": "Free Trade Agreements"
+    },
+    "keywords": [
+      "FTA",
+      "India-UAE CEPA"
+    ],
+    "question": "Which one of the following FTA was signed in February 2022 and came into force in May 2022?",
+    "options": {
+      "a": "AI-ECTA Australia - India Economic Cooperation and Trade Agreement",
+      "b": "India-UAE Comprehensive Economic Partnership Agreement (CEPA)",
+      "c": "India-Nepal Treaty of Trade",
+      "d": "India - Singapore Comprehensive Economic Cooperation Agreement (CECA)"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 73,
+    "exam_session": "March 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Export-Import Operations & Trade Finance",
+      "sub_branch": "Foreign Trade Policy"
+    },
+    "keywords": [
+      "FTP 2015-20",
+      "extension"
+    ],
+    "question": "The Government of India on 27-9-22 extended the existing Foreign Trade Policy (2015-20) up to which one of the following on account of volatile global economic and geo-political situation and currency fluctuations?",
+    "options": {
+      "a": "December 2022",
+      "b": "March 2023",
+      "c": "September 2023",
+      "d": "December 2023"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 74,
+    "exam_session": "March 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "International Trade Theories",
+      "sub_branch": "Heckscher-Ohlin Theory"
+    },
+    "keywords": [
+      "Heckscher-Ohlin",
+      "factor endowments"
+    ],
+    "question": "According to the Heckscher-Ohlin theory, which one of the following statements is correct? A. Trade should take place among countries that have greater differences in their factor endowments. B. A country with a relatively cheaper cost of labour would export labour-intensive products. C. Country benefits from international trade even if it is less efficient than other nations. D. Countries with the proximity of geographical locations would have greater trade compared to the distant ones.",
+    "options": {
+      "a": "A and B",
+      "b": "C and B",
+      "c": "D and B",
+      "d": "B and C"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 75,
+    "exam_session": "March 2023",
+    "question_type": "Statement-based (True/False)",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "Monetary Policy"
+    },
+    "keywords": [
+      "monetary policy",
+      "lending rates",
+      "inflation"
+    ],
+    "question": "Given below are two statements: Statement I: Monetary policy on its own cannot influence economic growth but can only support it by creating congenial factors. Statement II: Monetary policy rates change get transmitted across the markets and eventually get reflected in lending rates, mortgage rates and yields. Hence, monetary policy can address the current inflation.",
+    "options": {
+      "a": "Both Statement I and Statement II are true",
+      "b": "Both Statement I and Statement II are false",
+      "c": "Statement I is true but Statement II is false",
+      "d": "Statement I is false but Statement II is true"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 76,
+    "exam_session": "March 2023",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "Dispute Settlement System"
+    },
+    "keywords": [
+      "WTO dispute settlement",
+      "consultations",
+      "panel review",
+      "appellate"
+    ],
+    "question": "Sequence the following different settlement stages of the WTO dispute settlement System.",
+    "options": {
+      "a": "D, E, A, C, B",
+      "b": "E, D, C, A, B",
+      "c": "E, C, D, B, A",
+      "d": "D, E, C, A, B"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 77,
+    "exam_session": "March 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Socio-Economic Trends",
+      "sub_branch": "Women Upskilling Post-COVID"
+    },
+    "keywords": [
+      "women upskilling",
+      "flexible work",
+      "work from home"
+    ],
+    "question": "After COVID-19, which of the following are the upskilling enablers for women in India? A. Introduction of electric vehicles. B. Flexible work opportunities. C. Work from home. D. Need to stay relevant, especially in technology. E. Willingness to return to work.",
+    "options": {
+      "a": "A and B only",
+      "b": "C and D only",
+      "c": "C, D and E only",
+      "d": "B, C, D and E only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 78,
+    "exam_session": "March 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Consumer Behaviour",
+      "sub_branch": "E-commerce Consumption Events"
+    },
+    "keywords": [
+      "e-commerce",
+      "mega consumption events",
+      "Black Friday",
+      "Cyber Monday"
+    ],
+    "question": "E-commerce and large retailers in India bet big on mega consumption events on which of the following days? A. Republic Day B. Independence Day C. Black Friday D. Cyber Monday E. Akshya Tritiya",
+    "options": {
+      "a": "A and B only",
+      "b": "C and D only",
+      "c": "A, B and E only",
+      "d": "A, B, C, D and E"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 79,
+    "exam_session": "March 2023",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Contemporary Global Issues",
+      "sub_branch": "COP 27"
+    },
+    "keywords": [
+      "COP 27",
+      "mitigation",
+      "capacity building",
+      "loss and damage fund"
+    ],
+    "question": "Match List I (COP 27) with List II (COP 27 Action Plan).",
+    "list_1": {
+      "A": "Mitigation",
+      "B": "Capitalize",
+      "C": "Technology",
+      "D": "Capacity Building"
+    },
+    "list_2": {
+      "I": "Promote climate know-how solutions",
+      "II": "Empowering all stakeholders to engage in climate action",
+      "III": "Phase down unabated coal power",
+      "IV": "Creation of \"loss and damage\" fund"
+    },
+    "options": {
+      "a": "A-II, B-III, C-IV, D-I",
+      "b": "A-IV, B-III, C-II, D-I",
+      "c": "A-III, B-IV, C-I, D-II",
+      "d": "A-IV, B-III, C-I, D-II"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 80,
+    "exam_session": "March 2023",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Consumer Behaviour",
+      "sub_branch": "Social Factors"
+    },
+    "keywords": [
+      "social factors",
+      "culture",
+      "social class",
+      "groups",
+      "family"
+    ],
+    "question": "Which of the following are social factors influencing consumer's behaviour? A. Culture B. Social class C. Groups D. Family E. Roles and status",
+    "options": {
+      "a": "A, D and E only",
+      "b": "B, C, D and E only",
+      "c": "C, D and E only",
+      "d": "B and C only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 81,
+    "exam_session": "March 2023",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "Non-Tariff Barriers"
+    },
+    "keywords": [
+      "non-tariff barrier",
+      "phytosanitary regulations",
+      "FTA"
+    ],
+    "question": "Which one of the following non-tariff barriers is to be adequately addressed by India while signing FTA with any country that has potential to import fruits, vegetables and other plant-based products from India?",
+    "options": {
+      "a": "Phytosanitary Regulations",
+      "b": "Sanitary Regulations",
+      "c": "Complex Registrations",
+      "d": "Restrictive customs procedure"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 82,
+    "exam_session": "March 2023",
+    "question_type": "Sequencing (Levels/Hierarchy)",
+    "topic": {
+      "main_branch": "Indian Economy",
+      "sub_branch": "Index of Core Industries"
+    },
+    "keywords": [
+      "core industries index",
+      "weightage",
+      "cement",
+      "coal",
+      "steel"
+    ],
+    "question": "Arrange the following industry verticals in the ascending order of their weightages in the index of core industries in India.",
+    "options": {
+      "a": "A, C, D, B, E",
+      "b": "E, B, D, A, C",
+      "c": "B, A, E, D, C",
+      "d": "B, E, D, C, A"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 83,
+    "exam_session": "November 2022",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Business Law",
+      "sub_branch": "Legal Latin Phrases"
+    },
+    "keywords": [
+      "consensus ad idem",
+      "quid pro quo",
+      "quantum meruit",
+      "caveat emptor"
+    ],
+    "question": "Match the List-I with List-II.",
+    "list_1": {
+      "A": "Consensus ad idem",
+      "B": "Quid pro quo",
+      "C": "Quantum meruit",
+      "D": "Caveat emptor"
+    },
+    "list_2": {
+      "I": "Something in return",
+      "II": "As much as earned",
+      "III": "Buyer beware",
+      "IV": "Meeting of minds"
+    },
+    "options": {
+      "a": "A-I, B-III, C-IV, D-II",
+      "b": "A-IV, B-I, C-II, D-III",
+      "c": "A-II, B-I, C-III, D-IV",
+      "d": "A-I, B-IV, C-II, D-III"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 84,
+    "exam_session": "November 2022",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Indian Economy",
+      "sub_branch": "Globalization of Indian Businesses"
+    },
+    "keywords": [
+      "globalization India",
+      "import substitution",
+      "de-licensing",
+      "FDI"
+    ],
+    "question": "Sequentially arrange the following themes related to globalization of Indian businesses since independence.",
+    "options": {
+      "a": "C, E, B, D, A",
+      "b": "E, C, B, A, D",
+      "c": "C, E, B, A, D",
+      "d": "A, C, E, B, D"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 85,
+    "exam_session": "November 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "International Business Strategy",
+      "sub_branch": "Product Standardization"
+    },
+    "keywords": [
+      "product standardization",
+      "adaptation",
+      "economies of R&D"
+    ],
+    "question": "Which of the following factors favour product standardization in the international markets? A. High cost of adaptation. B. Variations in conditions of use. C. Country of origin effect. D. Economies in R&D. E. Differences in technical standards.",
+    "options": {
+      "a": "A and E only",
+      "b": "A, C and D only",
+      "c": "A, B and D only",
+      "d": "A and D only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 86,
+    "exam_session": "November 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Consumer Behaviour",
+      "sub_branch": "Consumer Rationality"
+    },
+    "keywords": [
+      "consumer rationality",
+      "preferences",
+      "information"
+    ],
+    "question": "The qualified characteristics determining consumer 'rationality' includes which of the following? A. Economic selfish motives B. Risk-return optimizer C. Clarity of preferences D. Possession of information E. Non-satiation of needs",
+    "options": {
+      "a": "A, B and C only",
+      "b": "C, D and E only",
+      "c": "A, B, C and D only",
+      "d": "A, C, D and E only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 87,
+    "exam_session": "November 2022",
+    "question_type": "Chronological Sequencing",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "GATT/WTO Negotiation Rounds"
+    },
+    "keywords": [
+      "Uruguay round",
+      "Geneva round",
+      "Kennedy round",
+      "Doha round",
+      "Tokyo round",
+      "reverse chronological"
+    ],
+    "question": "Arrange the following negotiation round of WTO (World Trade Organization) in reverse chronological order:",
+    "options": {
+      "a": "A, C, D, B, E",
+      "b": "D, A, E, C, B",
+      "c": "B, A, C, E, D",
+      "d": "D, E, A, C, B"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 88,
+    "exam_session": "November 2022",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "International Trade Theories",
+      "sub_branch": "Trade Theories & Expounders"
+    },
+    "keywords": [
+      "absolute advantage",
+      "factor endowments",
+      "factor-intensity reversal",
+      "comparative advantage"
+    ],
+    "question": "Match List I with List II.",
+    "list_1": {
+      "A": "Absolute Advantage",
+      "B": "Factor Endowments",
+      "C": "Factor-Intensity Reversal",
+      "D": "Comparative Advantage"
+    },
+    "list_2": {
+      "I": "David Ricardo",
+      "II": "Minhas, Leontief et.al",
+      "III": "Adam Smith",
+      "IV": "Heckscher-Ohlin"
+    },
+    "options": {
+      "a": "A-III, B-IV, C-II, D-I",
+      "b": "A-III, B-IV, C-I, D-II",
+      "c": "A-I, B-IV, C-III, D-II",
+      "d": "A-III, B-I, C-II, D-IV"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 89,
+    "exam_session": "November 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Trade Tariffs & Barriers",
+      "sub_branch": "Disguised Import Restrictions"
+    },
+    "keywords": [
+      "import restrictions",
+      "labeling requirements",
+      "safety regulations"
+    ],
+    "question": "Which of the following are thinly veiled disguises that essentially restrict imports? A. Voluntary import restrictions B. Labeling requirements showing origin and contents C. Import tariffs and quotas D. Safety regulations for automobile and electrical equipment's E. Health regulations for hygiene production and packaging of imported food production",
+    "options": {
+      "a": "A, B and C only",
+      "b": "B, C and D only",
+      "c": "C, D and E only",
+      "d": "B, D and E only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 90,
+    "exam_session": "November 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Globalization & Economic Integration",
+      "sub_branch": "Factors Restraining Globalization"
+    },
+    "keywords": [
+      "globalization restraints",
+      "nationalism",
+      "trade barriers"
+    ],
+    "question": "Which of the following factors restrain Globalization? A. International economic integration B. Nationalism C. Emerging trade barriers D. Regulatory controls E. Move towards free marketing systems",
+    "options": {
+      "a": "A and E only",
+      "b": "C, D and E only",
+      "c": "B, C and D only",
+      "d": "A, B and D only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 91,
+    "exam_session": "November 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "World Bank Lending"
+    },
+    "keywords": [
+      "World Bank",
+      "lending principles"
+    ],
+    "question": "Which one of the following is not a guiding principle of World Bank regarding its lending operation?",
+    "options": {
+      "a": "Proper assessment of the repayment prospects of loans.",
+      "b": "Lending should be only for specific projects which are economically and technically sound and of a high priority nature.",
+      "c": "The lending should be to enable a country to meet foreign exchange content of the project cost.",
+      "d": "The bank does expect the borrowing country to spend the loan in a particular country."
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 92,
+    "exam_session": "November 2022",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Export-Import Operations & Trade Finance",
+      "sub_branch": "EPZ vs Free Trade Zone"
+    },
+    "keywords": [
+      "export processing zone",
+      "free trade zone"
+    ],
+    "question": "Given below are two statements, one is labelled a Assertion A and the other is labelled as Reason R. Assertion A: An export processing zone is different from free trade zone as it promotes units primarily devoted to exports. Reason R: Goods imported to a free trade zone may be re-exported without any processing, in the same form. But goods exported by units in a EPZ are expected to have undergone some value addition by manufacturing.",
+    "options": {
+      "a": "Both A and R are correct and R is the correct explanation of A",
+      "b": "Both A and R are correct but R is NOT the correct explanation of A",
+      "c": "A is correct but R is not correct",
+      "d": "A is not correct but R is correct"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 93,
+    "exam_session": "November 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Business Strategy & Innovation",
+      "sub_branch": "Drivers of Innovation"
+    },
+    "keywords": [
+      "innovation driver",
+      "culture",
+      "Gerard Teilis"
+    ],
+    "question": "Which is the single most important drive of innovation (Gerard.J. Teilis 2013) in a business firm?",
+    "options": {
+      "a": "Labour",
+      "b": "Capital",
+      "c": "Government",
+      "d": "Culture"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 94,
+    "exam_session": "November 2022",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "Tariff/Subsidy Explanation"
+    },
+    "keywords": [
+      "tariffication",
+      "prohibited subsidies",
+      "actionable subsidies",
+      "non-actionable subsidies"
+    ],
+    "question": "Match List I with List II.",
+    "list_1": {
+      "A": "Tariffication",
+      "B": "Prohibited subsidies",
+      "C": "Actionable subsidies",
+      "D": "Non-actionable subsidies"
+    },
+    "list_2": {
+      "I": "They have demonstrably adverse effects on other member countries.",
+      "II": "They act on goods which are contingent upon export performance.",
+      "III": "Replacement of existing non-tariff restrictions.",
+      "IV": "For industrial research in disadvantaged regions."
+    },
+    "options": {
+      "a": "A-II, B-III, C-I, D-IV",
+      "b": "A-IV, B-I, C-II, D-III",
+      "c": "A-III, B-II, C-I, D-IV",
+      "d": "A-II, B-IV, C-III, D-I"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 95,
+    "exam_session": "November 2022",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Export-Import Operations & Trade Finance",
+      "sub_branch": "Export Credit Disbursement"
+    },
+    "keywords": [
+      "export credit",
+      "packing credit",
+      "insurance"
+    ],
+    "question": "Arrange the procedure followed for disbursement of export credit in a sequence from the first to the last.",
+    "options": {
+      "a": "B, A, E, D, C",
+      "b": "A, C, B, D, E",
+      "c": "A, B, C, D, E",
+      "d": "E, B, A, C, D"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 96,
+    "exam_session": "November 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Business Environment Fundamentals",
+      "sub_branch": "Defining a Business"
+    },
+    "keywords": [
+      "business definition",
+      "products",
+      "markets",
+      "functions"
+    ],
+    "question": "Which of the following are the essential elements for defining a business? A. Dealers B. Products C. Markets D. Competitors E. Functions",
+    "options": {
+      "a": "B, C and E only",
+      "b": "A, B and E only",
+      "c": "B, C and D only",
+      "d": "B and D only"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 97,
+    "exam_session": "October 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "International Business Strategy",
+      "sub_branch": "Product Modification"
+    },
+    "keywords": [
+      "cosmetics",
+      "product modification",
+      "international arena"
+    ],
+    "question": "Which of the following products would required intensive modification in the international arena?",
+    "options": {
+      "a": "Tennis racket",
+      "b": "Cosmetics",
+      "c": "Notebook computer",
+      "d": "Camera"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 98,
+    "exam_session": "October 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "Currency Option Pricing"
+    },
+    "keywords": [
+      "currency option",
+      "spot rate",
+      "exercise rate"
+    ],
+    "question": "Which of the following affect the pricing of a currency option? A. Spot exchange rate B. Exercise rate C. Foreign risk-free rate of return D. Domestic risk-adjusted rate E. Time to expiration",
+    "options": {
+      "a": "B, C, D, E only",
+      "b": "A, C, D, E only",
+      "c": "A, B, C, E only",
+      "d": "A, B, D, E only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 99,
+    "exam_session": "October 2022",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "Export-Import Operations & Trade Finance",
+      "sub_branch": "Concluding an Export Deal"
+    },
+    "keywords": [
+      "export deal",
+      "letter of credit",
+      "export order"
+    ],
+    "question": "Arrange the following steps in the process of concluding an export deal.",
+    "options": {
+      "a": "A, C, E, D, B",
+      "b": "C, A, D, E, B",
+      "c": "B, E, A, C, D",
+      "d": "D, A, B, C, E"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 100,
+    "exam_session": "October 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Trade Tariffs & Barriers",
+      "sub_branch": "Quotas"
+    },
+    "keywords": [
+      "quotas",
+      "quantitative restrictions",
+      "absolute quota",
+      "tariff quota"
+    ],
+    "question": "Quotas which are the quantitative restrictions on exports/imports intended at protecting local industries and conserving foreign exchange, include which of the following?",
+    "options": {
+      "a": "B, C, E only",
+      "b": "A, B, C only",
+      "c": "A, D, E only",
+      "d": "B, C, D, E only"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 101,
+    "exam_session": "October 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "International Trade Theories",
+      "sub_branch": "Heckscher-Ohlin Theory"
+    },
+    "keywords": [
+      "factor endowment",
+      "labour-capital relationship"
+    ],
+    "question": "Heckscher-Ohlin Theory of factor endowment suggests which of the following types of relationship?",
+    "options": {
+      "a": "Production-Marketing relationship",
+      "b": "Land-Labour relationship",
+      "c": "Marketing-Capital relationship",
+      "d": "Labour-Capital relationship"
+    },
+    "answer": "verify",
+    "note": "verify against official key; options may be incomplete (E. Technological complexities also listed)"
+  },
+  {
+    "q_no": 102,
+    "exam_session": "October 2022",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "International Business Strategy",
+      "sub_branch": "Lease Types"
+    },
+    "keywords": [
+      "leveraged lease",
+      "direct lease",
+      "wet lease",
+      "update lease"
+    ],
+    "question": "Match List-I Types with List-II Description.",
+    "list_1": {
+      "A": "Leveraged lease",
+      "B": "Direct lease",
+      "C": "Wet lease",
+      "D": "Update lease"
+    },
+    "list_2": {
+      "I": "Mix operating and finance lease on full pay-out basis and provides for the purchase option to the lease.",
+      "II": "Financing for services and fuel in the aircraft industry.",
+      "III": "Protects leases against the rate of obsolesces.",
+      "IV": "Involves lessor, leases and financer, lesser provides equity and major amount is provided by the financer as loan."
+    },
+    "options": {
+      "a": "A-I, B-II, C-III, D-IV",
+      "b": "A-IV, B-I, C-III, D-II",
+      "c": "A-II, B-IV, C-I, D-III",
+      "d": "A-IV, B-III, C-I, D-II"
+    },
+    "answer": "verify",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 103,
+    "exam_session": "October 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "Mode of Entry"
+    },
+    "keywords": [
+      "exporting",
+      "market entry",
+      "little experience"
+    ],
+    "question": "Which is the most appropriate mode of entry-in international business to an enterprise with little experience of International Markets?",
+    "options": {
+      "a": "Acquisition",
+      "b": "Exporting",
+      "c": "Strategic Alliance",
+      "d": "Joint Venture"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 104,
+    "exam_session": "October 2022",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "International Business Strategy",
+      "sub_branch": "Country Risk Ratings"
+    },
+    "keywords": [
+      "BERI index",
+      "EIU indices",
+      "PRS Group"
+    ],
+    "question": "The most significant and widely-used country risk ratings in International Business Risks are given by which of the following? A. Business Environment Risk Intelligence (BERI) Index B. Economist Intelligence Unit (EIU) Indices C. National Center for Trade Information (NCTI) D. India Trade Promotion Organization (ITPO) E. PRS Group's International Country Risk Guide",
+    "options": {
+      "a": "A, C only",
+      "b": "A, B and E only",
+      "c": "A, D, E only",
+      "d": "C, D, E only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 105,
+    "exam_session": "October 2022",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "Mode of Entry Risk"
+    },
+    "keywords": [
+      "direct investment",
+      "risk and profit potential"
+    ],
+    "question": "In which one of the following modes of entry into foreign markets risk and profit potential are the highest?",
+    "options": {
+      "a": "Indirect exporting",
+      "b": "Joint venture",
+      "c": "Direct investment",
+      "d": "Direct exporting"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 106,
+    "exam_session": "October 2022",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "WTO Agreements"
+    },
+    "keywords": [
+      "NAMA",
+      "GATS",
+      "TRIMS",
+      "TRIPS"
+    ],
+    "question": "Match List -I with List -II.",
+    "list_1": {
+      "A": "NAMA",
+      "B": "GATTs",
+      "C": "TRIMs",
+      "D": "TRIPs"
+    },
+    "list_2": {
+      "I": "Liberation of International Investments.",
+      "II": "Includes industrial good, textile, jewellery, fish and fisheries products and manufacturing industries.",
+      "III": "Liberalization of trade in goods and services.",
+      "IV": "Provides monopoly power to owners of intellectual property."
+    },
+    "options": {
+      "a": "A-II, B-I, C-IV, D-III",
+      "b": "A-IV, B-II, C-III, D-I",
+      "c": "A-II, B-III, C-I, D-IV",
+      "d": "A-III, B-II, C-IV, D-I"
+    },
+    "answer": "verify",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 107,
+    "exam_session": "November 2021",
+    "question_type": "Sequencing (Levels/Hierarchy)",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "FDI Inflows by Region"
+    },
+    "keywords": [
+      "FDI inflows",
+      "UNCTAD report 2020",
+      "developing economies"
+    ],
+    "question": "Arrange the following economic regions in increasing order of FDI inflows, as per the UNCTAD Report, 2020?",
+    "options": {
+      "a": "A, B, C, E, D",
+      "b": "B, A, C, E, D",
+      "c": "B, A, D, E, C",
+      "d": "E, B, D, C, A"
+    },
+    "answer": "b",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 108,
+    "exam_session": "November 2021",
+    "question_type": "Sequencing (Levels/Hierarchy)",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "Levels of Economic Integration"
+    },
+    "keywords": [
+      "customs union",
+      "free trade area",
+      "economic union",
+      "common market",
+      "political union"
+    ],
+    "question": "Arrange the following levels of economic integration, from least integrated to the most integrated:",
+    "options": {
+      "a": "A, B, C, D, E",
+      "b": "B, A, D, C, E",
+      "c": "D, C, A, B, E",
+      "d": "E, D, C, A, B"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 109,
+    "exam_session": "November 2021",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "Bretton Woods & GATT Years"
+    },
+    "keywords": [
+      "Bretton Woods conference",
+      "GATT established",
+      "Multi-Fibre Agreement",
+      "WTO replaced GATT"
+    ],
+    "question": "Choose the correct answer below: Match List I with List II.",
+    "list_1": {
+      "A": "Bretton Woods Conference",
+      "B": "GATT established",
+      "C": "Multi-Fibre Agreement",
+      "D": "WTO replaced GATT"
+    },
+    "list_2": {
+      "I": "1948",
+      "II": "1974",
+      "III": "1944",
+      "IV": "1995"
+    },
+    "options": {
+      "a": "A-II, B-IV, C-III, D-I",
+      "b": "A-III, B-I, C-IV, D-II",
+      "c": "A-III, B-I, C-II, D-IV",
+      "d": "A-IV, B-II, C-I, D-III"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 110,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "Current Account Transactions"
+    },
+    "keywords": [
+      "current account transaction",
+      "remittances",
+      "interest payments"
+    ],
+    "question": "The term current account transition is defined as a transaction other than a capital account transaction and without prejudice to the generality of the foregoing, such transaction includes: A. Overseas direct investment, (ODIs) from India B. Payment due as interest on loans and as net income from investments C. Remittances for living expenses of parents, spouse, and children residing abroad D. Borrowing or lending in foreign exchange and in Indian rupees",
+    "options": {
+      "a": "A and B only",
+      "b": "A and D only",
+      "c": "B and C only",
+      "d": "D only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 111,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "Resource-Seeking FDI"
+    },
+    "keywords": [
+      "resource seeking FDI",
+      "raw materials",
+      "manpower"
+    ],
+    "question": "The resource seeking FDI moves to a country where:",
+    "options": {
+      "a": "Per capita income and size of the market are large",
+      "b": "Technologies are available to improve productivity",
+      "c": "Raw materials and manpower are in abundance",
+      "d": "Financial resources help MNCs improve their efficiency"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 112,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "Transitory Economies"
+    },
+    "keywords": [
+      "Eastern Europe collapse",
+      "USSR collapse",
+      "transitory economies"
+    ],
+    "question": "The collapse of Eastern Europe in ______ and USSR in ______ lead to emergence of the transitory economies.",
+    "options": {
+      "a": "1989, 1991",
+      "b": "1988, 1995",
+      "c": "1997, 1991",
+      "d": "1980, 1987"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 113,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "Joint Venture Modes"
+    },
+    "keywords": [
+      "contract manufacturing",
+      "foreign ownership discourage"
+    ],
+    "question": "The mode of joint venturing in international business that allows a company to conduct business in another country whose laws discourage foreign ownership is known as:",
+    "options": {
+      "a": "International Franchising",
+      "b": "Licensing",
+      "c": "Contract manufacturing",
+      "d": "Joint ownership"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 114,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "Bretton Woods Resolutions"
+    },
+    "keywords": [
+      "Bretton Woods",
+      "IMF formation"
+    ],
+    "question": "Bretton Woods resolutions led to the formation of:",
+    "options": {
+      "a": "WTO",
+      "b": "GATT",
+      "c": "UNCTAD",
+      "d": "IMF"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 115,
+    "exam_session": "November 2021",
+    "question_type": "Sequencing (Levels/Hierarchy)",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "WTO Budget Contributions"
+    },
+    "keywords": [
+      "WTO budget 2020",
+      "member contribution"
+    ],
+    "question": "Arrange the following countries in the ascending order of their contribution to the WTO budget 2020:",
+    "options": {
+      "a": "(A), (B), (D), (E), (C)",
+      "b": "(D), (A), (B), (E), (C)",
+      "c": "(E), (B), (C), (A), (D)",
+      "d": "(D), (A), (B), (C), (E)"
+    },
+    "answer": "c",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 116,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "Trade Policy Framework Principles"
+    },
+    "keywords": [
+      "WTO trade policy framework",
+      "reciprocity",
+      "non-discriminatory"
+    ],
+    "question": "Identify the principles of trade policy framework from the following under the WTO: A. Reciprocity and transparent B. Benefactory and resilient C. Non-discriminatory D. Binding and enforceable commitments E. Protective and benevolent",
+    "options": {
+      "a": "(A), (B) and (C) only",
+      "b": "(C), (D) and (E) only",
+      "c": "(A), (C) and (D) only",
+      "d": "(B), (D) and (E) only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 117,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Consumer Protection & Business Law",
+      "sub_branch": "Copyright Act 1957"
+    },
+    "keywords": [
+      "copyright act 1957",
+      "work definition"
+    ],
+    "question": "Which one of the followings is not included in the term \"Work\" under copyright Act 1957?",
+    "options": {
+      "a": "A Cinematographic film",
+      "b": "Layout designs of integrated circuits",
+      "c": "A sound recording",
+      "d": "A dramatic work"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 118,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "FDI in Manufacturing"
+    },
+    "keywords": [
+      "FDI manufacturing India",
+      "market seeking"
+    ],
+    "question": "FDI in Indian manufacturing has largely been",
+    "options": {
+      "a": "Resource seeking",
+      "b": "Efficiency seeking",
+      "c": "Market seeking",
+      "d": "Export - oriented"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 119,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Consumer Protection & Business Law",
+      "sub_branch": "Consumer Protection Act 1986"
+    },
+    "keywords": [
+      "consumer rights",
+      "section 6",
+      "hazardous goods"
+    ],
+    "question": "The rights of the consumer as enunciated under section of the Consumer Protection Act, 1986 includes: A. To be protected against the marketing of goods and services which are hazardous to life and property B. To be assured the competitive price and low-cost quality products and services C. To be assured that consumers' interests will service the due consideration at appropriate forums D. To be protected for multiple use of products, profits, diversity, and equity E. To be informed about the quality, potency, purity and price of goods or service",
+    "options": {
+      "a": "(A), (B), and (C), only",
+      "b": "(A), (C) and (D) only",
+      "c": "(A), (D) and (E) only",
+      "d": "(A), (C) and (E) only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 120,
+    "exam_session": "November 2021",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "FDI and BoP"
+    },
+    "keywords": [
+      "FDI growth",
+      "balance of payments"
+    ],
+    "question": "Given below are two statements. One is labelled as Assertion A and the other is labelled as Reason R: Assertion A: Foreign investment is playing an increasing role in economic development and contributes to a significant share of the domestic investment, employment generation and exports. Reason R: Substantial increase in the magnitude of capital inflows have remarkably improved the balance of payments and foreign exchange reserve position.",
+    "options": {
+      "a": "Both A and R are correct and R is the correct explanation of A",
+      "b": "Both A and R are correct and R is NOT the correct explanation of A",
+      "c": "A is correct but R is not correct",
+      "d": "A is not correct but R is correct"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 121,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "NAFTA Replacement"
+    },
+    "keywords": [
+      "USMCA",
+      "NAFTA replacement"
+    ],
+    "question": "Which of the following entity has recently been negotiated to replace NAFTA with effect from July 2020?",
+    "options": {
+      "a": "Quad group of countries",
+      "b": "USMCA",
+      "c": "Shanghai cooperation organisation",
+      "d": "Trans Atlantic organization"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 122,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "WTO Membership"
+    },
+    "keywords": [
+      "WTO members",
+      "Iran"
+    ],
+    "question": "Which of the following countries/territories is not a member of the WTO?",
+    "options": {
+      "a": "China",
+      "b": "Russia",
+      "c": "Iran",
+      "d": "Taiwan"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 123,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Trade Tariffs & Barriers",
+      "sub_branch": "Types of Dumping"
+    },
+    "keywords": [
+      "sporadic dumping",
+      "surplus disposal"
+    ],
+    "question": "Occasional sale of a commodity at a lower price abroad in order to unload an unforeseen and temporary surplus of the commodity without reducing domestic prices is called:",
+    "options": {
+      "a": "Persistent dumping",
+      "b": "Predatory dumping",
+      "c": "Export subsidies",
+      "d": "Sporadic dumping"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 124,
+    "exam_session": "November 2021",
+    "question_type": "Sequencing (Levels/Hierarchy)",
+    "topic": {
+      "main_branch": "Business Environment Fundamentals",
+      "sub_branch": "Market Structures"
+    },
+    "keywords": [
+      "market structures",
+      "pricing power",
+      "monopoly",
+      "oligopoly"
+    ],
+    "question": "Arrange the following market structures in the increasing order of pricing power to firms:",
+    "options": {
+      "a": "2, 4, 1, 5, 3",
+      "b": "2, 1, 5, 3, 4",
+      "c": "1, 3, 2, 4, 5",
+      "d": "4, 3, 5, 1, 2"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 125,
+    "exam_session": "November 2021",
+    "question_type": "Sequencing (Levels/Hierarchy)",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "Integration of Member Economies"
+    },
+    "keywords": [
+      "free trade area",
+      "economic union",
+      "customs union",
+      "preferential trade agreements",
+      "common market"
+    ],
+    "question": "Sequence the following in increasing order of integration of member economies:",
+    "options": {
+      "a": "1, 3, 5, 2, 4",
+      "b": "2, 5, 3, 1, 4",
+      "c": "4, 1, 3, 5, 2",
+      "d": "3, 5, 2, 4, 1"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 126,
+    "exam_session": "November 2021",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "Economic History & Economists",
+      "sub_branch": "Books & Authors"
+    },
+    "keywords": [
+      "Wealth of Nations",
+      "Das Capital",
+      "Malthus",
+      "Ricardo"
+    ],
+    "question": "Choose the correct answer from the options below: Match List I with List II.",
+    "list_1": {
+      "A": "Wealth of Nations, 1776",
+      "B": "Principles of Political Economy and Taxation, 1817",
+      "C": "Principle of Population, 1798",
+      "D": "Das Capital, 1867"
+    },
+    "list_2": {
+      "I": "Thomas Malthus",
+      "II": "Karl Marx",
+      "III": "Adam Smith",
+      "IV": "David Ricardo"
+    },
+    "options": {
+      "a": "A-I, B-III, C-IV, D-II",
+      "b": "A-III, B-IV, C-I, D-II",
+      "c": "A-II, B-III, C-I, D-IV",
+      "d": "A-III, B-I, C-IV, D-II"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 127,
+    "exam_session": "November 2021",
+    "question_type": "Sequencing (Process/Procedure)",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "Uppsala Model"
+    },
+    "keywords": [
+      "Uppsala model",
+      "internationalization stages"
+    ],
+    "question": "Logically sequence the following in the process of entering international markets outlined in the Uppsala model.",
+    "options": {
+      "a": "1, 2, 3, 4, and 5",
+      "b": "3, 2, 4, 1, and 5",
+      "c": "4, 1, 5, 3, and 2",
+      "d": "5, 2, 4, 3, and 1"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 128,
+    "exam_session": "November 2021",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "International Trade Theories",
+      "sub_branch": "Trade Theories & Authors"
+    },
+    "keywords": [
+      "Ricardo",
+      "Porter",
+      "Adam Smith",
+      "Heckscher-Ohlin"
+    ],
+    "question": "Choose the correct answer:",
+    "list_1": {
+      "A": "David Ricardo (1817)",
+      "B": "Michael Porter",
+      "C": "Adam Smith (1776)",
+      "D": "Heckscher - Ohlin"
+    },
+    "list_2": {
+      "I": "Theory of absolute advantage",
+      "II": "Factor endowment theory",
+      "III": "Theory of comparative advantage",
+      "IV": "Theory of competitive advantage"
+    },
+    "options": {
+      "a": "A-I, B-II, C-III, D-IV",
+      "b": "A-III, B-IV, C-I, D-II",
+      "c": "A-IV, B-III, C-II, D-I",
+      "d": "A-III, B-I, C-IV, D-II"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 129,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Strategic Management",
+      "sub_branch": "Principles of Management"
+    },
+    "keywords": [
+      "principles of management",
+      "flexibility",
+      "universal application"
+    ],
+    "question": "The Principles of Management have the following distinct features: 1. Flexibility 2. Universal application 3. Principles are relative, not absolute 4. Based on the situation",
+    "options": {
+      "a": "1, 2 only",
+      "b": "2, 3 only",
+      "c": "1, 3, 4 only",
+      "d": "1, 2, 3, 4"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 130,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "International Business Strategy",
+      "sub_branch": "International Diversification Problems"
+    },
+    "keywords": [
+      "international diversification",
+      "exchange rate movements",
+      "frictions"
+    ],
+    "question": "Following are the problems that mar an optimal international diversification: 1. Unfavorable exchange rate movements 2. Frictions in international markets 3. Manipulation of security prices 4. Unequal access to information",
+    "options": {
+      "a": "1, 2, 3 only",
+      "b": "2, 3, 4 only",
+      "c": "1, 3, 4 only",
+      "d": "1, 2, 3, 4"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 131,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "International Business Strategy",
+      "sub_branch": "Core Competencies"
+    },
+    "keywords": [
+      "core competencies",
+      "customer benefits",
+      "imitation"
+    ],
+    "question": "Firm characteristics that help managers identify core competencies include: 1. Potential access to a wide variety of markets 2. Significantly contribute to the perceived customer benefits 3. Value accretive and non-competitive 4. Distinctive and difficult for competitors to imitate",
+    "options": {
+      "a": "1, 2, and 3 only",
+      "b": "2, 3, and 4 only",
+      "c": "1, 2, and 4 only",
+      "d": "1, 3, and 4 only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 132,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Business Environment Fundamentals",
+      "sub_branch": "Corporate Social Responsibility"
+    },
+    "keywords": [
+      "CSR",
+      "ecological balance",
+      "charitable activities"
+    ],
+    "question": "Corporate social responsibility is the continuing commitment by business to behave ethically and contribute to: 1. Political awareness, social security and inclusion 2. Public health, education and literacy 3. Maintaining ecological balances and protecting the environment 4. Gender diversity, profiteering and market controlling 5. Rendering, sponsoring and donating to social and charitable activities",
+    "options": {
+      "a": "1, 2, and 4 only",
+      "b": "2, 3, and 5 only",
+      "c": "3, 4, and 5 only",
+      "d": "1, 2, and 3 only"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 133,
+    "exam_session": "November 2021",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "World Bank Group"
+    },
+    "keywords": [
+      "World Bank Group",
+      "IFC",
+      "MIGA",
+      "IDA"
+    ],
+    "question": "Which of the following institutions are included in the \"World Bank Group\"? 1. International Finance Corporation 2. International Monetary Fund 3. World Trade Organization 4. Multilateral Investment Guarantee Agency 5. International Development Association",
+    "options": {
+      "a": "1, 2, and 3 only",
+      "b": "1, 2, and 4 only",
+      "c": "1, 2, 4, and 5 only",
+      "d": "1, 4, and 5 only"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 134,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Business Environment Fundamentals",
+      "sub_branch": "Ethical Principles"
+    },
+    "keywords": [
+      "utilitarianism",
+      "greatest good"
+    ],
+    "question": "An act in a way that results in the greatest good for the greatest number is:",
+    "options": {
+      "a": "The golden rule",
+      "b": "The utilitarian principle",
+      "c": "The four-way test",
+      "d": "Kant's categorical imperative"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 135,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "International Business Strategy",
+      "sub_branch": "Porter's Diamond Model"
+    },
+    "keywords": [
+      "Michael Porter",
+      "factor conditions",
+      "competitive advantage of nations"
+    ],
+    "question": "Factor conditions in Michael Porter's competitive advantage of nations include:",
+    "options": {
+      "a": "Market size",
+      "b": "Demand conditions",
+      "c": "Internationally competitive suppliers",
+      "d": "Skilled labour and scientific knowledge"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 136,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "FDI Regulation During COVID-19"
+    },
+    "keywords": [
+      "FDI border countries",
+      "government route",
+      "COVID-19"
+    ],
+    "question": "To prevent opportunistic takeovers of domestic firms amid the COVID-19 pandemic, Foreign Direct Investment (FDI) from countries that share borders with India is allowed through:",
+    "options": {
+      "a": "Automatic Route",
+      "b": "Government Route",
+      "c": "FIPB Route",
+      "d": "DPIIT Route"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 137,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Trade Tariffs & Barriers",
+      "sub_branch": "Countervailing Duties"
+    },
+    "keywords": [
+      "countervailing duties",
+      "export subsidies"
+    ],
+    "question": "Countervailing Duties (CVD) are often imposed on imports to offset the impact of:",
+    "options": {
+      "a": "Predatory Pricing",
+      "b": "Export Subsidies",
+      "c": "Dumping",
+      "d": "Low-cost financing"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 138,
+    "exam_session": "November 2021",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Business Strategy & Innovation",
+      "sub_branch": "COVID-19 Business Transformation"
+    },
+    "keywords": [
+      "COVID-19",
+      "technology adoption",
+      "business transformation"
+    ],
+    "question": "Which is the most potent driver of business transformation during the COVID-19 pandemic?",
+    "options": {
+      "a": "Ethical consciousness",
+      "b": "Scale economies and pricing power",
+      "c": "Technology adoption and innovation",
+      "d": "Supply chain logistics and government interventions"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 139,
+    "exam_session": "June 2020",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "Negative Impacts of FDI"
+    },
+    "keywords": [
+      "FDI negative impacts",
+      "market monopoly",
+      "profit outflow"
+    ],
+    "question": "Which of the following are possible negative impacts of FDI on domestic firms in host countries? A. Market monopoly B. Technology dependence C. Increased competition D. Profit outflow",
+    "options": {
+      "a": "(A), (B) only",
+      "b": "(B), (C) only",
+      "c": "(A), (B), (D) only",
+      "d": "(B), (C), (D) only"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 140,
+    "exam_session": "June 2020",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "International Business Approaches",
+      "sub_branch": "Enculturation vs Acculturation"
+    },
+    "keywords": [
+      "enculturation",
+      "acculturation",
+      "cross-cultural training"
+    ],
+    "question": "Out of the following statements, which of them explains the difference between enculturation and acculturation as a part of cross-cultural training? A. Enculturation refers to the process of learning and adopting host cultural norms, and acculturation is the process of learning our native culture. B. Enculturation is an anthropological term used for socialization like acculturation. C. Both terms refer to the process of learning through social interaction. D. Enculturation refers to the process of learning our culture, and acculturation refers to the process of learning host cultural norms.",
+    "options": {
+      "a": "(A), (B), (C) only",
+      "b": "(B), (D) only",
+      "c": "(B), (C), (D) only",
+      "d": "(A), (B), (C), and (D)"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 141,
+    "exam_session": "June 2020",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "ASEAN Headquarters"
+    },
+    "keywords": [
+      "ASEAN headquarters",
+      "Indonesia"
+    ],
+    "question": "The headquarters of ASEAN is located in which of the following countries?",
+    "options": {
+      "a": "Indonesia",
+      "b": "Vietnam",
+      "c": "Thailand",
+      "d": "Singapore"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 142,
+    "exam_session": "June 2020",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "International Trade Theories",
+      "sub_branch": "Trade Theory Authors"
+    },
+    "keywords": [
+      "Steffan Linder",
+      "Raymond Vernon",
+      "Heckscher-Ohlin",
+      "country similarity theory"
+    ],
+    "question": "Match List I with List II.",
+    "list_1": {
+      "A": "Steffan Linder",
+      "B": "Raymond Vernon",
+      "C": "Heckscher-Ohlin",
+      "D": "Adam Smith"
+    },
+    "list_2": {
+      "I": "Product Life Cycle Theory",
+      "II": "Country Similarity Theory",
+      "III": "Factor Proportion Theory",
+      "IV": "Absolute Advantage Theory"
+    },
+    "options": {
+      "a": "A-IV, B-III, C-II, D-I",
+      "b": "A-II, B-I, C-III, D-IV",
+      "c": "A-I, B-III, C-IV, D-II",
+      "d": "A-III, B-II, C-I, D-IV"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 143,
+    "exam_session": "June 2020",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Regional Economic Integration",
+      "sub_branch": "Mercosur"
+    },
+    "keywords": [
+      "Mercosur",
+      "customs union"
+    ],
+    "question": "Mercosur, a South American trade block, is a:",
+    "options": {
+      "a": "Free Trade Area",
+      "b": "Common Market",
+      "c": "Customs Union",
+      "d": "Economic Cooperation"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 144,
+    "exam_session": "June 2020",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "International Business Approaches",
+      "sub_branch": "EPRG Framework"
+    },
+    "keywords": [
+      "EPRG framework",
+      "ethnocentric",
+      "polycentric",
+      "regiocentric",
+      "geocentric"
+    ],
+    "question": "EPRG framework in International Business refers to:",
+    "options": {
+      "a": "Ethno, Poly, Regio, Geo Transformations",
+      "b": "Ethnocentric, Polycentric, Regiocentric, and Geocentric Orientations",
+      "c": "Ethics, Policies, Regulations, Guideline Orientations",
+      "d": "Every Person Refers Global Framework"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 145,
+    "exam_session": "December 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "FEMA Definitions"
+    },
+    "keywords": [
+      "FEMA",
+      "foreign exchange definition"
+    ],
+    "question": "According to FEMA, foreign exchange does NOT include",
+    "options": {
+      "a": "Deposits payable in any foreign currency",
+      "b": "Bills of exchange drawn in Indian currency but payable in any foreign currency",
+      "c": "Traveller's cheques drawn by institutions outside India but payable in Indian currency",
+      "d": "Drafts drawn by banks outside India and payable in foreign currency"
+    },
+    "answer": "c",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 146,
+    "exam_session": "December 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "Bretton Woods Agreement"
+    },
+    "keywords": [
+      "Bretton Woods 1944",
+      "IMF establishment"
+    ],
+    "question": "In which of the following years was the Bretton Wood Agreement signed by the delegates from 44 nations which led to the establishment of the IMF?",
+    "options": {
+      "a": "1940",
+      "b": "1944",
+      "c": "1952",
+      "d": "1957"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 147,
+    "exam_session": "December 2019",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Globalization & Economic Integration",
+      "sub_branch": "Drivers of Globalization"
+    },
+    "keywords": [
+      "globalization drivers",
+      "population mobility",
+      "financial flows"
+    ],
+    "question": "What are the drivers of globalization? A. Population mobility, especially of labor B. Financial flows C. Exporting D. Assembly operations",
+    "options": {
+      "a": "(A) and (D)",
+      "b": "(B) and (D)",
+      "c": "(A) and (B)",
+      "d": "(C) and (D)"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 148,
+    "exam_session": "December 2019",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Globalization & Economic Integration",
+      "sub_branch": "Globalization Definition"
+    },
+    "keywords": [
+      "globalization definition",
+      "marketing barriers"
+    ],
+    "question": "Assertion (A): Globalization refers to the free cross-border movement of goods, services, capital, information, and people. Reason (R): Countries are consistently evolving innovative marketing barriers that are WTO compatible.",
+    "options": {
+      "a": "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+      "b": "Both (A) and (R) are true, but (R) is NOT the correct explanation of (A).",
+      "c": "(A) is true, but (R) is false.",
+      "d": "(A) is false, but (R) is true."
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 149,
+    "exam_session": "December 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Business Environment Fundamentals",
+      "sub_branch": "Odd One Out"
+    },
+    "keywords": [
+      "odd one out",
+      "business environment factors"
+    ],
+    "question": "Which one is odd?",
+    "options": {
+      "a": "Economic Policies",
+      "b": "Economic Planning",
+      "c": "Socio-cultural factors",
+      "d": "Macro-economic scenario"
+    },
+    "answer": "verify",
+    "note": "verify against official key"
+  },
+  {
+    "q_no": 150,
+    "exam_session": "December 2019",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "WTO/GATT & Multilateral Trade System",
+      "sub_branch": "Functions of WTO"
+    },
+    "keywords": [
+      "WTO functions",
+      "trade agreements administration"
+    ],
+    "question": "Which two of the following are the functions of WTO? A. To facilitate the implementation, administration and operation of trade agreements B. To carry out periodic reviews of the trade policies of its member countries C. To assist in the establishment of a multilateral system of payments D. To promote international monetary cooperation",
+    "options": {
+      "a": "(A) and (D)",
+      "b": "(B) and (C)",
+      "c": "(C) and (D)",
+      "d": "(A) and (B)"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 151,
+    "exam_session": "December 2019",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Consumer Protection & Business Law",
+      "sub_branch": "CSR to Consumers"
+    },
+    "keywords": [
+      "CSR consumers",
+      "reasonable prices",
+      "genuine grievances"
+    ],
+    "question": "Which of the following are part of Corporate Social Responsibility (CSR) to consumers? A. Reasonable chances and proper system for accomplishment and promotion B. To supply goods at reasonable prices even when there is a seller's market C. Improving the efficiency of the business operation D. To provide an opportunity for being heard and redress genuine grievances",
+    "options": {
+      "a": "(A) and (B)",
+      "b": "(B) and (D)",
+      "c": "(B) and (C)",
+      "d": "(A) and (C)"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 152,
+    "exam_session": "December 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Consumer Protection & Business Law",
+      "sub_branch": "Laws Affecting Business"
+    },
+    "keywords": [
+      "business law",
+      "incorporation law",
+      "environmental law"
+    ],
+    "question": "Which of the following laws affect business organizations?",
+    "options": {
+      "a": "Incorporation and Bankruptcy Laws",
+      "b": "Environmental Protection Laws",
+      "c": "Occupational Health and Safety Laws",
+      "d": "All of the above"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 153,
+    "exam_session": "June 2019",
+    "question_type": "Matching (List-I & List-II)",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "Headquarters"
+    },
+    "keywords": [
+      "WTO headquarters",
+      "IMF headquarters",
+      "FAO headquarters",
+      "EU headquarters"
+    ],
+    "question": "Match List I (Trade and Finance Institution) with List II (Headquarters).",
+    "list_1": {
+      "A": "WTO",
+      "B": "IMF",
+      "C": "FAO",
+      "D": "EU"
+    },
+    "list_2": {
+      "I": "Brussels",
+      "II": "Geneva",
+      "III": "Washington",
+      "IV": "Rome"
+    },
+    "options": {
+      "a": "A-II, B-III, C-IV, D-I"
+    },
+    "answer": "a",
+    "note": "Answer options not fully legible; based on known headquarters (WTO-Geneva, IMF-Washington, FAO-Rome, EU-Brussels) verify against official key"
+  },
+  {
+    "q_no": 154,
+    "exam_session": "June 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Trade Tariffs & Barriers",
+      "sub_branch": "Import Quotas"
+    },
+    "keywords": [
+      "quota",
+      "quantitative import restriction"
+    ],
+    "question": "Quantitative import restrictions that limit the quantity of a product being imported is called",
+    "options": {
+      "a": "embargo",
+      "b": "quota",
+      "c": "trade restraint",
+      "d": "import tariff"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 155,
+    "exam_session": "June 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "FDI & International Business Entry",
+      "sub_branch": "Mode of Entry"
+    },
+    "keywords": [
+      "exporting",
+      "little experience"
+    ],
+    "question": "Which is the most appropriate mode of entry in international business to an enterprise with little experience of international markets?",
+    "options": {
+      "a": "Acquisition",
+      "b": "Strategic Alliance",
+      "c": "Joint Venture",
+      "d": "Exporting"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 156,
+    "exam_session": "June 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "SDR Composition"
+    },
+    "keywords": [
+      "SDR",
+      "special drawing rights",
+      "currency weightage"
+    ],
+    "question": "After the US dollar, which of the following currencies has the largest weightage in determining the value of SDR?",
+    "options": {
+      "a": "Japanese Yen",
+      "b": "Chinese Yuan (Renminbi)",
+      "c": "Euro",
+      "d": "British Pound"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 157,
+    "exam_session": "June 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Globalization & Economic Integration",
+      "sub_branch": "Belt and Road Initiative"
+    },
+    "keywords": [
+      "BRI",
+      "one belt one road"
+    ],
+    "question": "One belt, one road initiative (BRI) is NOT intended to:",
+    "options": {
+      "a": "trade protectionism",
+      "b": "strengthening logistic and supply chain",
+      "c": "improve cost competitiveness",
+      "d": "rebalance trade dominance"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 158,
+    "exam_session": "June 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "International Financial Institutions",
+      "sub_branch": "World Bank Group"
+    },
+    "keywords": [
+      "World Bank group",
+      "IMF"
+    ],
+    "question": "Which among the following institutions is NOT a part of the World Bank group?",
+    "options": {
+      "a": "International Development Association (IDA)",
+      "b": "International Monetary Fund (IMF)",
+      "c": "International Finance Corporation (IFC)",
+      "d": "Multilateral Investment Guarantee Agency (MIGA)"
+    },
+    "answer": "b"
+  },
+  {
+    "q_no": 159,
+    "exam_session": "June 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Trade Tariffs & Barriers",
+      "sub_branch": "Types of Dumping"
+    },
+    "keywords": [
+      "reverse dumping",
+      "non-conventional dumping"
+    ],
+    "question": "Which of the following is an instance of non-conventional dumping?",
+    "options": {
+      "a": "Sporadic dumping",
+      "b": "Predatory dumping",
+      "c": "Reverse dumping",
+      "d": "Persistent dumping"
+    },
+    "answer": "c"
+  },
+  {
+    "q_no": 160,
+    "exam_session": "June 2019",
+    "question_type": "Simple MCQ",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "Market Stabilization Scheme"
+    },
+    "keywords": [
+      "MSS",
+      "market stabilization scheme",
+      "RBI"
+    ],
+    "question": "Which one is NOT true regarding the Market Stabilization Scheme (MSS)?",
+    "options": {
+      "a": "It absorbs surplus liquidity of enduring nature arising out of large capital flows",
+      "b": "It absorbs surplus liquidity through sale of short-dated government securities and treasury bills",
+      "c": "Mobilised surplus liquidity is held in the MSS account with the Reserve Bank of India",
+      "d": "MSS account liquidity can be used for normal government expenditure of capital nature"
+    },
+    "answer": "d"
+  },
+  {
+    "q_no": 161,
+    "exam_session": "June 2019",
+    "question_type": "Assertion-Reason",
+    "topic": {
+      "main_branch": "Balance of Payments & Foreign Exchange",
+      "sub_branch": "RBI and FEMA"
+    },
+    "keywords": [
+      "RBI",
+      "FEMA administration"
+    ],
+    "question": "Assertion (A): Reserve Bank of India is an important regulatory and administrative authority to execute FEMA provisions. Reason (R): Being monetary authority and custodian of foreign exchange, Reserve Bank of India enjoys requisite expertise for FEMA administration.",
+    "options": {
+      "a": "Both (A) and (R) are correct and (R) is the right explanation of (A)",
+      "b": "Both (A) and (R) are correct but (R) is not the right explanation of (A)",
+      "c": "Both (A) and (R) are incorrect",
+      "d": "(A) is correct and (R) is not correct"
+    },
+    "answer": "a"
+  },
+  {
+    "q_no": 162,
+    "exam_session": "June 2019",
+    "question_type": "Multi-Select (Statement-based)",
+    "topic": {
+      "main_branch": "Export-Import Operations & Trade Finance",
+      "sub_branch": "Foreign Trade Policy 2015-2019"
+    },
+    "keywords": [
+      "FTP 2015-2019",
+      "MEIS",
+      "SEIS"
+    ],
+    "question": "Which of the following is true about India Trade Policy (Export-Import), 2015-2019? A. Doubling the exports (both merchandise and services) B. Achieve 3.5% share in global exports C. Introduced two new schemes (MEIS and SEIS) D. Introduced simplified Aayat-Niryat Form",
+    "options": {
+      "a": "A and B only",
+      "b": "A and C only",
+      "c": "A, B and C only",
+      "d": "All are correct"
+    },
+    "answer": "d"
+  }
+];

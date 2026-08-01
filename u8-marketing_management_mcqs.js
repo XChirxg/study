@@ -1,0 +1,2497 @@
+window.u8_data = {
+  "source": "UGC NET Business Environment & International Business - Unit 8 (Marketing Management), previous-year MCQs, June 2019 - June 2025 (as reproduced/compiled by Adda247 Publications in a study guide)",
+  "note": "Question text and options transcribed from a scanned study-guide photocopy. Answers were identified from the circled/marked option visible in the scan; a few (flagged with a 'note' field) had ambiguous or page-split markings and should be cross-checked against an official answer key before use in a quiz.",
+  "total_questions": 169,
+  "questions": [
+    {
+      "q_no": 1,
+      "exam_session": "June 2025",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Geographical Price Differentials include which of the following? A. F.O.B Factory Pricing B. Zone Pricing C. Loss Leader Pricing D. Postage Stamp Pricing E. Basing Point Pricing",
+      "options": {
+        "a": "A, B, C and D Only",
+        "b": "B, C, D and E Only",
+        "c": "A, B, D and E Only",
+        "d": "B, D and E Only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 2,
+      "exam_session": "June 2025",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps of New Product Development in sequential order: A. Product Development B. Feasibility Analysis C. Concept Development and Testing D. Identifying Prospective Customers E. Idea Generation",
+      "options": {
+        "a": "A, B, C, E, D",
+        "b": "D, E, B, C, A",
+        "c": "E, D, C, B, A",
+        "d": "E, B, C, A, D"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 3,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "question": "The term 'marketing myopia' was coined by:",
+      "options": {
+        "a": "Philip Kotler",
+        "b": "Gary Armstrong",
+        "c": "Peter Drucker",
+        "d": "Theodore Levitt"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 4,
+      "exam_session": "June 2025",
+      "question_type": "Simple MCQ",
+      "question": "According to Levitt and Drucker, the essence of marketing is:",
+      "options": {
+        "a": "Profit Orientation",
+        "b": "Product Orientation",
+        "c": "Market Orientation",
+        "d": "Customer Orientation"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 5,
+      "exam_session": "June 2025",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following stages of the Adoption Process in the correct order: A. Interest B. Awareness C. Trial D. Evaluation E. Adoption",
+      "options": {
+        "a": "A, D, C, B, E",
+        "b": "A, B, C, D, E",
+        "c": "B, C, A, E, D",
+        "d": "B, A, D, C, E"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 6,
+      "exam_session": "June 2025",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II.",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-III, C-I, D-IV",
+        "c": "A-IV, B-II, C-III, D-I",
+        "d": "A-III, B-II, C-IV, D-I"
+      },
+      "answer": "c",
+      "list_1": {
+        "A": "Introduction",
+        "B": "Growth",
+        "C": "Maturity",
+        "D": "Decline"
+      },
+      "list_2": {
+        "I": "Laggards",
+        "II": "Early Adopters",
+        "III": "Majority",
+        "IV": "Innovators"
+      }
+    },
+    {
+      "q_no": 7,
+      "exam_session": "June 2025",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following methods belong to the category of demand/market-based pricing? A. Surge pricing B. Premium pricing C. 'What the traffic can bear' pricing D. Discount pricing E. Parity pricing",
+      "options": {
+        "a": "A, B, C and D Only",
+        "b": "B, C, D and E Only",
+        "c": "A, B and C Only",
+        "d": "C, D and E Only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 8,
+      "exam_session": "January 2025",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps in the proper sequence to develop effective marketing communication: A. Design the communication B. Select the communication channel C. Identify the target audience D. Choose the communication mix E. Choose the communication objectives",
+      "options": {
+        "a": "E, A, C, B, D",
+        "b": "C, A, B, D, E",
+        "c": "E, B, C, A, D",
+        "d": "C, E, A, B, D"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 9,
+      "exam_session": "January 2025",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following statements are true regarding the buying dynamics of individual consumers? A. To successfully compete, managers must understand reality rather than theory of consumer behavior B. In marketing, perceptions are more important than reality C. People emerge with same perceptions of the same object D. Consumers are constructive decision makers subject to contextual influences E. A consumer's buying behavior is influenced by cultural, social, and personal factors; personal factors exert the broadest/deepest influence",
+      "options": {
+        "a": "B, D Only",
+        "b": "A, B, D Only",
+        "c": "A, C, E Only",
+        "d": "B, C, D, E Only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 10,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is not a social network of social media platform?",
+      "options": {
+        "a": "Facebook",
+        "b": "Blogs",
+        "c": "Twitter",
+        "d": "YouTube"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 11,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is not a behavioral factor of the customer profile involved in tactical targeting?",
+      "options": {
+        "a": "Purchase Frequency",
+        "b": "Income",
+        "c": "Purchase Quantity",
+        "d": "Price Sensitivity"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 12,
+      "exam_session": "January 2025",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I (PLC Stage) with List II (Distribution Strategy).",
+      "options": {
+        "a": "A-III, B-II, C-IV, D-I",
+        "b": "A-III, B-II, C-I, D-IV",
+        "c": "A-II, B-III, C-IV, D-I",
+        "d": "A-IV, B-III, C-I, D-II"
+      },
+      "answer": "c",
+      "list_1": {
+        "A": "Introduction",
+        "B": "Growth",
+        "C": "Maturity",
+        "D": "Decline"
+      },
+      "list_2": {
+        "I": "Phase out unprofitable outlets",
+        "II": "Build selective distribution",
+        "III": "Build intensive distribution",
+        "IV": "Build more intensive distribution"
+      }
+    },
+    {
+      "q_no": 13,
+      "exam_session": "January 2025",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the characteristics of a high customer centric Organization? A. Market driven B. Process Oriented C. Value Driven D. Price Driven E. Making competitor irrelevant",
+      "options": {
+        "a": "A, B, E only",
+        "b": "A, C, E only",
+        "c": "B, C, D only",
+        "d": "C, D, E only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 14,
+      "exam_session": "January 2025",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following conditions is not true in case of marketing skimming as the pricing objective?",
+      "options": {
+        "a": "The market is highly price sensitive",
+        "b": "A sufficient number of buyers signal a high demand",
+        "c": "The high initial price does not attract more competitors to the market",
+        "d": "The high price communicates the image of a superior product"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 15,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following refers to the need on the part of the customer that gets satisfied by the service?",
+      "options": {
+        "a": "Service Benefits",
+        "b": "Service Expectations",
+        "c": "Service Offer",
+        "d": "Service Level"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 16,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "The rate of diffusion of any innovation depends upon the following factors: A. The relative advantage of the innovation over previous solutions B. The compatibility of the innovation with existing values and norms C. A lack of complexity in using the innovation D. The divisibility of the innovation facilitating low-risk trial E. The communicability of the advantages of the innovation",
+      "options": {
+        "a": "A, C & E Only",
+        "b": "A, B, C & E only",
+        "c": "A, B, C, D & E",
+        "d": "B & D Only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 17,
+      "exam_session": "September 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the given component tasks to be handled in positioning in the logical sequence: A. Developing the value proposition B. Analyzing competitors' positioning C. Communicating the value proposition to target consumers D. Deciding the locus in consumers' mind E. Ensuring the infrastructure/competitive advantage for delivering the premise",
+      "options": {
+        "a": "D, B, A, E, C",
+        "b": "D, B, E, A, C",
+        "c": "B, D, A, E, C",
+        "d": "B, D, C, A, E"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 18,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is NOT a marketing principle?",
+      "options": {
+        "a": "Focus on the customer",
+        "b": "Markets are homogeneous",
+        "c": "Customers do not buy products",
+        "d": "Marketing is too important to leave to the marketing department"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 19,
+      "exam_session": "September 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the List-I (Product) with List-II (Description).",
+      "options": {
+        "a": "A-IV, B-II, C-I, D-III",
+        "b": "A-II, B-I, C-IV, D-III",
+        "c": "A-I, B-II, C-IV, D-III",
+        "d": "A-IV, B-I, C-II, D-III"
+      },
+      "answer": "b",
+      "list_1": {
+        "A": "Dinosaur",
+        "B": "Flamingo",
+        "C": "Ostrich",
+        "D": "Pearl"
+      },
+      "list_2": {
+        "I": "Products that are beautiful but unsaleable",
+        "II": "Products that are blind to the future",
+        "III": "Products that are source of a profitable future",
+        "IV": "Products that have missed their niche"
+      }
+    },
+    {
+      "q_no": 20,
+      "exam_session": "September 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the List-I (Pricing Strategies) with List-II (Their Explanation).",
+      "options": {
+        "a": "A-III, B-II, C-I, D-IV",
+        "b": "A-IV, B-III, C-II, D-I",
+        "c": "A-I, B-III, C-II, D-IV",
+        "d": "A-II, B-IV, C-I, D-III"
+      },
+      "answer": "d",
+      "list_1": {
+        "A": "Skimming Price Policy",
+        "B": "Penetration Price Policy",
+        "C": "Peak Load Pricing Policy",
+        "D": "Dumping Pricing Policy"
+      },
+      "list_2": {
+        "I": "Where the nature of the products are non-storable",
+        "II": "Where close substitutes of a new product are not available",
+        "III": "Exporting goods at a price lower than the domestic price",
+        "IV": "Substitutes of new products are available"
+      }
+    },
+    {
+      "q_no": 21,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "An appeal that elaborates on a non-product related benefit or image and attempts to induce emotional responses from consumers is called:",
+      "options": {
+        "a": "Physiological Appeals",
+        "b": "Informational Appeal",
+        "c": "Sociological Appeal",
+        "d": "Transformational Appeal"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 22,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "A company prices one litre bottle of its mineral water at Rs.20/- but 100 ml of the same water in a moisturizer spray at Rs.50/-. This is an example of which one of the following pricing practices?",
+      "options": {
+        "a": "Customer-Segment Pricing",
+        "b": "Image Pricing",
+        "c": "Product-form Pricing",
+        "d": "Mark-up Pricing"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 23,
+      "exam_session": "September 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the price-adaptation strategies? A. Price discounts and allowances B. Target return pricing C. Geographical pricing D. Differentiated pricing E. Going rate pricing",
+      "options": {
+        "a": "A, C & E Only",
+        "b": "B, C & D Only",
+        "c": "A, C & D Only",
+        "d": "A, B & D Only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 24,
+      "exam_session": "September 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following new product planning process in proper sequence: A. Idea screening B. Idea generation C. Concept development and testing D. Market strategy development E. Business analysis",
+      "options": {
+        "a": "A, B, C, D, E",
+        "b": "B, A, C, D, E",
+        "c": "A, B, C, E, D",
+        "d": "E, D, B, A, C"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 25,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "The authentication to be affected by use of asymmetric crypto system and hash function is known as:",
+      "options": {
+        "a": "E-commerce",
+        "b": "Virtual signature",
+        "c": "Digital signature",
+        "d": "E-verification"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 26,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "Providing a total package of related goods and services to solve a customer's needs is called:",
+      "options": {
+        "a": "Complete Selling",
+        "b": "Conglomerate Selling",
+        "c": "Wholesale Selling",
+        "d": "Systems Selling"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 27,
+      "exam_session": "September 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I with List-II.",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-III, C-IV, D-I",
+        "c": "A-I, B-III, C-II, D-IV",
+        "d": "A-IV, B-III, C-II, D-I"
+      },
+      "answer": "d",
+      "list_1": {
+        "A": "Personal selling",
+        "B": "Advertising",
+        "C": "Transit advertising",
+        "D": "Publicity"
+      },
+      "list_2": {
+        "I": "Commercially significant news",
+        "II": "Advertising within buses, railway compartments",
+        "III": "Non-personal communication",
+        "IV": "Two-way communication"
+      }
+    },
+    {
+      "q_no": 28,
+      "exam_session": "September 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the column.",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-III, C-IV, D-I",
+        "c": "A-III, B-IV, C-I, D-II",
+        "d": "A-IV, B-III, C-II, D-I"
+      },
+      "answer": "d",
+      "list_1": {
+        "A": "Buyer's Mind",
+        "B": "Personal Factor",
+        "C": "Psychological Factor",
+        "D": "Reference Group"
+      },
+      "list_2": {
+        "I": "Members of Social club",
+        "II": "Motivation",
+        "III": "Life Style",
+        "IV": "Black Box"
+      }
+    },
+    {
+      "q_no": 29,
+      "exam_session": "September 2024",
+      "question_type": "Simple MCQ",
+      "question": "Nicosia Model of consumer behaviour is divided into four major fields. Which of the following is the third field under this model?",
+      "options": {
+        "a": "Feedback",
+        "b": "Act of Purchase",
+        "c": "Firm's and Consumer's Attributes",
+        "d": "Search and Evaluation"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 30,
+      "exam_session": "June 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List - I with List - II.",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-II, B-I, C-III, D-IV",
+        "d": "A-IV, B-II, C-I, D-III"
+      },
+      "answer": "c",
+      "list_1": {
+        "A": "Mark-up Price",
+        "B": "Target rate of return pricing",
+        "C": "Economic value to Customer Pricing",
+        "D": "Auction Pricing"
+      },
+      "list_2": {
+        "I": "Starting with rate of return objective and then setting price that will yield desired rate of return",
+        "II": "Adding standard overhead cost and profit",
+        "III": "Firms disposing off excess inventories or used goods",
+        "IV": "Adding host of inputs such as buyers image of the product performance, warranty quality, customer support and other softer attributes"
+      }
+    },
+    {
+      "q_no": 31,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "The most popular forms of advertising does not include:",
+      "options": {
+        "a": "Informational appeals",
+        "b": "Television advertising",
+        "c": "Print advertising",
+        "d": "Online advertising"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 32,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "What is not a distinctive characteristics of services?",
+      "options": {
+        "a": "Tangibility",
+        "b": "Inseparability",
+        "c": "Variability",
+        "d": "Perishability"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 33,
+      "exam_session": "June 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List - I (Determinants of Service Quality) with List - II (Meaning).",
+      "options": {
+        "a": "A-IV, B-III, C-I, D-II",
+        "b": "A-I, B-II, C-III, D-IV",
+        "c": "A-III, B-I, C-III, D-IV",
+        "d": "A-I, B-II, C-IV, D-III"
+      },
+      "answer": "a",
+      "list_1": {
+        "A": "Responsiveness",
+        "B": "Assurance",
+        "C": "Empathy",
+        "D": "Tangibles"
+      },
+      "list_2": {
+        "I": "The provision of caring, individualized attention to customer",
+        "II": "The appearance of physical facilities, equipment, staff and communication materials",
+        "III": "The knowledge and courtesy of employees and their ability to convey trust and confidence",
+        "IV": "The willingness to help customer's and provide prompt service"
+      }
+    },
+    {
+      "q_no": 34,
+      "exam_session": "June 2024",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the marketing Logistics decisions in proper sequence beginning from start to end. A. Order processing B. Inventory C. Warehousing D. Transportation",
+      "options": {
+        "a": "A, B, C and D",
+        "b": "A, C, B and D",
+        "c": "A, B, D and C",
+        "d": "C, A, B and D"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 35,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "\"Management is the Art of getting things done through people.\" Who said this?",
+      "options": {
+        "a": "Peter Drucker",
+        "b": "Mary Parker Follett",
+        "c": "George R. Terry",
+        "d": "Henri Fayol"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 36,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "A particular combination of product, its price, the methods of promoting it and the ways to make the product available to customer is:",
+      "options": {
+        "a": "Market",
+        "b": "Marketing",
+        "c": "Marketing mix",
+        "d": "Market segmentation"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 37,
+      "exam_session": "June 2024",
+      "question_type": "Simple MCQ",
+      "question": "Which is not a key element of consumer psychology and pricing?",
+      "options": {
+        "a": "Reference price",
+        "b": "Price indifference band",
+        "c": "Image pricing",
+        "d": "Pricing cues"
+      },
+      "answer": "b",
+      "note": "Marked answer per scan; verify against official key as 'price indifference band' is a recognised pricing-psychology concept."
+    },
+    {
+      "q_no": 38,
+      "exam_session": "June 2024",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "The concept of product life cycle is based on few key assumptions. They are: A. Products have a limited life B. Product sales pass through distinct stages, each passing different challenges, opportunities and problems to the seller C. It occupies most desirable position in consumer's mind making the brand almost impregnable D. It erects outposts to protect a weak front or support a possible counterattack E. Profits rise and fall at different stages of the cycle",
+      "options": {
+        "a": "A, B and D only",
+        "b": "B, C and D only",
+        "c": "C, D and E only",
+        "d": "A, B and E only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 39,
+      "exam_session": "June 2024",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List - I with List - II.",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-II, B-I, C-IV, D-III",
+        "d": "A-IV, B-II, C-I, D-III"
+      },
+      "answer": "c",
+      "list_1": {
+        "A": "Mark-up Price",
+        "B": "Target rate of return pricing",
+        "C": "Economic value to Customer Pricing",
+        "D": "Auction Pricing"
+      },
+      "list_2": {
+        "I": "Starting with rate of return objective and then setting price that will yield desired rate of return",
+        "II": "Adding standard overhead cost and profit",
+        "III": "Firms disposing off excess inventories or used goods",
+        "IV": "Adding host of inputs such as buyers image of the product performance, warranty quality, customer support and other softer attributes"
+      }
+    },
+    {
+      "q_no": 40,
+      "exam_session": "December 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Emotional appeal is one of the types of advertising appeals, based on three ideas, namely A. Rational appeal general go unnoticed B. Consumers watch all ads C. It can capture attention and foster an attachment D. Consumers ignore most ads E. Rational appeal generally gets noticed",
+      "options": {
+        "a": "C, E and D only",
+        "b": "C, E and B only",
+        "c": "C, A and D only",
+        "d": "C and A and B only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 41,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "________ is a marketing term for any design to prompt an immediate response or encourage an immediate sale.",
+      "options": {
+        "a": "Call for Promotion",
+        "b": "Call for Activity",
+        "c": "Call to Action",
+        "d": "Call to Aspiration"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 42,
+      "exam_session": "December 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Channel power is the ability to alter channel members' behavior so that they take actions they would not have taken otherwise. From the following channel powers, list the ones which are subjective in nature. A. Legal Power B. Coercive Power C. Expert Power D. Referent Power E. Reward Power",
+      "options": {
+        "a": "D, A and C only",
+        "b": "D, A and B only",
+        "c": "A, B and E only",
+        "d": "A, C and E only"
+      },
+      "answer": "a",
+      "note": "Marked answer per scan; typically 'expert' and 'referent' power are considered the subjective bases — verify."
+    },
+    {
+      "q_no": 43,
+      "exam_session": "December 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "The concept product life cycle is based on which of the following key assumptions? A. Profits remain stable at different stages of product life cycle B. Products have an unlimited life C. Product sales pass through stages, each posing different challenges, opportunities and problems to the seller D. Product require different marketing, financial, manufacturing, purchasing and human resource strategies at each of the cycle stages E. Products have a limited life",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, B and E only",
+        "c": "C, D and E only",
+        "d": "B, C and E only"
+      },
+      "answer": "c",
+      "note": "Answer inferred from standard PLC theory (limited life, distinct stages, differing resource needs); mark in scan was unclear on this page-break — verify."
+    },
+    {
+      "q_no": 44,
+      "exam_session": "December 2023",
+      "question_type": "Sequencing (Levels/Hierarchy)",
+      "question": "Place the following service differentiators in a logical sequence: A. Speed and timing of delivery B. Maintenance and repair C. Returns D. Installation, training and consulting E. Ease of ordering",
+      "options": {
+        "a": "E, D, B, C, A",
+        "b": "E, A, D, B, C",
+        "c": "E, D, A, C, B",
+        "d": "E, C, A, B, D"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 45,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "________ takes into account a host of inputs, such as buyer's image of the product performance, the channel deliverables, the warranty quality, customer support and softer attributes such as the suppliers reputation, trust worthiness and esteem.",
+      "options": {
+        "a": "Target rate-of-return pricing",
+        "b": "Auction-type pricing",
+        "c": "Economic-value-to-customer pricing",
+        "d": "Competitive pricing"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 46,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which amongst the following methods is not a method of generating sales leads in personal selling?",
+      "options": {
+        "a": "Referrals",
+        "b": "Networking",
+        "c": "Coupons",
+        "d": "Cold calls"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 47,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "When a target company makes a counter bid for the stock of the bidder, the defensive strategy in reference is called:",
+      "options": {
+        "a": "Greenmail",
+        "b": "Poison pill",
+        "c": "Golden parachute",
+        "d": "Pacman defense"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 48,
+      "exam_session": "December 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I (Management Thinkers) with List II (Approach Dimensions).",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-IV, B-I, C-III, D-II",
+        "c": "A-IV, B-III, C-I, D-II",
+        "d": "A-II, B-IV, C-III, D-I"
+      },
+      "answer": "b",
+      "list_1": {
+        "A": "Kurt Lewin",
+        "B": "Fred E Fiedler",
+        "C": "Henri Fayol",
+        "D": "David C. McClelland"
+      },
+      "list_2": {
+        "I": "Position power, Task structure, Leader-member relations",
+        "II": "Authority and Responsibility, Unity of command, Scalar chain",
+        "III": "Power, Affiliation, Achievement",
+        "IV": "Unfreezing, Moving, Refreezing"
+      },
+      "note": "Marked in scan as (b); note this doesn't perfectly match standard theory pairing — verify."
+    },
+    {
+      "q_no": 49,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "Companies use ________ when they lack direct marketing financial resources to carry out direct marketing and when they can earn more by doing so.",
+      "options": {
+        "a": "Intermediaries",
+        "b": "Internationalization",
+        "c": "Influencers",
+        "d": "Innovation"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 50,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "Effective mentoring required trust and the level of trust reflects the mentor's",
+      "options": {
+        "a": "Competence, consistency, communication abilities and control sharing readiness",
+        "b": "Concerned, cooperativeness, communication abilities and coordination skills",
+        "c": "Competence, consistency, complexity and communication abilities",
+        "d": "Communication abilities, competence, concerned behavior, control sharing readiness"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 51,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "The sequential stages of moral development in business organisations are characterized by:",
+      "options": {
+        "a": "Conceptualized disposition, consistency and harmony, principled oriented",
+        "b": "Consistency and harmony, conceptualized disposition, principled oriented",
+        "c": "Principled oriented, conventional and preconventional",
+        "d": "Preconventional, conventional, principled oriented"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 52,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "The present value of future profits the individual of a segment will generate over a lifetime relationship with a brand or firm, is known as",
+      "options": {
+        "a": "Lifelong Value",
+        "b": "Lifetime Value",
+        "c": "Longlife Value",
+        "d": "Longterm Value"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 53,
+      "exam_session": "December 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is an exception to the doctrine of Constructive Notice.",
+      "options": {
+        "a": "Doctrine of Subrogation",
+        "b": "Doctrine of Ultra Vires",
+        "c": "Corporate Veil",
+        "d": "Turquand Rule"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 54,
+      "exam_session": "September 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is correct while segmenting consumer markets on demographic basis?",
+      "options": {
+        "a": "Low predictability of consumer choice behaviour and high cost of measurement",
+        "b": "Low predictability of consumer choice behaviour and low cost of measurement",
+        "c": "High predictability of consumer choice behaviour and low cost of measurement",
+        "d": "High predictability of consumer choice behaviour and high cost of measurement"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 55,
+      "exam_session": "September 2023",
+      "question_type": "Simple MCQ",
+      "question": "In which one of the following service products, price sensitivity of the customers is low?",
+      "options": {
+        "a": "Car rentals",
+        "b": "Transport",
+        "c": "Medical services",
+        "d": "Retailing"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 56,
+      "exam_session": "September 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is NOT a market-oriented definition of a business?",
+      "options": {
+        "a": "We run a railroad",
+        "b": "We help improve office productivity",
+        "c": "We supply energy",
+        "d": "We distribute information"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 57,
+      "exam_session": "September 2023",
+      "question_type": "Simple MCQ",
+      "question": "In which one of the following concepts, a buyer is passively involved in an exchange transaction, and he accepts whatever is offered to him by a marketer?",
+      "options": {
+        "a": "Production concept",
+        "b": "Product concept",
+        "c": "Selling concept",
+        "d": "Marketing concept"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 58,
+      "exam_session": "September 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I (Sales Promotion Method) with List II (Goal).",
+      "options": {
+        "a": "A-II, B-IV, C-I, D-III",
+        "b": "A-IV, B-II, C-I, D-III",
+        "c": "A-II, B-IV, C-III, D-I",
+        "d": "A-III, B-IV, C-I, D-II"
+      },
+      "answer": "a",
+      "list_1": {
+        "A": "Stock allowances",
+        "B": "Premiums",
+        "C": "Sampling",
+        "D": "Advertising"
+      },
+      "list_2": {
+        "I": "To incentivize stores to try a new product",
+        "II": "To incentivize stores to keep selling a product",
+        "III": "To incentivize customers to try a new product",
+        "IV": "To incentivize customers to increase their consumption"
+      }
+    },
+    {
+      "q_no": 59,
+      "exam_session": "September 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are true when an organization uses intensive distribution of its products? A. Customers are moderate in number B. Widespread market coverage C. Customers are brand-conscious D. Mass advertising E. Pleasant shopping conditions",
+      "options": {
+        "a": "B, D and E only",
+        "b": "A, B and C only",
+        "c": "B and D only",
+        "d": "B, C and D only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 60,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "An attacking strategy which involves introducing new products or technologies that rewrite the rules of competition in the market and avoid direct conflict with a rival is known as",
+      "options": {
+        "a": "Flanking",
+        "b": "Bypass",
+        "c": "Encirclement",
+        "d": "Guerrilla"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 61,
+      "exam_session": "June 2023",
+      "question_type": "Statement-based (True/False)",
+      "question": "Given below are two statements: Statement I: The only purpose of logistics management is to coordinate activities of moving products from the factory to customers. Statement II: Logistics management is only the responsibility of marketing function.",
+      "options": {
+        "a": "Both Statement I and II are correct",
+        "b": "Both Statement I and Statement II are incorrect",
+        "c": "Statement I is correct but Statement II is incorrect",
+        "d": "Statement I is incorrect but Statement II is correct"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 62,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following values is not a part of OCTAPACE framework?",
+      "options": {
+        "a": "Openness",
+        "b": "Extension",
+        "c": "Proactivity",
+        "d": "Autonomy"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 63,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "The practice of setting a price target by the firm and then developing a product that would allow the firm to maximize total profits at that price is called",
+      "options": {
+        "a": "Prestige pricing",
+        "b": "Price lining",
+        "c": "Price matching",
+        "d": "Value pricing"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 64,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "The sales step in which a salesperson learns as much as possible about a prospective customer before making a sales call is known as",
+      "options": {
+        "a": "Approach",
+        "b": "Prospecting",
+        "c": "Pre-approach",
+        "d": "Presentation"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 65,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the advertising planning strategies is suitable for cars and appliances?",
+      "options": {
+        "a": "Informative strategy",
+        "b": "Affective strategy",
+        "c": "Habitual strategy",
+        "d": "Satisfaction strategy"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 66,
+      "exam_session": "June 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I (Retail Store Format) with List II (Product Assortment).",
+      "options": {
+        "a": "A-II, B-I, C-III, D-IV",
+        "b": "A-I, B-II, C-III, D-IV",
+        "c": "A-IV, B-III, C-II, D-I",
+        "d": "A-II, B-IV, C-I, D-III"
+      },
+      "answer": "d",
+      "list_1": {
+        "A": "Discount",
+        "B": "Specialty",
+        "C": "Category Killer",
+        "D": "Super marketer"
+      },
+      "list_2": {
+        "I": "Very narrow and deep",
+        "II": "Broad and shallow",
+        "III": "Broad and deep",
+        "IV": "Narrow and very deep"
+      }
+    },
+    {
+      "q_no": 67,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the tools of consumer promotions? A. Price off B. Refunds C. Coupons D. Event-sponsorships E. Off-invoice",
+      "options": {
+        "a": "A, B and C only",
+        "b": "B, C, D and E",
+        "c": "A, D and E only",
+        "d": "B, C and D only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 68,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "For customers, which are the areas of ethical and social responsibility concerns? A. Product safety B. Fair Price C. Fair Wages D. TQM E. Proper disclosures and information",
+      "options": {
+        "a": "C and D only",
+        "b": "C, D and E only",
+        "c": "A and E only",
+        "d": "A, B and E only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 69,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "The assumptions of Purchasing Power Parity theory includes: A. No costs for converting one currency to another B. No restrictions on the movement of capital between countries C. No restrictions on the movement of commodities between countries D. No transaction costs for buying and selling financial security E. No transportation costs for transporting a commodity from one country to another",
+      "options": {
+        "a": "A, B and C only",
+        "b": "B, D and C only",
+        "c": "E, A and C only",
+        "d": "D, A and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 70,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Concentration of all marketing efforts on a small but specific and well-defined segment of the population is called:",
+      "options": {
+        "a": "Niche marketing",
+        "b": "Franchising",
+        "c": "Ambush marketing",
+        "d": "Viral marketing"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 71,
+      "exam_session": "June 2023",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I (Stage of Buyers-Seller Relationship) with List II (Characterized by the Following).",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-IV, B-I, C-II, D-III",
+        "c": "A-III, B-I, C-IV, D-II",
+        "d": "A-I, B-IV, C-III, D-II"
+      },
+      "answer": "c",
+      "list_1": {
+        "A": "Pre-relationship stage",
+        "B": "Early stage",
+        "C": "Development stage",
+        "D": "Long-term stage"
+      },
+      "list_2": {
+        "I": "Political suppliers attempting to reduce risk of change and to shift risk",
+        "II": "Shared dependence and high levels of commitment",
+        "III": "Customer concerns about risk of change and its distance between validity and the potential suppliers",
+        "IV": "Reduction of uncertainty and distance"
+      }
+    },
+    {
+      "q_no": 72,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "What are the different strategies firms reset to \"pricing\" to capture ________. A. Challenge the cost route by ideology the inflection price point B. Offering lower / agodesle price point C. Penetration pricing D. 'What the traffic can bear' pricing E. Absorption cost pricing",
+      "options": {
+        "a": "A and C only",
+        "b": "D and E only",
+        "c": "A and B only",
+        "d": "B and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 73,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "________ are the moral principles and values that guide behavior within the field of marketing and cover issues such as product safety, truthfulness in marketing communication, honesty in relationships with customers distributors, pricing issue and the impact of marketing decisions on the environment and society.",
+      "options": {
+        "a": "Sustainable practices",
+        "b": "Marketing ethics",
+        "c": "Positioning principles",
+        "d": "Corporate social responsibility"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 74,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "Post-Purchase consumers invariably experience cognitive dissonance which is referred to as-",
+      "options": {
+        "a": "A feeling of happiness with the purchase",
+        "b": "Getting angry with the firm",
+        "c": "A feeling of uncertainty about making the right decision",
+        "d": "A state of extreme satisfaction"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 75,
+      "exam_session": "June 2023",
+      "question_type": "Simple MCQ",
+      "question": "One of the key assumptions of the Boston Consulting Group Growth Share Matrix is",
+      "options": {
+        "a": "Cash flow can be equated with profitability",
+        "b": "Market share has a positive effect on cash flow as profits are related to market share",
+        "c": "Market share acts as a proxy to competitive strength",
+        "d": "Market growth rate cannot be used as a proxy to market attractiveness"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 76,
+      "exam_session": "June 2023",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "The following are the hallmarks of an effective marketing mix: A. The marketing mix matches customer needs B. The marketing mix ensures high probability C. The marketing mix contain a competitive advantage D. The marketing mix is well blended and matches corporate resources E. The marketing mix adheres to ethical principles",
+      "options": {
+        "a": "B, C only",
+        "b": "C, D, E only",
+        "c": "C, D only",
+        "d": "B, C, D only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 77,
+      "exam_session": "June 2023",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the key steps in developing a perceptual map to determine the position of a brand in the market place in sequence: A. Identify set of competing brands B. Conduct qualitative research where customers score each brand on all key attributes C. Put brands on two dimensional maps D. Aggregate all brands belonging to that category E. Identify important attributes that consumers use when choosing brands using qualitative research",
+      "options": {
+        "a": "B, C, E, D, A",
+        "b": "D, A, E, B, C",
+        "c": "A, C, D, B, E",
+        "d": "E, B, C, A, D"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 78,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Dimensions of VALS™ framework include which one of the following?",
+      "options": {
+        "a": "Consumer motivation and consumer resources",
+        "b": "Consumer personality and consumer resources",
+        "c": "Consumer motivation and consumer preferences",
+        "d": "Consumer needs and consumer resources"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 79,
+      "exam_session": "November 2022",
+      "question_type": "Statement-based (True/False)",
+      "question": "Given below are two statements: Statement I: Display of goods by a shopkeeper with prices marked on them, is not an offer but an invitation to the public to make an offer to buy the goods. Statement II: Price quotations, catalogues and advertisements in newspaper for sale of an article do constitute a valid offer.",
+      "options": {
+        "a": "Both Statement I and II are correct",
+        "b": "Both Statement I and Statement II are incorrect",
+        "c": "Statement I is correct but Statement II is incorrect",
+        "d": "Statement I is incorrect but Statement II is correct"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 80,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "In order to maintain its market share, a market follower can employ",
+      "options": {
+        "a": "Counterfeiting strategy",
+        "b": "Specialization strategy",
+        "c": "Counter offensive strategy",
+        "d": "Pre-emptive strategy"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 81,
+      "exam_session": "November 2022",
+      "question_type": "Statement-based (True/False)",
+      "question": "Given below are two statements: Statement I: Marketing managers must calculate customer lifetime values of their customer base to understand their profit implications. Statement II: Activity-based costing, an accounting technique, is very useful for conducting customer profitability analysis.",
+      "options": {
+        "a": "Both Statement I and II are correct",
+        "b": "Both Statement I and Statement II are incorrect",
+        "c": "Statement I is correct but Statement II is incorrect",
+        "d": "Statement I is incorrect but Statement II is correct"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 82,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following theories describes FDI flows in ecosystems?",
+      "options": {
+        "a": "Product Life Cycle Theory",
+        "b": "Factor Endowment Theory",
+        "c": "Waterfall Theory",
+        "d": "New Trade Theory"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 83,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Michael Porter has identified five forces that determine the intrinsic long-term attractiveness of market. According to the model, which of the following are true? A. A segment is unattractive if it already contains numerous aggressive competitors B. A segment is unattractive if it is stable or declining C. A segment is unattractive if it has high entry barriers and low exit banders D. A segment is unattractive if the company's suppliers are able to raise prices E. A segment is unattractive when there are actual or potent substitutes for the product",
+      "options": {
+        "a": "A and B only",
+        "b": "B and D only",
+        "c": "A, C and D only",
+        "d": "A, B, D and E only"
+      },
+      "answer": "d",
+      "note": "Marked in scan; note statements B and C as literally worded appear internally inconsistent with standard Porter theory — verify against official key."
+    },
+    {
+      "q_no": 84,
+      "exam_session": "November 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I (Promotional Campaign) with List-II (Company).",
+      "options": {
+        "a": "A-III, B-I, C-IV, D-II",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-II, B-I, C-III, D-IV",
+        "d": "A-I, B-III, C-IV, D-II"
+      },
+      "answer": "a",
+      "list_1": {
+        "A": "Stay Strong Mons",
+        "B": "Jeet Ki Ore",
+        "C": "Lets unstereotype India",
+        "D": "Freedom to love"
+      },
+      "list_2": {
+        "I": "Pepsico India",
+        "II": "Hindustan Unilever (HUL)",
+        "III": "Indian Tobacco Company (ITC)",
+        "IV": "Brooke Bond India"
+      }
+    },
+    {
+      "q_no": 85,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "\"If you know the enemy and know yourself, you need not fear the result of a hundred battles.\" Above statement of Sun Tzu corresponds to which one of the following components of Porter's Five Forces Model?",
+      "options": {
+        "a": "Threat of substitutes",
+        "b": "Threat of Competitor",
+        "c": "Bargain Power of Supplier",
+        "d": "Threat of New Entrants"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 86,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Portfolio approach to investing is primarily focused on which of the following:",
+      "options": {
+        "a": "Diversification",
+        "b": "Value protection",
+        "c": "Return appreciation",
+        "d": "Risk optimization"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 87,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following categories of customers are opinion leaders who carefully search for new technologies that might give them a dramatic competitive advantage?",
+      "options": {
+        "a": "Early Adopters",
+        "b": "Innovators",
+        "c": "The early majority",
+        "d": "The late majority"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 88,
+      "exam_session": "November 2022",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps in the design thinking process for an innovative solution to a problem: A. Ideate B. Test C. Empathize D. Define E. Prototype",
+      "options": {
+        "a": "A, D, C, B, E",
+        "b": "B, C, A, D, E",
+        "c": "C, D, A, E, B",
+        "d": "C, B, A, E, D"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 89,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following issues are covered in Social Marketing? A. Tobacco B. Family planning C. Public health D. Financial well-being E. Social good",
+      "options": {
+        "a": "A and B only",
+        "b": "A, B and C only",
+        "c": "C, D and E only",
+        "d": "A, B, C, D and E"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 90,
+      "exam_session": "November 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List-I (Marketing Concept) with List-II (Description).",
+      "options": {
+        "a": "A-I, B-II, C-III, D-IV",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-IV, B-II, C-III, D-I",
+        "d": "A-III, B-I, C-IV, D-II"
+      },
+      "answer": "c",
+      "list_1": {
+        "A": "Brand Equity",
+        "B": "Brand Identity",
+        "C": "Brand Image",
+        "D": "Market Potential"
+      },
+      "list_2": {
+        "I": "The maximum possible demand for a product when marketing expenditure in the industry is infinite",
+        "II": "The mental perception and associations of consumers related to a brand",
+        "III": "The peculiar distinguishing color, design, label of a brand which distinguish brand of a firm",
+        "IV": "A pool of goodwill consumers have related to a brand"
+      }
+    },
+    {
+      "q_no": 91,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is not coordinated in the Vertical Integration of Integrated Marketing Communications?",
+      "options": {
+        "a": "Pricing",
+        "b": "Sales",
+        "c": "Product development",
+        "d": "Customer service"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 92,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one from among the following is not a generic strategy as per Porter?",
+      "options": {
+        "a": "Market Penetration",
+        "b": "Cost Leadership",
+        "c": "Focus Option",
+        "d": "Differentiation"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 93,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Concentration of all marketing efforts on a small but specific and well-defined segment of the population is called:",
+      "options": {
+        "a": "Niche marketing",
+        "b": "Franchising",
+        "c": "Ambush marketing",
+        "d": "Viral marketing"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 94,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is not a marketing tactic used for designing customer value?",
+      "options": {
+        "a": "Service",
+        "b": "Communication",
+        "c": "Brand",
+        "d": "Incentives"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 95,
+      "exam_session": "November 2022",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following stages in the marketing process of an enterprise: A. Marketing Mix B. Marketing Program implementation C. Marketing planning D. Market research E. Control and evaluation of marketing programs",
+      "options": {
+        "a": "D, C, A, B, E",
+        "b": "C, B, A, E, D",
+        "c": "B, A, D, C, E",
+        "d": "C, A, D, B, E"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 96,
+      "exam_session": "November 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I with List II.",
+      "options": {
+        "a": "A-III, B-IV, C-I, D-II",
+        "b": "A-III, B-I, C-IV, D-II",
+        "c": "A-III, B-II, C-I, D-IV",
+        "d": "A-II, B-I, C-III, D-IV"
+      },
+      "answer": "b",
+      "list_1": {
+        "A": "Decline",
+        "B": "Maturity",
+        "C": "Growth",
+        "D": "Introduction"
+      },
+      "list_2": {
+        "I": "Price to match or beat competitors' price",
+        "II": "Charge cost-plus price",
+        "III": "Price reduction",
+        "IV": "Price to penetrate market"
+      }
+    },
+    {
+      "q_no": 97,
+      "exam_session": "November 2022",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "What is the correct sequence in \"Hierarchy of Effects\" model in a communication situation: A. Preference B. Purchase C. Awareness and Knowledge D. Conviction E. Liking",
+      "options": {
+        "a": "A, D, B, C, E",
+        "b": "D, B, E, C, A",
+        "c": "B, A, D, C, E",
+        "d": "C, E, A, D, B"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 98,
+      "exam_session": "November 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are the components of Mc Kinsey's 7-S Framework? A. Shared values B. Procurement C. Strategy D. Technology Development E. System",
+      "options": {
+        "a": "A, C and E only",
+        "b": "B, C and E only",
+        "c": "A, B and C only",
+        "d": "B, D and E only"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 99,
+      "exam_session": "November 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I (Entrepreneurial Theory) with List II Description.",
+      "options": {
+        "a": "A-III, B-I, C-IV, D-II",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-I, B-IV, C-II, D-III",
+        "d": "A-II, B-I, C-III, D-IV"
+      },
+      "answer": "a",
+      "list_1": {
+        "A": "Thomas Cochran's",
+        "B": "Rotter's Locus of Control Theory",
+        "C": "McClelland's Theory",
+        "D": "Max Webber's Theory"
+      },
+      "list_2": {
+        "I": "Highlight the self-confidence of a person and the dependency on fortune and external environment for becoming an entrepreneur",
+        "II": "Religious beliefs are the driving or restraining forces for entrepreneurial activity",
+        "III": "The environment in which an individual is brought up determines his entrepreneurial urge",
+        "IV": "The need for achievement (nAch) drives and stimulate entrepreneurship"
+      },
+      "note": "Marked in scan as (a); this pairing doesn't cleanly match the descriptions to the named theorists — verify against official key."
+    },
+    {
+      "q_no": 100,
+      "exam_session": "November 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following pricing method is used in regulated industries?",
+      "options": {
+        "a": "Mark-up Pricing",
+        "b": "Target-Rate-of-Return-Pricing",
+        "c": "Economic-Value-to-Customer Pricing",
+        "d": "Competitive Pricing"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 101,
+      "exam_session": "November 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List -I with List-II.",
+      "options": {
+        "a": "A-II, B-IV, C-I, D-III",
+        "b": "A-I, B-IV, C-III, D-II",
+        "c": "A-IV, B-III, C-II, D-I",
+        "d": "A-III, B-I, C-IV, D-II"
+      },
+      "answer": "d",
+      "list_1": {
+        "A": "Cash Cows",
+        "B": "Crown Jewels",
+        "C": "Fallen Angels",
+        "D": "White Squire"
+      },
+      "list_2": {
+        "I": "The most valuable segments of a company: the parts most wanted by an acquirer",
+        "II": "A third party friendly to management who helps a company avoid an unwanted takeover with taking over the company on its own",
+        "III": "A BCG term for business segment which have a high market share in low growth markets",
+        "IV": "A bond issued at investment grade whose rating is subsequently dropped to below the investment grade"
+      }
+    },
+    {
+      "q_no": 102,
+      "exam_session": "October 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is an example of hybrid service offering?",
+      "options": {
+        "a": "Consulting",
+        "b": "Massage",
+        "c": "Restaurant meal",
+        "d": "Car with a warranty"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 103,
+      "exam_session": "October 2022",
+      "question_type": "Sequencing (Levels/Hierarchy)",
+      "question": "Arrange the following pricing strategies and other practices as per the life-cycle of a new product of which no close substitutes are available. A. Gradual rise in price B. Product improvement and market segmentation C. Gradual reduction in price to retain sales D. Skimming pricing E. Large price cuts",
+      "options": {
+        "a": "D, A, B, E, C",
+        "b": "E, C, A, B, D",
+        "c": "B, D, C, A, E",
+        "d": "D, A, B, C, E"
+      },
+      "answer": "b",
+      "note": "Marked in scan as (b); sequence logic for skimming lifecycle should be verified against official key."
+    },
+    {
+      "q_no": 104,
+      "exam_session": "October 2022",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List -I with List -II.",
+      "options": {
+        "a": "A-IV, B-III, C-I, D-II",
+        "b": "A-IV, B-I, C-II, D-III",
+        "c": "A-II, B-I, C-IV, D-III",
+        "d": "A-II, B-IV, C-I, D-III"
+      },
+      "answer": "c",
+      "list_1": {
+        "A": "Introduction",
+        "B": "Maturity",
+        "C": "Growth",
+        "D": "Decline"
+      },
+      "list_2": {
+        "I": "Stress brand differences and encourage brand switching",
+        "II": "Build awareness and interest in the mass market",
+        "III": "Reduce to minimal level needed to retain customers",
+        "IV": "Build product awareness and trial among dealers"
+      }
+    },
+    {
+      "q_no": 105,
+      "exam_session": "October 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following inputs are considered while deciding economic value-to-customer pricing? A. Buyer's image of the product performance B. Warranty quality C. Desired rate of return D. Customer demand E. Customer support",
+      "options": {
+        "a": "A, B, E",
+        "b": "A, C, D only",
+        "c": "B, D, E only",
+        "d": "A, B, C, D only"
+      },
+      "answer": "c",
+      "note": "Marked in scan as (c); economic-value-to-customer inputs typically include A, B, E — verify."
+    },
+    {
+      "q_no": 106,
+      "exam_session": "October 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is not coordinated in the horizontal integration of Integrated Marketing Communications?",
+      "options": {
+        "a": "Packaging",
+        "b": "Customer Service",
+        "c": "Sales Promotion",
+        "d": "Distribution"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 107,
+      "exam_session": "October 2022",
+      "question_type": "Statement-based (True/False)",
+      "question": "Given below are two statements: Statement I: Distribution channels are sets of interdependent organizations participating in the process of making a product available for consumption. Statement II: All marketing channels have the potential for conflict and competition resulting from goal incompatibility.",
+      "options": {
+        "a": "Both Statement I and II are true",
+        "b": "Both Statement I and Statement II sire false",
+        "c": "Statement I is true but Statement II is false",
+        "d": "Statement I is false but Statement II is true"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 108,
+      "exam_session": "October 2022",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following customer are risk averse, technology shy and price sensitive?",
+      "options": {
+        "a": "Early adopters",
+        "b": "Early majority",
+        "c": "Late majority",
+        "d": "Laggards"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 109,
+      "exam_session": "October 2022",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following stages in successive order of new product development process. A. Concept Development and Testing B. Marketing Strategy Development C. Idea Screening D. Product Development E. Test Marketing",
+      "options": {
+        "a": "A, C, D, E, B",
+        "b": "C, A, B, D, E",
+        "c": "C, A, D, E, B",
+        "d": "A, C, D, B, E"
+      },
+      "answer": "d",
+      "note": "Marked answer in scan as (d); standard NPD sequence (Idea Screening -> Concept Dev/Testing -> Marketing Strategy -> Product Dev -> Test Marketing) corresponds to option (b) — verify against official key."
+    },
+    {
+      "q_no": 110,
+      "exam_session": "October 2022",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following variables are considered relevant in behavioral segmentation of consumers? A. Life style B. User status C. Occasions D. Values E. Loyalty status",
+      "options": {
+        "a": "A, B, C, D only",
+        "b": "A, D, E only",
+        "c": "B, C, D, E only",
+        "d": "B, C, E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 111,
+      "exam_session": "October 2022",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps in a proper sequence to develop successful market offering: A. The specifics of the market offering B. Monitoring goal progress C. The ultimate criterion for success D. The logistics of creating the offering E. The value created in the target market",
+      "options": {
+        "a": "A, D, E, C, B",
+        "b": "C, E, A, B, D",
+        "c": "E, A, D, B, C",
+        "d": "C, E, A, D, B"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 112,
+      "exam_session": "November 2021",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I with List II.",
+      "options": {
+        "a": "A-I, B-IV, C-III, D-II",
+        "b": "A-II, B-I, C-III, D-IV",
+        "c": "A-III, B-I, C-IV, D-II",
+        "d": "A-IV, B-I, C-III, D-II"
+      },
+      "answer": "b",
+      "list_1": {
+        "A": "Value added by Channel Members-Low; Market Growth Rate-Low",
+        "B": "Value added by Channel Members-High; Market Growth Rate-Low",
+        "C": "Value added by Channel Member-Low; Market Growth Rate-High",
+        "D": "Value added by Channel Members-High; Market Growth Rate-High"
+      },
+      "list_2": {
+        "I": "Introductory stage",
+        "II": "Growth stage",
+        "III": "Mature stage",
+        "IV": "Decline stage"
+      },
+      "note": "This table spans a page break in the scan; recommend verifying against official key."
+    },
+    {
+      "q_no": 113,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "The characteristics of online and social media marketing are: A. Personal B. Rich C. Timely D. Interactive E. Up to date",
+      "options": {
+        "a": "A, C and D only",
+        "b": "A, D and E only",
+        "c": "B and E only",
+        "d": "B, D and E only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 114,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Constituents of Integrated marketing are: A. Customers B. Price C. Communications D. Products and services E. Channels",
+      "options": {
+        "a": "A, B and C only",
+        "b": "A, B, D and E only",
+        "c": "A, C, D and E only",
+        "d": "C, D and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 115,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "With reference to product hierarchy, life insurance is an example of:",
+      "options": {
+        "a": "Product class",
+        "b": "Product family",
+        "c": "Product line",
+        "d": "Product type"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 116,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "In which one of the following services price sensitivity is high?",
+      "options": {
+        "a": "Airlines",
+        "b": "Car rentals",
+        "c": "Retailing",
+        "d": "Sea Transport"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 117,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following vehicles is used when traffic building is the consumer promotion objective?",
+      "options": {
+        "a": "Catalogue offers",
+        "b": "Coupons",
+        "c": "Discount sales",
+        "d": "Special events"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 118,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Environmental characteristics/factors influencing distribution decisions are: A. Government policy B. State of economy C. Social activism D. Technological and infrastructure developments E. Statutory provisions",
+      "options": {
+        "a": "A, D only",
+        "b": "B, C, E only",
+        "c": "A, C, D only",
+        "d": "A, B, D, C only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 119,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following can be categorized as information processing services?",
+      "options": {
+        "a": "Legal services",
+        "b": "Health care",
+        "c": "Education",
+        "d": "Management consultancy"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 120,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is not true about rural markets? Match List I with List II:",
+      "options": {
+        "a": "Print media is not necessarily impactful in rural markets",
+        "b": "Rural customer is price sensitive",
+        "c": "No significant change may be required in the advertising copy",
+        "d": "Products should be simpler, easy to use, service and maintain"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 121,
+      "exam_session": "November 2021",
+      "question_type": "Statement-based (True/False)",
+      "question": "Given below are two statements: Statement I: Only low-priced products will sell in rural India. Statement II: Rural consumers are a homogenous lot.",
+      "options": {
+        "a": "Both Statement I and II are correct",
+        "b": "Both Statement I and Statement II are incorrect",
+        "c": "Statement I is correct but Statement II is incorrect",
+        "d": "Statement I is incorrect but Statement II is correct"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 122,
+      "exam_session": "November 2021",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following stages of consumer decision-making process in sequential order with regard to a young person Divya: 1. Looks for a specific color and showroom delivery as she does not want to wait 2. Narrows down to a dark grey car of a specific brand 3. Belongs to an executive group and all her colleagues have their own vehicles 4. Uses media and other social channels to collect information about different models 5. Feels that fuel efficiency should be the most critical factor while making a choice",
+      "options": {
+        "a": "1, 3, 2, 4, 5",
+        "b": "3, 5, 4, 1, 2",
+        "c": "1, 4, 2, 3, 5",
+        "d": "5, 3, 1, 4, 2"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 123,
+      "exam_session": "November 2021",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following represents traditional logistics management approach? 1. Independent inventory management efforts 2. Minimize firm costs 3. Amount of information sharing and monitoring limited to current processes 4. Small breadth of supplier base to increase coordination",
+      "options": {
+        "a": "1, 2 only",
+        "b": "2, 3 only",
+        "c": "1, 3, 4 only",
+        "d": "2, 3, 4 only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 124,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is NOT a valid basis for market segmentation?",
+      "options": {
+        "a": "Customer-Based Segmentation",
+        "b": "Technology-Oriented Segmentation",
+        "c": "Competition-Related Segmentation",
+        "d": "Product-Related Segmentation"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 125,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following can be categorized as people-processing services?",
+      "options": {
+        "a": "Healthcare",
+        "b": "Legal services",
+        "c": "Education",
+        "d": "Transportation"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 126,
+      "exam_session": "November 2021",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is NOT true while determining the length of the distribution channel?",
+      "options": {
+        "a": "The larger the market size, the longer the channel",
+        "b": "If the average lot size is large, it is better to have a longer channel",
+        "c": "If the product and the market require a high level of service, it is advisable to keep a shorter channel",
+        "d": "If customers shop for an assortment of products, it demands for a water channel of distribution"
+      },
+      "answer": "a",
+      "note": "Marked in scan; note that statement B is generally considered the false one in standard channel-length theory — verify."
+    },
+    {
+      "q_no": 127,
+      "exam_session": "September 2021",
+      "question_type": "Statement-based (True/False)",
+      "question": "Given below are two statements: Statement I: The aim of marketing is to make selling superfluous. Statement II: Marketing should result in a customer who is ready to buy.",
+      "options": {
+        "a": "Both Statement I and II are correct",
+        "b": "Both Statement I and Statement II are incorrect",
+        "c": "Statement I is correct but Statement II is incorrect",
+        "d": "Statement I is incorrect but Statement II is correct"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 128,
+      "exam_session": "September 2021",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the steps of market segmentation process in the proper sequence: A. Segment \"Acid Test\" B. Segment Attractiveness C. Need Based Segmentation D. Segment Profitability and Segment Positioning E. Segment Identification",
+      "options": {
+        "a": "A, B, C, E, D",
+        "b": "A, E, C, D, B",
+        "c": "C, E, B, D, A",
+        "d": "E, C, D, B, A"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 129,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Swachh Bharat Abhiyan is an example of:",
+      "options": {
+        "a": "Sustainable marketing",
+        "b": "Social marketing",
+        "c": "Services marketing",
+        "d": "Relationship marketing"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 130,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of these are readily accepted distinguishing characteristics of services that create unique strategic challenges? A. Inflexibility B. Perishability C. Inseparability D. Intangibility E. Inscrutability",
+      "options": {
+        "a": "B, C, D only",
+        "b": "A, B, C, D only",
+        "c": "C, D, E only",
+        "d": "B and D only"
+      },
+      "answer": "d",
+      "note": "Marked in scan as (d); the classic four characteristics of services are usually Intangibility, Inseparability, Variability and Perishability (B, C, D) — verify against official key."
+    },
+    {
+      "q_no": 131,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "The consumer's price sensitivity is/are influenced by: A. Who bears the cost B. What percentage of total expenditure the product represents C. Who bears the cost and type of retailer from where the customer purchases D. Consumption of the product by the customer E. Knowledge about the product",
+      "options": {
+        "a": "B, C, E only",
+        "b": "A, B, E only",
+        "c": "A, B, D only",
+        "d": "A, B, D, E only"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 132,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "After concept testing, a firm would engage in which of the following stage in developing and marketing a new product?",
+      "options": {
+        "a": "Test marketing",
+        "b": "Marketing strategy development",
+        "c": "Business analysis",
+        "d": "Product development"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 133,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Survey instruments used to assess customer perception of service quality are called: A. CETSCALE B. SERVQUAL C. SERVPREF D. DINESERV E. RSQS",
+      "options": {
+        "a": "A and B only",
+        "b": "B and C only",
+        "c": "A, B, C, and D only",
+        "d": "B, C, D, and E only"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 134,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Tele-Marketing is a part of:",
+      "options": {
+        "a": "Viral marketing",
+        "b": "Social marketing",
+        "c": "Direct marketing",
+        "d": "Relationship marketing"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 135,
+      "exam_session": "October 2020",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I (International Product Lifecycle Stage) with List II (International Competition).",
+      "options": {
+        "a": "A-III, B-IV, C-I, D-II",
+        "b": "A-III, B-I, C-IV, D-II",
+        "c": "A-II, B-IV, C-I, D-III",
+        "d": "A-IV, B-II, C-I, D-III"
+      },
+      "answer": "b",
+      "list_1": {
+        "A": "Introduction",
+        "B": "Growth",
+        "C": "Maturity",
+        "D": "Decline"
+      },
+      "list_2": {
+        "I": "Companies from other high-income countries increase exports to the innovating country",
+        "II": "Competitors from other high-income countries may begin production in developing countries",
+        "III": "A few competitors at home",
+        "IV": "Competitors in other high-income countries begin production for their domestic markets"
+      },
+      "note": "Marked in scan as (b); note this doesn't match a straightforward 1:1 pairing of stages to descriptions — verify against official key."
+    },
+    {
+      "q_no": 136,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "A marketer needs to be aware of the criteria by which the effectiveness of their segmentation procedures can be assessed. Which of the following is NOT a criterion for evaluating the resulting market segments?",
+      "options": {
+        "a": "Perishability",
+        "b": "Size of the resulting segment",
+        "c": "Measurability",
+        "d": "Accessibility"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 137,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "In penetration pricing, a business firm seeks to access deeper market penetration by keeping prices:",
+      "options": {
+        "a": "Higher",
+        "b": "Competitive",
+        "c": "Low",
+        "d": "Flexible"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 138,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "\"Skimming\" in e-banking refers to:",
+      "options": {
+        "a": "Identifying fraudsters copying vital information from credit cards",
+        "b": "Multiple transactions by one credit card",
+        "c": "Conversion of a debit card into a credit card",
+        "d": "Excessive charge for online services"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 139,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is not true for Mass Marketing?",
+      "options": {
+        "a": "Provides very little scope for customization",
+        "b": "Deals with customers directly",
+        "c": "Normally followed in the case of FMCG and SMCG goods",
+        "d": "Relies heavily on advertising"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 140,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Pricing strategy of setting a high price when a product is introduced and gradually lowering its price over time is known as:",
+      "options": {
+        "a": "Skimming",
+        "b": "Penetration pricing",
+        "c": "Peak load pricing",
+        "d": "Dumping"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 141,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Some doctors charge patients for missed appointments because the service value existed only at that point and disappeared when the patient did not show up. This is an example of which one of the following service characteristics?",
+      "options": {
+        "a": "Inseparability",
+        "b": "Intangibility",
+        "c": "Perishability",
+        "d": "Variability"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 142,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Market for automobiles needs to be segmented on the basis of: A. Buying behaviour B. Psychographics C. Geographics D. Demographics",
+      "options": {
+        "a": "A, D only",
+        "b": "C, D only",
+        "c": "A, B, D only",
+        "d": "A, B, C, D"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 143,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "In which of the following price adjustment strategies, a company reduces prices to reward customer responses such as volume purchases, paying early, or promoting the product?",
+      "options": {
+        "a": "Discount and allowance pricing",
+        "b": "Psychological pricing",
+        "c": "Promotional pricing",
+        "d": "Dynamic pricing"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 144,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "The strategies of flanking defense, preemptive defense, mobile defense, contractor defense, and counter-offensive defense are used by which market player?",
+      "options": {
+        "a": "A only (Market challenger)",
+        "b": "B only (Market leader)",
+        "c": "C only (Market follower)",
+        "d": "B, E only (Market leader, Start-up Marketer)"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 145,
+      "exam_session": "October 2020",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps of the marketing process in proper sequence: A. Construct an integrated marketing programme that delivers superior value B. Capture value from customers to create profits and customer equity C. Understand the marketplace and customer needs and wants D. Engage customers, build profitable relationships, and create customer delight E. Design a customer value-driven marketing strategy",
+      "options": {
+        "a": "C, E, A, D, B",
+        "b": "B, E, A, C, D",
+        "c": "D, A, B, C, E",
+        "d": "C, E, A, B, D"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 146,
+      "exam_session": "October 2020",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following are true about delivering customer value? A. A company can go alone in creating customer value B. Company must work within a broader network of partners to accomplish customer value C. Individual companies and brands compete; their entire value delivery networks don't D. Individual companies and brands don't compete; their entire value delivery networks do E. Value = Contribution/cost",
+      "options": {
+        "a": "A and E only",
+        "b": "A, B and E only",
+        "c": "B, C and E only",
+        "d": "B, D and E only"
+      },
+      "answer": "b",
+      "note": "Marked in scan as (b); note statement A appears to contradict standard marketing theory (which holds companies cannot create value alone) — verify against official key."
+    },
+    {
+      "q_no": 147,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "In Marketing, DSA stands for ________.",
+      "options": {
+        "a": "Delivery Staff Agency",
+        "b": "Direct Supplier Agent",
+        "c": "Direct Selling Agent",
+        "d": "Distribution and Supply Agency"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 148,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "Which one of the following is not a major direct selling company in India?",
+      "options": {
+        "a": "Eureka Forbes",
+        "b": "Amway India Enterprises",
+        "c": "Modicare",
+        "d": "Hindustan Unilever Ltd."
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 149,
+      "exam_session": "October 2020",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Arrange the following steps of creating a market-competitive pay plan in a sequence from the first to the last: A. Choose benchmark jobs and select compensable factors B. Define each compensable factor and determine its degree in each job C. Establish rate changes D. Develop pay grades E. Compare and adjust current and market wage rates for jobs",
+      "options": {
+        "a": "B, A, E, D, C",
+        "b": "A, C, B, D, E",
+        "c": "A, B, E, D, C",
+        "d": "A, B, C, E, D"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 150,
+      "exam_session": "October 2020",
+      "question_type": "Simple MCQ",
+      "question": "In which of the following stages of the product life cycle does a company reduce sales promotion to take advantage of heavy consumer demand?",
+      "options": {
+        "a": "Introduction",
+        "b": "Growth",
+        "c": "Maturity",
+        "d": "Decline"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 151,
+      "exam_session": "October 2020",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match List I (Authors) with List II (Ideas).",
+      "options": {
+        "a": "A-III, B-II, C-IV, D-I",
+        "b": "A-I, B-II, C-III, D-IV",
+        "c": "A-II, B-I, C-IV, D-III",
+        "d": "A-IV, B-III, C-II, D-I"
+      },
+      "answer": "b",
+      "list_1": {
+        "A": "Bill Bishop",
+        "B": "D. Bird",
+        "C": "Daniel S. Jonal",
+        "D": "Jeffery F. Rayport"
+      },
+      "list_2": {
+        "I": "Managing in the Market Space",
+        "II": "Commonsense Direct Marketing",
+        "III": "Strategic Marketing for the Digital Age",
+        "IV": "On-line Marketing"
+      },
+      "note": "Marked in scan as (b); pairing seems non-obvious given the list order — verify against official key."
+    },
+    {
+      "q_no": 152,
+      "exam_session": "December 2019",
+      "question_type": "Sequencing (Process/Procedure)",
+      "question": "Market logistic planning has the following four steps. Arrange the steps in the correct sequence: A. Develop operational excellence in sales forecasting, warehouse management, transportation, and material management B. Select the best channel design and network strategy for reaching the customers C. Implement the solution with the best information systems, equipment, policies, and procedures D. Decide on the company's value proposition to its customers",
+      "options": {
+        "a": "A, B, C, D",
+        "b": "D, B, A, C",
+        "c": "A, D, B, C",
+        "d": "D, C, B, A"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 153,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "In e-commerce, one of the key design elements of an effective website-community refers to:",
+      "options": {
+        "a": "Its layout and design",
+        "b": "The way the site enables user-to-user communication",
+        "c": "The site's ability to tailor itself to different users or allow users to personalize the site",
+        "d": "The degree that the site is linked to other sites"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 154,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is NOT true about web marketers?",
+      "options": {
+        "a": "Web marketers usually try to attract prospects to their site through email, advertisements in newspapers",
+        "b": "Use attractions like discounts, gifts, and contests",
+        "c": "Ask customers to give their personal data mandatorily",
+        "d": "Give a lot of publicity to discount schemes"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 155,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "In recent years, the major gain in logistical efficiency has come from which one of the following?",
+      "options": {
+        "a": "Advances in Information Technology",
+        "b": "Reduction in petroleum prices",
+        "c": "Fast order processing",
+        "d": "Increase in production of commercial vehicles"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 156,
+      "exam_session": "December 2019",
+      "question_type": "Assertion-Reason",
+      "question": "Given below are two statements, one labeled as Assertion (A) and the other labeled as Reason (R): Assertion (A): Auto companies and other consumer goods companies offer cash rebates to encourage the purchase of the manufacturer's products within a specified period. Reason (R): The same product is priced differently at different times. In the context of the two statements above related to pricing strategy, which one of the following options is correct?",
+      "options": {
+        "a": "Both (A) and (R) are correct",
+        "b": "Both (A) and (R) are not correct",
+        "c": "(A) is correct, but (R) is not correct",
+        "d": "(A) is not correct, but (R) is correct"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 157,
+      "exam_session": "December 2019",
+      "question_type": "Matching (List-I & List-II)",
+      "question": "Match the modes of communication in marketing and their communication platforms.",
+      "options": {
+        "a": "A-II, B-III, C-IV, D-I",
+        "b": "A-II, B-IV, C-I, D-III",
+        "c": "A-IV, B-II, C-I, D-III",
+        "d": "A-IV, B-II, C-III, D-I"
+      },
+      "answer": "b",
+      "list_1": {
+        "A": "Advertising",
+        "B": "Sales Promotion",
+        "C": "Word-of-mouth marketing",
+        "D": "Personal selling"
+      },
+      "list_2": {
+        "I": "Blogs",
+        "II": "Brochures & Booklets",
+        "III": "Sales Meetings",
+        "IV": "Contests"
+      },
+      "note": "Marked in scan as (b); verify against official key."
+    },
+    {
+      "q_no": 158,
+      "exam_session": "December 2019",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Michael Porter proposed generic strategies that provide good starting points for strategic thinking. Identify them from the below-mentioned strategies: A. Overall cost leadership B. Innovation C. Focus D. Differentiation",
+      "options": {
+        "a": "A and B only",
+        "b": "A, C, and D only",
+        "c": "A, B, and D only",
+        "d": "A, B, C, and D only"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 159,
+      "exam_session": "December 2019",
+      "question_type": "Simple MCQ",
+      "question": "Customer Relationship Management (CRM) focuses on:",
+      "options": {
+        "a": "Understanding the perceived performance and buyer's expectations",
+        "b": "Giving benefits to customers by reducing cost",
+        "c": "Developing programs to attract and retain the right customers and meeting the individual needs of valued customers",
+        "d": "Giving the quality in features and characteristics of a product or service that bear on its ability to satisfy stated or implied needs"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 160,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "question": "Peter F. Drucker noted the relationship between selling and marketing in which of the following terms?",
+      "options": {
+        "a": "Marketing is a subsidiary component of selling",
+        "b": "The aim of marketing is to make selling superfluous",
+        "c": "The aim of selling is to make marketing superfluous",
+        "d": "Selling and marketing are essentially the same thing"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 161,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "question": "When a company distributes its products through a channel structure that includes one or more resellers, it is known as",
+      "options": {
+        "a": "Direct marketing",
+        "b": "Indirect marketing",
+        "c": "Integrated marketing",
+        "d": "Multi-level marketing"
+      },
+      "answer": "b"
+    },
+    {
+      "q_no": 162,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following reflects the sum of perceived tangible and intangible benefits and costs to a customer?",
+      "options": {
+        "a": "Customer satisfaction",
+        "b": "Customer delight",
+        "c": "Customer value",
+        "d": "Customer expectation"
+      },
+      "answer": "c"
+    },
+    {
+      "q_no": 163,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "question": "Building long-term mutually satisfying relations with key customers, suppliers, and distributors to earn and retain their preference and business is known as",
+      "options": {
+        "a": "Relationship marketing",
+        "b": "Social marketing",
+        "c": "Niche marketing",
+        "d": "Service marketing"
+      },
+      "answer": "a"
+    },
+    {
+      "q_no": 164,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "question": "The retail supply chain does NOT include",
+      "options": {
+        "a": "Manufacturers",
+        "b": "Retailers",
+        "c": "Wholesalers",
+        "d": "Regulators"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 165,
+      "exam_session": "June 2019",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Which of the following characteristics are related to relationship marketing? A. Product feature orientation B. Product benefit orientation C. Frequent consumer contact D. High concern for quality",
+      "options": {
+        "a": "B, C and D",
+        "b": "A, B and C",
+        "c": "A, C and D",
+        "d": "A, B and D"
+      },
+      "answer": "d",
+      "note": "Marked in scan as (d); relationship marketing is generally characterized by product BENEFIT orientation (not feature orientation), so B, C, D would be the theoretically expected answer — verify against official key."
+    },
+    {
+      "q_no": 166,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "question": "The channel alternative is NOT to be assessed on the basis of",
+      "options": {
+        "a": "Economic criteria",
+        "b": "Control criteria",
+        "c": "Adaptive criteria",
+        "d": "Accumulation criteria"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 167,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "question": "Which of the following is NOT a main stage in the customer relationship life cycle?",
+      "options": {
+        "a": "Customer acquisition",
+        "b": "Customer development",
+        "c": "Customer satisfaction",
+        "d": "Customer annoyance"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 168,
+      "exam_session": "June 2019",
+      "question_type": "Simple MCQ",
+      "question": "Consumer behavior does NOT consist of which of the following activities?",
+      "options": {
+        "a": "Obtaining",
+        "b": "Consuming",
+        "c": "Disposition",
+        "d": "Producing"
+      },
+      "answer": "d"
+    },
+    {
+      "q_no": 169,
+      "exam_session": "June 2019",
+      "question_type": "Multi-Select (Statement-based)",
+      "question": "Shopping goods have which of the following features? A. These products are generally durable in nature B. Consumers generally compare the goods of various sellers and then buy C. Per unit price of these goods is generally high D. These goods are regularly and continuously in demand E. These goods are sold as a result of aggressive promotional efforts",
+      "options": {
+        "a": "C, D, and E",
+        "b": "A, B, and C",
+        "c": "B, C, and D",
+        "d": "A, C, and E"
+      },
+      "answer": "b"
+    }
+  ]
+};
